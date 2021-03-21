@@ -1,55 +1,52 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import * as React from "react"
-import PropTypes from "prop-types"
+import React from "react"
+import Header from './Header'
+import Footer from './Footer'
+import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import StoryblokService from '../utils/storyblok-service'
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+export default function Layout({ children, location, lang }){
+  const { settings } = useStaticQuery(graphql`
+  query Settings {
+    settings: allStoryblokEntry(filter: {field_component: {eq: "settings"}}) {
+      edges {
+        node {
+          name
+          full_slug
+          content
         }
       }
     }
+  }
   `)
+  let { pathname } = location
+  let correctSetting = settings.edges
+  let hasSetting = correctSetting && correctSetting.length ? correctSetting[0].node : {}
+  let content = typeof hasSetting.content === 'string' ? JSON.parse(hasSetting.content) : hasSetting.content
+  let parsedSetting = Object.assign({}, content, {content: content})
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <div>
+      <Helmet
+          script={[
+            {"src": `//app.storyblok.com/f/storyblok-latest.js?t=${StoryblokService.token}`,
+            "type": "text/javascript"}
+          ]}
+      />
+      <Helmet
+          script={[
+            {
+            "innerHTML": `var StoryblokCacheVersion = '${StoryblokService.getCacheVersion()}';`,
+            "type": "text/javascript"
+            }
+          ]}
+      />
+      <Header settings={parsedSetting} />
+      <main>
+      { children }
+      </main>
+      <Footer />
+    </div>
   )
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

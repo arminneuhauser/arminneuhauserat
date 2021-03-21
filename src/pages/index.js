@@ -1,29 +1,44 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
+import Page from '../components/Page'
+import Layout from "../components/Layout"
+import { graphql } from 'gatsby'
+import StoryblokService from '../utils/storyblok-service'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+export default class PageIndex extends React.Component {
+  state = {
+    story: {
+      content: this.props.data.story ? JSON.parse(this.props.data.story.content) : {}
+    }
+  }
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
+  async getInitialStory() {
+    StoryblokService.setQuery(this.props.location.search)
+    let { data: { story } } = await StoryblokService.get(`cdn/stories/${this.props.data.story.full_slug}`)
+    return story
+  }
 
-export default IndexPage
+  async componentDidMount() {
+    let story = await this.getInitialStory()
+    if(story.content) this.setState({ story })
+    setTimeout(() => StoryblokService.initEditor(this), 200)
+  }
+
+  render() {
+    return (
+      <Layout location={this.props.location}>
+        <Page blok={this.state.story.content} />
+      </Layout>
+    )
+  }
+}
+
+export const query = graphql`
+  {
+    story: storyblokEntry(full_slug: { eq: "home" }) {
+      name
+      content
+      full_slug
+      uuid
+    }
+  }
+`

@@ -1,0 +1,49 @@
+@import './_variables.scss';
+@import './_functions.scss';
+@import './_mixins.scss';
+
+:root {
+  --fs-sans: #{$fs-sans};
+  --fs-serif: #{$fs-serif};
+
+  --site-core-padding: 26px;
+  --text-max-width: 960px;
+
+  --background-color: #{$black};
+  --tint: #{$white};
+  --cta: #{$cta};
+
+  @include breakpoint(m) {
+    --site-core-padding: 35px;
+  }
+
+  @include breakpoint(l) {
+    --site-core-padding: 70px;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--tint);
+  font-family: var(--fs-sans);
+  font-size: fs(16);
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: rgba($cta, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .2s ease-out;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0;
+}

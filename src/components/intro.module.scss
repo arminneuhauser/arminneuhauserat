@@ -1,0 +1,25 @@
+@import '../scss/_variables.scss';
+@import '../scss/_functions.scss';
+@import '../scss/_mixins.scss';
+
+.intro {
+  padding: 70px var(--site-core-padding);
+
+  div {
+    max-width: var(--text-max-width);
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: rfs(24, 40);
+    line-height: 1;
+    font-family: var(--fs-serif);
+    margin: 0.5em 0;
+  }
+
+  h1 {
+    font-size: rfs(56, 160);
+    line-height: 0.85;
+    margin: 0;
+  }
+}
