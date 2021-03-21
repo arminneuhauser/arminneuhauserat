@@ -13,7 +13,9 @@ export default class PageIndex extends React.Component {
 
   async getInitialStory() {
     StoryblokService.setQuery(this.props.location.search)
-    let { data: { story } } = await StoryblokService.get(`cdn/stories/${this.props.data.story.full_slug}`)
+    let { data: { story } } = await StoryblokService.get(`cdn/stories/${this.props.data.story.full_slug}`,{
+      "resolve_relations": "featured_projects.projects"
+    })
     return story
   }
 
@@ -34,7 +36,7 @@ export default class PageIndex extends React.Component {
 
 export const query = graphql`
   {
-    story: storyblokEntry(full_slug: { eq: "home" }) {
+    story: storyblokEntry(full_slug: { eq: "startseite" }) {
       name
       content
       full_slug

@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from "storyblok-rich-text-react-renderer"
+import { render } from 'storyblok-rich-text-react-renderer'
 import SbEditable from 'storyblok-react'
 
 import * as introStyles from './intro.module.scss'
