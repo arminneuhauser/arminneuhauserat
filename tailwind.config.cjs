@@ -4,14 +4,13 @@ module.exports = {
     purge: ['./src/**/*.svelte', './src/**/*.css'],
     darkMode: false,
     theme: {
-    colors: {
-        white: colors.white,
-        gray: colors.warmGray,
-        'svelte-prime': '#ff5030',
-    },
-    },
-        variants: {
-        extend: {},
+        fontFamily: {
+            'sans': ['"TT Norms Pro"', 'ui-sans-serif', 'system-ui'],
+            'serif': ['"Recoleta"', 'ui-serif', 'Georgia'],
+        },
+        borderColor: theme => ({
+            DEFAULT: theme('colors.black', 'currentColor'),
+        }),
     },
     plugins: [],
 }

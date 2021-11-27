@@ -5,14 +5,10 @@
 
 <Header />
 
-<div class="max-w-4xl mx-auto py-8">
-    <div class="text-gray-600">Loading ...</div>
-</div>
-
 <main>
     <slot />
 </main>
-
+<!-- 
 <footer>
     <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>
@@ -46,4 +42,4 @@
             padding: 40px 0;
         }
     }
-</style>
+</style> -->
