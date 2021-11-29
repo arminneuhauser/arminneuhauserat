@@ -1,0 +1,20 @@
+@use "sass:math";
+
+// returns font-size in rem divided by default root fontsize 16
+// usage: #{rem(font-size-in-pixel)}
+// samples: rem(18)
+@function rem($fontSize) {
+    $fontSize: math.div($fontSize, 16);
+    @return #{$fontSize+'rem'};
+}
+
+// set min and max font-size in pixel
+// set breakpoints for font-scaling between min and max (optional, default 360 to 960)
+// usage: rfs(min-font-size-in-pixel, max-font-size-in-pixel, optional-scaling-starting-vw-in-pixel, optional-scaling-ending-vw-in-pixel)
+// samples: rfs(30, 60) rfs(30, 60, 360, 768)
+@function rfs($minFontSize, $maxFontSize, $minWidth: 360, $maxWidth: 960) {
+    $slope: math.div(($maxFontSize - $minFontSize), ($maxWidth - $minWidth));
+    $yAxisIntersection: math.div((-$minWidth * $slope + $minFontSize), 16);
+    $preferredValue: $yAxisIntersection+'rem + '+($slope * 100)+'vw';
+    @return clamp(#{rem($minFontSize)}, #{$preferredValue}, #{rem($maxFontSize)});
+}

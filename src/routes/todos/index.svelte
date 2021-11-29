@@ -118,7 +118,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="scss">
 	.todos {
 		width: 100%;
 		max-width: var(--column-width);

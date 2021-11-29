@@ -1,24 +1,59 @@
 <script context="module" lang="ts">
+    // since there's no dynamic data here, we can prerender
+	// it so that it gets served as a static asset in prod
     export const prerender = true;
 </script>
 
-<script lang="ts">
-    import Counter from '$lib/Counter.svelte';
-</script>
-
 <svelte:head>
-    <title>Home</title>
+    <title>Armin Neuhauser | Webdesign</title>
 </svelte:head>
 
-<section>
-    <h1>
-        Ich erschaffe digitale<br>
-        Erlebnisse, jeden Tag.
-    </h1>
+<section class="grid pt-16 md:pt-20 lg:pt-24">
+    <div class="number col-start-2 col-end-3 row-span-2">
+        <span class="font-serif font-light text-primary">01</span>
+    </div>
+    <div class="col-start-4 col-end-5">
+        <h3 class="font-extrabold mb-4">
+            Hallo, ich bin Armin
+        </h3>
+        <h1 class="font-serif">
+            Ich erschaffe digitale<br class="hidden lg:block">
+            Erlebnisse, jeden Tag<span class="text-primary">.</span>
+        </h1>
+    </div>
+    <div class="col-start-4 col-end-6">
+        <img class="mt-20" src="/cartagena.jpg" alt="Cartagena">
+    </div>
 </section>
 
-<style>
-    h1 {
-        @apply font-serif;
+<style lang="scss">
+    section {
+        grid-template-columns: var(--site-core-padding) auto fn.rem(12) 1fr var(--site-core-padding);
+
+        h3 {
+            font-size: fn.rfs(18, 24);
+            margin-top: 1.7em;
+        }
+
+        h1 {
+            font-size: fn.rfs(48, 80);
+            line-height: 1.2;
+        }
+    }
+
+    .number {
+        @apply flex;
+        @apply flex-col;
+        @apply items-center;
+
+        font-size: fn.rfs(48, 64);
+
+        &::after {
+            @apply bg-gray-300;
+            content: '';
+            flex-grow: 1;
+            margin-top: #{fn.rem(20)};
+            width: #{fn.rem(1)};
+        }
     }
 </style>

@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1, h2, h3, h4 {
+        @apply font-normal;
+    }
+}
+
+:root {
+    --color-primary: #F1912A;
+    --site-core-padding: 1rem;
+
+    @screen md {
+        --site-core-padding: 2rem;
+    }
+
+    @screen lg {
+        --site-core-padding: 3rem;
+    }
+
+    @apply font-sans;
+}
+
+body {
+    @apply bg-gray-50;
+    min-height: 100vh;
+    margin: 0;
+    padding: #{rem(20)};
+}
+
+#svelte {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
