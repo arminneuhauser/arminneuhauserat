@@ -4,14 +4,17 @@
     export const prerender = true;
 </script>
 
+<script lang="ts">
+    import Scene from '$lib/scene/Scene.svelte';
+</script>
+
 <svelte:head>
     <title>Armin Neuhauser | Webdesign</title>
 </svelte:head>
 
+<Scene />
+
 <section class="grid pt-16 md:pt-20 lg:pt-24">
-    <div class="number col-start-2 col-end-3 row-span-2">
-        <span class="font-serif font-light text-primary">01</span>
-    </div>
     <div class="col-start-4 col-end-5">
         <h3 class="font-extrabold mb-4">
             Hallo, ich bin Armin
@@ -22,7 +25,7 @@
         </h1>
     </div>
     <div class="col-start-4 col-end-6">
-        <img class="mt-20" src="/cartagena.jpg" alt="Cartagena">
+        <!-- <img class="mt-20" src="/cartagena.jpg" alt="Cartagena"> -->
     </div>
 </section>
 
@@ -38,22 +41,6 @@
         h1 {
             font-size: fn.rfs(48, 80);
             line-height: 1.2;
-        }
-    }
-
-    .number {
-        @apply flex;
-        @apply flex-col;
-        @apply items-center;
-
-        font-size: fn.rfs(48, 64);
-
-        &::after {
-            @apply bg-gray-300;
-            content: '';
-            flex-grow: 1;
-            margin-top: #{fn.rem(20)};
-            width: #{fn.rem(1)};
         }
     }
 </style>

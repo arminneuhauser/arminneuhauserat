@@ -1,38 +1,56 @@
 <script lang="ts">
     import { page } from '$app/stores';
-    import logo from './logo.svg';
-    import lightbulb from './lightbulb.svg?raw';
     import menu from './menu.svg?raw';
-    import avatar from './armin-neuhauser-photo.jpg';
+
+    let now = new Date(),
+        year = now.getFullYear();
 </script>
 
-<header class="fixed w-full px-4 md:px-8 lg:px-12">
-    <div class="flex-1 flex justify-between border-b py-4">
-        <a sveltekit:prefetch href="/" class="flex gap-3">
-            <img class="rounded-full h-12 w-12" src={avatar} alt="Armin Neuhauser Foto" />
-            <img src={logo} alt="Armin Neuhauser Logo" />
-        </a>
-
-        <button title="Menü anzeigen" class="md:hidden">
-            {@html menu}
-        </button>
-
-        <nav class="hidden md:flex items-center md-max:hidden">
-            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Projekte</a>
-            <a sveltekit:prefetch href="/about" class:active={$page.path === '/about'}>Über mich</a>
-            <a sveltekit:prefetch href="/todos" class:active={$page.path === '/todos'}>Kontakt</a>
-            <button title="Licht aus" class="ml-4">
-                {@html lightbulb}
-                <span class="sr-only">Licht aus</span>
-            </button>
-        </nav>
+<header>
+    <div class="logo" >
+        <a sveltekit:prefetch href="/">Armin Neuhauser</a>
     </div>
+    <div>
+        <div>
+            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Projekte</a>
+        </div>
+        <div>
+            <a sveltekit:prefetch href="/ueber-mich" class:active={$page.path === '/ueber-mich'}>Über mich</a>
+        </div>
+    </div>
+    <div>
+        <a sveltekit:prefetch href="/kontakt" class:active={$page.path === '/kontakt'}>Kontakt</a>
+    </div>
+    <div class="last">
+        <span>©{year}</span>
+        <button title="Licht aus">
+            <span class="sr-only">Licht aus</span>
+        </button>
+    </div>
+
+    <!-- <button title="Menü anzeigen" class="md:hidden">
+        {@html menu}
+    </button> -->
 </header>
 
 <style lang="scss">
-    nav {
-        a {
-            @apply px-4;
-        }
+    header {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: #{fn.rem(20)};
+        padding: #{fn.rem(40)} var(--site-core-padding);
+        text-transform: uppercase;
+        font-size: #{fn.rem(14)};
+        text-align: left;
+    }
+
+    .logo {
+        font-weight: 700;
+    }
+
+    .last {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 </style>

@@ -1,0 +1,49 @@
+@use "src/scss/functions.scss" as fn;
+@use "fonts";
+
+:root {
+    --primary: #F1912A;
+    --on-base: #050505;
+
+    --site-core-padding: 1rem;
+
+    // @screen md {
+    //     --site-core-padding: 2rem;
+    // }
+
+    // @screen lg {
+    //     --site-core-padding: 3rem;
+    // }
+
+}
+
+body {
+    font-family: "Custom";
+    line-height: 1.4;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: var(--on-base);
+}
+
+#svelte {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: 0;
+    color: currentColor;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    text-transform: inherit;
+    text-align: inherit;
+}
