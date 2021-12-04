@@ -23,8 +23,8 @@
     </div>
     <div class="last">
         <span>©{year}</span>
-        <button title="Licht aus">
-            <span class="sr-only">Licht aus</span>
+        <button title="Licht an">
+            <span class="sr-only">Licht an</span>
         </button>
     </div>
 

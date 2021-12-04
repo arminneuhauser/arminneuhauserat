@@ -3,7 +3,8 @@
 
 :root {
     --primary: #F1912A;
-    --on-base: #050505;
+    --base: #050505;
+    --on-base: #fff;
 
     --site-core-padding: 1rem;
 
@@ -23,6 +24,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: var(--base);
     color: var(--on-base);
 }
 

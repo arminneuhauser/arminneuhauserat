@@ -1,10 +1,32 @@
 <script>
-    import * as PIXI from 'pixi.js';
+    import '@mszu/pixi-ssr-shim';
+
+    // import * as PIXI from 'pixi.js';
+    import { Application } from '@pixi/app';
+    import { Graphics } from '@pixi/graphics';
+    import { BatchRenderer, Renderer } from '@pixi/core';
+	import { InteractionManager } from '@pixi/interaction';
+	import { TickerPlugin } from '@pixi/ticker';
+	// import { Sprite } from '@pixi/sprite';
+	// import { Texture } from '@pixi/core';
+	// import { Text, TextStyle } from '@pixi/text';
     import { KawaseBlurFilter } from '@pixi/filter-kawase-blur';
     import SimplexNoise from 'simplex-noise';
     import hsl from 'hsl-to-hex';
     import debounce from 'debounce';
     import { onMount } from 'svelte';
+
+    // This initialization needs to only happen once, even when the component
+	// is unmounted and re-mounted
+	if (!(Renderer.__plugins ?? {}).hasOwnProperty('interaction')) {
+		Renderer.registerPlugin('interaction', InteractionManager);
+	}
+	if (!(Renderer.__plugins ?? {}).hasOwnProperty('batch')) {
+		Renderer.registerPlugin('batch', BatchRenderer);
+	}
+	if (!(Application._plugins || []).some((plugin) => plugin === TickerPlugin)) {
+		Application.registerPlugin(TickerPlugin);
+	}
 
     let view;
     let app;
@@ -22,7 +44,7 @@
     // Create a new simplex noise instance
     const simplex = new SimplexNoise();
 
-    onMount(() => {
+    onMount(async () => {
 
         // ColorPalette class
         class ColorPalette {
@@ -111,7 +133,7 @@
                 this.inc = 0.002;
 
                 // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
-                this.graphics = new PIXI.Graphics();
+                this.graphics = new Graphics();
                 this.graphics.alpha = 0.825;
 
                 // 250ms after the last window resize event, recalculate orb positions.
@@ -183,7 +205,7 @@
         }
 
         // Create PixiJS app
-        app = new PIXI.Application({
+        app = new Application({
             view,
             resizeTo: window,
             transparent: true,
