@@ -4,9 +4,6 @@
 
 <script lang="ts">
     import Scene from '$lib/scene/Scene.svelte';
-    import Quote from 'inspirational-quotes';
-
-    let randomQuote = Quote.getQuote();
 </script>
 
 <svelte:head>
@@ -14,15 +11,21 @@
 </svelte:head>
 
 <section class="hero">
-    <div>
+    <div class="sphere">
         <h1>
-            {randomQuote.text}
+            <span>Ich erschaffe</span>
+            <span>ausgereifte digitale</span>
+            <span>Erlebnisse im Web,</span>
+            <span>jeden Tag.</span>
+            <!-- Meine Projekte sind wie guter Espresso: Stark, belebend und nicht verwässert. -->
             <!-- <span>I make</span>
             <span>Creative</span>
             <span>Things,</span>
             <span>Everyday.</span> -->
-            <cite>{randomQuote.author}</cite>
         </h1>
+    </div>
+    <div class="bottom">
+        <h2>Konzept, Design & Entwicklung</h2>
     </div>
 </section>
 
@@ -38,24 +41,34 @@
 
 <style lang="scss">
     .hero {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        box-sizing: border-box;
+        min-height: 100vh;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // align-content: center;
+        // justify-content: center;
         padding: var(--site-core-padding);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-row-gap: #{fn.rem(20)};
+        grid-template-columns: auto minmax(auto, #{fn.rem(480)}) auto;
 
-        > div {
+        .sphere {
             position: relative;
-            flex: 1 1 auto;
+            // flex: 1 0 100%;
             // max-width: fn.rfs(240, 320);
-            max-width: #{fn.rem(600)};
+            // max-width: #{fn.rem(600)};
+            aspect-ratio: 1;
+            align-self: center;
+            grid-column: 2;
 
             &::after {
                 content: "";
                 display: block;
                 padding-bottom: 100%;
                 background-color: hsla(0deg, 0%, 100%, 0.5);
-                border: 1px solid hsla(0deg, 0%, 100%, 0.6);
+                border: 1px solid hsla(0deg, 0%, 100%, 0.7);
                 border-radius: 50%;
                 mix-blend-mode: soft-light;
             }
@@ -64,7 +77,7 @@
         h1 {
             font-family: "serif";
             font-weight: 400;
-            font-size: fn.rfs(20, 32);
+            font-size: fn.rfs(24, 36);
             line-height: 1.1;
             // text-transform: uppercase;
             // letter-spacing: 0.025em;
@@ -84,17 +97,26 @@
             span {
                 display: block;
             }
+        }
 
-            cite {
-                display: block;
-                margin: 0.5em 0 0;
-                font-family: "sans-serif";
+        .bottom {
+            // flex: 1 0 100%;
+            // align-self: flex-end;
+            grid-column: 2;
+
+            h2 {
+                font-size: fn.rem(15);
                 font-weight: 400;
-                font-style: normal;
-                font-size: fn.rfs(15, 18);
+                margin: 0;
+                text-align: center;
+                color: white;
+                mix-blend-mode: exclusion;
+                opacity: 0.6;
 
-                &::before {
-                    content: "– ";
+                [color-scheme="light"] & {
+                    mix-blend-mode: normal;
+                    color: var(--on-base);
+                    opacity: 1;
                 }
             }
         }

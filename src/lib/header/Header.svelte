@@ -69,7 +69,8 @@
         top: 0;
         left: 0;
         right: 0;
-        // mix-blend-mode: difference;
+        color: white;
+        mix-blend-mode: exclusion;
         z-index: 10;
 
         @media (max-width: var.$breakpoint-md-max) {

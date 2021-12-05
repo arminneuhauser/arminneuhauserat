@@ -4928,16 +4928,16 @@ var init_uid_json_039b6f30 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-1129a2ec.js
-var layout_1129a2ec_exports = {};
-__export(layout_1129a2ec_exports, {
+// .svelte-kit/output/server/chunks/__layout-fbc6fe1d.js
+var layout_fbc6fe1d_exports = {};
+__export(layout_fbc6fe1d_exports, {
   default: () => _layout
 });
-var import_cookie, getStores, page, menu, theme, css, Header, _layout;
-var init_layout_1129a2ec = __esm({
-  ".svelte-kit/output/server/chunks/__layout-1129a2ec.js"() {
+var import_cookie, getStores, page, makiMix, deathStar, css, Header, _layout;
+var init_layout_fbc6fe1d = __esm({
+  ".svelte-kit/output/server/chunks/__layout-fbc6fe1d.js"() {
     init_shims();
-    init_app_f2d38c65();
+    init_app_c25c8ea0();
     import_cookie = __toModule(require_cookie());
     init_dist();
     getStores = () => {
@@ -4964,10 +4964,10 @@ var init_layout_1129a2ec = __esm({
         return store.subscribe(fn);
       }
     };
-    menu = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">\n    <rect y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" width="2" height="2" fill="currentColor"></rect>\n</svg>\n';
-    theme = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">\n    <circle cx="12" cy="12" r="11.25" stroke="currentColor" stroke-width="1.5"/>\n    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0V24Z" fill="currentColor"/>\n</svg>\n';
+    makiMix = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">\n    <rect y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" width="2" height="2" fill="currentColor"></rect>\n</svg>\n';
+    deathStar = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <circle cx="12" cy="12" r="11.5" stroke="currentColor"/>\n    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23.9944C12.083 23.9981 12.1664 24 12.25 24C16.7143 24 20.3333 18.6274 20.3333 12C20.3333 5.37258 16.7143 0 12.25 0C12.1664 0 12.083 0.0018857 12 0.00563002V23.9944ZM19.3333 12C19.3333 15.1417 18.4737 17.9412 17.1363 19.9266C16.3451 21.1013 15.413 21.9595 14.4123 22.4659C15.7578 20.4094 16.6666 16.4931 16.6666 12C16.6666 7.50693 15.7578 3.59061 14.4123 1.53412C15.413 2.04051 16.3451 2.89873 17.1363 4.0734C18.4737 6.05877 19.3333 8.85828 19.3333 12ZM13.2148 1.59946C13.1402 1.5138 13.0686 1.43971 13 1.37576V22.6242C13.0686 22.5603 13.1402 22.4862 13.2148 22.4005C13.6349 21.9178 14.0587 21.1613 14.4346 20.1399C15.1835 18.105 15.6666 15.2273 15.6666 12C15.6666 8.77267 15.1835 5.89496 14.4346 3.86012C14.0587 2.83875 13.6349 2.08223 13.2148 1.59946Z" fill="currentColor"/>\n</svg>\n';
     css = {
-      code: "header.svelte-n0ji4y.svelte-n0ji4y{display:flex;align-items:center;justify-content:space-between;padding:1.25rem var(--site-core-padding);text-transform:uppercase;font-size:0.8125rem;text-align:left;position:fixed;top:0;left:0;right:0;mix-blend-mode:difference;z-index:1}@media(max-width: 959px){header.svelte-n0ji4y>div.svelte-n0ji4y:not(.logo){display:none}}@media(min-width: 768px){header.svelte-n0ji4y.svelte-n0ji4y{display:grid;grid-column-gap:1.25rem;grid-template-columns:repeat(4, 1fr);padding-top:2.5rem;padding-bottom:2.5rem;align-items:flex-start}}.logo.svelte-n0ji4y.svelte-n0ji4y{font-weight:500}.last.svelte-n0ji4y.svelte-n0ji4y{display:flex;justify-content:space-between;align-items:flex-start}.maki-mix.svelte-n0ji4y.svelte-n0ji4y{height:1.5rem;width:1.5rem;display:flex;align-items:center;justify-content:center}@media(min-width: 768px){.maki-mix.svelte-n0ji4y.svelte-n0ji4y{display:none}}.mobile-nav.svelte-n0ji4y.svelte-n0ji4y{display:none}",
+      code: "header.svelte-dhalql.svelte-dhalql{display:flex;align-items:center;justify-content:space-between;padding:1.25rem var(--site-core-padding);text-transform:uppercase;font-size:0.8125rem;text-align:left;position:fixed;top:0;left:0;right:0;mix-blend-mode:exclusion;z-index:10}@media(max-width: 959px){header.svelte-dhalql>div.svelte-dhalql:not(.logo){display:none}}@media(min-width: 768px){header.svelte-dhalql.svelte-dhalql{display:grid;grid-column-gap:1.25rem;grid-template-columns:repeat(4, 1fr);padding-top:2.5rem;padding-bottom:2.5rem;align-items:flex-start}}.logo.svelte-dhalql.svelte-dhalql{font-weight:500}.last.svelte-dhalql.svelte-dhalql{display:flex;justify-content:space-between;align-items:flex-start}.maki-mix.svelte-dhalql.svelte-dhalql{height:1.5rem;width:1.5rem;display:flex;align-items:center;justify-content:center}@media(min-width: 768px){.maki-mix.svelte-dhalql.svelte-dhalql{display:none}}.mobile-nav.svelte-dhalql.svelte-dhalql{display:none}",
       map: null
     };
     Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -4976,23 +4976,23 @@ var init_layout_1129a2ec = __esm({
       let now = new Date(), year = now.getFullYear();
       $$result.css.add(css);
       $$unsubscribe_page();
-      return `<header class="${"svelte-n0ji4y"}"><div class="${"logo svelte-n0ji4y"}"><a sveltekit:prefetch href="${"/"}">Armin Neuhauser</a></div>
-    <div class="${"svelte-n0ji4y"}"><div><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Projekte</a></div>
+      return `<header class="${"svelte-dhalql"}"><div class="${"logo svelte-dhalql"}"><a sveltekit:prefetch href="${"/"}">Armin Neuhauser</a></div>
+    <div class="${"svelte-dhalql"}"><div><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Projekte</a></div>
         <div><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>\xDCber mich</a></div></div>
-    <div class="${"svelte-n0ji4y"}"><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Kontakt</a></div>
-    <div class="${"last svelte-n0ji4y"}"><span>\xA9${escape(year)}</span>
+    <div class="${"svelte-dhalql"}"><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Kontakt</a></div>
+    <div class="${"last svelte-dhalql"}"><span>\xA9${escape(year)}</span>
         <button id="${"death-star"}" title="${"Licht an"}"><span class="${"sr-only"}">Licht an</span>
-            <!-- HTML_TAG_START -->${theme}<!-- HTML_TAG_END --></button></div>
+            <!-- HTML_TAG_START -->${deathStar}<!-- HTML_TAG_END --></button></div>
 
-    <button class="${"maki-mix svelte-n0ji4y"}" title="${"Men\xFC anzeigen"}"><span class="${"sr-only"}">Men\xFC anzeigen</span>
-        <!-- HTML_TAG_START -->${menu}<!-- HTML_TAG_END --></button>
+    <button class="${"maki-mix svelte-dhalql"}" title="${"Men\xFC anzeigen"}"><span class="${"sr-only"}">Men\xFC anzeigen</span>
+        <!-- HTML_TAG_START -->${makiMix}<!-- HTML_TAG_END --></button>
 
-    <nav class="${"mobile-nav svelte-n0ji4y"}"><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Start</a>
+    <nav class="${"mobile-nav svelte-dhalql"}"><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Start</a>
         <a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Projekte</a>
         <a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>\xDCber mich</a>
         <a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Kontakt</a>
         <button id="${"death-star"}" title="${"Licht an"}"><span class="${"sr-only"}">Licht an</span>
-            <!-- HTML_TAG_START -->${theme}<!-- HTML_TAG_END --></button></nav>
+            <!-- HTML_TAG_START -->${deathStar}<!-- HTML_TAG_END --></button></nav>
 </header>`;
     });
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -5003,9 +5003,9 @@ var init_layout_1129a2ec = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/error-17758c6e.js
-var error_17758c6e_exports = {};
-__export(error_17758c6e_exports, {
+// .svelte-kit/output/server/chunks/error-24061a80.js
+var error_24061a80_exports = {};
+__export(error_24061a80_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -5013,10 +5013,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var import_cookie2, Error2;
-var init_error_17758c6e = __esm({
-  ".svelte-kit/output/server/chunks/error-17758c6e.js"() {
+var init_error_24061a80 = __esm({
+  ".svelte-kit/output/server/chunks/error-24061a80.js"() {
     init_shims();
-    init_app_f2d38c65();
+    init_app_c25c8ea0();
     import_cookie2 = __toModule(require_cookie());
     init_dist();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -20551,17 +20551,17 @@ var require_debounce = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-f5c1791c.js
-var index_f5c1791c_exports = {};
-__export(index_f5c1791c_exports, {
+// .svelte-kit/output/server/chunks/index-d83af9b7.js
+var index_d83af9b7_exports = {};
+__export(index_d83af9b7_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
 var import_app, import_graphics, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_cookie3, css$1, Scene, css2, prerender, Routes;
-var init_index_f5c1791c = __esm({
-  ".svelte-kit/output/server/chunks/index-f5c1791c.js"() {
+var init_index_d83af9b7 = __esm({
+  ".svelte-kit/output/server/chunks/index-d83af9b7.js"() {
     init_shims();
-    init_app_f2d38c65();
+    init_app_c25c8ea0();
     init_dist2();
     import_app = __toModule(require_app());
     import_graphics = __toModule(require_graphics());
@@ -20596,7 +20596,7 @@ var init_index_f5c1791c = __esm({
       return `<canvas class="${"svelte-1konbxi"}"${add_attribute("this", view, 0)}></canvas>`;
     });
     css2 = {
-      code: ".hero.svelte-bivqdc.svelte-bivqdc{height:100vh;display:grid;align-items:center}.hero.svelte-bivqdc h1.svelte-bivqdc{grid-column:1/span 4;font-size:13vw;line-height:0.85;font-style:italic;font-weight:800;margin:0;white-space:nowrap;overflow:hidden}.hero.svelte-bivqdc h1 span.svelte-bivqdc{display:block}.hero.svelte-bivqdc h1 span.svelte-bivqdc:first-child{margin-left:20vw}.hero.svelte-bivqdc h1 span.svelte-bivqdc:nth-child(2){margin-left:-1.3vw;color:transparent;-webkit-text-stroke:0.0625rem var(--on-base)}.hero.svelte-bivqdc h1 span.svelte-bivqdc:last-child{margin-left:15vw}",
+      code: '@charset "UTF-8";.hero.svelte-14d7v3l.svelte-14d7v3l{height:100vh;display:flex;align-items:center;justify-content:center;padding:var(--site-core-padding)}.hero.svelte-14d7v3l>div.svelte-14d7v3l{position:relative;flex:1 1 auto;max-width:37.5rem}.hero.svelte-14d7v3l>div.svelte-14d7v3l::after{content:"";display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.6);border-radius:50%;mix-blend-mode:soft-light}.hero.svelte-14d7v3l h1.svelte-14d7v3l{font-family:"serif";font-weight:400;font-size:clamp(1.25rem, 0.8rem + 2vw, 2rem);line-height:1.1;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;z-index:1;padding:5vw}.hero.svelte-14d7v3l h1 span.svelte-14d7v3l{display:block}',
       map: null
     };
     prerender = true;
@@ -20604,28 +20604,31 @@ var init_index_f5c1791c = __esm({
       $$result.css.add(css2);
       return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Webdesign</title>`, ""}`, ""}
 
-<section class="${"hero svelte-bivqdc"}"><h1 class="${"svelte-bivqdc"}"><span class="${"svelte-bivqdc"}">Ich erschaffe</span>
-        <span class="${"svelte-bivqdc"}">digitale</span>
-        <span class="${"svelte-bivqdc"}">Erlebnisse.</span></h1></section>
+<section class="${"hero svelte-14d7v3l"}"><div class="${"svelte-14d7v3l"}"><h1 class="${"svelte-14d7v3l"}"><span class="${"svelte-14d7v3l"}">I make</span>
+            <span class="${"svelte-14d7v3l"}">Creative</span>
+            <span class="${"svelte-14d7v3l"}">Things,</span>
+            <span class="${"svelte-14d7v3l"}">Everyday.</span></h1></div></section>
+
+
 
 ${validate_component(Scene, "Scene").$$render($$result, {}, {}, {})}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/about-622fe341.js
-var about_622fe341_exports = {};
-__export(about_622fe341_exports, {
+// .svelte-kit/output/server/chunks/about-cd7637ac.js
+var about_cd7637ac_exports = {};
+__export(about_cd7637ac_exports, {
   default: () => About,
   hydrate: () => hydrate,
   prerender: () => prerender2,
   router: () => router
 });
 var import_cookie4, browser, dev, css3, hydrate, router, prerender2, About;
-var init_about_622fe341 = __esm({
-  ".svelte-kit/output/server/chunks/about-622fe341.js"() {
+var init_about_cd7637ac = __esm({
+  ".svelte-kit/output/server/chunks/about-cd7637ac.js"() {
     init_shims();
-    init_app_f2d38c65();
+    init_app_c25c8ea0();
     import_cookie4 = __toModule(require_cookie());
     init_dist();
     browser = false;
@@ -20663,17 +20666,17 @@ var init_about_622fe341 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-20170809.js
-var index_20170809_exports = {};
-__export(index_20170809_exports, {
+// .svelte-kit/output/server/chunks/index-ca22c3f5.js
+var index_ca22c3f5_exports = {};
+__export(index_ca22c3f5_exports, {
   default: () => Todos,
   load: () => load2
 });
 var import_cookie5, css4, load2, Todos;
-var init_index_20170809 = __esm({
-  ".svelte-kit/output/server/chunks/index-20170809.js"() {
+var init_index_ca22c3f5 = __esm({
+  ".svelte-kit/output/server/chunks/index-ca22c3f5.js"() {
     init_shims();
-    init_app_f2d38c65();
+    init_app_c25c8ea0();
     import_cookie5 = __toModule(require_cookie());
     init_dist();
     css4 = {
@@ -20713,7 +20716,7 @@ var init_index_20170809 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-f2d38c65.js
+// .svelte-kit/output/server/chunks/app-c25c8ea0.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -22016,9 +22019,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-8d331c01.js",
+      file: assets + "/_app/start-4c43410f.js",
       css: [assets + "/_app/assets/start-0dba5459.css"],
-      js: [assets + "/_app/start-8d331c01.js", assets + "/_app/chunks/vendor-413625db.js"]
+      js: [assets + "/_app/start-4c43410f.js", assets + "/_app/chunks/vendor-21121e82.js"]
     },
     fetched: void 0,
     floc: false,
@@ -22062,8 +22065,8 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender: prerender3 });
 }
 var import_cookie6, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css5, Root, base2, assets, handle, user_hooks, template, options, default_settings, d, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_f2d38c65 = __esm({
-  ".svelte-kit/output/server/chunks/app-f2d38c65.js"() {
+var init_app_c25c8ea0 = __esm({
+  ".svelte-kit/output/server/chunks/app-c25c8ea0.js"() {
     init_shims();
     import_cookie6 = __toModule(require_cookie());
     init_dist();
@@ -22250,7 +22253,7 @@ ${``}`;
     d = (s2) => s2.replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
     empty = () => ({});
     manifest = {
-      assets: [{ "file": "cartagena.jpg", "size": 126474, "type": "image/jpeg" }, { "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "fonts/custom-bold-italic.woff2", "size": 17300, "type": "font/woff2" }, { "file": "fonts/custom-bold.woff2", "size": 16308, "type": "font/woff2" }, { "file": "fonts/custom-extrabold-italic.woff2", "size": 52768, "type": "font/woff2" }, { "file": "fonts/custom-medium-italic.woff2", "size": 15344, "type": "font/woff2" }, { "file": "fonts/custom-medium.woff2", "size": 14744, "type": "font/woff2" }, { "file": "fonts/custom-regular-italic.woff2", "size": 16608, "type": "font/woff2" }, { "file": "fonts/custom-regular.woff2", "size": 15832, "type": "font/woff2" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
+      assets: [{ "file": "cartagena.jpg", "size": 126474, "type": "image/jpeg" }, { "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "fonts/info-bold-italic.woff2", "size": 17300, "type": "font/woff2" }, { "file": "fonts/info-bold.woff2", "size": 16308, "type": "font/woff2" }, { "file": "fonts/info-medium-italic.woff2", "size": 15344, "type": "font/woff2" }, { "file": "fonts/info-medium.woff2", "size": 14744, "type": "font/woff2" }, { "file": "fonts/info-regular-italic.woff2", "size": 16608, "type": "font/woff2" }, { "file": "fonts/info-regular.woff2", "size": 15832, "type": "font/woff2" }, { "file": "fonts/serif-regular.woff2", "size": 62244, "type": "font/woff2" }, { "file": "fonts/title-extrabold-italic.woff2", "size": 52768, "type": "font/woff2" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
       layout: "src/routes/__layout.svelte",
       error: ".svelte-kit/build/components/error.svelte",
       routes: [
@@ -22296,13 +22299,13 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_1129a2ec(), layout_1129a2ec_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_17758c6e(), error_17758c6e_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_f5c1791c(), index_f5c1791c_exports)),
-      "src/routes/about.svelte": () => Promise.resolve().then(() => (init_about_622fe341(), about_622fe341_exports)),
-      "src/routes/todos/index.svelte": () => Promise.resolve().then(() => (init_index_20170809(), index_20170809_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_fbc6fe1d(), layout_fbc6fe1d_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_24061a80(), error_24061a80_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_d83af9b7(), index_d83af9b7_exports)),
+      "src/routes/about.svelte": () => Promise.resolve().then(() => (init_about_cd7637ac(), about_cd7637ac_exports)),
+      "src/routes/todos/index.svelte": () => Promise.resolve().then(() => (init_index_ca22c3f5(), index_ca22c3f5_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-d38757e2.js", "css": ["assets/pages/__layout.svelte-2400f8ce.css"], "js": ["pages/__layout.svelte-d38757e2.js", "chunks/vendor-413625db.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-b6ee51bc.js", "css": [], "js": ["error.svelte-b6ee51bc.js", "chunks/vendor-413625db.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-063a0267.js", "css": ["assets/pages/index.svelte-247b221d.css"], "js": ["pages/index.svelte-063a0267.js", "chunks/vendor-413625db.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-d608bc7b.js", "css": ["assets/pages/about.svelte-7b069440.css"], "js": ["pages/about.svelte-d608bc7b.js", "chunks/vendor-413625db.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-1dc72bf6.js", "css": ["assets/pages/todos/index.svelte-67bbd040.css"], "js": ["pages/todos/index.svelte-1dc72bf6.js", "chunks/vendor-413625db.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-2a0bdf72.js", "css": ["assets/pages/__layout.svelte-dd6f529f.css"], "js": ["pages/__layout.svelte-2a0bdf72.js", "chunks/vendor-21121e82.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-f9d6ff87.js", "css": [], "js": ["error.svelte-f9d6ff87.js", "chunks/vendor-21121e82.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-540c2306.js", "css": ["assets/pages/index.svelte-5099f2a6.css"], "js": ["pages/index.svelte-540c2306.js", "chunks/vendor-21121e82.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-15235af7.js", "css": ["assets/pages/about.svelte-7b069440.css"], "js": ["pages/about.svelte-15235af7.js", "chunks/vendor-21121e82.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-9dc4183b.js", "css": ["assets/pages/todos/index.svelte-67bbd040.css"], "js": ["pages/todos/index.svelte-9dc4183b.js", "chunks/vendor-21121e82.js"], "styles": [] } };
   }
 });
 
@@ -22314,7 +22317,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_f2d38c65();
+init_app_c25c8ea0();
 var import_cookie7 = __toModule(require_cookie());
 init_dist();
 
