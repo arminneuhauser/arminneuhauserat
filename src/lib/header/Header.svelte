@@ -5,6 +5,18 @@
 
     let now = new Date(),
         year = now.getFullYear();
+
+    let i = 0;
+    let colorSchemes= ['dark', 'light'];
+
+    function handleClick() {
+		i = ++i%colorSchemes.length; 
+
+        document.documentElement.setAttribute("color-scheme", colorSchemes[i]);
+	}
+
+
+    // $: document.body.classList[toggle ? 'add' : 'remove']('noscroll');
 </script>
 
 <header>
@@ -24,7 +36,7 @@
     </div>
     <div class="last">
         <span>©{year}</span>
-        <button id="death-star" title="Licht an">
+        <button id="death-star" title="Licht an" on:click={handleClick}>
             <span class="sr-only">Licht an</span>
             {@html theme}
         </button>
@@ -60,8 +72,8 @@
         top: 0;
         left: 0;
         right: 0;
-        mix-blend-mode: difference;
-        z-index: 1;
+        // mix-blend-mode: difference;
+        z-index: 10;
 
         @media (max-width: var.$breakpoint-md-max) {
             > div:not(.logo) {

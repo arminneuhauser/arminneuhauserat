@@ -21,10 +21,15 @@
         color: var(--base);
         background: var(--on-base);
     }
+
+    &[color-scheme="light"] {
+        --base: #fff;
+        --on-base: #050505;
+    }
 }
 
 body {
-    font-family: "Armin";
+    font-family: "sans-serif";
     line-height: 1.4;
     // min-height: 100vh;
     min-height: 200vh;

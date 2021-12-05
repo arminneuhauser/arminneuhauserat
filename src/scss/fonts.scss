@@ -1,42 +1,49 @@
 // FF Meta
 @font-face {
-    font-family: "Armin";
+    font-family: "sans-serif";
     font-weight: 400;
-    src: url("/fonts/custom-regular.woff2");
+    src: url("/fonts/info-regular.woff2");
 }
 @font-face {
-    font-family: "Armin";
+    font-family: "sans-serif";
     font-weight: 400;
     font-style: italic;
-    src: url("/fonts/custom-regular-italic.woff2");
+    src: url("/fonts/info-regular-italic.woff2");
 }
 @font-face {
-    font-family: "Armin";
+    font-family: "sans-serif";
     font-weight: 500;
-    src: url("/fonts/custom-medium.woff2");
+    src: url("/fonts/info-medium.woff2");
 }
 @font-face {
-    font-family: "Armin";
+    font-family: "sans-serif";
     font-weight: 500;
     font-style: italic;
-    src: url("/fonts/custom-medium-italic.woff2");
+    src: url("/fonts/info-medium-italic.woff2");
 }
 @font-face {
-    font-family: "Armin";
+    font-family: "sans-serif";
     font-weight: 700;
-    src: url("/fonts/custom-bold.woff2");
+    src: url("/fonts/info-bold.woff2");
 }
 @font-face {
-    font-family: "Armin";
+    font-family: "sans-serif";
     font-weight: 700;
     font-style: italic;
-    src: url("/fonts/custom-bold-italic.woff2");
+    src: url("/fonts/info-bold-italic.woff2");
 }
 
 // TT Norms
 @font-face {
-    font-family: "Armin";
+    font-family: "title";
     font-weight: 800;
     font-style: italic;
-    src: url("/fonts/custom-extrabold-italic.woff2");
+    src: url("/fonts/title-extrabold-italic.woff2");
+}
+
+// Iskry
+@font-face {
+    font-family: "serif";
+    font-weight: 400;
+    src: url("/fonts/serif-regular.woff2");
 }
