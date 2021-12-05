@@ -14,7 +14,6 @@
     import hsl from 'hsl-to-hex';
     import debounce from 'debounce';
     import { onMount } from 'svelte';
-import { blur } from 'svelte/transition';
 
     // This initialization needs to only happen once, even when the component
     // is unmounted and re-mounted
@@ -46,6 +45,7 @@ import { blur } from 'svelte/transition';
 
     let view;
     let app;
+    let renderer;
 
     onMount(async () => {
 
@@ -56,14 +56,16 @@ import { blur } from 'svelte/transition';
             backgroundAlpha: 0,
         });
 
+        renderer = new Renderer();
+
         let blurFilter = new KawaseBlurFilter(setBlur(), 10, true);
 
-        let noiseFilter = new NoiseFilter(0.12, random(0, 0.01));
+        let noiseFilter = new NoiseFilter(0.16, random(0, 0.01));
         // noiseFilter.blendMode = BLEND_MODES.COLOR_BURN;
 
         let colorMatrix = new ColorMatrixFilter();
         colorMatrix.technicolor(true);
-        colorMatrix.brightness(0.6, true);
+        colorMatrix.brightness(0.33, true);
 
         app.stage.filters = [
             blurFilter,
@@ -78,6 +80,7 @@ import { blur } from 'svelte/transition';
         class ColorPalette {
             constructor() {
                 this.setColors();
+                this.setCustomProperties();
             }
 
             setColors() {
@@ -106,6 +109,12 @@ import { blur } from 'svelte/transition';
                     "#",
                     "0x"
                 );
+            }
+
+            setCustomProperties() {
+                // set CSS custom properties so that the colors defined here can be used throughout the UI
+                document.documentElement.style.setProperty("--hue", this.hue.toString());
+                document.documentElement.style.setProperty("--hue-complimentary", this.complimentaryHue.toString());
             }
         }
 
@@ -154,8 +163,9 @@ import { blur } from 'svelte/transition';
 
             setRadius() {
                 const windowSize = (window.innerWidth * window.innerHeight);
+                const radius = random(10 + windowSize / 15000, 80 + windowSize / 15000);
 
-                return this.radius = windowSize / 6000;
+                return this.radius = radius;
             }
 
             setBounds() {
@@ -182,6 +192,8 @@ import { blur } from 'svelte/transition';
 
             moveByTime() {
                 // self similar "psuedo-random" or noise values at a given point in "time"
+                const mouseX = renderer.plugins.interaction.mouse.global.x;
+                const mouseY = renderer.plugins.interaction.mouse.global.y;
                 const xNoise = simplex.noise2D(this.xOff, this.xOff);
                 const yNoise = simplex.noise2D(this.yOff, this.yOff);
                 const scaleNoise = simplex.noise2D(this.xOff, this.yOff);
@@ -189,6 +201,9 @@ import { blur } from 'svelte/transition';
                 // map the xNoise/yNoise values (between -1 and 1) to a point within the orb's bounds
                 this.x = map(xNoise, -1, 1, this.bounds["x"].min, this.bounds["x"].max);
                 this.y = map(yNoise, -1, 1, this.bounds["y"].min, this.bounds["y"].max);
+
+                // this.x = this.x + mouseX*0.0001;
+
                 // map scaleNoise (between -1 and 1) to a scale value somewhere between half of the orb's original size, and 100% of it's original size
                 this.scale = map(scaleNoise, -1, 1, 0.5, 1);
 
@@ -234,7 +249,7 @@ import { blur } from 'svelte/transition';
 
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             app.ticker.add(() => {
-                noiseFilter.seed = random(0, 0.01);
+                noiseFilter.seed = random(0, 0.05);
 
                 orbs.forEach((orb) => {
                     orb.moveByTime();

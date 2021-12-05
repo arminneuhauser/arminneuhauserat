@@ -16,6 +16,11 @@
     @media (min-width: var.$breakpoint-lg) {
         --site-core-padding: 3rem;
     }
+
+    ::selection {
+        color: var(--base);
+        background: var(--on-base);
+    }
 }
 
 body {
