@@ -3,10 +3,13 @@
 
     import { Application } from '@pixi/app';
     import { Graphics } from '@pixi/graphics';
+    import { BLEND_MODES } from '@pixi/constants';
     import { BatchRenderer, Renderer } from '@pixi/core';
 	import { InteractionManager } from '@pixi/interaction';
 	import { TickerPlugin } from '@pixi/ticker';
     import { KawaseBlurFilter } from '@pixi/filter-kawase-blur';
+    import { NoiseFilter } from '@pixi/filter-noise';
+    import { ColorMatrixFilter } from '@pixi/filter-color-matrix';
     import SimplexNoise from 'simplex-noise';
     import hsl from 'hsl-to-hex';
     import debounce from 'debounce';
@@ -46,7 +49,17 @@
             backgroundAlpha: 0,
         });
 
-        app.stage.filters = [new KawaseBlurFilter(45, 10, true)];
+        let noiseFilter = new NoiseFilter(0.12, random(0, 0.01));
+        noiseFilter.blendMode = BLEND_MODES.COLOR_DODGE;
+
+        let colorMatrix = new ColorMatrixFilter();
+        colorMatrix.technicolor(true);
+
+        app.stage.filters = [
+            new KawaseBlurFilter(40, 10, true),
+            noiseFilter,
+            colorMatrix,
+        ];
 
         // Create a new simplex noise instance
         const simplex = new SimplexNoise();
@@ -59,33 +72,21 @@
 
             setColors() {
                 // pick a random hue somewhere between 220 and 360
-                this.hue = ~~random(220, 360);
-                this.complimentaryHue1 = this.hue + 30;
-                this.complimentaryHue2 = this.hue + 60;
+                this.hue = ~~random(205, 215); // blue
+                this.complimentaryHue = ~~random(15, 20); // orange
                 // define a fixed saturation and lightness
-                this.saturation = 85;
+                this.saturation = 95;
                 this.lightness = 50;
 
                 // define a base color
                 this.baseColor = hsl(this.hue, this.saturation, this.lightness);
                 // define a complimentary color, 30 degress away from the base
-                this.complimentaryColor1 = hsl(
-                    this.complimentaryHue1,
-                    this.saturation,
-                    this.lightness
-                );
-                // define a second complimentary color, 60 degrees away from the base
-                this.complimentaryColor2 = hsl(
-                    this.complimentaryHue2,
-                    this.saturation,
-                    this.lightness
-                );
+                this.complimentaryColor = hsl(this.complimentaryHue, this.saturation, this.lightness);
 
                 // store the color choices in an array so that a random one can be picked later
                 this.colorChoices = [
                     this.baseColor,
-                    this.complimentaryColor1,
-                    this.complimentaryColor2
+                    this.complimentaryColor
                 ];
             }
 
@@ -114,17 +115,19 @@
                 this.fill = fill;
 
                 // the original radius of the orb, set relative to window height
-                this.radius = random(window.innerHeight / 6, window.innerHeight / 10);
+                this.radius = random(window.innerHeight / 6, window.innerHeight / 20);
 
                 // starting points in "time" for the noise/self similar random values
                 this.xOff = random(0, 1000);
                 this.yOff = random(0, 1000);
                 // how quickly the noise/self similar random values step through time
-                this.inc = 0.0005;
+                this.inc = 0.00015;
 
                 // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
                 this.graphics = new Graphics();
-                this.graphics.alpha = 0.8;
+                this.graphics.alpha = 0.75;
+
+                this.graphics.blendMode = BLEND_MODES.SCREEN;
 
                 // 250ms after the last window resize event, recalculate orb positions.
                 window.addEventListener(
@@ -137,8 +140,8 @@
 
             setBounds() {
                 // how far from the { x, y } origin can each orb move
-                const maxDistX = window.innerWidth / 2;
-                const maxDistY = window.innerWidth / 6;
+                const maxDistX = window.innerWidth / 1.5;
+                const maxDistY = window.innerWidth / 5;
 
                 // the { x, y } origin for each orb (the bottom right of the screen)
                 const originX = window.innerWidth / 2;
@@ -157,7 +160,7 @@
                 };
             }
 
-            update() {
+            moveByTime() {
                 // self similar "psuedo-random" or noise values at a given point in "time"
                 const xNoise = simplex.noise2D(this.xOff, this.xOff);
                 const yNoise = simplex.noise2D(this.yOff, this.yOff);
@@ -173,6 +176,22 @@
                 this.xOff += this.inc;
                 this.yOff += this.inc;
             }
+
+            // moveByPointer(e) {
+            //     // const xNoise = simplex.noise2D(this.xOff, this.xOff);
+            //     let pos = e.data.global;
+
+            //     console.log(this.x);
+
+            //     // this.inc = 1;
+
+            //     // this.x = this.x + random(pos.x * 0.001, pos.x * -0.001);
+
+            //     // console.log(pos.x);
+
+            //     // this.x = this.x - pos.x;
+            //     // this.y = this.y - pos.y;
+            // }
 
             render() {
                 // update the PIXI.Graphics position and scale values
@@ -198,7 +217,7 @@
         // Create orbs
         const orbs = [];
 
-        for (let i = 0; i < 75; i++) {
+        for (let i = 0; i < 80; i++) {
             const orb = new Orb(colorPalette.randomColor());
 
             app.stage.addChild(orb.graphics);
@@ -207,16 +226,21 @@
         }
 
         // Animate!
+        app.stage.interactive = true;
+
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             app.ticker.add(() => {
+                noiseFilter.seed = random(0, 0.01);
+
                 orbs.forEach((orb) => {
-                    orb.update();
+                    orb.moveByTime();
                     orb.render();
+                    // app.stage.on("pointermove", orb.moveByPointer);
                 });
             });
         } else {
             orbs.forEach((orb) => {
-                orb.update();
+                orb.moveByTime();
                 orb.render();
             });
         }
