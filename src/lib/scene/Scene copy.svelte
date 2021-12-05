@@ -1,11 +1,15 @@
 <script>
     import '@mszu/pixi-ssr-shim';
 
+    // import * as PIXI from 'pixi.js';
     import { Application } from '@pixi/app';
     import { Graphics } from '@pixi/graphics';
     import { BatchRenderer, Renderer } from '@pixi/core';
 	import { InteractionManager } from '@pixi/interaction';
 	import { TickerPlugin } from '@pixi/ticker';
+	// import { Sprite } from '@pixi/sprite';
+	// import { Texture } from '@pixi/core';
+	// import { Text, TextStyle } from '@pixi/text';
     import { KawaseBlurFilter } from '@pixi/filter-kawase-blur';
     import SimplexNoise from 'simplex-noise';
     import hsl from 'hsl-to-hex';
@@ -24,6 +28,9 @@
 		Application.registerPlugin(TickerPlugin);
 	}
 
+    let view;
+    let app;
+
     // return a random number within a range
     function random(min, max) {
         return Math.random() * (max - min) + min;
@@ -34,19 +41,7 @@
         return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
     }
 
-    let view;
-    let app;
-
     onMount(async () => {
-
-        // Create PixiJS app
-        app = new Application({
-            view,
-            resizeTo: window,
-            backgroundAlpha: 0,
-        });
-
-        app.stage.filters = [new KawaseBlurFilter(45, 10, true)];
 
         // Create a new simplex noise instance
         const simplex = new SimplexNoise();
@@ -55,6 +50,7 @@
         class ColorPalette {
             constructor() {
                 this.setColors();
+                this.setCustomProperties();
             }
 
             setColors() {
@@ -63,43 +59,57 @@
                 this.complimentaryHue1 = this.hue + 30;
                 this.complimentaryHue2 = this.hue + 60;
                 // define a fixed saturation and lightness
-                this.saturation = 85;
+                this.saturation = 95;
                 this.lightness = 50;
 
                 // define a base color
                 this.baseColor = hsl(this.hue, this.saturation, this.lightness);
                 // define a complimentary color, 30 degress away from the base
                 this.complimentaryColor1 = hsl(
-                    this.complimentaryHue1,
-                    this.saturation,
-                    this.lightness
+                this.complimentaryHue1,
+                this.saturation,
+                this.lightness
                 );
                 // define a second complimentary color, 60 degrees away from the base
                 this.complimentaryColor2 = hsl(
-                    this.complimentaryHue2,
-                    this.saturation,
-                    this.lightness
+                this.complimentaryHue2,
+                this.saturation,
+                this.lightness
                 );
 
                 // store the color choices in an array so that a random one can be picked later
                 this.colorChoices = [
-                    this.baseColor,
-                    this.complimentaryColor1,
-                    this.complimentaryColor2
+                this.baseColor,
+                this.complimentaryColor1,
+                this.complimentaryColor2
                 ];
             }
 
             randomColor() {
                 // pick a random color
                 return this.colorChoices[~~random(0, this.colorChoices.length)].replace(
-                    "#",
-                    "0x"
+                "#",
+                "0x"
+                );
+            }
+
+            setCustomProperties() {
+                // set CSS custom properties so that the colors defined here can be used throughout the UI
+                document.documentElement.style.setProperty("--hue", this.hue);
+                document.documentElement.style.setProperty(
+                "--hue-complimentary1",
+                this.complimentaryHue1
+                );
+                document.documentElement.style.setProperty(
+                "--hue-complimentary2",
+                this.complimentaryHue2
                 );
             }
         }
 
         // Orb class
         class Orb {
+            // Pixi takes hex colors as hexidecimal literals (0x rather than a string with '#')
             constructor(fill = 0x000000) {
                 // bounds = the area an orb is "allowed" to move within
                 this.bounds = this.setBounds();
@@ -114,45 +124,47 @@
                 this.fill = fill;
 
                 // the original radius of the orb, set relative to window height
-                this.radius = random(window.innerHeight / 6, window.innerHeight / 10);
+                this.radius = random(window.innerHeight / 6, window.innerHeight / 3);
 
                 // starting points in "time" for the noise/self similar random values
                 this.xOff = random(0, 1000);
                 this.yOff = random(0, 1000);
                 // how quickly the noise/self similar random values step through time
-                this.inc = 0.0005;
+                this.inc = 0.002;
 
                 // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
                 this.graphics = new Graphics();
-                this.graphics.alpha = 0.8;
+                this.graphics.alpha = 0.825;
 
                 // 250ms after the last window resize event, recalculate orb positions.
                 window.addEventListener(
-                    'resize',
-                    debounce(() => {
-                        this.bounds = this.setBounds();
-                    }, 250)
+                'resize',
+                debounce(() => {
+                    this.bounds = this.setBounds();
+                }, 250)
                 );
             }
 
             setBounds() {
                 // how far from the { x, y } origin can each orb move
-                const maxDistX = window.innerWidth / 2;
-                const maxDistY = window.innerWidth / 6;
-
+                const maxDist =
+                    window.innerWidth < 1000 ? window.innerWidth / 3 : window.innerWidth / 5;
                 // the { x, y } origin for each orb (the bottom right of the screen)
-                const originX = window.innerWidth / 2;
-                const originY = window.innerHeight / 1.85;
+                const originX = window.innerWidth / 1.25;
+                const originY =
+                    window.innerWidth < 1000
+                    ? window.innerHeight
+                    : window.innerHeight / 1.375;
 
                 // allow each orb to move x distance away from it's { x, y }origin
                 return {
                     x: {
-                        min: originX - maxDistX,
-                        max: originX + maxDistX
+                    min: originX - maxDist,
+                    max: originX + maxDist
                     },
                     y: {
-                        min: originY - maxDistY,
-                        max: originY + maxDistY
+                    min: originY - maxDist,
+                    max: originY + maxDist
                     }
                 };
             }
@@ -192,13 +204,22 @@
             }
         }
 
+        // Create PixiJS app
+        app = new Application({
+            view,
+            resizeTo: window,
+            backgroundAlpha: 0,
+        });
+
         // Create colour palette
         const colorPalette = new ColorPalette();
+
+        app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
 
         // Create orbs
         const orbs = [];
 
-        for (let i = 0; i < 75; i++) {
+        for (let i = 0; i < 10; i++) {
             const orb = new Orb(colorPalette.randomColor());
 
             app.stage.addChild(orb.graphics);
@@ -210,8 +231,8 @@
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             app.ticker.add(() => {
                 orbs.forEach((orb) => {
-                    orb.update();
-                    orb.render();
+                orb.update();
+                orb.render();
                 });
             });
         } else {
