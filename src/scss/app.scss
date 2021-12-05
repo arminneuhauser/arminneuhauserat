@@ -5,7 +5,15 @@
 :root {
     --primary: #F1912A;
     --base: #050505;
-    --on-base: #fff;
+    --on-base: #ffffff;
+
+    --base-h: 0;
+    --base-s: 0%;
+    --base-l: 2%;
+
+    --on-base-h: 0;
+    --on-base-s: 0%;
+    --on-base-l: 100%;
 
     --site-core-padding: 1.5rem;
 
@@ -25,6 +33,14 @@
     &[color-scheme="light"] {
         --base: #fff;
         --on-base: #050505;
+
+        --base-h: 0;
+        --base-s: 0%;
+        --base-l: 100%;
+    
+        --on-base-h: 0;
+        --on-base-s: 0%;
+        --on-base-l: 2%;
     }
 }
 

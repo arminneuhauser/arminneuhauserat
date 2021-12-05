@@ -9,11 +9,16 @@
     let i = 0;
     let colorSchemes= ['dark', 'light'];
 
-    function handleClick() {
+    function handleDeathStarClick() {
 		i = ++i%colorSchemes.length; 
-
         document.documentElement.setAttribute("color-scheme", colorSchemes[i]);
 	}
+
+    let mobileMenuVisible = false
+
+    function handleMakiMixClick() {
+        mobileMenuVisible = !mobileMenuVisible;
+    }
 </script>
 
 <header>
@@ -33,28 +38,28 @@
     </div>
     <div class="last">
         <span>©{year}</span>
-        <button id="death-star" title="Licht an" on:click={handleClick}>
+        <button id="death-star" title="Licht an" on:click={handleDeathStarClick}>
             <span class="sr-only">Licht an</span>
             {@html deathStar}
         </button>
     </div>
 
-    <button class="maki-mix" title="Menü anzeigen">
+    <button class="maki-mix" title="Menü anzeigen" on:click={handleMakiMixClick}>
         <span class="sr-only">Menü anzeigen</span>
         {@html makiMix}
     </button>
-
-    <nav class="mobile-nav">
-        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Start</a>
-        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Projekte</a>
-        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Über mich</a>
-        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Kontakt</a>
-        <button id="death-star" title="Licht an">
-            <span class="sr-only">Licht an</span>
-            {@html deathStar}
-        </button>
-    </nav>
 </header>
+
+<nav class="mobile-nav" class:active="{mobileMenuVisible}">
+    <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Start</a>
+    <a sveltekit:prefetch href="/">Projekte</a>
+    <a sveltekit:prefetch href="/">Über mich</a>
+    <a sveltekit:prefetch href="/">Kontakt</a>
+    <button id="death-star" title="Licht an" on:click={handleDeathStarClick}>
+        <span class="sr-only">Licht an</span>
+        {@html deathStar}
+    </button>
+</nav>
 
 <style lang="scss">
     header {
@@ -73,7 +78,7 @@
         mix-blend-mode: exclusion;
         z-index: 10;
 
-        @media (max-width: var.$breakpoint-md-max) {
+        @media (max-width: var.$breakpoint-sm-max) {
             > div:not(.logo) {
                 display: none;
             }
@@ -112,6 +117,42 @@
     }
 
     .mobile-nav {
-        display: none;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        overflow-y: auto;
+        background-color: var(--base);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .4s cubic-bezier(0.7,0,0.3,1);
+        z-index: 9;
+        height: 100vh;
+        padding: #{fn.rem(100)} var(--site-core-padding);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: var.$breakpoint-sm-max) {
+            &.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+
+        a, button {
+            display: flex;
+            align-items: flex-end;
+            font-size: #{fn.rem(32)};
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        button {
+            padding: #{fn.rem(10)} 0;
+        }
     }
 </style>
