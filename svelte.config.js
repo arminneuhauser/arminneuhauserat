@@ -19,7 +19,7 @@ const config = {
         vite: {
             optimizeDeps: {
                 include: ['url', 'querystring']
-            }
+            },
         }  
     },
 };
