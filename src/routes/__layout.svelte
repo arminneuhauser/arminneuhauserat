@@ -8,9 +8,3 @@
 <main>
     <slot />
 </main>
-
-<style lang="scss">
-    main {
-        padding-top: #{rem(80)};
-    }
-</style>

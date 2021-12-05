@@ -190,7 +190,7 @@
                 };
             }
 
-            moveByTime() {
+            update() {
                 // self similar "psuedo-random" or noise values at a given point in "time"
                 const mouseX = renderer.plugins.interaction.mouse.global.x;
                 const mouseY = renderer.plugins.interaction.mouse.global.y;
@@ -252,16 +252,29 @@
                 noiseFilter.seed = random(0, 0.05);
 
                 orbs.forEach((orb) => {
-                    orb.moveByTime();
+                    orb.update();
                     orb.render();
                 });
             });
         } else {
             orbs.forEach((orb) => {
-                orb.moveByTime();
+                orb.update();
                 orb.render();
             });
         }
+
+        // app.stage.on("pointerdown", (event) => { alert('clicked!'); });
+
+        // app.renderer.on("pointerdown", (event) => { alert('clicked!'); });
+
+        // document.getElementById("death-star").addEventListener("click", (event) => {
+        //     orbs.forEach((orb) => {
+        //         orb.setBounds();
+        //         orb.update();
+        //         // orb.render();
+        //     });
+        // });
+
     });
 </script>
 

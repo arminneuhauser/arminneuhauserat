@@ -24,7 +24,7 @@
     </div>
     <div class="last">
         <span>©{year}</span>
-        <button class="death-star" title="Licht an">
+        <button id="death-star" title="Licht an">
             <span class="sr-only">Licht an</span>
             {@html theme}
         </button>
@@ -40,7 +40,7 @@
         <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Projekte</a>
         <a sveltekit:prefetch href="/ueber-mich" class:active={$page.path === '/ueber-mich'}>Über mich</a>
         <a sveltekit:prefetch href="/kontakt" class:active={$page.path === '/kontakt'}>Kontakt</a>
-        <button class="death-star" title="Licht an">
+        <button id="death-star" title="Licht an">
             <span class="sr-only">Licht an</span>
             {@html theme}
         </button>
