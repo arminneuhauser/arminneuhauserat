@@ -48,8 +48,8 @@
                 content: "";
                 display: block;
                 padding-bottom: 100%;
-                background-color: hsla(0, 0, 100, 0.5);
-                border: 1px solid hsla(0, 0, 100, 0.6);
+                background-color: hsla(0deg, 0%, 100%, 0.5);
+                border: 1px solid hsla(0deg, 0%, 100%, 0.6);
                 border-radius: 50%;
                 mix-blend-mode: soft-light;
             }
