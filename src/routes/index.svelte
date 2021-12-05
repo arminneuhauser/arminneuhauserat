@@ -2,9 +2,9 @@
     export const prerender = true;
 </script>
 
-<script lang="ts">
+<!-- <script lang="ts">
     import Scene from '$lib/scene/Scene.svelte';
-</script>
+</script> -->
 
 <svelte:head>
     <title>Armin Neuhauser | Webdesign</title>
@@ -18,7 +18,7 @@
     </h1>
 </section>
 
-<Scene />
+<!-- <Scene /> -->
 
 <style lang="scss">
     .hero {
