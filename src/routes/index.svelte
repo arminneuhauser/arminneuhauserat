@@ -35,6 +35,7 @@
             margin: 0;
             white-space: nowrap;
             overflow: hidden;
+            // mix-blend-mode: overlay;
 
             span {
                 display: block;

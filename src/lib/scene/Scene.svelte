@@ -5,8 +5,8 @@
     import { Graphics } from '@pixi/graphics';
     import { BLEND_MODES } from '@pixi/constants';
     import { BatchRenderer, Renderer } from '@pixi/core';
-	import { InteractionManager } from '@pixi/interaction';
-	import { TickerPlugin } from '@pixi/ticker';
+    import { InteractionManager } from '@pixi/interaction';
+    import { TickerPlugin } from '@pixi/ticker';
     import { KawaseBlurFilter } from '@pixi/filter-kawase-blur';
     import { NoiseFilter } from '@pixi/filter-noise';
     import { ColorMatrixFilter } from '@pixi/filter-color-matrix';
@@ -14,18 +14,19 @@
     import hsl from 'hsl-to-hex';
     import debounce from 'debounce';
     import { onMount } from 'svelte';
+import { blur } from 'svelte/transition';
 
     // This initialization needs to only happen once, even when the component
-	// is unmounted and re-mounted
-	if (!(Renderer.__plugins ?? {}).hasOwnProperty('interaction')) {
-		Renderer.registerPlugin('interaction', InteractionManager);
-	}
-	if (!(Renderer.__plugins ?? {}).hasOwnProperty('batch')) {
-		Renderer.registerPlugin('batch', BatchRenderer);
-	}
-	if (!(Application._plugins || []).some((plugin) => plugin === TickerPlugin)) {
-		Application.registerPlugin(TickerPlugin);
-	}
+    // is unmounted and re-mounted
+    if (!(Renderer.__plugins ?? {}).hasOwnProperty('interaction')) {
+        Renderer.registerPlugin('interaction', InteractionManager);
+    }
+    if (!(Renderer.__plugins ?? {}).hasOwnProperty('batch')) {
+        Renderer.registerPlugin('batch', BatchRenderer);
+    }
+    if (!(Application._plugins || []).some((plugin) => plugin === TickerPlugin)) {
+    	Application.registerPlugin(TickerPlugin);
+    }
 
     // return a random number within a range
     function random(min, max) {
@@ -35,6 +36,12 @@
     // map a number from 1 range to another
     function map(n, start1, end1, start2, end2) {
         return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
+    }
+
+    // set blur radius based on window size
+    function setBlur() {
+        let blurRadius = 13 + window.innerHeight * window.innerWidth / 80000;
+        return blurRadius;
     }
 
     let view;
@@ -49,14 +56,17 @@
             backgroundAlpha: 0,
         });
 
+        let blurFilter = new KawaseBlurFilter(setBlur(), 10, true);
+
         let noiseFilter = new NoiseFilter(0.12, random(0, 0.01));
-        noiseFilter.blendMode = BLEND_MODES.COLOR_DODGE;
+        // noiseFilter.blendMode = BLEND_MODES.COLOR_BURN;
 
         let colorMatrix = new ColorMatrixFilter();
         colorMatrix.technicolor(true);
+        colorMatrix.brightness(0.6, true);
 
         app.stage.filters = [
-            new KawaseBlurFilter(40, 10, true),
+            blurFilter,
             noiseFilter,
             colorMatrix,
         ];
@@ -115,7 +125,9 @@
                 this.fill = fill;
 
                 // the original radius of the orb, set relative to window height
-                this.radius = random(window.innerHeight / 6, window.innerHeight / 20);
+                // this.radius = random(window.innerHeight / 6, window.innerHeight / 20);
+
+                this.radius = this.setRadius();
 
                 // starting points in "time" for the noise/self similar random values
                 this.xOff = random(0, 1000);
@@ -134,14 +146,22 @@
                     'resize',
                     debounce(() => {
                         this.bounds = this.setBounds();
+                        this.radius = this.setRadius();
+                        blurFilter.blur = setBlur();
                     }, 250)
                 );
+            }
+
+            setRadius() {
+                const windowSize = (window.innerWidth * window.innerHeight);
+
+                return this.radius = windowSize / 6000;
             }
 
             setBounds() {
                 // how far from the { x, y } origin can each orb move
                 const maxDistX = window.innerWidth / 1.5;
-                const maxDistY = window.innerWidth / 5;
+                const maxDistY = window.innerHeight / 2.5;
 
                 // the { x, y } origin for each orb (the bottom right of the screen)
                 const originX = window.innerWidth / 2;
@@ -177,22 +197,6 @@
                 this.yOff += this.inc;
             }
 
-            // moveByPointer(e) {
-            //     // const xNoise = simplex.noise2D(this.xOff, this.xOff);
-            //     let pos = e.data.global;
-
-            //     console.log(this.x);
-
-            //     // this.inc = 1;
-
-            //     // this.x = this.x + random(pos.x * 0.001, pos.x * -0.001);
-
-            //     // console.log(pos.x);
-
-            //     // this.x = this.x - pos.x;
-            //     // this.y = this.y - pos.y;
-            // }
-
             render() {
                 // update the PIXI.Graphics position and scale values
                 this.graphics.x = this.x;
@@ -217,7 +221,7 @@
         // Create orbs
         const orbs = [];
 
-        for (let i = 0; i < 80; i++) {
+        for (let i = 0; i < 60; i++) {
             const orb = new Orb(colorPalette.randomColor());
 
             app.stage.addChild(orb.graphics);
@@ -235,7 +239,6 @@
                 orbs.forEach((orb) => {
                     orb.moveByTime();
                     orb.render();
-                    // app.stage.on("pointermove", orb.moveByPointer);
                 });
             });
         } else {
@@ -247,7 +250,7 @@
     });
 </script>
 
-<canvas bind:this={view}/>
+<canvas bind:this={view}></canvas>
 
 <style lang="scss">
     canvas {
