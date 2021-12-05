@@ -7,7 +7,7 @@ const config = {
     preprocess: preprocess({
         sourceMap: true,
         scss: {
-            prependData: '@use "src/scss/functions.scss" as fn;',
+            prependData: '@use "src/scss/variables.scss" as var; @use "src/scss/functions.scss" as fn;',
         },
     }),
 

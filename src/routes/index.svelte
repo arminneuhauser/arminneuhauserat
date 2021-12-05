@@ -1,6 +1,4 @@
 <script context="module" lang="ts">
-    // since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
     export const prerender = true;
 </script>
 
@@ -12,35 +10,49 @@
     <title>Armin Neuhauser | Webdesign</title>
 </svelte:head>
 
-<Scene />
-
-<section class="grid pt-16 md:pt-20 lg:pt-24">
-    <div class="col-start-4 col-end-5">
-        <h3 class="font-extrabold mb-4">
-            Hallo, ich bin Armin
-        </h3>
-        <h1 class="font-serif">
-            Ich erschaffe digitale<br class="hidden lg:block">
-            Erlebnisse, jeden Tag<span class="text-primary">.</span>
-        </h1>
-    </div>
-    <div class="col-start-4 col-end-6">
-        <!-- <img class="mt-20" src="/cartagena.jpg" alt="Cartagena"> -->
-    </div>
+<section class="hero">
+    <h1>
+        <span>Ich erschaffe</span>
+        <span>digitale</span>
+        <span>Erlebnisse.</span>
+    </h1>
 </section>
 
-<style lang="scss">
-    section {
-        grid-template-columns: var(--site-core-padding) auto fn.rem(12) 1fr var(--site-core-padding);
+<Scene />
 
-        h3 {
-            font-size: fn.rfs(18, 24);
-            margin-top: 1.7em;
-        }
+<style lang="scss">
+    .hero {
+        height: 100vh;
+        display: grid;
+        align-items: center;
 
         h1 {
-            font-size: fn.rfs(48, 80);
-            line-height: 1.2;
+            grid-column: 1 / span 4;
+            font-size: 13vw;
+            line-height: 0.85;
+            font-style: italic;
+            font-weight: 800;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+
+            span {
+                display: block;
+
+                &:first-child {
+                    margin-left: 20vw;
+                }
+
+                &:nth-child(2) {
+                    margin-left: -1.3vw;
+                    color: transparent;
+                    -webkit-text-stroke: #{fn.rem(1)} var(--on-base);
+                }
+
+                &:last-child {
+                    margin-left: 15vw;
+                }
+            }
         }
     }
 </style>
