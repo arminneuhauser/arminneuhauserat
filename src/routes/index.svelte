@@ -6,7 +6,7 @@
     import Scene from '$lib/scene/Scene.svelte';
     import Quote from 'inspirational-quotes';
 
-    let randomQuote = Quote.getQuote({ author: false });
+    let randomQuote = Quote.getQuote();
 </script>
 
 <svelte:head>
@@ -21,6 +21,7 @@
             <span>Creative</span>
             <span>Things,</span>
             <span>Everyday.</span> -->
+            <cite>{randomQuote.author}</cite>
         </h1>
     </div>
 </section>
@@ -82,6 +83,19 @@
 
             span {
                 display: block;
+            }
+
+            cite {
+                display: block;
+                margin: 0.5em 0 0;
+                font-family: "sans-serif";
+                font-weight: 400;
+                font-style: normal;
+                font-size: fn.rfs(15, 18);
+
+                &::before {
+                    content: "– ";
+                }
             }
         }
     }
