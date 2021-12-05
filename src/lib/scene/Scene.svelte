@@ -65,7 +65,7 @@
 
         let colorMatrix = new ColorMatrixFilter();
         colorMatrix.technicolor(true);
-        colorMatrix.brightness(0.33, true);
+        colorMatrix.brightness(0.25, true);
 
         app.stage.filters = [
             blurFilter,
@@ -85,10 +85,10 @@
 
             setColors() {
                 // pick a random hue somewhere between 220 and 360
-                this.hue = ~~random(205, 215); // blue
-                this.complimentaryHue = ~~random(15, 20); // orange
+                this.hue = ~~random(180, 215); // blue
+                this.complimentaryHue = ~~random(0, 20); // orange
                 // define a fixed saturation and lightness
-                this.saturation = 95;
+                this.saturation = 100;
                 this.lightness = 50;
 
                 // define a base color
@@ -142,7 +142,7 @@
                 this.xOff = random(0, 1000);
                 this.yOff = random(0, 1000);
                 // how quickly the noise/self similar random values step through time
-                this.inc = 0.00015;
+                this.inc = 0.00006;
 
                 // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
                 this.graphics = new Graphics();
@@ -163,7 +163,7 @@
 
             setRadius() {
                 const windowSize = (window.innerWidth * window.innerHeight);
-                const radius = random(10 + windowSize / 15000, 80 + windowSize / 15000);
+                const radius = random(20 + windowSize / 15000, 80 + windowSize / 15000);
 
                 return this.radius = radius;
             }
@@ -289,5 +289,10 @@
         height: 100%;
         pointer-events: none;
         z-index: -1;
+    }
+
+    :global([color-scheme="light"]) canvas {
+        opacity: 0.35;
+        mix-blend-mode: luminosity;
     }
 </style>
