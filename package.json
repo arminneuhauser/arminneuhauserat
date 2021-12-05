@@ -26,6 +26,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
     "hsl-to-hex": "^1.0.0",
+    "inspirational-quotes": "^2.0.1",
     "pixi.js": "^6.2.0",
     "postcss": "^8.3.11",
     "postcss-load-config": "^3.1.0",
@@ -40,8 +41,5 @@
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
   },
-  "type": "module",
-  "dependencies": {
-    "inspirational-quotes": "^2.0.1"
-  }
+  "type": "module"
 }
