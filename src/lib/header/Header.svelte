@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
-    import menu from './menu.svg?raw';
-    import theme from './theme.svg?raw';
+    import makiMix from './maki-mix.svg?raw';
+    import deathStar from './death-star.svg?raw';
 
     let now = new Date(),
         year = now.getFullYear();
@@ -14,9 +14,6 @@
 
         document.documentElement.setAttribute("color-scheme", colorSchemes[i]);
 	}
-
-
-    // $: document.body.classList[toggle ? 'add' : 'remove']('noscroll');
 </script>
 
 <header>
@@ -38,13 +35,13 @@
         <span>©{year}</span>
         <button id="death-star" title="Licht an" on:click={handleClick}>
             <span class="sr-only">Licht an</span>
-            {@html theme}
+            {@html deathStar}
         </button>
     </div>
 
     <button class="maki-mix" title="Menü anzeigen">
         <span class="sr-only">Menü anzeigen</span>
-        {@html menu}
+        {@html makiMix}
     </button>
 
     <nav class="mobile-nav">
@@ -54,7 +51,7 @@
         <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Kontakt</a>
         <button id="death-star" title="Licht an">
             <span class="sr-only">Licht an</span>
-            {@html theme}
+            {@html deathStar}
         </button>
     </nav>
 </header>

@@ -4,6 +4,9 @@
 
 <script lang="ts">
     import Scene from '$lib/scene/Scene.svelte';
+    import Quote from 'inspirational-quotes';
+
+    let randomQuote = Quote.getQuote({ author: false });
 </script>
 
 <svelte:head>
@@ -13,10 +16,11 @@
 <section class="hero">
     <div>
         <h1>
-            <span>I make</span>
+            {randomQuote.text}
+            <!-- <span>I make</span>
             <span>Creative</span>
             <span>Things,</span>
-            <span>Everyday.</span>
+            <span>Everyday.</span> -->
         </h1>
     </div>
 </section>
@@ -42,7 +46,8 @@
         > div {
             position: relative;
             flex: 1 1 auto;
-            max-width: fn.rfs(240, 320);
+            // max-width: fn.rfs(240, 320);
+            max-width: #{fn.rem(600)};
 
             &::after {
                 content: "";
@@ -58,7 +63,7 @@
         h1 {
             font-family: "serif";
             font-weight: 400;
-            font-size: fn.rfs(24, 32);
+            font-size: fn.rfs(20, 32);
             line-height: 1.1;
             // text-transform: uppercase;
             // letter-spacing: 0.025em;
@@ -73,6 +78,7 @@
             flex-direction: column;
             justify-content: center;
             z-index: 1;
+            padding: 5vw;
 
             span {
                 display: block;
