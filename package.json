@@ -14,7 +14,6 @@
     "@lukeed/uuid": "^2.0.0",
     "@mszu/pixi-ssr-shim": "^1.0.1",
     "@pixi/filter-kawase-blur": "^4.1.5",
-    "@sveltejs/adapter-netlify": "^1.0.0-next.35",
     "@sveltejs/kit": "next",
     "@types/cookie": "^0.4.1",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
