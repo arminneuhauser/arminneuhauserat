@@ -16,11 +16,11 @@
             <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Projekte</a>
         </div>
         <div>
-            <a sveltekit:prefetch href="/ueber-mich" class:active={$page.path === '/ueber-mich'}>Über mich</a>
+            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Über mich</a>
         </div>
     </div>
     <div>
-        <a sveltekit:prefetch href="/kontakt" class:active={$page.path === '/kontakt'}>Kontakt</a>
+        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Kontakt</a>
     </div>
     <div class="last">
         <span>©{year}</span>
@@ -38,8 +38,8 @@
     <nav class="mobile-nav">
         <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Start</a>
         <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Projekte</a>
-        <a sveltekit:prefetch href="/ueber-mich" class:active={$page.path === '/ueber-mich'}>Über mich</a>
-        <a sveltekit:prefetch href="/kontakt" class:active={$page.path === '/kontakt'}>Kontakt</a>
+        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Über mich</a>
+        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Kontakt</a>
         <button id="death-star" title="Licht an">
             <span class="sr-only">Licht an</span>
             {@html theme}
