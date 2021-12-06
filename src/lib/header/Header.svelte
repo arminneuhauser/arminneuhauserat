@@ -33,7 +33,7 @@
         <DeathStar/>
     </div>
 
-    <button class="maki-mix" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
+    <button class="maki-mix" class:active="{mobileMenuVisible}" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
         <span class="sr-only">{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}</span>
         {@html makiMix}
     </button>
@@ -99,6 +99,12 @@
         align-items: center;
         justify-content: center;
 
+        &.active {
+            :global(.yummy) {
+                display: none;
+            }
+        }
+
         @media (min-width: var.$breakpoint-md) {
             display: none;
         }
@@ -131,16 +137,12 @@
             }
         }
 
-        a, button {
+        a {
             display: flex;
             align-items: flex-end;
             font-size: #{fn.rem(32)};
             width: 100%;
             text-transform: uppercase;
-        }
-
-        button {
-            padding: #{fn.rem(10)} 0;
         }
     }
 </style>
