@@ -44,7 +44,6 @@
     <a sveltekit:prefetch href="/">Projekte</a>
     <a sveltekit:prefetch href="/">Über mich</a>
     <a sveltekit:prefetch href="/">Kontakt</a>
-    <DeathStar/>
 </nav>
 
 <style lang="scss">
