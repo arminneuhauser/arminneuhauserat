@@ -4,7 +4,7 @@
 
 <script lang="ts">
     import Scene from '$lib/scene/Scene.svelte';
-    import deathStar from '/death-star.svg?raw';
+    import deathStar from '$lib/death-star.svg?raw';
 
     let i = 0;
     let colorSchemes= ['dark', 'light'];
