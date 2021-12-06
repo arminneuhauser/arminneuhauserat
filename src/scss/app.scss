@@ -15,14 +15,15 @@
     --on-base-s: 0%;
     --on-base-l: 100%;
 
-    --site-core-padding: 1.5rem;
+    --app-height: 100%;
+    --core-padding: 1.5rem;
 
     @media (min-width: var.$breakpoint-md) {
-        --site-core-padding: 2rem;
+        --core-padding: 2rem;
     }
 
     @media (min-width: var.$breakpoint-lg) {
-        --site-core-padding: 3rem;
+        --core-padding: 3rem;
     }
 
     ::selection {

@@ -66,7 +66,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: #{fn.rem(20)} var(--site-core-padding);
+        padding: #{fn.rem(20)} var(--core-padding);
         text-transform: uppercase;
         font-size: #{fn.rem(13)};
         text-align: left;
@@ -131,7 +131,7 @@
         transition: opacity .4s cubic-bezier(0.7,0,0.3,1);
         z-index: 9;
         height: 100vh;
-        padding: #{fn.rem(100)} var(--site-core-padding);
+        padding: #{fn.rem(100)} var(--core-padding);
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -42,13 +42,14 @@
 <style lang="scss">
     .hero {
         box-sizing: border-box;
-        min-height: 100vh;
+        min-height: var(--app-height, 100vh);
+        // min-height: -webkit-fill-available;
         // display: flex;
         // flex-wrap: wrap;
         // align-items: center;
         // align-content: center;
         // justify-content: center;
-        padding: var(--site-core-padding);
+        padding: var(--core-padding);
         display: grid;
         grid-template-rows: 1fr auto;
         grid-row-gap: #{fn.rem(20)};

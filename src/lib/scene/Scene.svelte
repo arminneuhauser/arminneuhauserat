@@ -151,12 +151,19 @@
                 this.graphics.blendMode = BLEND_MODES.SCREEN;
 
                 // 250ms after the last window resize event, recalculate orb positions.
+                let lastWidth = window.innerWidth;
                 window.addEventListener(
                     'resize',
                     debounce(() => {
-                        this.bounds = this.setBounds();
-                        this.radius = this.setRadius();
-                        blurFilter.blur = setBlur();
+                        let diffWidth =  window.innerWidth - lastWidth;
+
+                        lastWidth = window.innerWidth;
+
+                        if (diffWidth > 0) {
+                            this.bounds = this.setBounds();
+                            this.radius = this.setRadius();
+                            blurFilter.blur = setBlur();
+                        }
                     }, 250)
                 );
             }
@@ -262,19 +269,6 @@
                 orb.render();
             });
         }
-
-        // app.stage.on("pointerdown", (event) => { alert('clicked!'); });
-
-        // app.renderer.on("pointerdown", (event) => { alert('clicked!'); });
-
-        // document.getElementById("death-star").addEventListener("click", (event) => {
-        //     orbs.forEach((orb) => {
-        //         orb.setBounds();
-        //         orb.update();
-        //         // orb.render();
-        //     });
-        // });
-
     });
 </script>
 
