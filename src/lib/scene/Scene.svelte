@@ -285,8 +285,22 @@
         z-index: -1;
     }
 
-    :global([color-scheme="light"]) canvas {
-        opacity: 0.35;
-        mix-blend-mode: luminosity;
+    :global([color-scheme="light"]) {
+        canvas {
+            opacity: 0.25;
+            mix-blend-mode: luminosity;
+        }
+    }
+
+    :global([color-scheme="blue"]) {
+        canvas {
+            mix-blend-mode: screen;
+        }
+    }
+
+    :global([color-scheme="lime"]) {
+        canvas {
+            mix-blend-mode: screen;
+        }
     }
 </style>

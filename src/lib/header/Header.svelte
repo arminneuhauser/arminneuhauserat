@@ -1,18 +1,10 @@
 <script lang="ts">
     import { page } from '$app/stores';
+    import DeathStar from '$lib/death-star/DeathStar.svelte';
     import makiMix from './maki-mix.svg?raw';
-    import deathStar from '$lib/death-star.svg?raw';
 
     let now = new Date(),
         year = now.getFullYear();
-
-    let i = 0;
-    let colorSchemes= ['dark', 'light'];
-
-    function handleDeathStarClick() {
-		i = ++i%colorSchemes.length; 
-        document.documentElement.setAttribute("color-scheme", colorSchemes[i]);
-	}
 
     let mobileMenuVisible = false
 
@@ -38,14 +30,11 @@
     </div>
     <div class="last">
         <span>©{year}</span>
-        <button id="death-star" title="Licht an" on:click={handleDeathStarClick}>
-            <span class="sr-only">Licht an</span>
-            {@html deathStar}
-        </button>
+        <DeathStar/>
     </div>
 
-    <button class="maki-mix" title="Menü anzeigen" on:click={handleMakiMixClick}>
-        <span class="sr-only">Menü anzeigen</span>
+    <button class="maki-mix" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
+        <span class="sr-only">{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}</span>
         {@html makiMix}
     </button>
 </header>
@@ -55,10 +44,7 @@
     <a sveltekit:prefetch href="/">Projekte</a>
     <a sveltekit:prefetch href="/">Über mich</a>
     <a sveltekit:prefetch href="/">Kontakt</a>
-    <button id="death-star" title="Licht an" on:click={handleDeathStarClick}>
-        <span class="sr-only">Licht an</span>
-        {@html deathStar}
-    </button>
+    <DeathStar/>
 </nav>
 
 <style lang="scss">
@@ -74,9 +60,12 @@
         top: 0;
         left: 0;
         right: 0;
-        color: white;
-        mix-blend-mode: exclusion;
+        color: var(--on-base);
         z-index: 10;
+
+        :global([color-scheme="dark"]) & {
+            mix-blend-mode: exclusion;
+        }
 
         @media (max-width: var.$breakpoint-sm-max) {
             > div:not(.logo) {

@@ -34,15 +34,18 @@
     &[color-scheme="light"] {
         --base: #fff;
         --on-base: #050505;
-
-        --base-h: 0;
-        --base-s: 0%;
-        --base-l: 100%;
-    
-        --on-base-h: 0;
-        --on-base-s: 0%;
-        --on-base-l: 2%;
     }
+
+    &[color-scheme="blue"] {
+        --base: #105099;
+        --on-base: #fff;
+    }
+
+    &[color-scheme="lime"] {
+        --base: #9e9e4d;
+        --on-base: #050505;
+    }
+    
 }
 
 body {
