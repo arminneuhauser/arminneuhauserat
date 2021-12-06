@@ -93,3 +93,8 @@ button {
     white-space: nowrap !important;
     width: 1px !important;
 }
+
+svg {
+    height: #{fn.rem(24)};
+    width: #{fn.rem(24)};
+}

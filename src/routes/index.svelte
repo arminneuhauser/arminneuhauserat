@@ -82,7 +82,7 @@
         }
 
         .bottom {
-            grid-column: 2;
+            grid-column: 1 / span 3;
             display: grid;
             grid-template-columns: auto 1fr auto;
 
@@ -106,11 +106,6 @@
             :global(#death-star) {
                 @media (min-width: var.$breakpoint-md) {
                     display: none;
-                }
-
-                :global(svg) {
-                    height: #{fn.rem(22)};
-                    width: #{fn.rem(22)};
                 }
             }
         }
