@@ -4,6 +4,15 @@
 
 <script lang="ts">
     import Scene from '$lib/scene/Scene.svelte';
+    import deathStar from '/death-star.svg?raw';
+
+    let i = 0;
+    let colorSchemes= ['dark', 'light'];
+
+    function handleDeathStarClick() {
+		i = ++i%colorSchemes.length; 
+        document.documentElement.setAttribute("color-scheme", colorSchemes[i]);
+	}
 </script>
 
 <svelte:head>
@@ -25,7 +34,14 @@
         </h1>
     </div>
     <div class="bottom">
-        <h2>Konzept, Design & Entwicklung</h2>
+        <div>
+            <h2>Konzept, Design & Entwicklung</h2>
+            <h3>made in Vienna</h3>
+        </div>
+        <button id="death-star" title="Licht an" on:click={handleDeathStarClick}>
+            <span class="sr-only">Licht an</span>
+            {@html deathStar}
+        </button>
     </div>
 </section>
 
@@ -52,7 +68,7 @@
         padding: var(--core-padding);
         display: grid;
         grid-template-rows: 1fr auto;
-        grid-row-gap: #{fn.rem(20)};
+        grid-gap: #{fn.rem(16)};
         grid-template-columns: auto minmax(auto, #{fn.rem(480)}) auto;
 
         .sphere {
@@ -93,7 +109,6 @@
             flex-direction: column;
             justify-content: center;
             z-index: 1;
-            padding: 5vw;
 
             span {
                 display: block;
@@ -104,8 +119,14 @@
             // flex: 1 0 100%;
             // align-self: flex-end;
             grid-column: 2;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
 
-            h2 {
+            > div {
+                grid-column: 2;
+            }
+
+            h2, h3 {
                 font-size: fn.rem(15);
                 font-weight: 400;
                 margin: 0;
@@ -118,6 +139,17 @@
                     mix-blend-mode: normal;
                     color: var(--on-base);
                     opacity: 1;
+                }
+            }
+
+            #death-star {
+                @media (min-width: var.$breakpoint-md) {
+                    display: none;
+                }
+
+                :global(svg) {
+                    height: #{fn.rem(22)};
+                    width: #{fn.rem(22)};
                 }
             }
         }

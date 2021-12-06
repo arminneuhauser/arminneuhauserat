@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import makiMix from './maki-mix.svg?raw';
-    import deathStar from './death-star.svg?raw';
+    import deathStar from '/death-star.svg?raw';
 
     let now = new Date(),
         year = now.getFullYear();
