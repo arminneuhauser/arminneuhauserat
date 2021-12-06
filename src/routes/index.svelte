@@ -33,6 +33,8 @@
 <Scene />
 
 <style lang="scss">
+    @use "src/scss/animations.scss";
+
     .hero {
         box-sizing: border-box;
         min-height: var(--app-height, 100vh);
@@ -75,9 +77,11 @@
             flex-direction: column;
             justify-content: center;
             z-index: 1;
+            animation: fadein-from-primary 1s ease-in forwards;
 
             span {
                 display: block;
+                animation: to-top 0.5s ease-in forwards;
             }
         }
 
@@ -85,6 +89,7 @@
             grid-column: 1 / span 3;
             display: grid;
             grid-template-columns: auto 1fr auto;
+            animation: fadein-from-primary 0.5s ease-in forwards;
 
             > div {
                 grid-column: 2;

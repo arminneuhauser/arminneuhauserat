@@ -47,6 +47,8 @@
 </nav>
 
 <style lang="scss">
+    @use "src/scss/animations.scss";
+
     header {
         display: flex;
         align-items: center;
@@ -61,6 +63,7 @@
         right: 0;
         color: var(--on-base);
         z-index: 10;
+        animation: fadein-from-primary 0.5s ease-in forwards;
 
         :global([color-scheme="dark"]) & {
             mix-blend-mode: exclusion;
