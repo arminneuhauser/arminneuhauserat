@@ -140,6 +140,10 @@
             }
         }
 
+        @media (min-width: var.$breakpoint-md) {
+            display: none;
+        }
+
         a {
             display: flex;
             align-items: flex-end;
