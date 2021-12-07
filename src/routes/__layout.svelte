@@ -11,12 +11,23 @@
 	});
 
     onMount(() => {
-        const appHeight = () => {
+        // set initial height of app to prevent webkit 100vh magic
+        // recalculate when width changes however
+        let width = window.innerWidth;
+
+        const setAppHeight = () => {
             const doc = document.documentElement
             doc.style.setProperty('--app-height', `${window.innerHeight}px`)
         }
-        window.addEventListener('resize', appHeight)
-        appHeight();
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth != width) {
+                width = window.innerWidth;
+                setAppHeight();
+            }
+        });
+
+        setAppHeight();
     });
 
     $: afterUpdate(() => {
