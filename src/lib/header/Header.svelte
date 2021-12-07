@@ -34,7 +34,6 @@
     </div>
 
     <button class="maki-mix" class:active="{mobileMenuVisible}" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
-        <span class="sr-only">{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}</span>
         {@html makiMix}
     </button>
 </header>
@@ -53,9 +52,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: #{fn.rem(20)} var(--core-padding);
+        padding: #{fn.rem(10)} var(--core-padding);
         text-transform: uppercase;
-        font-size: #{fn.rem(13)};
+        font-size: #{fn.rfs(13, 16, $minWidth: 1280, $maxWidth: 2560)};
         text-align: left;
         position: fixed;
         top: 0;
@@ -63,7 +62,6 @@
         right: 0;
         color: var(--on-base);
         z-index: 10;
-        animation: fadein-from-primary 0.5s ease-in forwards;
 
         :global([color-scheme="dark"]) & {
             mix-blend-mode: exclusion;
@@ -79,28 +77,58 @@
             display: grid;
             grid-column-gap: #{fn.rem(20)};
             grid-template-columns: repeat(4, 1fr);
-            padding-top: #{fn.rem(40)};
-            padding-bottom: #{fn.rem(40)};
+            padding-top: #{fn.rem(30)};
+            padding-bottom: #{fn.rem(30)};
+            align-items: flex-start;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: fadein-from-primary 0.5s ease-out forwards;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
             align-items: flex-start;
         }
     }
 
     .logo {
         font-weight: 500;
+        margin-left: #{fn.rem(-10)};
     }
 
     .last {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
+        margin-right: #{fn.rem(-10)};
+
+        :global(button) {
+            padding: 0.25em;
+        }
+
+        :global(svg) {
+            height: 1.85em;
+            width: 1.85em;
+        }
+    }
+
+    a, span {
+        padding: #{fn.rem(10)};
+
+        @media (min-width: var.$breakpoint-md) {
+            padding-top: 0.25em;
+            padding-bottom: 0.25em;
+        }
     }
 
     .maki-mix {
-        height: #{fn.rem(24)};
-        width: #{fn.rem(24)};
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: #{fn.rem(10)};
+        margin-right: #{fn.rem(-10)};
 
         &.active {
             :global(.yummy) {

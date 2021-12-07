@@ -42,8 +42,7 @@
 body {
     font-family: "sans-serif";
     line-height: 1.4;
-    // min-height: 100vh;
-    min-height: 200vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: var(--base);
@@ -88,4 +87,11 @@ button {
 svg {
     height: #{fn.rem(24)};
     width: #{fn.rem(24)};
+    pointer-events: none;
+}
+
+*:focus-visible {
+    outline: #{fn.rem(3)} solid var(--on-base);
+    outline-offset: #{fn.rem(2)};
+    text-decoration: none;
 }

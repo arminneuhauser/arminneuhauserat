@@ -18,6 +18,11 @@
 </script>
 
 <button id="death-star" title="Farbschema wechseln" on:click={handleDeathStarClick}>
-    <span class="sr-only">Farbschema wechseln</span>
     {@html deathStarIcon}
 </button>
+
+<style lang="scss">
+    button {
+        display: flex;
+    }
+</style>

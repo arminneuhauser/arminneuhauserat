@@ -15,7 +15,7 @@
     <div class="sphere">
         <h1>
             <span>Ich erschaffe</span>
-            <span>ausgereifte digitale</span>
+            <span>ausgefeilte digitale</span>
             <span>Erlebnisse im Web,</span>
             <span>jeden Tag.</span>
         </h1>
@@ -29,19 +29,26 @@
     </div>
 </section>
 
+<section class="wisdom">
+    <p>Meine Webseiten sind wie gute Fahrräder: elegant, hochwertig, auf den Benutzer angepasst und vor allem pfeilschnell.</p>
+</section>
 
 <Scene />
 
 <style lang="scss">
     @use "src/scss/animations.scss";
 
-    .hero {
+    section {
         box-sizing: border-box;
-        min-height: var(--app-height, 100vh);
+        min-height: 100vh;
         padding: var(--core-padding);
         display: grid;
-        grid-template-rows: 1fr auto;
         grid-gap: #{fn.rem(16)};
+    }
+
+    .hero {
+        min-height: var(--app-height, 100vh);
+        grid-template-rows: 1fr auto;
         grid-template-columns: auto minmax(auto, #{fn.rem(480)}) auto;
 
         .sphere {
@@ -55,7 +62,7 @@
                 display: block;
                 padding-bottom: 100%;
                 background-color: hsla(0deg, 0%, 100%, 0.5);
-                border: 1px solid hsla(0deg, 0%, 100%, 0.7);
+                border: 1px solid hsla(0deg, 0%, 100%, 0.8);
                 border-radius: 50%;
                 mix-blend-mode: soft-light;
             }
@@ -77,11 +84,17 @@
             flex-direction: column;
             justify-content: center;
             z-index: 1;
-            animation: fadein-from-primary 1s ease-in forwards;
+            
+            @media (prefers-reduced-motion: no-preference) {
+                animation: fadein-from-primary 1s ease-out forwards;
+            }
 
             span {
                 display: block;
-                animation: to-top 0.5s ease-in forwards;
+
+                @media (prefers-reduced-motion: no-preference) {
+                    animation: to-top 0.5s ease-out forwards;
+                }
             }
         }
 
@@ -89,14 +102,17 @@
             grid-column: 1 / span 3;
             display: grid;
             grid-template-columns: auto 1fr auto;
-            animation: fadein-from-primary 0.5s ease-in forwards;
+
+            @media (prefers-reduced-motion: no-preference) {
+                animation: fadein-from-primary 0.5s ease-out forwards;
+            }
 
             > div {
                 grid-column: 2;
             }
 
             h2, h3 {
-                font-size: fn.rem(15);
+                font-size: #{fn.rfs(15, 20, $minWidth: 1280, $maxWidth: 2560)};
                 font-weight: 400;
                 margin: 0;
                 text-align: center;
@@ -113,6 +129,18 @@
                     display: none;
                 }
             }
+        }
+    }
+
+    .wisdom {
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: auto minmax(auto, #{fn.rem(560)}) auto;
+
+        p {
+            grid-column: 2;
+            font-size: fn.rfs(36, 48);
+            font-weight: 500;
         }
     }
 </style>
