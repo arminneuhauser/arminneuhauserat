@@ -21,7 +21,7 @@
         }
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth != width) {
+            if (window.innerWidth != width || window.innerWidth > 768) {
                 width = window.innerWidth;
                 setAppHeight();
             }

@@ -60,7 +60,7 @@
 
         let blurFilter = new KawaseBlurFilter(setBlur(), 10, true);
 
-        let noiseFilter = new NoiseFilter(0.16, random(0, 0.01));
+        let noiseFilter = new NoiseFilter(0.18, random(0, 0.05));
         // noiseFilter.blendMode = BLEND_MODES.COLOR_BURN;
 
         let colorMatrix = new ColorMatrixFilter();
@@ -85,7 +85,7 @@
 
             setColors() {
                 // pick a random hue somewhere between 220 and 360
-                this.hue = ~~random(180, 215); // blue
+                this.hue = ~~random(195, 215); // blue
                 this.complimentaryHue = ~~random(0, 20); // orange
                 // define a fixed saturation and lightness
                 this.saturation = 100;
