@@ -1,7 +1,8 @@
 <script lang="ts">
     import { scheme } from '../stores.js';
     import Header from '$lib/header/Header.svelte';
-    import { onMount, afterUpdate, beforeUpdate } from 'svelte';
+    import Footer from '$lib/footer/Footer.svelte';
+    import { onMount, afterUpdate } from 'svelte';
     import '../scss/app.scss';
 
     let scheme_value;
@@ -40,3 +41,5 @@
 <main>
     <slot />
 </main>
+
+<Footer />

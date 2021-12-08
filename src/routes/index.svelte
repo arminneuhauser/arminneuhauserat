@@ -49,7 +49,7 @@
     .hero {
         min-height: var(--app-height, 100vh);
         grid-template-rows: 1fr auto;
-        grid-template-columns: auto minmax(auto, #{fn.rem(480)}) auto;
+        grid-template-columns: auto minmax(#{fn.rem(160)}, #{fn.rem(480)}) auto;
 
         .sphere {
             position: relative;
@@ -139,8 +139,8 @@
 
         p {
             grid-column: 2;
-            font-size: fn.rfs(36, 48);
-            font-weight: 500;
+            font-size: fn.rfs(28, 48);
+            line-height: 1.2;
         }
     }
 </style>
