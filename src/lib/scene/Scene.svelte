@@ -60,7 +60,7 @@
 
         let blurFilter = new KawaseBlurFilter(setBlur(), 10, true);
 
-        let noiseFilter = new NoiseFilter(0.18, random(0, 0.05));
+        let noiseFilter = new NoiseFilter(0.2, random(0, 0.02));
         // noiseFilter.blendMode = BLEND_MODES.COLOR_BURN;
 
         let colorMatrix = new ColorMatrixFilter();
@@ -256,7 +256,7 @@
 
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             app.ticker.add(() => {
-                noiseFilter.seed = random(0, 0.05);
+                noiseFilter.seed = random(0, 0.02);
 
                 orbs.forEach((orb) => {
                     orb.update();
