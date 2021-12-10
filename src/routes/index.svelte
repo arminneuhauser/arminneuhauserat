@@ -5,11 +5,15 @@
 <script lang="ts">
     import Scene from '$lib/scene/Scene.svelte';
     import DeathStar from '$lib/death-star/DeathStar.svelte';
+
+    let scrollY;
 </script>
 
 <svelte:head>
     <title>Armin Neuhauser | Webdesign</title>
 </svelte:head>
+
+<svelte:window bind:scrollY={scrollY}/>
 
 <section class="hero">
     <div class="sphere">
@@ -29,6 +33,17 @@
     </div>
 </section>
 
+<section class="latest-work">
+    <h1>
+        <span style="transform: translate({-scrollY / 4}px,0)">
+            <i>Meine</i> Projekte
+            <i>Meine</i> Projekte
+            <i>Meine</i> Projekte
+            <i>Meine</i> Projekte
+        </span>
+    </h1>
+</section>
+
 <section class="wisdom">
     <p>Meine Webseiten sind wie gute Fahrräder: elegant, hochwertig, auf den Benutzer angepasst und vor allem pfeilschnell.</p>
 </section>
@@ -44,13 +59,16 @@
         padding: var(--core-padding);
         display: grid;
         grid-gap: #{fn.rem(16)};
+        align-items: start;
     }
 
     .hero {
         min-height: var(--app-height, 100vh);
         grid-template-rows: 1fr auto;
-        grid-template-columns: auto clamp(#{fn.rem(260)}, 10rem + 40vw, #{fn.rem(780)}) auto;
-        grid-gap: 0;
+        grid-template-columns: auto clamp(#{fn.rem(320)}, 10rem + 28vw, #{fn.rem(2560)}) auto;
+        grid-column-gap: 0;
+        padding-left: 0;
+        padding-right: 0;
 
         .sphere {
             position: relative;
@@ -70,9 +88,9 @@
         }
 
         h1 {
-            font-family: "serif";
+            font-family: var(--serif);
             font-weight: 700;
-            font-size: fn.rfs(25, 64, 360, 1920);
+            font-size: fn.rfs(25, 72, 360, 2560);
             line-height: 1.1;
             text-align: center;
             margin: 0;
@@ -125,6 +143,26 @@
                 @media (min-width: var.$breakpoint-md) {
                     display: none;
                 }
+            }
+        }
+    }
+
+    .latest-work {
+        padding: #{fn.rem(100)} 0;
+
+        h1 {
+            font-size: #{fn.rfs(40, 140, 360, 2560)};
+            white-space: nowrap;
+            overflow: hidden;
+            margin: 0;
+
+            span {
+                display: inline-block;
+            }
+
+            i {
+                font-family: var(--serif);
+                font-style: normal;
             }
         }
     }
