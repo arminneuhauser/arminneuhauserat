@@ -64,6 +64,7 @@
         right: 0;
         z-index: 10;
         pointer-events: none;
+        // mix-blend-mode: exclusion;
 
         @media (prefers-reduced-motion: no-preference) {
             animation: fadein-from-primary 1s var(--easing) forwards;

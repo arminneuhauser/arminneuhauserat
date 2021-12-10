@@ -35,7 +35,7 @@
 
         h1 {
             font-family: var(--serif);
-            font-weight: 400;
+            font-weight: 700;
             font-size: fn.rfs(24, 36);
             line-height: 1.1;
         }

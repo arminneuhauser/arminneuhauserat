@@ -118,3 +118,8 @@ svg {
     outline-offset: #{fn.rem(2)};
     text-decoration: none;
 }
+
+img {
+    height: auto;
+    max-width: 100%;
+}

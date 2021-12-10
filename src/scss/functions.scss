@@ -12,7 +12,7 @@
 // set breakpoints for font-scaling between min and max (optional, default 360 to 960)
 // usage: rfs(min-font-size-in-pixel, max-font-size-in-pixel, optional-scaling-starting-vw-in-pixel, optional-scaling-ending-vw-in-pixel)
 // samples: rfs(30, 60) rfs(30, 60, 360, 768)
-@function rfs($minFontSize, $maxFontSize, $minWidth: 360, $maxWidth: 960) {
+@function rfs($minFontSize, $maxFontSize, $minWidth: 360, $maxWidth: 1920) {
     $slope: math.div(($maxFontSize - $minFontSize), ($maxWidth - $minWidth));
     $yAxisIntersection: math.div((-$minWidth * $slope + $minFontSize), 16);
     $preferredValue: $yAxisIntersection+'rem + '+($slope * 100)+'vw';
