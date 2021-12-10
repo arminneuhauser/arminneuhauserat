@@ -142,7 +142,7 @@
                 this.xOff = random(0, 1000);
                 this.yOff = random(0, 1000);
                 // how quickly the noise/self similar random values step through time
-                this.inc = 0.00008;
+                this.inc = 0.0001;
 
                 // PIXI.Graphics is used to draw 2d primitives (in this case a circle) to the canvas
                 this.graphics = new Graphics();
@@ -182,7 +182,7 @@
 
                 // the { x, y } origin for each orb (the bottom right of the screen)
                 const originX = window.innerWidth / 2;
-                const originY = window.innerHeight / 1.85;
+                const originY = window.innerHeight / 1.9;
 
                 // allow each orb to move x distance away from it's { x, y }origin
                 return {
