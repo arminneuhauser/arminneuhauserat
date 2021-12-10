@@ -5,13 +5,14 @@
 </script>
 
 <section class="hero">
-    <div class="sphere">
-        <h1 style="transform: translate(0,{-scrollY / 8}px)">
+    <div class="headline">
+        <h1 style="transform: translate(0,{-scrollY / 7}px)">
             <span>Ich erschaffe</span>
             <span>ausgefeilte digitale</span>
             <span>Erlebnisse im Web,</span>
             <span>jeden Tag.</span>
         </h1>
+        <div class="sphere" style="transform: translate(0,{-scrollY / 10}px)"></div>
     </div>
     <div class="bottom" style="transform: translate(0,{-scrollY / 5}px)">
         <div>
@@ -37,14 +38,13 @@
         padding: var(--core-padding) 0;
         z-index: 1;
 
-        .sphere {
+        .headline {
             position: relative;
             aspect-ratio: 1;
             align-self: center;
             grid-column: 2;
 
-            &::after {
-                content: "";
+            .sphere {
                 display: block;
                 padding-bottom: 100%;
                 background-color: hsla(0, 0%, 100%, 0.5);
@@ -88,6 +88,7 @@
             grid-column: 1 / span 3;
             display: grid;
             grid-template-columns: auto 1fr auto;
+            padding: 0 var(--core-padding);
 
             @media (prefers-reduced-motion: no-preference) {
                 animation: fadein-from-primary 0.5s var(--easing) forwards;
