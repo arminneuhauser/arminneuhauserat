@@ -15,6 +15,10 @@
 
     --on-base: #ffffff;
 
+    --serif: "serif";
+    --sans-serif: "sans-serif";
+    --title: "title";
+
     --core-padding: 1.5rem;
     --core-max-width: #{fn.rem(1920)};
 
@@ -58,7 +62,7 @@
 }
 
 body {
-    font-family: "sans-serif";
+    font-family: var(--sans-serif);
     line-height: 1.4;
     min-height: 100vh;
     margin: 0;
