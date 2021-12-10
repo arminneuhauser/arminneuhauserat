@@ -4,10 +4,21 @@
 
 :root {
     --primary: #F1912A;
+    --primary-h: 31;
+    --primary-s: 88%;
+    --primary-l: 55%;
+
     --base: #050505;
+    --base-h: 0;
+    --base-s: 0%;
+    --base-l: 2%;
+
     --on-base: #ffffff;
 
     --core-padding: 1.5rem;
+    --core-max-width: #{fn.rem(1920)};
+
+    --easing: cubic-bezier(0.25, 0.1, 0.25, 1);
 
     @media (min-width: var.$breakpoint-md) {
         --core-padding: 2rem;
@@ -16,6 +27,13 @@
     @media (min-width: var.$breakpoint-lg) {
         --core-padding: 3rem;
     }
+
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
 
     ::selection {
         color: var(--base);
@@ -47,6 +65,7 @@ body {
     padding: 0;
     background-color: var(--base);
     color: var(--on-base);
+    -webkit-tap-highlight-color: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.3);
 }
 
 #svelte {

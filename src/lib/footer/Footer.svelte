@@ -1,26 +1,36 @@
 <footer>
     <div>
-        <h1>Lass uns gemeinsam Großes machen</h1>
-        <p>
-            Jede Ausfahrt sollte mit einem guten Kaffee abgeschlossen werden.<br> Also komm vorbei und sag Hallo.
-        </p>
-        <a href="mailto:mail@arminneuhauser.at">mail@arminneuhauser.at</a>
+        <div>
+            <h1>Lass uns gemeinsam Großes machen</h1>
+            <p>
+                Jede Ausfahrt sollte mit einem guten Kaffee abgeschlossen werden.<br> Also komm vorbei und sag Hallo.
+            </p>
+            <a href="mailto:mail@arminneuhauser.at">mail@arminneuhauser.at</a>
+        </div>
+        <button>Zurück nach oben</button>
     </div>
-    <button>Zurück nach oben</button>
 </footer>
 
 <style lang="scss">
     footer {
-        display: grid;
-        grid-gap: #{fn.rem(16)};
-        align-items: flex-end;
         background-color: var(--base);
         padding: #{fn.rem(10)} var(--core-padding);
 
         @media (min-width: var.$breakpoint-md) {
             padding-top: #{fn.rem(30)};
             padding-bottom: #{fn.rem(30)};
-            grid-template-columns: 1fr auto;
+        }
+
+        > div {
+            display: grid;
+            grid-gap: #{fn.rem(16)};
+            align-items: flex-end;
+            max-width: var(--core-max-width);
+            margin: 0 auto;
+
+            @media (min-width: var.$breakpoint-md) {
+                grid-template-columns: 1fr auto;
+            }
         }
 
         h1 {

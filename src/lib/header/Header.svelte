@@ -15,18 +15,26 @@
 
 <header>
     <div class="logo" >
-        <a sveltekit:prefetch href="/">Armin Neuhauser</a>
+        <a sveltekit:prefetch href="/">
+            <i>A</i><i>r</i><i>m</i><i>i</i><i>n</i> <i>N</i><i>e</i><i>u</i><i>h</i><i>a</i><i>u</i><i>s</i><i>e</i><i>r</i>
+        </a>
     </div>
     <div>
         <div>
-            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Projekte</a>
+            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
+                <i>P</i><i>r</i><i>o</i><i>j</i><i>e</i><i>k</i><i>t</i><i>e</i>
+            </a>
         </div>
         <div>
-            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Über mich</a>
+            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
+                <i>Ü</i><i>b</i><i>e</i><i>r</i> <i>m</i><i>i</i><i>c</i><i>h</i>
+            </a>
         </div>
     </div>
     <div>
-        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Kontakt</a>
+        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
+            <i>K<i>o</i><i>n</i><i>t</i><i>a</i><i>k</i><i>t</i>
+        </a>
     </div>
     <div class="last">
         <span>©{year}</span>
@@ -62,10 +70,7 @@
         right: 0;
         color: var(--on-base);
         z-index: 10;
-
-        :global([color-scheme="dark"]) & {
-            mix-blend-mode: exclusion;
-        }
+        pointer-events: none;
 
         @media (max-width: var.$breakpoint-sm-max) {
             > div:not(.logo) {
@@ -80,16 +85,41 @@
             padding-top: #{fn.rem(30)};
             padding-bottom: #{fn.rem(30)};
             align-items: flex-start;
+            max-width: var(--core-max-width);
+            margin: 0 auto;
         }
 
         @media (prefers-reduced-motion: no-preference) {
-            animation: fadein-from-primary 0.5s ease-out forwards;
+            animation: fadein-from-primary 0.5s var(--easing) forwards;
+        }
+
+        > * {
+            pointer-events: auto;
         }
 
         div {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+        }
+
+        :global([color-scheme="dark"]) & {
+            &::before {
+                content: '';
+                background: linear-gradient(
+                    0deg,
+                    hsla(var(--base-h), var(--base-s), var(--base-l), 0),
+                    hsla(var(--base-h), var(--base-s), var(--base-l), 0.2) 70%,
+                    hsla(var(--base-h), var(--base-s), var(--base-l), 0.9)
+                    );
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: #{fn.rem(200)};
+                z-index: -1;
+                pointer-events: none !important;
+            }
         }
     }
 
@@ -106,6 +136,11 @@
 
         :global(button) {
             padding: 0.25em;
+            transition: color 0.2s var(--easing);
+
+            &:hover {
+                color: var(--primary);
+            }
         }
 
         :global(svg) {
@@ -120,6 +155,61 @@
         @media (min-width: var.$breakpoint-md) {
             padding-top: 0.25em;
             padding-bottom: 0.25em;
+        }
+    }
+
+    a {
+        transition: all 0.2s var(--easing);
+
+        i {
+            display: inline-block;
+            font-style: normal;
+        }
+
+        &:hover {
+            i {
+                animation: flip-and-back 0.5s var(--easing) 0.02s;
+
+                &:nth-child(2) {
+                    animation-delay: 0.04s;
+                }
+                &:nth-child(3) {
+                    animation-delay: 0.06s;
+                }
+                &:nth-child(4) {
+                    animation-delay: 0.08s;
+                }
+                &:nth-child(5) {
+                    animation-delay: 0.1s;
+                }
+                &:nth-child(6) {
+                    animation-delay: 0.12s;
+                }
+                &:nth-child(7) {
+                    animation-delay: 0.14s;
+                }
+                &:nth-child(8) {
+                    animation-delay: 0.16s;
+                }
+                &:nth-child(9) {
+                    animation-delay: 0.18s;
+                }
+                &:nth-child(10) {
+                    animation-delay: 0.2s;
+                }
+                &:nth-child(11) {
+                    animation-delay: 0.22s;
+                }
+                &:nth-child(12) {
+                    animation-delay: 0.24s;
+                }
+                &:nth-child(13) {
+                    animation-delay: 0.26s;
+                }
+                &:nth-child(14) {
+                    animation-delay: 0.28s;
+                }
+            }
         }
     }
 

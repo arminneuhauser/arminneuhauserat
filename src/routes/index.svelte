@@ -49,7 +49,8 @@
     .hero {
         min-height: var(--app-height, 100vh);
         grid-template-rows: 1fr auto;
-        grid-template-columns: auto minmax(#{fn.rem(160)}, #{fn.rem(480)}) auto;
+        grid-template-columns: auto clamp(#{fn.rem(260)}, 10rem + 40vw, #{fn.rem(780)}) auto;
+        grid-gap: 0;
 
         .sphere {
             position: relative;
@@ -61,8 +62,8 @@
                 content: "";
                 display: block;
                 padding-bottom: 100%;
-                background-color: hsla(0deg, 0%, 100%, 0.5);
-                border: 1px solid hsla(0deg, 0%, 100%, 0.8);
+                background-color: hsla(0, 0%, 100%, 0.5);
+                border: 1px solid hsla(0, 0%, 100%, 0.8);
                 border-radius: 50%;
                 mix-blend-mode: soft-light;
             }
@@ -70,8 +71,8 @@
 
         h1 {
             font-family: "serif";
-            font-weight: 400;
-            font-size: fn.rfs(24, 36);
+            font-weight: 700;
+            font-size: fn.rfs(25, 64, 360, 1920);
             line-height: 1.1;
             text-align: center;
             margin: 0;
@@ -86,14 +87,14 @@
             z-index: 1;
             
             @media (prefers-reduced-motion: no-preference) {
-                animation: fadein-from-primary 1s ease-out forwards;
+                animation: fadein-from-primary 2s var(--easing) forwards;
             }
 
             span {
                 display: block;
 
                 @media (prefers-reduced-motion: no-preference) {
-                    animation: to-top 0.5s ease-out forwards;
+                    animation: to-top 0.5s var(--easing) forwards;
                 }
             }
         }
@@ -104,7 +105,7 @@
             grid-template-columns: auto 1fr auto;
 
             @media (prefers-reduced-motion: no-preference) {
-                animation: fadein-from-primary 0.5s ease-out forwards;
+                animation: fadein-from-primary 0.5s var(--easing) forwards;
             }
 
             > div {
@@ -118,10 +119,6 @@
                 text-align: center;
                 color: var(--on-base);
                 opacity: 0.7;
-
-                [color-scheme="dark"] & {
-                    mix-blend-mode: exclusion;
-                }
             }
 
             :global(#death-star) {
