@@ -14,36 +14,37 @@
 </script>
 
 <header>
-    <div class="logo" >
-        <a sveltekit:prefetch href="/">
-            <i>A</i><i>r</i><i>m</i><i>i</i><i>n</i> <i>N</i><i>e</i><i>u</i><i>h</i><i>a</i><i>u</i><i>s</i><i>e</i><i>r</i>
-        </a>
-    </div>
-    <div>
-        <div>
-            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
-                <i>P</i><i>r</i><i>o</i><i>j</i><i>e</i><i>k</i><i>t</i><i>e</i>
+    <section>
+        <div class="logo" >
+            <a sveltekit:prefetch href="/">
+                <i>A</i><i>r</i><i>m</i><i>i</i><i>n</i> <i>N</i><i>e</i><i>u</i><i>h</i><i>a</i><i>u</i><i>s</i><i>e</i><i>r</i>
             </a>
         </div>
         <div>
+            <div>
+                <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
+                    <i>P</i><i>r</i><i>o</i><i>j</i><i>e</i><i>k</i><i>t</i><i>e</i>
+                </a>
+            </div>
+            <div>
+                <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
+                    <i>Ü</i><i>b</i><i>e</i><i>r</i> <i>m</i><i>i</i><i>c</i><i>h</i>
+                </a>
+            </div>
+        </div>
+        <div>
             <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
-                <i>Ü</i><i>b</i><i>e</i><i>r</i> <i>m</i><i>i</i><i>c</i><i>h</i>
+                <i>K<i>o</i><i>n</i><i>t</i><i>a</i><i>k</i><i>t</i>
             </a>
         </div>
-    </div>
-    <div>
-        <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
-            <i>K<i>o</i><i>n</i><i>t</i><i>a</i><i>k</i><i>t</i>
-        </a>
-    </div>
-    <div class="last">
-        <span>©{year}</span>
-        <DeathStar/>
-    </div>
-
-    <button class="maki-mix" class:active="{mobileMenuVisible}" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
-        {@html makiMix}
-    </button>
+        <div class="last">
+            <span>©{year}</span>
+            <DeathStar/>
+        </div>
+        <button class="maki-mix" class:active="{mobileMenuVisible}" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
+            {@html makiMix}
+        </button>
+    </section>
 </header>
 
 <nav class="mobile-nav" class:active="{mobileMenuVisible}">
@@ -57,68 +58,71 @@
     @use "src/scss/animations.scss";
 
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: #{fn.rem(10)} var(--core-padding);
-        text-transform: uppercase;
-        font-size: #{fn.rfs(13, 16, $minWidth: 1280, $maxWidth: 2560)};
-        text-align: left;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        color: var(--on-base);
         z-index: 10;
         pointer-events: none;
 
-        @media (max-width: var.$breakpoint-sm-max) {
-            > div:not(.logo) {
-                display: none;
-            }
-        }
-
-        @media (min-width: var.$breakpoint-md) {
-            display: grid;
-            grid-column-gap: #{fn.rem(20)};
-            grid-template-columns: repeat(4, 1fr);
-            padding-top: #{fn.rem(30)};
-            padding-bottom: #{fn.rem(30)};
-            align-items: flex-start;
-            max-width: var(--core-max-width);
-            margin: 0 auto;
-        }
-
         @media (prefers-reduced-motion: no-preference) {
-            animation: fadein-from-primary 0.5s var(--easing) forwards;
+            animation: fadein-from-primary 1s var(--easing) forwards;
         }
 
-        > * {
-            pointer-events: auto;
-        }
-
-        div {
+        > section {
+            align-items: center;
+            color: var(--on-base);
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+            font-size: #{fn.rfs(13, 16, $minWidth: 1280, $maxWidth: 2560)};
+            justify-content: space-between;
+            padding: #{fn.rem(10)} var(--core-padding);
+            text-align: left;
+            text-transform: uppercase;
 
-        :global([color-scheme="dark"]) & {
-            &::before {
-                content: '';
-                background: linear-gradient(
-                    0deg,
-                    hsla(var(--base-h), var(--base-s), var(--base-l), 0),
-                    hsla(var(--base-h), var(--base-s), var(--base-l), 0.2) 70%,
-                    hsla(var(--base-h), var(--base-s), var(--base-l), 0.9)
-                    );
-                position: fixed;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: #{fn.rem(200)};
-                z-index: -1;
-                pointer-events: none !important;
+            @media (max-width: var.$breakpoint-sm-max) {
+                > div:not(.logo) {
+                    display: none;
+                }
+            }
+
+            @media (min-width: var.$breakpoint-md) {
+                display: grid;
+                grid-column-gap: #{fn.rem(20)};
+                grid-template-columns: repeat(4, 1fr);
+                padding-top: #{fn.rem(30)};
+                padding-bottom: #{fn.rem(30)};
+                align-items: flex-start;
+                max-width: var(--core-max-width);
+                margin: 0 auto;
+            }
+            
+            > * {
+                pointer-events: auto;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            :global([color-scheme="dark"]) & {
+                &::before {
+                    content: '';
+                    background: linear-gradient(
+                        0deg,
+                        hsla(var(--base-h), var(--base-s), var(--base-l), 0),
+                        hsla(var(--base-h), var(--base-s), var(--base-l), 0.2) 70%,
+                        hsla(var(--base-h), var(--base-s), var(--base-l), 0.9)
+                        );
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: #{fn.rem(200)};
+                    z-index: -1;
+                    pointer-events: none !important;
+                }
             }
         }
     }
