@@ -1,8 +1,5 @@
 <script lang="ts">
 	export let scrollY;
-
-    import wohnformat from '/images/wohnformat.jpg';
-    import cartagena from '/images/cartagena.jpg';
 </script>
 
 <section class="latest-work">
@@ -17,14 +14,14 @@
 
     <div class="projects">
         <article class="teaser">
-            <img src={cartagena} alt="Solmates" />
+            <img src="/images/cartagena.jpg" alt="Solmates" />
             <h1>
                 Solmates
                 <span>2019</span>
             </h1>
         </article>
         <article class="teaser">
-            <img src={wohnformat} alt="Wohnformat" />
+            <img src="/images/wohnformat.jpg" alt="Wohnformat" />
             <h1>
                 Wohnformat
                 <span>2018</span>

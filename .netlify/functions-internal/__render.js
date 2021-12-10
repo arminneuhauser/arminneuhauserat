@@ -3329,10 +3329,10 @@ var init_install_fetch = __esm({
           const readable = pair === null || pair === void 0 ? void 0 : pair.readable;
           assertRequiredField(readable, "readable", "ReadableWritablePair");
           assertReadableStream(readable, `${context} has member 'readable' that`);
-          const writable2 = pair === null || pair === void 0 ? void 0 : pair.writable;
-          assertRequiredField(writable2, "writable", "ReadableWritablePair");
-          assertWritableStream(writable2, `${context} has member 'writable' that`);
-          return { readable, writable: writable2 };
+          const writable3 = pair === null || pair === void 0 ? void 0 : pair.writable;
+          assertRequiredField(writable3, "writable", "ReadableWritablePair");
+          assertWritableStream(writable3, `${context} has member 'writable' that`);
+          return { readable, writable: writable3 };
         }
         class ReadableStream2 {
           constructor(rawUnderlyingSource = {}, rawStrategy = {}) {
@@ -3910,10 +3910,10 @@ var init_install_fetch = __esm({
           if (stream._backpressure) {
             const backpressureChangePromise = stream._backpressureChangePromise;
             return transformPromiseWith(backpressureChangePromise, () => {
-              const writable2 = stream._writable;
-              const state = writable2._state;
+              const writable3 = stream._writable;
+              const state = writable3._state;
               if (state === "erroring") {
-                throw writable2._storedError;
+                throw writable3._storedError;
               }
               return TransformStreamDefaultControllerPerformTransform(controller, chunk);
             });
@@ -4928,28 +4928,81 @@ var init_uid_json_039b6f30 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/death-star-5a0dad1d.js
-var deathStar;
-var init_death_star_5a0dad1d = __esm({
-  ".svelte-kit/output/server/chunks/death-star-5a0dad1d.js"() {
+// .svelte-kit/output/server/chunks/DeathStar-47693d22.js
+var deathStarIcon, css, DeathStar;
+var init_DeathStar_47693d22 = __esm({
+  ".svelte-kit/output/server/chunks/DeathStar-47693d22.js"() {
     init_shims();
-    deathStar = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <circle cx="12" cy="12" r="11.5" stroke="currentColor"/>\n    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23.9944C12.083 23.9981 12.1664 24 12.25 24C16.7143 24 20.3333 18.6274 20.3333 12C20.3333 5.37258 16.7143 0 12.25 0C12.1664 0 12.083 0.0018857 12 0.00563002V23.9944ZM19.3333 12C19.3333 15.1417 18.4737 17.9412 17.1363 19.9266C16.3451 21.1013 15.413 21.9595 14.4123 22.4659C15.7578 20.4094 16.6666 16.4931 16.6666 12C16.6666 7.50693 15.7578 3.59061 14.4123 1.53412C15.413 2.04051 16.3451 2.89873 17.1363 4.0734C18.4737 6.05877 19.3333 8.85828 19.3333 12ZM13.2148 1.59946C13.1402 1.5138 13.0686 1.43971 13 1.37576V22.6242C13.0686 22.5603 13.1402 22.4862 13.2148 22.4005C13.6349 21.9178 14.0587 21.1613 14.4346 20.1399C15.1835 18.105 15.6666 15.2273 15.6666 12C15.6666 8.77267 15.1835 5.89496 14.4346 3.86012C14.0587 2.83875 13.6349 2.08223 13.2148 1.59946Z" fill="currentColor"/>\n</svg>\n';
+    init_app_7ac9a5cc();
+    deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>\n';
+    css = {
+      code: "button.svelte-iyvpaf{display:flex}",
+      map: null
+    };
+    DeathStar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css);
+      return `<button id="${"death-star"}" title="${"Farbschema wechseln"}" class="${"svelte-iyvpaf"}"><!-- HTML_TAG_START -->${deathStarIcon}<!-- HTML_TAG_END -->
+</button>`;
+    });
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-b5b79e64.js
-var layout_b5b79e64_exports = {};
-__export(layout_b5b79e64_exports, {
+// .svelte-kit/output/server/chunks/__layout-9b6cefd5.js
+var layout_9b6cefd5_exports = {};
+__export(layout_9b6cefd5_exports, {
   default: () => _layout
 });
-var import_cookie, getStores, page, makiMix, css, Header, _layout;
-var init_layout_b5b79e64 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-b5b79e64.js"() {
+function writable(value, start = noop) {
+  let stop;
+  const subscribers = new Set();
+  function set(new_value) {
+    if (safe_not_equal(value, new_value)) {
+      value = new_value;
+      if (stop) {
+        const run_queue = !subscriber_queue.length;
+        for (const subscriber of subscribers) {
+          subscriber[1]();
+          subscriber_queue.push(subscriber, value);
+        }
+        if (run_queue) {
+          for (let i = 0; i < subscriber_queue.length; i += 2) {
+            subscriber_queue[i][0](subscriber_queue[i + 1]);
+          }
+          subscriber_queue.length = 0;
+        }
+      }
+    }
+  }
+  function update(fn) {
+    set(fn(value));
+  }
+  function subscribe2(run2, invalidate = noop) {
+    const subscriber = [run2, invalidate];
+    subscribers.add(subscriber);
+    if (subscribers.size === 1) {
+      stop = start(set) || noop;
+    }
+    run2(value);
+    return () => {
+      subscribers.delete(subscriber);
+      if (subscribers.size === 0) {
+        stop();
+        stop = null;
+      }
+    };
+  }
+  return { set, update, subscribe: subscribe2 };
+}
+var import_cookie, subscriber_queue, scheme, getStores, page, makiMix, css$1, Header, css2, Footer, _layout;
+var init_layout_9b6cefd5 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-9b6cefd5.js"() {
     init_shims();
-    init_app_bed5f114();
-    init_death_star_5a0dad1d();
+    init_app_7ac9a5cc();
+    init_DeathStar_47693d22();
     import_cookie = __toModule(require_cookie());
     init_dist();
+    subscriber_queue = [];
+    scheme = writable("dark");
     getStores = () => {
       const stores = getContext("__svelte__");
       return {
@@ -4974,47 +5027,59 @@ var init_layout_b5b79e64 = __esm({
         return store.subscribe(fn);
       }
     };
-    makiMix = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">\n    <rect y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" y="10" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" y="5" width="2" height="2" fill="currentColor"></rect>\n    <rect x="10" width="2" height="2" fill="currentColor"></rect>\n</svg>\n';
-    css = {
-      code: "header.svelte-1d0azzj.svelte-1d0azzj{display:flex;align-items:center;justify-content:space-between;padding:1.25rem var(--core-padding);text-transform:uppercase;font-size:0.8125rem;text-align:left;position:fixed;top:0;left:0;right:0;color:white;mix-blend-mode:exclusion;z-index:10}@media(max-width: 767px){header.svelte-1d0azzj>div.svelte-1d0azzj:not(.logo){display:none}}@media(min-width: 768px){header.svelte-1d0azzj.svelte-1d0azzj{display:grid;grid-column-gap:1.25rem;grid-template-columns:repeat(4, 1fr);padding-top:2.5rem;padding-bottom:2.5rem;align-items:flex-start}}.logo.svelte-1d0azzj.svelte-1d0azzj{font-weight:500}.last.svelte-1d0azzj.svelte-1d0azzj{display:flex;justify-content:space-between;align-items:flex-start}.maki-mix.svelte-1d0azzj.svelte-1d0azzj{height:1.5rem;width:1.5rem;display:flex;align-items:center;justify-content:center}@media(min-width: 768px){.maki-mix.svelte-1d0azzj.svelte-1d0azzj{display:none}}.mobile-nav.svelte-1d0azzj.svelte-1d0azzj{box-sizing:border-box;position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden;overflow-y:auto;background-color:var(--base);opacity:0;pointer-events:none;transition:opacity 0.4s cubic-bezier(0.7, 0, 0.3, 1);z-index:9;height:100vh;padding:6.25rem var(--core-padding);display:flex;flex-direction:column;justify-content:center}@media(max-width: 767px){.mobile-nav.active.svelte-1d0azzj.svelte-1d0azzj{opacity:1;pointer-events:all}}.mobile-nav.svelte-1d0azzj a.svelte-1d0azzj,.mobile-nav.svelte-1d0azzj button.svelte-1d0azzj{display:flex;align-items:flex-end;font-size:2rem;width:100%;text-transform:uppercase}.mobile-nav.svelte-1d0azzj button.svelte-1d0azzj{padding:0.625rem 0}",
+    makiMix = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <rect x="5" y="5" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="11" y="5" width="2" height="2" fill="currentColor"/>\n    <rect x="17" y="5" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="5" y="11" width="2" height="2" fill="currentColor"/>\n    <rect x="11" y="11" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="17" y="11" width="2" height="2" fill="currentColor"/>\n    <rect x="5" y="17" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="11" y="17" width="2" height="2" fill="currentColor"/>\n    <rect x="17" y="17" width="2" height="2" fill="currentColor"/>\n</svg>\n';
+    css$1 = {
+      code: '@keyframes svelte-txrnz9-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-txrnz9-to-top{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-txrnz9-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}header.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{position:fixed;top:0;left:0;right:0;z-index:10;pointer-events:none}@media(prefers-reduced-motion: no-preference){header.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{animation:svelte-txrnz9-fadein-from-primary 1s var(--easing) forwards}}header.svelte-txrnz9>section.svelte-txrnz9.svelte-txrnz9{align-items:center;color:var(--on-base);display:flex;font-size:clamp(0.8125rem, 0.625rem + 0.234375vw, 1rem);justify-content:space-between;padding:0.625rem var(--core-padding);text-align:left;text-transform:uppercase}@media(max-width: 767px){header.svelte-txrnz9>section.svelte-txrnz9>div.svelte-txrnz9:not(.logo){display:none}}@media(min-width: 768px){header.svelte-txrnz9>section.svelte-txrnz9.svelte-txrnz9{display:grid;grid-column-gap:1.25rem;grid-template-columns:repeat(4, 1fr);padding-top:1.875rem;padding-bottom:1.875rem;align-items:flex-start;max-width:var(--core-max-width);margin:0 auto}}header.svelte-txrnz9>section.svelte-txrnz9>.svelte-txrnz9{pointer-events:auto}header.svelte-txrnz9>section div.svelte-txrnz9.svelte-txrnz9{display:flex;flex-direction:column;align-items:flex-start}[color-scheme="dark"] header.svelte-txrnz9>section.svelte-txrnz9.svelte-txrnz9::before{content:"";background:linear-gradient(0deg, hsla(var(--base-h), var(--base-s), var(--base-l), 0), hsla(var(--base-h), var(--base-s), var(--base-l), 0.2) 70%, hsla(var(--base-h), var(--base-s), var(--base-l), 0.9));position:fixed;left:0;top:0;width:100%;height:12.5rem;z-index:-1;pointer-events:none !important}.logo.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{font-weight:500;margin-left:-0.625rem}.last.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{flex-direction:row;justify-content:space-between;align-items:flex-start;margin-right:-0.625rem}.last.svelte-txrnz9 button{padding:0.25em;transition:color 0.2s var(--easing)}.last.svelte-txrnz9 button:hover{color:var(--primary)}.last.svelte-txrnz9 svg{height:1.85em;width:1.85em}a.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9,span.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{padding:0.625rem}@media(min-width: 768px){a.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9,span.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{padding-top:0.25em;padding-bottom:0.25em}}a.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{transition:all 0.2s var(--easing)}a.svelte-txrnz9 i.svelte-txrnz9.svelte-txrnz9{display:inline-block;font-style:normal}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9{animation:svelte-txrnz9-flip-and-back 0.5s var(--easing) 0.02s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(2){animation-delay:0.04s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(3){animation-delay:0.06s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(4){animation-delay:0.08s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(5){animation-delay:0.1s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(6){animation-delay:0.12s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(7){animation-delay:0.14s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(8){animation-delay:0.16s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(9){animation-delay:0.18s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(10){animation-delay:0.2s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(11){animation-delay:0.22s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(12){animation-delay:0.24s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(13){animation-delay:0.26s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(14){animation-delay:0.28s}.maki-mix.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{display:flex;align-items:center;justify-content:center;padding:0.625rem;margin-right:-0.625rem}.maki-mix.active.svelte-txrnz9 .yummy{display:none}@media(min-width: 768px){.maki-mix.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{display:none}}.mobile-nav.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{box-sizing:border-box;position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden;overflow-y:auto;background-color:var(--base);opacity:0;pointer-events:none;transition:opacity 0.4s cubic-bezier(0.7, 0, 0.3, 1);z-index:9;height:100vh;padding:6.25rem var(--core-padding);display:flex;flex-direction:column;justify-content:center}@media(max-width: 767px){.mobile-nav.active.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{opacity:1;pointer-events:all}}@media(min-width: 768px){.mobile-nav.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{display:none}}.mobile-nav.svelte-txrnz9 a.svelte-txrnz9.svelte-txrnz9{display:flex;align-items:flex-end;font-size:2rem;width:100%;text-transform:uppercase}',
       map: null
     };
     Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $page, $$unsubscribe_page;
       $$unsubscribe_page = subscribe(page, (value) => $page = value);
       let now = new Date(), year = now.getFullYear();
-      $$result.css.add(css);
+      $$result.css.add(css$1);
       $$unsubscribe_page();
-      return `<header class="${"svelte-1d0azzj"}"><div class="${"logo svelte-1d0azzj"}"><a sveltekit:prefetch href="${"/"}">Armin Neuhauser</a></div>
-    <div class="${"svelte-1d0azzj"}"><div><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Projekte</a></div>
-        <div><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>\xDCber mich</a></div></div>
-    <div class="${"svelte-1d0azzj"}"><a sveltekit:prefetch href="${"/"}"${add_classes([$page.path === "/" ? "active" : ""].join(" ").trim())}>Kontakt</a></div>
-    <div class="${"last svelte-1d0azzj"}"><span>\xA9${escape(year)}</span>
-        <button id="${"death-star"}" title="${"Licht an"}"><span class="${"sr-only"}">Licht an</span>
-            <!-- HTML_TAG_START -->${deathStar}<!-- HTML_TAG_END --></button></div>
+      return `<header class="${"svelte-txrnz9"}"><section class="${"svelte-txrnz9"}"><div class="${"logo svelte-txrnz9"}"><a sveltekit:prefetch href="${"/"}" class="${"svelte-txrnz9"}"><i class="${"svelte-txrnz9"}">A</i><i class="${"svelte-txrnz9"}">r</i><i class="${"svelte-txrnz9"}">m</i><i class="${"svelte-txrnz9"}">i</i><i class="${"svelte-txrnz9"}">n</i> <i class="${"svelte-txrnz9"}">N</i><i class="${"svelte-txrnz9"}">e</i><i class="${"svelte-txrnz9"}">u</i><i class="${"svelte-txrnz9"}">h</i><i class="${"svelte-txrnz9"}">a</i><i class="${"svelte-txrnz9"}">u</i><i class="${"svelte-txrnz9"}">s</i><i class="${"svelte-txrnz9"}">e</i><i class="${"svelte-txrnz9"}">r</i></a></div>
+        <div class="${"svelte-txrnz9"}"><div class="${"svelte-txrnz9"}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-txrnz9", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-txrnz9"}">P</i><i class="${"svelte-txrnz9"}">r</i><i class="${"svelte-txrnz9"}">o</i><i class="${"svelte-txrnz9"}">j</i><i class="${"svelte-txrnz9"}">e</i><i class="${"svelte-txrnz9"}">k</i><i class="${"svelte-txrnz9"}">t</i><i class="${"svelte-txrnz9"}">e</i></a></div>
+            <div class="${"svelte-txrnz9"}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-txrnz9", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-txrnz9"}">\xDC</i><i class="${"svelte-txrnz9"}">b</i><i class="${"svelte-txrnz9"}">e</i><i class="${"svelte-txrnz9"}">r</i> <i class="${"svelte-txrnz9"}">m</i><i class="${"svelte-txrnz9"}">i</i><i class="${"svelte-txrnz9"}">c</i><i class="${"svelte-txrnz9"}">h</i></a></div></div>
+        <div class="${"svelte-txrnz9"}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-txrnz9", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-txrnz9"}">K<i class="${"svelte-txrnz9"}">o</i><i class="${"svelte-txrnz9"}">n</i><i class="${"svelte-txrnz9"}">t</i><i class="${"svelte-txrnz9"}">a</i><i class="${"svelte-txrnz9"}">k</i><i class="${"svelte-txrnz9"}">t</i></i></a></div>
+        <div class="${"last svelte-txrnz9"}"><span class="${"svelte-txrnz9"}">\xA9${escape(year)}</span>
+            ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div>
+        <button class="${["maki-mix svelte-txrnz9", ""].join(" ").trim()}"${add_attribute("title", "Men\xFC anzeigen", 0)}><!-- HTML_TAG_START -->${makiMix}<!-- HTML_TAG_END --></button></section></header>
 
-    <button class="${"maki-mix svelte-1d0azzj"}" title="${"Men\xFC anzeigen"}"><span class="${"sr-only"}">Men\xFC anzeigen</span>
-        <!-- HTML_TAG_START -->${makiMix}<!-- HTML_TAG_END --></button></header>
-
-<nav class="${["mobile-nav svelte-1d0azzj", ""].join(" ").trim()}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-1d0azzj", $page.path === "/" ? "active" : ""].join(" ").trim()}">Start</a>
-    <a sveltekit:prefetch href="${"/"}" class="${"svelte-1d0azzj"}">Projekte</a>
-    <a sveltekit:prefetch href="${"/"}" class="${"svelte-1d0azzj"}">\xDCber mich</a>
-    <a sveltekit:prefetch href="${"/"}" class="${"svelte-1d0azzj"}">Kontakt</a>
-    <button id="${"death-star"}" title="${"Licht an"}" class="${"svelte-1d0azzj"}"><span class="${"sr-only"}">Licht an</span>
-        <!-- HTML_TAG_START -->${deathStar}<!-- HTML_TAG_END --></button>
+<nav class="${["mobile-nav svelte-txrnz9", ""].join(" ").trim()}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-txrnz9", $page.path === "/" ? "active" : ""].join(" ").trim()}">Start</a>
+    <a sveltekit:prefetch href="${"/"}" class="${"svelte-txrnz9"}">Projekte</a>
+    <a sveltekit:prefetch href="${"/"}" class="${"svelte-txrnz9"}">\xDCber mich</a>
+    <a sveltekit:prefetch href="${"/"}" class="${"svelte-txrnz9"}">Kontakt</a>
 </nav>`;
     });
+    css2 = {
+      code: "footer.svelte-a6c832.svelte-a6c832{background-color:var(--base);padding:0.625rem var(--core-padding)}@media(min-width: 768px){footer.svelte-a6c832.svelte-a6c832{padding-top:1.875rem;padding-bottom:1.875rem}}footer.svelte-a6c832>div.svelte-a6c832{display:grid;grid-gap:1rem;align-items:flex-end;max-width:var(--core-max-width);margin:0 auto}@media(min-width: 768px){footer.svelte-a6c832>div.svelte-a6c832{grid-template-columns:1fr auto}}footer.svelte-a6c832 h1.svelte-a6c832{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem, 1.3269230769rem + 0.7692307692vw, 2.25rem);line-height:1.1}footer.svelte-a6c832 p.svelte-a6c832{opacity:0.7}footer.svelte-a6c832 a.svelte-a6c832{font-size:clamp(1.125rem, 1.0384615385rem + 0.3846153846vw, 1.5rem);margin:0 -0.625rem;padding:0.625rem;text-decoration:underline}footer.svelte-a6c832 a.svelte-a6c832:hover{color:var(--primary)}footer.svelte-a6c832 button.svelte-a6c832{text-align:right}",
+      map: null
+    };
+    Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css2);
+      return `<footer class="${"svelte-a6c832"}"><div class="${"svelte-a6c832"}"><div><h1 class="${"svelte-a6c832"}">Lass uns gemeinsam Gro\xDFes machen</h1>
+            <p class="${"svelte-a6c832"}">Jede Ausfahrt sollte mit einem guten Kaffee abgeschlossen werden.<br> Also komm vorbei und sag Hallo.
+            </p>
+            <a href="${"mailto:mail@arminneuhauser.at"}" class="${"svelte-a6c832"}">mail@arminneuhauser.at</a></div>
+        <button class="${"svelte-a6c832"}">Zur\xFCck nach oben</button></div>
+</footer>`;
+    });
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      scheme.subscribe((value) => {
+      });
       return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
 
-<main>${slots.default ? slots.default({}) : ``}</main>`;
+<main>${slots.default ? slots.default({}) : ``}</main>
+
+${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/error-3719d086.js
-var error_3719d086_exports = {};
-__export(error_3719d086_exports, {
+// .svelte-kit/output/server/chunks/error-91eb67be.js
+var error_91eb67be_exports = {};
+__export(error_91eb67be_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -5022,10 +5087,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var import_cookie2, Error2;
-var init_error_3719d086 = __esm({
-  ".svelte-kit/output/server/chunks/error-3719d086.js"() {
+var init_error_91eb67be = __esm({
+  ".svelte-kit/output/server/chunks/error-91eb67be.js"() {
     init_shims();
-    init_app_bed5f114();
+    init_app_7ac9a5cc();
     import_cookie2 = __toModule(require_cookie());
     init_dist();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -20560,17 +20625,17 @@ var require_debounce = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-62829db1.js
-var index_62829db1_exports = {};
-__export(index_62829db1_exports, {
+// .svelte-kit/output/server/chunks/index-0e93fe13.js
+var index_0e93fe13_exports = {};
+__export(index_0e93fe13_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
-var import_app, import_graphics, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_cookie3, css$1, Scene, css2, prerender, Routes;
-var init_index_62829db1 = __esm({
-  ".svelte-kit/output/server/chunks/index-62829db1.js"() {
+var import_app, import_graphics, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_cookie3, css$3, Scene, css$2, Hero, css$12, LatestWork, css3, Wisdom, prerender, Routes;
+var init_index_0e93fe13 = __esm({
+  ".svelte-kit/output/server/chunks/index-0e93fe13.js"() {
     init_shims();
-    init_app_bed5f114();
+    init_app_7ac9a5cc();
     init_dist2();
     import_app = __toModule(require_app());
     import_graphics = __toModule(require_graphics());
@@ -20584,11 +20649,11 @@ var init_index_62829db1 = __esm({
     init_simplex_noise();
     import_hsl_to_hex = __toModule(require_hsl_to_hex());
     import_debounce = __toModule(require_debounce());
-    init_death_star_5a0dad1d();
+    init_DeathStar_47693d22();
     import_cookie3 = __toModule(require_cookie());
     init_dist();
-    css$1 = {
-      code: 'canvas.svelte-1cfdrei{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1}[color-scheme="light"] canvas.svelte-1cfdrei{opacity:0.35;mix-blend-mode:luminosity}',
+    css$3 = {
+      code: 'canvas.svelte-1113b2m{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1}[color-scheme="light"] canvas.svelte-1113b2m{opacity:0.25;mix-blend-mode:luminosity}[color-scheme="blue"] canvas.svelte-1113b2m{mix-blend-mode:screen}[color-scheme="lime"] canvas.svelte-1113b2m{mix-blend-mode:screen}',
       map: null
     };
     Scene = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -20602,54 +20667,96 @@ var init_index_62829db1 = __esm({
         import_app.Application.registerPlugin(import_ticker.TickerPlugin);
       }
       let view;
-      $$result.css.add(css$1);
-      return `<canvas class="${"svelte-1cfdrei"}"${add_attribute("this", view, 0)}></canvas>`;
+      $$result.css.add(css$3);
+      return `<canvas class="${"svelte-1113b2m"}"${add_attribute("this", view, 0)}></canvas>`;
     });
-    css2 = {
-      code: '.hero.svelte-16bkpri.svelte-16bkpri.svelte-16bkpri{box-sizing:border-box;min-height:var(--app-height, 100vh);padding:var(--core-padding);display:grid;grid-template-rows:1fr auto;grid-gap:1rem;grid-template-columns:auto minmax(auto, 30rem) auto}.hero.svelte-16bkpri .sphere.svelte-16bkpri.svelte-16bkpri{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.hero.svelte-16bkpri .sphere.svelte-16bkpri.svelte-16bkpri::after{content:"";display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.7);border-radius:50%;mix-blend-mode:soft-light}.hero.svelte-16bkpri h1.svelte-16bkpri.svelte-16bkpri{font-family:"serif";font-weight:400;font-size:clamp(1.5rem, 1.05rem + 2vw, 2.25rem);line-height:1.1;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;z-index:1}.hero.svelte-16bkpri h1 span.svelte-16bkpri.svelte-16bkpri{display:block}.hero.svelte-16bkpri .bottom.svelte-16bkpri.svelte-16bkpri{grid-column:2;display:grid;grid-template-columns:auto 1fr auto}.hero.svelte-16bkpri .bottom.svelte-16bkpri>div.svelte-16bkpri{grid-column:2}.hero.svelte-16bkpri .bottom h2.svelte-16bkpri.svelte-16bkpri,.hero.svelte-16bkpri .bottom h3.svelte-16bkpri.svelte-16bkpri{font-size:0.9375rem;font-weight:400;margin:0;text-align:center;color:white;mix-blend-mode:exclusion;opacity:0.6}[color-scheme=light] .hero.svelte-16bkpri .bottom h2.svelte-16bkpri.svelte-16bkpri,[color-scheme=light] .hero.svelte-16bkpri .bottom h3.svelte-16bkpri.svelte-16bkpri{mix-blend-mode:normal;color:var(--on-base);opacity:1}@media(min-width: 768px){.hero.svelte-16bkpri .bottom #death-star.svelte-16bkpri.svelte-16bkpri{display:none}}.hero.svelte-16bkpri .bottom #death-star.svelte-16bkpri svg{height:1.375rem;width:1.375rem}',
+    css$2 = {
+      code: '@keyframes svelte-pqie7t-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-pqie7t-to-top{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-pqie7t-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}.hero.svelte-pqie7t.svelte-pqie7t.svelte-pqie7t{align-items:start;box-sizing:border-box;display:grid;grid-column-gap:0;grid-gap:1rem;grid-template-columns:auto clamp(20rem, 10rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;min-height:var(--app-height, 100vh);padding:var(--core-padding) 0;z-index:1}.hero.svelte-pqie7t .sphere.svelte-pqie7t.svelte-pqie7t{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.hero.svelte-pqie7t .sphere.svelte-pqie7t.svelte-pqie7t::after{content:"";display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.8);border-radius:50%;mix-blend-mode:soft-light}.hero.svelte-pqie7t h1.svelte-pqie7t.svelte-pqie7t{font-family:var(--serif);font-weight:700;font-size:clamp(1.5625rem, 1.0818181818rem + 2.1363636364vw, 4.5rem);line-height:1.1;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;z-index:1}@media(prefers-reduced-motion: no-preference){.hero.svelte-pqie7t h1.svelte-pqie7t.svelte-pqie7t{animation:svelte-pqie7t-fadein-from-primary 2s var(--easing) forwards}}.hero.svelte-pqie7t h1 span.svelte-pqie7t.svelte-pqie7t{display:block}@media(prefers-reduced-motion: no-preference){.hero.svelte-pqie7t h1 span.svelte-pqie7t.svelte-pqie7t{animation:svelte-pqie7t-to-top 0.5s var(--easing) forwards}}.hero.svelte-pqie7t .bottom.svelte-pqie7t.svelte-pqie7t{grid-column:1/span 3;display:grid;grid-template-columns:auto 1fr auto}@media(prefers-reduced-motion: no-preference){.hero.svelte-pqie7t .bottom.svelte-pqie7t.svelte-pqie7t{animation:svelte-pqie7t-fadein-from-primary 0.5s var(--easing) forwards}}.hero.svelte-pqie7t .bottom.svelte-pqie7t>div.svelte-pqie7t{grid-column:2}.hero.svelte-pqie7t .bottom h2.svelte-pqie7t.svelte-pqie7t,.hero.svelte-pqie7t .bottom h3.svelte-pqie7t.svelte-pqie7t{font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);font-weight:400;margin:0;text-align:center;color:var(--on-base);opacity:0.7}@media(min-width: 768px){.hero.svelte-pqie7t .bottom.svelte-pqie7t #death-star{display:none}}',
       map: null
     };
+    Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { scrollY } = $$props;
+      if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
+        $$bindings.scrollY(scrollY);
+      $$result.css.add(css$2);
+      return `<section class="${"hero svelte-pqie7t"}"><div class="${"sphere svelte-pqie7t"}"><h1 style="${"transform: translate(0," + escape(-scrollY / 8) + "px)"}" class="${"svelte-pqie7t"}"><span class="${"svelte-pqie7t"}">Ich erschaffe</span>
+            <span class="${"svelte-pqie7t"}">ausgefeilte digitale</span>
+            <span class="${"svelte-pqie7t"}">Erlebnisse im Web,</span>
+            <span class="${"svelte-pqie7t"}">jeden Tag.</span></h1></div>
+    <div class="${"bottom svelte-pqie7t"}" style="${"transform: translate(0," + escape(-scrollY / 5) + "px)"}"><div class="${"svelte-pqie7t"}"><h2 class="${"svelte-pqie7t"}">Konzept, Design &amp; Entwicklung</h2>
+            <h3 class="${"svelte-pqie7t"}">made in Vienna</h3></div>
+        ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div>
+</section>`;
+    });
+    css$12 = {
+      code: ".latest-work.svelte-wt9x20.svelte-wt9x20{align-items:start;box-sizing:border-box;display:grid;grid-gap:1rem;min-height:100vh;padding:6.25rem 0}.latest-work.svelte-wt9x20 h1.svelte-wt9x20{font-size:clamp(2.5rem, 1.4772727273rem + 4.5454545455vw, 8.75rem);white-space:nowrap;overflow:hidden;margin:0}.latest-work.svelte-wt9x20 h1 span.svelte-wt9x20{display:inline-block}.latest-work.svelte-wt9x20 h1 i.svelte-wt9x20{font-family:var(--serif);font-style:normal}.latest-work.svelte-wt9x20 .projects.svelte-wt9x20{display:grid;grid-gap:1.25rem;justify-content:center;padding:var(--core-padding);max-width:var(--core-max-width);margin:0 auto}@media(min-width: 1024px){.latest-work.svelte-wt9x20 .projects.svelte-wt9x20{grid-template-columns:1fr 1fr;grid-gap:2.5vw}}.latest-work.svelte-wt9x20 .teaser h1.svelte-wt9x20{font-family:var(--serif);font-size:clamp(2.25rem, 1.7596153846rem + 2.1794871795vw, 4.375rem);margin:0.25em 0;display:flex;align-items:baseline;gap:0.25em}.latest-work.svelte-wt9x20 .teaser h1 span.svelte-wt9x20{font-family:var(--sans-serif);font-weight:400;font-size:clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);color:var(--primary)}@media(min-width: 1024px){.latest-work.svelte-wt9x20 .teaser.svelte-wt9x20:nth-child(2){margin-top:5rem}}",
+      map: null
+    };
+    LatestWork = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { scrollY } = $$props;
+      if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
+        $$bindings.scrollY(scrollY);
+      $$result.css.add(css$12);
+      return `<section class="${"latest-work svelte-wt9x20"}"><h1 class="${"svelte-wt9x20"}"><span style="${"transform: translate(" + escape(-scrollY / 4) + "px,0)"}" class="${"svelte-wt9x20"}"><i class="${"svelte-wt9x20"}">Meine</i> Projekte
+            <i class="${"svelte-wt9x20"}">Meine</i> Projekte
+            <i class="${"svelte-wt9x20"}">Meine</i> Projekte
+            <i class="${"svelte-wt9x20"}">Meine</i> Projekte
+        </span></h1>
+
+    <div class="${"projects svelte-wt9x20"}"><article class="${"teaser svelte-wt9x20"}"><img src="${"/images/cartagena.jpg"}" alt="${"Solmates"}">
+            <h1 class="${"svelte-wt9x20"}">Solmates
+                <span class="${"svelte-wt9x20"}">2019</span></h1></article>
+        <article class="${"teaser svelte-wt9x20"}"><img src="${"/images/wohnformat.jpg"}" alt="${"Wohnformat"}">
+            <h1 class="${"svelte-wt9x20"}">Wohnformat
+                <span class="${"svelte-wt9x20"}">2018</span></h1></article></div>
+
+</section>`;
+    });
+    css3 = {
+      code: ".wisdom.svelte-ng51yw.svelte-ng51yw{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto clamp(17.5rem, 10rem + 30vw, 160rem) auto;justify-content:center;min-height:100vh;padding:var(--core-padding);max-width:var(--core-max-width);margin:0 auto}.wisdom.svelte-ng51yw p.svelte-ng51yw{grid-column:2;font-size:clamp(1.75rem, 1.1153846154rem + 2.8205128205vw, 4.5rem);font-weight:700;line-height:1.15}",
+      map: null
+    };
+    Wisdom = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css3);
+      return `<section class="${"wisdom svelte-ng51yw"}"><p class="${"svelte-ng51yw"}">Meine Webseiten sind wie gute Fahrr\xE4der: elegant, hochwertig, auf den Benutzer angepasst und vor allem pfeilschnell.</p>
+</section>`;
+    });
     prerender = true;
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css2);
+      let scrollY;
       return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Webdesign</title>`, ""}`, ""}
 
-<section class="${"hero svelte-16bkpri"}"><div class="${"sphere svelte-16bkpri"}"><h1 class="${"svelte-16bkpri"}"><span class="${"svelte-16bkpri"}">Ich erschaffe</span>
-            <span class="${"svelte-16bkpri"}">ausgereifte digitale</span>
-            <span class="${"svelte-16bkpri"}">Erlebnisse im Web,</span>
-            <span class="${"svelte-16bkpri"}">jeden Tag.</span>
-            
-            </h1></div>
-    <div class="${"bottom svelte-16bkpri"}"><div class="${"svelte-16bkpri"}"><h2 class="${"svelte-16bkpri"}">Konzept, Design &amp; Entwicklung</h2>
-            <h3 class="${"svelte-16bkpri"}">made in Vienna</h3></div>
-        <button id="${"death-star"}" title="${"Licht an"}" class="${"svelte-16bkpri"}"><span class="${"sr-only svelte-16bkpri"}">Licht an</span>
-            <!-- HTML_TAG_START -->${deathStar}<!-- HTML_TAG_END --></button></div></section>
 
 
+${validate_component(Hero, "Hero").$$render($$result, { scrollY }, {}, {})}
+
+${validate_component(LatestWork, "LatestWork").$$render($$result, { scrollY }, {}, {})}
+
+${validate_component(Wisdom, "Wisdom").$$render($$result, {}, {}, {})}
 
 ${validate_component(Scene, "Scene").$$render($$result, {}, {}, {})}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/about-3a776cb5.js
-var about_3a776cb5_exports = {};
-__export(about_3a776cb5_exports, {
+// .svelte-kit/output/server/chunks/about-5357af72.js
+var about_5357af72_exports = {};
+__export(about_5357af72_exports, {
   default: () => About,
   hydrate: () => hydrate,
   prerender: () => prerender2,
   router: () => router
 });
-var import_cookie4, browser, dev, css3, hydrate, router, prerender2, About;
-var init_about_3a776cb5 = __esm({
-  ".svelte-kit/output/server/chunks/about-3a776cb5.js"() {
+var import_cookie4, browser, dev, css4, hydrate, router, prerender2, About;
+var init_about_5357af72 = __esm({
+  ".svelte-kit/output/server/chunks/about-5357af72.js"() {
     init_shims();
-    init_app_bed5f114();
+    init_app_7ac9a5cc();
     import_cookie4 = __toModule(require_cookie());
     init_dist();
     browser = false;
     dev = false;
-    css3 = {
+    css4 = {
       code: ".content.svelte-s8amym{width:100%;max-width:var(--column-width);margin:var(--column-margin-top) auto 0 auto}",
       map: null
     };
@@ -20657,7 +20764,7 @@ var init_about_3a776cb5 = __esm({
     router = browser;
     prerender2 = true;
     About = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css3);
+      $$result.css.add(css4);
       return `${$$result.head += `${$$result.title = `<title>About</title>`, ""}`, ""}
 
 <div class="${"content svelte-s8amym"}"><h1>About this app</h1>
@@ -20682,20 +20789,20 @@ var init_about_3a776cb5 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-ce58c49b.js
-var index_ce58c49b_exports = {};
-__export(index_ce58c49b_exports, {
+// .svelte-kit/output/server/chunks/index-4e50c15f.js
+var index_4e50c15f_exports = {};
+__export(index_4e50c15f_exports, {
   default: () => Todos,
   load: () => load2
 });
-var import_cookie5, css4, load2, Todos;
-var init_index_ce58c49b = __esm({
-  ".svelte-kit/output/server/chunks/index-ce58c49b.js"() {
+var import_cookie5, css5, load2, Todos;
+var init_index_4e50c15f = __esm({
+  ".svelte-kit/output/server/chunks/index-4e50c15f.js"() {
     init_shims();
-    init_app_bed5f114();
+    init_app_7ac9a5cc();
     import_cookie5 = __toModule(require_cookie());
     init_dist();
-    css4 = {
+    css5 = {
       code: `.todos.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{width:100%;max-width:var(--column-width);margin:var(--column-margin-top) auto 0 auto;line-height:1}.new.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{margin:0 0 0.5rem 0}input.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{border:1px solid transparent}input.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh:focus-visible{box-shadow:inset 1px 1px 6px rgba(0, 0, 0, 0.1);border:1px solid #ff3e00 !important;outline:none}.new.svelte-1ekc8gh input.svelte-1ekc8gh.svelte-1ekc8gh{font-size:28px;width:100%;padding:0.5em 1em 0.3em 1em;box-sizing:border-box;background:rgba(255, 255, 255, 0.05);border-radius:8px;text-align:center}.todo.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{display:grid;grid-template-columns:2rem 1fr 2rem;grid-gap:0.5rem;align-items:center;margin:0 0 0.5rem 0;padding:0.5rem;background-color:white;border-radius:8px;filter:drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));transform:translate(-1px, -1px);transition:filter 0.2s, transform 0.2s}.done.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{transform:none;opacity:0.4;filter:drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.1))}form.text.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{position:relative;display:flex;align-items:center;flex:1}.todo.svelte-1ekc8gh input.svelte-1ekc8gh.svelte-1ekc8gh{flex:1;padding:0.5em 2em 0.5em 0.8em;border-radius:3px}.todo.svelte-1ekc8gh button.svelte-1ekc8gh.svelte-1ekc8gh{width:2em;height:2em;border:none;background-color:transparent;background-position:50% 50%;background-repeat:no-repeat}button.toggle.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{border:1px solid rgba(0, 0, 0, 0.2);border-radius:50%;box-sizing:border-box;background-size:1em auto}.done.svelte-1ekc8gh .toggle.svelte-1ekc8gh.svelte-1ekc8gh{background-image:url("data:image/svg+xml,%3Csvg width='22' height='16' viewBox='0 0 22 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5 1.5L7.4375 14.5L1.5 8.5909' stroke='%23676778' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}.delete.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 5V22H19.5V5H4.5Z' fill='%23676778' stroke='%23676778' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M10 10V16.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 10V16.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 5H22' stroke='%23676778' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 5L9.6445 2H14.3885L16 5H8Z' fill='%23676778' stroke='%23676778' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E%0A");opacity:0.2}.delete.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh:hover,.delete.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh:focus{transition:opacity 0.2s;opacity:1}.save.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{position:absolute;right:0;opacity:0;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5 2H3.5C2.67158 2 2 2.67157 2 3.5V20.5C2 21.3284 2.67158 22 3.5 22H20.5C21.3284 22 22 21.3284 22 20.5V3.5C22 2.67157 21.3284 2 20.5 2Z' fill='%23676778' stroke='%23676778' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M17 2V11H7.5V2H17Z' fill='white' stroke='white' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M13.5 5.5V7.5' stroke='%23676778' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M5.99844 2H18.4992' stroke='%23676778' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A")}.todo.svelte-1ekc8gh input.svelte-1ekc8gh:focus+.save.svelte-1ekc8gh,.save.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh:focus{transition:opacity 0.2s;opacity:1}`,
       map: null
     };
@@ -20712,7 +20819,7 @@ var init_index_ce58c49b = __esm({
       let { todos } = $$props;
       if ($$props.todos === void 0 && $$bindings.todos && todos !== void 0)
         $$bindings.todos(todos);
-      $$result.css.add(css4);
+      $$result.css.add(css5);
       return `${$$result.head += `${$$result.title = `<title>Todos</title>`, ""}`, ""}
 
 <div class="${"todos svelte-1ekc8gh"}"><h1>Todos</h1>
@@ -20732,7 +20839,7 @@ var init_index_ce58c49b = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-bed5f114.js
+// .svelte-kit/output/server/chunks/app-7ac9a5cc.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -20747,7 +20854,7 @@ function get_single_valued_header(headers, key) {
   return value;
 }
 function resolve(base22, path) {
-  if (scheme.test(path))
+  if (scheme2.test(path))
     return path;
   const base_match = absolute.exec(base22);
   const path_match = absolute.exec(path);
@@ -21035,26 +21142,26 @@ function stringifyString(str) {
 }
 function noop$1() {
 }
-function safe_not_equal(a, b) {
+function safe_not_equal$1(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
-function writable(value, start = noop$1) {
+function writable2(value, start = noop$1) {
   let stop;
   const subscribers = new Set();
   function set(new_value) {
-    if (safe_not_equal(value, new_value)) {
+    if (safe_not_equal$1(value, new_value)) {
       value = new_value;
       if (stop) {
-        const run_queue = !subscriber_queue.length;
+        const run_queue = !subscriber_queue2.length;
         for (const subscriber of subscribers) {
           subscriber[1]();
-          subscriber_queue.push(subscriber, value);
+          subscriber_queue2.push(subscriber, value);
         }
         if (run_queue) {
-          for (let i = 0; i < subscriber_queue.length; i += 2) {
-            subscriber_queue[i][0](subscriber_queue[i + 1]);
+          for (let i = 0; i < subscriber_queue2.length; i += 2) {
+            subscriber_queue2[i][0](subscriber_queue2[i + 1]);
           }
-          subscriber_queue.length = 0;
+          subscriber_queue2.length = 0;
         }
       }
     }
@@ -21150,11 +21257,11 @@ async function render_response({
         is_private = true;
       maxage = loaded.maxage;
     });
-    const session = writable($session);
+    const session = writable2($session);
     const props = {
       stores: {
-        page: writable(null),
-        navigating: writable(null),
+        page: writable2(null),
+        navigating: writable2(null),
         session
       },
       page: page2,
@@ -21938,6 +22045,9 @@ function blank_object() {
 function run_all(fns) {
   fns.forEach(run);
 }
+function safe_not_equal(a, b) {
+  return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
+}
 function subscribe(store, ...callbacks) {
   if (store == null) {
     return noop;
@@ -22016,9 +22126,6 @@ function add_attribute(name, value, boolean) {
     return "";
   return ` ${name}${value === true ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
 }
-function add_classes(classes) {
-  return classes ? ` class="${classes}"` : "";
-}
 function afterUpdate() {
 }
 function set_paths(paths) {
@@ -22035,9 +22142,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-34c855bf.js",
+      file: assets + "/_app/start-a8cfa461.js",
       css: [assets + "/_app/assets/start-0dba5459.css"],
-      js: [assets + "/_app/start-34c855bf.js", assets + "/_app/chunks/vendor-3da777d4.js"]
+      js: [assets + "/_app/start-a8cfa461.js", assets + "/_app/chunks/vendor-73e94297.js"]
     },
     fetched: void 0,
     floc: false,
@@ -22080,9 +22187,9 @@ function render(request, {
   const host = request.headers["host"];
   return respond({ ...request, host }, options, { prerender: prerender3 });
 }
-var import_cookie6, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css5, Root, base2, assets, handle, user_hooks, template, options, default_settings, d, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_bed5f114 = __esm({
-  ".svelte-kit/output/server/chunks/app-bed5f114.js"() {
+var import_cookie6, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css6, Root, base2, assets, handle, user_hooks, template, options, default_settings, d, empty, manifest, get_hooks, module_lookup, metadata_lookup;
+var init_app_7ac9a5cc = __esm({
+  ".svelte-kit/output/server/chunks/app-7ac9a5cc.js"() {
     init_shims();
     import_cookie6 = __toModule(require_cookie());
     init_dist();
@@ -22105,7 +22212,7 @@ var init_app_bed5f114 = __esm({
       return value;
     };
     absolute = /^([a-z]+:)?\/?\//;
-    scheme = /^[a-z]+:/;
+    scheme2 = /^[a-z]+:/;
     chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$";
     unsafeChars = /[<>\b\f\n\r\t\0\u2028\u2029]/g;
     reserved = /^(?:do|if|in|for|int|let|new|try|var|byte|case|char|else|enum|goto|long|this|void|with|await|break|catch|class|const|final|float|short|super|throw|while|yield|delete|double|export|import|native|return|switch|throws|typeof|boolean|default|extends|finally|package|private|abstract|continue|debugger|function|volatile|interface|protected|transient|implements|instanceof|synchronized)$/;
@@ -22125,7 +22232,7 @@ var init_app_bed5f114 = __esm({
     };
     objectProtoOwnPropertyNames = Object.getOwnPropertyNames(Object.prototype).sort().join("\0");
     Promise.resolve();
-    subscriber_queue = [];
+    subscriber_queue2 = [];
     escape_json_string_in_html_dict = {
       '"': '\\"',
       "<": "\\u003C",
@@ -22201,7 +22308,7 @@ var init_app_bed5f114 = __esm({
     missing_component = {
       $$render: () => ""
     };
-    css5 = {
+    css6 = {
       code: "#svelte-announcer.svelte-b8s5el{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
       map: null
     };
@@ -22226,7 +22333,7 @@ var init_app_bed5f114 = __esm({
         $$bindings.props_1(props_1);
       if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
         $$bindings.props_2(props_2);
-      $$result.css.add(css5);
+      $$result.css.add(css6);
       {
         stores.page.set(page2);
       }
@@ -22263,13 +22370,13 @@ ${``}`;
       [Symbol.toStringTag]: "Module",
       handle
     });
-    template = ({ head, body }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n\n		' + head + '\n	</head>\n	<body>\n		<div id="svelte">' + body + "</div>\n	</body>\n</html>\n";
+    template = ({ head, body }) => '<!DOCTYPE html>\n<html lang="de" color-scheme="dark">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		<meta name="theme-color" content="#000">\n\n		' + head + '\n	</head>\n	<body>\n		<div id="svelte">' + body + "</div>\n	</body>\n</html>\n";
     options = null;
     default_settings = { paths: { "base": "", "assets": "" } };
     d = (s2) => s2.replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
     empty = () => ({});
     manifest = {
-      assets: [{ "file": "cartagena.jpg", "size": 126474, "type": "image/jpeg" }, { "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "fonts/info-bold-italic.woff2", "size": 17300, "type": "font/woff2" }, { "file": "fonts/info-bold.woff2", "size": 16308, "type": "font/woff2" }, { "file": "fonts/info-medium-italic.woff2", "size": 15344, "type": "font/woff2" }, { "file": "fonts/info-medium.woff2", "size": 14744, "type": "font/woff2" }, { "file": "fonts/info-regular-italic.woff2", "size": 16608, "type": "font/woff2" }, { "file": "fonts/info-regular.woff2", "size": 15832, "type": "font/woff2" }, { "file": "fonts/serif-regular.woff2", "size": 62244, "type": "font/woff2" }, { "file": "fonts/title-extrabold-italic.woff2", "size": 52768, "type": "font/woff2" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }, { "file": "svelte-welcome.png", "size": 360807, "type": "image/png" }, { "file": "svelte-welcome.webp", "size": 115470, "type": "image/webp" }],
+      assets: [{ "file": ".DS_Store", "size": 6148, "type": null }, { "file": "favicon.png", "size": 5717, "type": "image/png" }, { "file": "fonts/info-bold-italic.woff2", "size": 17300, "type": "font/woff2" }, { "file": "fonts/info-bold.woff2", "size": 16308, "type": "font/woff2" }, { "file": "fonts/info-medium-italic.woff2", "size": 15344, "type": "font/woff2" }, { "file": "fonts/info-medium.woff2", "size": 14744, "type": "font/woff2" }, { "file": "fonts/info-regular-italic.woff2", "size": 16608, "type": "font/woff2" }, { "file": "fonts/info-regular.woff2", "size": 15832, "type": "font/woff2" }, { "file": "fonts/serif-bold.woff2", "size": 62452, "type": "font/woff2" }, { "file": "fonts/serif-regular.woff2", "size": 62244, "type": "font/woff2" }, { "file": "fonts/title-extrabold-italic.woff2", "size": 52768, "type": "font/woff2" }, { "file": "images/cartagena.jpg", "size": 126474, "type": "image/jpeg" }, { "file": "images/wohnformat.jpg", "size": 105082, "type": "image/jpeg" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }],
       layout: "src/routes/__layout.svelte",
       error: ".svelte-kit/build/components/error.svelte",
       routes: [
@@ -22315,13 +22422,13 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_b5b79e64(), layout_b5b79e64_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_3719d086(), error_3719d086_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_62829db1(), index_62829db1_exports)),
-      "src/routes/about.svelte": () => Promise.resolve().then(() => (init_about_3a776cb5(), about_3a776cb5_exports)),
-      "src/routes/todos/index.svelte": () => Promise.resolve().then(() => (init_index_ce58c49b(), index_ce58c49b_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_9b6cefd5(), layout_9b6cefd5_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_91eb67be(), error_91eb67be_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_0e93fe13(), index_0e93fe13_exports)),
+      "src/routes/about.svelte": () => Promise.resolve().then(() => (init_about_5357af72(), about_5357af72_exports)),
+      "src/routes/todos/index.svelte": () => Promise.resolve().then(() => (init_index_4e50c15f(), index_4e50c15f_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-10180603.js", "css": ["assets/pages/__layout.svelte-468c311f.css"], "js": ["pages/__layout.svelte-10180603.js", "chunks/vendor-3da777d4.js", "chunks/death-star-5a0dad1d.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-b668b2a3.js", "css": [], "js": ["error.svelte-b668b2a3.js", "chunks/vendor-3da777d4.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-4ef72e69.js", "css": ["assets/pages/index.svelte-6f912e11.css"], "js": ["pages/index.svelte-4ef72e69.js", "chunks/vendor-3da777d4.js", "chunks/death-star-5a0dad1d.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-8a161132.js", "css": ["assets/pages/about.svelte-7b069440.css"], "js": ["pages/about.svelte-8a161132.js", "chunks/vendor-3da777d4.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-3ded026c.js", "css": ["assets/pages/todos/index.svelte-67bbd040.css"], "js": ["pages/todos/index.svelte-3ded026c.js", "chunks/vendor-3da777d4.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-02476fe2.js", "css": ["assets/pages/__layout.svelte-70047a0b.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-02476fe2.js", "chunks/vendor-73e94297.js", "chunks/DeathStar-463b5ef1.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-9abf5cf9.js", "css": [], "js": ["error.svelte-9abf5cf9.js", "chunks/vendor-73e94297.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-02514f8d.js", "css": ["assets/pages/index.svelte-a459c145.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-02514f8d.js", "chunks/vendor-73e94297.js", "chunks/DeathStar-463b5ef1.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-1caf768f.js", "css": ["assets/pages/about.svelte-7b069440.css"], "js": ["pages/about.svelte-1caf768f.js", "chunks/vendor-73e94297.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-9a14f15e.js", "css": ["assets/pages/todos/index.svelte-67bbd040.css"], "js": ["pages/todos/index.svelte-9a14f15e.js", "chunks/vendor-73e94297.js"], "styles": [] } };
   }
 });
 
@@ -22333,7 +22440,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_bed5f114();
+init_app_7ac9a5cc();
 var import_cookie7 = __toModule(require_cookie());
 init_dist();
 
