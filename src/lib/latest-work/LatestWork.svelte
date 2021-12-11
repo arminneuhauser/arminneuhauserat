@@ -5,13 +5,17 @@
 
     let element;
     let intersecting;
+    let element2;
+    let intersecting2;
+    let element3;
+    let intersecting3;
 </script>
 
 <section class="latest-work">
 
     <IntersectionObserver {element} bind:intersecting>
-        <h1 class:intersecting bind:this={element}>
-            <span style="transform: translate({-scrollY / 4}px,0)">
+        <h1 class="headline" class:intersecting bind:this={element}>
+            <span style="transform: translate({-scrollY / 4 - 200}px,0)">
                 <span>
                     <i>Meine</i> Projekte
                     <i>Meine</i> Projekte
@@ -22,24 +26,30 @@
         </h1>
     </IntersectionObserver>
 
-    <IntersectionObserver {element} bind:intersecting>
-        <div class="projects" class:intersecting bind:this={element}>
-            <article class="teaser">
-                <img src="/images/cartagena.jpg" alt="Solmates" />
-                <h1>
-                    Solmates
-                    <span>2019</span>
-                </h1>
+    <div class="projects">
+        <IntersectionObserver element={element2} bind:intersecting={intersecting2}>
+            <article class="teaser" class:intersecting={intersecting2} bind:this={element2}>
+                <div>
+                    <img src="/images/cartagena.jpg" alt="Solmates" />
+                    <h1>
+                        Solmates
+                        <span>2019</span>
+                    </h1>
+                </div>
             </article>
-            <article class="teaser">
-                <img src="/images/wohnformat.jpg" alt="Wohnformat" />
-                <h1>
-                    Wohnformat
-                    <span>2018</span>
-                </h1>
+        </IntersectionObserver>
+        <IntersectionObserver element={element3} bind:intersecting={intersecting3}>
+            <article class="teaser" class:intersecting={intersecting3} bind:this={element3}>
+                <div>
+                    <img src="/images/wohnformat.jpg" alt="Wohnformat" />
+                    <h1>
+                        Wohnformat
+                        <span>2018</span>
+                    </h1>
+                </div>
             </article>
-        </div>
-    </IntersectionObserver>
+        </IntersectionObserver>
+    </div>
 
 </section>
 
@@ -51,6 +61,7 @@
         grid-gap: #{fn.rem(16)};
         min-height: 100vh;
         padding: #{fn.rem(100)} 0;
+        overflow: hidden;
 
         > h1 {
             font-size: #{fn.rfs(40, 140, 360, 2560)};
@@ -95,10 +106,19 @@
     }
 
     .teaser {
-        transform: translate(0, #{fn.rem(200)});
-        transition: transform 1.5s var(--easing);
+        > div {
+            transition: transform 1.5s var(--easing);
+        }
 
-        .intersecting & {
+        &:nth-child(odd) > div {
+            transform: translate(#{fn.rem(-50)}, #{fn.rem(200)});
+        }
+
+        &:nth-child(even) > div {
+            transform: translate(#{fn.rem(50)}, #{fn.rem(200)});
+        }
+
+        &.intersecting > div {
             transform: translate(0, 0);
         }
 

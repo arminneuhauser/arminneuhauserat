@@ -32,18 +32,6 @@
         --core-padding: 3rem;
     }
 
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    touch-action: manipulation;
-
-    ::selection {
-        color: var(--base);
-        background: var(--on-base);
-    }
-
     &[color-scheme="light"] {
         --base: #fff;
         --on-base: #050505;
@@ -61,6 +49,15 @@
     
 }
 
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
+}
+
 body {
     font-family: var(--sans-serif);
     line-height: 1.4;
@@ -74,8 +71,16 @@ body {
 
 #svelte {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+::selection {
+    color: var(--base);
+    background: var(--on-base);
 }
 
 a {

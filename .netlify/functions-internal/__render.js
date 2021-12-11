@@ -4845,113 +4845,15 @@ var init_dist = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/_api-e66b1c82.js
-async function api(request, resource, data) {
-  if (!request.locals.userid) {
-    return { status: 401 };
-  }
-  const res = await fetch(`${base}/${resource}`, {
-    method: request.method,
-    headers: {
-      "content-type": "application/json"
-    },
-    body: data && JSON.stringify(data)
-  });
-  if (res.ok && request.method !== "GET" && request.headers.accept !== "application/json") {
-    return {
-      status: 303,
-      headers: {
-        location: "/todos"
-      }
-    };
-  }
-  return {
-    status: res.status,
-    body: await res.json()
-  };
-}
-var base;
-var init_api_e66b1c82 = __esm({
-  ".svelte-kit/output/server/chunks/_api-e66b1c82.js"() {
-    init_shims();
-    base = "https://api.svelte.dev";
-  }
-});
-
-// .svelte-kit/output/server/chunks/index.json-784727b1.js
-var index_json_784727b1_exports = {};
-__export(index_json_784727b1_exports, {
-  get: () => get,
-  post: () => post
-});
-var get, post;
-var init_index_json_784727b1 = __esm({
-  ".svelte-kit/output/server/chunks/index.json-784727b1.js"() {
-    init_shims();
-    init_api_e66b1c82();
-    get = async (request) => {
-      const response = await api(request, `todos/${request.locals.userid}`);
-      if (response.status === 404) {
-        return { body: [] };
-      }
-      return response;
-    };
-    post = async (request) => {
-      const response = await api(request, `todos/${request.locals.userid}`, {
-        text: request.body.get("text")
-      });
-      return response;
-    };
-  }
-});
-
-// .svelte-kit/output/server/chunks/_uid_.json-039b6f30.js
-var uid_json_039b6f30_exports = {};
-__export(uid_json_039b6f30_exports, {
-  del: () => del,
-  patch: () => patch
-});
-var patch, del;
-var init_uid_json_039b6f30 = __esm({
-  ".svelte-kit/output/server/chunks/_uid_.json-039b6f30.js"() {
-    init_shims();
-    init_api_e66b1c82();
-    patch = async (request) => {
-      return api(request, `todos/${request.locals.userid}/${request.params.uid}`, {
-        text: request.body.get("text"),
-        done: request.body.has("done") ? !!request.body.get("done") : void 0
-      });
-    };
-    del = async (request) => {
-      return api(request, `todos/${request.locals.userid}/${request.params.uid}`);
-    };
-  }
-});
-
-// .svelte-kit/output/server/chunks/DeathStar-47693d22.js
-var deathStarIcon, css, DeathStar;
-var init_DeathStar_47693d22 = __esm({
-  ".svelte-kit/output/server/chunks/DeathStar-47693d22.js"() {
-    init_shims();
-    init_app_7ac9a5cc();
-    deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>\n';
-    css = {
-      code: "button.svelte-iyvpaf{display:flex}",
-      map: null
-    };
-    DeathStar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css);
-      return `<button id="${"death-star"}" title="${"Farbschema wechseln"}" class="${"svelte-iyvpaf"}"><!-- HTML_TAG_START -->${deathStarIcon}<!-- HTML_TAG_END -->
-</button>`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/__layout-9b6cefd5.js
-var layout_9b6cefd5_exports = {};
-__export(layout_9b6cefd5_exports, {
+// .svelte-kit/output/server/chunks/__layout-75739ad0.js
+var layout_75739ad0_exports = {};
+__export(layout_75739ad0_exports, {
   default: () => _layout
 });
+function cubicOut(t) {
+  const f = t - 1;
+  return f * f * f + 1;
+}
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -4993,12 +4895,107 @@ function writable(value, start = noop) {
   }
   return { set, update, subscribe: subscribe2 };
 }
-var import_cookie, subscriber_queue, scheme, getStores, page, makiMix, css$1, Header, css2, Footer, _layout;
-var init_layout_9b6cefd5 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-9b6cefd5.js"() {
+function is_date(obj) {
+  return Object.prototype.toString.call(obj) === "[object Date]";
+}
+function get_interpolator(a, b) {
+  if (a === b || a !== a)
+    return () => a;
+  const type = typeof a;
+  if (type !== typeof b || Array.isArray(a) !== Array.isArray(b)) {
+    throw new Error("Cannot interpolate values of different type");
+  }
+  if (Array.isArray(a)) {
+    const arr = b.map((bi, i) => {
+      return get_interpolator(a[i], bi);
+    });
+    return (t) => arr.map((fn) => fn(t));
+  }
+  if (type === "object") {
+    if (!a || !b)
+      throw new Error("Object cannot be null");
+    if (is_date(a) && is_date(b)) {
+      a = a.getTime();
+      b = b.getTime();
+      const delta = b - a;
+      return (t) => new Date(a + t * delta);
+    }
+    const keys = Object.keys(b);
+    const interpolators = {};
+    keys.forEach((key) => {
+      interpolators[key] = get_interpolator(a[key], b[key]);
+    });
+    return (t) => {
+      const result = {};
+      keys.forEach((key) => {
+        result[key] = interpolators[key](t);
+      });
+      return result;
+    };
+  }
+  if (type === "number") {
+    const delta = b - a;
+    return (t) => a + t * delta;
+  }
+  throw new Error(`Cannot interpolate ${type} values`);
+}
+function tweened(value, defaults = {}) {
+  const store = writable(value);
+  let task;
+  let target_value = value;
+  function set(new_value, opts) {
+    if (value == null) {
+      store.set(value = new_value);
+      return Promise.resolve();
+    }
+    target_value = new_value;
+    let previous_task = task;
+    let started = false;
+    let { delay = 0, duration = 400, easing = identity, interpolate = get_interpolator } = assign(assign({}, defaults), opts);
+    if (duration === 0) {
+      if (previous_task) {
+        previous_task.abort();
+        previous_task = null;
+      }
+      store.set(value = target_value);
+      return Promise.resolve();
+    }
+    const start = now() + delay;
+    let fn;
+    task = loop((now2) => {
+      if (now2 < start)
+        return true;
+      if (!started) {
+        fn = interpolate(value, new_value);
+        if (typeof duration === "function")
+          duration = duration(value, new_value);
+        started = true;
+      }
+      if (previous_task) {
+        previous_task.abort();
+        previous_task = null;
+      }
+      const elapsed = now2 - start;
+      if (elapsed > duration) {
+        store.set(value = new_value);
+        return false;
+      }
+      store.set(value = fn(easing(elapsed / duration)));
+      return true;
+    });
+    return task.promise;
+  }
+  return {
+    set,
+    update: (fn, opts) => set(fn(target_value, value), opts),
+    subscribe: store.subscribe
+  };
+}
+var import_cookie, subscriber_queue, scheme, getStores, page, css, Progress, _layout;
+var init_layout_75739ad0 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-75739ad0.js"() {
     init_shims();
-    init_app_7ac9a5cc();
-    init_DeathStar_47693d22();
+    init_app_81b31fa4();
     import_cookie = __toModule(require_cookie());
     init_dist();
     subscriber_queue = [];
@@ -5027,59 +5024,39 @@ var init_layout_9b6cefd5 = __esm({
         return store.subscribe(fn);
       }
     };
-    makiMix = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <rect x="5" y="5" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="11" y="5" width="2" height="2" fill="currentColor"/>\n    <rect x="17" y="5" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="5" y="11" width="2" height="2" fill="currentColor"/>\n    <rect x="11" y="11" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="17" y="11" width="2" height="2" fill="currentColor"/>\n    <rect x="5" y="17" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="11" y="17" width="2" height="2" fill="currentColor"/>\n    <rect x="17" y="17" width="2" height="2" fill="currentColor"/>\n</svg>\n';
-    css$1 = {
-      code: '@keyframes svelte-txrnz9-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-txrnz9-to-top{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-txrnz9-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}header.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{position:fixed;top:0;left:0;right:0;z-index:10;pointer-events:none}@media(prefers-reduced-motion: no-preference){header.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{animation:svelte-txrnz9-fadein-from-primary 1s var(--easing) forwards}}header.svelte-txrnz9>section.svelte-txrnz9.svelte-txrnz9{align-items:center;color:var(--on-base);display:flex;font-size:clamp(0.8125rem, 0.625rem + 0.234375vw, 1rem);justify-content:space-between;padding:0.625rem var(--core-padding);text-align:left;text-transform:uppercase}@media(max-width: 767px){header.svelte-txrnz9>section.svelte-txrnz9>div.svelte-txrnz9:not(.logo){display:none}}@media(min-width: 768px){header.svelte-txrnz9>section.svelte-txrnz9.svelte-txrnz9{display:grid;grid-column-gap:1.25rem;grid-template-columns:repeat(4, 1fr);padding-top:1.875rem;padding-bottom:1.875rem;align-items:flex-start;max-width:var(--core-max-width);margin:0 auto}}header.svelte-txrnz9>section.svelte-txrnz9>.svelte-txrnz9{pointer-events:auto}header.svelte-txrnz9>section div.svelte-txrnz9.svelte-txrnz9{display:flex;flex-direction:column;align-items:flex-start}[color-scheme="dark"] header.svelte-txrnz9>section.svelte-txrnz9.svelte-txrnz9::before{content:"";background:linear-gradient(0deg, hsla(var(--base-h), var(--base-s), var(--base-l), 0), hsla(var(--base-h), var(--base-s), var(--base-l), 0.2) 70%, hsla(var(--base-h), var(--base-s), var(--base-l), 0.9));position:fixed;left:0;top:0;width:100%;height:12.5rem;z-index:-1;pointer-events:none !important}.logo.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{font-weight:500;margin-left:-0.625rem}.last.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{flex-direction:row;justify-content:space-between;align-items:flex-start;margin-right:-0.625rem}.last.svelte-txrnz9 button{padding:0.25em;transition:color 0.2s var(--easing)}.last.svelte-txrnz9 button:hover{color:var(--primary)}.last.svelte-txrnz9 svg{height:1.85em;width:1.85em}a.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9,span.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{padding:0.625rem}@media(min-width: 768px){a.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9,span.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{padding-top:0.25em;padding-bottom:0.25em}}a.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{transition:all 0.2s var(--easing)}a.svelte-txrnz9 i.svelte-txrnz9.svelte-txrnz9{display:inline-block;font-style:normal}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9{animation:svelte-txrnz9-flip-and-back 0.5s var(--easing) 0.02s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(2){animation-delay:0.04s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(3){animation-delay:0.06s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(4){animation-delay:0.08s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(5){animation-delay:0.1s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(6){animation-delay:0.12s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(7){animation-delay:0.14s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(8){animation-delay:0.16s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(9){animation-delay:0.18s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(10){animation-delay:0.2s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(11){animation-delay:0.22s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(12){animation-delay:0.24s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(13){animation-delay:0.26s}a.svelte-txrnz9:hover i.svelte-txrnz9.svelte-txrnz9:nth-child(14){animation-delay:0.28s}.maki-mix.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{display:flex;align-items:center;justify-content:center;padding:0.625rem;margin-right:-0.625rem}.maki-mix.active.svelte-txrnz9 .yummy{display:none}@media(min-width: 768px){.maki-mix.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{display:none}}.mobile-nav.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{box-sizing:border-box;position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden;overflow-y:auto;background-color:var(--base);opacity:0;pointer-events:none;transition:opacity 0.4s cubic-bezier(0.7, 0, 0.3, 1);z-index:9;height:100vh;padding:6.25rem var(--core-padding);display:flex;flex-direction:column;justify-content:center}@media(max-width: 767px){.mobile-nav.active.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{opacity:1;pointer-events:all}}@media(min-width: 768px){.mobile-nav.svelte-txrnz9.svelte-txrnz9.svelte-txrnz9{display:none}}.mobile-nav.svelte-txrnz9 a.svelte-txrnz9.svelte-txrnz9{display:flex;align-items:flex-end;font-size:2rem;width:100%;text-transform:uppercase}',
+    css = {
+      code: '@keyframes svelte-1ybfy5o-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1ybfy5o-to-top{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ybfy5o-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1ybfy5o-blink-animation{from{opacity:1}to{opacity:0}}.progress.svelte-1ybfy5o.svelte-1ybfy5o{position:fixed;bottom:2.5rem;left:2.5rem;right:2.5rem;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}.progress.svelte-1ybfy5o>div.svelte-1ybfy5o{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline}.number.svelte-1ybfy5o.svelte-1ybfy5o{font-size:clamp(4rem, 2.9038461538rem + 4.8717948718vw, 8.75rem)}.progress-bar.svelte-1ybfy5o.svelte-1ybfy5o{height:0.0625rem;background-color:rgba(255, 255, 255, 0.1)}.progress-sliver.svelte-1ybfy5o.svelte-1ybfy5o{width:var(--width);background-color:rgba(255, 255, 255, 0.5);height:100%}',
       map: null
     };
-    Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+    Progress = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $progress, $$unsubscribe_progress;
       let $page, $$unsubscribe_page;
       $$unsubscribe_page = subscribe(page, (value) => $page = value);
-      let now = new Date(), year = now.getFullYear();
-      $$result.css.add(css$1);
+      let progress = tweened(0, { duration: 2500, easing: cubicOut });
+      $$unsubscribe_progress = subscribe(progress, (value) => $progress = value);
+      $$result.css.add(css);
+      $$unsubscribe_progress();
       $$unsubscribe_page();
-      return `<header class="${"svelte-txrnz9"}"><section class="${"svelte-txrnz9"}"><div class="${"logo svelte-txrnz9"}"><a sveltekit:prefetch href="${"/"}" class="${"svelte-txrnz9"}"><i class="${"svelte-txrnz9"}">A</i><i class="${"svelte-txrnz9"}">r</i><i class="${"svelte-txrnz9"}">m</i><i class="${"svelte-txrnz9"}">i</i><i class="${"svelte-txrnz9"}">n</i> <i class="${"svelte-txrnz9"}">N</i><i class="${"svelte-txrnz9"}">e</i><i class="${"svelte-txrnz9"}">u</i><i class="${"svelte-txrnz9"}">h</i><i class="${"svelte-txrnz9"}">a</i><i class="${"svelte-txrnz9"}">u</i><i class="${"svelte-txrnz9"}">s</i><i class="${"svelte-txrnz9"}">e</i><i class="${"svelte-txrnz9"}">r</i></a></div>
-        <div class="${"svelte-txrnz9"}"><div class="${"svelte-txrnz9"}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-txrnz9", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-txrnz9"}">P</i><i class="${"svelte-txrnz9"}">r</i><i class="${"svelte-txrnz9"}">o</i><i class="${"svelte-txrnz9"}">j</i><i class="${"svelte-txrnz9"}">e</i><i class="${"svelte-txrnz9"}">k</i><i class="${"svelte-txrnz9"}">t</i><i class="${"svelte-txrnz9"}">e</i></a></div>
-            <div class="${"svelte-txrnz9"}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-txrnz9", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-txrnz9"}">\xDC</i><i class="${"svelte-txrnz9"}">b</i><i class="${"svelte-txrnz9"}">e</i><i class="${"svelte-txrnz9"}">r</i> <i class="${"svelte-txrnz9"}">m</i><i class="${"svelte-txrnz9"}">i</i><i class="${"svelte-txrnz9"}">c</i><i class="${"svelte-txrnz9"}">h</i></a></div></div>
-        <div class="${"svelte-txrnz9"}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-txrnz9", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-txrnz9"}">K<i class="${"svelte-txrnz9"}">o</i><i class="${"svelte-txrnz9"}">n</i><i class="${"svelte-txrnz9"}">t</i><i class="${"svelte-txrnz9"}">a</i><i class="${"svelte-txrnz9"}">k</i><i class="${"svelte-txrnz9"}">t</i></i></a></div>
-        <div class="${"last svelte-txrnz9"}"><span class="${"svelte-txrnz9"}">\xA9${escape(year)}</span>
-            ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div>
-        <button class="${["maki-mix svelte-txrnz9", ""].join(" ").trim()}"${add_attribute("title", "Men\xFC anzeigen", 0)}><!-- HTML_TAG_START -->${makiMix}<!-- HTML_TAG_END --></button></section></header>
-
-<nav class="${["mobile-nav svelte-txrnz9", ""].join(" ").trim()}"><a sveltekit:prefetch href="${"/"}" class="${["svelte-txrnz9", $page.path === "/" ? "active" : ""].join(" ").trim()}">Start</a>
-    <a sveltekit:prefetch href="${"/"}" class="${"svelte-txrnz9"}">Projekte</a>
-    <a sveltekit:prefetch href="${"/"}" class="${"svelte-txrnz9"}">\xDCber mich</a>
-    <a sveltekit:prefetch href="${"/"}" class="${"svelte-txrnz9"}">Kontakt</a>
-</nav>`;
-    });
-    css2 = {
-      code: "footer.svelte-a6c832.svelte-a6c832{background-color:var(--base);padding:0.625rem var(--core-padding)}@media(min-width: 768px){footer.svelte-a6c832.svelte-a6c832{padding-top:1.875rem;padding-bottom:1.875rem}}footer.svelte-a6c832>div.svelte-a6c832{display:grid;grid-gap:1rem;align-items:flex-end;max-width:var(--core-max-width);margin:0 auto}@media(min-width: 768px){footer.svelte-a6c832>div.svelte-a6c832{grid-template-columns:1fr auto}}footer.svelte-a6c832 h1.svelte-a6c832{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem, 1.3269230769rem + 0.7692307692vw, 2.25rem);line-height:1.1}footer.svelte-a6c832 p.svelte-a6c832{opacity:0.7}footer.svelte-a6c832 a.svelte-a6c832{font-size:clamp(1.125rem, 1.0384615385rem + 0.3846153846vw, 1.5rem);margin:0 -0.625rem;padding:0.625rem;text-decoration:underline}footer.svelte-a6c832 a.svelte-a6c832:hover{color:var(--primary)}footer.svelte-a6c832 button.svelte-a6c832{text-align:right}",
-      map: null
-    };
-    Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css2);
-      return `<footer class="${"svelte-a6c832"}"><div class="${"svelte-a6c832"}"><div><h1 class="${"svelte-a6c832"}">Lass uns gemeinsam Gro\xDFes machen</h1>
-            <p class="${"svelte-a6c832"}">Jede Ausfahrt sollte mit einem guten Kaffee abgeschlossen werden.<br> Also komm vorbei und sag Hallo.
-            </p>
-            <a href="${"mailto:mail@arminneuhauser.at"}" class="${"svelte-a6c832"}">mail@arminneuhauser.at</a></div>
-        <button class="${"svelte-a6c832"}">Zur\xFCck nach oben</button></div>
-</footer>`;
+      return `<div class="${"progress svelte-1ybfy5o"}"><div class="${"svelte-1ybfy5o"}"><div class="${"number svelte-1ybfy5o"}">${escape(Math.ceil($progress * 100))}%
+        </div>
+        <div class="${"path"}">loading ${escape($page.path)}</div></div>
+    
+    <div class="${"progress-bar svelte-1ybfy5o"}"><div class="${"progress-sliver svelte-1ybfy5o"}"${add_attribute("style", `--width: ${$progress * 100}%`, 0)}></div></div>
+</div>`;
     });
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       scheme.subscribe((value) => {
       });
-      return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
+      return `
 
-<main>${slots.default ? slots.default({}) : ``}</main>
-
-${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+${`<div>${validate_component(Progress, "Progress").$$render($$result, {}, {}, {})}</div>`}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/error-91eb67be.js
-var error_91eb67be_exports = {};
-__export(error_91eb67be_exports, {
+// .svelte-kit/output/server/chunks/error-439c107c.js
+var error_439c107c_exports = {};
+__export(error_439c107c_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -5087,10 +5064,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var import_cookie2, Error2;
-var init_error_91eb67be = __esm({
-  ".svelte-kit/output/server/chunks/error-91eb67be.js"() {
+var init_error_439c107c = __esm({
+  ".svelte-kit/output/server/chunks/error-439c107c.js"() {
     init_shims();
-    init_app_7ac9a5cc();
+    init_app_81b31fa4();
     import_cookie2 = __toModule(require_cookie());
     init_dist();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -6007,7 +5984,7 @@ var require_math = __commonJS({
       return ObservablePoint2;
     }();
     var Matrix = function() {
-      function Matrix2(a, b, c, d2, tx, ty) {
+      function Matrix2(a, b, c, d, tx, ty) {
         if (a === void 0) {
           a = 1;
         }
@@ -6017,8 +5994,8 @@ var require_math = __commonJS({
         if (c === void 0) {
           c = 0;
         }
-        if (d2 === void 0) {
-          d2 = 1;
+        if (d === void 0) {
+          d = 1;
         }
         if (tx === void 0) {
           tx = 0;
@@ -6030,7 +6007,7 @@ var require_math = __commonJS({
         this.a = a;
         this.b = b;
         this.c = c;
-        this.d = d2;
+        this.d = d;
         this.tx = tx;
         this.ty = ty;
       }
@@ -6042,11 +6019,11 @@ var require_math = __commonJS({
         this.tx = array[2];
         this.ty = array[5];
       };
-      Matrix2.prototype.set = function(a, b, c, d2, tx, ty) {
+      Matrix2.prototype.set = function(a, b, c, d, tx, ty) {
         this.a = a;
         this.b = b;
         this.c = c;
-        this.d = d2;
+        this.d = d;
         this.tx = tx;
         this.ty = ty;
         return this;
@@ -6164,9 +6141,9 @@ var require_math = __commonJS({
         var a = this.a;
         var b = this.b;
         var c = this.c;
-        var d2 = this.d;
+        var d = this.d;
         var pivot = transform.pivot;
-        var skewX = -Math.atan2(-c, d2);
+        var skewX = -Math.atan2(-c, d);
         var skewY = Math.atan2(b, a);
         var delta = Math.abs(skewX + skewY);
         if (delta < 1e-5 || Math.abs(PI_2 - delta) < 1e-5) {
@@ -6178,9 +6155,9 @@ var require_math = __commonJS({
           transform.skew.y = skewY;
         }
         transform.scale.x = Math.sqrt(a * a + b * b);
-        transform.scale.y = Math.sqrt(c * c + d2 * d2);
+        transform.scale.y = Math.sqrt(c * c + d * d);
         transform.position.x = this.tx + (pivot.x * a + pivot.y * c);
-        transform.position.y = this.ty + (pivot.x * b + pivot.y * d2);
+        transform.position.y = this.ty + (pivot.x * b + pivot.y * d);
         return transform;
       };
       Matrix2.prototype.invert = function() {
@@ -7104,8 +7081,8 @@ var require_earcut = __commonJS({
       var dim = data[0][0].length, result = { vertices: [], holes: [], dimensions: dim }, holeIndex = 0;
       for (var i = 0; i < data.length; i++) {
         for (var j = 0; j < data[i].length; j++) {
-          for (var d2 = 0; d2 < dim; d2++)
-            result.vertices.push(data[i][j][d2]);
+          for (var d = 0; d < dim; d++)
+            result.vertices.push(data[i][j][d]);
         }
         if (i > 0) {
           holeIndex += data[i - 1].length;
@@ -8146,9 +8123,9 @@ var require_display = __commonJS({
         this.maxY = Math.max(this.maxY, point.y);
       };
       Bounds2.prototype.addPointMatrix = function(matrix, point) {
-        var a = matrix.a, b = matrix.b, c = matrix.c, d2 = matrix.d, tx = matrix.tx, ty = matrix.ty;
+        var a = matrix.a, b = matrix.b, c = matrix.c, d = matrix.d, tx = matrix.tx, ty = matrix.ty;
         var x = a * point.x + c * point.y + tx;
-        var y = b * point.x + d2 * point.y + ty;
+        var y = b * point.x + d * point.y + ty;
         this.minX = Math.min(this.minX, x);
         this.maxX = Math.max(this.maxX, x);
         this.minY = Math.min(this.minY, y);
@@ -8195,7 +8172,7 @@ var require_display = __commonJS({
         var a = matrix.a;
         var b = matrix.b;
         var c = matrix.c;
-        var d2 = matrix.d;
+        var d = matrix.d;
         var tx = matrix.tx;
         var ty = matrix.ty;
         var minX = this.minX;
@@ -8203,25 +8180,25 @@ var require_display = __commonJS({
         var maxX = this.maxX;
         var maxY = this.maxY;
         var x = a * x0 + c * y0 + tx;
-        var y = b * x0 + d2 * y0 + ty;
+        var y = b * x0 + d * y0 + ty;
         minX = x < minX ? x : minX;
         minY = y < minY ? y : minY;
         maxX = x > maxX ? x : maxX;
         maxY = y > maxY ? y : maxY;
         x = a * x1 + c * y0 + tx;
-        y = b * x1 + d2 * y0 + ty;
+        y = b * x1 + d * y0 + ty;
         minX = x < minX ? x : minX;
         minY = y < minY ? y : minY;
         maxX = x > maxX ? x : maxX;
         maxY = y > maxY ? y : maxY;
         x = a * x0 + c * y1 + tx;
-        y = b * x0 + d2 * y1 + ty;
+        y = b * x0 + d * y1 + ty;
         minX = x < minX ? x : minX;
         minY = y < minY ? y : minY;
         maxX = x > maxX ? x : maxX;
         maxY = y > maxY ? y : maxY;
         x = a * x1 + c * y1 + tx;
-        y = b * x1 + d2 * y1 + ty;
+        y = b * x1 + d * y1 + ty;
         minX = x < minX ? x : minX;
         minY = y < minY ? y : minY;
         maxX = x > maxX ? x : maxX;
@@ -8262,7 +8239,7 @@ var require_display = __commonJS({
         var a = matrix.a;
         var b = matrix.b;
         var c = matrix.c;
-        var d2 = matrix.d;
+        var d = matrix.d;
         var tx = matrix.tx;
         var ty = matrix.ty;
         var minX = this.minX;
@@ -8273,7 +8250,7 @@ var require_display = __commonJS({
           var rawX = vertices[i];
           var rawY = vertices[i + 1];
           var x = a * rawX + c * rawY + tx;
-          var y = d2 * rawY + b * rawX + ty;
+          var y = d * rawY + b * rawX + ty;
           minX = Math.min(minX, x - padX);
           maxX = Math.max(maxX, x + padX);
           minY = Math.min(minY, y - padY);
@@ -8355,24 +8332,24 @@ var require_display = __commonJS({
       };
       return Bounds2;
     }();
-    var extendStatics = function(d2, b) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d3, b2) {
-        d3.__proto__ = b2;
-      } || function(d3, b2) {
+    var extendStatics = function(d, b) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
+        d2.__proto__ = b2;
+      } || function(d2, b2) {
         for (var p in b2) {
           if (b2.hasOwnProperty(p)) {
-            d3[p] = b2[p];
+            d2[p] = b2[p];
           }
         }
       };
-      return extendStatics(d2, b);
+      return extendStatics(d, b);
     };
-    function __extends(d2, b) {
-      extendStatics(d2, b);
+    function __extends(d, b) {
+      extendStatics(d, b);
       function __() {
-        this.constructor = d2;
+        this.constructor = d;
       }
-      d2.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
     var DisplayObject = function(_super) {
       __extends(DisplayObject2, _super);
@@ -9747,24 +9724,24 @@ var require_core = __commonJS({
       }
       throw new Error("Unrecognized source type to auto-detect Resource");
     }
-    var extendStatics = function(d2, b) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d3, b2) {
-        d3.__proto__ = b2;
-      } || function(d3, b2) {
+    var extendStatics = function(d, b) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
+        d2.__proto__ = b2;
+      } || function(d2, b2) {
         for (var p in b2) {
           if (b2.hasOwnProperty(p)) {
-            d3[p] = b2[p];
+            d2[p] = b2[p];
           }
         }
       };
-      return extendStatics(d2, b);
+      return extendStatics(d, b);
     };
-    function __extends(d2, b) {
-      extendStatics(d2, b);
+    function __extends(d, b) {
+      extendStatics(d, b);
       function __() {
-        this.constructor = d2;
+        this.constructor = d;
       }
-      d2.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
     var __assign = function() {
       __assign = Object.assign || function __assign2(t) {
@@ -12303,8 +12280,8 @@ var require_core = __commonJS({
       };
       FilterSystem2.prototype.roundFrame = function(frame, resolution, bindingSourceFrame, bindingDestinationFrame, transform) {
         if (transform) {
-          var a = transform.a, b = transform.b, c = transform.c, d2 = transform.d;
-          if ((Math.abs(b) > 1e-4 || Math.abs(c) > 1e-4) && (Math.abs(a) > 1e-4 || Math.abs(d2) > 1e-4)) {
+          var a = transform.a, b = transform.b, c = transform.c, d = transform.d;
+          if ((Math.abs(b) > 1e-4 || Math.abs(c) > 1e-4) && (Math.abs(a) > 1e-4 || Math.abs(d) > 1e-4)) {
             return;
           }
         }
@@ -12938,11 +12915,11 @@ var require_core = __commonJS({
             gl.vertexAttribDivisor = function(a, b) {
               return instanceExt_1.vertexAttribDivisorANGLE(a, b);
             };
-            gl.drawElementsInstanced = function(a, b, c, d2, e) {
-              return instanceExt_1.drawElementsInstancedANGLE(a, b, c, d2, e);
+            gl.drawElementsInstanced = function(a, b, c, d, e) {
+              return instanceExt_1.drawElementsInstancedANGLE(a, b, c, d, e);
             };
-            gl.drawArraysInstanced = function(a, b, c, d2) {
-              return instanceExt_1.drawArraysInstancedANGLE(a, b, c, d2);
+            gl.drawArraysInstanced = function(a, b, c, d) {
+              return instanceExt_1.drawArraysInstancedANGLE(a, b, c, d);
             };
           } else {
             this.hasInstance = false;
@@ -14088,10 +14065,10 @@ var require_core = __commonJS({
       MaskSystem2.prototype.push = function(target, maskDataOrTarget) {
         var maskData = maskDataOrTarget;
         if (!maskData.isMaskData) {
-          var d2 = this.maskDataPool.pop() || new MaskData();
-          d2.pooled = true;
-          d2.maskObject = maskDataOrTarget;
-          maskData = d2;
+          var d = this.maskDataPool.pop() || new MaskData();
+          d.pooled = true;
+          d.maskObject = maskDataOrTarget;
+          maskData = d;
         }
         var maskAbove = this.maskStack.length !== 0 ? this.maskStack[this.maskStack.length - 1] : null;
         maskData.copyCountersOrReset(maskAbove);
@@ -14274,8 +14251,8 @@ var require_core = __commonJS({
         if (!matrix) {
           return false;
         }
-        var a = matrix.a, b = matrix.b, c = matrix.c, d2 = matrix.d;
-        return (Math.abs(b) > 1e-4 || Math.abs(c) > 1e-4) && (Math.abs(a) > 1e-4 || Math.abs(d2) > 1e-4);
+        var a = matrix.a, b = matrix.b, c = matrix.c, d = matrix.d;
+        return (Math.abs(b) > 1e-4 || Math.abs(c) > 1e-4) && (Math.abs(a) > 1e-4 || Math.abs(d) > 1e-4);
       };
       ScissorSystem2.prototype.testScissor = function(maskData) {
         var maskObject = maskData.maskObject;
@@ -16587,24 +16564,24 @@ var require_graphics = __commonJS({
       };
       return FillStyle2;
     }();
-    var extendStatics = function(d2, b) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d3, b2) {
-        d3.__proto__ = b2;
-      } || function(d3, b2) {
+    var extendStatics = function(d, b) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
+        d2.__proto__ = b2;
+      } || function(d2, b2) {
         for (var p in b2) {
           if (b2.hasOwnProperty(p)) {
-            d3[p] = b2[p];
+            d2[p] = b2[p];
           }
         }
       };
-      return extendStatics(d2, b);
+      return extendStatics(d, b);
     };
-    function __extends(d2, b) {
-      extendStatics(d2, b);
+    function __extends(d, b) {
+      extendStatics(d, b);
       function __() {
-        this.constructor = d2;
+        this.constructor = d;
       }
-      d2.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
     var buildPoly = {
       build: function(graphicsData) {
@@ -18319,7 +18296,7 @@ var require_graphics = __commonJS({
         var a = wt.a;
         var b = wt.b;
         var c = wt.c;
-        var d2 = wt.d;
+        var d = wt.d;
         var tx = wt.tx;
         var ty = wt.ty;
         var data = this._geometry.points;
@@ -18329,7 +18306,7 @@ var require_graphics = __commonJS({
           var x = data[i];
           var y = data[i + 1];
           vertexData[count++] = a * x + c * y + tx;
-          vertexData[count++] = d2 * y + b * x + ty;
+          vertexData[count++] = d * y + b * x + ty;
         }
       };
       Graphics2.prototype.closePath = function() {
@@ -18464,24 +18441,24 @@ var require_interaction = __commonJS({
       };
       return InteractionData2;
     }();
-    var extendStatics = function(d2, b) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d3, b2) {
-        d3.__proto__ = b2;
-      } || function(d3, b2) {
+    var extendStatics = function(d, b) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
+        d2.__proto__ = b2;
+      } || function(d2, b2) {
         for (var p in b2) {
           if (b2.hasOwnProperty(p)) {
-            d3[p] = b2[p];
+            d2[p] = b2[p];
           }
         }
       };
-      return extendStatics(d2, b);
+      return extendStatics(d, b);
     };
-    function __extends(d2, b) {
-      extendStatics(d2, b);
+    function __extends(d, b) {
+      extendStatics(d, b);
       function __() {
-        this.constructor = d2;
+        this.constructor = d;
       }
-      d2.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
     var InteractionEvent = function() {
       function InteractionEvent2() {
@@ -19384,24 +19361,24 @@ var require_filter_kawase_blur_cjs = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     var core = require_core();
     var math = require_math();
-    var extendStatics = function(d2, b) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d3, b2) {
-        d3.__proto__ = b2;
-      } || function(d3, b2) {
+    var extendStatics = function(d, b) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
+        d2.__proto__ = b2;
+      } || function(d2, b2) {
         for (var p in b2) {
           if (Object.prototype.hasOwnProperty.call(b2, p)) {
-            d3[p] = b2[p];
+            d2[p] = b2[p];
           }
         }
       };
-      return extendStatics(d2, b);
+      return extendStatics(d, b);
     };
-    function __extends(d2, b) {
-      extendStatics(d2, b);
+    function __extends(d, b) {
+      extendStatics(d, b);
       function __() {
-        this.constructor = d2;
+        this.constructor = d;
       }
-      d2.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
     var vertex = "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}";
     var fragment = "\nvarying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform vec2 uOffset;\n\nvoid main(void)\n{\n    vec4 color = vec4(0.0);\n\n    // Sample top left pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x - uOffset.x, vTextureCoord.y + uOffset.y));\n\n    // Sample top right pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x + uOffset.x, vTextureCoord.y + uOffset.y));\n\n    // Sample bottom right pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x + uOffset.x, vTextureCoord.y - uOffset.y));\n\n    // Sample bottom left pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x - uOffset.x, vTextureCoord.y - uOffset.y));\n\n    // Average\n    color *= 0.25;\n\n    gl_FragColor = color;\n}";
@@ -19566,24 +19543,24 @@ var require_filter_noise = __commonJS({
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var core = require_core();
-    var extendStatics = function(d2, b) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d3, b2) {
-        d3.__proto__ = b2;
-      } || function(d3, b2) {
+    var extendStatics = function(d, b) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
+        d2.__proto__ = b2;
+      } || function(d2, b2) {
         for (var p in b2) {
           if (b2.hasOwnProperty(p)) {
-            d3[p] = b2[p];
+            d2[p] = b2[p];
           }
         }
       };
-      return extendStatics(d2, b);
+      return extendStatics(d, b);
     };
-    function __extends(d2, b) {
-      extendStatics(d2, b);
+    function __extends(d, b) {
+      extendStatics(d, b);
       function __() {
-        this.constructor = d2;
+        this.constructor = d;
       }
-      d2.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
     var fragment = "precision highp float;\n\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\n\nuniform float uNoise;\nuniform float uSeed;\nuniform sampler2D uSampler;\n\nfloat rand(vec2 co)\n{\n    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);\n}\n\nvoid main()\n{\n    vec4 color = texture2D(uSampler, vTextureCoord);\n    float randomValue = rand(gl_FragCoord.xy * uSeed);\n    float diff = (randomValue - 0.5) * uNoise;\n\n    // Un-premultiply alpha before applying the color matrix. See issue #3539.\n    if (color.a > 0.0) {\n        color.rgb /= color.a;\n    }\n\n    color.r += diff;\n    color.g += diff;\n    color.b += diff;\n\n    // Premultiply alpha again.\n    color.rgb *= color.a;\n\n    gl_FragColor = color;\n}\n";
     var NoiseFilter = function(_super) {
@@ -19636,24 +19613,24 @@ var require_filter_color_matrix = __commonJS({
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var core = require_core();
-    var extendStatics = function(d2, b) {
-      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d3, b2) {
-        d3.__proto__ = b2;
-      } || function(d3, b2) {
+    var extendStatics = function(d, b) {
+      extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
+        d2.__proto__ = b2;
+      } || function(d2, b2) {
         for (var p in b2) {
           if (b2.hasOwnProperty(p)) {
-            d3[p] = b2[p];
+            d2[p] = b2[p];
           }
         }
       };
-      return extendStatics(d2, b);
+      return extendStatics(d, b);
     };
-    function __extends(d2, b) {
-      extendStatics(d2, b);
+    function __extends(d, b) {
+      extendStatics(d, b);
       function __() {
-        this.constructor = d2;
+        this.constructor = d;
       }
-      d2.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+      d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
     var fragment = "varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform float m[20];\nuniform float uAlpha;\n\nvoid main(void)\n{\n    vec4 c = texture2D(uSampler, vTextureCoord);\n\n    if (uAlpha == 0.0) {\n        gl_FragColor = c;\n        return;\n    }\n\n    // Un-premultiply alpha before applying the color matrix. See issue #3539.\n    if (c.a > 0.0) {\n      c.rgb /= c.a;\n    }\n\n    vec4 result;\n\n    result.r = (m[0] * c.r);\n        result.r += (m[1] * c.g);\n        result.r += (m[2] * c.b);\n        result.r += (m[3] * c.a);\n        result.r += m[4];\n\n    result.g = (m[5] * c.r);\n        result.g += (m[6] * c.g);\n        result.g += (m[7] * c.b);\n        result.g += (m[8] * c.a);\n        result.g += m[9];\n\n    result.b = (m[10] * c.r);\n       result.b += (m[11] * c.g);\n       result.b += (m[12] * c.b);\n       result.b += (m[13] * c.a);\n       result.b += m[14];\n\n    result.a = (m[15] * c.r);\n       result.a += (m[16] * c.g);\n       result.a += (m[17] * c.b);\n       result.a += (m[18] * c.a);\n       result.a += m[19];\n\n    vec3 rgb = mix(c.rgb, result.rgb, uAlpha);\n\n    // Premultiply alpha again.\n    rgb *= result.a;\n\n    gl_FragColor = vec4(rgb, result.a);\n}\n";
     var ColorMatrixFilter = function(_super) {
@@ -20625,17 +20602,17 @@ var require_debounce = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-0e93fe13.js
-var index_0e93fe13_exports = {};
-__export(index_0e93fe13_exports, {
+// .svelte-kit/output/server/chunks/index-5bf0b00e.js
+var index_5bf0b00e_exports = {};
+__export(index_5bf0b00e_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
-var import_app, import_graphics, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_cookie3, css$3, Scene, css$2, Hero, css$12, LatestWork, css3, Wisdom, prerender, Routes;
-var init_index_0e93fe13 = __esm({
-  ".svelte-kit/output/server/chunks/index-0e93fe13.js"() {
+var import_app, import_graphics, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_cookie3, deathStarIcon, css$4, DeathStar, css$3, Scene, css$2, Hero, IntersectionObserver_1, css$1, LatestWork, css2, Wisdom, prerender, Routes;
+var init_index_5bf0b00e = __esm({
+  ".svelte-kit/output/server/chunks/index-5bf0b00e.js"() {
     init_shims();
-    init_app_7ac9a5cc();
+    init_app_81b31fa4();
     init_dist2();
     import_app = __toModule(require_app());
     import_graphics = __toModule(require_graphics());
@@ -20649,9 +20626,18 @@ var init_index_0e93fe13 = __esm({
     init_simplex_noise();
     import_hsl_to_hex = __toModule(require_hsl_to_hex());
     import_debounce = __toModule(require_debounce());
-    init_DeathStar_47693d22();
     import_cookie3 = __toModule(require_cookie());
     init_dist();
+    deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>\n';
+    css$4 = {
+      code: "button.svelte-iyvpaf{display:flex}",
+      map: null
+    };
+    DeathStar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$4);
+      return `<button id="${"death-star"}" title="${"Farbschema wechseln"}" class="${"svelte-iyvpaf"}"><!-- HTML_TAG_START -->${deathStarIcon}<!-- HTML_TAG_END -->
+</button>`;
+    });
     css$3 = {
       code: 'canvas.svelte-1113b2m{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1}[color-scheme="light"] canvas.svelte-1113b2m{opacity:0.25;mix-blend-mode:luminosity}[color-scheme="blue"] canvas.svelte-1113b2m{mix-blend-mode:screen}[color-scheme="lime"] canvas.svelte-1113b2m{mix-blend-mode:screen}',
       map: null
@@ -20671,7 +20657,7 @@ var init_index_0e93fe13 = __esm({
       return `<canvas class="${"svelte-1113b2m"}"${add_attribute("this", view, 0)}></canvas>`;
     });
     css$2 = {
-      code: '@keyframes svelte-pqie7t-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-pqie7t-to-top{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-pqie7t-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}.hero.svelte-pqie7t.svelte-pqie7t.svelte-pqie7t{align-items:start;box-sizing:border-box;display:grid;grid-column-gap:0;grid-gap:1rem;grid-template-columns:auto clamp(20rem, 10rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;min-height:var(--app-height, 100vh);padding:var(--core-padding) 0;z-index:1}.hero.svelte-pqie7t .sphere.svelte-pqie7t.svelte-pqie7t{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.hero.svelte-pqie7t .sphere.svelte-pqie7t.svelte-pqie7t::after{content:"";display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.8);border-radius:50%;mix-blend-mode:soft-light}.hero.svelte-pqie7t h1.svelte-pqie7t.svelte-pqie7t{font-family:var(--serif);font-weight:700;font-size:clamp(1.5625rem, 1.0818181818rem + 2.1363636364vw, 4.5rem);line-height:1.1;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;z-index:1}@media(prefers-reduced-motion: no-preference){.hero.svelte-pqie7t h1.svelte-pqie7t.svelte-pqie7t{animation:svelte-pqie7t-fadein-from-primary 2s var(--easing) forwards}}.hero.svelte-pqie7t h1 span.svelte-pqie7t.svelte-pqie7t{display:block}@media(prefers-reduced-motion: no-preference){.hero.svelte-pqie7t h1 span.svelte-pqie7t.svelte-pqie7t{animation:svelte-pqie7t-to-top 0.5s var(--easing) forwards}}.hero.svelte-pqie7t .bottom.svelte-pqie7t.svelte-pqie7t{grid-column:1/span 3;display:grid;grid-template-columns:auto 1fr auto}@media(prefers-reduced-motion: no-preference){.hero.svelte-pqie7t .bottom.svelte-pqie7t.svelte-pqie7t{animation:svelte-pqie7t-fadein-from-primary 0.5s var(--easing) forwards}}.hero.svelte-pqie7t .bottom.svelte-pqie7t>div.svelte-pqie7t{grid-column:2}.hero.svelte-pqie7t .bottom h2.svelte-pqie7t.svelte-pqie7t,.hero.svelte-pqie7t .bottom h3.svelte-pqie7t.svelte-pqie7t{font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);font-weight:400;margin:0;text-align:center;color:var(--on-base);opacity:0.7}@media(min-width: 768px){.hero.svelte-pqie7t .bottom.svelte-pqie7t #death-star{display:none}}',
+      code: "@keyframes svelte-7xo18n-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-7xo18n-to-top{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-7xo18n-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-7xo18n-blink-animation{from{opacity:1}to{opacity:0}}.hero.svelte-7xo18n.svelte-7xo18n.svelte-7xo18n{align-items:start;box-sizing:border-box;display:grid;grid-column-gap:0;grid-gap:1rem;grid-template-columns:auto clamp(20rem, 10rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;min-height:var(--app-height, 100vh);padding:var(--core-padding) 0;z-index:1}.hero.svelte-7xo18n .headline.svelte-7xo18n.svelte-7xo18n{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.hero.svelte-7xo18n .headline .sphere.svelte-7xo18n.svelte-7xo18n{display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.8);border-radius:50%;mix-blend-mode:soft-light}.hero.svelte-7xo18n h1.svelte-7xo18n.svelte-7xo18n{font-family:var(--serif);font-weight:700;font-size:clamp(1.5625rem, 1.0818181818rem + 2.1363636364vw, 4.5rem);line-height:1.1;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;z-index:1}@media(prefers-reduced-motion: no-preference){.hero.svelte-7xo18n h1.svelte-7xo18n.svelte-7xo18n{animation:svelte-7xo18n-fadein-from-primary 2s var(--easing) forwards}}.hero.svelte-7xo18n h1 span.svelte-7xo18n.svelte-7xo18n{display:block}@media(prefers-reduced-motion: no-preference){.hero.svelte-7xo18n h1 span.svelte-7xo18n.svelte-7xo18n{animation:svelte-7xo18n-to-top 0.5s var(--easing) forwards}}.hero.svelte-7xo18n .bottom.svelte-7xo18n.svelte-7xo18n{grid-column:1/span 3;display:grid;grid-template-columns:auto 1fr auto;padding:0 var(--core-padding)}@media(prefers-reduced-motion: no-preference){.hero.svelte-7xo18n .bottom.svelte-7xo18n.svelte-7xo18n{animation:svelte-7xo18n-fadein-from-primary 0.5s var(--easing) forwards}}.hero.svelte-7xo18n .bottom.svelte-7xo18n>div.svelte-7xo18n{grid-column:2}.hero.svelte-7xo18n .bottom h2.svelte-7xo18n.svelte-7xo18n,.hero.svelte-7xo18n .bottom h3.svelte-7xo18n.svelte-7xo18n{font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);font-weight:400;margin:0;text-align:center;color:var(--on-base);opacity:0.7}@media(min-width: 768px){.hero.svelte-7xo18n .bottom.svelte-7xo18n #death-star{display:none}}",
       map: null
     };
     Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -20679,52 +20665,134 @@ var init_index_0e93fe13 = __esm({
       if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
         $$bindings.scrollY(scrollY);
       $$result.css.add(css$2);
-      return `<section class="${"hero svelte-pqie7t"}"><div class="${"sphere svelte-pqie7t"}"><h1 style="${"transform: translate(0," + escape(-scrollY / 8) + "px)"}" class="${"svelte-pqie7t"}"><span class="${"svelte-pqie7t"}">Ich erschaffe</span>
-            <span class="${"svelte-pqie7t"}">ausgefeilte digitale</span>
-            <span class="${"svelte-pqie7t"}">Erlebnisse im Web,</span>
-            <span class="${"svelte-pqie7t"}">jeden Tag.</span></h1></div>
-    <div class="${"bottom svelte-pqie7t"}" style="${"transform: translate(0," + escape(-scrollY / 5) + "px)"}"><div class="${"svelte-pqie7t"}"><h2 class="${"svelte-pqie7t"}">Konzept, Design &amp; Entwicklung</h2>
-            <h3 class="${"svelte-pqie7t"}">made in Vienna</h3></div>
+      return `<section class="${"hero svelte-7xo18n"}"><div class="${"headline svelte-7xo18n"}"><h1 style="${"transform: translate(0," + escape(-scrollY / 7) + "px)"}" class="${"svelte-7xo18n"}"><span class="${"svelte-7xo18n"}">Ich erschaffe</span>
+            <span class="${"svelte-7xo18n"}">ausgefeilte digitale</span>
+            <span class="${"svelte-7xo18n"}">Erlebnisse im Web,</span>
+            <span class="${"svelte-7xo18n"}">jeden Tag.</span></h1>
+        <div class="${"sphere svelte-7xo18n"}" style="${"transform: translate(0," + escape(-scrollY / 10) + "px)"}"></div></div>
+    <div class="${"bottom svelte-7xo18n"}" style="${"transform: translate(0," + escape(-scrollY / 5) + "px)"}"><div class="${"svelte-7xo18n"}"><h2 class="${"svelte-7xo18n"}">Konzept, Design &amp; Entwicklung</h2>
+            <h3 class="${"svelte-7xo18n"}">made in Vienna</h3></div>
         ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div>
 </section>`;
     });
-    css$12 = {
-      code: ".latest-work.svelte-wt9x20.svelte-wt9x20{align-items:start;box-sizing:border-box;display:grid;grid-gap:1rem;min-height:100vh;padding:6.25rem 0}.latest-work.svelte-wt9x20 h1.svelte-wt9x20{font-size:clamp(2.5rem, 1.4772727273rem + 4.5454545455vw, 8.75rem);white-space:nowrap;overflow:hidden;margin:0}.latest-work.svelte-wt9x20 h1 span.svelte-wt9x20{display:inline-block}.latest-work.svelte-wt9x20 h1 i.svelte-wt9x20{font-family:var(--serif);font-style:normal}.latest-work.svelte-wt9x20 .projects.svelte-wt9x20{display:grid;grid-gap:1.25rem;justify-content:center;padding:var(--core-padding);max-width:var(--core-max-width);margin:0 auto}@media(min-width: 1024px){.latest-work.svelte-wt9x20 .projects.svelte-wt9x20{grid-template-columns:1fr 1fr;grid-gap:2.5vw}}.latest-work.svelte-wt9x20 .teaser h1.svelte-wt9x20{font-family:var(--serif);font-size:clamp(2.25rem, 1.7596153846rem + 2.1794871795vw, 4.375rem);margin:0.25em 0;display:flex;align-items:baseline;gap:0.25em}.latest-work.svelte-wt9x20 .teaser h1 span.svelte-wt9x20{font-family:var(--sans-serif);font-weight:400;font-size:clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);color:var(--primary)}@media(min-width: 1024px){.latest-work.svelte-wt9x20 .teaser.svelte-wt9x20:nth-child(2){margin-top:5rem}}",
+    IntersectionObserver_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { element = null } = $$props;
+      let { once = false } = $$props;
+      let { root = null } = $$props;
+      let { rootMargin = "0px" } = $$props;
+      let { threshold = 0 } = $$props;
+      let { entry = null } = $$props;
+      let { intersecting = false } = $$props;
+      let { observer = null } = $$props;
+      createEventDispatcher();
+      if ($$props.element === void 0 && $$bindings.element && element !== void 0)
+        $$bindings.element(element);
+      if ($$props.once === void 0 && $$bindings.once && once !== void 0)
+        $$bindings.once(once);
+      if ($$props.root === void 0 && $$bindings.root && root !== void 0)
+        $$bindings.root(root);
+      if ($$props.rootMargin === void 0 && $$bindings.rootMargin && rootMargin !== void 0)
+        $$bindings.rootMargin(rootMargin);
+      if ($$props.threshold === void 0 && $$bindings.threshold && threshold !== void 0)
+        $$bindings.threshold(threshold);
+      if ($$props.entry === void 0 && $$bindings.entry && entry !== void 0)
+        $$bindings.entry(entry);
+      if ($$props.intersecting === void 0 && $$bindings.intersecting && intersecting !== void 0)
+        $$bindings.intersecting(intersecting);
+      if ($$props.observer === void 0 && $$bindings.observer && observer !== void 0)
+        $$bindings.observer(observer);
+      return `${slots.default ? slots.default({ intersecting, entry, observer }) : ``}`;
+    });
+    css$1 = {
+      code: ".latest-work.svelte-4m21az.svelte-4m21az.svelte-4m21az{align-items:start;box-sizing:border-box;display:grid;grid-gap:1rem;min-height:100vh;padding:6.25rem 0;overflow:hidden}.latest-work.svelte-4m21az>h1.svelte-4m21az.svelte-4m21az{font-size:clamp(2.5rem, 1.4772727273rem + 4.5454545455vw, 8.75rem);white-space:nowrap;overflow:hidden;margin:0}.latest-work.svelte-4m21az>h1 span.svelte-4m21az.svelte-4m21az{display:inline-block}.latest-work.svelte-4m21az>h1 span span.svelte-4m21az.svelte-4m21az{transform:translate(0, 100%);transition:transform 0.5s var(--easing)}.latest-work.svelte-4m21az>h1.intersecting span span.svelte-4m21az.svelte-4m21az{transform:translate(0, 0)}.latest-work.svelte-4m21az>h1 i.svelte-4m21az.svelte-4m21az{font-family:var(--serif);font-style:normal}.projects.svelte-4m21az.svelte-4m21az.svelte-4m21az{display:grid;grid-gap:1.25rem;justify-content:center;padding:var(--core-padding);max-width:var(--core-max-width);margin:0 auto}@media(min-width: 1024px){.projects.svelte-4m21az.svelte-4m21az.svelte-4m21az{grid-template-columns:1fr 1fr;grid-gap:2.5vw}}.teaser.svelte-4m21az>div.svelte-4m21az.svelte-4m21az{transition:transform 1.5s var(--easing)}.teaser.svelte-4m21az:nth-child(odd)>div.svelte-4m21az.svelte-4m21az{transform:translate(-3.125rem, 12.5rem)}.teaser.svelte-4m21az:nth-child(even)>div.svelte-4m21az.svelte-4m21az{transform:translate(3.125rem, 12.5rem)}.teaser.intersecting.svelte-4m21az>div.svelte-4m21az.svelte-4m21az{transform:translate(0, 0)}.teaser.svelte-4m21az h1.svelte-4m21az.svelte-4m21az{font-family:var(--serif);font-size:clamp(2.25rem, 1.7596153846rem + 2.1794871795vw, 4.375rem);margin:0.25em 0;display:flex;align-items:baseline;gap:0.25em}.teaser.svelte-4m21az h1.svelte-4m21az span.svelte-4m21az{font-family:var(--sans-serif);font-weight:400;font-size:clamp(0.9375rem, 0.8942307692rem + 0.1923076923vw, 1.125rem);color:var(--primary)}@media(min-width: 1024px){.teaser.svelte-4m21az.svelte-4m21az.svelte-4m21az:nth-child(2){margin-top:5rem}}",
       map: null
     };
     LatestWork = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { scrollY } = $$props;
+      let element;
+      let intersecting;
+      let element2;
+      let intersecting2;
+      let element3;
+      let intersecting3;
       if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
         $$bindings.scrollY(scrollY);
-      $$result.css.add(css$12);
-      return `<section class="${"latest-work svelte-wt9x20"}"><h1 class="${"svelte-wt9x20"}"><span style="${"transform: translate(" + escape(-scrollY / 4) + "px,0)"}" class="${"svelte-wt9x20"}"><i class="${"svelte-wt9x20"}">Meine</i> Projekte
-            <i class="${"svelte-wt9x20"}">Meine</i> Projekte
-            <i class="${"svelte-wt9x20"}">Meine</i> Projekte
-            <i class="${"svelte-wt9x20"}">Meine</i> Projekte
-        </span></h1>
+      $$result.css.add(css$1);
+      let $$settled;
+      let $$rendered;
+      do {
+        $$settled = true;
+        $$rendered = `<section class="${"latest-work svelte-4m21az"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { element, intersecting }, {
+          intersecting: ($$value) => {
+            intersecting = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<h1 class="${["headline svelte-4m21az", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><span style="${"transform: translate(" + escape(-scrollY / 4 - 200) + "px,0)"}" class="${"svelte-4m21az"}"><span class="${"svelte-4m21az"}"><i class="${"svelte-4m21az"}">Meine</i> Projekte
+                    <i class="${"svelte-4m21az"}">Meine</i> Projekte
+                    <i class="${"svelte-4m21az"}">Meine</i> Projekte
+                    <i class="${"svelte-4m21az"}">Meine</i> Projekte
+                </span></span></h1>`
+        })}
 
-    <div class="${"projects svelte-wt9x20"}"><article class="${"teaser svelte-wt9x20"}"><img src="${"/images/cartagena.jpg"}" alt="${"Solmates"}">
-            <h1 class="${"svelte-wt9x20"}">Solmates
-                <span class="${"svelte-wt9x20"}">2019</span></h1></article>
-        <article class="${"teaser svelte-wt9x20"}"><img src="${"/images/wohnformat.jpg"}" alt="${"Wohnformat"}">
-            <h1 class="${"svelte-wt9x20"}">Wohnformat
-                <span class="${"svelte-wt9x20"}">2018</span></h1></article></div>
+    <div class="${"projects svelte-4m21az"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, {
+          element: element2,
+          intersecting: intersecting2
+        }, {
+          intersecting: ($$value) => {
+            intersecting2 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<article class="${["teaser svelte-4m21az", intersecting2 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element2, 0)}><div class="${"svelte-4m21az"}"><img src="${"/images/cartagena.jpg"}" alt="${"Solmates"}">
+                    <h1 class="${"svelte-4m21az"}">Solmates
+                        <span class="${"svelte-4m21az"}">2019</span></h1></div></article>`
+        })}
+        ${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, {
+          element: element3,
+          intersecting: intersecting3
+        }, {
+          intersecting: ($$value) => {
+            intersecting3 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<article class="${["teaser svelte-4m21az", intersecting3 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element3, 0)}><div class="${"svelte-4m21az"}"><img src="${"/images/wohnformat.jpg"}" alt="${"Wohnformat"}">
+                    <h1 class="${"svelte-4m21az"}">Wohnformat
+                        <span class="${"svelte-4m21az"}">2018</span></h1></div></article>`
+        })}</div>
 
 </section>`;
+      } while (!$$settled);
+      return $$rendered;
     });
-    css3 = {
-      code: ".wisdom.svelte-ng51yw.svelte-ng51yw{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto clamp(17.5rem, 10rem + 30vw, 160rem) auto;justify-content:center;min-height:100vh;padding:var(--core-padding);max-width:var(--core-max-width);margin:0 auto}.wisdom.svelte-ng51yw p.svelte-ng51yw{grid-column:2;font-size:clamp(1.75rem, 1.1153846154rem + 2.8205128205vw, 4.5rem);font-weight:700;line-height:1.15}",
+    css2 = {
+      code: ".wisdom.svelte-1t3q5hs.svelte-1t3q5hs{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto clamp(17.5rem, 10rem + 30vw, 160rem) auto;justify-content:center;min-height:100vh;padding:var(--core-padding);max-width:var(--core-max-width);margin:0 auto}.wisdom.svelte-1t3q5hs p.svelte-1t3q5hs{grid-column:2;font-size:clamp(1.75rem, 1.1153846154rem + 2.8205128205vw, 4.5rem);font-weight:700;line-height:1.15;transform:translate(0, 12.5rem);transition:transform 1.5s var(--easing)}.wisdom.svelte-1t3q5hs p.intersecting.svelte-1t3q5hs{transform:translate(0, 0)}",
       map: null
     };
     Wisdom = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css3);
-      return `<section class="${"wisdom svelte-ng51yw"}"><p class="${"svelte-ng51yw"}">Meine Webseiten sind wie gute Fahrr\xE4der: elegant, hochwertig, auf den Benutzer angepasst und vor allem pfeilschnell.</p>
-</section>`;
+      let element;
+      let intersecting;
+      $$result.css.add(css2);
+      let $$settled;
+      let $$rendered;
+      do {
+        $$settled = true;
+        $$rendered = `${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { element, intersecting }, {
+          intersecting: ($$value) => {
+            intersecting = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<section class="${"wisdom svelte-1t3q5hs"}"><p class="${["svelte-1t3q5hs", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}>Meine Webseiten sind wie gute Fahrr\xE4der: elegant, hochwertig, auf den Benutzer angepasst und vor allem pfeilschnell.</p></section>`
+        })}`;
+      } while (!$$settled);
+      return $$rendered;
     });
     prerender = true;
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let scrollY;
-      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Webdesign</title>`, ""}`, ""}
+      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Konzept, Design &amp; Entwicklung</title>`, ""}`, ""}
 
 
 
@@ -20739,107 +20807,38 @@ ${validate_component(Scene, "Scene").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/about-5357af72.js
-var about_5357af72_exports = {};
-__export(about_5357af72_exports, {
+// .svelte-kit/output/server/chunks/about-94d94700.js
+var about_94d94700_exports = {};
+__export(about_94d94700_exports, {
   default: () => About,
-  hydrate: () => hydrate,
-  prerender: () => prerender2,
-  router: () => router
+  prerender: () => prerender2
 });
-var import_cookie4, browser, dev, css4, hydrate, router, prerender2, About;
-var init_about_5357af72 = __esm({
-  ".svelte-kit/output/server/chunks/about-5357af72.js"() {
+var import_cookie4, css3, prerender2, About;
+var init_about_94d94700 = __esm({
+  ".svelte-kit/output/server/chunks/about-94d94700.js"() {
     init_shims();
-    init_app_7ac9a5cc();
+    init_app_81b31fa4();
     import_cookie4 = __toModule(require_cookie());
     init_dist();
-    browser = false;
-    dev = false;
-    css4 = {
-      code: ".content.svelte-s8amym{width:100%;max-width:var(--column-width);margin:var(--column-margin-top) auto 0 auto}",
+    css3 = {
+      code: ".intro.svelte-12l029c.svelte-12l029c{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto minmax(min-content, 60rem) auto;justify-content:center;min-height:100vh;padding:4.5rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto}.intro.svelte-12l029c div.svelte-12l029c{grid-column:2}.intro.svelte-12l029c h3.svelte-12l029c{font-size:clamp(1rem, 0.9423076923rem + 0.2564102564vw, 1.25rem);font-weight:400;margin:0}.intro.svelte-12l029c h1.svelte-12l029c{font-family:var(--serif);font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}.intro.svelte-12l029c p.svelte-12l029c{font-size:1.3125rem;max-width:38.75rem}",
       map: null
     };
-    hydrate = dev;
-    router = browser;
     prerender2 = true;
     About = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css4);
-      return `${$$result.head += `${$$result.title = `<title>About</title>`, ""}`, ""}
+      $$result.css.add(css3);
+      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | \xDCber mich</title>`, ""}`, ""}
 
-<div class="${"content svelte-s8amym"}"><h1>About this app</h1>
-
-	<p>This is a <a href="${"https://kit.svelte.dev"}">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	
-	<pre>npm init svelte@next</pre>
-
-	<p>The page you&#39;re looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don&#39;t need to load any JavaScript. Try viewing the page&#39;s source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>The <a href="${"/todos"}">TODOs</a> page illustrates SvelteKit&#39;s data loading and form handling. Try using
-		it with JavaScript disabled!
-	</p>
-</div>`;
+<section class="${"intro svelte-12l029c"}"><div class="${"svelte-12l029c"}"><h3 class="${"svelte-12l029c"}">\xDCber mich</h3>
+        <h1 class="${"svelte-12l029c"}">Hallo, ich bin Armin,</h1>
+        <p class="${"svelte-12l029c"}">ein \xF6sterreichischer Grafik-Designer und Webentwickler.</p>
+        <p class="${"svelte-12l029c"}">Mit einer Kombination aus Erfahrungen in Design und Development kann ich verschiedenste Problemstellungen l\xF6sen und Projekte ganzheitlich betreuen und steuern. Es begeistert mich, zusammen mit dir von Grund auf die Pers\xF6nlichkeit deiner Marke zu definieren, zu gestalten und unverwechselbar zu machen. Ich erarbeite aus deinen Ideen digitale und analoge Kreationen f\xFCr deinen Erfolg.</p></div>
+</section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/index-4e50c15f.js
-var index_4e50c15f_exports = {};
-__export(index_4e50c15f_exports, {
-  default: () => Todos,
-  load: () => load2
-});
-var import_cookie5, css5, load2, Todos;
-var init_index_4e50c15f = __esm({
-  ".svelte-kit/output/server/chunks/index-4e50c15f.js"() {
-    init_shims();
-    init_app_7ac9a5cc();
-    import_cookie5 = __toModule(require_cookie());
-    init_dist();
-    css5 = {
-      code: `.todos.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{width:100%;max-width:var(--column-width);margin:var(--column-margin-top) auto 0 auto;line-height:1}.new.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{margin:0 0 0.5rem 0}input.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{border:1px solid transparent}input.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh:focus-visible{box-shadow:inset 1px 1px 6px rgba(0, 0, 0, 0.1);border:1px solid #ff3e00 !important;outline:none}.new.svelte-1ekc8gh input.svelte-1ekc8gh.svelte-1ekc8gh{font-size:28px;width:100%;padding:0.5em 1em 0.3em 1em;box-sizing:border-box;background:rgba(255, 255, 255, 0.05);border-radius:8px;text-align:center}.todo.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{display:grid;grid-template-columns:2rem 1fr 2rem;grid-gap:0.5rem;align-items:center;margin:0 0 0.5rem 0;padding:0.5rem;background-color:white;border-radius:8px;filter:drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));transform:translate(-1px, -1px);transition:filter 0.2s, transform 0.2s}.done.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{transform:none;opacity:0.4;filter:drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.1))}form.text.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{position:relative;display:flex;align-items:center;flex:1}.todo.svelte-1ekc8gh input.svelte-1ekc8gh.svelte-1ekc8gh{flex:1;padding:0.5em 2em 0.5em 0.8em;border-radius:3px}.todo.svelte-1ekc8gh button.svelte-1ekc8gh.svelte-1ekc8gh{width:2em;height:2em;border:none;background-color:transparent;background-position:50% 50%;background-repeat:no-repeat}button.toggle.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{border:1px solid rgba(0, 0, 0, 0.2);border-radius:50%;box-sizing:border-box;background-size:1em auto}.done.svelte-1ekc8gh .toggle.svelte-1ekc8gh.svelte-1ekc8gh{background-image:url("data:image/svg+xml,%3Csvg width='22' height='16' viewBox='0 0 22 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5 1.5L7.4375 14.5L1.5 8.5909' stroke='%23676778' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}.delete.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 5V22H19.5V5H4.5Z' fill='%23676778' stroke='%23676778' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M10 10V16.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 10V16.5' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2 5H22' stroke='%23676778' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 5L9.6445 2H14.3885L16 5H8Z' fill='%23676778' stroke='%23676778' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E%0A");opacity:0.2}.delete.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh:hover,.delete.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh:focus{transition:opacity 0.2s;opacity:1}.save.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh{position:absolute;right:0;opacity:0;background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5 2H3.5C2.67158 2 2 2.67157 2 3.5V20.5C2 21.3284 2.67158 22 3.5 22H20.5C21.3284 22 22 21.3284 22 20.5V3.5C22 2.67157 21.3284 2 20.5 2Z' fill='%23676778' stroke='%23676778' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M17 2V11H7.5V2H17Z' fill='white' stroke='white' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M13.5 5.5V7.5' stroke='%23676778' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M5.99844 2H18.4992' stroke='%23676778' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A")}.todo.svelte-1ekc8gh input.svelte-1ekc8gh:focus+.save.svelte-1ekc8gh,.save.svelte-1ekc8gh.svelte-1ekc8gh.svelte-1ekc8gh:focus{transition:opacity 0.2s;opacity:1}`,
-      map: null
-    };
-    load2 = async ({ fetch: fetch2 }) => {
-      const res = await fetch2("/todos.json");
-      if (res.ok) {
-        const todos = await res.json();
-        return { props: { todos } };
-      }
-      const { message } = await res.json();
-      return { error: new Error(message) };
-    };
-    Todos = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { todos } = $$props;
-      if ($$props.todos === void 0 && $$bindings.todos && todos !== void 0)
-        $$bindings.todos(todos);
-      $$result.css.add(css5);
-      return `${$$result.head += `${$$result.title = `<title>Todos</title>`, ""}`, ""}
-
-<div class="${"todos svelte-1ekc8gh"}"><h1>Todos</h1>
-
-	<form class="${"new svelte-1ekc8gh"}" action="${"/todos.json"}" method="${"post"}"><input name="${"text"}" aria-label="${"Add todo"}" placeholder="${"+ tap to add a todo"}" class="${"svelte-1ekc8gh"}"></form>
-
-	${each(todos, (todo) => `<div class="${["todo svelte-1ekc8gh", todo.done ? "done" : ""].join(" ").trim()}"><form action="${"/todos/" + escape(todo.uid) + ".json?_method=patch"}" method="${"post"}"><input type="${"hidden"}" name="${"done"}"${add_attribute("value", todo.done ? "" : "true", 0)} class="${"svelte-1ekc8gh"}">
-				<button class="${"toggle svelte-1ekc8gh"}" aria-label="${"Mark todo as " + escape(todo.done ? "not done" : "done")}"></button></form>
-
-			<form class="${"text svelte-1ekc8gh"}" action="${"/todos/" + escape(todo.uid) + ".json?_method=patch"}" method="${"post"}"><input aria-label="${"Edit todo"}" type="${"text"}" name="${"text"}"${add_attribute("value", todo.text, 0)} class="${"svelte-1ekc8gh"}">
-				<button class="${"save svelte-1ekc8gh"}" aria-label="${"Save todo"}"></button></form>
-
-			<form action="${"/todos/" + escape(todo.uid) + ".json?_method=delete"}" method="${"post"}"><button class="${"delete svelte-1ekc8gh"}" aria-label="${"Delete todo"}" ${todo.pending_delete ? "disabled" : ""}></button></form>
-		</div>`)}
-</div>`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/app-7ac9a5cc.js
+// .svelte-kit/output/server/chunks/app-81b31fa4.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -20853,15 +20852,15 @@ function get_single_valued_header(headers, key) {
   }
   return value;
 }
-function resolve(base22, path) {
+function resolve(base2, path) {
   if (scheme2.test(path))
     return path;
-  const base_match = absolute.exec(base22);
+  const base_match = absolute.exec(base2);
   const path_match = absolute.exec(path);
   if (!base_match) {
-    throw new Error(`bad base path: "${base22}"`);
+    throw new Error(`bad base path: "${base2}"`);
   }
-  const baseparts = path_match ? [] : base22.slice(base_match[0].length).split("/");
+  const baseparts = path_match ? [] : base2.slice(base_match[0].length).split("/");
   const pathparts = path_match ? path.slice(path_match[0].length).split("/") : path.split("/");
   baseparts.pop();
   for (let i = 0; i < pathparts.length; i += 1) {
@@ -21491,7 +21490,7 @@ async function load_node({
         const prefix = options2.paths.assets || options2.paths.base;
         const filename = (resolved.startsWith(prefix) ? resolved.slice(prefix.length) : resolved).slice(1);
         const filename_html = `${filename}/index.html`;
-        const asset = options2.manifest.assets.find((d2) => d2.file === filename || d2.file === filename_html);
+        const asset = options2.manifest.assets.find((d) => d.file === filename || d.file === filename_html);
         if (asset) {
           response = options2.read ? new Response(options2.read(asset.file), {
             headers: asset.type ? { "content-type": asset.type } : {}
@@ -22036,6 +22035,11 @@ async function respond(incoming, options2, state = {}) {
 }
 function noop() {
 }
+function assign(tar, src2) {
+  for (const k in src2)
+    tar[k] = src2[k];
+  return tar;
+}
 function run(fn) {
   return fn();
 }
@@ -22055,6 +22059,34 @@ function subscribe(store, ...callbacks) {
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
+function run_tasks(now2) {
+  tasks.forEach((task) => {
+    if (!task.c(now2)) {
+      tasks.delete(task);
+      task.f();
+    }
+  });
+  if (tasks.size !== 0)
+    raf(run_tasks);
+}
+function loop(callback) {
+  let task;
+  if (tasks.size === 0)
+    raf(run_tasks);
+  return {
+    promise: new Promise((fulfill) => {
+      tasks.add(task = { c: callback, f: fulfill });
+    }),
+    abort() {
+      tasks.delete(task);
+    }
+  };
+}
+function custom_event(type, detail, bubbles = false) {
+  const e = document.createEvent("CustomEvent");
+  e.initCustomEvent(type, bubbles, false, detail);
+  return e;
+}
 function set_current_component(component) {
   current_component = component;
 }
@@ -22062,6 +22094,18 @@ function get_current_component() {
   if (!current_component)
     throw new Error("Function called outside component initialization");
   return current_component;
+}
+function createEventDispatcher() {
+  const component = get_current_component();
+  return (type, detail) => {
+    const callbacks = component.$$.callbacks[type];
+    if (callbacks) {
+      const event = custom_event(type, detail);
+      callbacks.slice().forEach((fn) => {
+        fn.call(component, event);
+      });
+    }
+  };
 }
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
@@ -22071,13 +22115,6 @@ function getContext(key) {
 }
 function escape(html) {
   return String(html).replace(/["'&<>]/g, (match) => escaped[match]);
-}
-function each(items, fn) {
-  let str = "";
-  for (let i = 0; i < items.length; i += 1) {
-    str += fn(items[i], i);
-  }
-  return str;
 }
 function validate_component(component, name) {
   if (!component || !component.$$render) {
@@ -22129,8 +22166,8 @@ function add_attribute(name, value, boolean) {
 function afterUpdate() {
 }
 function set_paths(paths) {
-  base2 = paths.base;
-  assets = paths.assets || base2;
+  base = paths.base;
+  assets = paths.assets || base;
 }
 function set_prerendering(value) {
 }
@@ -22142,9 +22179,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-a8cfa461.js",
+      file: assets + "/_app/start-f1f7e1eb.js",
       css: [assets + "/_app/assets/start-0dba5459.css"],
-      js: [assets + "/_app/start-a8cfa461.js", assets + "/_app/chunks/vendor-73e94297.js"]
+      js: [assets + "/_app/start-f1f7e1eb.js", assets + "/_app/chunks/vendor-55ab37a1.js"]
     },
     fetched: void 0,
     floc: false,
@@ -22187,11 +22224,11 @@ function render(request, {
   const host = request.headers["host"];
   return respond({ ...request, host }, options, { prerender: prerender3 });
 }
-var import_cookie6, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, current_component, escaped, missing_component, on_destroy, css6, Root, base2, assets, handle, user_hooks, template, options, default_settings, d, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_7ac9a5cc = __esm({
-  ".svelte-kit/output/server/chunks/app-7ac9a5cc.js"() {
+var import_cookie5, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css4, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
+var init_app_81b31fa4 = __esm({
+  ".svelte-kit/output/server/chunks/app-81b31fa4.js"() {
     init_shims();
-    import_cookie6 = __toModule(require_cookie());
+    import_cookie5 = __toModule(require_cookie());
     init_dist();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -22297,6 +22334,11 @@ var init_app_7ac9a5cc = __esm({
       }
     };
     _map = new WeakMap();
+    identity = (x) => x;
+    is_client = typeof window !== "undefined";
+    now = is_client ? () => window.performance.now() : () => Date.now();
+    raf = is_client ? (cb) => requestAnimationFrame(cb) : noop;
+    tasks = new Set();
     Promise.resolve();
     escaped = {
       '"': "&quot;",
@@ -22308,7 +22350,7 @@ var init_app_7ac9a5cc = __esm({
     missing_component = {
       $$render: () => ""
     };
-    css6 = {
+    css4 = {
       code: "#svelte-announcer.svelte-b8s5el{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
       map: null
     };
@@ -22333,7 +22375,7 @@ var init_app_7ac9a5cc = __esm({
         $$bindings.props_1(props_1);
       if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
         $$bindings.props_2(props_2);
-      $$result.css.add(css6);
+      $$result.css.add(css4);
       {
         stores.page.set(page2);
       }
@@ -22348,17 +22390,17 @@ ${validate_component(components[0] || missing_component, "svelte:component").$$r
 
 ${``}`;
     });
-    base2 = "";
+    base = "";
     assets = "";
     handle = async ({ request, resolve: resolve2 }) => {
-      const cookies = import_cookie6.default.parse(request.headers.cookie || "");
+      const cookies = import_cookie5.default.parse(request.headers.cookie || "");
       request.locals.userid = cookies.userid || v4();
       if (request.query.has("_method")) {
         request.method = request.query.get("_method").toUpperCase();
       }
       const response = await resolve2(request);
       if (!cookies.userid) {
-        response.headers["set-cookie"] = import_cookie6.default.serialize("userid", request.locals.userid, {
+        response.headers["set-cookie"] = import_cookie5.default.serialize("userid", request.locals.userid, {
           path: "/",
           httpOnly: true
         });
@@ -22370,10 +22412,9 @@ ${``}`;
       [Symbol.toStringTag]: "Module",
       handle
     });
-    template = ({ head, body }) => '<!DOCTYPE html>\n<html lang="de" color-scheme="dark">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="/favicon.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		<meta name="theme-color" content="#000">\n\n		' + head + '\n	</head>\n	<body>\n		<div id="svelte">' + body + "</div>\n	</body>\n</html>\n";
+    template = ({ head, body }) => '<!DOCTYPE html>\n<html lang="de" color-scheme="dark">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="/favicon.png" />\n		<link rel="preload" href="fonts/info-regular.woff2" as="font">\n		<link rel="preload" href="fonts/info-bold.woff2" as="font">\n		<link rel="preload" href="fonts/serif-regular.woff2" as="font">\n		<link rel="preload" href="fonts/serif-bold.woff2" as="font">\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		<meta name="theme-color" content="#000">\n		<style>body {background-color: #050505; color: #fff;}</style>\n\n		' + head + '\n	</head>\n	<body>\n		<div id="svelte">' + body + "</div>\n	</body>\n</html>\n";
     options = null;
     default_settings = { paths: { "base": "", "assets": "" } };
-    d = (s2) => s2.replace(/%23/g, "#").replace(/%3[Bb]/g, ";").replace(/%2[Cc]/g, ",").replace(/%2[Ff]/g, "/").replace(/%3[Ff]/g, "?").replace(/%3[Aa]/g, ":").replace(/%40/g, "@").replace(/%26/g, "&").replace(/%3[Dd]/g, "=").replace(/%2[Bb]/g, "+").replace(/%24/g, "$");
     empty = () => ({});
     manifest = {
       assets: [{ "file": ".DS_Store", "size": 6148, "type": null }, { "file": "favicon.png", "size": 5717, "type": "image/png" }, { "file": "fonts/info-bold-italic.woff2", "size": 17300, "type": "font/woff2" }, { "file": "fonts/info-bold.woff2", "size": 16308, "type": "font/woff2" }, { "file": "fonts/info-medium-italic.woff2", "size": 15344, "type": "font/woff2" }, { "file": "fonts/info-medium.woff2", "size": 14744, "type": "font/woff2" }, { "file": "fonts/info-regular-italic.woff2", "size": 16608, "type": "font/woff2" }, { "file": "fonts/info-regular.woff2", "size": 15832, "type": "font/woff2" }, { "file": "fonts/serif-bold.woff2", "size": 62452, "type": "font/woff2" }, { "file": "fonts/serif-regular.woff2", "size": 62244, "type": "font/woff2" }, { "file": "fonts/title-extrabold-italic.woff2", "size": 52768, "type": "font/woff2" }, { "file": "images/cartagena.jpg", "size": 126474, "type": "image/jpeg" }, { "file": "images/wohnformat.jpg", "size": 105082, "type": "image/jpeg" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }],
@@ -22393,25 +22434,6 @@ ${``}`;
           params: empty,
           a: ["src/routes/__layout.svelte", "src/routes/about.svelte"],
           b: [".svelte-kit/build/components/error.svelte"]
-        },
-        {
-          type: "endpoint",
-          pattern: /^\/todos\.json$/,
-          params: empty,
-          load: () => Promise.resolve().then(() => (init_index_json_784727b1(), index_json_784727b1_exports))
-        },
-        {
-          type: "page",
-          pattern: /^\/todos\/?$/,
-          params: empty,
-          a: ["src/routes/__layout.svelte", "src/routes/todos/index.svelte"],
-          b: [".svelte-kit/build/components/error.svelte"]
-        },
-        {
-          type: "endpoint",
-          pattern: /^\/todos\/([^/]+?)\.json$/,
-          params: (m) => ({ uid: d(m[1]) }),
-          load: () => Promise.resolve().then(() => (init_uid_json_039b6f30(), uid_json_039b6f30_exports))
         }
       ]
     };
@@ -22422,13 +22444,12 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_9b6cefd5(), layout_9b6cefd5_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_91eb67be(), error_91eb67be_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_0e93fe13(), index_0e93fe13_exports)),
-      "src/routes/about.svelte": () => Promise.resolve().then(() => (init_about_5357af72(), about_5357af72_exports)),
-      "src/routes/todos/index.svelte": () => Promise.resolve().then(() => (init_index_4e50c15f(), index_4e50c15f_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_75739ad0(), layout_75739ad0_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_439c107c(), error_439c107c_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_5bf0b00e(), index_5bf0b00e_exports)),
+      "src/routes/about.svelte": () => Promise.resolve().then(() => (init_about_94d94700(), about_94d94700_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-02476fe2.js", "css": ["assets/pages/__layout.svelte-70047a0b.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-02476fe2.js", "chunks/vendor-73e94297.js", "chunks/DeathStar-463b5ef1.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-9abf5cf9.js", "css": [], "js": ["error.svelte-9abf5cf9.js", "chunks/vendor-73e94297.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-02514f8d.js", "css": ["assets/pages/index.svelte-a459c145.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-02514f8d.js", "chunks/vendor-73e94297.js", "chunks/DeathStar-463b5ef1.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-1caf768f.js", "css": ["assets/pages/about.svelte-7b069440.css"], "js": ["pages/about.svelte-1caf768f.js", "chunks/vendor-73e94297.js"], "styles": [] }, "src/routes/todos/index.svelte": { "entry": "pages/todos/index.svelte-9a14f15e.js", "css": ["assets/pages/todos/index.svelte-67bbd040.css"], "js": ["pages/todos/index.svelte-9a14f15e.js", "chunks/vendor-73e94297.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-6b062a8c.js", "css": ["assets/pages/__layout.svelte-13cedeaa.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-6b062a8c.js", "chunks/vendor-55ab37a1.js", "chunks/DeathStar-f26f24c1.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-12a1e40a.js", "css": [], "js": ["error.svelte-12a1e40a.js", "chunks/vendor-55ab37a1.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-c5f74d61.js", "css": ["assets/pages/index.svelte-7a2251cb.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-c5f74d61.js", "chunks/vendor-55ab37a1.js", "chunks/DeathStar-f26f24c1.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-e442f572.js", "css": ["assets/pages/about.svelte-b173694e.css"], "js": ["pages/about.svelte-e442f572.js", "chunks/vendor-55ab37a1.js"], "styles": [] } };
   }
 });
 
@@ -22440,8 +22461,8 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_7ac9a5cc();
-var import_cookie7 = __toModule(require_cookie());
+init_app_81b31fa4();
+var import_cookie6 = __toModule(require_cookie());
 init_dist();
 
 // .svelte-kit/netlify/entry.js

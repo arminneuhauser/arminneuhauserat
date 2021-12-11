@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-    <title>Armin Neuhauser | Webdesign</title>
+    <title>Armin Neuhauser | Konzept, Design & Entwicklung</title>
 </svelte:head>
 
 <svelte:window bind:scrollY={scrollY}/>

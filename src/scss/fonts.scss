@@ -3,34 +3,40 @@
     font-family: "sans-serif";
     font-weight: 400;
     src: url("/fonts/info-regular.woff2");
+    font-display: swap;
 }
 @font-face {
     font-family: "sans-serif";
     font-weight: 400;
     font-style: italic;
     src: url("/fonts/info-regular-italic.woff2");
+    font-display: swap;
 }
 @font-face {
     font-family: "sans-serif";
     font-weight: 500;
     src: url("/fonts/info-medium.woff2");
+    font-display: swap;
 }
 @font-face {
     font-family: "sans-serif";
     font-weight: 500;
     font-style: italic;
     src: url("/fonts/info-medium-italic.woff2");
+    font-display: swap;
 }
 @font-face {
     font-family: "sans-serif";
     font-weight: 700;
     src: url("/fonts/info-bold.woff2");
+    font-display: swap;
 }
 @font-face {
     font-family: "sans-serif";
     font-weight: 700;
     font-style: italic;
     src: url("/fonts/info-bold-italic.woff2");
+    font-display: swap;
 }
 
 // TT Norms
@@ -39,6 +45,7 @@
     font-weight: 800;
     font-style: italic;
     src: url("/fonts/title-extrabold-italic.woff2");
+    font-display: swap;
 }
 
 // Iskry
@@ -46,10 +53,12 @@
     font-family: "serif";
     font-weight: 400;
     src: url("/fonts/serif-regular.woff2");
+    font-display: swap;
 }
 
 @font-face {
     font-family: "serif";
     font-weight: 700;
     src: url("/fonts/serif-bold.woff2");
+    font-display: swap;
 }

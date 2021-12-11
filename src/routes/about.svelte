@@ -1,50 +1,54 @@
 <script context="module">
-	import { browser, dev } from '$app/env';
-
-	// we don't need any JS on this page, though we'll load
-	// it in dev so that we get hot module replacement...
-	export const hydrate = dev;
-
-	// ...but if the client-side router is already loaded
-	// (i.e. we came here from elsewhere in the app), use it
-	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	export const prerender = true;
+    // since there's no dynamic data here, we can prerender
+    // it so that it gets served as a static asset in prod
+    export const prerender = true;
 </script>
 
 <svelte:head>
-	<title>About</title>
+    <title>Armin Neuhauser | Über mich</title>
 </svelte:head>
 
-<div class="content">
-	<h1>About this app</h1>
-
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<!-- TODO lose the @next! -->
-	<pre>npm init svelte@next</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="/todos">TODOs</a> page illustrates SvelteKit's data loading and form handling. Try using
-		it with JavaScript disabled!
-	</p>
-</div>
+<section class="intro">
+    <div>
+        <h3>Über mich</h3>
+        <h1>Hallo, ich bin Armin,</h1>
+        <p>ein österreichischer Grafik-Designer und Webentwickler.</p>
+        <p>Mit einer Kombination aus Erfahrungen in Design und Development kann ich verschiedenste Problemstellungen lösen und Projekte ganzheitlich betreuen und steuern. Es begeistert mich, zusammen mit dir von Grund auf die Persönlichkeit deiner Marke zu definieren, zu gestalten und unverwechselbar zu machen. Ich erarbeite aus deinen Ideen digitale und analoge Kreationen für deinen Erfolg.</p>
+    </div>
+</section>
 
 <style lang="scss">
-	.content {
-		width: 100%;
-		max-width: var(--column-width);
-		margin: var(--column-margin-top) auto 0 auto;
-	}
+    .intro {
+        align-items: center;
+        display: grid;
+        grid-gap: 0;
+        grid-template-columns: auto minmax(min-content, #{fn.rem(960)}) auto;
+        justify-content: center;
+        min-height: 100vh;
+        padding: #{fn.rem(72)} var(--core-padding);
+        max-width: var(--core-max-width);
+        margin: 0 auto;
+
+        div {
+            grid-column: 2;
+        }
+
+        h3 {
+            font-size: #{fn.rfs(16, 20)};
+            font-weight: 400;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: var(--serif);
+            font-size: #{fn.rfs(32, 110)};
+            line-height: 1;
+            margin: 0.5em 0;
+        }
+
+        p {
+            font-size: #{fn.rem(21)};
+            max-width: #{fn.rem(620)};
+        }
+    }
 </style>
