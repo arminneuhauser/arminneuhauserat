@@ -15,7 +15,7 @@
 
     <IntersectionObserver {element} bind:intersecting>
         <h1 class="headline" class:intersecting bind:this={element}>
-            <span style="transform: translate({-scrollY / 4 - 200}px,0)">
+            <span style="transform: translate({-scrollY / 4 - 150}px,0)">
                 <span>
                     <i>Meine</i> Projekte
                     <i>Meine</i> Projekte
@@ -27,7 +27,7 @@
     </IntersectionObserver>
 
     <div class="projects">
-        <IntersectionObserver element={element2} bind:intersecting={intersecting2}>
+        <IntersectionObserver once element={element2} bind:intersecting={intersecting2}>
             <article class="teaser" class:intersecting={intersecting2} bind:this={element2}>
                 <div>
                     <img src="/images/cartagena.jpg" alt="Solmates" />
@@ -38,7 +38,7 @@
                 </div>
             </article>
         </IntersectionObserver>
-        <IntersectionObserver element={element3} bind:intersecting={intersecting3}>
+        <IntersectionObserver once element={element3} bind:intersecting={intersecting3}>
             <article class="teaser" class:intersecting={intersecting3} bind:this={element3}>
                 <div>
                     <img src="/images/wohnformat.jpg" alt="Wohnformat" />

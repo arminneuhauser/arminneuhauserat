@@ -22,6 +22,7 @@
         padding: var(--core-padding);
         max-width: var(--core-max-width);
         margin: 0 auto;
+        overflow: hidden;
 
         p {
             grid-column: 2;
@@ -30,7 +31,7 @@
             line-height: 1.15;
             // color: hsl(var(--hue), 70%, 95%);
             // text-shadow: -0.05em 0.05em 0.02em hsl(var(--hue), 80%, 30%);
-            transform: translate(0, #{fn.rem(200)});
+            transform: translate(#{fn.rem(200)}, 0);
             transition: transform 1.5s var(--easing);
 
             &.intersecting {
