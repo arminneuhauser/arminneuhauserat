@@ -128,3 +128,9 @@ img {
     height: auto;
     max-width: 100%;
 }
+
+hr {
+    border-style: solid;
+    border-color: var(--on-base);
+    border-width: 0 0 #{fn.rem(1)} 0;
+}
