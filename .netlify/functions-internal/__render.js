@@ -4845,9 +4845,9 @@ var init_dist = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-4a6955be.js
-var layout_4a6955be_exports = {};
-__export(layout_4a6955be_exports, {
+// .svelte-kit/output/server/chunks/__layout-55a6d280.js
+var layout_55a6d280_exports = {};
+__export(layout_55a6d280_exports, {
   default: () => _layout
 });
 function writable(value, start = noop) {
@@ -4988,10 +4988,10 @@ function tweened(value, defaults = {}) {
   };
 }
 var import_cookie, subscriber_queue, scheme, getStores, page, css, Progress, _layout;
-var init_layout_4a6955be = __esm({
-  ".svelte-kit/output/server/chunks/__layout-4a6955be.js"() {
+var init_layout_55a6d280 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-55a6d280.js"() {
     init_shims();
-    init_app_8353499d();
+    init_app_b2fa6b5b();
     import_cookie = __toModule(require_cookie());
     init_dist();
     subscriber_queue = [];
@@ -5021,7 +5021,7 @@ var init_layout_4a6955be = __esm({
       }
     };
     css = {
-      code: '@keyframes svelte-1ybfy5o-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1ybfy5o-to-top{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ybfy5o-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1ybfy5o-blink-animation{from{opacity:1}to{opacity:0}}.progress.svelte-1ybfy5o.svelte-1ybfy5o{position:fixed;bottom:2.5rem;left:2.5rem;right:2.5rem;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}.progress.svelte-1ybfy5o>div.svelte-1ybfy5o{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline}.number.svelte-1ybfy5o.svelte-1ybfy5o{font-size:clamp(4rem, 2.9038461538rem + 4.8717948718vw, 8.75rem)}.progress-bar.svelte-1ybfy5o.svelte-1ybfy5o{height:0.0625rem;background-color:rgba(255, 255, 255, 0.1)}',
+      code: '@keyframes svelte-1ybfy5o-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1ybfy5o-to-top{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ybfy5o-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1ybfy5o-blink-animation{from{opacity:1}to{opacity:0}}.progress.svelte-1ybfy5o.svelte-1ybfy5o{position:fixed;bottom:2.5rem;left:2.5rem;right:2.5rem;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}.progress.svelte-1ybfy5o>div.svelte-1ybfy5o{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline}.number.svelte-1ybfy5o.svelte-1ybfy5o{font-size:clamp(4rem, 2.9038461538rem + 4.8717948718vw, 8.75rem)}.progress-bar.svelte-1ybfy5o.svelte-1ybfy5o{height:0.0625rem;background-color:rgba(255, 255, 255, 0.1)}.progress-sliver.svelte-1ybfy5o.svelte-1ybfy5o{width:var(--width);background-color:rgba(255, 255, 255, 0.5);height:100%}',
       map: null
     };
     Progress = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -5033,26 +5033,29 @@ var init_layout_4a6955be = __esm({
       $$result.css.add(css);
       $$unsubscribe_progress();
       $$unsubscribe_page();
-      return `${$$result.head += `<script data-svelte="svelte-1gxhgcq">var preProgress = 0;
+      return `${$$result.head += `<script data-svelte="svelte-hjctym">var preProgress = 0;
 
         setTimeout(() => {
+
+
             if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
                 setInterval(() => {
                     if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
                         if (parseInt(document.getElementById("preProgressNumber").innerText) < 70) {
                             document.getElementById("preProgressNumber").innerText = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
                             preProgress = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
+                            document.getElementById("preProgressSliver").style.setProperty('--width', \`\${preProgress}%\`);
                         }
                     }
-                }, 500);
+                }, 100);
             }
-        }, 1000);
+        }, 500);
     <\/script>`, ""}
 
 <div class="${"progress svelte-1ybfy5o"}"><div class="${"svelte-1ybfy5o"}"><div class="${"number svelte-1ybfy5o"}">${`<span id="${"preProgressNumber"}">0</span>%`}</div>
         <div class="${"path"}">loading ${escape($page.path)}</div></div>
     
-    <div class="${"progress-bar svelte-1ybfy5o"}"></div>
+    <div class="${"progress-bar svelte-1ybfy5o"}">${`<div id="${"preProgressSliver"}" class="${"progress-sliver svelte-1ybfy5o"}"></div>`}</div>
 </div>`;
     });
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -5065,9 +5068,9 @@ ${`<div>${validate_component(Progress, "Progress").$$render($$result, {}, {}, {}
   }
 });
 
-// .svelte-kit/output/server/chunks/error-9226956e.js
-var error_9226956e_exports = {};
-__export(error_9226956e_exports, {
+// .svelte-kit/output/server/chunks/error-dfa8a569.js
+var error_dfa8a569_exports = {};
+__export(error_dfa8a569_exports, {
   default: () => Error2,
   load: () => load
 });
@@ -5075,10 +5078,10 @@ function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var import_cookie2, Error2;
-var init_error_9226956e = __esm({
-  ".svelte-kit/output/server/chunks/error-9226956e.js"() {
+var init_error_dfa8a569 = __esm({
+  ".svelte-kit/output/server/chunks/error-dfa8a569.js"() {
     init_shims();
-    init_app_8353499d();
+    init_app_b2fa6b5b();
     import_cookie2 = __toModule(require_cookie());
     init_dist();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -20613,17 +20616,17 @@ var require_debounce = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-02e6bdd1.js
-var index_02e6bdd1_exports = {};
-__export(index_02e6bdd1_exports, {
+// .svelte-kit/output/server/chunks/index-56561111.js
+var index_56561111_exports = {};
+__export(index_56561111_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
 var import_app, import_graphics, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_cookie3, deathStarIcon, css$4, DeathStar, css$3, Scene, css$2, Hero, IntersectionObserver_1, css$1, LatestWork, css2, Wisdom, prerender, Routes;
-var init_index_02e6bdd1 = __esm({
-  ".svelte-kit/output/server/chunks/index-02e6bdd1.js"() {
+var init_index_56561111 = __esm({
+  ".svelte-kit/output/server/chunks/index-56561111.js"() {
     init_shims();
-    init_app_8353499d();
+    init_app_b2fa6b5b();
     init_dist2();
     import_app = __toModule(require_app());
     import_graphics = __toModule(require_graphics());
@@ -20818,17 +20821,17 @@ ${validate_component(Scene, "Scene").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/about-3a3de605.js
-var about_3a3de605_exports = {};
-__export(about_3a3de605_exports, {
+// .svelte-kit/output/server/chunks/about-252bd9a9.js
+var about_252bd9a9_exports = {};
+__export(about_252bd9a9_exports, {
   default: () => About,
   prerender: () => prerender2
 });
 var import_cookie4, css3, prerender2, About;
-var init_about_3a3de605 = __esm({
-  ".svelte-kit/output/server/chunks/about-3a3de605.js"() {
+var init_about_252bd9a9 = __esm({
+  ".svelte-kit/output/server/chunks/about-252bd9a9.js"() {
     init_shims();
-    init_app_8353499d();
+    init_app_b2fa6b5b();
     import_cookie4 = __toModule(require_cookie());
     init_dist();
     css3 = {
@@ -20849,7 +20852,7 @@ var init_about_3a3de605 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-8353499d.js
+// .svelte-kit/output/server/chunks/app-b2fa6b5b.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -22190,9 +22193,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-e7849b9e.js",
+      file: assets + "/_app/start-eda844d0.js",
       css: [assets + "/_app/assets/start-0dba5459.css"],
-      js: [assets + "/_app/start-e7849b9e.js", assets + "/_app/chunks/vendor-5ecb5d48.js"]
+      js: [assets + "/_app/start-eda844d0.js", assets + "/_app/chunks/vendor-5ecb5d48.js"]
     },
     fetched: void 0,
     floc: false,
@@ -22236,8 +22239,8 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender: prerender3 });
 }
 var import_cookie5, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css4, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_8353499d = __esm({
-  ".svelte-kit/output/server/chunks/app-8353499d.js"() {
+var init_app_b2fa6b5b = __esm({
+  ".svelte-kit/output/server/chunks/app-b2fa6b5b.js"() {
     init_shims();
     import_cookie5 = __toModule(require_cookie());
     init_dist();
@@ -22455,12 +22458,12 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_4a6955be(), layout_4a6955be_exports)),
-      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_9226956e(), error_9226956e_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_02e6bdd1(), index_02e6bdd1_exports)),
-      "src/routes/about.svelte": () => Promise.resolve().then(() => (init_about_3a3de605(), about_3a3de605_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_55a6d280(), layout_55a6d280_exports)),
+      ".svelte-kit/build/components/error.svelte": () => Promise.resolve().then(() => (init_error_dfa8a569(), error_dfa8a569_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_56561111(), index_56561111_exports)),
+      "src/routes/about.svelte": () => Promise.resolve().then(() => (init_about_252bd9a9(), about_252bd9a9_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-808b33ed.js", "css": ["assets/pages/__layout.svelte-958d36e3.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-808b33ed.js", "chunks/vendor-5ecb5d48.js", "chunks/DeathStar-19ac4f46.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-9aeb894e.js", "css": [], "js": ["error.svelte-9aeb894e.js", "chunks/vendor-5ecb5d48.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-9140714f.js", "css": ["assets/pages/index.svelte-7a2251cb.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-9140714f.js", "chunks/vendor-5ecb5d48.js", "chunks/DeathStar-19ac4f46.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-7b2548b5.js", "css": ["assets/pages/about.svelte-b173694e.css"], "js": ["pages/about.svelte-7b2548b5.js", "chunks/vendor-5ecb5d48.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-621f5037.js", "css": ["assets/pages/__layout.svelte-64525585.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-621f5037.js", "chunks/vendor-5ecb5d48.js", "chunks/DeathStar-19ac4f46.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-9aeb894e.js", "css": [], "js": ["error.svelte-9aeb894e.js", "chunks/vendor-5ecb5d48.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-9140714f.js", "css": ["assets/pages/index.svelte-7a2251cb.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-9140714f.js", "chunks/vendor-5ecb5d48.js", "chunks/DeathStar-19ac4f46.js"], "styles": [] }, "src/routes/about.svelte": { "entry": "pages/about.svelte-7b2548b5.js", "css": ["assets/pages/about.svelte-b173694e.css"], "js": ["pages/about.svelte-7b2548b5.js", "chunks/vendor-5ecb5d48.js"], "styles": [] } };
   }
 });
 
@@ -22472,7 +22475,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_8353499d();
+init_app_b2fa6b5b();
 var import_cookie6 = __toModule(require_cookie());
 init_dist();
 

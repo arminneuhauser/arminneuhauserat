@@ -24,17 +24,20 @@
         var preProgress = 0;
 
         setTimeout(() => {
+
+
             if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
                 setInterval(() => {
                     if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
                         if (parseInt(document.getElementById("preProgressNumber").innerText) < 70) {
                             document.getElementById("preProgressNumber").innerText = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
                             preProgress = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
+                            document.getElementById("preProgressSliver").style.setProperty('--width', `${preProgress}%`);
                         }
                     }
-                }, 500);
+                }, 100);
             }
-        }, 1000);
+        }, 500);
     </script>
 </svelte:head>
 
@@ -53,7 +56,11 @@
     </div>
     
     <div class="progress-bar">
-        <!-- <div class="progress-sliver" style={`--width: ${$progress * 100}%`} /> -->
+        {#if !mounted}
+            <div id="preProgressSliver" class="progress-sliver" />
+        {:else}
+            <div id="progressSliver" class="progress-sliver" style={`--width: ${$progress}%`} />
+        {/if}
     </div>
 </div>
 
