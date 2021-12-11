@@ -89,6 +89,7 @@
             display: grid;
             grid-template-columns: auto 1fr auto;
             padding: 0 var(--core-padding);
+            align-items: center;
 
             @media (prefers-reduced-motion: no-preference) {
                 animation: fadein-from-primary 0.5s var(--easing) forwards;
@@ -108,6 +109,9 @@
             }
 
             :global(#death-star) {
+                margin-right: #{fn.rem(-10)};
+                padding: #{fn.rem(10)};
+
                 @media (min-width: var.$breakpoint-md) {
                     display: none;
                 }
