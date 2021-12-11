@@ -2,6 +2,7 @@
     import { page } from '$app/stores';
     import DeathStar from '$lib/death-star/DeathStar.svelte';
     import makiMix from './maki-mix.svg?raw';
+    import { browser } from '$app/env'
 
     let now = new Date(),
         year = now.getFullYear();
@@ -11,7 +12,15 @@
     function handleMakiMixClick() {
         mobileMenuVisible = !mobileMenuVisible;
     }
+
+    $: if (browser) document.body.classList.toggle('noscroll', mobileMenuVisible);
 </script>
+
+<svelte:window
+    on:sveltekit:navigation-start={() => {
+        mobileMenuVisible = false;
+    }}
+/>
 
 <header>
     <section>
