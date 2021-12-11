@@ -17,8 +17,12 @@
     </div>
     <div class="bottom" style="transform: translate(0,{-scrollY / 5}px)">
         <button title="runterscrollen" class="scroll-please" on:click={() => animateScroll.scrollTo({element: '.latest-work'})}>
-            <div></div>
-            <span class="sr-only">scroll</span>
+            <div>
+                <i></i>
+                <i></i>
+                <i></i>
+                <span class="sr-only">scroll</span>
+            </div>
         </button>
         <div>
             <h2>Konzept, Design & Entwicklung</h2>
@@ -125,6 +129,8 @@
     }
 
     .scroll-please {
+        --size: #{fn.rem(7)};
+
         grid-column: 1;
         position: relative;
         width: #{fn.rem(44)};
@@ -134,23 +140,52 @@
         justify-content: center;
         margin-left: #{fn.rem(-15)};
 
-        div {
-            animation: scroll 1.5s var(--easing) infinite;
-            width: #{fn.rem(7)};
-            height: #{fn.rem(7)};
-            border: #{fn.rem(1)} solid hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.5);
-            border-radius: 50%;
+        @media (min-width: var.$breakpoint-md) {
+            --size: #{fn.rem(9)};
         }
 
-        // span {
-        //     position: absolute;
-        //     font-size: #{fn.rem(11)};
-        //     line-height: 1;
-        //     opacity: 0.8;
-        //     transform: rotate(270deg);
-        //     transform-origin: top left;
-        //     top: 0;
-        //     left: #{fn.rem(15)};
-        // }
+        &:hover {
+            div span {
+                color: var(--primary);
+            }
+        }
+
+        div {
+            position: relative;
+            width: calc(var(--size) + #{fn.rem(2)});
+            height: calc((var(--size) + #{fn.rem(2)}) * 3);
+
+            i {
+                position: absolute;
+                top: 0;
+                animation: scroll 1.5s var(--easing) infinite;
+                width: var(--size);
+                height: var(--size);
+                border: #{fn.rem(1)} solid hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.5);
+                border-radius: 50%;
+
+                &:nth-child(2) {
+                    animation-delay: 0.2s;
+                    border-color: hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.25);
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.4s;
+                    border-color: hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.15);
+                }
+            }
+
+            span {
+                position: absolute;
+                transform: rotate(270deg);
+                transform-origin: top left;
+                top: #{fn.rem(-8)};
+                left: 0;
+                left: 1;
+                font-size: calc(var(--size) + #{fn.rem(2)});
+                line-height: var(--size);
+                transition: color 0.2s var(--easing);
+            }
+        }
     }
 </style>

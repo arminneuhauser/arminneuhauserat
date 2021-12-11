@@ -148,6 +148,7 @@
         align-items: flex-start;
         margin-right: #{fn.rem(-10)};
 
+        // death star
         :global(button) {
             padding: 0.25em;
             transition: color 0.2s var(--easing);

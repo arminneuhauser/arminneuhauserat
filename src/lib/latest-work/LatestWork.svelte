@@ -30,35 +30,35 @@
         <div>
             <article class="teaser">
                 <a href="#todo">
-                    <figure>
-                        <img src="/images/mst-muhr.jpg" alt="MST Muhr" />
-                    </figure>
                     <h1>
                         MST Muhr
                         <span>2022</span>
                     </h1>
+                    <figure>
+                        <img src="/images/mst-muhr.jpg" alt="MST Muhr" />
+                    </figure>
                 </a>
             </article>
             <article class="teaser">
                 <a href="#todo">
-                    <figure>
-                        <img src="/images/cartagena.jpg" alt="Solmates" />
-                    </figure>
                     <h1>
                         Solmates
                         <span>2019</span>
                     </h1>
+                    <figure>
+                        <img src="/images/cartagena.jpg" alt="Solmates" />
+                    </figure>
                 </a>
             </article>
             <article class="teaser">
                 <a href="#todo">
-                    <figure>
-                        <img src="/images/wohnformat.jpg" alt="Wohnformat" />
-                    </figure>
                     <h1>
                         [wohnformat]
                         <span>2018</span>
                     </h1>
+                    <figure>
+                        <img src="/images/wohnformat.jpg" alt="Wohnformat" />
+                    </figure>
                 </a>
             </article>
         </div>
@@ -125,21 +125,29 @@
             width: 100vw;
         }
 
+        &:last-of-type::after {
+            display: none;
+        }
+
         > a {
             position: sticky;
             top: 0;
             height: 100vh;
-            display: flex;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 1fr;
             align-items: center;
             justify-content: center;
+            padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
+            box-sizing: border-box;
         }
 
         figure {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            display: block;
             margin: 0;
-            z-index: -1;
+            height: 100%;
+            width: 100%;
+            position: relative;
         }
 
         img {
@@ -154,6 +162,8 @@
             font-size: #{fn.rfs(36, 70)};
             margin: 0.25em 0;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             align-items: baseline;
             gap: 0.25em;
 
@@ -161,12 +171,6 @@
                 font-family: var(--sans-serif);
                 font-weight: 400;
                 font-size: #{fn.rfs(15, 18)};
-            }
-        }
-
-        @media (min-width: var.$breakpoint-lg) {
-            &:nth-child(2) {
-                margin-top: #{fn.rem(80)};
             }
         }
     }
