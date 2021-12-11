@@ -1,26 +1,51 @@
 <script>
     import { page } from '$app/stores';
-    import { onMount, beforeUpdate } from 'svelte';
+    import { onMount } from 'svelte';
     import { tweened } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
 
-    let progress = tweened(0, {
-        duration: 2500,
-        easing: cubicOut
-    });
-
-    progress.set(0.7);
+    let mounted = false;
+    let progress = tweened(0);
 
     onMount(() => {
-        console.log("onmount progress");
-        progress.set(1);
+        mounted = true;
+
+        progress = tweened(preProgress, {
+            duration: 750,
+            easing: cubicOut
+        });
+
+        progress.set(100);
     });
 </script>
+
+<svelte:head>
+    <script>
+        var preProgress = 0;
+
+        setTimeout(() => {
+            if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
+                setInterval(() => {
+                    if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
+                        if (parseInt(document.getElementById("preProgressNumber").innerText) < 70) {
+                            document.getElementById("preProgressNumber").innerText = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
+                            preProgress = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
+                        }
+                    }
+                }, 500);
+            }
+        }, 1000);
+    </script>
+</svelte:head>
 
 <div class="progress">
     <div>
         <div class="number">
-            {Math.ceil($progress * 100)}%
+            {#if !mounted}
+                <span id="preProgressNumber">0</span>%
+            {:else}
+                <span id="progessNumber">{Math.ceil($progress)}</span>%
+            {/if}
         </div>
         <div class="path">
             loading {$page.path}
@@ -28,7 +53,7 @@
     </div>
     
     <div class="progress-bar">
-        <div class="progress-sliver" style={`--width: ${$progress * 100}%`} />
+        <!-- <div class="progress-sliver" style={`--width: ${$progress * 100}%`} /> -->
     </div>
 </div>
 

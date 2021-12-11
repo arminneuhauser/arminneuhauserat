@@ -1,31 +1,26 @@
 
 <script>
     import { fade } from 'svelte/transition';
+    import { onMount, afterUpdate } from 'svelte';
     import { scheme } from '../stores.js';
     import Header from '$lib/header/Header.svelte';
     import Footer from '$lib/footer/Footer.svelte';
     import Progress from '$lib/progress/Progress.svelte';
-    import { onMount, afterUpdate } from 'svelte';
     import '../scss/app.scss';
 
-    var mounted = false;
     let fontsReady = false;
-
     let scheme_value;
-
 
 	scheme.subscribe(value => {
 		scheme_value = value;
 	});
 
-    onMount(() => {
-        console.log("layout mounted");
-        mounted = true;
-
+    onMount(async () => {
         document.fonts.ready
-        .then(() => {
-            console.log("fonts ready");
-            fontsReady = true;
+        .then(async () => {
+            setTimeout(() => {
+                fontsReady = true;
+            }, 500);
         })
         .catch(() => {
             console.error("fonts can't be loaded");
@@ -57,10 +52,10 @@
 
 <svelte:window
     on:sveltekit:navigation-start={() => {
-        console.log('Navigation started!');
+        // console.log('Navigation started!');
     }}
     on:sveltekit:navigation-end={() => {
-        console.log('Navigation ended!');
+        // console.log('Navigation ended!');
     }}
 />
 
@@ -75,7 +70,7 @@
         <Footer />
     </div>
 {:else}
-    <div out:fade={{ duration: 250, delay: 50 }}>
+    <div out:fade={{ duration: 250 }}>
         <Progress />
     </div>
 {/if}
