@@ -34,7 +34,7 @@
         </div>
         <div>
             <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
-                <i>K<i>o</i><i>n</i><i>t</i><i>a</i><i>k</i><i>t</i>
+                <i>K</i><i>o</i><i>n</i><i>t</i><i>a</i><i>k</i><i>t</i>
             </a>
         </div>
         <div class="last">
@@ -169,6 +169,7 @@
         i {
             display: inline-block;
             font-style: normal;
+            pointer-events: none;
         }
 
         &:hover {
