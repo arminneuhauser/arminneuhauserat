@@ -36,8 +36,8 @@
         box-sizing: border-box;
         display: grid;
         grid-column-gap: 0;
-        grid-gap: #{fn.rem(16)};
-        grid-template-columns: auto clamp(#{fn.rem(320)}, 10rem + 28vw, #{fn.rem(2560)}) auto;
+        grid-gap: #{fn.rem(15)};
+        grid-template-columns: auto clamp(#{fn.rem(290)}, 10rem + 28vw, #{fn.rem(2560)}) auto;
         grid-template-rows: 1fr auto;
         min-height: var(--app-height, 100vh);
         padding: var(--core-padding) 0;

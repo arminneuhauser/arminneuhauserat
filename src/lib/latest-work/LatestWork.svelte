@@ -27,44 +27,54 @@
     </IntersectionObserver>
 
     <div class="projects">
-        <IntersectionObserver once element={element2} bind:intersecting={intersecting2}>
-            <article class="teaser" class:intersecting={intersecting2} bind:this={element2}>
-                <div>
-                    <img src="/images/cartagena.jpg" alt="Solmates" />
+        <div>
+            <article class="teaser">
+                <a href="#todo">
+                    <figure>
+                        <img src="/images/mst-muhr.jpg" alt="MST Muhr" />
+                    </figure>
+                    <h1>
+                        MST Muhr
+                        <span>2022</span>
+                    </h1>
+                </a>
+            </article>
+            <article class="teaser">
+                <a href="#todo">
+                    <figure>
+                        <img src="/images/cartagena.jpg" alt="Solmates" />
+                    </figure>
                     <h1>
                         Solmates
                         <span>2019</span>
                     </h1>
-                </div>
+                </a>
             </article>
-        </IntersectionObserver>
-        <IntersectionObserver once element={element3} bind:intersecting={intersecting3}>
-            <article class="teaser" class:intersecting={intersecting3} bind:this={element3}>
-                <div>
-                    <img src="/images/wohnformat.jpg" alt="Wohnformat" />
+            <article class="teaser">
+                <a href="#todo">
+                    <figure>
+                        <img src="/images/wohnformat.jpg" alt="Wohnformat" />
+                    </figure>
                     <h1>
-                        Wohnformat
+                        [wohnformat]
                         <span>2018</span>
                     </h1>
-                </div>
+                </a>
             </article>
-        </IntersectionObserver>
+        </div>
     </div>
 
 </section>
 
 <style lang="scss">
     .latest-work {
-        align-items: start;
         box-sizing: border-box;
-        display: grid;
-        grid-gap: #{fn.rem(16)};
         min-height: 100vh;
         padding: #{fn.rem(100)} 0;
-        overflow: hidden;
 
         > h1 {
             font-size: #{fn.rfs(40, 140, 360, 2560)};
+            font-weight: 400;
             white-space: nowrap;
             overflow: hidden;
             margin: 0;
@@ -87,39 +97,56 @@
             i {
                 font-family: var(--serif);
                 font-style: normal;
+                font-weight: 700;
             }
         }
     }
     
     .projects {
-        display: grid;
-        grid-gap: #{fn.rem(20)};
-        justify-content: center;
-        padding: var(--core-padding);
-        max-width: var(--core-max-width);
-        margin: 0 auto;
+        padding-top: #{fn.rem(40)};
+        overflow: visible;
+        position: relative;
+        z-index: 1;
 
-        @media (min-width: var.$breakpoint-lg) {
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 2.5vw;
+        > div {
+            margin-top: 100vh;
         }
     }
 
     .teaser {
-        > div {
-            transition: transform 1.5s var(--easing);
+        background: var(--base);
+        position: relative;
+        margin-top: -100vh;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 100vh;
+            width: 100vw;
         }
 
-        &:nth-child(odd) > div {
-            transform: translate(#{fn.rem(-50)}, #{fn.rem(200)});
+        > a {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        &:nth-child(even) > div {
-            transform: translate(#{fn.rem(50)}, #{fn.rem(200)});
+        figure {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            z-index: -1;
         }
 
-        &.intersecting > div {
-            transform: translate(0, 0);
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         h1 {
@@ -134,7 +161,6 @@
                 font-family: var(--sans-serif);
                 font-weight: 400;
                 font-size: #{fn.rfs(15, 18)};
-                color: var(--primary);
             }
         }
 
