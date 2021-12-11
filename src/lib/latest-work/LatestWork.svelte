@@ -5,10 +5,6 @@
 
     let element;
     let intersecting;
-    let element2;
-    let intersecting2;
-    let element3;
-    let intersecting3;
 </script>
 
 <section class="latest-work">
@@ -130,7 +126,7 @@
         }
 
         > a {
-            position: sticky;
+            position: relative;
             top: 0;
             height: 100vh;
             display: grid;
@@ -140,6 +136,10 @@
             justify-content: center;
             padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
             box-sizing: border-box;
+
+            @media (prefers-reduced-motion: no-preference) {
+                position: sticky;
+            }
         }
 
         figure {

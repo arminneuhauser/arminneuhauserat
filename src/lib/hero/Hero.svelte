@@ -158,20 +158,25 @@
             i {
                 position: absolute;
                 top: 0;
-                animation: scroll 1.5s var(--easing) infinite;
                 width: var(--size);
                 height: var(--size);
                 border: #{fn.rem(1)} solid hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.5);
                 border-radius: 50%;
 
+                @media (prefers-reduced-motion: no-preference) {
+                    animation: scroll 1.5s var(--easing) infinite;
+                }
+
                 &:nth-child(2) {
                     animation-delay: 0.2s;
                     border-color: hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.25);
+                    transform: translate3d(0, 50%, 0);
                 }
 
                 &:nth-child(3) {
                     animation-delay: 0.4s;
                     border-color: hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.15);
+                    transform: translate3d(0, 100%, 0);
                 }
             }
 

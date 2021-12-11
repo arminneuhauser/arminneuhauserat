@@ -6,8 +6,8 @@
     let colorSchemes= [
         "dark",
         "light",
+        "highcontrast",
         "blue",
-        "lime",
     ];
 
     function handleDeathStarClick() {

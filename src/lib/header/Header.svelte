@@ -184,7 +184,9 @@
 
         &:hover {
             i {
-                animation: flip-and-back 0.5s var(--easing) 0.02s;
+                @media (prefers-reduced-motion: no-preference) {
+                    animation: flip-and-back 0.5s var(--easing) 0.02s;
+                }
 
                 &:nth-child(2) {
                     animation-delay: 0.04s;

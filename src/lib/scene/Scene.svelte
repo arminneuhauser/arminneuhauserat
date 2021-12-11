@@ -292,13 +292,13 @@
         }
     }
 
-    :global([color-scheme="blue"]) {
+    :global([color-scheme="highcontrast"]) {
         canvas {
-            mix-blend-mode: screen;
+            display: none;
         }
     }
 
-    :global([color-scheme="lime"]) {
+    :global([color-scheme="blue"]) {
         canvas {
             mix-blend-mode: screen;
         }

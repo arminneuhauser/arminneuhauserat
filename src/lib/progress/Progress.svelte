@@ -24,8 +24,6 @@
         var preProgress = 0;
 
         setTimeout(() => {
-
-
             if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
                 setInterval(() => {
                     if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
@@ -65,8 +63,6 @@
 </div>
 
 <style lang="scss">
-    @use "src/scss/animations.scss";
-
     .progress {
         position: fixed;
         bottom: #{fn.rem(40)};
@@ -83,13 +79,18 @@
     }
     .number {
         font-size: #{fn.rfs(64, 140)};
-    }
-    .path {
-        // animation: blink-animation 1.5s var(--easing) infinite;
+
+        @media (prefers-reduced-motion: reduce) {
+            display: none;
+        }
     }
     .progress-bar {        
         height: #{fn.rem(1)};
         background-color: rgba(255,255,255,0.1);
+
+        @media (prefers-reduced-motion: reduce) {
+            display: none !important;
+        }
     }
     .progress-sliver {
         width: var(--width);

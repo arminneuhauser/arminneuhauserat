@@ -76,6 +76,11 @@
             justify-content: center;
             padding: #{fn.rem(10)};
             margin-right: #{fn.rem(-10)};
+            transition: color 0.2s var(--easing);
+
+            &:hover {
+                color: var(--primary);
+            }
         }
 
         hr {
