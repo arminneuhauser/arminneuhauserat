@@ -146,7 +146,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        margin-right: #{fn.rem(-10)};
+        margin-right: #{fn.rem(-6)};
 
         // death star
         :global(button) {
@@ -170,6 +170,10 @@
         @media (min-width: var.$breakpoint-md) {
             padding-top: 0.25em;
             padding-bottom: 0.25em;
+        }
+
+        :global([color-scheme="highcontrast"]) & {
+            font-weight: 500;
         }
     }
 
@@ -236,7 +240,7 @@
         align-items: center;
         justify-content: center;
         padding: #{fn.rem(10)};
-        margin-right: #{fn.rem(-10)};
+        margin-right: #{fn.rem(-15)};
 
         &.active {
             :global(.yummy) {

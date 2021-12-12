@@ -66,7 +66,7 @@
     .latest-work {
         box-sizing: border-box;
         min-height: 100vh;
-        padding: #{fn.rem(100)} 0;
+        padding: #{fn.rem(70)} 0 0;
 
         > h1 {
             font-size: #{fn.rfs(40, 140, 360, 2560)};
@@ -118,12 +118,12 @@
             content: '';
             display: block;
             height: 100vh;
-            width: 100vw;
+            width: 100%;
         }
 
-        &:last-of-type::after {
-            display: none;
-        }
+        // &:last-of-type::after {
+        //     display: none;
+        // }
 
         > a {
             position: relative;

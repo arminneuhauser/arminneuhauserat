@@ -101,6 +101,10 @@
         padding: 0 var(--core-padding);
         align-items: center;
 
+        @media (min-width: var.$breakpoint-md) {
+            grid-template-columns: #{fn.rem(44)} 1fr #{fn.rem(44)};
+        }
+
         @media (prefers-reduced-motion: no-preference) {
             animation: fadein-from-primary 0.5s var(--easing) forwards;
         }
@@ -116,10 +120,14 @@
             text-align: center;
             color: var(--on-base);
             opacity: 0.7;
+
+            :global([color-scheme="highcontrast"]) & {
+                opacity: 1;
+            }
         }
 
         :global(#death-star) {
-            margin-right: #{fn.rem(-10)};
+            margin-right: #{fn.rem(-13)};
             padding: #{fn.rem(10)};
 
             @media (min-width: var.$breakpoint-md) {
@@ -132,16 +140,20 @@
         --size: #{fn.rem(7)};
 
         grid-column: 1;
+        grid-row: 1;
         position: relative;
         width: #{fn.rem(44)};
         height: #{fn.rem(44)};
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: #{fn.rem(-15)};
+        margin-left: #{fn.rem(-17)};
 
         @media (min-width: var.$breakpoint-md) {
             --size: #{fn.rem(9)};
+
+            grid-column: 3;
+            margin-left: #{fn.rem(15)};
         }
 
         &:hover {

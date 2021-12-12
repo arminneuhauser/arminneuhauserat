@@ -53,6 +53,10 @@
 
         p {
             opacity: 0.7;
+
+            :global([color-scheme="highcontrast"]) & {
+                opacity: 1;
+            }
         }
 
         a {
@@ -69,6 +73,10 @@
 
         small {
             opacity: 0.5;
+
+            :global([color-scheme="highcontrast"]) & {
+                opacity: 1;
+            }
         }
 
         button {

@@ -64,6 +64,16 @@
         --on-base-l: 0%;
 
         --serif: "sans-serif";
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--on-base);
+        }
     }
 
     &[color-scheme="blue"] {
