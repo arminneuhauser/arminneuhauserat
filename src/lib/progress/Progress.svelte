@@ -49,7 +49,7 @@
             {/if}
         </div>
         <div class="path">
-            loading {$page.path}
+            loading {$page.path == "/" ? "/start" : $page.path}
         </div>
     </div>
     

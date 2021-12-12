@@ -36,7 +36,7 @@
                 </a>
             </div>
             <div>
-                <a sveltekit:prefetch href="/about" class:active={$page.path === '/'}>
+                <a sveltekit:prefetch href="/ueber-mich" class:active={$page.path === '/'}>
                     <i>Ü</i><i>b</i><i>e</i><i>r</i> <i>m</i><i>i</i><i>c</i><i>h</i>
                 </a>
             </div>
@@ -59,7 +59,7 @@
 <nav class="mobile-nav" class:active="{mobileMenuVisible}">
     <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Start</a>
     <a sveltekit:prefetch href="/">Projekte</a>
-    <a sveltekit:prefetch href="/about">Über mich</a>
+    <a sveltekit:prefetch href="/ueber-mich">Über mich</a>
     <a sveltekit:prefetch href="/">Kontakt</a>
 </nav>
 

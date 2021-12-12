@@ -16,19 +16,21 @@
         <div class="sphere" style="transform: translate(0,{-scrollY / 10}px)"></div>
     </div>
     <div class="bottom" style="transform: translate(0,{-scrollY / 5}px)">
-        <button title="runterscrollen" class="scroll-please" on:click={() => animateScroll.scrollTo({element: '.latest-work'})}>
-            <div>
-                <i></i>
-                <i></i>
-                <i></i>
-                <span class="sr-only">scroll</span>
-            </div>
-        </button>
         <div>
-            <h2>Konzept, Design & Entwicklung</h2>
-            <h3>made in Vienna</h3>
+            <button title="runterscrollen" class="scroll-please" on:click={() => animateScroll.scrollTo({element: '.latest-work'})}>
+                <div>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <span class="sr-only">scroll</span>
+                </div>
+            </button>
+            <div class="claim">
+                <h2>Konzept, Design & Entwicklung</h2>
+                <h3>made in Vienna</h3>
+            </div>
+            <DeathStar/>
         </div>
-        <DeathStar/>
     </div>
 </section>
 
@@ -96,20 +98,25 @@
 
     .bottom {
         grid-column: 1 / span 3;
-        display: grid;
-        grid-template-columns: #{fn.rem(30)} 1fr #{fn.rem(30)};
         padding: 0 var(--core-padding);
-        align-items: center;
-
-        @media (min-width: var.$breakpoint-md) {
-            grid-template-columns: #{fn.rem(44)} 1fr #{fn.rem(44)};
-        }
-
-        @media (prefers-reduced-motion: no-preference) {
-            animation: fadein-from-primary 0.5s var(--easing) forwards;
-        }
 
         > div {
+            display: grid;
+            grid-template-columns: #{fn.rem(30)} 1fr #{fn.rem(30)};
+            max-width: var(--core-max-width);
+            margin: 0 auto;
+            align-items: center;
+
+            @media (min-width: var.$breakpoint-md) {
+                grid-template-columns: #{fn.rem(44)} 1fr #{fn.rem(44)};
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+                animation: fadein-from-primary 0.5s var(--easing) forwards;
+            }
+        }
+
+        .claim {
             grid-column: 2;
         }
 
@@ -118,8 +125,7 @@
             font-weight: 400;
             margin: 0;
             text-align: center;
-            color: var(--on-base);
-            opacity: 0.7;
+            opacity: 0.75;
 
             :global([color-scheme="highcontrast"]) & {
                 opacity: 1;
