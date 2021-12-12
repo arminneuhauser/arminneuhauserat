@@ -1,12 +1,15 @@
-
 <script>
+    // import { page } from '$app/stores';
     import { fade } from 'svelte/transition';
-    import { onMount, afterUpdate } from 'svelte';
+    import { onMount, afterUpdate, beforeUpdate } from 'svelte';
     import { scheme } from '../stores.js';
     import Header from '$lib/header/Header.svelte';
     import Footer from '$lib/footer/Footer.svelte';
     import Progress from '$lib/progress/Progress.svelte';
+    import PageTransition from "$lib/page-transition/PageTransition.svelte"
     import '../scss/app.scss';
+
+    export let key;
 
     let fontsReady = false;
     let scheme_value;
@@ -50,6 +53,14 @@
     });
 </script>
 
+<script context="module">
+    export const load = async ({ page }) => ({
+        props: {
+            key: page.path,
+        },
+    })
+</script>
+
 <svelte:window
     on:sveltekit:navigation-start={() => {
         // console.log('Navigation started!');
@@ -63,10 +74,12 @@
     <div in:fade={{ duration: 300, delay: 50 }}>
         <Header />
 
-        <main>
-            <slot />
-        </main>
-        
+            <main>
+                <PageTransition refresh={key}>
+                    <slot />
+                </PageTransition>
+            </main>
+            
         <Footer />
     </div>
 {:else}

@@ -61,3 +61,18 @@
         opacity: 0;
     }
 }
+
+@keyframes shutter {
+    0% {
+        bottom: 0%;
+        top: 100%;
+    }
+    50% {
+        bottom: 0%;
+        top: 0%;
+    }
+    100% {
+        bottom: 100%;
+        top: 0%;
+    }
+}
