@@ -1,5 +1,6 @@
 <script lang="ts">
     import IntersectionObserver from "svelte-intersection-observer";
+    import wheel from './wheel.svg?raw';
 
 	export let scrollY;
 
@@ -13,10 +14,10 @@
         <h1 class="headline" class:intersecting bind:this={element}>
             <span style="transform: translate({-scrollY / 4 - 150}px,0)">
                 <span>
-                    <i>Meine</i> Projekte
-                    <i>Meine</i> Projekte
-                    <i>Meine</i> Projekte
-                    <i>Meine</i> Projekte
+                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 4 - 150}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 4 - 150}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 4 - 150}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 4 - 150}deg)">{@html wheel}</i>
                 </span>
             </span>
         </h1>
@@ -79,6 +80,9 @@
                 display: inline-block;
 
                 span {
+                    display: flex;
+                    gap: 0.25em;
+                    align-items: baseline;
                     transform: translate(0, 100%);
                     transition: transform 0.5s var(--easing);
                 }
@@ -90,10 +94,19 @@
                 }
             }
 
-            i {
+            em {
                 font-family: var(--serif);
                 font-style: normal;
                 font-weight: 700;
+            }
+
+            i {
+                align-self: center;
+
+                :global(svg) {
+                    width: 1em;
+                    height: 1em;
+                }
             }
         }
     }
