@@ -1,5 +1,6 @@
 <script lang="ts">
     import IntersectionObserver from "svelte-intersection-observer";
+    import Teaser from "./Teaser.svelte";
     import wheel from './wheel.svg?raw';
 
 	export let scrollY;
@@ -25,39 +26,23 @@
 
     <div class="projects">
         <div>
-            <article class="teaser">
-                <a href="#todo">
-                    <h1>
-                        MST Muhr
-                        <span>2022</span>
-                    </h1>
-                    <figure>
-                        <img src="/images/mst-muhr.jpg" alt="MST Muhr" />
-                    </figure>
-                </a>
-            </article>
-            <article class="teaser">
-                <a href="#todo">
-                    <h1>
-                        Solmates
-                        <span>2019</span>
-                    </h1>
-                    <figure>
-                        <img src="/images/cartagena.jpg" alt="Solmates" />
-                    </figure>
-                </a>
-            </article>
-            <article class="teaser">
-                <a href="#todo">
-                    <h1>
-                        [wohnformat]
-                        <span>2018</span>
-                    </h1>
-                    <figure>
-                        <img src="/images/wohnformat.jpg" alt="Wohnformat" />
-                    </figure>
-                </a>
-            </article>
+            <Teaser 
+                title="MST Muhr"
+                year="2022"
+                previewImage="/images/mst-muhr.jpg">
+            </Teaser>
+
+            <Teaser 
+                title="Solmates"
+                year="2019"
+                previewImage="/images/cartagena.jpg">
+            </Teaser>
+
+            <Teaser 
+                title="[wohnformat]"
+                year="2018"
+                previewImage="/images/wohnformat.jpg">
+            </Teaser>
         </div>
     </div>
 
@@ -102,6 +87,7 @@
 
             i {
                 align-self: center;
+                line-height: 0;
 
                 :global(svg) {
                     width: 1em;
@@ -119,72 +105,6 @@
 
         > div {
             margin-top: 100vh;
-        }
-    }
-
-    .teaser {
-        background: var(--base);
-        position: relative;
-        margin-top: -100vh;
-
-        &::after {
-            content: '';
-            display: block;
-            height: 100vh;
-            width: 100%;
-        }
-
-        // &:last-of-type::after {
-        //     display: none;
-        // }
-
-        > a {
-            position: relative;
-            top: 0;
-            height: 100vh;
-            display: grid;
-            grid-template-rows: auto 1fr;
-            grid-template-columns: minmax(max-content, var(--core-max-width));
-            align-items: center;
-            justify-content: center;
-            padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
-            box-sizing: border-box;
-
-            @media (prefers-reduced-motion: no-preference) {
-                position: sticky;
-            }
-        }
-
-        figure {
-            display: block;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-            position: relative;
-        }
-
-        img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-family: var(--serif);
-            font-size: #{fn.rfs(36, 70)};
-            margin: 0.25em 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 0.25em;
-
-            span {
-                font-family: var(--sans-serif);
-                font-weight: 400;
-                font-size: #{fn.rfs(15, 18)};
-            }
         }
     }
 </style>
