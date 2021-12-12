@@ -131,7 +131,7 @@
             height: 100vh;
             display: grid;
             grid-template-rows: auto 1fr;
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(max-content, var(--core-max-width));
             align-items: center;
             justify-content: center;
             padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
