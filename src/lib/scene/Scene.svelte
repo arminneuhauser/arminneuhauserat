@@ -3,6 +3,7 @@
 
     import { Application } from '@pixi/app';
     import { Graphics } from '@pixi/graphics';
+    import { Container } from '@pixi/display';
     import { BLEND_MODES } from '@pixi/constants';
     import { BatchRenderer, Renderer } from '@pixi/core';
     import { InteractionManager } from '@pixi/interaction';
@@ -51,12 +52,17 @@
 
         // Create PixiJS app
         app = new Application({
+            antialias: true,
             view,
             resizeTo: window,
             backgroundAlpha: 0,
         });
 
         renderer = new Renderer();
+
+        let bgContainer = new Container();
+
+        app.stage.addChild(bgContainer);
 
         let blurFilter = new KawaseBlurFilter(setBlur(), 10, true);
 
@@ -67,7 +73,7 @@
         colorMatrix.technicolor(true);
         colorMatrix.brightness(0.25, true);
 
-        app.stage.filters = [
+        bgContainer.filters = [
             blurFilter,
             noiseFilter,
             colorMatrix,
@@ -246,7 +252,7 @@
         for (let i = 0; i < 50; i++) {
             const orb = new Orb(colorPalette.randomColor());
 
-            app.stage.addChild(orb.graphics);
+            bgContainer.addChild(orb.graphics);
 
             orbs.push(orb);
         }
