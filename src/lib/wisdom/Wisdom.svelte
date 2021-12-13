@@ -1,13 +1,17 @@
 <script lang="ts">
     import IntersectionObserver from "svelte-intersection-observer";
+    import { fly } from "svelte/transition";
 
     let element;
-    let intersecting;
 </script>
 
-<IntersectionObserver {element} bind:intersecting>
+<IntersectionObserver {element} let:intersecting>
     <section class="wisdom">
-        <p class:intersecting bind:this={element}>Meine Webseiten sind wie gute Fahrräder: elegant, hochwertig, auf den Benutzer angepasst und vor allem pfeilschnell.</p>
+        <div bind:this={element}>
+            {#if intersecting}
+                <p in:fly="{{ y: 200, duration: 1200, delay: 150 }}">Meine Webseiten sind wie gute Fahrräder: elegant, hochwertig, auf den Benutzer angepasst und vor allem pfeilschnell.</p>
+            {/if}
+        </div>
     </section>
 </IntersectionObserver>
 
@@ -24,19 +28,22 @@
         margin: 0 auto;
         overflow: hidden;
 
-        p {
+        div {
             grid-column: 2;
+        }
+
+        p {
             font-size: fn.rfs(28, 72);
-            font-weight: 700;
+            font-weight: 500;
             line-height: 1.15;
             // color: hsl(var(--hue), 70%, 95%);
             // text-shadow: -0.05em 0.05em 0.02em hsl(var(--hue), 80%, 30%);
-            transform: translate(#{fn.rem(200)}, 0);
-            transition: transform 1.5s var(--easing);
+            // transform: translate(#{fn.rem(200)}, 0);
+            // transition: transform 0.5s var(--easing);
 
-            &.intersecting {
-                transform: translate(0, 0);
-            }
+            // &.intersecting {
+            //     transform: translate(0, 0);
+            // }
         }
     }
 </style>

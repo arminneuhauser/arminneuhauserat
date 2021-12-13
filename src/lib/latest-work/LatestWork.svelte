@@ -15,10 +15,10 @@
         <h1 class="headline" class:intersecting bind:this={element}>
             <span style="transform: translate({-scrollY / 4 - 150}px,0)">
                 <span>
-                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 4 - 150}deg)">{@html wheel}</i>
-                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 4 - 150}deg)">{@html wheel}</i>
-                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 4 - 150}deg)">{@html wheel}</i>
-                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 4 - 150}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 3.5}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 3.5}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 3.5}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 3.5}deg)">{@html wheel}</i>
                 </span>
             </span>
         </h1>
