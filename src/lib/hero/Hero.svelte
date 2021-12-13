@@ -57,24 +57,16 @@
         grid-column: 2;
 
         .sphere {
+            animation: fadein 2s var(--easing) forwards;
             display: block;
             padding-bottom: 100%;
-            background: linear-gradient(
-                135deg,
-                hsla(var(--hue), 100%, 50%, 0.25),
-                hsla(var(--hue-complimentary), 100%, 50%, 0.25)
-            );
-            border: 1px solid hsla(0, 0%, 100%, 0.08);
+            background-color: hsla(0, 0%, 100%, 0.5);
+            border: 1px solid hsla(0, 0%, 100%, 0.8);
             border-radius: 50%;
+            mix-blend-mode: soft-light;
+            will-change: opacity;
+            opacity: 0;
         }
-        // .sphere {
-        //     display: block;
-        //     padding-bottom: 100%;
-        //     background-color: hsla(0, 0%, 100%, 0.5);
-        //     border: 1px solid hsla(0, 0%, 100%, 0.8);
-        //     border-radius: 50%;
-        //     mix-blend-mode: soft-light;
-        // }
     }
 
     h1 {

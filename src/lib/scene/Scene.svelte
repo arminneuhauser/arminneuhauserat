@@ -61,8 +61,10 @@
         renderer = new Renderer();
 
         let bgContainer = new Container();
+        // let fgContainer = new Container();
 
         app.stage.addChild(bgContainer);
+        // app.stage.addChild(bgContainer, fgContainer);
 
         let blurFilter = new KawaseBlurFilter(setBlur(), 10, true);
 
@@ -78,6 +80,8 @@
             noiseFilter,
             colorMatrix,
         ];
+
+        // fgContainer.blendMode = BLEND_MODES.SOFT_LIGHT;
 
         // Create a new simplex noise instance
         const simplex = new SimplexNoise();
@@ -275,6 +279,24 @@
                 orb.render();
             });
         }
+
+        // circle
+        // const circle = new Graphics();
+
+        // circle.lineStyle(1, 0xFFFFFF, 0.8);
+        // circle.beginFill(0xFFFFFF, 0.5);
+
+        // circle.drawCircle(
+        //     window.innerWidth / 2, 
+        //     window.innerHeight / 2, 
+        //     window.innerWidth / 2
+        // );
+
+        // circle.endFill();
+
+        // circle.blendMode = BLEND_MODES.HARD_LIGHT;
+
+        // fgContainer.addChild(circle);
     });
 </script>
 

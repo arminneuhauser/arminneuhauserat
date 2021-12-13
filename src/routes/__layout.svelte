@@ -71,7 +71,8 @@
 />
 
 {#if fontsReady}
-    <div in:fade={{ duration: 300, delay: 50 }}>
+    <!-- <div in:fade={{ duration: 300, delay: 50 }}> -->
+    <div>
         <Header />
 
             <main>

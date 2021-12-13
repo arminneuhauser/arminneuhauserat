@@ -1,3 +1,12 @@
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes fadein-from-primary {
     0% {
         color: var(--primary);

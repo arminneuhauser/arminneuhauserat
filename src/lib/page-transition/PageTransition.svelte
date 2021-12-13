@@ -5,7 +5,8 @@
 
 
 {#key refresh}
-    <div in:fade={{duration: 500, delay: 300}} out:fade={{duration: 500, delay: 300}}>
+    <!-- <div in:fade={{duration: 500, delay: 300}} out:fade={{duration: 500, delay: 300}}> -->
+    <div>
         <slot />
     </div>
 
