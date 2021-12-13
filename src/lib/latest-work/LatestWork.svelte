@@ -27,21 +27,27 @@
     <div class="projects">
         <div>
             <Teaser 
+                scroll={scrollY}
                 title="MST Muhr"
                 year="2022"
-                previewImage="/images/mst-muhr.jpg">
+                backgroundImage="/images/mst-muhr/mst-muhr-bg.jpg"
+                previewImage="/images/mst-muhr/mst-muhr.jpg">
             </Teaser>
 
             <Teaser 
+                scroll={scrollY}
                 title="Solmates"
                 year="2019"
-                previewImage="/images/cartagena.jpg">
+                backgroundImage="/images/solmates/solmates-bg.jpg"
+                previewImage="/images/solmates/solmates.jpg">
             </Teaser>
 
             <Teaser 
+                scroll={scrollY}
                 title="[wohnformat]"
                 year="2018"
-                previewImage="/images/wohnformat.jpg">
+                backgroundImage="/images/wohnformat/wohnformat-bg.jpg"
+                previewImage="/images/wohnformat/wohnformat.jpg">
             </Teaser>
         </div>
     </div>
@@ -52,7 +58,7 @@
     .latest-work {
         box-sizing: border-box;
         min-height: 100vh;
-        padding: #{fn.rem(70)} 0 0;
+        padding: #{fn.rem(140)} 0 0;
 
         > h1 {
             font-size: #{fn.rfs(40, 140, 360, 2560)};

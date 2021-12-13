@@ -7,15 +7,15 @@
 
 <section class="hero">
     <div class="headline">
-        <h1 style="transform: translate(0,{-scrollY / 7}px)">
+        <h1 style="transform: translate(0,{scrollY / 4}px)">
             <span>Ich erschaffe</span>
             <span>ausgefeilte digitale</span>
             <span>Erlebnisse im Web,</span>
             <span>jeden Tag.</span>
         </h1>
-        <div class="sphere" style="transform: translate(0,{-scrollY / 10}px)"></div>
+        <div class="sphere" style="transform: translate(0,{scrollY / 6}px)"></div>
     </div>
-    <div class="bottom" style="transform: translate(0,{-scrollY / 5}px)">
+    <div class="bottom" style="transform: translate(0,{scrollY / 8}px)">
         <div>
             <button title="runterscrollen" class="scroll-please" on:click={() => animateScroll.scrollTo({element: '.latest-work'})}>
                 <div>
