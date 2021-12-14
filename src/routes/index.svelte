@@ -15,7 +15,7 @@
     <title>Armin Neuhauser | Konzept, Design & Entwicklung</title>
 </svelte:head>
 
-<svelte:window bind:scrollY={scrollY}/>
+<svelte:window bind:scrollY={scrollY} />
 
 <Hero scrollY={scrollY} />
 

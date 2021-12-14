@@ -27,7 +27,7 @@
     <div class="projects">
         <div>
             <Teaser 
-                scroll={scrollY}
+                scrollY={scrollY}
                 title="MST Muhr"
                 year="2022"
                 backgroundImage="/images/mst-muhr/mst-muhr-bg.jpg"
@@ -35,7 +35,7 @@
             </Teaser>
 
             <Teaser 
-                scroll={scrollY}
+                scrollY={scrollY}
                 title="Solmates"
                 year="2019"
                 backgroundImage="/images/solmates/solmates-bg.jpg"
@@ -43,7 +43,7 @@
             </Teaser>
 
             <Teaser 
-                scroll={scrollY}
+                scrollY={scrollY}
                 title="[wohnformat]"
                 year="2018"
                 backgroundImage="/images/wohnformat/wohnformat-bg.jpg"
@@ -104,13 +104,11 @@
     }
     
     .projects {
-        padding-top: #{fn.rem(40)};
         overflow: visible;
         position: relative;
-        z-index: 1;
 
         > div {
-            margin-top: 100vh;
+            margin-top: calc(100vh - #{fn.rem(40)});
         }
     }
 </style>

@@ -27,6 +27,8 @@
         max-width: var(--core-max-width);
         margin: 0 auto;
         overflow: hidden;
+        margin-top: -75vh;
+        position: relative;
 
         div {
             grid-column: 2;
