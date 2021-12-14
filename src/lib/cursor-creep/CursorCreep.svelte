@@ -18,12 +18,24 @@
         return isTouchDevice() ? "" : coords.set({ x: e.clientX, y: e.clientY })
     }
 
-    function handleMouseDown() {
-        return isTouchDevice() ? "" : size.set(baseSize * 1.5)
+    function handleMouseDown(e) {
+        if (isTouchDevice()) {
+            return
+        } else if (e.target.tagName.toLowerCase() === "a" || e.target.tagName.toLowerCase() === "button") {
+            size.set(baseSize * 4)
+        } else {
+            size.set(baseSize * 1.5)
+        }
     }
 
     function handleMouseUp(e) {
-        return isTouchDevice() ? "" : size.set(baseSize)
+        if (isTouchDevice()) {
+            return
+        } else if (e.target.tagName.toLowerCase() === "a" || e.target.tagName.toLowerCase() === "button") {
+            size.set(baseSize * 3)
+        } else {
+            size.set(baseSize)
+        }
     }
 
     function handleMouseOver(e) {

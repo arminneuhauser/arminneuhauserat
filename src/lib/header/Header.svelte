@@ -166,6 +166,7 @@
 
     a, span {
         padding: #{fn.rem(10)};
+        box-sizing: border-box;
 
         @media (min-width: var.$breakpoint-md) {
             padding-top: 0.25em;
