@@ -1,5 +1,7 @@
 <script lang="ts">
+    // https://svelte.dev/tutorial/spring
     import IntersectionObserver from "svelte-intersection-observer";
+    import { spring } from 'svelte/motion';
     import Teaser from "./Teaser.svelte";
     import wheel from './wheel.svg?raw';
 
@@ -7,18 +9,35 @@
 
     let element;
     let intersecting;
+
+    let shift = spring(scrollY, {
+        stiffness: 0.1,
+        damping: 1
+    });
+    
+    let spin = spring(scrollY, {
+        stiffness: 0.1,
+        damping: 0.8
+    });
+
+    function parseScroll() {
+        shift.set(-scrollY / 4 - 150)
+        spin.set(scrollY / 2)
+    }
 </script>
+
+<svelte:window on:scroll={parseScroll} />
 
 <section class="latest-work">
 
     <IntersectionObserver {element} bind:intersecting>
         <h1 class="headline" class:intersecting bind:this={element}>
-            <span style="transform: translate({-scrollY / 4 - 150}px,0)">
+            <span style="transform: translate({$shift}px,0)">
                 <span>
-                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 3.5}deg)">{@html wheel}</i>
-                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 3.5}deg)">{@html wheel}</i>
-                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 3.5}deg)">{@html wheel}</i>
-                    <em>Meine</em> Projekte <i style="transform: rotate({scrollY / 3.5}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({$spin}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({$spin}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({$spin}deg)">{@html wheel}</i>
+                    <em>Meine</em> Projekte <i style="transform: rotate({$spin}deg)">{@html wheel}</i>
                 </span>
             </span>
         </h1>
