@@ -175,6 +175,7 @@
             position: relative;
             width: calc(var(--size) + #{fn.rem(2)});
             height: calc((var(--size) + #{fn.rem(2)}) * 3);
+            pointer-events: none;
 
             i {
                 position: absolute;
