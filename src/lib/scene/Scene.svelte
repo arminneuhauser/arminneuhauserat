@@ -15,6 +15,7 @@
     import hsl from 'hsl-to-hex';
     import debounce from 'debounce';
     import { onMount } from 'svelte';
+    import { skipHello } from '@pixi/utils';
 
     // This initialization needs to only happen once, even when the component
     // is unmounted and re-mounted
@@ -49,6 +50,8 @@
     let renderer;
 
     onMount(async () => {
+
+        skipHello();
 
         // Create PixiJS app
         app = new Application({
