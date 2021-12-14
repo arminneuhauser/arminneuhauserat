@@ -47,6 +47,8 @@
         });
 
         setAppHeight();
+
+        console.log("for the nerds:")
     });
 
     $: afterUpdate(() => {
