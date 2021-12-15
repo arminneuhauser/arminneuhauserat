@@ -13,7 +13,18 @@
         mobileMenuVisible = !mobileMenuVisible;
     }
 
+    function scrollToTop() {
+      window.scrollTo(0,0);
+    }
+
+    function handleMobileClick() {
+        mobileMenuVisible = false;
+        scrollToTop();
+    }
+
+    // set noscroll class to body when mobile menu is open
     $: if (browser) document.body.classList.toggle('noscroll', mobileMenuVisible);
+
 </script>
 
 <svelte:window
@@ -25,24 +36,24 @@
 <header>
     <section>
         <div class="logo" >
-            <a sveltekit:prefetch href="/">
+            <a sveltekit:prefetch href="/" title="Armin Neuhauser" on:click={scrollToTop}>
                 <i>A</i><i>r</i><i>m</i><i>i</i><i>n</i> <i>N</i><i>e</i><i>u</i><i>h</i><i>a</i><i>u</i><i>s</i><i>e</i><i>r</i>
             </a>
         </div>
         <div>
             <div>
-                <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
+                <a sveltekit:prefetch href="/projekte" title="Projekte" class:active={$page.path === '/'} on:click={scrollToTop}>
                     <i>P</i><i>r</i><i>o</i><i>j</i><i>e</i><i>k</i><i>t</i><i>e</i>
                 </a>
             </div>
             <div>
-                <a sveltekit:prefetch href="/ueber-mich" class:active={$page.path === '/'}>
+                <a sveltekit:prefetch href="/ueber-mich" title="Über mich" class:active={$page.path === '/'} on:click={scrollToTop}>
                     <i>Ü</i><i>b</i><i>e</i><i>r</i> <i>m</i><i>i</i><i>c</i><i>h</i>
                 </a>
             </div>
         </div>
         <div>
-            <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>
+            <a sveltekit:prefetch href="/kontakt" title="Kontakt" class:active={$page.path === '/'} on:click={scrollToTop}>
                 <i>K</i><i>o</i><i>n</i><i>t</i><i>a</i><i>k</i><i>t</i>
             </a>
         </div>
@@ -57,10 +68,18 @@
 </header>
 
 <nav class="mobile-nav" class:active="{mobileMenuVisible}">
-    <a sveltekit:prefetch href="/" class:active={$page.path === '/'}>Start</a>
-    <a sveltekit:prefetch href="/">Projekte</a>
-    <a sveltekit:prefetch href="/ueber-mich">Über mich</a>
-    <a sveltekit:prefetch href="/">Kontakt</a>
+    <a sveltekit:prefetch href="/" title="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
+        Start
+    </a>
+    <a sveltekit:prefetch href="/projekte" title="Projekte" on:click={handleMobileClick}>
+        Projekte
+    </a>
+    <a sveltekit:prefetch href="/ueber-mich" title="Über mich" on:click={handleMobileClick}>
+        Über mich
+    </a>
+    <a sveltekit:prefetch href="/kontakt" title="Kontakt" on:click={handleMobileClick}>
+        Kontakt
+    </a>
 </nav>
 
 <style lang="scss">
