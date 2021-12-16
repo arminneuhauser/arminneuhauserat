@@ -3,6 +3,7 @@
 @use "fonts";
 
 :root {
+    // colors
     --primary: #F1912A;
     --primary-h: 31;
     --primary-s: 88%;
@@ -18,9 +19,15 @@
     --on-base-s: 0%;
     --on-base-l: 100%;
 
+    // fonts
     --serif: "Iskry";
-    --sans-serif: "sans-serif";
+    --sans: "sans-serif";
 
+    --w1-serif: 700 #{fn.rem(16)} / 1.4 var(--serif);
+
+    --w1-sans: 400 #{fn.rem(16)} / 1.4 var(--sans);
+
+    // misc
     --core-padding: 1.5rem;
     --core-max-width: #{fn.rem(1920)};
 
@@ -92,8 +99,7 @@ html {
 }
 
 body {
-    font-family: var(--sans-serif);
-    line-height: 1.4;
+    font: var(--w1-sans);
     min-height: 100vh;
     margin: 0;
     padding: 0;

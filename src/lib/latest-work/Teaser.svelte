@@ -121,7 +121,7 @@
         gap: 0.25em;
 
         span {
-            font-family: var(--sans-serif);
+            font-family: var(--sans);
             font-weight: 400;
             font-size: #{fn.rfs(15, 18)};
         }
