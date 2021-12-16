@@ -8,10 +8,9 @@
 <section class="hero">
     <div class="headline">
         <h1 style="transform: translate(0,{scrollY / 4}px)">
-            <span>Ich erschaffe</span>
-            <span>ausgefeilte digitale</span>
-            <span>Erlebnisse im Web,</span>
-            <span>jeden Tag.</span>
+            <span>Digital</span>
+            <span>Experience</span>
+            <span>Creator</span>
         </h1>
         <div class="sphere" style="transform: translate(0,{scrollY / 6}px)"></div>
     </div>
@@ -42,8 +41,8 @@
         box-sizing: border-box;
         display: grid;
         grid-column-gap: 0;
-        grid-gap: #{fn.rem(15)};
-        grid-template-columns: auto clamp(#{fn.rem(290)}, 10rem + 28vw, #{fn.rem(2560)}) auto;
+        grid-gap: #{fn.rem(5)};
+        grid-template-columns: auto clamp(#{fn.rem(310)}, 11rem + 28vw, #{fn.rem(2560)}) auto;
         grid-template-rows: 1fr auto;
         min-height: var(--app-height, 100vh);
         padding: var(--core-padding) 0;
@@ -72,8 +71,8 @@
     h1 {
         font-family: var(--serif);
         font-weight: 700;
-        font-size: fn.rfs(25, 72, 360, 2560);
-        line-height: 1.1;
+        font-size: fn.rfs(46, 120, 360, 2560);
+        line-height: 0.85;
         text-align: center;
         margin: 0;
         position: absolute;
@@ -84,6 +83,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         z-index: 1;
         
         @media (prefers-reduced-motion: no-preference) {
@@ -92,6 +92,14 @@
 
         span {
             display: block;
+
+            &:first-child {
+                margin-right: 0.6em;
+            }
+
+            &:last-child {
+                margin-left: 1em;
+            }
 
             @media (prefers-reduced-motion: no-preference) {
                 animation: to-top 0.5s var(--easing) forwards;
