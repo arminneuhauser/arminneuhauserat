@@ -111,6 +111,7 @@
 
     h1 {
         font-family: var(--serif);
+        font-weight: 700;
         font-size: #{fn.rfs(36, 70)};
         margin: 0.25em 0;
         display: flex;

@@ -41,6 +41,7 @@
 
         h1 {
             font-family: var(--serif);
+            font-weight: 700;
             font-size: #{fn.rfs(32, 110)};
             line-height: 1;
             margin: 0.5em 0;

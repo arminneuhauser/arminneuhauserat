@@ -39,26 +39,10 @@
     font-display: swap;
 }
 
-// TT Norms
-@font-face {
-    font-family: "title";
-    font-weight: 800;
-    font-style: italic;
-    src: url("/fonts/title-extrabold-italic.woff2");
-    font-display: swap;
-}
-
 // Iskry
 @font-face {
-    font-family: "serif";
-    font-weight: 400;
-    src: url("/fonts/serif-regular.woff2");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "serif";
+    font-family: "Iskry";
     font-weight: 700;
-    src: url("/fonts/serif-bold.woff2");
+    src: url("/fonts/iskry-bold.woff2");
     font-display: swap;
 }
