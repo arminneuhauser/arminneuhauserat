@@ -71,7 +71,7 @@
         mix-blend-mode: exclusion;
         display: none;
 
-        @media (pointer: fine) {
+        @media (pointer: fine) and (prefers-reduced-motion: no-preference) {
             display: block;
         }
     }
