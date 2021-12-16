@@ -11,7 +11,10 @@
     ];
 
     function handleDeathStarClick() {
-        i = ++i%colorSchemes.length;
+        const activeScheme = colorSchemes.find(element => element == localStorage.scheme);
+        const activeSchemeIndex = colorSchemes.indexOf(activeScheme) + 1;
+
+        i = activeSchemeIndex < colorSchemes.length ? colorSchemes.indexOf(activeScheme) + 1 : 0;
 
         scheme.update(() => colorSchemes[i]);
     }
