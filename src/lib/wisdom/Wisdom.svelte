@@ -3,6 +3,8 @@
     import { fly } from "svelte/transition";
 
     let element;
+
+    // TODO: nicht im let modus, weil sonst die höhe vom p nicht passt
 </script>
 
 <IntersectionObserver {element} let:intersecting>

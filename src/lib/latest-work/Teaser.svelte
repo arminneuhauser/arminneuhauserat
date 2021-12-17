@@ -41,13 +41,15 @@
 
 <article class="teaser" bind:this={teaser} style="opacity: {opacity};">
     <div class="inner">
-        <h1>
-            {title}
-            <span>{year}</span>
-        </h1>
-        <figure>
-            <img src={previewImage} alt={title} />
-        </figure>
+        <div>
+            <h1>
+                {title}
+                <span>{year}</span>
+            </h1>
+            <figure>
+                <img src={previewImage} alt={title} />
+            </figure>
+        </div>
         <!-- <div class="background" style="background-image: url({backgroundImage}); transform: translate(0, {scroll / 100}%) scale({1 + scroll / 100});"></div> -->
     </div>
 </article>
@@ -72,14 +74,10 @@
     }
 
     .inner {
-        background-size: cover;
-        background-position: center center;
         position: relative;
         top: 0;
         height: 100vh;
-        display: grid;
-        grid-template-rows: auto 1fr;
-        grid-template-columns: minmax(max-content, var(--core-max-width));
+        display: flex;
         align-items: center;
         justify-content: center;
         padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
@@ -97,16 +95,6 @@
     figure {
         display: block;
         margin: 0;
-        height: 100%;
-        width: 100%;
-        position: relative;
-    }
-
-    img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 
     h1 {
