@@ -9,7 +9,15 @@
     <section class="wisdom">
         <div bind:this={element}>
             {#if intersecting}
-                <p in:fly="{{ y: 200, duration: 1200, delay: 150 }}">Meine Webseiten sind wie gute Fahrräder: elegant, hochwertig, auf den Benutzer angepasst und vor allem pfeilschnell.</p>
+                <p>
+                    <span class="mask"><span in:fly="{{ y: 200, duration: 1200, delay: 0 }}">Meine Webseiten</span></span>
+                    <span class="mask"><span in:fly="{{ y: 200, duration: 1200, delay: 50 }}">sind wie gute</span></span>
+                    <span class="mask"><span in:fly="{{ y: 200, duration: 1200, delay: 100 }}">Fahrräder:</span></span>
+                    <span class="mask"><span in:fly="{{ y: 200, duration: 1200, delay: 150 }}">elegant, hochwertig,</span></span>
+                    <span class="mask"><span in:fly="{{ y: 200, duration: 1200, delay: 200 }}">auf den Benutzer</span></span>
+                    <span class="mask"><span in:fly="{{ y: 200, duration: 1200, delay: 250 }}">angepasst und vor</span></span>
+                    <span class="mask"><span in:fly="{{ y: 200, duration: 1200, delay: 300 }}">allem pfeilschnell.</span></span>
+                </p>
             {/if}
         </div>
     </section>
@@ -27,7 +35,7 @@
         max-width: var(--core-max-width);
         margin: 0 auto;
         overflow: hidden;
-        margin-top: -75vh;
+        margin-top: -50vh;
         position: relative;
 
         div {
@@ -35,9 +43,9 @@
         }
 
         p {
-            font-size: fn.rfs(28, 72);
+            font-size: fn.rfs(26, 72);
             font-weight: 500;
-            line-height: 1.15;
+            line-height: 1.2;
             // color: hsl(var(--hue), 70%, 95%);
             // text-shadow: -0.05em 0.05em 0.02em hsl(var(--hue), 80%, 30%);
             // transform: translate(#{fn.rem(200)}, 0);
@@ -47,5 +55,10 @@
             //     transform: translate(0, 0);
             // }
         }
+    }
+
+    .mask {
+        display: inline-flex;
+        overflow: hidden;
     }
 </style>
