@@ -21,7 +21,7 @@
 
     // fonts
     --serif: "Iskry";
-    --sans: "sans-serif";
+    --sans: "FF Mark";
 
     --w1-serif: 700 #{fn.rem(16)} / 1.4 var(--serif);
 
@@ -69,7 +69,7 @@
         --on-base-s: 0%;
         --on-base-l: 0%;
 
-        --serif: "sans-serif";
+        --serif: "FF Mark";
 
         ::-webkit-scrollbar {
             width: 10px;
@@ -176,6 +176,14 @@ hr {
     border-style: solid;
     border-color: var(--on-base);
     border-width: 0 0 #{fn.rem(1)} 0;
+}
+
+b, strong, h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+em, i {
+    font-style: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {

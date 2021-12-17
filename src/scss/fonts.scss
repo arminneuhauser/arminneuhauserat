@@ -1,21 +1,47 @@
-// FF Meta
+/**
+ * @license
+ * MyFonts Webfont Build ID 4251608, 2021-12-16T17:32:50-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: FF Mark Std Regular by FontFont
+ * URL: https://www.myfonts.com/fonts/fontfont/mark/ot-regular/
+ * 
+ * Webfont: FF Mark Std Medium by FontFont
+ * URL: https://www.myfonts.com/fonts/fontfont/mark/ot-medium/
+ * 
+ * 
+ * Webfonts copyright: 2016 published by Monotype GmbH
+ * 
+ * © 2021 MyFonts Inc
+ *
+ * https://www.myfonts.com/users/aszjgac7hn/orders/12745014/
+*/
+
 @font-face {
-    font-family: "sans-serif";
+    font-family: "FF Mark";
     font-weight: 400;
-    src: url("/fonts/info-regular.woff2");
+    src: url('/fonts/ff-mark-regular.woff2') format('woff2');
     font-display: swap;
 }
 @font-face {
-    font-family: "sans-serif";
+    font-family: "FF Mark";
     font-weight: 500;
-    src: url("/fonts/info-medium.woff2");
+    src: url("/fonts/ff-mark-medium.woff2") format('woff2');
     font-display: swap;
 }
 
-// Iskry
+/** 
+ * Iskry
+ * https://laic.pl/my-account/view-order/1617/
+*/
 @font-face {
     font-family: "Iskry";
     font-weight: 700;
-    src: url("/fonts/iskry-bold.woff2");
+    src: url("/fonts/iskry-bold.woff2") format('woff2');
     font-display: swap;
 }
