@@ -102,7 +102,7 @@
             }
 
             @media (prefers-reduced-motion: no-preference) {
-                animation: to-top 0.5s var(--easing) forwards;
+                animation: to-top-10 0.5s var(--easing) forwards;
             }
         }
     }
@@ -143,7 +143,7 @@
             }
         }
 
-        :global(#death-star) {
+        :global(.death-star) {
             margin-right: #{fn.rem(-13)};
             padding: #{fn.rem(10)};
 

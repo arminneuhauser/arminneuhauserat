@@ -47,7 +47,7 @@
                 <span>{year}</span>
             </h1>
             <figure>
-                <img src={previewImage} alt={title} />
+                <img src={previewImage} alt={title} width="656" height="820" />
             </figure>
         </div>
         <!-- <div class="background" style="background-image: url({backgroundImage}); transform: translate(0, {scroll / 100}%) scale({1 + scroll / 100});"></div> -->

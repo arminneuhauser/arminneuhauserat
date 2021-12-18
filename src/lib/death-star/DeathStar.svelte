@@ -20,7 +20,7 @@
     }
 </script>
 
-<button id="death-star" title="Farbschema wechseln" on:click={handleDeathStarClick}>
+<button class="death-star" title="Farbschema wechseln" on:click={handleDeathStarClick}>
     {@html deathStarIcon}
 </button>
 

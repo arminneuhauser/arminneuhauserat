@@ -24,9 +24,18 @@
     }
 }
 
-@keyframes to-top {
+@keyframes to-top-10 {
     0% {
         transform: translate3d(0, 10%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes to-top {
+    0% {
+        transform: translate3d(0, 100%, 0);
     }
     100% {
         transform: translate3d(0, 0, 0);
