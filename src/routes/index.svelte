@@ -13,6 +13,7 @@
 
 <svelte:head>
     <title>Armin Neuhauser | Konzept, Design & Entwicklung</title>
+    <meta name="description" content="Armin Neuhauser ist ein österreichischer Grafik-Designer und Entwickler von Websites."/>
 </svelte:head>
 
 <svelte:window bind:scrollY={scrollY} />
