@@ -41,15 +41,19 @@
 
 <article class="teaser" bind:this={teaser} style="opacity: {opacity};">
     <div class="inner">
-        <div>
+        <header>
             <h1>
                 {title}
-                <span>{year}</span>
             </h1>
-            <figure>
-                <img src={previewImage} alt={title} width="656" height="820" />
-            </figure>
-        </div>
+            <div>{year}</div>
+        </header>
+        <figure>
+            <img src={previewImage} alt={title} width="656" height="820" loading="lazy" />
+        </figure>
+        <footer>
+            <p>Webdesign, Frontend-Development, CMS</p>
+            <hr/>
+        </footer>
         <!-- <div class="background" style="background-image: url({backgroundImage}); transform: translate(0, {scroll / 100}%) scale({1 + scroll / 100});"></div> -->
     </div>
 </article>
@@ -77,9 +81,8 @@
         position: relative;
         top: 0;
         height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        // grid-template-rows: auto min-content min-content min-content auto;
         padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
         box-sizing: border-box;
 
@@ -92,21 +95,21 @@
         }
     }
 
-    figure {
-        display: block;
-        margin: 0;
+    header {
+        // grid-row: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0.25em;
+        margin: #{fn.rem(10)} 0;
     }
 
     h1 {
         font-family: var(--serif);
         font-weight: 700;
         font-size: #{fn.rfs(36, 70)};
-        margin: 0.25em 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 0.25em;
+        margin: 0;
 
         span {
             font-family: var(--sans);
@@ -115,15 +118,26 @@
         }
     }
 
-    // .background {
-    //     background-size: cover;
-    //     background-position: center center;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     bottom: 0;
-    //     right: 0;
-    //     z-index: -1;
-    //     pointer-events: none;
-    // }
+    figure {
+        // grid-row: 3;
+        display: block;
+        margin: 0;
+        aspect-ratio: 0.8;
+        justify-self: start;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    footer {
+        // grid-row: 4;
+        margin: #{fn.rem(10)} 0;
+
+        p {
+            margin: 0;
+        }
+
+        hr {
+            margin-top: #{fn.rem(30)};
+        }
+    }
 </style>
