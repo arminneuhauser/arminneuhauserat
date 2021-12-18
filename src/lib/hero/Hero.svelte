@@ -97,6 +97,12 @@
                 margin-right: 0.6em;
             }
 
+            &:nth-child(2) {
+                :global([color-scheme="highcontrast"]) & {
+                    margin-right: 0.3em;
+                }
+            }
+
             &:last-child {
                 margin-left: 1em;
             }
