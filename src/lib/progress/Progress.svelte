@@ -86,7 +86,7 @@
     }
     .progress-bar {        
         height: #{fn.rem(1)};
-        background-color: rgba(255,255,255,0.1);
+        background-color: hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.1);
 
         @media (prefers-reduced-motion: reduce) {
             display: none !important;
@@ -94,7 +94,7 @@
     }
     .progress-sliver {
         width: var(--width);
-        background-color: rgba(255,255,255,0.5);
+        background-color: hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.5);
         height: 100%;
     }
 </style>
