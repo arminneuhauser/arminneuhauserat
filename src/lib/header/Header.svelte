@@ -67,26 +67,28 @@
     </section>
 </header>
 
-<nav class="mobile-nav" class:active="{mobileMenuVisible}">
-    <div>
-        <a sveltekit:prefetch href="/" title="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
-            <span>Start</span>
-        </a>
-        <a sveltekit:prefetch href="/projekte" title="Projekte" on:click={handleMobileClick}>
-            <span>Projekte</span>
-        </a>
-        <a sveltekit:prefetch href="/ueber-mich" title="Über mich" on:click={handleMobileClick}>
-            <span>Über mich</span>
-        </a>
-        <a sveltekit:prefetch href="/kontakt" title="Kontakt" on:click={handleMobileClick}>
-            <span>Kontakt</span>
-        </a>
-    </div>
-    <footer>
-        <h3><span>Sag Hallo</span></h3>
-        <a href="mailto:mail@arminneuhauser.at"><span>mail@arminneuhauser.at</span></a>
-    </footer>
-</nav>
+<aside class="mobile-nav" class:active="{mobileMenuVisible}">
+    <nav>
+        <div>
+            <a sveltekit:prefetch href="/" title="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
+                <span>Start</span>
+            </a>
+            <a sveltekit:prefetch href="/projekte" title="Projekte" on:click={handleMobileClick}>
+                <span>Projekte</span>
+            </a>
+            <a sveltekit:prefetch href="/ueber-mich" title="Über mich" on:click={handleMobileClick}>
+                <span>Über mich</span>
+            </a>
+            <a sveltekit:prefetch href="/kontakt" title="Kontakt" on:click={handleMobileClick}>
+                <span>Kontakt</span>
+            </a>
+        </div>
+        <footer>
+            <h3><span>Sag Hallo</span></h3>
+            <a href="mailto:mail@arminneuhauser.at"><span>mail@arminneuhauser.at</span></a>
+        </footer>
+    </nav>
+</aside>
 
 <style lang="scss">
     @use "src/scss/animations.scss";
@@ -294,10 +296,6 @@
         transition: opacity .4s cubic-bezier(0.7,0,0.3,1);
         z-index: 9;
         height: 100vh;
-        padding: #{fn.rem(100)} var(--core-padding) var(--core-padding);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
         @media (max-width: var.$breakpoint-sm-max) {
             &.active {
@@ -339,12 +337,21 @@
             display: none;
         }
 
-        > div {
-            flex-grow: 1;
+        > nav {
+            height: var(--app-height);
+            padding: #{fn.rem(100)} var(--core-padding) var(--core-padding);
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-bottom: #{fn.rem(100)};
+
+            > div {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-bottom: #{fn.rem(100)};
+            }
         }
 
         a {
@@ -364,11 +371,6 @@
 
         footer {
             margin-top: auto;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 0 var(--core-padding) var(--core-padding);
 
             h3, a {
                 overflow: hidden;
