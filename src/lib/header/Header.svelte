@@ -36,7 +36,7 @@
 <header>
     <section>
         <div class="logo" >
-            <a sveltekit:prefetch href="/" title="Armin Neuhauser" on:click={scrollToTop}>
+            <a sveltekit:prefetch href="/" title="Armin Neuhauser" on:click={handleMobileClick}>
                 <i>A</i><i>r</i><i>m</i><i>i</i><i>n</i> <i>N</i><i>e</i><i>u</i><i>h</i><i>a</i><i>u</i><i>s</i><i>e</i><i>r</i>
             </a>
         </div>
@@ -68,18 +68,24 @@
 </header>
 
 <nav class="mobile-nav" class:active="{mobileMenuVisible}">
-    <a sveltekit:prefetch href="/" title="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
-        Start
-    </a>
-    <a sveltekit:prefetch href="/projekte" title="Projekte" on:click={handleMobileClick}>
-        Projekte
-    </a>
-    <a sveltekit:prefetch href="/ueber-mich" title="Über mich" on:click={handleMobileClick}>
-        Über mich
-    </a>
-    <a sveltekit:prefetch href="/kontakt" title="Kontakt" on:click={handleMobileClick}>
-        Kontakt
-    </a>
+    <div>
+        <a sveltekit:prefetch href="/" title="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
+            <span>Start</span>
+        </a>
+        <a sveltekit:prefetch href="/projekte" title="Projekte" on:click={handleMobileClick}>
+            <span>Projekte</span>
+        </a>
+        <a sveltekit:prefetch href="/ueber-mich" title="Über mich" on:click={handleMobileClick}>
+            <span>Über mich</span>
+        </a>
+        <a sveltekit:prefetch href="/kontakt" title="Kontakt" on:click={handleMobileClick}>
+            <span>Kontakt</span>
+        </a>
+    </div>
+    <footer>
+        <h3><span>Sag Hallo</span></h3>
+        <a href="mailto:mail@arminneuhauser.at"><span>mail@arminneuhauser.at</span></a>
+    </footer>
 </nav>
 
 <style lang="scss">
@@ -288,7 +294,7 @@
         transition: opacity .4s cubic-bezier(0.7,0,0.3,1);
         z-index: 9;
         height: 100vh;
-        padding: #{fn.rem(100)} var(--core-padding);
+        padding: #{fn.rem(100)} var(--core-padding) var(--core-padding);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -297,6 +303,35 @@
             &.active {
                 opacity: 1;
                 pointer-events: all;
+
+                a {
+                    transform: rotateY(0deg);
+                    opacity: 1;
+
+                    span {
+                        animation: to-top 0.8s 0.2s var(--easing) forwards;
+                    }
+
+                    &:nth-child(2) span {
+                        animation-delay: 0.3s;
+                    }
+                    &:nth-child(3) span {
+                        animation-delay: 0.4s;
+                    }
+                    &:nth-child(4) span {
+                        animation-delay: 0.5s;
+                    }
+                }
+
+                footer {
+                    h3 span {
+                        animation: to-top 0.8s 0.7s var(--easing) forwards;
+                    }
+
+                    a span {
+                        animation-delay: 1s !important;
+                    }
+                }
             }
         }
 
@@ -304,12 +339,57 @@
             display: none;
         }
 
+        > div {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         a {
             display: flex;
             align-items: flex-end;
             font-size: #{fn.rem(32)};
+            line-height: 2;
             width: 100%;
             text-transform: uppercase;
+            overflow: hidden;
+            padding: 0;
+
+            span {
+                transform: translate3d(0, 100%, 0);
+                padding: 0;
+            }
+        }
+
+        footer {
+            margin-top: auto;
+
+            h3, a {
+                overflow: hidden;
+
+                span {
+                    display: inline-flex;
+                    transform: translate3d(0, 100%, 0);
+                }
+            }
+
+            h3 {
+                font: var(--w1-serif);
+                font-size: #{fn.rem(24)};
+                margin: 0 0 #{fn.rem(10)};
+
+                span {
+                    padding: 0;
+                }
+            }
+
+            a {
+                font: var(--w1-sans);
+                text-transform: none;
+                text-decoration: underline;
+                text-underline-offset: 0.2em;
+            }
         }
     }
 </style>
