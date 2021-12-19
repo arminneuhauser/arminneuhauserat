@@ -94,3 +94,12 @@
         top: 0%;
     }
 }
+
+@keyframes scale {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}

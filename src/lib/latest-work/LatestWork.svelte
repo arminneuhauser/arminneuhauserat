@@ -49,6 +49,7 @@
                 scrollY={scrollY}
                 title="MST Muhr"
                 year="2022"
+                desc="Webdesign, Development, CMS, Fotografie"
                 backgroundImage="/images/mst-muhr/mst-muhr-bg.jpg"
                 previewImage="/images/mst-muhr/mst-muhr.jpg">
             </Teaser>
@@ -57,6 +58,7 @@
                 scrollY={scrollY}
                 title="Solmates"
                 year="2019"
+                desc="Webdesign, Development, CMS, Fotografie, Texte"
                 backgroundImage="/images/solmates/solmates-bg.jpg"
                 previewImage="/images/solmates/solmates.jpg">
             </Teaser>
@@ -64,7 +66,8 @@
             <Teaser 
                 scrollY={scrollY}
                 title="[wohnformat]"
-                year="2018"
+                year="2016"
+                desc="Corporate Identity, Webdesign, Development, CMS"
                 backgroundImage="/images/wohnformat/wohnformat-bg.jpg"
                 previewImage="/images/wohnformat/wohnformat.jpg">
             </Teaser>
