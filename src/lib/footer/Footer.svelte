@@ -64,6 +64,7 @@
             margin: 0 #{fn.rem(-10)};
             padding: #{fn.rem(10)};
             text-decoration: underline;
+            text-underline-offset: 0.2em;
             transition: color 0.2s var(--easing);
             
             &:hover {
