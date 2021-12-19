@@ -293,7 +293,7 @@
         pointer-events: none;
         transition: opacity .4s cubic-bezier(0.7,0,0.3,1);
         z-index: 9;
-        height: 100vh;
+        height: var(--app-height, 100vh);
         padding: #{fn.rem(100)} var(--core-padding) var(--core-padding);
         display: flex;
         flex-direction: column;
@@ -348,7 +348,6 @@
 
         a {
             display: flex;
-            align-items: flex-end;
             font-size: #{fn.rem(32)};
             line-height: 2;
             width: 100%;
