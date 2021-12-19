@@ -5,8 +5,8 @@
     export let title;
     export let year;
     export let desc;
-    export let backgroundImage;
-    export let previewImage;
+    export let imageSm;
+    export let imageLg;
 
     let teaser;
     let topPosition;
@@ -52,9 +52,14 @@
                 <div>{year}</div>
             </header>
         </IntersectionObserver>
+
         <figure>
-            <img src={previewImage} alt={title} width="656" height="820" loading="lazy" />
+            <picture>
+                <source media="(min-width: 768px)" srcset={imageLg}>
+                <img src={imageSm} alt={title} loading="lazy" />
+            </picture>
         </figure>
+
         <IntersectionObserver element={element2} bind:intersecting={intersecting2}>
             <footer class:intersecting={intersecting2} bind:this={element2}>
                 <p>
@@ -70,7 +75,6 @@
     @use "src/scss/animations.scss";
 
     .teaser {
-        // background-color: var(--base);
         position: relative;
         margin-top: -100vh;
 
@@ -82,45 +86,50 @@
             pointer-events: none;
             position: relative;
         }
-        // &:last-of-type::after {
-        //     display: none;
-        // }
     }
 
     .inner {
         position: relative;
         top: 0;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        // grid-template-rows: auto min-content min-content min-content auto;
+        display: grid;
+        // grid-gap: #{fn.rem(10)};
+        grid-template-rows: repeat(5, auto);
         padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
         box-sizing: border-box;
+        max-width: calc(var(--core-max-width) + var(--core-padding) * 2);
+        margin: 0 auto;
 
         @media (prefers-reduced-motion: no-preference) {
             position: sticky;
         }
 
         @media (min-width: var.$breakpoint-md) {
+            grid-template-columns: 1fr minmax(auto, #{fn.rem(1270)}) 1fr;
             padding-top: #{fn.rem(100)};
         }
     }
 
     header {
-        // grid-row: 2;
+        grid-row: 2;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: baseline;
-        gap: 0.25em;
-        margin: #{fn.rem(10)} 0;
+        gap: 0.5em;
         width: 100%;
         overflow: hidden;
+        flex: 1 0 auto;
+        margin-bottom: #{fn.rem(10)};
+
+        @media (min-width: var.$breakpoint-md) {
+            grid-column: 1;
+            grid-row: 3;
+            justify-content: flex-start;
+        }
 
         h1 {
-            font-size: #{fn.rfs(24, 36)};
+            font-size: #{fn.rem(26)};
             margin: 0;
             transform: translate3d(0, 100%, 0);
         }
@@ -140,18 +149,28 @@
     }
 
     figure {
-        // grid-row: 3;
-        display: block;
+        grid-row: 3;
+        display: flex;
         margin: 0;
         aspect-ratio: 0.8;
         justify-self: start;
         overflow: hidden;
-        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+
+        @media (min-width: var.$breakpoint-md) {
+            aspect-ratio: unset;
+            grid-column: 2;
+        }
+
+        picture {
+            flex-basis: 100%;
+        }
     }
 
     footer {
-        // grid-row: 4;
-        margin: #{fn.rem(10)} 0;
+        grid-row: 4;
+        margin-top: #{fn.rem(10)};
         width: 100%;
 
         p {
@@ -166,7 +185,7 @@
         }
 
         hr {
-            margin-top: #{fn.rem(30)};
+            margin: #{fn.rem(20)} 0 0;
             transform: scaleX(0);
             transform-origin: top left;
         }

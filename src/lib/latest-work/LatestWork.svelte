@@ -50,8 +50,9 @@
                 title="MST Muhr"
                 year="2022"
                 desc="Webdesign, Development, CMS, Fotografie"
-                backgroundImage="/images/mst-muhr/mst-muhr-bg.jpg"
-                previewImage="/images/mst-muhr/mst-muhr.jpg">
+                imageSm="/images/mst-muhr/mst-muhr.jpg"
+                imageLg="/images/mst-muhr/mst-muhr-lg.jpg"
+            >
             </Teaser>
 
             <Teaser 
@@ -59,8 +60,9 @@
                 title="Solmates"
                 year="2019"
                 desc="Webdesign, Development, CMS, Fotografie, Texte"
-                backgroundImage="/images/solmates/solmates-bg.jpg"
-                previewImage="/images/solmates/solmates.jpg">
+                imageSm="/images/solmates/solmates.jpg"
+                imageLg="/images/solmates/solmates-lg.jpg"
+            >
             </Teaser>
 
             <Teaser 
@@ -68,8 +70,9 @@
                 title="[wohnformat]"
                 year="2016"
                 desc="Corporate Identity, Webdesign, Development, CMS"
-                backgroundImage="/images/wohnformat/wohnformat-bg.jpg"
-                previewImage="/images/wohnformat/wohnformat.jpg">
+                imageSm="/images/wohnformat/wohnformat.jpg"
+                imageLg="/images/wohnformat/wohnformat-lg.jpg"
+            >
             </Teaser>
         </div>
     </div>

@@ -30,6 +30,7 @@
     // misc
     --core-padding: 1.5rem;
     --core-max-width: #{fn.rem(1920)};
+    --content-max-width: #{fn.rem(768)};
 
     --easing: cubic-bezier(0.25, 0.1, 0.25, 1);
 
