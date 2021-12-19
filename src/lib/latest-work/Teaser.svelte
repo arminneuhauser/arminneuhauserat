@@ -106,7 +106,9 @@
 
         @media (min-width: var.$breakpoint-md) {
             grid-template-columns: 1fr minmax(auto, #{fn.rem(1270)}) 1fr;
+            grid-template-rows: repeat(4, auto);
             padding-top: #{fn.rem(100)};
+            align-items: center;
         }
     }
 
@@ -123,15 +125,20 @@
         margin-bottom: #{fn.rem(10)};
 
         @media (min-width: var.$breakpoint-md) {
-            grid-column: 1;
-            grid-row: 3;
+            grid-column: 1 / span 2;
+            grid-row: 2;
             justify-content: flex-start;
+            align-self: flex-end;
         }
 
         h1 {
             font-size: #{fn.rem(26)};
             margin: 0;
             transform: translate3d(0, 100%, 0);
+
+            @media (min-width: var.$breakpoint-md) {
+                font-size: #{fn.rfs(72, 110, 768, 1920)};
+            }
         }
 
         div {
@@ -139,6 +146,10 @@
             font-weight: 400;
             font-size: #{fn.rem(14)};
             transform: translate3d(0, 100%, 0);
+
+            @media (min-width: var.$breakpoint-md) {
+                font-size: #{fn.rfs(18, 24, 768, 1920)};
+            }
         }
 
         &.intersecting {
@@ -161,6 +172,7 @@
         @media (min-width: var.$breakpoint-md) {
             aspect-ratio: unset;
             grid-column: 2;
+            grid-row: 2 / span 2;
         }
 
         picture {
@@ -173,10 +185,20 @@
         margin-top: #{fn.rem(10)};
         width: 100%;
 
+        @media (min-width: var.$breakpoint-md) {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+            align-self: flex-start;
+        }
+
         p {
             font-size: #{fn.rem(14)};
             margin: 0;
             overflow: hidden;
+
+            @media (min-width: var.$breakpoint-md) {
+                font-size: #{fn.rfs(18, 24, 768, 1920)};
+            }
 
             span {
                 display: inline-flex;
@@ -188,6 +210,10 @@
             margin: #{fn.rem(20)} 0 0;
             transform: scaleX(0);
             transform-origin: top left;
+
+            @media (min-width: var.$breakpoint-md) {
+                display: none;
+            }
         }
 
         &.intersecting {
