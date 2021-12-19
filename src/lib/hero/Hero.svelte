@@ -85,6 +85,14 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
+
+        :global([color-scheme="highcontrast"]) & {
+            line-height: 1;
+
+            span {
+                margin: 0 !important;
+            }
+        }
         
         @media (prefers-reduced-motion: no-preference) {
             animation: fadein-from-primary 2s var(--easing) forwards;
@@ -95,12 +103,6 @@
 
             &:first-child {
                 margin-right: 0.6em;
-            }
-
-            &:nth-child(2) {
-                :global([color-scheme="highcontrast"]) & {
-                    margin-right: 0.3em;
-                }
             }
 
             &:last-child {
