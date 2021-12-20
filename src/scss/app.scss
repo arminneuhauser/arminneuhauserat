@@ -106,6 +106,7 @@ body {
     padding: 0;
     background-color: var(--base);
     color: var(--on-base);
+    cursor: default;
     -webkit-tap-highlight-color: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.3);
 
     &.noscroll {

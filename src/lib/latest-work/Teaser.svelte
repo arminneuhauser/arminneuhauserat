@@ -93,7 +93,6 @@
         top: 0;
         height: 100vh;
         display: grid;
-        grid-gap: #{fn.rem(10)};
         grid-template-rows: 1fr repeat(3, auto) 1fr;
         padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
         box-sizing: border-box;
@@ -105,7 +104,7 @@
         }
 
         @media (min-width: var.$breakpoint-md) {
-            grid-template-columns: 1fr minmax(auto, #{fn.rem(1270)}) 1fr;
+            grid-template-columns: minmax(#{fn.rem(50)}, auto) minmax(auto, #{fn.rem(1270)}) minmax(#{fn.rem(50)}, auto);
             grid-template-rows: repeat(4, auto);
             padding-top: #{fn.rem(100)};
             align-items: center;
@@ -130,6 +129,7 @@
             grid-row: 2;
             justify-content: flex-start;
             align-self: flex-end;
+            margin-bottom: 0;
         }
 
         h1 {
@@ -171,9 +171,10 @@
         max-height: 100%;
 
         @media (min-width: var.$breakpoint-md) {
-            aspect-ratio: unset;
+            aspect-ratio: 1.77778;
             grid-column: 2;
             grid-row: 2 / span 2;
+            justify-self: center;
         }
 
         picture {
@@ -190,6 +191,7 @@
             grid-column: 1 / span 2;
             grid-row: 3;
             align-self: flex-start;
+            margin: 0 0 0 0.3em;
         }
 
         p {
@@ -219,11 +221,11 @@
 
         &.intersecting {
             p span {
-                animation: to-top 0.8s var(--easing) forwards;
+                animation: to-top 0.8s 0.4s var(--easing) forwards;
             }
 
             hr {
-                animation: scale 0.8s 0.5s var(--easing) forwards;
+                animation: scale 0.8s 0.6s var(--easing) forwards;
             }
         }
     }

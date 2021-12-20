@@ -32,7 +32,7 @@
         grid-gap: 0;
         grid-template-columns: auto clamp(#{fn.rem(280)}, 10rem + 30vw, #{fn.rem(2560)}) auto;
         justify-content: center;
-        padding: var(--core-padding);
+        padding: #{fn.rem(70)} var(--core-padding);
         max-width: var(--core-max-width);
         margin: 0 auto;
         overflow: hidden;
