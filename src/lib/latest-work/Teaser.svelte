@@ -93,8 +93,8 @@
         top: 0;
         height: 100vh;
         display: grid;
-        // grid-gap: #{fn.rem(10)};
-        grid-template-rows: repeat(5, auto);
+        grid-gap: #{fn.rem(10)};
+        grid-template-rows: 1fr repeat(3, auto) 1fr;
         padding: #{fn.rem(80)} var(--core-padding) var(--core-padding);
         box-sizing: border-box;
         max-width: calc(var(--core-max-width) + var(--core-padding) * 2);
@@ -114,6 +114,7 @@
 
     header {
         grid-row: 2;
+        align-self: end;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
