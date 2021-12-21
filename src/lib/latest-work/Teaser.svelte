@@ -29,7 +29,7 @@
     // transform opacity on scroll
     function parseScroll() {
         topPosition = teaser.getBoundingClientRect().top;
-        relativePosition = map(topPosition / windowHeight / 1.5, -0.9, -0.4, 0, 1); // opacity 0 when 90%, 1 when 50% scrolled
+        relativePosition = map(topPosition / windowHeight / 2, -0.9, -0.4, 0, 1); // opacity 0 when 90%, 1 when 50% scrolled
 
         if (relativePosition <= 0) {
             opacity = 0;
@@ -89,7 +89,7 @@
         &::after {
             content: '';
             display: block;
-            height: calc(var(--app-height, 100vh) * 1.5);
+            height: calc(var(--app-height, 100vh) * 2);
             width: 100%;
             pointer-events: none;
             position: relative;
