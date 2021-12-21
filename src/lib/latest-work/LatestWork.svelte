@@ -134,6 +134,7 @@
 
         > div {
             margin-top: calc(100vh - #{fn.rem(40)});
+            scroll-snap-type: y mandatory;
         }
     }
 </style>

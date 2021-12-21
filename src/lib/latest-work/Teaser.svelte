@@ -77,6 +77,7 @@
     .teaser {
         position: relative;
         margin-top: -100vh;
+        scroll-snap-align: start;
 
         &::after {
             content: '';
