@@ -36,9 +36,8 @@
         max-width: var(--core-max-width);
         margin: 0 auto;
         overflow: hidden;
-        margin-top: -100vh;
+        margin-top: -50vh;
         position: relative;
-        scroll-snap-align: start;
 
         div {
             grid-column: 2;

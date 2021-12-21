@@ -27,7 +27,6 @@
     footer {
         background-color: var(--base);
         padding: #{fn.rem(70)} var(--core-padding) var(--core-padding);
-        scroll-snap-align: start;
 
         @media (min-width: var.$breakpoint-md) {
             padding-top: #{fn.rem(30)};
