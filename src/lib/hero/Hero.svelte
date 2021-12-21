@@ -47,6 +47,7 @@
         min-height: var(--app-height, 100vh);
         padding: var(--core-padding) 0;
         z-index: 1;
+        scroll-snap-align: start;
     }
 
     .headline {

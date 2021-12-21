@@ -84,6 +84,7 @@
         box-sizing: border-box;
         min-height: 100vh;
         padding: #{fn.rem(140)} 0 0;
+        scroll-snap-align: start;
 
         > h1 {
             font-size: #{fn.rfs(40, 140, 360, 2560)};
@@ -134,7 +135,6 @@
 
         > div {
             margin-top: calc(100vh - #{fn.rem(40)});
-            scroll-snap-type: y mandatory;
         }
     }
 </style>
