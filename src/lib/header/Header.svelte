@@ -217,7 +217,7 @@
         &:hover {
             i {
                 @media (prefers-reduced-motion: no-preference) {
-                    animation: flip-and-back 0.5s var(--easing) 0.02s;
+                    animation: flip-and-back 0.5s 0.02s var(--easing);
                 }
 
                 &:nth-child(2) {
