@@ -1,5 +1,6 @@
 <script lang="ts">
     import IntersectionObserver from "svelte-intersection-observer";
+    import arrow from './arrow.svg?raw';
 
     export let scrollY;
     export let title;
@@ -28,7 +29,7 @@
     // transform opacity on scroll
     function parseScroll() {
         topPosition = teaser.getBoundingClientRect().top;
-        relativePosition = map(topPosition / windowHeight / 1.5, -0.9, -0.5, 0, 1); // opacity 0 when 90%, 1 when 50% scrolled
+        relativePosition = map(topPosition / windowHeight / 1.5, -0.9, -0.4, 0, 1); // opacity 0 when 90%, 1 when 50% scrolled
 
         if (relativePosition <= 0) {
             opacity = 0;
@@ -62,10 +63,16 @@
 
         <IntersectionObserver element={element2} bind:intersecting={intersecting2}>
             <footer class:intersecting={intersecting2} bind:this={element2}>
-                <p>
-                    <span>{desc}</span>
-                </p>
-                <hr/>
+                <div>    
+                    <a href="#" title="Projekt {title} ansehen">
+                        <span>
+                            <i><i>P</i></i><i><i>r</i></i><i><i>o</i></i><i><i>j</i></i><i><i>e</i></i><i><i>k</i></i><i><i>t</i></i> <i><i>a</i></i><i><i>n</i></i><i><i>s</i></i><i><i>e</i></i><i><i>h</i></i><i><i>e</i></i><i><i>n</i></i>
+                        </span>
+                        <em>
+                            {@html arrow}
+                        </em>
+                    </a>
+                </div>
             </footer>
         </IntersectionObserver>
     </div>
@@ -77,7 +84,7 @@
     .teaser {
         position: relative;
         margin-top: calc(var(--app-height, -100vh) * -1);
-        scroll-snap-align: start;
+        pointer-events: none;
 
         &::after {
             content: '';
@@ -99,6 +106,10 @@
         box-sizing: border-box;
         max-width: calc(var(--core-max-width) + var(--core-padding) * 2);
         margin: 0 auto;
+
+        > * {
+            pointer-events: auto;
+        }
 
         @media (prefers-reduced-motion: no-preference) {
             position: sticky;
@@ -189,7 +200,6 @@
 
     footer {
         grid-row: 4;
-        margin-top: #{fn.rem(10)};
         width: 100%;
         position: relative;
         z-index: 2;
@@ -201,38 +211,118 @@
             margin: 0 0 0 0.3em;
         }
 
-        p {
-            font-size: #{fn.rem(14)};
-            margin: 0;
-            overflow: hidden;
+        div {
+            display: flex;
+            align-items: center;
+            gap: #{fn.rem(10)};
 
-            @media (min-width: var.$breakpoint-md) {
-                font-size: #{fn.rfs(18, 24, 768, 1920)};
+            &::before {
+                content: '';
+                height: 1px;
+                flex: 1 0 auto;
+                background-color: var(--on-base);
+                transform-origin: top left;
+                transform: scaleX(0) translateY(-0.5px);
+
+                @media (min-width: var.$breakpoint-md) {
+                    display: none;
+                }
             }
 
-            span {
-                display: inline-flex;
-                transform: translate3d(0, 100%, 0);
-            }
-        }
+            a {
+                display: flex;
+                align-items: center;
+                gap: #{fn.rem(8)};
+                text-transform: uppercase;
+                font-size: #{fn.rem(12)};
+                font-weight: 500;
+                letter-spacing: 0.03em;
+                padding: #{fn.rem(10)} 0;
 
-        hr {
-            margin: #{fn.rem(20)} 0 0;
-            transform: scaleX(0);
-            transform-origin: top left;
+                span {
+                    pointer-events: none;
+                }
 
-            @media (min-width: var.$breakpoint-md) {
-                display: none;
+                i {
+                    display: inline-flex;
+                    overflow: hidden;
+
+                    i {
+                        display: inline-flex;
+                        transform: translate3d(-100%, 0, 0);
+                    }
+                }
+
+                em {
+                    display: inline-flex;
+                    pointer-events: none;
+                    overflow: hidden;
+                    font-style: normal;
+
+                    :global(svg) {
+                        transform: translate3d(-100%, 0, 0);
+                    }
+                }
             }
         }
 
         &.intersecting {
-            p span {
-                animation: to-top 0.8s 0.4s var(--easing) forwards;
+            div {
+                &::before {
+                    animation: scale 0.5s var(--easing) forwards;
+                }
             }
+            a {
+                i {
+                    i {
+                        animation: to-right 0.2s 0.5s var(--easing) forwards;
+                    }
+                    &:nth-child(2) i {
+                        animation-delay: 0.54s;
+                    }
+                    &:nth-child(3) i {
+                        animation-delay: 0.58s;
+                    }
+                    &:nth-child(4) i {
+                        animation-delay: 0.62s;
+                    }
+                    &:nth-child(5) i {
+                        animation-delay: 0.66s;
+                    }
+                    &:nth-child(6) i {
+                        animation-delay: 0.7s;
+                    }
+                    &:nth-child(7) i {
+                        animation-delay: 0.74s;
+                    }
+                    &:nth-child(8) i {
+                        animation-delay: 0.82s;
+                    }
+                    &:nth-child(9) i {
+                        animation-delay: 0.86s;
+                    }
+                    &:nth-child(10) i {
+                        animation-delay: 0.9s;
+                    }
+                    &:nth-child(11) i {
+                        animation-delay: 0.94s;
+                    }
+                    &:nth-child(12) i {
+                        animation-delay: 0.98s;
+                    }
+                    &:nth-child(13) i {
+                        animation-delay: 1.02s;
+                    }
+                    &:nth-child(14) i {
+                        animation-delay: 1.06s;
+                    }
+                }
 
-            hr {
-                animation: scale 0.8s 0.6s var(--easing) forwards;
+                em {
+                    :global(svg) {
+                        animation: to-right 0.8s 1.1s var(--easing) forwards;
+                    }
+                }
             }
         }
     }
