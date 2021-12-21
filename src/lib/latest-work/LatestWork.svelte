@@ -59,7 +59,7 @@
                 scrollY={scrollY}
                 title="Solmates"
                 year="2019"
-                desc="Webdesign, Development, CMS, Fotografie, Texte"
+                desc="Design, Development, CMS, Fotografie, Texte"
                 imageSm="/images/solmates/solmates.jpg"
                 imageLg="/images/solmates/solmates-lg.jpg"
             >
@@ -69,7 +69,7 @@
                 scrollY={scrollY}
                 title="[wohnformat]"
                 year="2016"
-                desc="Corporate Identity, Webdesign, Development, CMS"
+                desc="CI, Webdesign, Development, CMS"
                 imageSm="/images/wohnformat/wohnformat.jpg"
                 imageLg="/images/wohnformat/wohnformat-lg.jpg"
             >
@@ -82,7 +82,7 @@
 <style lang="scss">
     .latest-work {
         box-sizing: border-box;
-        min-height: 100vh;
+        min-height: var(--app-height, 100vh);
         padding: #{fn.rem(140)} 0 0;
 
         > h1 {
@@ -133,7 +133,7 @@
         position: relative;
 
         > div {
-            margin-top: calc(100vh - #{fn.rem(40)});
+            margin-top: calc(var(--app-height, 100vh) - #{fn.rem(40)});
             scroll-snap-type: y mandatory;
         }
     }
