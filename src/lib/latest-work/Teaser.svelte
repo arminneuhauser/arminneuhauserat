@@ -124,6 +124,8 @@
         overflow: hidden;
         flex: 1 0 auto;
         margin-bottom: #{fn.rem(10)};
+        position: relative;
+        z-index: 3;
 
         @media (min-width: var.$breakpoint-md) {
             grid-column: 1 / span 2;
@@ -170,6 +172,8 @@
         overflow: hidden;
         width: 100%;
         max-height: 100%;
+        position: relative;
+        z-index: 1;
 
         @media (min-width: var.$breakpoint-md) {
             aspect-ratio: 1.77778;
@@ -187,6 +191,8 @@
         grid-row: 4;
         margin-top: #{fn.rem(10)};
         width: 100%;
+        position: relative;
+        z-index: 2;
 
         @media (min-width: var.$breakpoint-md) {
             grid-column: 1 / span 2;
