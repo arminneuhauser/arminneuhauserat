@@ -13,6 +13,9 @@
     let topPosition;
     let windowHeight;
     let relativePosition;
+    let mappedOpacityPosition;
+    let mappedScalePosition;
+    let scale = 1;
     let opacity = 1;
 
     let element;
@@ -29,14 +32,23 @@
     // transform opacity on scroll
     function parseScroll() {
         topPosition = teaser.getBoundingClientRect().top;
-        relativePosition = map(topPosition / windowHeight / 2, -0.9, -0.4, 0, 1); // opacity 0 when 90%, 1 when 50% scrolled
+        relativePosition = topPosition / windowHeight / 1.5;
 
-        if (relativePosition <= 0) {
+        mappedScalePosition = map(relativePosition, -1, 0.5, 1.3, 1);
+        mappedOpacityPosition = map(relativePosition, -0.9, -0.4, 0, 1); // opacity 0 when 90%, 1 when 40% scrolled
+
+        if (mappedScalePosition > 1.5) {
+            scale = 1.5;
+        } else {
+            scale = mappedScalePosition;
+        }
+
+        if (mappedOpacityPosition <= 0) {
             opacity = 0;
-        } else if (relativePosition > 1) {
+        } else if (mappedOpacityPosition > 1) {
             opacity = 1;
         } else {
-            opacity = relativePosition;
+            opacity = mappedOpacityPosition;
         }
     }
 </script>
@@ -58,7 +70,7 @@
             <a href="#" title="Projekt {title} ansehen">
                 <picture>
                     <source media="(min-width: 768px)" srcset={imageLg}>
-                    <img src={imageSm} alt={title} loading="lazy" />
+                    <img src={imageSm} alt={title} loading="lazy" style="transform: scale({scale});" />
                 </picture>
             </a>
         </figure>
@@ -91,7 +103,7 @@
         &::after {
             content: '';
             display: block;
-            height: calc(var(--app-height, 100vh) * 2);
+            height: calc(var(--app-height, 100vh) * 1.5);
             width: 100%;
             pointer-events: none;
             position: relative;
@@ -195,8 +207,16 @@
             justify-self: center;
         }
 
+        a {
+            display: flex;
+        }
+
         picture {
             flex-basis: 100%;
+        }
+
+        img {
+            transform-origin: bottom center;
         }
     }
 
@@ -240,6 +260,10 @@
                 font-weight: 500;
                 letter-spacing: 0.03em;
                 padding: #{fn.rem(10)} 0;
+
+                @media (min-width: var.$breakpoint-md) {
+                    font-size: #{fn.rem(14)};
+                }
 
                 span {
                     pointer-events: none;

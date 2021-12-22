@@ -3,6 +3,7 @@
     import IntersectionObserver from "svelte-intersection-observer";
     import { spring } from 'svelte/motion';
     import Teaser from "./Teaser.svelte";
+    // import Navigation from "./Navigation.svelte";
     import wheel from './wheel.svg?raw';
 
 	export let scrollY;
@@ -76,7 +77,7 @@
             </Teaser>
         </div>
     </div>
-
+    <!-- <Navigation scrollY={scrollY} /> -->
 </section>
 
 <style lang="scss">
