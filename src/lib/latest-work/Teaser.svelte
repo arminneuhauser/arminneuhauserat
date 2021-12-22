@@ -55,10 +55,12 @@
         </IntersectionObserver>
 
         <figure>
-            <picture>
-                <source media="(min-width: 768px)" srcset={imageLg}>
-                <img src={imageSm} alt={title} loading="lazy" />
-            </picture>
+            <a href="#" title="Projekt {title} ansehen">
+                <picture>
+                    <source media="(min-width: 768px)" srcset={imageLg}>
+                    <img src={imageSm} alt={title} loading="lazy" />
+                </picture>
+            </a>
         </figure>
 
         <IntersectionObserver element={element2} bind:intersecting={intersecting2}>
