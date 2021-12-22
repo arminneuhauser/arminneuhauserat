@@ -16,6 +16,7 @@
     import debounce from 'debounce';
     import { onMount } from 'svelte';
     import { skipHello } from '@pixi/utils';
+    import { scheme } from '../../stores.js';
 
     // This initialization needs to only happen once, even when the component
     // is unmounted and re-mounted
@@ -68,21 +69,6 @@
 
         app.stage.addChild(bgContainer);
         // app.stage.addChild(bgContainer, fgContainer);
-
-        let blurFilter = new KawaseBlurFilter(setBlur(), 10, true);
-
-        let noiseFilter = new NoiseFilter(0.2, random(0, 0.02));
-        // noiseFilter.blendMode = BLEND_MODES.COLOR_BURN;
-
-        let colorMatrix = new ColorMatrixFilter();
-        colorMatrix.technicolor(true);
-        colorMatrix.brightness(0.25, true);
-
-        bgContainer.filters = [
-            blurFilter,
-            noiseFilter,
-            colorMatrix,
-        ];
 
         // fgContainer.blendMode = BLEND_MODES.SOFT_LIGHT;
 
@@ -264,6 +250,39 @@
             orbs.push(orb);
         }
 
+        // add filters depending on scheme
+        let blurFilter = new KawaseBlurFilter(setBlur(), 10, true);
+        let noiseFilter = new NoiseFilter(0.2, random(0, 0.02));
+
+        scheme.subscribe(value => {
+            let colorMatrix = new ColorMatrixFilter();
+
+            if (value === "highcontrast") {
+                app.stage.visible = false;
+            } else if (value === "light") {
+                app.stage.visible = true;
+                // blurFilter.blur = 2;
+                noiseFilter.noise = 0.05;
+                colorMatrix.brightness(1, true);
+                // orbs.forEach((orb) => {
+                //     orb.fill = 0x7A8BCE;
+                //     orb.graphics.alpha  = 1;
+                // });
+            } else {
+                app.stage.visible = true;
+                blurFilter.blur = setBlur();
+                noiseFilter.noise = 0.2;
+                colorMatrix.technicolor(true);
+                colorMatrix.brightness(0.25, true);
+            }
+
+            bgContainer.filters = [
+                blurFilter,
+                noiseFilter,
+                colorMatrix,
+            ];
+        });
+
         // Animate!
         app.stage.interactive = true;
 
@@ -282,24 +301,6 @@
                 orb.render();
             });
         }
-
-        // circle
-        // const circle = new Graphics();
-
-        // circle.lineStyle(1, 0xFFFFFF, 0.8);
-        // circle.beginFill(0xFFFFFF, 0.5);
-
-        // circle.drawCircle(
-        //     window.innerWidth / 2, 
-        //     window.innerHeight / 2, 
-        //     window.innerWidth / 2
-        // );
-
-        // circle.endFill();
-
-        // circle.blendMode = BLEND_MODES.HARD_LIGHT;
-
-        // fgContainer.addChild(circle);
     });
 </script>
 
@@ -316,22 +317,22 @@
         z-index: -1;
     }
 
-    :global([color-scheme="light"]) {
-        canvas {
-            opacity: 0.25;
-            mix-blend-mode: luminosity;
-        }
-    }
+    // :global([color-scheme="light"]) {
+    //     canvas {
+    //         opacity: 0.25;
+    //         mix-blend-mode: luminosity;
+    //     }
+    // }
 
-    :global([color-scheme="highcontrast"]) {
-        canvas {
-            display: none;
-        }
-    }
+    // :global([color-scheme="highcontrast"]) {
+    //     canvas {
+    //         display: none;
+    //     }
+    // }
 
-    :global([color-scheme="blue"]) {
-        canvas {
-            mix-blend-mode: screen;
-        }
-    }
+    // :global([color-scheme="blue"]) {
+    //     canvas {
+    //         mix-blend-mode: screen;
+    //     }
+    // }
 </style>
