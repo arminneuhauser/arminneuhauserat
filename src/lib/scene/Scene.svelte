@@ -183,7 +183,7 @@
 
             setRadius() {
                 const windowSize = (window.innerWidth * window.innerHeight);
-                const radius = random(30 + windowSize / 12000, 100 + windowSize / 12000);
+                const radius = random(50 + windowSize / 12000, 100 + windowSize / 12000);
 
                 return this.radius = radius;
             }
@@ -191,11 +191,11 @@
             setBounds() {
                 // how far from the { x, y } origin can each orb move
                 const maxDistX = window.innerWidth / 1.5;
-                const maxDistY = window.innerHeight / 2.5;
+                const maxDistY = window.innerHeight / 3;
 
                 // the { x, y } origin for each orb (the bottom right of the screen)
                 const originX = window.innerWidth / 2;
-                const originY = window.innerHeight / 1.9;
+                const originY = window.innerHeight / 3;
 
                 // allow each orb to move x distance away from it's { x, y }origin
                 return {
@@ -256,7 +256,7 @@
         // Create orbs
         const orbs = [];
 
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 12; i++) {
             const orb = new Orb(colorPalette.randomColor());
 
             bgContainer.addChild(orb.graphics);
