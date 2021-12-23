@@ -4845,7 +4845,7 @@ var init_dist = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-eb553e76.js
+// .svelte-kit/output/server/chunks/index-a75c4654.js
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -5078,10 +5078,10 @@ function tweened(value, defaults = {}) {
   };
 }
 var subscriber_queue, scheme;
-var init_index_eb553e76 = __esm({
-  ".svelte-kit/output/server/chunks/index-eb553e76.js"() {
+var init_index_a75c4654 = __esm({
+  ".svelte-kit/output/server/chunks/index-a75c4654.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     subscriber_queue = [];
     scheme = writable("dark");
     scheme.subscribe((val) => {
@@ -5089,18 +5089,18 @@ var init_index_eb553e76 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-466af984.js
-var layout_466af984_exports = {};
-__export(layout_466af984_exports, {
+// .svelte-kit/output/server/chunks/__layout-f76f3f93.js
+var layout_f76f3f93_exports = {};
+__export(layout_f76f3f93_exports, {
   default: () => _layout,
   load: () => load
 });
 var import_cookie, getStores, page, css, Progress, load, _layout;
-var init_layout_466af984 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-466af984.js"() {
+var init_layout_f76f3f93 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-f76f3f93.js"() {
     init_shims();
-    init_app_1fea6c6a();
-    init_index_eb553e76();
+    init_app_d5644d2d();
+    init_index_a75c4654();
     import_cookie = __toModule(require_cookie());
     init_dist();
     getStores = () => {
@@ -5177,9 +5177,9 @@ ${`<div>${validate_component(Progress, "Progress").$$render($$result, {}, {}, {}
   }
 });
 
-// .svelte-kit/output/server/chunks/__error-1c1fdc56.js
-var error_1c1fdc56_exports = {};
-__export(error_1c1fdc56_exports, {
+// .svelte-kit/output/server/chunks/__error-60ebf934.js
+var error_60ebf934_exports = {};
+__export(error_60ebf934_exports, {
   default: () => _error,
   load: () => load2
 });
@@ -5193,10 +5193,10 @@ function load2({ error: error2, status }) {
   };
 }
 var import_cookie2, css2, _error;
-var init_error_1c1fdc56 = __esm({
-  ".svelte-kit/output/server/chunks/__error-1c1fdc56.js"() {
+var init_error_60ebf934 = __esm({
+  ".svelte-kit/output/server/chunks/__error-60ebf934.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     import_cookie2 = __toModule(require_cookie());
     init_dist();
     css2 = {
@@ -20734,17 +20734,17 @@ var require_debounce = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-f61e0132.js
-var index_f61e0132_exports = {};
-__export(index_f61e0132_exports, {
+// .svelte-kit/output/server/chunks/index-cbc6a0e6.js
+var index_cbc6a0e6_exports = {};
+__export(index_cbc6a0e6_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
 var import_app, import_graphics, import_display, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_utils, import_cookie3, deathStarIcon, css$5, DeathStar, css$4, Scene, css$3, Hero, IntersectionObserver_1, arrow, css$2, Teaser, wheel, css$1, LatestWork, css3, Wisdom, prerender, Routes;
-var init_index_f61e0132 = __esm({
-  ".svelte-kit/output/server/chunks/index-f61e0132.js"() {
+var init_index_cbc6a0e6 = __esm({
+  ".svelte-kit/output/server/chunks/index-cbc6a0e6.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     init_dist2();
     import_app = __toModule(require_app());
     import_graphics = __toModule(require_graphics());
@@ -20760,7 +20760,7 @@ var init_index_f61e0132 = __esm({
     import_hsl_to_hex = __toModule(require_hsl_to_hex());
     import_debounce = __toModule(require_debounce());
     import_utils = __toModule(require_utils());
-    init_index_eb553e76();
+    init_index_a75c4654();
     import_cookie3 = __toModule(require_cookie());
     init_dist();
     deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>';
@@ -21030,17 +21030,17 @@ ${validate_component(Scene, "Scene").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/ueber-mich-ed1ca3f1.js
-var ueber_mich_ed1ca3f1_exports = {};
-__export(ueber_mich_ed1ca3f1_exports, {
+// .svelte-kit/output/server/chunks/ueber-mich-00c3dfc9.js
+var ueber_mich_00c3dfc9_exports = {};
+__export(ueber_mich_00c3dfc9_exports, {
   default: () => Ueber_mich,
   prerender: () => prerender2
 });
 var import_cookie4, css4, prerender2, Ueber_mich;
-var init_ueber_mich_ed1ca3f1 = __esm({
-  ".svelte-kit/output/server/chunks/ueber-mich-ed1ca3f1.js"() {
+var init_ueber_mich_00c3dfc9 = __esm({
+  ".svelte-kit/output/server/chunks/ueber-mich-00c3dfc9.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     import_cookie4 = __toModule(require_cookie());
     init_dist();
     css4 = {
@@ -21061,16 +21061,16 @@ var init_ueber_mich_ed1ca3f1 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-d8acdbdd.js
-var index_d8acdbdd_exports = {};
-__export(index_d8acdbdd_exports, {
+// .svelte-kit/output/server/chunks/index-b8351b59.js
+var index_b8351b59_exports = {};
+__export(index_b8351b59_exports, {
   default: () => Projekte
 });
 var import_cookie5, css5, Projekte;
-var init_index_d8acdbdd = __esm({
-  ".svelte-kit/output/server/chunks/index-d8acdbdd.js"() {
+var init_index_b8351b59 = __esm({
+  ".svelte-kit/output/server/chunks/index-b8351b59.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     import_cookie5 = __toModule(require_cookie());
     init_dist();
     css5 = {
@@ -21087,16 +21087,16 @@ var init_index_d8acdbdd = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/wohnformat-e9a12503.js
-var wohnformat_e9a12503_exports = {};
-__export(wohnformat_e9a12503_exports, {
+// .svelte-kit/output/server/chunks/wohnformat-7dbaa68d.js
+var wohnformat_7dbaa68d_exports = {};
+__export(wohnformat_7dbaa68d_exports, {
   default: () => Wohnformat
 });
 var import_cookie6, css6, Wohnformat;
-var init_wohnformat_e9a12503 = __esm({
-  ".svelte-kit/output/server/chunks/wohnformat-e9a12503.js"() {
+var init_wohnformat_7dbaa68d = __esm({
+  ".svelte-kit/output/server/chunks/wohnformat-7dbaa68d.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     import_cookie6 = __toModule(require_cookie());
     init_dist();
     css6 = {
@@ -21117,73 +21117,81 @@ var init_wohnformat_e9a12503 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/mst-muhr-81e14945.js
-var mst_muhr_81e14945_exports = {};
-__export(mst_muhr_81e14945_exports, {
+// .svelte-kit/output/server/chunks/mst-muhr-10cd5872.js
+var mst_muhr_10cd5872_exports = {};
+__export(mst_muhr_10cd5872_exports, {
   default: () => Mst_muhr
 });
-var import_cookie7, Mst_muhr;
-var init_mst_muhr_81e14945 = __esm({
-  ".svelte-kit/output/server/chunks/mst-muhr-81e14945.js"() {
+var import_cookie7, css7, Mst_muhr;
+var init_mst_muhr_10cd5872 = __esm({
+  ".svelte-kit/output/server/chunks/mst-muhr-10cd5872.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     import_cookie7 = __toModule(require_cookie());
     init_dist();
+    css7 = {
+      code: "section.svelte-1ebj365.svelte-1ebj365{box-sizing:border-box;padding:9.375rem var(--core-padding)}section.svelte-1ebj365>div.svelte-1ebj365{margin:0 auto;max-width:var(--core-max-width)}h1.svelte-1ebj365.svelte-1ebj365{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}p.svelte-1ebj365.svelte-1ebj365{font-size:1.25rem}",
+      map: null
+    };
     Mst_muhr = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css7);
       return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | MST Muhr</title>`, ""}<meta name="${"description"}" content="${"MST Muhr"}" data-svelte="svelte-bc4syu">`, ""}
 
-<section><div><h1>MST Muhr</h1>
-        <p></p></div></section>
-
-`;
+<section class="${"svelte-1ebj365"}"><div class="${"svelte-1ebj365"}"><h1 class="${"svelte-1ebj365"}">MST Muhr</h1>
+        <p class="${"svelte-1ebj365"}"></p></div>
+</section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/solmates-c73639a2.js
-var solmates_c73639a2_exports = {};
-__export(solmates_c73639a2_exports, {
+// .svelte-kit/output/server/chunks/solmates-85886daf.js
+var solmates_85886daf_exports = {};
+__export(solmates_85886daf_exports, {
   default: () => Solmates
 });
-var import_cookie8, Solmates;
-var init_solmates_c73639a2 = __esm({
-  ".svelte-kit/output/server/chunks/solmates-c73639a2.js"() {
+var import_cookie8, css8, Solmates;
+var init_solmates_85886daf = __esm({
+  ".svelte-kit/output/server/chunks/solmates-85886daf.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     import_cookie8 = __toModule(require_cookie());
     init_dist();
+    css8 = {
+      code: "section.svelte-1ebj365.svelte-1ebj365{box-sizing:border-box;padding:9.375rem var(--core-padding)}section.svelte-1ebj365>div.svelte-1ebj365{margin:0 auto;max-width:var(--core-max-width)}h1.svelte-1ebj365.svelte-1ebj365{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}p.svelte-1ebj365.svelte-1ebj365{font-size:1.25rem}",
+      map: null
+    };
     Solmates = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css8);
       return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Solmates</title>`, ""}<meta name="${"description"}" content="${"Solmates ist ein Reiseblog von Armin & Miriam"}" data-svelte="svelte-7b7brd">`, ""}
 
-<section><div><h1>Solmates</h1>
-        <p>Solmates ist ein Reiseblog von Armin &amp; Miriam. Dieser Blog ist ein Platz um Erinnerungen zu speichern und zu teilen \u2013 f\xFCr uns selbst, unsere Familie und Freunde. Wir hoffen aber, dass unsere Beitr\xE4ge auch f\xFCr alle, die eine \xE4hnliche Reise geplant haben, hilfreich sind und freuen uns, wenn wir den ein oder anderen dazu inspirieren. Mehr \xFCber das Design und die Entwicklung des Blog k\xF6nnt ihr hier lesen.
-        </p></div></section>
-
-`;
+<section class="${"svelte-1ebj365"}"><div class="${"svelte-1ebj365"}"><h1 class="${"svelte-1ebj365"}">Solmates</h1>
+        <p class="${"svelte-1ebj365"}">Solmates ist ein Reiseblog von Armin &amp; Miriam. Dieser Blog ist ein Platz um Erinnerungen zu speichern und zu teilen \u2013 f\xFCr uns selbst, unsere Familie und Freunde. Wir hoffen aber, dass unsere Beitr\xE4ge auch f\xFCr alle, die eine \xE4hnliche Reise geplant haben, hilfreich sind und freuen uns, wenn wir den ein oder anderen dazu inspirieren. Mehr \xFCber das Design und die Entwicklung des Blog k\xF6nnt ihr hier lesen.
+        </p></div>
+</section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/kontakt-52358b9e.js
-var kontakt_52358b9e_exports = {};
-__export(kontakt_52358b9e_exports, {
+// .svelte-kit/output/server/chunks/kontakt-1b5ef48b.js
+var kontakt_1b5ef48b_exports = {};
+__export(kontakt_1b5ef48b_exports, {
   default: () => Kontakt,
   prerender: () => prerender3
 });
-var import_cookie9, css7, prerender3, Kontakt;
-var init_kontakt_52358b9e = __esm({
-  ".svelte-kit/output/server/chunks/kontakt-52358b9e.js"() {
+var import_cookie9, css9, prerender3, Kontakt;
+var init_kontakt_1b5ef48b = __esm({
+  ".svelte-kit/output/server/chunks/kontakt-1b5ef48b.js"() {
     init_shims();
-    init_app_1fea6c6a();
+    init_app_d5644d2d();
     import_cookie9 = __toModule(require_cookie());
     init_dist();
-    css7 = {
+    css9 = {
       code: "section.svelte-1x6c12h{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto minmax(min-content, 60rem) auto;justify-content:center;min-height:100vh;padding:4.5rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto}h1.svelte-1x6c12h{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}",
       map: null
     };
     prerender3 = true;
     Kontakt = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css7);
+      $$result.css.add(css9);
       return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Kontakt</title>`, ""}`, ""}
 
 <section class="${"svelte-1x6c12h"}"><div><h1 class="${"svelte-1x6c12h"}">Kontakt</h1></div>
@@ -21192,7 +21200,7 @@ var init_kontakt_52358b9e = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-1fea6c6a.js
+// .svelte-kit/output/server/chunks/app-d5644d2d.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -22533,9 +22541,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-069f13c3.js",
+      file: assets + "/_app/start-127b3fa5.js",
       css: [assets + "/_app/assets/start-0dba5459.css"],
-      js: [assets + "/_app/start-069f13c3.js", assets + "/_app/chunks/vendor-e6cd113e.js"]
+      js: [assets + "/_app/start-127b3fa5.js", assets + "/_app/chunks/vendor-e6cd113e.js"]
     },
     fetched: void 0,
     floc: false,
@@ -22578,9 +22586,9 @@ function render(request, {
   const host = request.headers["host"];
   return respond({ ...request, host }, options, { prerender: prerender4 });
 }
-var import_cookie10, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css8, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_1fea6c6a = __esm({
-  ".svelte-kit/output/server/chunks/app-1fea6c6a.js"() {
+var import_cookie10, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css10, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
+var init_app_d5644d2d = __esm({
+  ".svelte-kit/output/server/chunks/app-d5644d2d.js"() {
     init_shims();
     import_cookie10 = __toModule(require_cookie());
     init_dist();
@@ -22704,7 +22712,7 @@ var init_app_1fea6c6a = __esm({
     missing_component = {
       $$render: () => ""
     };
-    css8 = {
+    css10 = {
       code: "#svelte-announcer.svelte-b8s5el{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
       map: null
     };
@@ -22729,7 +22737,7 @@ var init_app_1fea6c6a = __esm({
         $$bindings.props_1(props_1);
       if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
         $$bindings.props_2(props_2);
-      $$result.css.add(css8);
+      $$result.css.add(css10);
       {
         stores.page.set(page2);
       }
@@ -22833,17 +22841,17 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_466af984(), layout_466af984_exports)),
-      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_1c1fdc56(), error_1c1fdc56_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_f61e0132(), index_f61e0132_exports)),
-      "src/routes/ueber-mich.svelte": () => Promise.resolve().then(() => (init_ueber_mich_ed1ca3f1(), ueber_mich_ed1ca3f1_exports)),
-      "src/routes/projekte/index.svelte": () => Promise.resolve().then(() => (init_index_d8acdbdd(), index_d8acdbdd_exports)),
-      "src/routes/projekte/wohnformat.svelte": () => Promise.resolve().then(() => (init_wohnformat_e9a12503(), wohnformat_e9a12503_exports)),
-      "src/routes/projekte/mst-muhr.svelte": () => Promise.resolve().then(() => (init_mst_muhr_81e14945(), mst_muhr_81e14945_exports)),
-      "src/routes/projekte/solmates.svelte": () => Promise.resolve().then(() => (init_solmates_c73639a2(), solmates_c73639a2_exports)),
-      "src/routes/kontakt.svelte": () => Promise.resolve().then(() => (init_kontakt_52358b9e(), kontakt_52358b9e_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_f76f3f93(), layout_f76f3f93_exports)),
+      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_60ebf934(), error_60ebf934_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_cbc6a0e6(), index_cbc6a0e6_exports)),
+      "src/routes/ueber-mich.svelte": () => Promise.resolve().then(() => (init_ueber_mich_00c3dfc9(), ueber_mich_00c3dfc9_exports)),
+      "src/routes/projekte/index.svelte": () => Promise.resolve().then(() => (init_index_b8351b59(), index_b8351b59_exports)),
+      "src/routes/projekte/wohnformat.svelte": () => Promise.resolve().then(() => (init_wohnformat_7dbaa68d(), wohnformat_7dbaa68d_exports)),
+      "src/routes/projekte/mst-muhr.svelte": () => Promise.resolve().then(() => (init_mst_muhr_10cd5872(), mst_muhr_10cd5872_exports)),
+      "src/routes/projekte/solmates.svelte": () => Promise.resolve().then(() => (init_solmates_85886daf(), solmates_85886daf_exports)),
+      "src/routes/kontakt.svelte": () => Promise.resolve().then(() => (init_kontakt_1b5ef48b(), kontakt_1b5ef48b_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-f4983ab2.js", "css": ["assets/pages/__layout.svelte-03f54347.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-f4983ab2.js", "chunks/vendor-e6cd113e.js", "chunks/DeathStar-bf60a933.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-a888b744.js", "css": ["assets/pages/__error.svelte-5a8fc307.css"], "js": ["pages/__error.svelte-a888b744.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-fee80b08.js", "css": ["assets/pages/index.svelte-a269e5ea.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-fee80b08.js", "chunks/vendor-e6cd113e.js", "chunks/DeathStar-bf60a933.js"], "styles": [] }, "src/routes/ueber-mich.svelte": { "entry": "pages/ueber-mich.svelte-63bcc2ec.js", "css": ["assets/pages/ueber-mich.svelte-7f4b56a9.css"], "js": ["pages/ueber-mich.svelte-63bcc2ec.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/index.svelte": { "entry": "pages/projekte/index.svelte-082b6e29.js", "css": ["assets/pages/projekte/index.svelte-8e77d00b.css"], "js": ["pages/projekte/index.svelte-082b6e29.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/wohnformat.svelte": { "entry": "pages/projekte/wohnformat.svelte-bbdf1ab3.js", "css": ["assets/pages/projekte/wohnformat.svelte-8d42f5f6.css"], "js": ["pages/projekte/wohnformat.svelte-bbdf1ab3.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/mst-muhr.svelte": { "entry": "pages/projekte/mst-muhr.svelte-b5ea41c4.js", "css": [], "js": ["pages/projekte/mst-muhr.svelte-b5ea41c4.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/solmates.svelte": { "entry": "pages/projekte/solmates.svelte-835e1a6f.js", "css": [], "js": ["pages/projekte/solmates.svelte-835e1a6f.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/kontakt.svelte": { "entry": "pages/kontakt.svelte-04bfa5fc.js", "css": ["assets/pages/projekte/index.svelte-8e77d00b.css"], "js": ["pages/kontakt.svelte-04bfa5fc.js", "chunks/vendor-e6cd113e.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-f4983ab2.js", "css": ["assets/pages/__layout.svelte-03f54347.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-f4983ab2.js", "chunks/vendor-e6cd113e.js", "chunks/DeathStar-bf60a933.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-a888b744.js", "css": ["assets/pages/__error.svelte-5a8fc307.css"], "js": ["pages/__error.svelte-a888b744.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-fee80b08.js", "css": ["assets/pages/index.svelte-a269e5ea.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-fee80b08.js", "chunks/vendor-e6cd113e.js", "chunks/DeathStar-bf60a933.js"], "styles": [] }, "src/routes/ueber-mich.svelte": { "entry": "pages/ueber-mich.svelte-63bcc2ec.js", "css": ["assets/pages/ueber-mich.svelte-7f4b56a9.css"], "js": ["pages/ueber-mich.svelte-63bcc2ec.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/index.svelte": { "entry": "pages/projekte/index.svelte-082b6e29.js", "css": ["assets/pages/projekte/index.svelte-8e77d00b.css"], "js": ["pages/projekte/index.svelte-082b6e29.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/wohnformat.svelte": { "entry": "pages/projekte/wohnformat.svelte-bbdf1ab3.js", "css": ["assets/pages/projekte/solmates.svelte-b0694436.css"], "js": ["pages/projekte/wohnformat.svelte-bbdf1ab3.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/mst-muhr.svelte": { "entry": "pages/projekte/mst-muhr.svelte-4bd24791.js", "css": ["assets/pages/projekte/solmates.svelte-b0694436.css"], "js": ["pages/projekte/mst-muhr.svelte-4bd24791.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/solmates.svelte": { "entry": "pages/projekte/solmates.svelte-ed938f4b.js", "css": ["assets/pages/projekte/solmates.svelte-b0694436.css"], "js": ["pages/projekte/solmates.svelte-ed938f4b.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/kontakt.svelte": { "entry": "pages/kontakt.svelte-04bfa5fc.js", "css": ["assets/pages/projekte/index.svelte-8e77d00b.css"], "js": ["pages/kontakt.svelte-04bfa5fc.js", "chunks/vendor-e6cd113e.js"], "styles": [] } };
   }
 });
 
@@ -22855,7 +22863,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_1fea6c6a();
+init_app_d5644d2d();
 var import_cookie11 = __toModule(require_cookie());
 init_dist();
 

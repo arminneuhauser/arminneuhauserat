@@ -6,6 +6,7 @@
 <section>
     <div>
         <h1>Wohnformat</h1>
+        <p>CI, Webdesign, Development, CMS</p>
         <p>
             Wohnformat ist das Unternehmen von Patrick Schachinger und Johannes Haberfehlner. Gemeinsam mit ihren Kunden planen sie Räume und Möbel nach Maß. Ich durfte das Corporate Design und die Website von Wohnformat konzipieren und umsetzen. Dabei war ich von der Firmengründung an involviert und konnte so die Marke von Grund auf definieren.
         </p>

@@ -5,10 +5,8 @@
     export let slug;
     export let title;
     export let year;
-    export let desc;
     export let imageSm;
     export let imageLg;
-    export let scrollY;
 
     let teaser;
     let topPosition;

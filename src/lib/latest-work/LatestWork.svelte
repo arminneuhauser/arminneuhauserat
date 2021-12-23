@@ -50,10 +50,8 @@
                 slug="mst-muhr"
                 title="MST Muhr"
                 year="2022"
-                desc="Webdesign, Development, CMS, Fotografie"
                 imageSm="/images/mst-muhr/mst-muhr.jpg"
                 imageLg="/images/mst-muhr/mst-muhr-lg.jpg"
-                scrollY={scrollY}
             >
             </Teaser>
 
@@ -61,10 +59,8 @@
                 slug="solmates"
                 title="Solmates"
                 year="2019"
-                desc="Design, Development, CMS, Fotografie, Texte"
                 imageSm="/images/solmates/solmates.jpg"
                 imageLg="/images/solmates/solmates-lg.jpg"
-                scrollY={scrollY}
             >
             </Teaser>
 
@@ -72,10 +68,8 @@
                 slug="wohnformat"
                 title="[wohnformat]"
                 year="2016"
-                desc="CI, Webdesign, Development, CMS"
                 imageSm="/images/wohnformat/wohnformat.jpg"
                 imageLg="/images/wohnformat/wohnformat-lg.jpg"
-                scrollY={scrollY}
             >
             </Teaser>
         </div>
