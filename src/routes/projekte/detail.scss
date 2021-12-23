@@ -1,0 +1,24 @@
+@use "src/scss/variables.scss" as var;
+@use "src/scss/functions.scss" as fn;
+
+section {
+    box-sizing: border-box;
+    padding: #{fn.rem(150)} var(--core-padding);
+
+    > div {
+        margin: 0 auto;
+        max-width: var(--core-max-width);
+    }
+}
+
+h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: #{fn.rfs(32, 110)};
+    line-height: 1;
+    margin: 0.5em 0;
+}
+
+p {
+    font-size: #{fn.rem(20)};
+}
