@@ -2,12 +2,13 @@
     import IntersectionObserver from "svelte-intersection-observer";
     import arrow from './arrow.svg?raw';
 
-    export let scrollY;
+    export let slug;
     export let title;
     export let year;
     export let desc;
     export let imageSm;
     export let imageLg;
+    export let scrollY;
 
     let teaser;
     let topPosition;
@@ -67,7 +68,7 @@
         </IntersectionObserver>
 
         <figure>
-            <a href="#" title="Projekt {title} ansehen">
+            <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">
                 <picture>
                     <source media="(min-width: 768px)" srcset={imageLg}>
                     <img src={imageSm} alt={title} loading="lazy" style="transform: scale({scale});" />
@@ -78,7 +79,7 @@
         <IntersectionObserver element={element2} bind:intersecting={intersecting2}>
             <footer class:intersecting={intersecting2} bind:this={element2}>
                 <div>    
-                    <a href="#" title="Projekt {title} ansehen">
+                    <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">
                         <span>
                             <i><i>P</i></i><i><i>r</i></i><i><i>o</i></i><i><i>j</i></i><i><i>e</i></i><i><i>k</i></i><i><i>t</i></i> <i><i>a</i></i><i><i>n</i></i><i><i>s</i></i><i><i>e</i></i><i><i>h</i></i><i><i>e</i></i><i><i>n</i></i>
                         </span>
