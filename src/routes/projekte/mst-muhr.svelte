@@ -12,5 +12,5 @@
 </section>
 
 <style lang="scss">
-    @use "detail.scss";
+    @use "../../scss/detail.scss";
 </style>
