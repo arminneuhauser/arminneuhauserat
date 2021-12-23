@@ -158,6 +158,8 @@
             justify-content: flex-start;
             align-self: flex-end;
             margin-bottom: 0;
+            width: auto;
+            justify-self: start;
         }
 
         h1 {
@@ -213,6 +215,7 @@
 
         picture {
             flex-basis: 100%;
+            pointer-events: none;
         }
 
         img {
@@ -231,6 +234,8 @@
             grid-row: 3;
             align-self: flex-start;
             margin: 0 0 0 0.3em;
+            width: auto;
+            justify-self: start;
         }
 
         div {
