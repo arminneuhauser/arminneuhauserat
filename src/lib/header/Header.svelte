@@ -22,10 +22,6 @@
         scrollToTop();
     }
 
-    function handleLogoClick() {
-        window.location.reload();
-    }
-
     // set noscroll class to body when mobile menu is open
     $: if (browser) document.body.classList.toggle('noscroll', mobileMenuVisible);
 
@@ -40,7 +36,7 @@
 <header>
     <section>
         <div class="logo" >
-            <a sveltekit:prefetch href="/" title="Armin Neuhauser" on:click={handleLogoClick}>
+            <a sveltekit:prefetch href="/" title="Armin Neuhauser" on:click={handleMobileClick}>
                 <i>A</i><i>r</i><i>m</i><i>i</i><i>n</i> <i>N</i><i>e</i><i>u</i><i>h</i><i>a</i><i>u</i><i>s</i><i>e</i><i>r</i>
             </a>
         </div>
