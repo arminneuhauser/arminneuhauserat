@@ -5,20 +5,35 @@
 <section>
     <div>
         <h1>Projekte</h1>
+        <div class="projects">
+            <div>
+                <a sveltekit:prefetch href="/projekte/mst-muhr" title="Projekt MST Muhr ansehen">
+                    MST Muhr
+                </a>
+            </div>
+            <div>
+                <a sveltekit:prefetch href="/projekte/solmates" title="Projekt Solmates ansehen">
+                    Solmates
+                </a>
+            </div>
+            <div>
+                <a sveltekit:prefetch href="/projekte/wohnformat" title="Projekt [wohnformat] ansehen">
+                    [wohnformat]
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
 <style lang="scss">
     section {
-        align-items: center;
-        display: grid;
-        grid-gap: 0;
-        grid-template-columns: auto minmax(min-content, #{fn.rem(960)}) auto;
-        justify-content: center;
-        min-height: 100vh;
-        padding: #{fn.rem(72)} var(--core-padding);
-        max-width: var(--core-max-width);
-        margin: 0 auto;
+        box-sizing: border-box;
+        padding: #{fn.rem(150)} var(--core-padding);
+
+        > div {
+            margin: 0 auto;
+            max-width: var(--core-max-width);
+        }
     }
     h1 {
         font-family: var(--serif);
