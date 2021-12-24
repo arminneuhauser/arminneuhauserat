@@ -4,52 +4,62 @@
     export const prerender = true;
 </script>
 
+<script lang="ts">
+    let now = new Date();
+    let year = now.getFullYear();
+    let since = year - 2009;
+</script>
+
 <svelte:head>
     <title>Armin Neuhauser | Über mich</title>
 </svelte:head>
 
-<section class="intro">
+<section>
     <div>
-        <h3>Über mich</h3>
-        <h1>Hallo, ich bin Armin,</h1>
-        <p>ein österreichischer Grafik-Designer und Webentwickler.</p>
-        <p>Mit einer Kombination aus Erfahrungen in Design und Development kann ich verschiedenste Problemstellungen lösen und Projekte ganzheitlich betreuen und steuern. Es begeistert mich, zusammen mit dir von Grund auf die Persönlichkeit deiner Marke zu definieren, zu gestalten und unverwechselbar zu machen. Ich erarbeite aus deinen Ideen digitale und analoge Kreationen für deinen Erfolg.</p>
+        <h1>Hallo, ich bin Armin.</h1>
+        <img src="images/armin-panama-city.jpeg" alt="Armin in Panama City" loading="lazy"/>
+        <div>
+            <p>Seit mittlerweile fast {since} Jahren gestalte und entwickle ich Websites & Online-Shops.</p>
+            <p>Mit einer Kombination aus Erfahrungen in Design und Development kann ich verschiedenste Problemstellungen lösen und Projekte ganzheitlich betreuen und steuern. Es begeistert mich, zusammen mit dir von Grund auf die Persönlichkeit deiner Marke zu definieren, zu gestalten und unverwechselbar zu machen. Ich erarbeite aus deinen Ideen digitale und analoge Kreationen für deinen Erfolg.</p>
+        </div>
     </div>
 </section>
 
 <style lang="scss">
-    .intro {
-        align-items: center;
-        display: grid;
-        grid-gap: 0;
-        grid-template-columns: auto minmax(min-content, #{fn.rem(960)}) auto;
-        justify-content: center;
-        min-height: 100vh;
-        padding: #{fn.rem(72)} var(--core-padding);
-        max-width: var(--core-max-width);
-        margin: 0 auto;
+    section {
+        box-sizing: border-box;
+        padding: #{fn.rem(150)} var(--core-padding);
 
-        div {
-            grid-column: 2;
-        }
+        > div {
+            margin: 0 auto;
+            max-width: var(--core-max-width);
+            display: grid;
 
-        h3 {
-            font-size: #{fn.rfs(16, 20)};
-            font-weight: 400;
-            margin: 0;
-        }
+            @media (min-width: var.$breakpoint-md) {
+                grid-template-columns: 1fr 0.5fr;
 
-        h1 {
-            font-family: var(--serif);
-            font-weight: 700;
-            font-size: #{fn.rfs(32, 110)};
-            line-height: 1;
-            margin: 0.5em 0;
-        }
+                > div {
+                    grid-column: 1;
+                }
 
-        p {
-            font-size: #{fn.rem(21)};
-            max-width: #{fn.rem(620)};
+                > img {
+                    grid-column: 2;
+                    grid-row: 1 / span 2;
+                }
+            }
         }
+    }
+
+    h1 {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: #{fn.rfs(38, 75)};
+        line-height: 1;
+        margin: 0.5em 0;
+    }
+
+    p {
+        font-size: #{fn.rem(20)};
+        max-width: #{fn.rem(620)};
     }
 </style>
