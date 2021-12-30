@@ -75,13 +75,4 @@
             }
         }
     }
-
-    .mask {
-        display: inline-flex;
-        overflow: hidden;
-
-        span {
-            transform: translate3d(0, 100%, 0);
-        }
-    }
 </style>
