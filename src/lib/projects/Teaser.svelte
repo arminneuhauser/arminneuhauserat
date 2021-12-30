@@ -22,24 +22,28 @@
         <IntersectionObserver once {element} bind:intersecting>
             <header class:intersecting bind:this={element}>
                 <h1>
-                    {title}
+                    <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen"><span data-title={title}>{title}</span></a>
                 </h1>
-                <div>{year}</div>
+                <div>
+                    <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen"><span data-title={year}>{year}</span></a>
+                </div>
             </header>
         </IntersectionObserver>
 
         <IntersectionObserver once element={element2} bind:intersecting={intersecting2}>
             <figure  class:intersecting={intersecting2} bind:this={element2}>
-                <picture>
-                    <img src={image} alt={title} loading="lazy" />
-                </picture>
+                <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">
+                    <picture>
+                        <img src={image} alt={title} loading="lazy" />
+                    </picture>
+                </a>
             </figure>
         </IntersectionObserver>
 
         <IntersectionObserver once element={element3} bind:intersecting={intersecting3}>
             <footer class:intersecting={intersecting3} bind:this={element3}>
                 <p>
-                    <span>{desc}</span>
+                    <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">{desc}</a>
                 </p>
                 <hr/>
             </footer>
@@ -70,29 +74,50 @@
         align-items: baseline;
         gap: 0.5em;
         width: 100%;
-        overflow: hidden;
         flex: 1 0 auto;
         margin-bottom: #{fn.rem(10)};
         position: relative;
         z-index: 3;
 
+        &.intersecting {
+            a span {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        a {
+            display: inline-flex;
+            overflow: hidden;
+
+            span {
+                transform: translate3d(0, 100%, 0);
+                transition: transform 0.8s var(--easing);
+                position: relative;
+                pointer-events: none;
+
+                &::after {
+                    content: attr(data-title);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translate3d(0, 100%, 0);
+                }
+            }
+
+            &:hover span {
+                transform: translate3d(0, -100%, 0);
+            }
+        }
+
         h1 {
-            font-size: #{fn.rem(26)};
+            font-size: #{fn.rfs(26, 38, $minWidth: 1440, $maxWidth: 2560)};
             margin: 0;
-            transform: translate3d(0, 100%, 0);
         }
 
         div {
             font-family: var(--sans);
             font-weight: 400;
-            font-size: #{fn.rem(14)};
-            transform: translate3d(0, 100%, 0);
-        }
-
-        &.intersecting {
-            h1, div {
-                animation: to-top 0.8s var(--easing) forwards;
-            }
+            font-size: #{fn.rfs(14, 16, $minWidth: 1440, $maxWidth: 2560)};
         }
     }
 
@@ -111,6 +136,7 @@
 
         picture {
             flex-basis: 100%;
+            pointer-events: none;
         }
 
         &.intersecting {
@@ -126,11 +152,11 @@
         z-index: 2;
 
         p {
-            font-size: #{fn.rem(14)};
+            font-size: #{fn.rfs(14, 16, $minWidth: 1440, $maxWidth: 2560)};
             margin: 0;
             overflow: hidden;
 
-            span {
+            a {
                 display: inline-flex;
                 transform: translate3d(0, 100%, 0);
             }
@@ -143,7 +169,7 @@
         }
 
         &.intersecting {
-            p span {
+            p a {
                 animation: to-top 0.8s 0.2s var(--easing) forwards;
             }
 
