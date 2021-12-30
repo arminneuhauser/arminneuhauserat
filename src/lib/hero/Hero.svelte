@@ -95,6 +95,7 @@
         }
         
         @media (prefers-reduced-motion: no-preference) {
+            opacity: 0;
             animation: fadein-from-primary 2s var(--easing) forwards;
         }
 
