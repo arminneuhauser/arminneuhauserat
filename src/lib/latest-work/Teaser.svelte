@@ -159,6 +159,11 @@
             margin-bottom: 0;
             width: auto;
             justify-self: start;
+
+            :global([color-scheme="light"]) & {
+                background-color: var(--base);
+                padding-right: 1em;
+            }
         }
 
         h1 {
@@ -235,6 +240,11 @@
             margin: 0 0 0 0.3em;
             width: auto;
             justify-self: start;
+
+            :global([color-scheme="light"]) & {
+                background-color: var(--base);
+                padding-right: 1em;
+            }
         }
 
         div {
