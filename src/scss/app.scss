@@ -81,13 +81,7 @@
         ::-webkit-scrollbar-thumb {
             background: var(--on-base);
         }
-    }
-
-    &[color-scheme="blue"] {
-        --base: #105099;
-        --on-base: #fff;
-    }
-    
+    }    
 }
 
 html {

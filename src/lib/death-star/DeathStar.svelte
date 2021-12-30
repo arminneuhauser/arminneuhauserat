@@ -7,7 +7,6 @@
         "dark",
         "light",
         "highcontrast",
-        "blue",
     ];
 
     function handleDeathStarClick() {
