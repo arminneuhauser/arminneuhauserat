@@ -8,6 +8,7 @@
     import Progress from '$lib/progress/Progress.svelte';
     import PageTransition from "$lib/page-transition/PageTransition.svelte"
     import CursorCreep from '$lib/cursor-creep/CursorCreep.svelte';
+    import Scene from '$lib/scene/Scene.svelte';
     import '../scss/app.scss';
 
     export let key;
@@ -84,6 +85,8 @@
             
         <Footer />
         <CursorCreep />
+
+        <Scene />
     </div>
 {:else}
     <div out:fade={{ duration: 250 }}>

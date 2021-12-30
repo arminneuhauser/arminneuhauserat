@@ -3,7 +3,6 @@
 </script>
 
 <script lang="ts">
-    import Scene from '$lib/scene/Scene.svelte';
     import Hero from '$lib/hero/Hero.svelte';
     import LatestWork from '$lib/latest-work/LatestWork.svelte';
     import Wisdom from '$lib/wisdom/Wisdom.svelte';
@@ -23,5 +22,3 @@
 <LatestWork scrollY={scrollY} />
 
 <Wisdom />
-
-<Scene />
