@@ -69,7 +69,7 @@
             <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">
                 <picture>
                     <source media="(min-width: 768px)" srcset={imageLg}>
-                    <img src={imageSm} alt={title} loading="lazy" style="transform: scale({scale});" />
+                    <img src={imageSm} alt={title} style="transform: scale({scale});" />
                 </picture>
             </a>
         </figure>
