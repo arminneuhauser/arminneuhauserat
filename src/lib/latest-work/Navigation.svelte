@@ -9,8 +9,6 @@
     function parseScroll() {
         topPosition = nav.getBoundingClientRect().top;
         relativePosition = topPosition / windowHeight;
-
-        console.log(relativePosition);
     }
 </script>
 

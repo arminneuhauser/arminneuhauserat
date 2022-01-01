@@ -1,9 +1,18 @@
 @use "src/scss/variables.scss" as var;
 @use "src/scss/functions.scss" as fn;
+@use "src/scss/animations.scss";
 
 section {
     box-sizing: border-box;
-    padding: #{fn.rem(150)} var(--core-padding);
+    padding: #{fn.rem(50)} var(--core-padding);
+    background-color: var(--base);
+    position: relative;
+    overflow: hidden;
+
+    &.full {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     > div {
         margin: 0 auto;
@@ -11,14 +20,97 @@ section {
     }
 }
 
-h1 {
-    font-family: var(--serif);
-    font-weight: 700;
-    font-size: #{fn.rfs(32, 110)};
-    line-height: 1;
-    margin: 0.5em 0;
+p {
+    font-size: #{fn.rem(18)};
 }
 
-p {
-    font-size: #{fn.rem(20)};
+.facts {
+    margin-top: #{fn.rem(50)};
+
+    > div {
+        border-top: 1px solid var(--on-base);
+        padding: #{fn.rem(10)} 0;
+    }
+
+    h3 {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: #{fn.rem(16)};
+        margin: 0.5em 0;
+    }
+
+    p {
+        font-size: #{fn.rem(15)};
+        margin: 0.5em 0;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: #{fn.rem(10)};
+        margin-top: #{fn.rem(20)};
+
+        :global(svg) {
+            border: 1px solid var(--primary);
+            padding: #{fn.rem(20)};
+            border-radius: 50%;
+        }
+    }
+}
+
+img {
+    display: block;
+
+    &:not(:first-child) {
+        margin-top: var(--core-padding);
+    }
+    
+    &:not(:last-child) {
+        margin-bottom: var(--core-padding);
+    }
+}
+
+.next {
+    background: none;
+    min-height: var(--app-height, 100vh);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .circle {
+        height: #{fn.rem(320)};
+        width: #{fn.rem(320)};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+
+    .text {
+        text-align: center;
+
+        h1 {
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: #{fn.rem(36)};
+            line-height: 1;
+            margin: 0.5em 0;
+        }
+
+        hr {
+            width: 33%;
+        }
+
+        p {
+            font-size: #{fn.rem(15)};
+        }      
+    }
 }

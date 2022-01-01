@@ -22,7 +22,7 @@
         </div>
     </header>
     <div class="projects">
-        <div>
+        <div class="projects-list">
             <Teaser 
                 slug="mst-muhr"
                 title="MST Muhr"
@@ -49,6 +49,9 @@
                 image="/images/wohnformat/wohnformat.jpg"
             >
             </Teaser>
+        </div>
+        <div class="coming-soon">
+            <p>Weitere Projekte kommen bald</p>
         </div>
     </div>
 </section>
@@ -139,23 +142,47 @@
         background-color: var(--base);
         box-sizing: border-box;
         padding: var(--core-padding);
+    }
 
-        > div {
-            display: grid;
-            grid-gap: #{fn.rem(40)};
+    .projects-list {
+        display: grid;
+        grid-gap: #{fn.rem(40)};
+        margin: 0 auto;
+        max-width: var(--core-max-width);
+
+        @media (min-width: var.$breakpoint-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: var.$breakpoint-lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (min-width: var.$breakpoint-1xl) {
+            grid-gap: #{fn.rem(80)};
+        }
+    }
+
+    .coming-soon {
+        margin: 0 auto;
+        max-width: var(--core-max-width);
+        padding: #{fn.rem(100)} 0;
+
+        p {
+            width: #{fn.rem(280)};
+            height: #{fn.rem(280)};
+            border: 1px solid var(--on-base);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0 auto;
-            max-width: var(--core-max-width);
-
-            @media (min-width: var.$breakpoint-md) {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            opacity: 0.6;
+            font-size: #{fn.rem(14)};
 
             @media (min-width: var.$breakpoint-lg) {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            @media (min-width: var.$breakpoint-1xl) {
-                grid-gap: #{fn.rem(80)};
+                width: #{fn.rem(360)};
+                height: #{fn.rem(360)};
             }
         }
     }

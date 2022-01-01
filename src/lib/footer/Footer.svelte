@@ -27,6 +27,7 @@
     footer {
         background-color: var(--base);
         padding: #{fn.rem(70)} var(--core-padding) var(--core-padding);
+        position: relative;
 
         @media (min-width: var.$breakpoint-md) {
             padding-top: #{fn.rem(30)};
