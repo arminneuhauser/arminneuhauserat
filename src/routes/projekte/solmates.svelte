@@ -12,6 +12,7 @@
     title="Solmates"
     desc="ein Blog für unsere Reise durch Lateinamerika"
     imageSm="/images/solmates/solmates-hero-sm.jpg"
+    imageLg="/images/solmates/solmates-hero-lg.jpg"
     >
 </Hero>
 
@@ -27,7 +28,11 @@
                 <p>Konzept, Webdesign, UI/UX, Development, Content Management System, Fotografie, Texte, Buchgestaltung</p>
             </div>
             <div>
-                <a href="https://www.solmates.at/" target="_blank">
+                <h3>Technologien</h3>
+                <p>Vue.js, Nuxt.js, Storyblok, Netlify, Mailchimp</p>
+            </div>
+            <div>
+                <a class="link" href="https://www.solmates.at/" target="_blank">
                     <span>Website ansehen</span>
                     {@html external}
                 </a>
@@ -38,23 +43,74 @@
 
 <section class="full">
     <div>
-        <img src="/images/solmates/solmates01.jpg" alt="Solmates Homepage">
+        <video src="/images/solmates/solmates.mp4" muted playsinline loop autoplay poster="images/solmates/solmates01.jp"></video>
     </div>
 </section>
 
-<section>
+<section class="narrow">
     <div>
-        <p>
-            Solmates ist ein Reiseblog von Armin & Miriam. Dieser Blog ist ein Platz um Erinnerungen zu speichern und zu teilen – für uns selbst, unsere Familie und Freunde. Wir hoffen aber, dass unsere Beiträge auch für alle, die eine ähnliche Reise geplant haben, hilfreich sind und freuen uns, wenn wir den ein oder anderen dazu inspirieren. Mehr über das Design und die Entwicklung des Blog könnt ihr hier lesen.
-        </p>
+        <div>
+            <hr>
+            <h1>
+                Solmates ist ein Reiseblog von Armin & Miriam.
+            </h1>
+            <p>
+                Zu reisen, um neue Orte zu entdecken, ist für mich eines der schönsten und aufregendsten Dinge im Leben. Deshalb bin ich gemeinsam mit meiner Freundin Miriam im November 2019 aufgebrochen, um Lateinamerika zu bereisen. Mit dem Blog wolle ich einen Platz erschaffen um Erinnerungen zu speichern und zu teilen – für uns selbst, unsere Familie und Freunde.
+            </p>
+            <p>
+                Der Blog entstammt komplett aus meiner Feder und ist mit Vue & Nuxt gebaut worden. Die Texte und Bilder werden in dem Content Management System Storyblok gepflegt.
+            </p>
+        </div>
     </div>
 </section>
 
-<section>
+<section class="full">
+    <div>
+        <img src="/images/solmates/solmates-cartagena.jpg" alt="Solmates Homepage">
+    </div>
+</section>
+
+<section class="col2 align-end">
     <div>
         <img src="/images/solmates/solmates02.jpg" alt="Solmates Kategorie">
         <img src="/images/solmates/solmates03.jpg" alt="Solmates Blog">
+    </div>
+</section>
+
+<section class="col2">
+    <div>
         <img src="/images/solmates/solmates04.jpg" alt="Solmates Reisekarte">
+        <img src="/images/solmates/solmates05.jpg" alt="Solmates Über uns">
+    </div>
+</section>
+
+<section class="narrow">
+    <div>
+        <div>
+            <hr>
+            <h1>
+                Mit dem Rucksack durch Lateinamerika
+            </h1>
+            <p>
+                Nach unserer Rückkehr nach Österreich ist im Sommer 2020 ein 328-seitiger Fotoband entstanden. Dieses Buch erzählt von der gesamten Reise „von den Alpen in die Anden“.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="col2">
+    <div>
+        <img src="/images/solmates/solmates-buch.jpg" alt="Solmates Buch">
+        <img src="/images/solmates/solmates-buch-02.jpg" alt="Solmates Buch Rückseite">
+    </div>
+</section>
+
+<section>
+    <div>
+        <a class="link" href="https://www.solmates.at/" target="_blank">
+            <span>Website ansehen</span>
+            {@html external}
+        </a>
     </div>
 </section>
 
@@ -72,6 +128,6 @@
 <style lang="scss">
     @use "../../scss/detail.scss";
     .next .circle {
-        background-image: url('/images/mst-muhr/mst-muhr.jpg');
+        background-image: url('/images/mst-muhr/mst-hero-sm.jpg');
     }
 </style>
