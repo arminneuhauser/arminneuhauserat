@@ -168,6 +168,7 @@ img {
     .text {
         text-align: center;
         pointer-events: none;
+        color: #fff;
 
         h1 {
             font-family: var(--serif);
@@ -187,6 +188,7 @@ img {
 
         hr {
             width: 33%;
+            border-color: currentColor;
         }
 
         p {

@@ -1,4 +1,6 @@
-<script lang="ts">    
+<script lang="ts">
+    import { onMount } from 'svelte';
+
     export let title;
     export let desc;
     export let imageSm;
@@ -6,9 +8,25 @@
 
     let scrollY;
     let windowHeight;
+    let lightness = 100;
+
+    // map a number from 1 range to another
+    function map(n, start1, end1, start2, end2) {
+        return ((n - start1) / (end1 - start1)) * (end2 - start2) + start2;
+    }
+
+    onMount(() => {
+        document.documentElement.style.setProperty('--header-color', `hsl(0deg, 0%, ${lightness}%)`)
+    });
+
+    function parseScroll() {
+        lightness = Math.min(Math.max(map(scrollY / windowHeight, 0, 1, 100, 0), 0), 100);
+        document.documentElement.style.setProperty('--header-color', `hsl(0deg, 0%, ${lightness}%)`)
+    }
+
 </script>
 
-<svelte:window bind:scrollY={scrollY} bind:innerHeight={windowHeight} />
+<svelte:window bind:scrollY={scrollY} bind:innerHeight={windowHeight} on:scroll={parseScroll} />
 
 <section class="hero" style="opacity: {Math.max(0, 1 - scrollY / windowHeight)};">
     <div class="headline">
@@ -90,6 +108,7 @@
         z-index: 2;
         text-align: center;
         padding: 12%;
+        color: #fff;
 
         h1 {
             font-family: var(--serif);
@@ -109,6 +128,7 @@
             transform: scaleX(0);
             transform-origin: top left;
             margin: #{fn.rem(20)} 0;
+            border-color: #fff;
         }
 
         p {

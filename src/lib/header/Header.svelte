@@ -108,7 +108,7 @@
 
         > section {
             align-items: center;
-            color: var(--on-base);
+            color: var(--header-color, var(--on-base));
             display: flex;
             font-size: #{fn.rfs(13, 16, $minWidth: 1280, $maxWidth: 2560)};
             justify-content: space-between;
@@ -144,6 +144,8 @@
             }
 
             :global([color-scheme="dark"]) & {
+                color: var(--on-base);
+
                 &::before {
                     content: '';
                     background: linear-gradient(
