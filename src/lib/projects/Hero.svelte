@@ -96,7 +96,7 @@
             font-weight: 700;
             font-size: fn.rfs(46, 120, 360, 2560);
             line-height: 1;
-            margin: 0.5em 0;
+            margin: 0;
 
             span {
                 animation: to-top 1s var(--easing) forwards;
@@ -108,10 +108,12 @@
             width: 33%;
             transform: scaleX(0);
             transform-origin: top left;
+            margin: #{fn.rem(20)} 0;
         }
 
         p {
             font-size: #{fn.rfs(15, 20, $minWidth: 1280, $maxWidth: 2560)};
+            margin: 0;
 
             span {
                 animation: to-top 1s 0.8s var(--easing) forwards;

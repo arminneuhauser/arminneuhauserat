@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>Armin Neuhauser | Solmates</title>
+    <title>Solmates | Armin Neuhauser</title>
     <meta name="description" content="Solmates ist ein Reiseblog von Armin & Miriam" />
 </svelte:head>
 
@@ -34,7 +34,7 @@
             <div>
                 <a class="link" href="https://www.solmates.at/" target="_blank">
                     <span>Website ansehen</span>
-                    {@html external}
+                    <i>{@html external}</i>
                 </a>
             </div>
         </div>
@@ -109,7 +109,7 @@
     <div>
         <a class="link" href="https://www.solmates.at/" target="_blank">
             <span>Website ansehen</span>
-            {@html external}
+            <i>{@html external}</i>
         </a>
     </div>
 </section>
