@@ -15,7 +15,7 @@
             </h1>
             <div>
                 <p class="mask">
-                    <span>Jedes Projekt ist eine Chance, etwas Neues zu probieren. Ich stelle Fragen, berate meine Kunden um gemeinsam das bestmögliche Ergebnis zu erreichen.</span>
+                    <span>Jedes Projekt ist eine Chance, etwas Neues auszuprobieren. Ich gehe auf die Wünsche meiner Kunden ein und berate sie, um gemeinsam das bestmögliche Ergebnis zu erreichen.</span>
                 </p>
                 <hr>
             </div>

@@ -1,7 +1,10 @@
 <script lang="ts">
     import Hero from '$lib/projects/Hero.svelte';
     import Parallax from '$lib/projects/Parallax.svelte';
+    import Switch from '$lib/projects/Switch.svelte';
     import external from '$lib/projects/external.svg?raw';
+
+    let dark = false;
 </script>
 
 <svelte:head>
@@ -65,10 +68,26 @@
     </div>
 </section>
 
+<section class="narrow">
+    <div>
+        <Switch 
+            bind:checked={dark}
+            label1="Light mode"
+            label2="Dark mode"
+            >
+        </Switch>
+    </div>
+</section>
+
 <section class="col2">
     <div>
-        <img src="/images/mst-muhr/mst-muhr01.jpg" alt="MST Muhr Startseite">
-        <img src="/images/mst-muhr/mst-muhr02.jpg" alt="MST Muhr Kontakt">
+        {#if dark}
+            <img src="/images/mst-muhr/mst-muhr-01-dark.jpg" alt="MST Muhr Startseite">
+            <img src="/images/mst-muhr/mst-muhr-02-dark.jpg" alt="MST Muhr Kontakt">
+        {:else}
+            <img src="/images/mst-muhr/mst-muhr-01.jpg" alt="MST Muhr Startseite">
+            <img src="/images/mst-muhr/mst-muhr-02.jpg" alt="MST Muhr Kontakt">
+        {/if}
     </div>
 </section>
 

@@ -18,30 +18,9 @@
         topPosition = figure.getBoundingClientRect().top;
         relativePosition = topPosition / windowHeight;
 
-        // console.log(relativePosition)
-
         if (relativePosition > -1 && relativePosition < 1) {
-            // console.log("visible")
-            // translateY = relativePosition * 100;
             translateY = map(relativePosition, -1, 1, 30, -30);
         }
-
-        // mappedScalePosition = map(relativePosition, -1, 0.5, 1.3, 1);
-        // mappedOpacityPosition = map(relativePosition, -0.9, -0.4, 0, 1); // opacity 0 when 90%, 1 when 40% scrolled
-
-        // if (mappedScalePosition > 1.5) {
-        //     scale = 1.5;
-        // } else {
-        //     scale = mappedScalePosition;
-        // }
-
-        // if (mappedOpacityPosition <= 0) {
-        //     opacity = 0;
-        // } else if (mappedOpacityPosition > 1) {
-        //     opacity = 1;
-        // } else {
-        //     opacity = mappedOpacityPosition;
-        // }
     }
 </script>
 
@@ -62,7 +41,7 @@
         background-color: var(--base);
     }
     figure {
-        aspect-ratio: 2;
+        aspect-ratio: 16/9;
         margin: 0;
         overflow: hidden;
         display: flex;

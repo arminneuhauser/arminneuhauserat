@@ -1,5 +1,6 @@
 <script lang="ts">
     import Hero from '$lib/projects/Hero.svelte';
+    import Parallax from '$lib/projects/Parallax.svelte';
     import external from '$lib/projects/external.svg?raw';
 </script>
 
@@ -55,20 +56,20 @@
                 Solmates ist ein Reiseblog von Armin & Miriam.
             </h1>
             <p>
-                Zu reisen, um neue Orte zu entdecken, ist für mich eines der schönsten und aufregendsten Dinge im Leben. Deshalb bin ich gemeinsam mit meiner Freundin Miriam im November 2019 aufgebrochen, um Lateinamerika zu bereisen. Mit dem Blog wolle ich einen Platz erschaffen um Erinnerungen zu speichern und zu teilen – für uns selbst, unsere Familie und Freunde.
+                Zu reisen, um neue Orte zu entdecken, ist für mich eines der schönsten und aufregendsten Dinge im Leben. Deshalb bin ich gemeinsam mit meiner Partnerin im November 2019 aufgebrochen, um Lateinamerika zu bereisen. Mit dem Blog wollte ich einen Platz erschaffen, um Erinnerungen zu speichern und zu teilen – für uns selbst, unsere Familien und Freunde.
             </p>
             <p>
-                Der Blog entstammt komplett aus meiner Feder und ist mit Vue & Nuxt gebaut worden. Die Texte und Bilder werden in dem Content Management System Storyblok gepflegt.
+                Den Blog habe ich von Grund auf mit Vue & Nuxt gebaut. Die Texte und Bilder werden in dem Content Management System Storyblok gepflegt.
             </p>
         </div>
     </div>
 </section>
 
-<section class="full">
-    <div>
-        <img src="/images/solmates/solmates-cartagena.jpg" alt="Solmates Homepage">
-    </div>
-</section>
+<Parallax
+    image="/images/solmates/solmates-cartagena.jpg"
+    alt="Solamtes Cartagena Kolumbien"
+    >
+</Parallax>
 
 <section class="col2 align-end">
     <div>
