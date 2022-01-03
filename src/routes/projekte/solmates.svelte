@@ -1,6 +1,8 @@
 <script lang="ts">
     import Hero from '$lib/projects/Hero.svelte';
     import Parallax from '$lib/projects/Parallax.svelte';
+    import Next from '$lib/projects/Next.svelte';
+
     import external from '$lib/projects/external.svg?raw';
 </script>
 
@@ -117,20 +119,14 @@
     </div>
 </section>
 
-<section class="next">
-    <h3>Nächstes Projekt</h3>
-    <a href="/projekte/mst-muhr" class="circle">
-        <div class="text">
-            <h1>MST Muhr</h1>
-            <hr>
-            <p>individuelle Unternehmenswebsite</p>
-        </div>
-    </a>
-</section>
+<Next
+    title="MST Muhr"
+    desc="individuelle Unternehmenswebsite"
+    slug="/projekte/mst-muhr"
+    image="/images/mst-muhr/mst-hero-sm.jpg"
+    >
+</Next>
 
 <style lang="scss">
     @use "../../scss/detail.scss";
-    .next .circle {
-        background-image: url('/images/mst-muhr/mst-hero-sm.jpg');
-    }
 </style>
