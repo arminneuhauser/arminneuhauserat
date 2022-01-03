@@ -1,7 +1,12 @@
-<script context="module">
-    // since there's no dynamic data here, we can prerender
-    // it so that it gets served as a static asset in prod
-    export const prerender = true;
+<script lang="ts">
+    let shift = -10;
+
+    setInterval(() => {
+        if (shift < -75) {
+            shift = 0
+        }
+        shift -= 0.015
+    }, 10)
 </script>
 
 <svelte:head>
@@ -10,7 +15,16 @@
 
 <section>
     <div>
-        <h1>Kontakt</h1>
+        <h1 class="headline">
+            <span style="transform: translate({shift}%,0)">
+                <span>
+                    <em>Kontakt</em> Kontakt
+                    <em>Kontakt</em> Kontakt
+                    <em>Kontakt</em> Kontakt
+                    <em>Kontakt</em> Kontakt
+                </span>
+            </span>
+        </h1>
     </div>
 </section>
 
@@ -18,19 +32,34 @@
     section {
         align-items: center;
         display: grid;
-        grid-gap: 0;
-        grid-template-columns: auto minmax(min-content, #{fn.rem(960)}) auto;
-        justify-content: center;
+        grid-template-columns: 1fr;
         min-height: 100vh;
-        padding: #{fn.rem(72)} var(--core-padding);
-        max-width: var(--core-max-width);
-        margin: 0 auto;
     }
+
     h1 {
-        font-family: var(--serif);
-        font-weight: 700;
-        font-size: #{fn.rfs(32, 110)};
-        line-height: 1;
-        margin: 0.5em 0;
+        font-size: #{fn.rfs(56, 250, 360, 2560)};
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100vw;
+        margin: 0;
+        text-transform: uppercase;
+
+        span {
+            display: inline-block;
+
+            span {
+                display: flex;
+                gap: 0.25em;
+                align-items: baseline;
+                transition: transform 0.5s var(--easing);
+            }
+        }
+
+        em {
+            font-family: var(--serif);
+            font-style: normal;
+            font-weight: 700;
+        }
     }
 </style>
