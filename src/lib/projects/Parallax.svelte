@@ -1,6 +1,8 @@
 <script lang="ts">
     export let image;
-    export let alt;
+    export let width = undefined;
+    export let height = undefined;
+    export let alt = undefined;
 
     let figure;
     let topPosition;
@@ -30,7 +32,7 @@
     <div>
         <figure bind:this={figure}>
             <picture>
-                <img src={image} alt={alt} style="transform: translateY({translateY}%);">
+                <img src={image} alt={alt} style="transform: translateY({translateY}%);" width={width} height={height}>
             </picture>
         </figure>
     </div>
@@ -45,5 +47,13 @@
         margin: 0;
         overflow: hidden;
         display: flex;
+    }
+    picture {
+        flex-grow: 1;
+        display: flex;
+    }
+    img {
+        flex-grow: 1;
+        object-fit: cover;
     }
 </style>

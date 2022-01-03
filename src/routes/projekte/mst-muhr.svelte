@@ -47,6 +47,8 @@
 
 <Parallax
     image="/images/mst-muhr/mst-schweizergarten.jpg"
+    width="1920"
+    height="1280"
     alt="MST Muhr Schweizergarten"
     >
 </Parallax>
@@ -82,11 +84,11 @@
 <section class="col2">
     <div>
         {#if dark}
-            <img src="/images/mst-muhr/mst-muhr-01-dark.jpg" alt="MST Muhr Startseite">
-            <img src="/images/mst-muhr/mst-muhr-02-dark.jpg" alt="MST Muhr Kontakt">
+            <img src="/images/mst-muhr/mst-muhr-01-dark.jpg" alt="MST Muhr Startseite" width="1920" height="1200">
+            <img src="/images/mst-muhr/mst-muhr-02-dark.jpg" alt="MST Muhr Kontakt" width="1920" height="1200">
         {:else}
-            <img src="/images/mst-muhr/mst-muhr-01.jpg" alt="MST Muhr Startseite">
-            <img src="/images/mst-muhr/mst-muhr-02.jpg" alt="MST Muhr Kontakt">
+            <img src="/images/mst-muhr/mst-muhr-01.jpg" alt="MST Muhr Startseite" width="1920" height="1200">
+            <img src="/images/mst-muhr/mst-muhr-02.jpg" alt="MST Muhr Kontakt" width="1920" height="1200">
         {/if}
     </div>
 </section>

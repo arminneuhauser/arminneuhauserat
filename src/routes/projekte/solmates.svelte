@@ -67,6 +67,8 @@
 
 <Parallax
     image="/images/solmates/solmates-cartagena.jpg"
+    width="1920"
+    height="1280"
     alt="Solamtes Cartagena Kolumbien"
     >
 </Parallax>
