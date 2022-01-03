@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount, onDestroy, afterUpdate } from 'svelte';
 
     export let title;
     export let desc;
@@ -9,6 +9,7 @@
     let scrollY;
     let windowHeight;
     let lightness = 100;
+    let root = document.documentElement;
 
     // map a number from 1 range to another
     function map(n, start1, end1, start2, end2) {
@@ -16,12 +17,22 @@
     }
 
     onMount(() => {
-        document.documentElement.style.setProperty('--header-color', `hsl(0deg, 0%, ${lightness}%)`)
+        root.style.setProperty('--header-color', `hsl(0deg, 0%, 100%)`)
+    });
+
+    afterUpdate(() => {
+        if (scrollY == 0) {
+            root.style.setProperty('--header-color', `hsl(0deg, 0%, 100%)`)
+        }
+    });
+
+    onDestroy(() => {
+        root.style.removeProperty('--header-color')
     });
 
     function parseScroll() {
-        lightness = Math.min(Math.max(map(scrollY / windowHeight, 0, 1, 100, 0), 0), 100);
-        document.documentElement.style.setProperty('--header-color', `hsl(0deg, 0%, ${lightness}%)`)
+        lightness = Math.min(Math.max(map(scrollY / windowHeight, 0.9, 1, 100, 0), 0), 100);
+        root.style.setProperty('--header-color', `hsl(0deg, 0%, ${lightness}%)`)
     }
 
 </script>
