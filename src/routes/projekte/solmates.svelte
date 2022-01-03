@@ -44,7 +44,7 @@
 
 <section class="full">
     <div>
-        <video src="/images/solmates/solmates.mp4" muted playsinline loop autoplay poster="images/solmates/solmates01.jp"></video>
+        <video src="/images/solmates/solmates.mp4" muted playsinline loop autoplay poster="/images/solmates/solmates01.jpg"></video>
     </div>
 </section>
 
