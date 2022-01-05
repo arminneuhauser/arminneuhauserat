@@ -1,0 +1,45 @@
+@use "src/scss/variables.scss" as var;
+@use "src/scss/functions.scss" as fn;
+
+form {
+    font: var(--w1-sans);
+
+    label {
+        font: inherit;
+        display: block;
+        text-transform: uppercase;
+        font-size: #{fn.rem(13)};
+        font-weight: 500;
+    }
+
+    input, textarea {
+        box-sizing: border-box;
+        font: inherit;
+        display: block;
+        width: 100%;
+        background: none;
+        border: 0;
+        border-bottom: 1px solid var(--on-base);
+        color: var(--on-base);
+        min-height: #{fn.rem(50)};
+        padding: #{fn.rem(12)} 0;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        font: inherit;
+        border: 1px solid var(--primary);
+        height: #{fn.rem(50)};
+        border-radius: #{fn.rem(25)};
+        padding: #{fn.rem(10)} #{fn.rem(30)};
+        text-transform: uppercase;
+        font-size: #{fn.rem(13)};
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: #{fn.rem(15)};
+    }
+}

@@ -75,7 +75,7 @@
         grid-template-rows: 1fr auto;
         justify-content: center;
         left: 0;
-        min-height: var(--app-height, 100vh);
+        min-height: 100vh;
         padding: var(--core-padding) 0;
         position: fixed;
         top: 0;
@@ -93,7 +93,7 @@
         }
 
         :global(+ section) {
-            margin-top: var(--app-height, 100vh);
+            margin-top: 100vh;
         }
     }
 

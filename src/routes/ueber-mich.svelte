@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-    <title>Armin Neuhauser | Über mich</title>
+    <title>Über mich | Armin Neuhauser</title>
 </svelte:head>
 
 <section>
