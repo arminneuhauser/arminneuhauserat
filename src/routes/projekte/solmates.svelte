@@ -46,7 +46,10 @@
 
 <section class="full">
     <div>
-        <video src="/images/solmates/solmates.mp4" muted playsinline loop autoplay poster="/images/solmates/solmates01.jpg"></video>
+        <video width="1152" height="720" muted playsinline loop autoplay poster="/images/solmates/solmates01.jpg">
+            <source src="/images/solmates/solmates.webm" type="video/webm">
+            <source src="/images/solmates/solmates.mp4" type="video/mp4">
+        </video>
     </div>
 </section>
 
@@ -75,17 +78,18 @@
     >
 </Parallax>
 
-<section class="col2 align-end">
+<section class="narrow">
     <div>
-        <img src="/images/solmates/solmates02.jpg" alt="Solmates Kategorie">
-        <img src="/images/solmates/solmates03.jpg" alt="Solmates Blog">
+        <img src="/images/solmates/solmates-home.jpg" alt="Solmates Startseite">
     </div>
 </section>
 
-<section class="col2">
+<section class="col2 align-end">
     <div>
-        <img src="/images/solmates/solmates04.jpg" alt="Solmates Reisekarte">
-        <img src="/images/solmates/solmates05.jpg" alt="Solmates Über uns">
+        <img src="/images/solmates/solmates-san-blas-02.jpg" alt="Solmates San Blas Inseln">
+        <img src="/images/solmates/solmates-costa-rica.jpg" alt="Solmates Costa Rica">
+        <img src="/images/solmates/solmates-boquete.jpg" alt="Solmates Vulkan Baru">
+        <img src="/images/solmates/solmates-peru.jpg" alt="Solmates Peru">
     </div>
 </section>
 
@@ -100,6 +104,15 @@
                 Nach unserer Rückkehr nach Österreich ist im Sommer 2020 ein 328-seitiger Fotoband entstanden. Dieses Buch erzählt von der gesamten Reise „von den Alpen in die Anden“.
             </p>
         </div>
+    </div>
+</section>
+
+<section class="full">
+    <div>
+        <video width="1152" height="720" muted playsinline loop autoplay poster="/images/solmates/solmates01.jpg">
+            <source src="/images/solmates/solmates-buch.webm" type="video/webm">
+            <source src="/images/solmates/solmates-buch.mp4" type="video/mp4">
+        </video>
     </div>
 </section>
 
