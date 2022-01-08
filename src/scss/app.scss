@@ -170,6 +170,10 @@ img, video {
     max-width: 100%;
 }
 
+video::-internal-media-controls-overlay-cast-button {
+    display: none;
+}
+
 hr {
     border-style: solid;
     border-color: var(--on-base);
