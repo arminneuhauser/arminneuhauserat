@@ -4845,7 +4845,7 @@ var init_dist = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-a75c4654.js
+// .svelte-kit/output/server/chunks/index-812a8eea.js
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -5078,145 +5078,13 @@ function tweened(value, defaults = {}) {
   };
 }
 var subscriber_queue, scheme;
-var init_index_a75c4654 = __esm({
-  ".svelte-kit/output/server/chunks/index-a75c4654.js"() {
+var init_index_812a8eea = __esm({
+  ".svelte-kit/output/server/chunks/index-812a8eea.js"() {
     init_shims();
-    init_app_d5644d2d();
+    init_app_fe36154b();
     subscriber_queue = [];
     scheme = writable("dark");
     scheme.subscribe((val) => {
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/__layout-f76f3f93.js
-var layout_f76f3f93_exports = {};
-__export(layout_f76f3f93_exports, {
-  default: () => _layout,
-  load: () => load
-});
-var import_cookie, getStores, page, css, Progress, load, _layout;
-var init_layout_f76f3f93 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-f76f3f93.js"() {
-    init_shims();
-    init_app_d5644d2d();
-    init_index_a75c4654();
-    import_cookie = __toModule(require_cookie());
-    init_dist();
-    getStores = () => {
-      const stores = getContext("__svelte__");
-      return {
-        page: {
-          subscribe: stores.page.subscribe
-        },
-        navigating: {
-          subscribe: stores.navigating.subscribe
-        },
-        get preloading() {
-          console.error("stores.preloading is deprecated; use stores.navigating instead");
-          return {
-            subscribe: stores.navigating.subscribe
-          };
-        },
-        session: stores.session
-      };
-    };
-    page = {
-      subscribe(fn) {
-        const store = getStores().page;
-        return store.subscribe(fn);
-      }
-    };
-    css = {
-      code: '.progress.svelte-1e2qztx.svelte-1e2qztx{position:fixed;bottom:2.5rem;left:2.5rem;right:2.5rem;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}.progress.svelte-1e2qztx>div.svelte-1e2qztx{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline}.number.svelte-1e2qztx.svelte-1e2qztx{font-size:clamp(4rem, 2.9038461538rem + 4.8717948718vw, 8.75rem)}@media(prefers-reduced-motion: reduce){.number.svelte-1e2qztx.svelte-1e2qztx{display:none}}.progress-bar.svelte-1e2qztx.svelte-1e2qztx{height:0.0625rem;background-color:hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.1)}@media(prefers-reduced-motion: reduce){.progress-bar.svelte-1e2qztx.svelte-1e2qztx{display:none !important}}.progress-sliver.svelte-1e2qztx.svelte-1e2qztx{width:var(--width);background-color:hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.5);height:100%}',
-      map: null
-    };
-    Progress = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let $$unsubscribe_progress = noop, $$subscribe_progress = () => ($$unsubscribe_progress(), $$unsubscribe_progress = subscribe(progress, ($$value) => $$value), progress);
-      let $page, $$unsubscribe_page;
-      $$unsubscribe_page = subscribe(page, (value) => $page = value);
-      let progress = tweened(0);
-      $$subscribe_progress();
-      $$result.css.add(css);
-      $$unsubscribe_progress();
-      $$unsubscribe_page();
-      return `${$$result.head += `<script data-svelte="svelte-kw2fqm">var preProgress = 0;
-
-        setTimeout(() => {
-            if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
-                setInterval(() => {
-                    if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
-                        if (parseInt(document.getElementById("preProgressNumber").innerText) < 70) {
-                            document.getElementById("preProgressNumber").innerText = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
-                            preProgress = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
-                            document.getElementById("preProgressSliver").style.setProperty('--width', \`\${preProgress}%\`);
-                        }
-                    }
-                }, 100);
-            }
-        }, 500);
-    <\/script>`, ""}
-
-<div class="${"progress svelte-1e2qztx"}"><div class="${"svelte-1e2qztx"}"><div class="${"number svelte-1e2qztx"}">${`<span id="${"preProgressNumber"}">0</span>%`}</div>
-        <div class="${"path"}">loading ${escape($page.path == "/" ? "/start" : $page.path)}</div></div>
-    
-    <div class="${"progress-bar svelte-1e2qztx"}">${`<div id="${"preProgressSliver"}" class="${"progress-sliver svelte-1e2qztx"}"></div>`}</div>
-</div>`;
-    });
-    load = async ({ page: page2 }) => ({ props: { key: page2.path } });
-    _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { key } = $$props;
-      scheme.subscribe((value) => {
-      });
-      if ($$props.key === void 0 && $$bindings.key && key !== void 0)
-        $$bindings.key(key);
-      return `
-
-${`<div>${validate_component(Progress, "Progress").$$render($$result, {}, {}, {})}</div>`}`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/__error-60ebf934.js
-var error_60ebf934_exports = {};
-__export(error_60ebf934_exports, {
-  default: () => _error,
-  load: () => load2
-});
-function load2({ error: error2, status }) {
-  console.log(error2);
-  return {
-    props: {
-      title: status,
-      message: error2.message.replace("Not found: ", "")
-    }
-  };
-}
-var import_cookie2, css2, _error;
-var init_error_60ebf934 = __esm({
-  ".svelte-kit/output/server/chunks/__error-60ebf934.js"() {
-    init_shims();
-    init_app_d5644d2d();
-    import_cookie2 = __toModule(require_cookie());
-    init_dist();
-    css2 = {
-      code: "section.svelte-1roueoo{box-sizing:border-box;padding:9.375rem var(--core-padding)}div.svelte-1roueoo{max-width:var(--core-max-width);margin:0 auto}h1.svelte-1roueoo{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}p.svelte-1roueoo{font-size:1.25rem}a.svelte-1roueoo{text-decoration:underline}",
-      map: null
-    };
-    _error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { title } = $$props;
-      let { message } = $$props;
-      if ($$props.title === void 0 && $$bindings.title && title !== void 0)
-        $$bindings.title(title);
-      if ($$props.message === void 0 && $$bindings.message && message !== void 0)
-        $$bindings.message(message);
-      $$result.css.add(css2);
-      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | ${escape(title)} Error</title>`, ""}`, ""}
-
-<section class="${"svelte-1roueoo"}"><div class="${"svelte-1roueoo"}"><h1 class="${"svelte-1roueoo"}">${escape(title)}</h1>
-        <p class="${"svelte-1roueoo"}">Entschuldige, diese Seite wurde nicht gefunden: ${escape(message)}</p>
-        <p class="${"svelte-1roueoo"}"><a href="${"/"}" class="${"svelte-1roueoo"}">Zur Startseite</a></p></div>
-</section>`;
     });
   }
 });
@@ -9773,10 +9641,10 @@ var require_ticker = __commonJS({
       });
       return Ticker2;
     }();
-    var TickerPlugin2 = function() {
-      function TickerPlugin3() {
+    var TickerPlugin = function() {
+      function TickerPlugin2() {
       }
-      TickerPlugin3.init = function(options2) {
+      TickerPlugin2.init = function(options2) {
         var _this = this;
         options2 = Object.assign({
           autoStart: true,
@@ -9808,17 +9676,17 @@ var require_ticker = __commonJS({
           this.start();
         }
       };
-      TickerPlugin3.destroy = function() {
+      TickerPlugin2.destroy = function() {
         if (this._ticker) {
           var oldTicker = this._ticker;
           this.ticker = null;
           oldTicker.destroy();
         }
       };
-      return TickerPlugin3;
+      return TickerPlugin2;
     }();
     exports.Ticker = Ticker;
-    exports.TickerPlugin = TickerPlugin2;
+    exports.TickerPlugin = TickerPlugin;
   }
 });
 
@@ -15694,9 +15562,9 @@ var require_core = __commonJS({
       };
       return BufferSystem2;
     }();
-    var Renderer2 = function(_super) {
-      __extends(Renderer3, _super);
-      function Renderer3(options2) {
+    var Renderer = function(_super) {
+      __extends(Renderer2, _super);
+      function Renderer2(options2) {
         var _this = _super.call(this, constants.RENDERER_TYPE.WEBGL, options2) || this;
         options2 = _this.options;
         _this.gl = null;
@@ -15715,7 +15583,7 @@ var require_core = __commonJS({
           projectionMatrix: new math.Matrix()
         }, true);
         _this.addSystem(MaskSystem, "mask").addSystem(ContextSystem, "context").addSystem(StateSystem, "state").addSystem(ShaderSystem, "shader").addSystem(TextureSystem, "texture").addSystem(BufferSystem, "buffer").addSystem(GeometrySystem, "geometry").addSystem(FramebufferSystem, "framebuffer").addSystem(ScissorSystem, "scissor").addSystem(StencilSystem, "stencil").addSystem(ProjectionSystem, "projection").addSystem(TextureGCSystem, "textureGC").addSystem(FilterSystem, "filter").addSystem(RenderTextureSystem, "renderTexture").addSystem(BatchSystem, "batch");
-        _this.initPlugins(Renderer3.__plugins);
+        _this.initPlugins(Renderer2.__plugins);
         _this.multisample = void 0;
         if (options2.context) {
           _this.context.initFromContext(options2.context);
@@ -15734,13 +15602,13 @@ var require_core = __commonJS({
         _this.resize(_this.options.width, _this.options.height);
         return _this;
       }
-      Renderer3.create = function(options2) {
+      Renderer2.create = function(options2) {
         if (utils.isWebGLSupported()) {
-          return new Renderer3(options2);
+          return new Renderer2(options2);
         }
         throw new Error('WebGL unsupported in this browser, use "pixi.js-legacy" for fallback canvas2d support.');
       };
-      Renderer3.prototype.contextChange = function() {
+      Renderer2.prototype.contextChange = function() {
         var gl = this.gl;
         var samples;
         if (this.context.webGLVersion === 1) {
@@ -15764,7 +15632,7 @@ var require_core = __commonJS({
           this.multisample = constants.MSAA_QUALITY.NONE;
         }
       };
-      Renderer3.prototype.addSystem = function(ClassRef, name2) {
+      Renderer2.prototype.addSystem = function(ClassRef, name2) {
         var system = new ClassRef(this);
         if (this[name2]) {
           throw new Error('Whoops! The name "' + name2 + '" is already in use');
@@ -15775,7 +15643,7 @@ var require_core = __commonJS({
         }
         return this;
       };
-      Renderer3.prototype.render = function(displayObject, options2) {
+      Renderer2.prototype.render = function(displayObject, options2) {
         var renderTexture;
         var clear;
         var transform;
@@ -15823,7 +15691,7 @@ var require_core = __commonJS({
         this.projection.transform = null;
         this.emit("postrender");
       };
-      Renderer3.prototype.generateTexture = function(displayObject, options2, resolution, region) {
+      Renderer2.prototype.generateTexture = function(displayObject, options2, resolution, region) {
         if (options2 === void 0) {
           options2 = {};
         }
@@ -15831,19 +15699,19 @@ var require_core = __commonJS({
         this.framebuffer.blit();
         return renderTexture;
       };
-      Renderer3.prototype.resize = function(desiredScreenWidth, desiredScreenHeight) {
+      Renderer2.prototype.resize = function(desiredScreenWidth, desiredScreenHeight) {
         _super.prototype.resize.call(this, desiredScreenWidth, desiredScreenHeight);
         this.runners.resize.emit(this.screen.height, this.screen.width);
       };
-      Renderer3.prototype.reset = function() {
+      Renderer2.prototype.reset = function() {
         this.runners.reset.emit();
         return this;
       };
-      Renderer3.prototype.clear = function() {
+      Renderer2.prototype.clear = function() {
         this.renderTexture.bind();
         this.renderTexture.clear();
       };
-      Renderer3.prototype.destroy = function(removeView) {
+      Renderer2.prototype.destroy = function(removeView) {
         this.runners.destroy.emit();
         for (var r in this.runners) {
           this.runners[r].destroy();
@@ -15851,7 +15719,7 @@ var require_core = __commonJS({
         _super.prototype.destroy.call(this, removeView);
         this.gl = null;
       };
-      Object.defineProperty(Renderer3.prototype, "extract", {
+      Object.defineProperty(Renderer2.prototype, "extract", {
         get: function() {
           utils.deprecation("6.0.0", "Renderer#extract has been deprecated, please use Renderer#plugins.extract instead.");
           return this.plugins.extract;
@@ -15859,14 +15727,14 @@ var require_core = __commonJS({
         enumerable: false,
         configurable: true
       });
-      Renderer3.registerPlugin = function(pluginName, ctor) {
-        Renderer3.__plugins = Renderer3.__plugins || {};
-        Renderer3.__plugins[pluginName] = ctor;
+      Renderer2.registerPlugin = function(pluginName, ctor) {
+        Renderer2.__plugins = Renderer2.__plugins || {};
+        Renderer2.__plugins[pluginName] = ctor;
       };
-      return Renderer3;
+      return Renderer2;
     }(AbstractRenderer);
     function autoDetectRenderer(options2) {
-      return Renderer2.create(options2);
+      return Renderer.create(options2);
     }
     var $defaultVertex = "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}";
     var $defaultFilterVertex = "attribute vec2 aVertexPosition;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nuniform vec4 inputSize;\nuniform vec4 outputFrame;\n\nvec4 filterVertexPosition( void )\n{\n    vec2 position = aVertexPosition * max(outputFrame.zw, vec2(0.)) + outputFrame.xy;\n\n    return vec4((projectionMatrix * vec3(position, 1.0)).xy, 0.0, 1.0);\n}\n\nvec2 filterTextureCoord( void )\n{\n    return aVertexPosition * (outputFrame.zw * inputSize.zw);\n}\n\nvoid main(void)\n{\n    gl_Position = filterVertexPosition();\n    vTextureCoord = filterTextureCoord();\n}\n";
@@ -16392,7 +16260,7 @@ var require_core = __commonJS({
       });
       return BatchPluginFactory2;
     }();
-    var BatchRenderer2 = BatchPluginFactory.create();
+    var BatchRenderer = BatchPluginFactory.create();
     var resources = {};
     var _loop_1 = function(name2) {
       Object.defineProperty(resources, name2, {
@@ -16430,7 +16298,7 @@ var require_core = __commonJS({
     exports.BatchDrawCall = BatchDrawCall;
     exports.BatchGeometry = BatchGeometry;
     exports.BatchPluginFactory = BatchPluginFactory;
-    exports.BatchRenderer = BatchRenderer2;
+    exports.BatchRenderer = BatchRenderer;
     exports.BatchShaderGenerator = BatchShaderGenerator;
     exports.BatchSystem = BatchSystem;
     exports.BatchTextureArray = BatchTextureArray;
@@ -16463,7 +16331,7 @@ var require_core = __commonJS({
     exports.RenderTexture = RenderTexture;
     exports.RenderTexturePool = RenderTexturePool;
     exports.RenderTextureSystem = RenderTextureSystem;
-    exports.Renderer = Renderer2;
+    exports.Renderer = Renderer;
     exports.Resource = Resource;
     exports.SVGResource = SVGResource;
     exports.ScissorSystem = ScissorSystem;
@@ -16506,41 +16374,41 @@ var require_app = __commonJS({
     Object.defineProperty(exports, "__esModule", { value: true });
     var display = require_display();
     var core = require_core();
-    var Application2 = function() {
-      function Application3(options2) {
+    var Application = function() {
+      function Application2(options2) {
         var _this = this;
         this.stage = new display.Container();
         options2 = Object.assign({
           forceCanvas: false
         }, options2);
         this.renderer = core.autoDetectRenderer(options2);
-        Application3._plugins.forEach(function(plugin) {
+        Application2._plugins.forEach(function(plugin) {
           plugin.init.call(_this, options2);
         });
       }
-      Application3.registerPlugin = function(plugin) {
-        Application3._plugins.push(plugin);
+      Application2.registerPlugin = function(plugin) {
+        Application2._plugins.push(plugin);
       };
-      Application3.prototype.render = function() {
+      Application2.prototype.render = function() {
         this.renderer.render(this.stage);
       };
-      Object.defineProperty(Application3.prototype, "view", {
+      Object.defineProperty(Application2.prototype, "view", {
         get: function() {
           return this.renderer.view;
         },
         enumerable: false,
         configurable: true
       });
-      Object.defineProperty(Application3.prototype, "screen", {
+      Object.defineProperty(Application2.prototype, "screen", {
         get: function() {
           return this.renderer.screen;
         },
         enumerable: false,
         configurable: true
       });
-      Application3.prototype.destroy = function(removeView, stageOptions) {
+      Application2.prototype.destroy = function(removeView, stageOptions) {
         var _this = this;
-        var plugins = Application3._plugins.slice(0);
+        var plugins = Application2._plugins.slice(0);
         plugins.reverse();
         plugins.forEach(function(plugin) {
           plugin.destroy.call(_this);
@@ -16550,8 +16418,8 @@ var require_app = __commonJS({
         this.renderer.destroy(removeView);
         this.renderer = null;
       };
-      Application3._plugins = [];
-      return Application3;
+      Application2._plugins = [];
+      return Application2;
     }();
     var ResizePlugin = function() {
       function ResizePlugin2() {
@@ -16617,8 +16485,8 @@ var require_app = __commonJS({
       };
       return ResizePlugin2;
     }();
-    Application2.registerPlugin(ResizePlugin);
-    exports.Application = Application2;
+    Application.registerPlugin(ResizePlugin);
+    exports.Application = Application;
   }
 });
 
@@ -18795,9 +18663,9 @@ var require_interaction = __commonJS({
         global: null
       }
     };
-    var InteractionManager2 = function(_super) {
-      __extends(InteractionManager3, _super);
-      function InteractionManager3(renderer, options2) {
+    var InteractionManager = function(_super) {
+      __extends(InteractionManager2, _super);
+      function InteractionManager2(renderer, options2) {
         var _this = _super.call(this) || this;
         options2 = options2 || {};
         _this.renderer = renderer;
@@ -18843,7 +18711,7 @@ var require_interaction = __commonJS({
         _this.setTargetElement(_this.renderer.view, _this.renderer.resolution);
         return _this;
       }
-      Object.defineProperty(InteractionManager3.prototype, "useSystemTicker", {
+      Object.defineProperty(InteractionManager2.prototype, "useSystemTicker", {
         get: function() {
           return this._useSystemTicker;
         },
@@ -18858,14 +18726,14 @@ var require_interaction = __commonJS({
         enumerable: false,
         configurable: true
       });
-      Object.defineProperty(InteractionManager3.prototype, "lastObjectRendered", {
+      Object.defineProperty(InteractionManager2.prototype, "lastObjectRendered", {
         get: function() {
           return this.renderer._lastObjectRendered || this._tempDisplayObject;
         },
         enumerable: false,
         configurable: true
       });
-      InteractionManager3.prototype.hitTest = function(globalPoint, root) {
+      InteractionManager2.prototype.hitTest = function(globalPoint, root) {
         hitTestEvent.target = null;
         hitTestEvent.data.global = globalPoint;
         if (!root) {
@@ -18874,7 +18742,7 @@ var require_interaction = __commonJS({
         this.processInteractive(hitTestEvent, root, null, true);
         return hitTestEvent.target;
       };
-      InteractionManager3.prototype.setTargetElement = function(element, resolution) {
+      InteractionManager2.prototype.setTargetElement = function(element, resolution) {
         if (resolution === void 0) {
           resolution = 1;
         }
@@ -18885,21 +18753,21 @@ var require_interaction = __commonJS({
         this.addEvents();
         this.addTickerListener();
       };
-      InteractionManager3.prototype.addTickerListener = function() {
+      InteractionManager2.prototype.addTickerListener = function() {
         if (this.tickerAdded || !this.interactionDOMElement || !this._useSystemTicker) {
           return;
         }
         ticker.Ticker.system.add(this.tickerUpdate, this, ticker.UPDATE_PRIORITY.INTERACTION);
         this.tickerAdded = true;
       };
-      InteractionManager3.prototype.removeTickerListener = function() {
+      InteractionManager2.prototype.removeTickerListener = function() {
         if (!this.tickerAdded) {
           return;
         }
         ticker.Ticker.system.remove(this.tickerUpdate, this);
         this.tickerAdded = false;
       };
-      InteractionManager3.prototype.addEvents = function() {
+      InteractionManager2.prototype.addEvents = function() {
         if (this.eventsAdded || !this.interactionDOMElement) {
           return;
         }
@@ -18932,7 +18800,7 @@ var require_interaction = __commonJS({
         }
         this.eventsAdded = true;
       };
-      InteractionManager3.prototype.removeEvents = function() {
+      InteractionManager2.prototype.removeEvents = function() {
         if (!this.eventsAdded || !this.interactionDOMElement) {
           return;
         }
@@ -18966,7 +18834,7 @@ var require_interaction = __commonJS({
         this.interactionDOMElement = null;
         this.eventsAdded = false;
       };
-      InteractionManager3.prototype.tickerUpdate = function(deltaTime) {
+      InteractionManager2.prototype.tickerUpdate = function(deltaTime) {
         this._deltaTime += deltaTime;
         if (this._deltaTime < this.interactionFrequency) {
           return;
@@ -18974,7 +18842,7 @@ var require_interaction = __commonJS({
         this._deltaTime = 0;
         this.update();
       };
-      InteractionManager3.prototype.update = function() {
+      InteractionManager2.prototype.update = function() {
         if (!this.interactionDOMElement) {
           return;
         }
@@ -18994,7 +18862,7 @@ var require_interaction = __commonJS({
         }
         this.setCursorMode(this.cursor);
       };
-      InteractionManager3.prototype.setCursorMode = function(mode) {
+      InteractionManager2.prototype.setCursorMode = function(mode) {
         mode = mode || "default";
         var applyStyles = true;
         if (self.OffscreenCanvas && this.interactionDOMElement instanceof OffscreenCanvas) {
@@ -19025,7 +18893,7 @@ var require_interaction = __commonJS({
           this.interactionDOMElement.style.cursor = mode;
         }
       };
-      InteractionManager3.prototype.dispatchEvent = function(displayObject, eventString, eventData) {
+      InteractionManager2.prototype.dispatchEvent = function(displayObject, eventString, eventData) {
         if (!eventData.stopPropagationHint || displayObject === eventData.stopsPropagatingAt) {
           eventData.currentTarget = displayObject;
           eventData.type = eventString;
@@ -19035,10 +18903,10 @@ var require_interaction = __commonJS({
           }
         }
       };
-      InteractionManager3.prototype.delayDispatchEvent = function(displayObject, eventString, eventData) {
+      InteractionManager2.prototype.delayDispatchEvent = function(displayObject, eventString, eventData) {
         this.delayedEvents.push({ displayObject, eventString, eventData });
       };
-      InteractionManager3.prototype.mapPositionToPoint = function(point, x, y) {
+      InteractionManager2.prototype.mapPositionToPoint = function(point, x, y) {
         var rect;
         if (!this.interactionDOMElement.parentElement) {
           rect = {
@@ -19056,7 +18924,7 @@ var require_interaction = __commonJS({
         point.x = (x - rect.left) * (this.interactionDOMElement.width / rect.width) * resolutionMultiplier;
         point.y = (y - rect.top) * (this.interactionDOMElement.height / rect.height) * resolutionMultiplier;
       };
-      InteractionManager3.prototype.processInteractive = function(interactionEvent, displayObject, func, hitTest) {
+      InteractionManager2.prototype.processInteractive = function(interactionEvent, displayObject, func, hitTest) {
         var hit = this.search.findHit(interactionEvent, displayObject, func, hitTest);
         var delayedEvents = this.delayedEvents;
         if (!delayedEvents.length) {
@@ -19074,7 +18942,7 @@ var require_interaction = __commonJS({
         }
         return hit;
       };
-      InteractionManager3.prototype.onPointerDown = function(originalEvent) {
+      InteractionManager2.prototype.onPointerDown = function(originalEvent) {
         if (this.supportsTouchEvents && originalEvent.pointerType === "touch") {
           return;
         }
@@ -19101,7 +18969,7 @@ var require_interaction = __commonJS({
           }
         }
       };
-      InteractionManager3.prototype.processPointerDown = function(interactionEvent, displayObject, hit) {
+      InteractionManager2.prototype.processPointerDown = function(interactionEvent, displayObject, hit) {
         var data = interactionEvent.data;
         var id = interactionEvent.data.identifier;
         if (hit) {
@@ -19122,7 +18990,7 @@ var require_interaction = __commonJS({
           }
         }
       };
-      InteractionManager3.prototype.onPointerComplete = function(originalEvent, cancelled, func) {
+      InteractionManager2.prototype.onPointerComplete = function(originalEvent, cancelled, func) {
         var events = this.normalizeToPointerData(originalEvent);
         var eventLen = events.length;
         var eventAppend = originalEvent.target !== this.interactionDOMElement ? "outside" : "";
@@ -19142,13 +19010,13 @@ var require_interaction = __commonJS({
           }
         }
       };
-      InteractionManager3.prototype.onPointerCancel = function(event) {
+      InteractionManager2.prototype.onPointerCancel = function(event) {
         if (this.supportsTouchEvents && event.pointerType === "touch") {
           return;
         }
         this.onPointerComplete(event, true, this.processPointerCancel);
       };
-      InteractionManager3.prototype.processPointerCancel = function(interactionEvent, displayObject) {
+      InteractionManager2.prototype.processPointerCancel = function(interactionEvent, displayObject) {
         var data = interactionEvent.data;
         var id = interactionEvent.data.identifier;
         if (displayObject.trackedPointers[id] !== void 0) {
@@ -19159,13 +19027,13 @@ var require_interaction = __commonJS({
           }
         }
       };
-      InteractionManager3.prototype.onPointerUp = function(event) {
+      InteractionManager2.prototype.onPointerUp = function(event) {
         if (this.supportsTouchEvents && event.pointerType === "touch") {
           return;
         }
         this.onPointerComplete(event, false, this.processPointerUp);
       };
-      InteractionManager3.prototype.processPointerUp = function(interactionEvent, displayObject, hit) {
+      InteractionManager2.prototype.processPointerUp = function(interactionEvent, displayObject, hit) {
         var data = interactionEvent.data;
         var id = interactionEvent.data.identifier;
         var trackingData = displayObject.trackedPointers[id];
@@ -19218,7 +19086,7 @@ var require_interaction = __commonJS({
           delete displayObject.trackedPointers[id];
         }
       };
-      InteractionManager3.prototype.onPointerMove = function(originalEvent) {
+      InteractionManager2.prototype.onPointerMove = function(originalEvent) {
         if (this.supportsTouchEvents && originalEvent.pointerType === "touch") {
           return;
         }
@@ -19246,7 +19114,7 @@ var require_interaction = __commonJS({
           this.setCursorMode(this.cursor);
         }
       };
-      InteractionManager3.prototype.processPointerMove = function(interactionEvent, displayObject, hit) {
+      InteractionManager2.prototype.processPointerMove = function(interactionEvent, displayObject, hit) {
         var data = interactionEvent.data;
         var isTouch = data.pointerType === "touch";
         var isMouse = data.pointerType === "mouse" || data.pointerType === "pen";
@@ -19263,7 +19131,7 @@ var require_interaction = __commonJS({
           }
         }
       };
-      InteractionManager3.prototype.onPointerOut = function(originalEvent) {
+      InteractionManager2.prototype.onPointerOut = function(originalEvent) {
         if (this.supportsTouchEvents && originalEvent.pointerType === "touch") {
           return;
         }
@@ -19284,7 +19152,7 @@ var require_interaction = __commonJS({
           this.releaseInteractionDataForPointerId(interactionData.identifier);
         }
       };
-      InteractionManager3.prototype.processPointerOverOut = function(interactionEvent, displayObject, hit) {
+      InteractionManager2.prototype.processPointerOverOut = function(interactionEvent, displayObject, hit) {
         var data = interactionEvent.data;
         var id = interactionEvent.data.identifier;
         var isMouse = data.pointerType === "mouse" || data.pointerType === "pen";
@@ -19317,7 +19185,7 @@ var require_interaction = __commonJS({
           }
         }
       };
-      InteractionManager3.prototype.onPointerOver = function(originalEvent) {
+      InteractionManager2.prototype.onPointerOver = function(originalEvent) {
         var events = this.normalizeToPointerData(originalEvent);
         var event = events[0];
         var interactionData = this.getInteractionDataForPointerId(event);
@@ -19331,7 +19199,7 @@ var require_interaction = __commonJS({
           this.emit("mouseover", interactionEvent);
         }
       };
-      InteractionManager3.prototype.getInteractionDataForPointerId = function(event) {
+      InteractionManager2.prototype.getInteractionDataForPointerId = function(event) {
         var pointerId = event.pointerId;
         var interactionData;
         if (pointerId === MOUSE_POINTER_ID || event.pointerType === "mouse") {
@@ -19346,7 +19214,7 @@ var require_interaction = __commonJS({
         interactionData.copyEvent(event);
         return interactionData;
       };
-      InteractionManager3.prototype.releaseInteractionDataForPointerId = function(pointerId) {
+      InteractionManager2.prototype.releaseInteractionDataForPointerId = function(pointerId) {
         var interactionData = this.activeInteractionData[pointerId];
         if (interactionData) {
           delete this.activeInteractionData[pointerId];
@@ -19354,7 +19222,7 @@ var require_interaction = __commonJS({
           this.interactionDataPool.push(interactionData);
         }
       };
-      InteractionManager3.prototype.configureInteractionEventForDOMEvent = function(interactionEvent, pointerEvent, interactionData) {
+      InteractionManager2.prototype.configureInteractionEventForDOMEvent = function(interactionEvent, pointerEvent, interactionData) {
         interactionEvent.data = interactionData;
         this.mapPositionToPoint(interactionData.global, pointerEvent.clientX, pointerEvent.clientY);
         if (pointerEvent.pointerType === "touch") {
@@ -19365,7 +19233,7 @@ var require_interaction = __commonJS({
         interactionEvent.reset();
         return interactionEvent;
       };
-      InteractionManager3.prototype.normalizeToPointerData = function(event) {
+      InteractionManager2.prototype.normalizeToPointerData = function(event) {
         var normalizedEvents = [];
         if (this.supportsTouchEvents && event instanceof TouchEvent) {
           for (var i = 0, li = event.changedTouches.length; i < li; i++) {
@@ -19454,7 +19322,7 @@ var require_interaction = __commonJS({
         }
         return normalizedEvents;
       };
-      InteractionManager3.prototype.destroy = function() {
+      InteractionManager2.prototype.destroy = function() {
         this.removeEvents();
         this.removeTickerListener();
         this.removeAllListeners();
@@ -19475,11 +19343,11 @@ var require_interaction = __commonJS({
         this.onPointerOver = null;
         this.search = null;
       };
-      return InteractionManager3;
+      return InteractionManager2;
     }(utils.EventEmitter);
     exports.InteractionData = InteractionData;
     exports.InteractionEvent = InteractionEvent;
-    exports.InteractionManager = InteractionManager2;
+    exports.InteractionManager = InteractionManager;
     exports.InteractionTrackingData = InteractionTrackingData;
     exports.interactiveTarget = interactiveTarget;
   }
@@ -20734,17 +20602,18 @@ var require_debounce = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-cbc6a0e6.js
-var index_cbc6a0e6_exports = {};
-__export(index_cbc6a0e6_exports, {
-  default: () => Routes,
-  prerender: () => prerender
+// .svelte-kit/output/server/chunks/__layout-d3aa8f0b.js
+var layout_d3aa8f0b_exports = {};
+__export(layout_d3aa8f0b_exports, {
+  default: () => _layout,
+  load: () => load
 });
-var import_app, import_graphics, import_display, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_utils, import_cookie3, deathStarIcon, css$5, DeathStar, css$4, Scene, css$3, Hero, IntersectionObserver_1, arrow, css$2, Teaser, wheel, css$1, LatestWork, css3, Wisdom, prerender, Routes;
-var init_index_cbc6a0e6 = __esm({
-  ".svelte-kit/output/server/chunks/index-cbc6a0e6.js"() {
+var import_app, import_graphics, import_display, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_utils, import_cookie, getStores, page, css, Progress, load, _layout;
+var init_layout_d3aa8f0b = __esm({
+  ".svelte-kit/output/server/chunks/__layout-d3aa8f0b.js"() {
     init_shims();
-    init_app_d5644d2d();
+    init_app_fe36154b();
+    init_index_812a8eea();
     init_dist2();
     import_app = __toModule(require_app());
     import_graphics = __toModule(require_graphics());
@@ -20760,59 +20629,132 @@ var init_index_cbc6a0e6 = __esm({
     import_hsl_to_hex = __toModule(require_hsl_to_hex());
     import_debounce = __toModule(require_debounce());
     import_utils = __toModule(require_utils());
-    init_index_a75c4654();
-    import_cookie3 = __toModule(require_cookie());
+    import_cookie = __toModule(require_cookie());
     init_dist();
-    deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>';
-    css$5 = {
-      code: "button.svelte-iyvpaf{display:flex}",
+    getStores = () => {
+      const stores = getContext("__svelte__");
+      return {
+        page: {
+          subscribe: stores.page.subscribe
+        },
+        navigating: {
+          subscribe: stores.navigating.subscribe
+        },
+        get preloading() {
+          console.error("stores.preloading is deprecated; use stores.navigating instead");
+          return {
+            subscribe: stores.navigating.subscribe
+          };
+        },
+        session: stores.session
+      };
+    };
+    page = {
+      subscribe(fn) {
+        const store = getStores().page;
+        return store.subscribe(fn);
+      }
+    };
+    css = {
+      code: '.progress.svelte-1e2qztx.svelte-1e2qztx{position:fixed;bottom:2.5rem;left:2.5rem;right:2.5rem;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}.progress.svelte-1e2qztx>div.svelte-1e2qztx{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline}.number.svelte-1e2qztx.svelte-1e2qztx{font-size:clamp(4rem, 2.9038461538rem + 4.8717948718vw, 8.75rem)}@media(prefers-reduced-motion: reduce){.number.svelte-1e2qztx.svelte-1e2qztx{display:none}}.progress-bar.svelte-1e2qztx.svelte-1e2qztx{height:0.0625rem;background-color:hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.1)}@media(prefers-reduced-motion: reduce){.progress-bar.svelte-1e2qztx.svelte-1e2qztx{display:none !important}}.progress-sliver.svelte-1e2qztx.svelte-1e2qztx{width:var(--width);background-color:hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.5);height:100%}',
       map: null
     };
-    DeathStar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css$5);
-      return `<button class="${"death-star svelte-iyvpaf"}" title="${"Farbschema wechseln"}"><!-- HTML_TAG_START -->${deathStarIcon}<!-- HTML_TAG_END -->
-</button>`;
+    Progress = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $$unsubscribe_progress = noop, $$subscribe_progress = () => ($$unsubscribe_progress(), $$unsubscribe_progress = subscribe(progress, ($$value) => $$value), progress);
+      let $page, $$unsubscribe_page;
+      $$unsubscribe_page = subscribe(page, (value) => $page = value);
+      let progress = tweened(0);
+      $$subscribe_progress();
+      $$result.css.add(css);
+      $$unsubscribe_progress();
+      $$unsubscribe_page();
+      return `${$$result.head += `<script data-svelte="svelte-kw2fqm">var preProgress = 0;
+
+        setTimeout(() => {
+            if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
+                setInterval(() => {
+                    if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
+                        if (parseInt(document.getElementById("preProgressNumber").innerText) < 70) {
+                            document.getElementById("preProgressNumber").innerText = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
+                            preProgress = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
+                            document.getElementById("preProgressSliver").style.setProperty('--width', \`\${preProgress}%\`);
+                        }
+                    }
+                }, 100);
+            }
+        }, 500);
+    <\/script>`, ""}
+
+<div class="${"progress svelte-1e2qztx"}"><div class="${"svelte-1e2qztx"}"><div class="${"number svelte-1e2qztx"}">${`<span id="${"preProgressNumber"}">0</span>%`}</div>
+        <div class="${"path"}">loading ${escape($page.path == "/" ? "/start" : $page.path)}</div></div>
+    
+    <div class="${"progress-bar svelte-1e2qztx"}">${`<div id="${"preProgressSliver"}" class="${"progress-sliver svelte-1e2qztx"}"></div>`}</div>
+</div>`;
     });
-    css$4 = {
-      code: "canvas.svelte-1konbxi{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1}",
-      map: null
-    };
-    Scene = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      if (!(import_core.Renderer.__plugins ?? {}).hasOwnProperty("interaction")) {
-        import_core.Renderer.registerPlugin("interaction", import_interaction.InteractionManager);
-      }
-      if (!(import_core.Renderer.__plugins ?? {}).hasOwnProperty("batch")) {
-        import_core.Renderer.registerPlugin("batch", import_core.BatchRenderer);
-      }
-      if (!(import_app.Application._plugins || []).some((plugin) => plugin === import_ticker.TickerPlugin)) {
-        import_app.Application.registerPlugin(import_ticker.TickerPlugin);
-      }
-      let view;
-      $$result.css.add(css$4);
-      return `<canvas class="${"svelte-1konbxi"}"${add_attribute("this", view, 0)}></canvas>`;
+    load = async ({ page: page2 }) => ({ props: { key: page2.path } });
+    _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { key } = $$props;
+      scheme.subscribe((value) => {
+      });
+      if ($$props.key === void 0 && $$bindings.key && key !== void 0)
+        $$bindings.key(key);
+      return `
+
+${`<div>${validate_component(Progress, "Progress").$$render($$result, {}, {}, {})}</div>`}`;
     });
-    css$3 = {
-      code: '@keyframes svelte-1mt8kc7-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1mt8kc7-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1mt8kc7-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1mt8kc7-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1mt8kc7-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1mt8kc7-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1mt8kc7-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1mt8kc7-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1mt8kc7-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1mt8kc7-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}.hero.svelte-1mt8kc7.svelte-1mt8kc7.svelte-1mt8kc7{align-items:start;box-sizing:border-box;display:grid;grid-column-gap:0;grid-gap:0.3125rem;grid-template-columns:auto clamp(19.375rem, 11rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;min-height:var(--app-height, 100vh);padding:var(--core-padding) 0;z-index:1}.headline.svelte-1mt8kc7.svelte-1mt8kc7.svelte-1mt8kc7{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.headline.svelte-1mt8kc7 .sphere.svelte-1mt8kc7.svelte-1mt8kc7{animation:svelte-1mt8kc7-fadein 2s var(--easing) forwards;display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.8);border-radius:50%;mix-blend-mode:soft-light;will-change:opacity;opacity:0}h1.svelte-1mt8kc7.svelte-1mt8kc7.svelte-1mt8kc7{font-family:var(--serif);font-weight:700;font-size:clamp(2.875rem, 2.1181818182rem + 3.3636363636vw, 7.5rem);line-height:0.85;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:1}[color-scheme="highcontrast"] h1.svelte-1mt8kc7.svelte-1mt8kc7.svelte-1mt8kc7{line-height:1}[color-scheme="highcontrast"] h1.svelte-1mt8kc7 span.svelte-1mt8kc7.svelte-1mt8kc7{margin:0 !important}@media(prefers-reduced-motion: no-preference){h1.svelte-1mt8kc7.svelte-1mt8kc7.svelte-1mt8kc7{animation:svelte-1mt8kc7-fadein-from-primary 2s var(--easing) forwards}}h1.svelte-1mt8kc7 span.svelte-1mt8kc7.svelte-1mt8kc7{display:block}h1.svelte-1mt8kc7 span.svelte-1mt8kc7.svelte-1mt8kc7:first-child{margin-right:0.6em}h1.svelte-1mt8kc7 span.svelte-1mt8kc7.svelte-1mt8kc7:last-child{margin-left:1em}@media(prefers-reduced-motion: no-preference){h1.svelte-1mt8kc7 span.svelte-1mt8kc7.svelte-1mt8kc7{animation:svelte-1mt8kc7-to-top-10 0.5s var(--easing) forwards}}.bottom.svelte-1mt8kc7.svelte-1mt8kc7.svelte-1mt8kc7{grid-column:1/span 3;padding:0 var(--core-padding)}.bottom.svelte-1mt8kc7>div.svelte-1mt8kc7.svelte-1mt8kc7{display:grid;grid-template-columns:1.875rem 1fr 1.875rem;max-width:var(--core-max-width);margin:0 auto;align-items:center}@media(min-width: 768px){.bottom.svelte-1mt8kc7>div.svelte-1mt8kc7.svelte-1mt8kc7{grid-template-columns:2.75rem 1fr 2.75rem}}@media(prefers-reduced-motion: no-preference){.bottom.svelte-1mt8kc7>div.svelte-1mt8kc7.svelte-1mt8kc7{animation:svelte-1mt8kc7-fadein-from-primary 0.5s var(--easing) forwards}}.bottom.svelte-1mt8kc7 .claim.svelte-1mt8kc7.svelte-1mt8kc7{grid-column:2}.bottom.svelte-1mt8kc7 h2.svelte-1mt8kc7.svelte-1mt8kc7,.bottom.svelte-1mt8kc7 h3.svelte-1mt8kc7.svelte-1mt8kc7{font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);font-weight:400;margin:0;text-align:center;opacity:0.75}[color-scheme="highcontrast"] .bottom.svelte-1mt8kc7 h2.svelte-1mt8kc7.svelte-1mt8kc7,[color-scheme="highcontrast"] .bottom.svelte-1mt8kc7 h3.svelte-1mt8kc7.svelte-1mt8kc7{opacity:1}.bottom.svelte-1mt8kc7 .death-star{margin-right:-0.8125rem;padding:0.625rem}@media(min-width: 768px){.bottom.svelte-1mt8kc7 .death-star{display:none}}.scroll-please.svelte-1mt8kc7.svelte-1mt8kc7.svelte-1mt8kc7{--size:0.4375rem;grid-column:1;grid-row:1;position:relative;width:2.75rem;height:2.75rem;display:flex;align-items:center;justify-content:center;margin-left:-1.0625rem}@media(min-width: 768px){.scroll-please.svelte-1mt8kc7.svelte-1mt8kc7.svelte-1mt8kc7{--size:0.5625rem;grid-column:3;margin-left:0.9375rem}}.scroll-please.svelte-1mt8kc7:hover div.svelte-1mt8kc7 span.svelte-1mt8kc7{color:var(--primary)}.scroll-please.svelte-1mt8kc7 div.svelte-1mt8kc7.svelte-1mt8kc7{position:relative;width:calc(var(--size) + 0.125rem);height:calc((var(--size) + 0.125rem) * 3);pointer-events:none}.scroll-please.svelte-1mt8kc7 div i.svelte-1mt8kc7.svelte-1mt8kc7{position:absolute;top:0;width:var(--size);height:var(--size);border:0.0625rem solid hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.5);border-radius:50%}@media(prefers-reduced-motion: no-preference){.scroll-please.svelte-1mt8kc7 div i.svelte-1mt8kc7.svelte-1mt8kc7{animation:svelte-1mt8kc7-scroll 1.5s var(--easing) infinite}}.scroll-please.svelte-1mt8kc7 div i.svelte-1mt8kc7.svelte-1mt8kc7:nth-child(2){animation-delay:0.2s;border-color:hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.25);transform:translate3d(0, 50%, 0)}.scroll-please.svelte-1mt8kc7 div i.svelte-1mt8kc7.svelte-1mt8kc7:nth-child(3){animation-delay:0.4s;border-color:hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.15);transform:translate3d(0, 100%, 0)}.scroll-please.svelte-1mt8kc7 div.svelte-1mt8kc7 span.svelte-1mt8kc7{position:absolute;transform:rotate(270deg);transform-origin:top left;top:-0.5rem;left:0;left:1;font-size:calc(var(--size) + 0.125rem);line-height:var(--size);transition:color 0.2s var(--easing)}',
+  }
+});
+
+// .svelte-kit/output/server/chunks/__error-fe1f43f5.js
+var error_fe1f43f5_exports = {};
+__export(error_fe1f43f5_exports, {
+  default: () => _error,
+  load: () => load2
+});
+function load2({ error: error2, status }) {
+  console.log(error2);
+  return {
+    props: {
+      title: status,
+      message: error2.message.replace("Not found: ", "")
+    }
+  };
+}
+var import_cookie2, css2, _error;
+var init_error_fe1f43f5 = __esm({
+  ".svelte-kit/output/server/chunks/__error-fe1f43f5.js"() {
+    init_shims();
+    init_app_fe36154b();
+    import_cookie2 = __toModule(require_cookie());
+    init_dist();
+    css2 = {
+      code: "section.svelte-1roueoo{box-sizing:border-box;padding:9.375rem var(--core-padding)}div.svelte-1roueoo{max-width:var(--core-max-width);margin:0 auto}h1.svelte-1roueoo{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}p.svelte-1roueoo{font-size:1.25rem}a.svelte-1roueoo{text-decoration:underline}",
       map: null
     };
-    Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { scrollY } = $$props;
-      if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
-        $$bindings.scrollY(scrollY);
-      $$result.css.add(css$3);
-      return `<section class="${"hero svelte-1mt8kc7"}"><div class="${"headline svelte-1mt8kc7"}"><h1 style="${"transform: translate(0," + escape(scrollY / 4) + "px)"}" class="${"svelte-1mt8kc7"}"><span class="${"svelte-1mt8kc7"}">Digital</span>
-            <span class="${"svelte-1mt8kc7"}">Experience</span>
-            <span class="${"svelte-1mt8kc7"}">Creator</span></h1>
-        <div class="${"sphere svelte-1mt8kc7"}" style="${"transform: translate(0," + escape(scrollY / 6) + "px)"}"></div></div>
-    <div class="${"bottom svelte-1mt8kc7"}" style="${"transform: translate(0," + escape(scrollY / 8) + "px)"}"><div class="${"svelte-1mt8kc7"}"><button title="${"runterscrollen"}" class="${"scroll-please svelte-1mt8kc7"}"><div class="${"svelte-1mt8kc7"}"><i class="${"svelte-1mt8kc7"}"></i>
-                    <i class="${"svelte-1mt8kc7"}"></i>
-                    <i class="${"svelte-1mt8kc7"}"></i>
-                    <span class="${"sr-only svelte-1mt8kc7"}">scroll</span></div></button>
-            <div class="${"claim svelte-1mt8kc7"}"><h2 class="${"svelte-1mt8kc7"}">Konzept, Design &amp; Entwicklung</h2>
-                <h3 class="${"svelte-1mt8kc7"}">made in Vienna</h3></div>
-            ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div></div>
+    _error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { title } = $$props;
+      let { message } = $$props;
+      if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+        $$bindings.title(title);
+      if ($$props.message === void 0 && $$bindings.message && message !== void 0)
+        $$bindings.message(message);
+      $$result.css.add(css2);
+      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | ${escape(title)} Error</title>`, ""}`, ""}
+
+<section class="${"svelte-1roueoo"}"><div class="${"svelte-1roueoo"}"><h1 class="${"svelte-1roueoo"}">${escape(title)}</h1>
+        <p class="${"svelte-1roueoo"}">Entschuldige, diese Seite wurde nicht gefunden: ${escape(message)}</p>
+        <p class="${"svelte-1roueoo"}"><a href="${"/"}" class="${"svelte-1roueoo"}">Zur Startseite</a></p></div>
 </section>`;
     });
+  }
+});
+
+// .svelte-kit/output/server/chunks/IntersectionObserver-d26a2bb8.js
+var IntersectionObserver_1;
+var init_IntersectionObserver_d26a2bb8 = __esm({
+  ".svelte-kit/output/server/chunks/IntersectionObserver-d26a2bb8.js"() {
+    init_shims();
+    init_app_fe36154b();
     IntersectionObserver_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { element = null } = $$props;
       let { once = false } = $$props;
@@ -20841,19 +20783,76 @@ var init_index_cbc6a0e6 = __esm({
         $$bindings.observer(observer);
       return `${slots.default ? slots.default({ intersecting, entry, observer }) : ``}`;
     });
+  }
+});
+
+// .svelte-kit/output/server/chunks/arrow-c94cf332.js
+var arrow;
+var init_arrow_c94cf332 = __esm({
+  ".svelte-kit/output/server/chunks/arrow-c94cf332.js"() {
+    init_shims();
     arrow = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <path d="M23.854 11.646a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L22.793 12l-4.647-4.646a.5.5 0 0 1 .708-.708l5 5Z" fill="currentColor"/>\n    <path d="M24 12a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1 0-1h23a.5.5 0 0 1 .5.5Z" fill="currentColor"/>\n</svg>\n';
+  }
+});
+
+// .svelte-kit/output/server/chunks/index-7631d372.js
+var index_7631d372_exports = {};
+__export(index_7631d372_exports, {
+  default: () => Routes,
+  prerender: () => prerender
+});
+var import_cookie3, deathStarIcon, css$4, DeathStar, css$3, Hero, css$2, Teaser, wheel, css$1, LatestWork, css3, Wisdom, prerender, Routes;
+var init_index_7631d372 = __esm({
+  ".svelte-kit/output/server/chunks/index-7631d372.js"() {
+    init_shims();
+    init_app_fe36154b();
+    init_index_812a8eea();
+    init_IntersectionObserver_d26a2bb8();
+    init_arrow_c94cf332();
+    import_cookie3 = __toModule(require_cookie());
+    init_dist();
+    deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>';
+    css$4 = {
+      code: "button.svelte-iyvpaf{display:flex}",
+      map: null
+    };
+    DeathStar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$4);
+      return `<button class="${"death-star svelte-iyvpaf"}" title="${"Farbschema wechseln"}"><!-- HTML_TAG_START -->${deathStarIcon}<!-- HTML_TAG_END -->
+</button>`;
+    });
+    css$3 = {
+      code: '@keyframes svelte-173ytp5-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-173ytp5-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-173ytp5-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-173ytp5-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-173ytp5-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-173ytp5-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-173ytp5-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-173ytp5-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-173ytp5-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-173ytp5-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-173ytp5-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.hero.svelte-173ytp5.svelte-173ytp5.svelte-173ytp5{align-items:start;box-sizing:border-box;display:grid;grid-column-gap:0;grid-gap:0.3125rem;grid-template-columns:auto clamp(19.375rem, 11rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;min-height:var(--app-height, 100vh);padding:var(--core-padding) 0;z-index:1}.headline.svelte-173ytp5.svelte-173ytp5.svelte-173ytp5{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.headline.svelte-173ytp5 .sphere.svelte-173ytp5.svelte-173ytp5{animation:svelte-173ytp5-fadein 2s var(--easing) forwards;display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.8);border-radius:50%;mix-blend-mode:soft-light;will-change:opacity;opacity:0}h1.svelte-173ytp5.svelte-173ytp5.svelte-173ytp5{font-family:var(--serif);font-weight:700;font-size:clamp(2.875rem, 2.1181818182rem + 3.3636363636vw, 7.5rem);line-height:0.85;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:1}[color-scheme="highcontrast"] h1.svelte-173ytp5.svelte-173ytp5.svelte-173ytp5{line-height:1}[color-scheme="highcontrast"] h1.svelte-173ytp5 span.svelte-173ytp5.svelte-173ytp5{margin:0 !important}@media(prefers-reduced-motion: no-preference){h1.svelte-173ytp5.svelte-173ytp5.svelte-173ytp5{opacity:0;animation:svelte-173ytp5-fadein-from-primary 2s var(--easing) forwards}}h1.svelte-173ytp5 span.svelte-173ytp5.svelte-173ytp5{display:block}h1.svelte-173ytp5 span.svelte-173ytp5.svelte-173ytp5:first-child{margin-right:0.6em}h1.svelte-173ytp5 span.svelte-173ytp5.svelte-173ytp5:last-child{margin-left:1em}@media(prefers-reduced-motion: no-preference){h1.svelte-173ytp5 span.svelte-173ytp5.svelte-173ytp5{animation:svelte-173ytp5-to-top-10 0.5s var(--easing) forwards}}.bottom.svelte-173ytp5.svelte-173ytp5.svelte-173ytp5{grid-column:1/span 3;padding:0 var(--core-padding)}.bottom.svelte-173ytp5>div.svelte-173ytp5.svelte-173ytp5{display:grid;grid-template-columns:1.875rem 1fr 1.875rem;max-width:var(--core-max-width);margin:0 auto;align-items:center}@media(min-width: 768px){.bottom.svelte-173ytp5>div.svelte-173ytp5.svelte-173ytp5{grid-template-columns:2.75rem 1fr 2.75rem}}@media(prefers-reduced-motion: no-preference){.bottom.svelte-173ytp5>div.svelte-173ytp5.svelte-173ytp5{animation:svelte-173ytp5-fadein-from-primary 0.5s var(--easing) forwards}}.bottom.svelte-173ytp5 .claim.svelte-173ytp5.svelte-173ytp5{grid-column:2}.bottom.svelte-173ytp5 h2.svelte-173ytp5.svelte-173ytp5,.bottom.svelte-173ytp5 h3.svelte-173ytp5.svelte-173ytp5{font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);font-weight:400;margin:0;text-align:center;opacity:0.75}[color-scheme="highcontrast"] .bottom.svelte-173ytp5 h2.svelte-173ytp5.svelte-173ytp5,[color-scheme="highcontrast"] .bottom.svelte-173ytp5 h3.svelte-173ytp5.svelte-173ytp5{opacity:1}.bottom.svelte-173ytp5 .death-star{margin-right:-0.8125rem;padding:0.625rem}@media(min-width: 768px){.bottom.svelte-173ytp5 .death-star{display:none}}.scroll-please.svelte-173ytp5.svelte-173ytp5.svelte-173ytp5{--size:0.4375rem;grid-column:1;grid-row:1;position:relative;width:2.75rem;height:2.75rem;display:flex;align-items:center;justify-content:center;margin-left:-1.0625rem}@media(min-width: 768px){.scroll-please.svelte-173ytp5.svelte-173ytp5.svelte-173ytp5{--size:0.5625rem;grid-column:3;margin-left:0.9375rem}}.scroll-please.svelte-173ytp5:hover div.svelte-173ytp5 span.svelte-173ytp5{color:var(--primary)}.scroll-please.svelte-173ytp5 div.svelte-173ytp5.svelte-173ytp5{position:relative;width:calc(var(--size) + 0.125rem);height:calc((var(--size) + 0.125rem) * 3);pointer-events:none}.scroll-please.svelte-173ytp5 div i.svelte-173ytp5.svelte-173ytp5{position:absolute;top:0;width:var(--size);height:var(--size);border:0.0625rem solid hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.5);border-radius:50%}@media(prefers-reduced-motion: no-preference){.scroll-please.svelte-173ytp5 div i.svelte-173ytp5.svelte-173ytp5{animation:svelte-173ytp5-scroll 1.5s var(--easing) infinite}}.scroll-please.svelte-173ytp5 div i.svelte-173ytp5.svelte-173ytp5:nth-child(2){animation-delay:0.2s;border-color:hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.25);transform:translate3d(0, 50%, 0)}.scroll-please.svelte-173ytp5 div i.svelte-173ytp5.svelte-173ytp5:nth-child(3){animation-delay:0.4s;border-color:hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.15);transform:translate3d(0, 100%, 0)}.scroll-please.svelte-173ytp5 div.svelte-173ytp5 span.svelte-173ytp5{position:absolute;transform:rotate(270deg);transform-origin:top left;top:-0.5rem;left:0;left:1;font-size:calc(var(--size) + 0.125rem);line-height:var(--size);transition:color 0.2s var(--easing)}',
+      map: null
+    };
+    Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { scrollY } = $$props;
+      if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
+        $$bindings.scrollY(scrollY);
+      $$result.css.add(css$3);
+      return `<section class="${"hero svelte-173ytp5"}"><div class="${"headline svelte-173ytp5"}"><h1 style="${"transform: translate(0," + escape(scrollY / 4) + "px)"}" class="${"svelte-173ytp5"}"><span class="${"svelte-173ytp5"}">Digital</span>
+            <span class="${"svelte-173ytp5"}">Experience</span>
+            <span class="${"svelte-173ytp5"}">Creator</span></h1>
+        <div class="${"sphere svelte-173ytp5"}" style="${"transform: translate(0," + escape(scrollY / 6) + "px)"}"></div></div>
+    <div class="${"bottom svelte-173ytp5"}" style="${"transform: translate(0," + escape(scrollY / 8) + "px)"}"><div class="${"svelte-173ytp5"}"><button title="${"runterscrollen"}" class="${"scroll-please svelte-173ytp5"}"><div class="${"svelte-173ytp5"}"><i class="${"svelte-173ytp5"}"></i>
+                    <i class="${"svelte-173ytp5"}"></i>
+                    <i class="${"svelte-173ytp5"}"></i>
+                    <span class="${"sr-only svelte-173ytp5"}">scroll</span></div></button>
+            <div class="${"claim svelte-173ytp5"}"><h2 class="${"svelte-173ytp5"}">Konzept, Design &amp; Entwicklung</h2>
+                <h3 class="${"svelte-173ytp5"}">made in Vienna</h3></div>
+            ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div></div>
+</section>`;
+    });
     css$2 = {
-      code: '@keyframes svelte-qqnopm-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-qqnopm-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-qqnopm-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-qqnopm-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-qqnopm-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-qqnopm-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-qqnopm-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-qqnopm-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-qqnopm-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-qqnopm-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}.teaser.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{position:relative;margin-top:calc(var(--app-height, -100vh) * -1);pointer-events:none}.teaser.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm::after{content:"";display:block;height:calc(var(--app-height, 100vh) * 1.5);width:100%;pointer-events:none;position:relative}.inner.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{position:relative;top:0;height:var(--app-height, 100vh);display:grid;grid-template-rows:1fr repeat(3, auto) 1fr;padding:5rem var(--core-padding) var(--core-padding);box-sizing:border-box;max-width:calc(var(--core-max-width) + var(--core-padding) * 2);margin:0 auto}.inner.svelte-qqnopm>.svelte-qqnopm.svelte-qqnopm{pointer-events:auto}@media(prefers-reduced-motion: no-preference){.inner.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{position:sticky}}@media(min-width: 768px){.inner.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{grid-template-columns:minmax(3.125rem, auto) minmax(auto, 79.375rem) minmax(3.125rem, auto);grid-template-rows:repeat(4, auto);padding-top:6.25rem;align-items:center}}header.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{grid-row:2;align-self:end;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5em;width:100%;overflow:hidden;flex:1 0 auto;margin-bottom:0.625rem;position:relative;z-index:3}@media(min-width: 768px){header.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{grid-column:1/span 2;grid-row:2;justify-content:flex-start;align-self:flex-end;margin-bottom:0;width:auto;justify-self:start}}header.svelte-qqnopm h1.svelte-qqnopm.svelte-qqnopm{font-size:1.625rem;margin:0;transform:translate3d(0, 100%, 0)}@media(min-width: 768px){header.svelte-qqnopm h1.svelte-qqnopm.svelte-qqnopm{font-size:clamp(4.5rem, 2.9166666667rem + 3.2986111111vw, 6.875rem)}}header.svelte-qqnopm div.svelte-qqnopm.svelte-qqnopm{font-family:var(--sans);font-weight:400;font-size:0.875rem;transform:translate3d(0, 100%, 0)}@media(min-width: 768px){header.svelte-qqnopm div.svelte-qqnopm.svelte-qqnopm{font-size:clamp(1.125rem, 0.875rem + 0.5208333333vw, 1.5rem)}}header.intersecting.svelte-qqnopm h1.svelte-qqnopm.svelte-qqnopm,header.intersecting.svelte-qqnopm div.svelte-qqnopm.svelte-qqnopm{animation:svelte-qqnopm-to-top 0.8s var(--easing) forwards}figure.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{grid-row:3;display:flex;margin:0;aspect-ratio:0.8;justify-self:start;overflow:hidden;width:100%;max-height:100%;position:relative;z-index:1}@media(min-width: 768px){figure.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{aspect-ratio:1.77778;grid-column:2;grid-row:2/span 2;justify-self:center}}figure.svelte-qqnopm a.svelte-qqnopm.svelte-qqnopm{display:flex}figure.svelte-qqnopm picture.svelte-qqnopm.svelte-qqnopm{flex-basis:100%;pointer-events:none}figure.svelte-qqnopm img.svelte-qqnopm.svelte-qqnopm{transform-origin:bottom center}footer.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{grid-row:4;width:100%;position:relative;z-index:2}@media(min-width: 768px){footer.svelte-qqnopm.svelte-qqnopm.svelte-qqnopm{grid-column:1/span 2;grid-row:3;align-self:flex-start;margin:0 0 0 0.3em;width:auto;justify-self:start}}footer.svelte-qqnopm div.svelte-qqnopm.svelte-qqnopm{display:flex;align-items:center;gap:0.625rem}footer.svelte-qqnopm div.svelte-qqnopm.svelte-qqnopm::before{content:"";height:1px;flex:1 0 auto;background-color:var(--on-base);transform-origin:top left;transform:scaleX(0) translateY(-0.5px)}@media(min-width: 768px){footer.svelte-qqnopm div.svelte-qqnopm.svelte-qqnopm::before{display:none}}footer.svelte-qqnopm div.svelte-qqnopm a.svelte-qqnopm{display:flex;align-items:center;gap:0.5rem;text-transform:uppercase;font-size:0.75rem;font-weight:500;letter-spacing:0.03em;padding:0.625rem 0}@media(min-width: 768px){footer.svelte-qqnopm div.svelte-qqnopm a.svelte-qqnopm{font-size:0.875rem}}footer.svelte-qqnopm div a span.svelte-qqnopm.svelte-qqnopm{pointer-events:none}footer.svelte-qqnopm div a i.svelte-qqnopm.svelte-qqnopm{display:inline-flex;overflow:hidden}footer.svelte-qqnopm div a i i.svelte-qqnopm.svelte-qqnopm{display:inline-flex;transform:translate3d(-100%, 0, 0)}footer.svelte-qqnopm div a em.svelte-qqnopm.svelte-qqnopm{display:inline-flex;pointer-events:none;overflow:hidden;font-style:normal}footer.svelte-qqnopm div a em.svelte-qqnopm svg{transform:translate3d(-100%, 0, 0)}footer.intersecting.svelte-qqnopm div.svelte-qqnopm.svelte-qqnopm::before{animation:svelte-qqnopm-scale 0.5s var(--easing) forwards}footer.intersecting.svelte-qqnopm a i i.svelte-qqnopm.svelte-qqnopm{animation:svelte-qqnopm-to-right 0.2s 0.5s var(--easing) forwards}footer.intersecting.svelte-qqnopm a i:nth-child(2) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.54s}footer.intersecting.svelte-qqnopm a i:nth-child(3) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.58s}footer.intersecting.svelte-qqnopm a i:nth-child(4) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.62s}footer.intersecting.svelte-qqnopm a i:nth-child(5) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.66s}footer.intersecting.svelte-qqnopm a i:nth-child(6) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.7s}footer.intersecting.svelte-qqnopm a i:nth-child(7) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.74s}footer.intersecting.svelte-qqnopm a i:nth-child(8) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.82s}footer.intersecting.svelte-qqnopm a i:nth-child(9) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.86s}footer.intersecting.svelte-qqnopm a i:nth-child(10) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.9s}footer.intersecting.svelte-qqnopm a i:nth-child(11) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.94s}footer.intersecting.svelte-qqnopm a i:nth-child(12) i.svelte-qqnopm.svelte-qqnopm{animation-delay:0.98s}footer.intersecting.svelte-qqnopm a i:nth-child(13) i.svelte-qqnopm.svelte-qqnopm{animation-delay:1.02s}footer.intersecting.svelte-qqnopm a i:nth-child(14) i.svelte-qqnopm.svelte-qqnopm{animation-delay:1.06s}footer.intersecting.svelte-qqnopm a em.svelte-qqnopm svg{animation:svelte-qqnopm-to-right 0.8s 1.1s var(--easing) forwards}',
+      code: '@keyframes svelte-7tz926-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-7tz926-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-7tz926-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-7tz926-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-7tz926-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-7tz926-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-7tz926-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-7tz926-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-7tz926-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-7tz926-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-7tz926-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.teaser.svelte-7tz926.svelte-7tz926.svelte-7tz926{position:relative;margin-top:calc(var(--app-height, -100vh) * -1);pointer-events:none}.teaser.svelte-7tz926.svelte-7tz926.svelte-7tz926::after{content:"";display:block;height:calc(var(--app-height, 100vh) * 1.5);width:100%;pointer-events:none;position:relative}.inner.svelte-7tz926.svelte-7tz926.svelte-7tz926{position:relative;top:0;height:var(--app-height, 100vh);display:grid;grid-template-rows:1fr repeat(3, auto) 1fr;padding:5rem var(--core-padding) var(--core-padding);box-sizing:border-box;max-width:calc(var(--core-max-width) + var(--core-padding) * 2);margin:0 auto}.inner.svelte-7tz926>.svelte-7tz926.svelte-7tz926{pointer-events:auto}@media(prefers-reduced-motion: no-preference){.inner.svelte-7tz926.svelte-7tz926.svelte-7tz926{position:sticky}}@media(min-width: 768px){.inner.svelte-7tz926.svelte-7tz926.svelte-7tz926{grid-template-columns:minmax(3.125rem, auto) minmax(auto, 79.375rem) minmax(3.125rem, auto);grid-template-rows:repeat(4, auto);padding-top:6.25rem;align-items:center}}header.svelte-7tz926.svelte-7tz926.svelte-7tz926{grid-row:2;align-self:end;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5em;width:100%;overflow:hidden;flex:1 0 auto;margin-bottom:0.625rem;position:relative;z-index:3}@media(min-width: 768px){header.svelte-7tz926.svelte-7tz926.svelte-7tz926{grid-column:1/span 2;grid-row:2;justify-content:flex-start;align-self:flex-end;margin-bottom:0;width:auto;justify-self:start}[color-scheme="light"] header.svelte-7tz926.svelte-7tz926.svelte-7tz926{background-color:var(--base);padding-right:1em}}header.svelte-7tz926 h1.svelte-7tz926.svelte-7tz926{font-size:1.625rem;margin:0;transform:translate3d(0, 100%, 0)}@media(min-width: 768px){header.svelte-7tz926 h1.svelte-7tz926.svelte-7tz926{font-size:clamp(4.5rem, 2.9166666667rem + 3.2986111111vw, 6.875rem)}}header.svelte-7tz926 div.svelte-7tz926.svelte-7tz926{font-family:var(--sans);font-weight:400;font-size:0.875rem;transform:translate3d(0, 100%, 0)}@media(min-width: 768px){header.svelte-7tz926 div.svelte-7tz926.svelte-7tz926{font-size:clamp(1.125rem, 0.875rem + 0.5208333333vw, 1.5rem)}}header.intersecting.svelte-7tz926 h1.svelte-7tz926.svelte-7tz926,header.intersecting.svelte-7tz926 div.svelte-7tz926.svelte-7tz926{animation:svelte-7tz926-to-top 0.8s var(--easing) forwards}figure.svelte-7tz926.svelte-7tz926.svelte-7tz926{grid-row:3;display:flex;margin:0;aspect-ratio:0.8;justify-self:start;overflow:hidden;width:100%;max-height:100%;position:relative;z-index:1}@media(min-width: 768px){figure.svelte-7tz926.svelte-7tz926.svelte-7tz926{aspect-ratio:1.77778;grid-column:2;grid-row:2/span 2;justify-self:center}}figure.svelte-7tz926 a.svelte-7tz926.svelte-7tz926{display:flex}figure.svelte-7tz926 picture.svelte-7tz926.svelte-7tz926{flex-basis:100%;pointer-events:none}figure.svelte-7tz926 img.svelte-7tz926.svelte-7tz926{transform-origin:bottom center}footer.svelte-7tz926.svelte-7tz926.svelte-7tz926{grid-row:4;width:100%;position:relative;z-index:2}@media(min-width: 768px){footer.svelte-7tz926.svelte-7tz926.svelte-7tz926{grid-column:1/span 2;grid-row:3;align-self:flex-start;margin:0 0 0 0.3em;width:auto;justify-self:start}[color-scheme="light"] footer.svelte-7tz926.svelte-7tz926.svelte-7tz926{background-color:var(--base);padding-right:1em}}footer.svelte-7tz926 div.svelte-7tz926.svelte-7tz926{display:flex;align-items:center;gap:0.625rem}footer.svelte-7tz926 div.svelte-7tz926.svelte-7tz926::before{content:"";height:1px;flex:1 0 auto;background-color:var(--on-base);transform-origin:top left;transform:scaleX(0) translateY(-0.5px)}@media(min-width: 768px){footer.svelte-7tz926 div.svelte-7tz926.svelte-7tz926::before{display:none}}footer.svelte-7tz926 div.svelte-7tz926 a.svelte-7tz926{display:flex;align-items:center;gap:0.5rem;text-transform:uppercase;font-size:0.75rem;font-weight:500;letter-spacing:0.03em;padding:0.625rem 0}@media(min-width: 768px){footer.svelte-7tz926 div.svelte-7tz926 a.svelte-7tz926{font-size:0.875rem}}footer.svelte-7tz926 div a span.svelte-7tz926.svelte-7tz926{pointer-events:none}footer.svelte-7tz926 div a i.svelte-7tz926.svelte-7tz926{display:inline-flex;overflow:hidden}footer.svelte-7tz926 div a i i.svelte-7tz926.svelte-7tz926{display:inline-flex;transform:translate3d(-100%, 0, 0)}footer.svelte-7tz926 div a em.svelte-7tz926.svelte-7tz926{display:inline-flex;pointer-events:none;overflow:hidden;font-style:normal}footer.svelte-7tz926 div a em.svelte-7tz926 svg{transform:translate3d(-100%, 0, 0)}footer.intersecting.svelte-7tz926 div.svelte-7tz926.svelte-7tz926::before{animation:svelte-7tz926-scale 0.5s var(--easing) forwards}footer.intersecting.svelte-7tz926 a i i.svelte-7tz926.svelte-7tz926{animation:svelte-7tz926-to-right 0.2s 0.5s var(--easing) forwards}footer.intersecting.svelte-7tz926 a i:nth-child(2) i.svelte-7tz926.svelte-7tz926{animation-delay:0.54s}footer.intersecting.svelte-7tz926 a i:nth-child(3) i.svelte-7tz926.svelte-7tz926{animation-delay:0.58s}footer.intersecting.svelte-7tz926 a i:nth-child(4) i.svelte-7tz926.svelte-7tz926{animation-delay:0.62s}footer.intersecting.svelte-7tz926 a i:nth-child(5) i.svelte-7tz926.svelte-7tz926{animation-delay:0.66s}footer.intersecting.svelte-7tz926 a i:nth-child(6) i.svelte-7tz926.svelte-7tz926{animation-delay:0.7s}footer.intersecting.svelte-7tz926 a i:nth-child(7) i.svelte-7tz926.svelte-7tz926{animation-delay:0.74s}footer.intersecting.svelte-7tz926 a i:nth-child(8) i.svelte-7tz926.svelte-7tz926{animation-delay:0.82s}footer.intersecting.svelte-7tz926 a i:nth-child(9) i.svelte-7tz926.svelte-7tz926{animation-delay:0.86s}footer.intersecting.svelte-7tz926 a i:nth-child(10) i.svelte-7tz926.svelte-7tz926{animation-delay:0.9s}footer.intersecting.svelte-7tz926 a i:nth-child(11) i.svelte-7tz926.svelte-7tz926{animation-delay:0.94s}footer.intersecting.svelte-7tz926 a i:nth-child(12) i.svelte-7tz926.svelte-7tz926{animation-delay:0.98s}footer.intersecting.svelte-7tz926 a i:nth-child(13) i.svelte-7tz926.svelte-7tz926{animation-delay:1.02s}footer.intersecting.svelte-7tz926 a i:nth-child(14) i.svelte-7tz926.svelte-7tz926{animation-delay:1.06s}footer.intersecting.svelte-7tz926 a em.svelte-7tz926 svg{animation:svelte-7tz926-to-right 0.8s 1.1s var(--easing) forwards}',
       map: null
     };
     Teaser = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { slug } = $$props;
       let { title } = $$props;
       let { year } = $$props;
-      let { desc } = $$props;
       let { imageSm } = $$props;
       let { imageLg } = $$props;
-      let { scrollY } = $$props;
       let teaser;
       let scale = 1;
       let opacity = 1;
@@ -20867,14 +20866,10 @@ var init_index_cbc6a0e6 = __esm({
         $$bindings.title(title);
       if ($$props.year === void 0 && $$bindings.year && year !== void 0)
         $$bindings.year(year);
-      if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
-        $$bindings.desc(desc);
       if ($$props.imageSm === void 0 && $$bindings.imageSm && imageSm !== void 0)
         $$bindings.imageSm(imageSm);
       if ($$props.imageLg === void 0 && $$bindings.imageLg && imageLg !== void 0)
         $$bindings.imageLg(imageLg);
-      if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
-        $$bindings.scrollY(scrollY);
       $$result.css.add(css$2);
       let $$settled;
       let $$rendered;
@@ -20882,18 +20877,18 @@ var init_index_cbc6a0e6 = __esm({
         $$settled = true;
         $$rendered = `
 
-<article class="${"teaser svelte-qqnopm"}" style="${"opacity: " + escape(opacity) + ";"}"${add_attribute("this", teaser, 0)}><div class="${"inner svelte-qqnopm"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { element, intersecting }, {
+<article class="${"teaser svelte-7tz926"}" style="${"opacity: " + escape(opacity) + ";"}"${add_attribute("this", teaser, 0)}><div class="${"inner svelte-7tz926"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { element, intersecting }, {
           intersecting: ($$value) => {
             intersecting = $$value;
             $$settled = false;
           }
         }, {
-          default: () => `<header class="${["svelte-qqnopm", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><h1 class="${"svelte-qqnopm"}">${escape(title)}</h1>
-                <div class="${"svelte-qqnopm"}">${escape(year)}</div></header>`
+          default: () => `<header class="${["svelte-7tz926", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><h1 class="${"svelte-7tz926"}">${escape(title)}</h1>
+                <div class="${"svelte-7tz926"}">${escape(year)}</div></header>`
         })}
 
-        <figure class="${"svelte-qqnopm"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-qqnopm"}"><picture class="${"svelte-qqnopm"}"><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
-                    <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} loading="${"lazy"}" style="${"transform: scale(" + escape(scale) + ");"}" class="${"svelte-qqnopm"}"></picture></a></figure>
+        <figure class="${"svelte-7tz926"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-7tz926"}"><picture class="${"svelte-7tz926"}"><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
+                    <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} style="${"transform: scale(" + escape(scale) + ");"}" class="${"svelte-7tz926"}"></picture></a></figure>
 
         ${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, {
           element: element2,
@@ -20904,8 +20899,8 @@ var init_index_cbc6a0e6 = __esm({
             $$settled = false;
           }
         }, {
-          default: () => `<footer class="${["svelte-qqnopm", intersecting2 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element2, 0)}><div class="${"svelte-qqnopm"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-qqnopm"}"><span class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">P</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">r</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">o</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">j</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">e</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">k</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">t</i></i> <i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">a</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">n</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">s</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">e</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">h</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">e</i></i><i class="${"svelte-qqnopm"}"><i class="${"svelte-qqnopm"}">n</i></i></span>
-                        <em class="${"svelte-qqnopm"}"><!-- HTML_TAG_START -->${arrow}<!-- HTML_TAG_END --></em></a></div></footer>`
+          default: () => `<footer class="${["svelte-7tz926", intersecting2 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element2, 0)}><div class="${"svelte-7tz926"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-7tz926"}"><span class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">P</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">r</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">o</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">j</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">e</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">k</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">t</i></i> <i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">a</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">n</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">s</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">e</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">h</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">e</i></i><i class="${"svelte-7tz926"}"><i class="${"svelte-7tz926"}">n</i></i></span>
+                        <em class="${"svelte-7tz926"}"><!-- HTML_TAG_START -->${arrow}<!-- HTML_TAG_END --></em></a></div></footer>`
         })}</div>
 </article>`;
       } while (!$$settled);
@@ -20951,30 +20946,24 @@ var init_index_cbc6a0e6 = __esm({
           slug: "mst-muhr",
           title: "MST Muhr",
           year: "2022",
-          desc: "Webdesign, Development, CMS, Fotografie",
           imageSm: "/images/mst-muhr/mst-muhr.jpg",
-          imageLg: "/images/mst-muhr/mst-muhr-lg.jpg",
-          scrollY
+          imageLg: "/images/mst-muhr/mst-muhr-lg.jpg"
         }, {}, {})}
 
             ${validate_component(Teaser, "Teaser").$$render($$result, {
           slug: "solmates",
           title: "Solmates",
           year: "2019",
-          desc: "Design, Development, CMS, Fotografie, Texte",
           imageSm: "/images/solmates/solmates.jpg",
-          imageLg: "/images/solmates/solmates-lg.jpg",
-          scrollY
+          imageLg: "/images/solmates/solmates-lg.jpg"
         }, {}, {})}
 
             ${validate_component(Teaser, "Teaser").$$render($$result, {
           slug: "wohnformat",
           title: "[wohnformat]",
           year: "2016",
-          desc: "CI, Webdesign, Development, CMS",
           imageSm: "/images/wohnformat/wohnformat.jpg",
-          imageLg: "/images/wohnformat/wohnformat-lg.jpg",
-          scrollY
+          imageLg: "/images/wohnformat/wohnformat-lg.jpg"
         }, {}, {})}</div></div>
     
 </section>`;
@@ -20984,7 +20973,7 @@ var init_index_cbc6a0e6 = __esm({
       return $$rendered;
     });
     css3 = {
-      code: "@keyframes svelte-11bouiy-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-11bouiy-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-11bouiy-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-11bouiy-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-11bouiy-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-11bouiy-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-11bouiy-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-11bouiy-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-11bouiy-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-11bouiy-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}.wisdom.svelte-11bouiy.svelte-11bouiy{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto clamp(17.5rem, 10rem + 30vw, 160rem) auto;justify-content:center;padding:4.375rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto;overflow:hidden;margin-top:-50vh;position:relative}.wisdom.svelte-11bouiy div.svelte-11bouiy{grid-column:2}p.svelte-11bouiy.svelte-11bouiy{font-size:clamp(1.625rem, 0.9615384615rem + 2.9487179487vw, 4.5rem);font-weight:500;line-height:1.2}p.intersecting.svelte-11bouiy .mask span.svelte-11bouiy{animation:svelte-11bouiy-to-top 1.2s var(--easing) forwards}p.intersecting.svelte-11bouiy .mask:nth-child(2) span.svelte-11bouiy{animation-delay:200ms}p.intersecting.svelte-11bouiy .mask:nth-child(3) span.svelte-11bouiy{animation-delay:400ms}p.intersecting.svelte-11bouiy .mask:nth-child(4) span.svelte-11bouiy{animation-delay:600ms}p.intersecting.svelte-11bouiy .mask:nth-child(5) span.svelte-11bouiy{animation-delay:800ms}p.intersecting.svelte-11bouiy .mask:nth-child(6) span.svelte-11bouiy{animation-delay:1000ms}p.intersecting.svelte-11bouiy .mask:nth-child(7) span.svelte-11bouiy{animation-delay:1200ms}.mask.svelte-11bouiy.svelte-11bouiy{display:inline-flex;overflow:hidden}.mask.svelte-11bouiy span.svelte-11bouiy{transform:translate3d(0, 100%, 0)}",
+      code: "@keyframes svelte-1euhmj0-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1euhmj0-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1euhmj0-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1euhmj0-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1euhmj0-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1euhmj0-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1euhmj0-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1euhmj0-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1euhmj0-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1euhmj0-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1euhmj0-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.wisdom.svelte-1euhmj0.svelte-1euhmj0{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto clamp(17.5rem, 10rem + 30vw, 160rem) auto;justify-content:center;padding:4.375rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto;overflow:hidden;margin-top:-50vh;position:relative}.wisdom.svelte-1euhmj0 div.svelte-1euhmj0{grid-column:2}p.svelte-1euhmj0.svelte-1euhmj0{font-size:clamp(1.625rem, 0.9615384615rem + 2.9487179487vw, 4.5rem);font-weight:500;line-height:1.2}p.intersecting.svelte-1euhmj0 .mask span.svelte-1euhmj0{animation:svelte-1euhmj0-to-top 1.2s var(--easing) forwards}p.intersecting.svelte-1euhmj0 .mask:nth-child(2) span.svelte-1euhmj0{animation-delay:200ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(3) span.svelte-1euhmj0{animation-delay:400ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(4) span.svelte-1euhmj0{animation-delay:600ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(5) span.svelte-1euhmj0{animation-delay:800ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(6) span.svelte-1euhmj0{animation-delay:1000ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(7) span.svelte-1euhmj0{animation-delay:1200ms}",
       map: null
     };
     Wisdom = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -21001,13 +20990,13 @@ var init_index_cbc6a0e6 = __esm({
             $$settled = false;
           }
         }, {
-          default: () => `<section class="${"wisdom svelte-11bouiy"}"><div class="${"svelte-11bouiy"}"><p class="${["svelte-11bouiy", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><span class="${"mask svelte-11bouiy"}"><span class="${"svelte-11bouiy"}">Meine Webseiten</span></span>
-                <span class="${"mask svelte-11bouiy"}"><span class="${"svelte-11bouiy"}">sind wie gute</span></span>
-                <span class="${"mask svelte-11bouiy"}"><span class="${"svelte-11bouiy"}">Fahrr\xE4der:</span></span>
-                <span class="${"mask svelte-11bouiy"}"><span class="${"svelte-11bouiy"}">elegant, hochwertig,</span></span>
-                <span class="${"mask svelte-11bouiy"}"><span class="${"svelte-11bouiy"}">auf den Benutzer</span></span>
-                <span class="${"mask svelte-11bouiy"}"><span class="${"svelte-11bouiy"}">angepasst und vor</span></span>
-                <span class="${"mask svelte-11bouiy"}"><span class="${"svelte-11bouiy"}">allem pfeilschnell.</span></span></p></div></section>`
+          default: () => `<section class="${"wisdom svelte-1euhmj0"}"><div class="${"svelte-1euhmj0"}"><p class="${["svelte-1euhmj0", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">Meine Webseiten</span></span>
+                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">sind wie gute</span></span>
+                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">Fahrr\xE4der:</span></span>
+                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">elegant, hochwertig,</span></span>
+                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">auf den Benutzer</span></span>
+                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">angepasst und vor</span></span>
+                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">allem pfeilschnell.</span></span></p></div></section>`
         })}`;
       } while (!$$settled);
       return $$rendered;
@@ -21023,184 +21012,589 @@ ${validate_component(Hero, "Hero").$$render($$result, { scrollY }, {}, {})}
 
 ${validate_component(LatestWork, "LatestWork").$$render($$result, { scrollY }, {}, {})}
 
-${validate_component(Wisdom, "Wisdom").$$render($$result, {}, {}, {})}
-
-${validate_component(Scene, "Scene").$$render($$result, {}, {}, {})}`;
+${validate_component(Wisdom, "Wisdom").$$render($$result, {}, {}, {})}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/ueber-mich-00c3dfc9.js
-var ueber_mich_00c3dfc9_exports = {};
-__export(ueber_mich_00c3dfc9_exports, {
+// .svelte-kit/output/server/chunks/ueber-mich-b8165c61.js
+var ueber_mich_b8165c61_exports = {};
+__export(ueber_mich_b8165c61_exports, {
   default: () => Ueber_mich,
   prerender: () => prerender2
 });
 var import_cookie4, css4, prerender2, Ueber_mich;
-var init_ueber_mich_00c3dfc9 = __esm({
-  ".svelte-kit/output/server/chunks/ueber-mich-00c3dfc9.js"() {
+var init_ueber_mich_b8165c61 = __esm({
+  ".svelte-kit/output/server/chunks/ueber-mich-b8165c61.js"() {
     init_shims();
-    init_app_d5644d2d();
+    init_app_fe36154b();
     import_cookie4 = __toModule(require_cookie());
     init_dist();
     css4 = {
-      code: ".intro.svelte-klr0vi.svelte-klr0vi{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto minmax(min-content, 60rem) auto;justify-content:center;min-height:100vh;padding:4.5rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto}.intro.svelte-klr0vi div.svelte-klr0vi{grid-column:2}.intro.svelte-klr0vi h3.svelte-klr0vi{font-size:clamp(1rem, 0.9423076923rem + 0.2564102564vw, 1.25rem);font-weight:400;margin:0}.intro.svelte-klr0vi h1.svelte-klr0vi{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}.intro.svelte-klr0vi p.svelte-klr0vi{font-size:1.3125rem;max-width:38.75rem}",
+      code: "section.svelte-19fd63u.svelte-19fd63u.svelte-19fd63u{box-sizing:border-box;padding:9.375rem var(--core-padding)}section.svelte-19fd63u>div.svelte-19fd63u.svelte-19fd63u{margin:0 auto;max-width:var(--core-max-width);display:grid}@media(min-width: 768px){section.svelte-19fd63u>div.svelte-19fd63u.svelte-19fd63u{grid-template-columns:1fr 0.5fr}section.svelte-19fd63u>div.svelte-19fd63u>div.svelte-19fd63u{grid-column:1}section.svelte-19fd63u>div.svelte-19fd63u>img.svelte-19fd63u{grid-column:2;grid-row:1/span 2}}h1.svelte-19fd63u.svelte-19fd63u.svelte-19fd63u{font-family:var(--serif);font-weight:700;font-size:clamp(2.375rem, 1.8413461538rem + 2.3717948718vw, 4.6875rem);line-height:1;margin:0.5em 0}p.svelte-19fd63u.svelte-19fd63u.svelte-19fd63u{font-size:1.25rem;max-width:38.75rem}",
       map: null
     };
     prerender2 = true;
     Ueber_mich = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let now2 = new Date();
+      let year = now2.getFullYear();
+      let since = year - 2009;
       $$result.css.add(css4);
-      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | \xDCber mich</title>`, ""}`, ""}
+      return `${$$result.head += `${$$result.title = `<title>\xDCber mich | Armin Neuhauser</title>`, ""}`, ""}
 
-<section class="${"intro svelte-klr0vi"}"><div class="${"svelte-klr0vi"}"><h3 class="${"svelte-klr0vi"}">\xDCber mich</h3>
-        <h1 class="${"svelte-klr0vi"}">Hallo, ich bin Armin,</h1>
-        <p class="${"svelte-klr0vi"}">ein \xF6sterreichischer Grafik-Designer und Webentwickler.</p>
-        <p class="${"svelte-klr0vi"}">Mit einer Kombination aus Erfahrungen in Design und Development kann ich verschiedenste Problemstellungen l\xF6sen und Projekte ganzheitlich betreuen und steuern. Es begeistert mich, zusammen mit dir von Grund auf die Pers\xF6nlichkeit deiner Marke zu definieren, zu gestalten und unverwechselbar zu machen. Ich erarbeite aus deinen Ideen digitale und analoge Kreationen f\xFCr deinen Erfolg.</p></div>
+<section class="${"svelte-19fd63u"}"><div class="${"svelte-19fd63u"}"><h1 class="${"svelte-19fd63u"}">Hallo, ich bin Armin.</h1>
+        <img src="${"images/armin-panama-city.jpeg"}" alt="${"Armin in Panama City"}" loading="${"lazy"}" class="${"svelte-19fd63u"}">
+        <div class="${"svelte-19fd63u"}"><p class="${"svelte-19fd63u"}">Seit mittlerweile fast ${escape(since)} Jahren gestalte und entwickle ich Websites &amp; Online-Shops.</p>
+            <p class="${"svelte-19fd63u"}">Mit einer Kombination aus Erfahrungen in Design und Development kann ich verschiedenste Problemstellungen l\xF6sen und Projekte ganzheitlich betreuen und steuern. Es begeistert mich, zusammen mit dir von Grund auf die Pers\xF6nlichkeit deiner Marke zu definieren, zu gestalten und unverwechselbar zu machen. Ich erarbeite aus deinen Ideen digitale und analoge Kreationen f\xFCr deinen Erfolg.</p></div></div>
 </section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/index-b8351b59.js
-var index_b8351b59_exports = {};
-__export(index_b8351b59_exports, {
+// .svelte-kit/output/server/chunks/index-fbd311c9.js
+var index_fbd311c9_exports = {};
+__export(index_fbd311c9_exports, {
   default: () => Projekte
 });
-var import_cookie5, css5, Projekte;
-var init_index_b8351b59 = __esm({
-  ".svelte-kit/output/server/chunks/index-b8351b59.js"() {
+var import_cookie5, css$12, Teaser2, css5, Projekte;
+var init_index_fbd311c9 = __esm({
+  ".svelte-kit/output/server/chunks/index-fbd311c9.js"() {
     init_shims();
-    init_app_d5644d2d();
+    init_app_fe36154b();
+    init_IntersectionObserver_d26a2bb8();
     import_cookie5 = __toModule(require_cookie());
     init_dist();
+    css$12 = {
+      code: "@keyframes svelte-h7rxnd-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-h7rxnd-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-h7rxnd-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-h7rxnd-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-h7rxnd-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-h7rxnd-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-h7rxnd-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-h7rxnd-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-h7rxnd-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-h7rxnd-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-h7rxnd-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.teaser.svelte-h7rxnd.svelte-h7rxnd{position:relative}.inner.svelte-h7rxnd.svelte-h7rxnd{position:relative;top:0;display:grid;grid-template-rows:1fr repeat(3, auto) 1fr}header.svelte-h7rxnd.svelte-h7rxnd{grid-row:2;align-self:end;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5em;width:100%;flex:1 0 auto;margin-bottom:0.625rem;position:relative;z-index:3}header.intersecting.svelte-h7rxnd a span.svelte-h7rxnd{transform:translate3d(0, 0, 0)}header.svelte-h7rxnd a.svelte-h7rxnd{display:inline-flex;overflow:hidden}header.svelte-h7rxnd a span.svelte-h7rxnd{transform:translate3d(0, 100%, 0);transition:transform 0.8s var(--easing);position:relative;pointer-events:none}header.svelte-h7rxnd a span.svelte-h7rxnd::after{content:attr(data-title);position:absolute;left:0;top:0;transform:translate3d(0, 100%, 0)}header.svelte-h7rxnd a:hover span.svelte-h7rxnd{transform:translate3d(0, -100%, 0)}header.svelte-h7rxnd h1.svelte-h7rxnd{font-size:clamp(1.625rem, 0.6607142857rem + 1.0714285714vw, 2.375rem);margin:0}header.svelte-h7rxnd div.svelte-h7rxnd{font-family:var(--sans);font-weight:400;font-size:clamp(0.875rem, 0.7142857143rem + 0.1785714286vw, 1rem)}figure.svelte-h7rxnd.svelte-h7rxnd{grid-row:3;display:flex;margin:0;aspect-ratio:0.8;justify-self:start;overflow:hidden;width:100%;max-height:100%;position:relative;z-index:1;opacity:0}figure.svelte-h7rxnd picture.svelte-h7rxnd{flex-basis:100%;pointer-events:none}figure.intersecting.svelte-h7rxnd.svelte-h7rxnd{animation:svelte-h7rxnd-fadein 1s var(--easing) forwards}footer.svelte-h7rxnd.svelte-h7rxnd{grid-row:4;margin-top:0.625rem;width:100%;position:relative;z-index:2}footer.svelte-h7rxnd p.svelte-h7rxnd{font-size:clamp(0.875rem, 0.7142857143rem + 0.1785714286vw, 1rem);margin:0;overflow:hidden}footer.svelte-h7rxnd p a.svelte-h7rxnd{display:inline-flex;transform:translate3d(0, 100%, 0)}footer.svelte-h7rxnd hr.svelte-h7rxnd{margin:1.25rem 0 0;transform:scaleX(0);transform-origin:top left}footer.intersecting.svelte-h7rxnd p a.svelte-h7rxnd{animation:svelte-h7rxnd-to-top 0.8s 0.2s var(--easing) forwards}footer.intersecting.svelte-h7rxnd hr.svelte-h7rxnd{animation:svelte-h7rxnd-scale 0.8s 0.3s var(--easing) forwards}",
+      map: null
+    };
+    Teaser2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { slug } = $$props;
+      let { title } = $$props;
+      let { year } = $$props;
+      let { desc } = $$props;
+      let { image } = $$props;
+      let element;
+      let intersecting;
+      let element2;
+      let intersecting2;
+      let element3;
+      let intersecting3;
+      if ($$props.slug === void 0 && $$bindings.slug && slug !== void 0)
+        $$bindings.slug(slug);
+      if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+        $$bindings.title(title);
+      if ($$props.year === void 0 && $$bindings.year && year !== void 0)
+        $$bindings.year(year);
+      if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
+        $$bindings.desc(desc);
+      if ($$props.image === void 0 && $$bindings.image && image !== void 0)
+        $$bindings.image(image);
+      $$result.css.add(css$12);
+      let $$settled;
+      let $$rendered;
+      do {
+        $$settled = true;
+        $$rendered = `<article class="${"teaser svelte-h7rxnd"}"><div class="${"inner svelte-h7rxnd"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { once: true, element, intersecting }, {
+          intersecting: ($$value) => {
+            intersecting = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<header class="${["svelte-h7rxnd", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><h1 class="${"svelte-h7rxnd"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-h7rxnd"}"><span${add_attribute("data-title", title, 0)} class="${"svelte-h7rxnd"}">${escape(title)}</span></a></h1>
+                <div class="${"svelte-h7rxnd"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-h7rxnd"}"><span${add_attribute("data-title", year, 0)} class="${"svelte-h7rxnd"}">${escape(year)}</span></a></div></header>`
+        })}
+
+        ${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, {
+          once: true,
+          element: element2,
+          intersecting: intersecting2
+        }, {
+          intersecting: ($$value) => {
+            intersecting2 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<figure class="${["svelte-h7rxnd", intersecting2 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element2, 0)}><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}"><picture class="${"svelte-h7rxnd"}"><img${add_attribute("src", image, 0)}${add_attribute("alt", title, 0)} loading="${"lazy"}"></picture></a></figure>`
+        })}
+
+        ${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, {
+          once: true,
+          element: element3,
+          intersecting: intersecting3
+        }, {
+          intersecting: ($$value) => {
+            intersecting3 = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<footer class="${["svelte-h7rxnd", intersecting3 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element3, 0)}><p class="${"svelte-h7rxnd"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-h7rxnd"}">${escape(desc)}</a></p>
+                <hr class="${"svelte-h7rxnd"}"></footer>`
+        })}</div>
+</article>`;
+      } while (!$$settled);
+      return $$rendered;
+    });
     css5 = {
-      code: "section.svelte-1x6c12h{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto minmax(min-content, 60rem) auto;justify-content:center;min-height:100vh;padding:4.5rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto}h1.svelte-1x6c12h{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}",
+      code: "@keyframes svelte-c8ejd-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-c8ejd-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-c8ejd-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-c8ejd-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-c8ejd-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-c8ejd-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-c8ejd-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-c8ejd-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-c8ejd-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-c8ejd-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-c8ejd-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}header.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{box-sizing:border-box;padding:9.375rem var(--core-padding) 6.25rem;min-height:60vh;display:flex}header.svelte-c8ejd>div.svelte-c8ejd.svelte-c8ejd{flex-basis:100%;display:grid;grid-gap:2.5rem;grid-template-rows:auto min-content min-content auto;margin:0 auto;max-width:var(--core-max-width)}@media(min-width: 768px){header.svelte-c8ejd>div.svelte-c8ejd.svelte-c8ejd{grid-template-columns:repeat(12, 1fr);grid-row-gap:5rem;align-items:end}}@media(min-width: 1440px){header.svelte-c8ejd>div.svelte-c8ejd.svelte-c8ejd{grid-gap:5rem}}header.svelte-c8ejd>div .mask span.svelte-c8ejd.svelte-c8ejd{animation:svelte-c8ejd-to-top 1.2s var(--easing) forwards}header.svelte-c8ejd>div .mask:nth-child(2) span.svelte-c8ejd.svelte-c8ejd{animation-delay:200ms}header.svelte-c8ejd>div h1.svelte-c8ejd.svelte-c8ejd{grid-row:2;font-family:var(--serif);font-weight:700;font-size:2.8125rem;line-height:1;margin:0}@media(min-width: 768px){header.svelte-c8ejd>div h1.svelte-c8ejd.svelte-c8ejd{grid-column:1/span 6;grid-row:3;font-size:clamp(3.5rem, 2.5892857143rem + 1.8973214286vw, 5.625rem)}}@media(min-width: 1440px){header.svelte-c8ejd>div h1.svelte-c8ejd.svelte-c8ejd{grid-column:1/span 6}}header.svelte-c8ejd>div.svelte-c8ejd div.svelte-c8ejd{grid-row:3;font-size:clamp(0.8125rem, 0.625rem + 0.234375vw, 1rem)}@media(min-width: 768px){header.svelte-c8ejd>div.svelte-c8ejd div.svelte-c8ejd{grid-column:7/span 6}}@media(min-width: 1440px){header.svelte-c8ejd>div.svelte-c8ejd div.svelte-c8ejd{grid-column:9/span 4}}header.svelte-c8ejd>div.svelte-c8ejd div p.svelte-c8ejd{margin:0;max-width:18.75rem}header.svelte-c8ejd>div div hr.svelte-c8ejd.svelte-c8ejd{margin:1.25rem 0 0;transform:scaleX(0);transform-origin:top left;animation:svelte-c8ejd-scale 0.8s 0.3s var(--easing) forwards}.projects.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{background-color:var(--base);box-sizing:border-box;padding:var(--core-padding)}.projects-list.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{display:grid;grid-gap:2.5rem;margin:0 auto;max-width:var(--core-max-width)}@media(min-width: 768px){.projects-list.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{grid-template-columns:repeat(2, 1fr)}}@media(min-width: 1024px){.projects-list.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{grid-template-columns:repeat(3, 1fr)}}@media(min-width: 1440px){.projects-list.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{grid-gap:5rem}}.coming-soon.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{margin:0 auto;max-width:var(--core-max-width);padding:6.25rem 0}.coming-soon.svelte-c8ejd p.svelte-c8ejd.svelte-c8ejd{width:17.5rem;height:17.5rem;border:1px solid var(--on-base);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;opacity:0.6;font-size:0.875rem}@media(min-width: 1024px){.coming-soon.svelte-c8ejd p.svelte-c8ejd.svelte-c8ejd{width:22.5rem;height:22.5rem}}",
       map: null
     };
     Projekte = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       $$result.css.add(css5);
-      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Projekte</title>`, ""}`, ""}
+      return `${$$result.head += `${$$result.title = `<title>Projekte| Armin Neuhauser</title>`, ""}`, ""}
 
-<section class="${"svelte-1x6c12h"}"><div><h1 class="${"svelte-1x6c12h"}">Projekte</h1></div>
+<section><header class="${"svelte-c8ejd"}"><div class="${"svelte-c8ejd"}"><h1 class="${"svelte-c8ejd"}"><span class="${"mask svelte-c8ejd"}"><span class="${"svelte-c8ejd"}">Projekte,</span></span>
+                <span class="${"mask svelte-c8ejd"}"><span class="${"svelte-c8ejd"}">auf die ich stolz bin</span></span></h1>
+            <div class="${"svelte-c8ejd"}"><p class="${"mask svelte-c8ejd"}"><span class="${"svelte-c8ejd"}">Jedes Projekt ist eine Chance, etwas Neues auszuprobieren. Ich gehe auf die W\xFCnsche meiner Kunden ein und berate sie, um gemeinsam das bestm\xF6gliche Ergebnis zu erreichen.</span></p>
+                <hr class="${"svelte-c8ejd"}"></div></div></header>
+    <div class="${"projects svelte-c8ejd"}"><div class="${"projects-list svelte-c8ejd"}">${validate_component(Teaser2, "Teaser").$$render($$result, {
+        slug: "mst-muhr",
+        title: "MST Muhr",
+        year: "2022",
+        desc: "Webdesign, Development, CMS, Fotografie",
+        image: "/images/mst-muhr/mst-muhr.jpg"
+      }, {}, {})}
+
+            ${validate_component(Teaser2, "Teaser").$$render($$result, {
+        slug: "solmates",
+        title: "Solmates",
+        year: "2019",
+        desc: "Design, Development, CMS, Fotografie, Texte",
+        image: "/images/solmates/solmates.jpg"
+      }, {}, {})}
+
+            ${validate_component(Teaser2, "Teaser").$$render($$result, {
+        slug: "wohnformat",
+        title: "[wohnformat]",
+        year: "2016",
+        desc: "CI, Webdesign, Development, CMS",
+        image: "/images/wohnformat/wohnformat.jpg"
+      }, {}, {})}</div>
+        <div class="${"coming-soon svelte-c8ejd"}"><p class="${"svelte-c8ejd"}">Weitere Projekte kommen bald</p></div></div>
 </section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/wohnformat-7dbaa68d.js
-var wohnformat_7dbaa68d_exports = {};
-__export(wohnformat_7dbaa68d_exports, {
+// .svelte-kit/output/server/chunks/external-d1640dc8.js
+var css$13, Hero2, css6, Next, external;
+var init_external_d1640dc8 = __esm({
+  ".svelte-kit/output/server/chunks/external-d1640dc8.js"() {
+    init_shims();
+    init_app_fe36154b();
+    css$13 = {
+      code: '@keyframes svelte-nbp1mi-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-nbp1mi-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-nbp1mi-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-nbp1mi-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-nbp1mi-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-nbp1mi-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-nbp1mi-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-nbp1mi-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-nbp1mi-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-nbp1mi-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-nbp1mi-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.hero.svelte-nbp1mi.svelte-nbp1mi{align-items:center;background-position:center center;background-size:cover;box-sizing:border-box;display:grid;grid-gap:0.3125rem;grid-template-columns:auto clamp(19.375rem, 11rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;justify-content:center;left:0;min-height:100vh;padding:var(--core-padding) 0;position:fixed;top:0;width:100%}.hero.svelte-nbp1mi.svelte-nbp1mi::before{content:"";position:absolute;top:0;right:0;left:0;bottom:0;background-color:#000;opacity:0.3}.hero.svelte-nbp1mi + section{margin-top:100vh}.headline.svelte-nbp1mi.svelte-nbp1mi{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.text.svelte-nbp1mi.svelte-nbp1mi{animation:svelte-nbp1mi-fadein 1s var(--easing) forwards;opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:2;text-align:center;padding:12%;color:#fff}.text.svelte-nbp1mi h1.svelte-nbp1mi{font-family:var(--serif);font-weight:700;font-size:clamp(2.875rem, 2.1181818182rem + 3.3636363636vw, 7.5rem);line-height:1;margin:0}.text.svelte-nbp1mi h1 span.svelte-nbp1mi{animation:svelte-nbp1mi-to-top 1s var(--easing) forwards}.text.svelte-nbp1mi hr.svelte-nbp1mi{animation:svelte-nbp1mi-scale 0.8s 0.3s var(--easing) forwards;width:33%;transform:scaleX(0);transform-origin:top left;margin:1.25rem 0;border-color:#fff}.text.svelte-nbp1mi p.svelte-nbp1mi{font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);margin:0}.text.svelte-nbp1mi p span.svelte-nbp1mi{animation:svelte-nbp1mi-to-top 1s 0.8s var(--easing) forwards}.sphere.svelte-nbp1mi.svelte-nbp1mi{animation:svelte-nbp1mi-fadein 1s var(--easing) forwards;opacity:0;display:block;background-size:cover;background-position:center center;padding-bottom:100%;border-radius:50%;will-change:opacity;opacity:0;position:relative;z-index:1;margin:0;overflow:hidden}.sphere.svelte-nbp1mi img.svelte-nbp1mi{height:100%;left:0;object-fit:cover;position:absolute;top:0;width:100%}.background-image.svelte-nbp1mi.svelte-nbp1mi{animation:svelte-nbp1mi-fadein 3s var(--easing) forwards;opacity:0;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;z-index:0}.background-image.svelte-nbp1mi img.svelte-nbp1mi{height:100%;left:0;object-fit:cover;position:absolute;top:0;width:100%}',
+      map: null
+    };
+    Hero2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { title } = $$props;
+      let { desc } = $$props;
+      let { imageSm } = $$props;
+      let { imageLg } = $$props;
+      let scrollY;
+      let windowHeight;
+      let root = document.documentElement;
+      onDestroy(() => {
+        root.style.removeProperty("--header-color");
+      });
+      if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+        $$bindings.title(title);
+      if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
+        $$bindings.desc(desc);
+      if ($$props.imageSm === void 0 && $$bindings.imageSm && imageSm !== void 0)
+        $$bindings.imageSm(imageSm);
+      if ($$props.imageLg === void 0 && $$bindings.imageLg && imageLg !== void 0)
+        $$bindings.imageLg(imageLg);
+      $$result.css.add(css$13);
+      return `
+
+<section class="${"hero svelte-nbp1mi"}" style="${"opacity: " + escape(Math.max(0, 1 - scrollY / windowHeight)) + ";"}"><div class="${"headline svelte-nbp1mi"}"><div class="${"text svelte-nbp1mi"}"><h1 class="${"mask svelte-nbp1mi"}"><span class="${"svelte-nbp1mi"}">${escape(title)}</span></h1>
+            <hr class="${"svelte-nbp1mi"}">
+            <p class="${"mask svelte-nbp1mi"}"><span class="${"svelte-nbp1mi"}">${escape(desc)}</span></p></div>
+        <figure class="${"sphere svelte-nbp1mi"}"><picture><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
+                <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} class="${"svelte-nbp1mi"}"></picture></figure></div>
+    <figure class="${"background-image svelte-nbp1mi"}"><picture><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
+            <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} class="${"svelte-nbp1mi"}"></picture></figure>
+</section>`;
+    });
+    css6 = {
+      code: ".next.svelte-1hm099y.svelte-1hm099y{background:none;min-height:var(--app-height, 100vh);padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.next.svelte-1hm099y h3.svelte-1hm099y{font-size:1.5rem;margin:2em}.next.svelte-1hm099y .circle.svelte-1hm099y{height:20rem;width:20rem;display:flex;align-items:center;justify-content:center;border-radius:50%;background-size:cover;background-position:center center;position:relative}@media(min-width: 768px){.next.svelte-1hm099y .circle.svelte-1hm099y{height:28.75rem;width:28.75rem}}.next.svelte-1hm099y .text.svelte-1hm099y{text-align:center;pointer-events:none;color:#fff}.next.svelte-1hm099y .text h1.svelte-1hm099y{font-family:var(--serif);font-weight:700;font-size:2.25rem;line-height:1;margin:0.5em 0}@media(min-width: 768px){.next.svelte-1hm099y .text h1.svelte-1hm099y{font-size:2.625rem}}@media(min-width: 1024px){.next.svelte-1hm099y .text h1.svelte-1hm099y{font-size:3rem}}.next.svelte-1hm099y .text hr.svelte-1hm099y{width:33%;border-color:currentColor}.next.svelte-1hm099y .text p.svelte-1hm099y{font-size:0.9375rem}@media(min-width: 768px){.next.svelte-1hm099y .text p.svelte-1hm099y{font-size:1rem}}@media(min-width: 1024px){.next.svelte-1hm099y .text p.svelte-1hm099y{font-size:1.125rem}}",
+      map: null
+    };
+    Next = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { title } = $$props;
+      let { desc } = $$props;
+      let { slug } = $$props;
+      let { image } = $$props;
+      if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+        $$bindings.title(title);
+      if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
+        $$bindings.desc(desc);
+      if ($$props.slug === void 0 && $$bindings.slug && slug !== void 0)
+        $$bindings.slug(slug);
+      if ($$props.image === void 0 && $$bindings.image && image !== void 0)
+        $$bindings.image(image);
+      $$result.css.add(css6);
+      return `<section class="${"next svelte-1hm099y"}"><h3 class="${"svelte-1hm099y"}">N\xE4chstes Projekt</h3>
+    <a${add_attribute("href", slug, 0)} class="${"circle svelte-1hm099y"}" style="${"background-image: url(" + escape(image) + ");"}"><div class="${"text svelte-1hm099y"}"><h1 class="${"svelte-1hm099y"}">${escape(title)}</h1>
+            <hr class="${"svelte-1hm099y"}">
+            <p class="${"svelte-1hm099y"}">${escape(desc)}</p></div></a>
+</section>`;
+    });
+    external = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <path d="M20.131 3.368a.5.5 0 0 1 .5.5V16.94a.5.5 0 0 1-1 0V4.37H7.061a.5.5 0 0 1 0-1h13.07Z" fill="currentColor"/>\n    <path d="M20.485 3.515a.5.5 0 0 1 0 .707L4.22 20.485a.5.5 0 1 1-.707-.707L19.778 3.515a.5.5 0 0 1 .707 0Z" fill="currentColor"/>\n</svg>';
+  }
+});
+
+// .svelte-kit/output/server/chunks/wohnformat-8d8f44ca.js
+var wohnformat_8d8f44ca_exports = {};
+__export(wohnformat_8d8f44ca_exports, {
   default: () => Wohnformat
 });
-var import_cookie6, css6, Wohnformat;
-var init_wohnformat_7dbaa68d = __esm({
-  ".svelte-kit/output/server/chunks/wohnformat-7dbaa68d.js"() {
+var import_cookie6, css7, Wohnformat;
+var init_wohnformat_8d8f44ca = __esm({
+  ".svelte-kit/output/server/chunks/wohnformat-8d8f44ca.js"() {
     init_shims();
-    init_app_d5644d2d();
+    init_app_fe36154b();
+    init_external_d1640dc8();
     import_cookie6 = __toModule(require_cookie());
     init_dist();
-    css6 = {
-      code: "section.svelte-1ebj365.svelte-1ebj365{box-sizing:border-box;padding:9.375rem var(--core-padding)}section.svelte-1ebj365>div.svelte-1ebj365{margin:0 auto;max-width:var(--core-max-width)}h1.svelte-1ebj365.svelte-1ebj365{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}p.svelte-1ebj365.svelte-1ebj365{font-size:1.25rem}",
+    css7 = {
+      code: '@keyframes svelte-18dl158-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-18dl158-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-18dl158-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-18dl158-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-18dl158-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-18dl158-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-18dl158-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-18dl158-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-18dl158.svelte-18dl158{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-18dl158>div.svelte-18dl158{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.narrow.svelte-18dl158>div.svelte-18dl158{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-18dl158>div.svelte-18dl158{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){section.align-end.svelte-18dl158>div.svelte-18dl158{align-items:flex-end}}h1.svelte-18dl158.svelte-18dl158{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-18dl158.svelte-18dl158{font-size:1.125rem}.facts.svelte-18dl158.svelte-18dl158{max-width:var(--content-max-width);margin:3.125rem auto 0;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.facts.svelte-18dl158>div.svelte-18dl158{display:flex;flex-direction:column;border-top:1px solid var(--on-base);padding:1.25rem 0;gap:0.3125rem}.facts.svelte-18dl158 h3.svelte-18dl158{font-family:var(--serif);font-weight:700;font-size:1.2em;margin:0}.facts.svelte-18dl158 p.svelte-18dl158{font-size:1em;margin:0}.facts.svelte-18dl158 a.svelte-18dl158{align-self:flex-end}.link.svelte-18dl158.svelte-18dl158{justify-self:center;display:flex;align-items:center;justify-content:flex-end;gap:0.625rem;margin-top:1.25rem;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.link.svelte-18dl158 i.svelte-18dl158{border:1px solid var(--primary);width:4.125rem;height:4.125rem;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(45deg)}.link.svelte-18dl158 i.svelte-18dl158::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleY(0);transform-origin:bottom left;transition:transform 0.6s var(--easing)}.link.svelte-18dl158 i.svelte-18dl158 svg{position:relative;transform:rotate(-45deg)}.link.svelte-18dl158 span.svelte-18dl158{pointer-events:none}.link.svelte-18dl158:hover i.svelte-18dl158::before{transform:scaleY(1)}img.svelte-18dl158.svelte-18dl158{display:block}',
       map: null
     };
     Wohnformat = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css6);
-      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Wohnformat</title>`, ""}<meta name="${"description"}" content="${"Wohnformat"}" data-svelte="svelte-6f3wx8">`, ""}
+      $$result.css.add(css7);
+      return `${$$result.head += `${$$result.title = `<title>Wohnformat | Armin Neuhauser</title>`, ""}<meta name="${"description"}" content="${"Wohnformat"}" data-svelte="svelte-ne6hci">`, ""}
 
-<section class="${"svelte-1ebj365"}"><div class="${"svelte-1ebj365"}"><h1 class="${"svelte-1ebj365"}">Wohnformat</h1>
-        <p class="${"svelte-1ebj365"}">Wohnformat ist das Unternehmen von Patrick Schachinger und Johannes Haberfehlner. Gemeinsam mit ihren Kunden planen sie R\xE4ume und M\xF6bel nach Ma\xDF. Ich durfte das Corporate Design und die Website von Wohnformat konzipieren und umsetzen. Dabei war ich von der Firmengr\xFCndung an involviert und konnte so die Marke von Grund auf definieren.
-        </p>
-        <p class="${"svelte-1ebj365"}">Bei der Website von Wohnformat habe ich auf ein klassisches, modernes und minimalistisches Design gesetzt. Programmiert wurde die Website mit modernen \u201Estate of the art\u201C Technologien im Responsive Design. Im Hintergrund l\xE4uft das bekannte CMS WordPress. Wohnformat kann damit selbst Blog-Beitr\xE4ge, Projekte und Seiten anlegen und bearbeiten.
-        </p></div>
+${validate_component(Hero2, "Hero").$$render($$result, {
+        title: "Wohnformat",
+        desc: "die M\xF6bel- und Designwerkstatt",
+        imageSm: "/images/wohnformat/wohnformat-hero-sm.jpg",
+        imageLg: "/images/wohnformat/wohnformat-hero-lg.jpg"
+      }, {}, {})}
+
+<section class="${"svelte-18dl158"}"><div class="${"svelte-18dl158"}"><div class="${"facts svelte-18dl158"}"><div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Launch</h3>
+                <p class="${"svelte-18dl158"}">Oktober 2016</p></div>
+            <div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Services</h3>
+                <p class="${"svelte-18dl158"}">Corporate Identity, Webdesign, UI/UX, Development, Content Management System</p></div>
+            <div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Technologien</h3>
+                <p class="${"svelte-18dl158"}">WordPress</p></div>
+            <div class="${"svelte-18dl158"}"><a class="${"link svelte-18dl158"}" href="${"https://www.wohnformat.at/"}" target="${"_blank"}"><span class="${"svelte-18dl158"}">Website ansehen</span>
+                    <i class="${"svelte-18dl158"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></div></div></section>
+
+
+<section class="${"col2 align-end svelte-18dl158"}"><div class="${"svelte-18dl158"}"><img src="${"/images/wohnformat/wohnformat1.jpg"}" alt="${"Wohnformat Startseite"}" class="${"svelte-18dl158"}">
+        <img src="${"/images/wohnformat/wohnformat4.jpg"}" alt="${"Wohnformat Tablets"}" class="${"svelte-18dl158"}"></div></section>
+
+<section class="${"col2 svelte-18dl158"}"><div class="${"svelte-18dl158"}"><img src="${"/images/wohnformat/wohnformat2.jpg"}" alt="${"Wohnformat Kontakt"}" class="${"svelte-18dl158"}">
+        <img src="${"/images/wohnformat/wohnformat5.jpg"}" alt="${"Wohnformat Phones"}" class="${"svelte-18dl158"}"></div></section>
+
+<section class="${"narrow svelte-18dl158"}"><div class="${"svelte-18dl158"}"><div><hr>
+            <h1 class="${"svelte-18dl158"}">Wohntr\xE4ume nach Ma\xDF
+            </h1>
+            <p class="${"svelte-18dl158"}">Wohnformat ist das Unternehmen von Patrick Schachinger und Johannes Haberfehlner. Gemeinsam mit ihren Kunden planen sie R\xE4ume und M\xF6bel nach Ma\xDF. Ich durfte das Corporate Design und die Website von Wohnformat konzipieren und umsetzen. Dabei war ich von der Firmengr\xFCndung an involviert und konnte so die Marke von Grund auf definieren.
+            </p>
+            <p class="${"svelte-18dl158"}">Bei der Website von Wohnformat habe ich auf ein klassisches, modernes und minimalistisches Design gesetzt. Programmiert wurde die Website mit modernen \u201Estate of the art\u201C Technologien im Responsive Design. Im Hintergrund l\xE4uft das bekannte CMS WordPress. Wohnformat kann damit selbst Blog-Beitr\xE4ge, Projekte und Seiten anlegen und bearbeiten.
+            </p></div></div></section>
+
+<section class="${"svelte-18dl158"}"><div class="${"svelte-18dl158"}"><a class="${"link svelte-18dl158"}" href="${"https://www.wohnformat.at/"}" target="${"_blank"}"><span class="${"svelte-18dl158"}">Website ansehen</span>
+            <i class="${"svelte-18dl158"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></section>
+
+${validate_component(Next, "Next").$$render($$result, {
+        title: "Solmates",
+        desc: "ein Blog f\xFCr unsere Reise durch Lateinamerika",
+        slug: "/projekte/solmates",
+        image: "/images/solmates/solmates-hero-sm.jpg"
+      }, {}, {})}`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/Parallax-27e48d7a.js
+var css8, Parallax;
+var init_Parallax_27e48d7a = __esm({
+  ".svelte-kit/output/server/chunks/Parallax-27e48d7a.js"() {
+    init_shims();
+    init_app_fe36154b();
+    init_external_d1640dc8();
+    css8 = {
+      code: "section.svelte-1nzr0eg{background-color:var(--base)}figure.svelte-1nzr0eg{aspect-ratio:16/9;margin:0;overflow:hidden;display:flex}picture.svelte-1nzr0eg{flex-grow:1;display:flex}img.svelte-1nzr0eg{flex-grow:1;object-fit:cover}",
+      map: null
+    };
+    Parallax = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { image } = $$props;
+      let { width = void 0 } = $$props;
+      let { height = void 0 } = $$props;
+      let { alt = void 0 } = $$props;
+      let figure;
+      let translateY = 0;
+      if ($$props.image === void 0 && $$bindings.image && image !== void 0)
+        $$bindings.image(image);
+      if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+        $$bindings.width(width);
+      if ($$props.height === void 0 && $$bindings.height && height !== void 0)
+        $$bindings.height(height);
+      if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
+        $$bindings.alt(alt);
+      $$result.css.add(css8);
+      return `
+
+<section class="${"full svelte-1nzr0eg"}"><div><figure class="${"svelte-1nzr0eg"}"${add_attribute("this", figure, 0)}><picture class="${"svelte-1nzr0eg"}"><img${add_attribute("src", image, 0)}${add_attribute("alt", alt, 0)} style="${"transform: translateY(" + escape(translateY) + "%);"}"${add_attribute("width", width, 0)}${add_attribute("height", height, 0)} class="${"svelte-1nzr0eg"}"></picture></figure></div>
 </section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/mst-muhr-10cd5872.js
-var mst_muhr_10cd5872_exports = {};
-__export(mst_muhr_10cd5872_exports, {
+// .svelte-kit/output/server/chunks/mst-muhr-26090cb1.js
+var mst_muhr_26090cb1_exports = {};
+__export(mst_muhr_26090cb1_exports, {
   default: () => Mst_muhr
 });
-var import_cookie7, css7, Mst_muhr;
-var init_mst_muhr_10cd5872 = __esm({
-  ".svelte-kit/output/server/chunks/mst-muhr-10cd5872.js"() {
+var import_cookie7, css$14, Switch, css9, Mst_muhr;
+var init_mst_muhr_26090cb1 = __esm({
+  ".svelte-kit/output/server/chunks/mst-muhr-26090cb1.js"() {
     init_shims();
-    init_app_d5644d2d();
+    init_app_fe36154b();
+    init_external_d1640dc8();
+    init_Parallax_27e48d7a();
     import_cookie7 = __toModule(require_cookie());
     init_dist();
-    css7 = {
-      code: "section.svelte-1ebj365.svelte-1ebj365{box-sizing:border-box;padding:9.375rem var(--core-padding)}section.svelte-1ebj365>div.svelte-1ebj365{margin:0 auto;max-width:var(--core-max-width)}h1.svelte-1ebj365.svelte-1ebj365{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}p.svelte-1ebj365.svelte-1ebj365{font-size:1.25rem}",
+    css$14 = {
+      code: '.switch.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri{position:relative;display:flex;gap:0.9375rem;flex-direction:row;align-items:center;user-select:none;cursor:pointer}.switch--label.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri{color:var(--on-base);user-select:none}.switch--input.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri{position:absolute;opacity:0;display:none;width:0;height:0;top:-100rem;left:-100rem}.switch--trigger.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri{position:relative;height:1.8rem;width:4rem;border-radius:5rem;transition:all 0.3s var(--easing);background-color:var(--base);border:1px solid var(--on-base)}.switch--trigger.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri::after{content:"";position:absolute;height:1.3rem;width:1.3rem;background:var(--on-base);left:0.9rem;top:50%;transform:translate(-50%, -50%);transition:all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);border-radius:100%}.switch.svelte-1rl4mri input.svelte-1rl4mri:checked~.switch--trigger.svelte-1rl4mri{background-color:var(--on-base)}.switch.svelte-1rl4mri input.svelte-1rl4mri:checked~.switch--trigger.svelte-1rl4mri::after{background:var(--base);left:calc(100% - 0.9rem)}',
+      map: null
+    };
+    Switch = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { label1 } = $$props;
+      let { label2 } = $$props;
+      let { checked } = $$props;
+      if ($$props.label1 === void 0 && $$bindings.label1 && label1 !== void 0)
+        $$bindings.label1(label1);
+      if ($$props.label2 === void 0 && $$bindings.label2 && label2 !== void 0)
+        $$bindings.label2(label2);
+      if ($$props.checked === void 0 && $$bindings.checked && checked !== void 0)
+        $$bindings.checked(checked);
+      $$result.css.add(css$14);
+      return `<label class="${"switch svelte-1rl4mri"}"><span class="${"switch--label svelte-1rl4mri"}">${escape(label1)}</span>
+    <input class="${"switch--input svelte-1rl4mri"}" type="${"checkbox"}"${add_attribute("checked", checked, 1)}>
+    <span class="${"switch--trigger wrapper svelte-1rl4mri"}"></span>
+    <span class="${"switch--label svelte-1rl4mri"}">${escape(label2)}</span>
+</label>`;
+    });
+    css9 = {
+      code: '@keyframes svelte-18dl158-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-18dl158-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-18dl158-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-18dl158-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-18dl158-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-18dl158-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-18dl158-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-18dl158-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-18dl158.svelte-18dl158{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-18dl158>div.svelte-18dl158{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.narrow.svelte-18dl158>div.svelte-18dl158{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-18dl158>div.svelte-18dl158{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){}h1.svelte-18dl158.svelte-18dl158{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-18dl158.svelte-18dl158{font-size:1.125rem}.facts.svelte-18dl158.svelte-18dl158{max-width:var(--content-max-width);margin:3.125rem auto 0;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.facts.svelte-18dl158>div.svelte-18dl158{display:flex;flex-direction:column;border-top:1px solid var(--on-base);padding:1.25rem 0;gap:0.3125rem}.facts.svelte-18dl158 h3.svelte-18dl158{font-family:var(--serif);font-weight:700;font-size:1.2em;margin:0}.facts.svelte-18dl158 p.svelte-18dl158{font-size:1em;margin:0}.facts.svelte-18dl158 a.svelte-18dl158{align-self:flex-end}.link.svelte-18dl158.svelte-18dl158{justify-self:center;display:flex;align-items:center;justify-content:flex-end;gap:0.625rem;margin-top:1.25rem;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.link.svelte-18dl158 i.svelte-18dl158{border:1px solid var(--primary);width:4.125rem;height:4.125rem;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(45deg)}.link.svelte-18dl158 i.svelte-18dl158::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleY(0);transform-origin:bottom left;transition:transform 0.6s var(--easing)}.link.svelte-18dl158 i.svelte-18dl158 svg{position:relative;transform:rotate(-45deg)}.link.svelte-18dl158 span.svelte-18dl158{pointer-events:none}.link.svelte-18dl158:hover i.svelte-18dl158::before{transform:scaleY(1)}img.svelte-18dl158.svelte-18dl158{display:block}',
       map: null
     };
     Mst_muhr = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css7);
-      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | MST Muhr</title>`, ""}<meta name="${"description"}" content="${"MST Muhr"}" data-svelte="svelte-bc4syu">`, ""}
+      let dark = false;
+      $$result.css.add(css9);
+      let $$settled;
+      let $$rendered;
+      do {
+        $$settled = true;
+        $$rendered = `${$$result.head += `${$$result.title = `<title>MST Muhr | Armin Neuhauser</title>`, ""}<meta name="${"description"}" content="${"MST Muhr"}" data-svelte="svelte-16aerro">`, ""}
 
-<section class="${"svelte-1ebj365"}"><div class="${"svelte-1ebj365"}"><h1 class="${"svelte-1ebj365"}">MST Muhr</h1>
-        <p class="${"svelte-1ebj365"}"></p></div>
-</section>`;
+${validate_component(Hero2, "Hero").$$render($$result, {
+          title: "MST Muhr",
+          desc: "individuelle Unternehmenswebsite",
+          imageSm: "/images/mst-muhr/mst-hero-sm.jpg",
+          imageLg: "/images/mst-muhr/mst-hero-lg.jpg"
+        }, {}, {})}
+
+<section class="${"svelte-18dl158"}"><div class="${"svelte-18dl158"}"><div class="${"facts svelte-18dl158"}"><div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Launch</h3>
+                <p class="${"svelte-18dl158"}">J\xE4nner 2022</p></div>
+            <div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Services</h3>
+                <p class="${"svelte-18dl158"}">Konzept &amp; Beratung, Webdesign, UI/UX, Development, Content Management System, Fotografie</p></div>
+            <div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Technologien</h3>
+                <p class="${"svelte-18dl158"}">Vue.js, Nuxt.js, Storyblok, Netlify</p></div>
+            <div class="${"svelte-18dl158"}"><a class="${"link svelte-18dl158"}" href="${"https://www.mst-muhr.at/"}" target="${"_blank"}"><span class="${"svelte-18dl158"}">Website ansehen</span>
+                    <i class="${"svelte-18dl158"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></div></div></section>
+
+${validate_component(Parallax, "Parallax").$$render($$result, {
+          image: "/images/mst-muhr/mst-schweizergarten.jpg",
+          width: "1920",
+          height: "1280",
+          alt: "MST Muhr Schweizergarten"
+        }, {}, {})}
+
+<section class="${"narrow svelte-18dl158"}"><div class="${"svelte-18dl158"}"><div><hr>
+            <h1 class="${"svelte-18dl158"}">Eine gro\xDFartige Website f\xFCr ein gro\xDFartiges Unternehmen
+            </h1>
+            <p class="${"svelte-18dl158"}">Die MST Muhr Sanierungstechnik wurde 1995 aus dem Interesse Bauwerke zu erhalten und einer Begeisterung f\xFCr individuelle L\xF6sungen in der Sanierung von Hoch- und Tiefbauobjekten gegr\xFCndet.
+            </p>
+            <p class="${"svelte-18dl158"}">2021 begann die Zusammenarbeit zwischen mir und der MST mit der Zielsetzung eine individuelle, editierbare und nicht zuletzt einzigartige Website zu kreieren, die die Spitzenposition des Unternehmens in der Branche widerspiegelt.
+            </p></div></div></section>
+
+<section class="${"narrow svelte-18dl158"}"><div class="${"svelte-18dl158"}">${validate_component(Switch, "Switch").$$render($$result, {
+          label1: "Light mode",
+          label2: "Dark mode",
+          checked: dark
+        }, {
+          checked: ($$value) => {
+            dark = $$value;
+            $$settled = false;
+          }
+        }, {})}</div></section>
+
+<section class="${"col2 svelte-18dl158"}"><div class="${"svelte-18dl158"}">${dark ? `<img src="${"/images/mst-muhr/mst-muhr-01-dark.jpg"}" alt="${"MST Muhr Startseite"}" width="${"1920"}" height="${"1200"}" class="${"svelte-18dl158"}">
+            <img src="${"/images/mst-muhr/mst-muhr-02-dark.jpg"}" alt="${"MST Muhr Kontakt"}" width="${"1920"}" height="${"1200"}" class="${"svelte-18dl158"}">` : `<img src="${"/images/mst-muhr/mst-muhr-01.jpg"}" alt="${"MST Muhr Startseite"}" width="${"1920"}" height="${"1200"}" class="${"svelte-18dl158"}">
+            <img src="${"/images/mst-muhr/mst-muhr-02.jpg"}" alt="${"MST Muhr Kontakt"}" width="${"1920"}" height="${"1200"}" class="${"svelte-18dl158"}">`}</div></section>
+
+<section class="${"svelte-18dl158"}"><div class="${"svelte-18dl158"}"><a class="${"link svelte-18dl158"}" href="${"https://www.mst-muhr.at/"}" target="${"_blank"}"><span class="${"svelte-18dl158"}">Website ansehen</span>
+            <i class="${"svelte-18dl158"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></section>
+
+${validate_component(Next, "Next").$$render($$result, {
+          title: "Solmates",
+          desc: "ein Blog f\xFCr unsere Reise durch Lateinamerika",
+          slug: "/projekte/solmates",
+          image: "/images/solmates/solmates-hero-sm.jpg"
+        }, {}, {})}`;
+      } while (!$$settled);
+      return $$rendered;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/solmates-85886daf.js
-var solmates_85886daf_exports = {};
-__export(solmates_85886daf_exports, {
+// .svelte-kit/output/server/chunks/solmates-239a4bf6.js
+var solmates_239a4bf6_exports = {};
+__export(solmates_239a4bf6_exports, {
   default: () => Solmates
 });
-var import_cookie8, css8, Solmates;
-var init_solmates_85886daf = __esm({
-  ".svelte-kit/output/server/chunks/solmates-85886daf.js"() {
+var import_cookie8, css10, Solmates;
+var init_solmates_239a4bf6 = __esm({
+  ".svelte-kit/output/server/chunks/solmates-239a4bf6.js"() {
     init_shims();
-    init_app_d5644d2d();
+    init_app_fe36154b();
+    init_external_d1640dc8();
+    init_Parallax_27e48d7a();
     import_cookie8 = __toModule(require_cookie());
     init_dist();
-    css8 = {
-      code: "section.svelte-1ebj365.svelte-1ebj365{box-sizing:border-box;padding:9.375rem var(--core-padding)}section.svelte-1ebj365>div.svelte-1ebj365{margin:0 auto;max-width:var(--core-max-width)}h1.svelte-1ebj365.svelte-1ebj365{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}p.svelte-1ebj365.svelte-1ebj365{font-size:1.25rem}",
+    css10 = {
+      code: '@keyframes svelte-18dl158-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-18dl158-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-18dl158-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18dl158-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-18dl158-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-18dl158-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-18dl158-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-18dl158-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-18dl158-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-18dl158.svelte-18dl158{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-18dl158>div.svelte-18dl158{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.full.svelte-18dl158.svelte-18dl158{padding-left:0;padding-right:0}section.narrow.svelte-18dl158>div.svelte-18dl158{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-18dl158>div.svelte-18dl158{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){section.align-end.svelte-18dl158>div.svelte-18dl158{align-items:flex-end}}h1.svelte-18dl158.svelte-18dl158{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-18dl158.svelte-18dl158{font-size:1.125rem}.facts.svelte-18dl158.svelte-18dl158{max-width:var(--content-max-width);margin:3.125rem auto 0;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.facts.svelte-18dl158>div.svelte-18dl158{display:flex;flex-direction:column;border-top:1px solid var(--on-base);padding:1.25rem 0;gap:0.3125rem}.facts.svelte-18dl158 h3.svelte-18dl158{font-family:var(--serif);font-weight:700;font-size:1.2em;margin:0}.facts.svelte-18dl158 p.svelte-18dl158{font-size:1em;margin:0}.facts.svelte-18dl158 a.svelte-18dl158{align-self:flex-end}.link.svelte-18dl158.svelte-18dl158{justify-self:center;display:flex;align-items:center;justify-content:flex-end;gap:0.625rem;margin-top:1.25rem;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.link.svelte-18dl158 i.svelte-18dl158{border:1px solid var(--primary);width:4.125rem;height:4.125rem;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(45deg)}.link.svelte-18dl158 i.svelte-18dl158::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleY(0);transform-origin:bottom left;transition:transform 0.6s var(--easing)}.link.svelte-18dl158 i.svelte-18dl158 svg{position:relative;transform:rotate(-45deg)}.link.svelte-18dl158 span.svelte-18dl158{pointer-events:none}.link.svelte-18dl158:hover i.svelte-18dl158::before{transform:scaleY(1)}img.svelte-18dl158.svelte-18dl158{display:block}',
       map: null
     };
     Solmates = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css8);
-      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Solmates</title>`, ""}<meta name="${"description"}" content="${"Solmates ist ein Reiseblog von Armin & Miriam"}" data-svelte="svelte-7b7brd">`, ""}
+      $$result.css.add(css10);
+      return `${$$result.head += `${$$result.title = `<title>Solmates | Armin Neuhauser</title>`, ""}<meta name="${"description"}" content="${"Solmates ist ein Reiseblog von Armin & Miriam"}" data-svelte="svelte-xo6kt7">`, ""}
 
-<section class="${"svelte-1ebj365"}"><div class="${"svelte-1ebj365"}"><h1 class="${"svelte-1ebj365"}">Solmates</h1>
-        <p class="${"svelte-1ebj365"}">Solmates ist ein Reiseblog von Armin &amp; Miriam. Dieser Blog ist ein Platz um Erinnerungen zu speichern und zu teilen \u2013 f\xFCr uns selbst, unsere Familie und Freunde. Wir hoffen aber, dass unsere Beitr\xE4ge auch f\xFCr alle, die eine \xE4hnliche Reise geplant haben, hilfreich sind und freuen uns, wenn wir den ein oder anderen dazu inspirieren. Mehr \xFCber das Design und die Entwicklung des Blog k\xF6nnt ihr hier lesen.
-        </p></div>
-</section>`;
+${validate_component(Hero2, "Hero").$$render($$result, {
+        title: "Solmates",
+        desc: "ein Blog f\xFCr unsere Reise durch Lateinamerika",
+        imageSm: "/images/solmates/solmates-hero-sm.jpg",
+        imageLg: "/images/solmates/solmates-hero-lg.jpg"
+      }, {}, {})}
+
+<section class="${"svelte-18dl158"}"><div class="${"svelte-18dl158"}"><div class="${"facts svelte-18dl158"}"><div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Launch</h3>
+                <p class="${"svelte-18dl158"}">November 2019</p></div>
+            <div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Services</h3>
+                <p class="${"svelte-18dl158"}">Konzept, Webdesign, UI/UX, Development, Content Management System, Fotografie, Texte, Buchgestaltung</p></div>
+            <div class="${"svelte-18dl158"}"><h3 class="${"svelte-18dl158"}">Technologien</h3>
+                <p class="${"svelte-18dl158"}">Vue.js, Nuxt.js, Storyblok, Netlify, Mailchimp</p></div>
+            <div class="${"svelte-18dl158"}"><a class="${"link svelte-18dl158"}" href="${"https://www.solmates.at/"}" target="${"_blank"}"><span class="${"svelte-18dl158"}">Website ansehen</span>
+                    <i class="${"svelte-18dl158"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></div></div></section>
+
+<section class="${"full svelte-18dl158"}"><div class="${"svelte-18dl158"}"><video width="${"1152"}" height="${"720"}" muted playsinline loop autoplay poster="${"/images/solmates/solmates01.jpg"}"><source src="${"/images/solmates/solmates.webm"}" type="${"video/webm"}"><source src="${"/images/solmates/solmates.mp4"}" type="${"video/mp4"}"></video></div></section>
+
+<section class="${"narrow svelte-18dl158"}"><div class="${"svelte-18dl158"}"><div><hr>
+            <h1 class="${"svelte-18dl158"}">Solmates ist ein Reiseblog von Armin &amp; Miriam.
+            </h1>
+            <p class="${"svelte-18dl158"}">Zu reisen, um neue Orte zu entdecken, ist f\xFCr mich eines der sch\xF6nsten und aufregendsten Dinge im Leben. Deshalb bin ich gemeinsam mit meiner Partnerin im November 2019 aufgebrochen, um Lateinamerika zu bereisen. Mit dem Blog wollte ich einen Platz erschaffen, um Erinnerungen zu speichern und zu teilen \u2013 f\xFCr uns selbst, unsere Familien und Freunde.
+            </p>
+            <p class="${"svelte-18dl158"}">Den Blog habe ich von Grund auf mit Vue &amp; Nuxt gebaut. Die Texte und Bilder werden in dem Content Management System Storyblok gepflegt.
+            </p></div></div></section>
+
+${validate_component(Parallax, "Parallax").$$render($$result, {
+        image: "/images/solmates/solmates-cartagena.jpg",
+        width: "1920",
+        height: "1280",
+        alt: "Solamtes Cartagena Kolumbien"
+      }, {}, {})}
+
+<section class="${"narrow svelte-18dl158"}"><div class="${"svelte-18dl158"}"><img src="${"/images/solmates/solmates-home.jpg"}" alt="${"Solmates Startseite"}" class="${"svelte-18dl158"}"></div></section>
+
+<section class="${"col2 align-end svelte-18dl158"}"><div class="${"svelte-18dl158"}"><img src="${"/images/solmates/solmates-san-blas-02.jpg"}" alt="${"Solmates San Blas Inseln"}" class="${"svelte-18dl158"}">
+        <img src="${"/images/solmates/solmates-costa-rica.jpg"}" alt="${"Solmates Costa Rica"}" class="${"svelte-18dl158"}">
+        <img src="${"/images/solmates/solmates-boquete.jpg"}" alt="${"Solmates Vulkan Baru"}" class="${"svelte-18dl158"}">
+        <img src="${"/images/solmates/solmates-peru.jpg"}" alt="${"Solmates Peru"}" class="${"svelte-18dl158"}"></div></section>
+
+<section class="${"narrow svelte-18dl158"}"><div class="${"svelte-18dl158"}"><div><hr>
+            <h1 class="${"svelte-18dl158"}">Mit dem Rucksack durch Lateinamerika
+            </h1>
+            <p class="${"svelte-18dl158"}">Nach unserer R\xFCckkehr nach \xD6sterreich ist im Sommer 2020 ein 328-seitiger Fotoband entstanden. Dieses Buch erz\xE4hlt von der gesamten Reise \u201Evon den Alpen in die Anden\u201C.
+            </p></div></div></section>
+
+<section class="${"full svelte-18dl158"}"><div class="${"svelte-18dl158"}"><video width="${"1152"}" height="${"720"}" muted playsinline loop autoplay poster="${"/images/solmates/solmates01.jpg"}"><source src="${"/images/solmates/solmates-buch.webm"}" type="${"video/webm"}"><source src="${"/images/solmates/solmates-buch.mp4"}" type="${"video/mp4"}"></video></div></section>
+
+<section class="${"col2 svelte-18dl158"}"><div class="${"svelte-18dl158"}"><img src="${"/images/solmates/solmates-buch.jpg"}" alt="${"Solmates Buch"}" class="${"svelte-18dl158"}">
+        <img src="${"/images/solmates/solmates-buch-02.jpg"}" alt="${"Solmates Buch R\xFCckseite"}" class="${"svelte-18dl158"}"></div></section>
+
+<section class="${"svelte-18dl158"}"><div class="${"svelte-18dl158"}"><a class="${"link svelte-18dl158"}" href="${"https://www.solmates.at/"}" target="${"_blank"}"><span class="${"svelte-18dl158"}">Website ansehen</span>
+            <i class="${"svelte-18dl158"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></section>
+
+${validate_component(Next, "Next").$$render($$result, {
+        title: "MST Muhr",
+        desc: "individuelle Unternehmenswebsite",
+        slug: "/projekte/mst-muhr",
+        image: "/images/mst-muhr/mst-hero-sm.jpg"
+      }, {}, {})}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/kontakt-1b5ef48b.js
-var kontakt_1b5ef48b_exports = {};
-__export(kontakt_1b5ef48b_exports, {
-  default: () => Kontakt,
-  prerender: () => prerender3
+// .svelte-kit/output/server/chunks/kontakt-e58ec39a.js
+var kontakt_e58ec39a_exports = {};
+__export(kontakt_e58ec39a_exports, {
+  default: () => Kontakt
 });
-var import_cookie9, css9, prerender3, Kontakt;
-var init_kontakt_1b5ef48b = __esm({
-  ".svelte-kit/output/server/chunks/kontakt-1b5ef48b.js"() {
+var import_cookie9, css11, Kontakt;
+var init_kontakt_e58ec39a = __esm({
+  ".svelte-kit/output/server/chunks/kontakt-e58ec39a.js"() {
     init_shims();
-    init_app_d5644d2d();
+    init_app_fe36154b();
+    init_arrow_c94cf332();
     import_cookie9 = __toModule(require_cookie());
     init_dist();
-    css9 = {
-      code: "section.svelte-1x6c12h{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto minmax(min-content, 60rem) auto;justify-content:center;min-height:100vh;padding:4.5rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto}h1.svelte-1x6c12h{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}",
+    css11 = {
+      code: 'form.svelte-57h243.svelte-57h243.svelte-57h243{font:var(--w1-sans)}form.svelte-57h243 label.svelte-57h243.svelte-57h243{font:inherit;display:block;text-transform:uppercase;font-size:0.8125rem;font-weight:500}form.svelte-57h243 input.svelte-57h243.svelte-57h243,form.svelte-57h243 textarea.svelte-57h243.svelte-57h243{box-sizing:border-box;font:inherit;display:block;width:100%;background:none;border:0;border-bottom:1px solid var(--on-base);color:var(--on-base);min-height:3.125rem;padding:0.75rem 0}form.svelte-57h243 input.svelte-57h243.svelte-57h243:focus-visible,form.svelte-57h243 textarea.svelte-57h243.svelte-57h243:focus-visible{outline:none}form.svelte-57h243 textarea.svelte-57h243.svelte-57h243{resize:none}form.svelte-57h243 button.svelte-57h243.svelte-57h243{font:inherit;border:1px solid var(--primary);height:3.125rem;border-radius:1.5625rem;padding:0.625rem 1.875rem;text-transform:uppercase;font-size:0.8125rem;font-weight:500;display:flex;align-items:center;gap:0.9375rem;position:relative;z-index:1;overflow:hidden}form.svelte-57h243 button.svelte-57h243 svg{transition:transform 0.25s var(--easing)}form.svelte-57h243 button.svelte-57h243.svelte-57h243::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleX(0);transform-origin:bottom left;transition:transform 0.6s var(--easing);z-index:-1}form.svelte-57h243 button.svelte-57h243.svelte-57h243:hover::before,form.svelte-57h243 button.svelte-57h243.svelte-57h243:focus::before{transform:scaleX(1)}form.svelte-57h243 button.svelte-57h243:hover svg,form.svelte-57h243 button.svelte-57h243:focus svg{transform:translateX(0.3125rem)}@keyframes svelte-57h243-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-57h243-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-57h243-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-57h243-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-57h243-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-57h243-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-57h243-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-57h243-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-57h243-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-57h243-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-57h243-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-57h243.svelte-57h243.svelte-57h243{box-sizing:border-box;padding:var(--core-padding)}section.svelte-57h243>div.svelte-57h243.svelte-57h243{margin:0 auto;max-width:var(--content-max-width)}section.svelte-57h243>header.svelte-57h243.svelte-57h243{margin:0 auto 3.75rem;max-width:var(--content-max-width);border-left:1px solid var(--on-base);padding-left:0.9375rem}section.svelte-57h243.svelte-57h243.svelte-57h243:last-child{padding-bottom:calc(var(--core-padding) * 3)}h1.svelte-57h243.svelte-57h243.svelte-57h243{font-size:clamp(3.5rem, 1.5159090909rem + 8.8181818182vw, 15.625rem);font-weight:400;white-space:nowrap;overflow:hidden;width:100vw;margin:7.5rem 0 4.375rem;text-transform:uppercase}@media(min-width: 1024px){h1.svelte-57h243.svelte-57h243.svelte-57h243{margin-top:11.25rem}}h1.svelte-57h243 span.svelte-57h243.svelte-57h243{display:inline-block}h1.svelte-57h243 span.svelte-57h243 span.svelte-57h243{display:flex;gap:0.25em;align-items:baseline;transition:transform 0.5s var(--easing)}h1.svelte-57h243 em.svelte-57h243.svelte-57h243{font-family:var(--serif);font-style:normal;font-weight:700}h3.svelte-57h243.svelte-57h243.svelte-57h243{font-size:clamp(1.5rem, 1.3557692308rem + 0.641025641vw, 2.125rem)}p.svelte-57h243.svelte-57h243.svelte-57h243{font-size:clamp(1rem, 0.9711538462rem + 0.1282051282vw, 1.125rem);max-width:37.5rem}form.svelte-57h243>div.svelte-57h243.svelte-57h243{margin-bottom:1.875rem}.mail.svelte-57h243.svelte-57h243.svelte-57h243{font-size:clamp(1.375rem, 0.125rem + 6.25vw, 3.125rem);font-weight:500}.mail.svelte-57h243>span.svelte-57h243.svelte-57h243{position:relative;z-index:1}.mail.svelte-57h243>span.svelte-57h243.svelte-57h243::before{content:"";position:absolute;left:0;width:100%;bottom:-0.05em;border-bottom:0.1em solid var(--on-base);transition:transform 0.25s var(--easing);pointer-events:none}[color-scheme="dark"] .mail.svelte-57h243>span.svelte-57h243.svelte-57h243{text-shadow:0 0 0.033em #fff, 0 0 0.08em #fff, 0 0 0.1em var(--primary), 0 0 0.2em var(--primary), 0 0 0.3em var(--primary), 0 0 1em var(--primary), 0 0 1.5em var(--primary)}[color-scheme="dark"] .mail.svelte-57h243>span.svelte-57h243.svelte-57h243::before{box-shadow:0 0 0.033em #fff, 0 0 0.08em #fff, 0 0 0.1em var(--primary), 0 0 0.2em var(--primary), 0 0 0.3em var(--primary), 0 0 1em var(--primary), 0 0 1.5em var(--primary)}[color-scheme="dark"] .mail.svelte-57h243>span .flickr.svelte-57h243.svelte-57h243{animation:svelte-57h243-flickr 3s linear infinite alternate forwards}.mail.svelte-57h243:hover>span.svelte-57h243.svelte-57h243::before{transform:translateY(0.1em)}',
       map: null
     };
-    prerender3 = true;
     Kontakt = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css9);
-      return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | Kontakt</title>`, ""}`, ""}
+      let shift = -10;
+      setInterval(() => {
+        if (shift < -75) {
+          shift = 0;
+        }
+        shift -= 0.015;
+      }, 10);
+      $$result.css.add(css11);
+      return `${$$result.head += `${$$result.title = `<title>Kontakt | Armin Neuhauser</title>`, ""}`, ""}
 
-<section class="${"svelte-1x6c12h"}"><div><h1 class="${"svelte-1x6c12h"}">Kontakt</h1></div>
+<h1 class="${"headline svelte-57h243"}"><span style="${"transform: translate(" + escape(shift) + "%,0)"}" class="${"svelte-57h243"}"><span class="${"svelte-57h243"}"><em class="${"svelte-57h243"}">Kontakt</em> Kontakt
+            <em class="${"svelte-57h243"}">Kontakt</em> Kontakt
+            <em class="${"svelte-57h243"}">Kontakt</em> Kontakt
+            <em class="${"svelte-57h243"}">Kontakt</em> Kontakt
+        </span></span></h1>
+
+<section class="${"svelte-57h243"}"><header class="${"svelte-57h243"}"><p class="${"svelte-57h243"}">Ich bin immer auf der Suche nach neuen Ideen und spannenden Projekten. Z\xF6gere nicht, mir zu schreiben.
+        </p></header>
+    <div class="${"svelte-57h243"}"><a class="${"mail svelte-57h243"}" href="${"mailto:mail@arminneuhauser.at"}"><span class="${"svelte-57h243"}">mail<span class="${"flickr svelte-57h243"}">@</span>arminneuhauser.at</span></a></div></section>
+
+<section class="${"svelte-57h243"}"><header class="${"svelte-57h243"}"><h3 class="${"svelte-57h243"}">Lass uns dein Projekt verwirklichen</h3>
+        <p class="${"svelte-57h243"}">Ich bin immer auf der Suche nach neuen Ideen und spannenden Projekten. F\xFClle das Kontaktformular aus, wenn du mit mir zusammenarbeiten m\xF6chtest.
+        </p></header>
+    <div class="${"svelte-57h243"}"><form name="${"contact"}" method="${"POST"}" data-netlify="${"true"}" class="${"svelte-57h243"}"><div class="${"svelte-57h243"}"><label for="${"name"}" class="${"svelte-57h243"}">Name</label>
+                <input id="${"name"}" name="${"name"}" type="${"text"}" placeholder="${"Dein Name"}" class="${"svelte-57h243"}"></div>
+            <div class="${"svelte-57h243"}"><label for="${"email"}" class="${"svelte-57h243"}">E-Mail-Adresse</label>
+                <input id="${"email"}" name="${"email"}" type="${"email"}" placeholder="${"Deine E-Mail-Adresse"}" class="${"svelte-57h243"}"></div>
+            <div class="${"svelte-57h243"}"><label for="${"message"}" class="${"svelte-57h243"}">Nachricht</label>
+                <textarea id="${"message"}" name="${"message"}" placeholder="${"Deine Nachricht an mich"}" rows="${"5"}" class="${"svelte-57h243"}"></textarea></div>
+            <button type="${"submit"}" class="${"svelte-57h243"}">Absenden
+                <!-- HTML_TAG_START -->${arrow}<!-- HTML_TAG_END --></button></form></div>
 </section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/app-d5644d2d.js
+// .svelte-kit/output/server/chunks/app-fe36154b.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -22457,6 +22851,9 @@ function get_current_component() {
     throw new Error("Function called outside component initialization");
   return current_component;
 }
+function onDestroy(fn) {
+  get_current_component().$$.on_destroy.push(fn);
+}
 function createEventDispatcher() {
   const component = get_current_component();
   return (type, detail) => {
@@ -22541,9 +22938,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-127b3fa5.js",
+      file: assets + "/_app/start-5ed0711c.js",
       css: [assets + "/_app/assets/start-0dba5459.css"],
-      js: [assets + "/_app/start-127b3fa5.js", assets + "/_app/chunks/vendor-e6cd113e.js"]
+      js: [assets + "/_app/start-5ed0711c.js", assets + "/_app/chunks/vendor-6ba3f2bd.js"]
     },
     fetched: void 0,
     floc: false,
@@ -22581,14 +22978,14 @@ async function load_component(file) {
   };
 }
 function render(request, {
-  prerender: prerender4
+  prerender: prerender3
 } = {}) {
   const host = request.headers["host"];
-  return respond({ ...request, host }, options, { prerender: prerender4 });
+  return respond({ ...request, host }, options, { prerender: prerender3 });
 }
-var import_cookie10, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css10, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_d5644d2d = __esm({
-  ".svelte-kit/output/server/chunks/app-d5644d2d.js"() {
+var import_cookie10, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css12, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
+var init_app_fe36154b = __esm({
+  ".svelte-kit/output/server/chunks/app-fe36154b.js"() {
     init_shims();
     import_cookie10 = __toModule(require_cookie());
     init_dist();
@@ -22712,7 +23109,7 @@ var init_app_d5644d2d = __esm({
     missing_component = {
       $$render: () => ""
     };
-    css10 = {
+    css12 = {
       code: "#svelte-announcer.svelte-b8s5el{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
       map: null
     };
@@ -22737,7 +23134,7 @@ var init_app_d5644d2d = __esm({
         $$bindings.props_1(props_1);
       if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
         $$bindings.props_2(props_2);
-      $$result.css.add(css10);
+      $$result.css.add(css12);
       {
         stores.page.set(page2);
       }
@@ -22779,7 +23176,7 @@ ${``}`;
     default_settings = { paths: { "base": "", "assets": "" } };
     empty = () => ({});
     manifest = {
-      assets: [{ "file": ".DS_Store", "size": 6148, "type": null }, { "file": "favicon.png", "size": 5717, "type": "image/png" }, { "file": "fonts/ff-mark-medium.woff2", "size": 42076, "type": "font/woff2" }, { "file": "fonts/ff-mark-regular.woff2", "size": 43796, "type": "font/woff2" }, { "file": "fonts/iskry-bold.woff2", "size": 47796, "type": "font/woff2" }, { "file": "images/.DS_Store", "size": 6148, "type": null }, { "file": "images/mst-muhr/.DS_Store", "size": 6148, "type": null }, { "file": "images/mst-muhr/mst-muhr-lg.jpg", "size": 137924, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr.jpg", "size": 34723, "type": "image/jpeg" }, { "file": "images/solmates/.DS_Store", "size": 6148, "type": null }, { "file": "images/solmates/solmates-lg.jpg", "size": 464356, "type": "image/jpeg" }, { "file": "images/solmates/solmates.jpg", "size": 106493, "type": "image/jpeg" }, { "file": "images/wohnformat/.DS_Store", "size": 6148, "type": null }, { "file": "images/wohnformat/wohnformat-lg.jpg", "size": 142604, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat.jpg", "size": 43204, "type": "image/jpeg" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }],
+      assets: [{ "file": ".DS_Store", "size": 6148, "type": null }, { "file": "favicon.png", "size": 5717, "type": "image/png" }, { "file": "fonts/ff-mark-medium.woff2", "size": 42076, "type": "font/woff2" }, { "file": "fonts/ff-mark-regular.woff2", "size": 43796, "type": "font/woff2" }, { "file": "fonts/iskry-bold.woff2", "size": 47796, "type": "font/woff2" }, { "file": "images/.DS_Store", "size": 8196, "type": null }, { "file": "images/armin-panama-city.jpeg", "size": 149758, "type": "image/jpeg" }, { "file": "images/mst-muhr/.DS_Store", "size": 6148, "type": null }, { "file": "images/mst-muhr/mst-hero-lg.jpg", "size": 82996, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-hero-sm.jpg", "size": 42139, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-01-dark.jpg", "size": 89405, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-01.jpg", "size": 93478, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-02-dark.jpg", "size": 103324, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-02.jpg", "size": 112619, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-lg.jpg", "size": 137924, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr.jpg", "size": 34723, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-schweizergarten.jpg", "size": 229134, "type": "image/jpeg" }, { "file": "images/solmates/.DS_Store", "size": 6148, "type": null }, { "file": "images/solmates/solmates-boquete.jpg", "size": 209770, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch-02.jpg", "size": 192280, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch.jpg", "size": 277868, "type": "image/jpeg" }, { "file": "images/solmates/solmates-cartagena.jpg", "size": 295383, "type": "image/jpeg" }, { "file": "images/solmates/solmates-costa-rica.jpg", "size": 314053, "type": "image/jpeg" }, { "file": "images/solmates/solmates-hero-lg.jpg", "size": 369052, "type": "image/jpeg" }, { "file": "images/solmates/solmates-hero-sm.jpg", "size": 162565, "type": "image/jpeg" }, { "file": "images/solmates/solmates-home.jpg", "size": 371539, "type": "image/jpeg" }, { "file": "images/solmates/solmates-lg.jpg", "size": 464356, "type": "image/jpeg" }, { "file": "images/solmates/solmates-panama-city.jpg", "size": 408266, "type": "image/jpeg" }, { "file": "images/solmates/solmates-peru.jpg", "size": 492739, "type": "image/jpeg" }, { "file": "images/solmates/solmates-san-blas-02.jpg", "size": 294816, "type": "image/jpeg" }, { "file": "images/solmates/solmates-san-blas.jpg", "size": 519302, "type": "image/jpeg" }, { "file": "images/solmates/solmates.jpg", "size": 106493, "type": "image/jpeg" }, { "file": "images/solmates/solmates.mp4", "size": 6718092, "type": "video/mp4" }, { "file": "images/solmates/solmates.webm", "size": 4565940, "type": "video/webm" }, { "file": "images/solmates/solmates01.jpg", "size": 243436, "type": "image/jpeg" }, { "file": "images/solmates/solmates02.jpg", "size": 288001, "type": "image/jpeg" }, { "file": "images/solmates/solmates03.jpg", "size": 220855, "type": "image/jpeg" }, { "file": "images/solmates/solmates04.jpg", "size": 127719, "type": "image/jpeg" }, { "file": "images/solmates/solmates05.jpg", "size": 214718, "type": "image/jpeg" }, { "file": "images/wohnformat/.DS_Store", "size": 6148, "type": null }, { "file": "images/wohnformat/wohnformat-hero-lg.jpg", "size": 81564, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat-hero-sm.jpg", "size": 43244, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat-lg.jpg", "size": 142604, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat.jpg", "size": 43204, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat1.jpg", "size": 57217, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat2.jpg", "size": 36220, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat3.jpg", "size": 40437, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat4.jpg", "size": 75241, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat5.jpg", "size": 61749, "type": "image/jpeg" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }],
       layout: "src/routes/__layout.svelte",
       error: "src/routes/__error.svelte",
       routes: [
@@ -22841,17 +23238,17 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_f76f3f93(), layout_f76f3f93_exports)),
-      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_60ebf934(), error_60ebf934_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_cbc6a0e6(), index_cbc6a0e6_exports)),
-      "src/routes/ueber-mich.svelte": () => Promise.resolve().then(() => (init_ueber_mich_00c3dfc9(), ueber_mich_00c3dfc9_exports)),
-      "src/routes/projekte/index.svelte": () => Promise.resolve().then(() => (init_index_b8351b59(), index_b8351b59_exports)),
-      "src/routes/projekte/wohnformat.svelte": () => Promise.resolve().then(() => (init_wohnformat_7dbaa68d(), wohnformat_7dbaa68d_exports)),
-      "src/routes/projekte/mst-muhr.svelte": () => Promise.resolve().then(() => (init_mst_muhr_10cd5872(), mst_muhr_10cd5872_exports)),
-      "src/routes/projekte/solmates.svelte": () => Promise.resolve().then(() => (init_solmates_85886daf(), solmates_85886daf_exports)),
-      "src/routes/kontakt.svelte": () => Promise.resolve().then(() => (init_kontakt_1b5ef48b(), kontakt_1b5ef48b_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_d3aa8f0b(), layout_d3aa8f0b_exports)),
+      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_fe1f43f5(), error_fe1f43f5_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_7631d372(), index_7631d372_exports)),
+      "src/routes/ueber-mich.svelte": () => Promise.resolve().then(() => (init_ueber_mich_b8165c61(), ueber_mich_b8165c61_exports)),
+      "src/routes/projekte/index.svelte": () => Promise.resolve().then(() => (init_index_fbd311c9(), index_fbd311c9_exports)),
+      "src/routes/projekte/wohnformat.svelte": () => Promise.resolve().then(() => (init_wohnformat_8d8f44ca(), wohnformat_8d8f44ca_exports)),
+      "src/routes/projekte/mst-muhr.svelte": () => Promise.resolve().then(() => (init_mst_muhr_26090cb1(), mst_muhr_26090cb1_exports)),
+      "src/routes/projekte/solmates.svelte": () => Promise.resolve().then(() => (init_solmates_239a4bf6(), solmates_239a4bf6_exports)),
+      "src/routes/kontakt.svelte": () => Promise.resolve().then(() => (init_kontakt_e58ec39a(), kontakt_e58ec39a_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-f4983ab2.js", "css": ["assets/pages/__layout.svelte-03f54347.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-f4983ab2.js", "chunks/vendor-e6cd113e.js", "chunks/DeathStar-bf60a933.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-a888b744.js", "css": ["assets/pages/__error.svelte-5a8fc307.css"], "js": ["pages/__error.svelte-a888b744.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-fee80b08.js", "css": ["assets/pages/index.svelte-a269e5ea.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-fee80b08.js", "chunks/vendor-e6cd113e.js", "chunks/DeathStar-bf60a933.js"], "styles": [] }, "src/routes/ueber-mich.svelte": { "entry": "pages/ueber-mich.svelte-63bcc2ec.js", "css": ["assets/pages/ueber-mich.svelte-7f4b56a9.css"], "js": ["pages/ueber-mich.svelte-63bcc2ec.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/index.svelte": { "entry": "pages/projekte/index.svelte-082b6e29.js", "css": ["assets/pages/projekte/index.svelte-8e77d00b.css"], "js": ["pages/projekte/index.svelte-082b6e29.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/wohnformat.svelte": { "entry": "pages/projekte/wohnformat.svelte-bbdf1ab3.js", "css": ["assets/pages/projekte/solmates.svelte-b0694436.css"], "js": ["pages/projekte/wohnformat.svelte-bbdf1ab3.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/mst-muhr.svelte": { "entry": "pages/projekte/mst-muhr.svelte-4bd24791.js", "css": ["assets/pages/projekte/solmates.svelte-b0694436.css"], "js": ["pages/projekte/mst-muhr.svelte-4bd24791.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/projekte/solmates.svelte": { "entry": "pages/projekte/solmates.svelte-ed938f4b.js", "css": ["assets/pages/projekte/solmates.svelte-b0694436.css"], "js": ["pages/projekte/solmates.svelte-ed938f4b.js", "chunks/vendor-e6cd113e.js"], "styles": [] }, "src/routes/kontakt.svelte": { "entry": "pages/kontakt.svelte-04bfa5fc.js", "css": ["assets/pages/projekte/index.svelte-8e77d00b.css"], "js": ["pages/kontakt.svelte-04bfa5fc.js", "chunks/vendor-e6cd113e.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-7cd66bea.js", "css": ["assets/pages/__layout.svelte-3c058805.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-7cd66bea.js", "chunks/vendor-6ba3f2bd.js", "chunks/DeathStar-414951eb.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-8db00182.js", "css": ["assets/pages/__error.svelte-5a8fc307.css"], "js": ["pages/__error.svelte-8db00182.js", "chunks/vendor-6ba3f2bd.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-28d1d2b5.js", "css": ["assets/pages/index.svelte-bc999b12.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-28d1d2b5.js", "chunks/vendor-6ba3f2bd.js", "chunks/DeathStar-414951eb.js", "chunks/arrow-c94cf332.js"], "styles": [] }, "src/routes/ueber-mich.svelte": { "entry": "pages/ueber-mich.svelte-d1e56af8.js", "css": ["assets/pages/ueber-mich.svelte-81172310.css"], "js": ["pages/ueber-mich.svelte-d1e56af8.js", "chunks/vendor-6ba3f2bd.js"], "styles": [] }, "src/routes/projekte/index.svelte": { "entry": "pages/projekte/index.svelte-6cfddef0.js", "css": ["assets/pages/projekte/index.svelte-dbc05f05.css"], "js": ["pages/projekte/index.svelte-6cfddef0.js", "chunks/vendor-6ba3f2bd.js"], "styles": [] }, "src/routes/projekte/wohnformat.svelte": { "entry": "pages/projekte/wohnformat.svelte-bcf0c81d.js", "css": ["assets/pages/projekte/wohnformat.svelte-f639fc71.css", "assets/Switch.svelte_svelte_type_style_lang-ed5f0fd4.css", "assets/external-5f287233.css"], "js": ["pages/projekte/wohnformat.svelte-bcf0c81d.js", "chunks/vendor-6ba3f2bd.js", "chunks/external-a5e4fe24.js"], "styles": [] }, "src/routes/projekte/mst-muhr.svelte": { "entry": "pages/projekte/mst-muhr.svelte-bbe22b91.js", "css": ["assets/pages/projekte/mst-muhr.svelte-43342298.css", "assets/Switch.svelte_svelte_type_style_lang-ed5f0fd4.css", "assets/external-5f287233.css"], "js": ["pages/projekte/mst-muhr.svelte-bbe22b91.js", "chunks/vendor-6ba3f2bd.js", "chunks/external-a5e4fe24.js", "chunks/Parallax-e61c51bc.js"], "styles": [] }, "src/routes/projekte/solmates.svelte": { "entry": "pages/projekte/solmates.svelte-a6491653.js", "css": ["assets/pages/projekte/solmates.svelte-84a8d690.css", "assets/external-5f287233.css"], "js": ["pages/projekte/solmates.svelte-a6491653.js", "chunks/vendor-6ba3f2bd.js", "chunks/external-a5e4fe24.js", "chunks/Parallax-e61c51bc.js"], "styles": [] }, "src/routes/kontakt.svelte": { "entry": "pages/kontakt.svelte-e8419499.js", "css": ["assets/pages/kontakt.svelte-d19f00a1.css"], "js": ["pages/kontakt.svelte-e8419499.js", "chunks/vendor-6ba3f2bd.js", "chunks/arrow-c94cf332.js"], "styles": [] } };
   }
 });
 
@@ -22863,7 +23260,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_d5644d2d();
+init_app_fe36154b();
 var import_cookie11 = __toModule(require_cookie());
 init_dist();
 
