@@ -79,7 +79,7 @@
     </div>
 </section>
 
-<section>
+<section class="last">
     <div>
         <a class="link" href="https://www.wohnformat.at/" target="_blank">
             <span>Website ansehen</span>

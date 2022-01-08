@@ -37,6 +37,10 @@ section {
             align-items: flex-end;
         }
     }
+
+    &.last {
+        padding-bottom: calc(var(--core-padding) * 2);
+    }
 }
 
 h1 {

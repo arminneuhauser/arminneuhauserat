@@ -95,7 +95,23 @@
     </div>
 </section>
 
-<section>
+<section class="full">
+    <div>
+        {#if dark}
+            <video width="1152" height="720" muted playsinline loop autoplay poster="/images/mst-muhr/mst-muhr-01-dark.jpg">
+                <source src="/images/mst-muhr/mst-muhr-dark.webm" type="video/webm">
+                <source src="/images/mst-muhr/mst-muhr-dark.mp4" type="video/mp4">
+            </video>
+        {:else}
+            <video width="1152" height="720" muted playsinline loop autoplay poster="/images/mst-muhr/mst-muhr-01.jpg">
+                <source src="/images/mst-muhr/mst-muhr.webm" type="video/webm">
+                <source src="/images/mst-muhr/mst-muhr.mp4" type="video/mp4">
+            </video>
+        {/if}
+    </div>
+</section>
+
+<section class="last">
     <div>
         <a class="link" href="https://www.mst-muhr.at/" target="_blank">
             <span>Website ansehen</span>
