@@ -48,7 +48,7 @@
 </section>
 
 <Parallax
-    image="/images/mst-muhr/mst-schweizergarten.jpg"
+    image="/images/mst-muhr/mst-muhr-schweizergarten.jpg"
     width="1920"
     height="1280"
     alt="MST Muhr Schweizergarten"
@@ -108,6 +108,39 @@
                 <source src="/images/mst-muhr/mst-muhr.mp4" type="video/mp4">
             </video>
         {/if}
+    </div>
+</section>
+
+<section>
+    <div>
+        {#if dark}
+            <img src="/images/mst-muhr/mst-muhr-mobile-dark.jpg" alt="MST Muhr Mobile" width="1920" height="1248">
+        {:else}
+            <img src="/images/mst-muhr/mst-muhr-mobile.jpg" alt="MST Muhr Mobile" width="1920" height="1248">
+        {/if}
+    </div>
+</section>
+
+<section class="narrow">
+    <div>
+        <div>
+            <hr>
+            <h1>
+                Fotografie
+            </h1>
+            <p>
+                Zusätzlich zur Website durfte ich für die MST einige fertige Sanierungsprojekte, z.B. Garagen im Schweizergarten und in der Winmühlgasse, fotografieren. Diese Fotos kommen nicht nur auf der Website von der MST zum Einsatz, sondern auch bei Projektpartnern und Auftraggebern.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="col2">
+    <div>
+        <img src="/images/mst-muhr/mst-muhr-schweizergarten-02.jpg" alt="MST Muhr Schweizergarten Arsenalstraße" width="1920" height="1280">
+        <img src="/images/mst-muhr/mst-muhr-schweizergarten-03.jpg" alt="MST Muhr Schweizergarten" width="1920" height="1280">
+        <img src="/images/mst-muhr/mst-muhr-gugitzgasse.jpg" alt="MST Muhr Gugitzgasse" width="1920" height="1280">
+        <img src="/images/mst-muhr/mst-muhr-windmuehlgasse.jpg" alt="MST Muhr Windmühlgasse" width="1920" height="1280">
     </div>
 </section>
 
