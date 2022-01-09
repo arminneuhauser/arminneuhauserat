@@ -11,10 +11,15 @@ const config = {
             prependData: '@use "src/scss/variables.scss" as var; @use "src/scss/functions.scss" as fn;',
         },
     }),
-
     kit: {
         adapter: adapter(),
         target: '#svelte',
+    },
+    prerender: {
+        crawl: true,
+        enabled: true,
+        force: true,
+        pages: ['*'],
     },
 };
 
