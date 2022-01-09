@@ -49,15 +49,15 @@
         </p>
     </header>
     <div>
-        <form name="contact" method="post" netlify>
+        <form name="contact" method="post" action="/kontakt/erfolg" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <div>
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Dein Name">
+                <input id="name" name="name" type="text" placeholder="Dein Name" required>
             </div>
             <div>
                 <label for="email">E-Mail-Adresse</label>
-                <input id="email" name="email" type="email" placeholder="Deine E-Mail-Adresse">
+                <input id="email" name="email" type="email" placeholder="Deine E-Mail-Adresse" required>
             </div>
             <div>
                 <label for="message">Nachricht</label>
