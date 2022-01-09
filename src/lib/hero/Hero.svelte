@@ -71,7 +71,7 @@
     h1 {
         font-family: var(--serif);
         font-weight: 700;
-        font-size: fn.rfs(46, 120, 360, 2560);
+        font-size: fn.rfs(46, 120, 500, 2560);
         line-height: 0.85;
         text-align: center;
         margin: 0;

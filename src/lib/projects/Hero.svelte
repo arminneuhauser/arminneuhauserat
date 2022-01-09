@@ -118,13 +118,13 @@
         align-items: center;
         z-index: 2;
         text-align: center;
-        padding: 12%;
+        padding: #{fn.rem(15)};
         color: #fff;
 
         h1 {
             font-family: var(--serif);
             font-weight: 700;
-            font-size: fn.rfs(46, 120, 360, 2560);
+            font-size: fn.rfs(42, 120, 500, 2560);
             line-height: 1;
             margin: 0;
 
@@ -143,7 +143,7 @@
         }
 
         p {
-            font-size: #{fn.rfs(15, 20, $minWidth: 1280, $maxWidth: 2560)};
+            font-size: #{fn.rfs(14, 20, 500, 2560)};
             margin: 0;
 
             span {

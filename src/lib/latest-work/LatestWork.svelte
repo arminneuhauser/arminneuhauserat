@@ -66,7 +66,7 @@
 
             <Teaser 
                 slug="wohnformat"
-                title="[wohnformat]"
+                title="Wohnformat"
                 year="2016"
                 imageSm="/images/wohnformat/wohnformat.jpg"
                 imageLg="/images/wohnformat/wohnformat-lg.jpg"

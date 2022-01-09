@@ -43,7 +43,7 @@
 
             <Teaser 
                 slug="wohnformat"
-                title="[wohnformat]"
+                title="Wohnformat"
                 year="2016"
                 desc="CI, Webdesign, Development, CMS"
                 image="/images/wohnformat/wohnformat.jpg"

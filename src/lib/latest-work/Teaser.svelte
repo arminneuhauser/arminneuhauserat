@@ -160,7 +160,8 @@
             width: auto;
             justify-self: start;
 
-            :global([color-scheme="light"]) & {
+            :global([color-scheme="light"]) &,
+            :global([color-scheme="highcontrast"]) & {
                 background-color: var(--base);
                 padding-right: 1em;
             }
@@ -237,11 +238,12 @@
             grid-column: 1 / span 2;
             grid-row: 3;
             align-self: flex-start;
-            margin: 0 0 0 0.3em;
+            padding: 0 0 0 0.3em;
             width: auto;
             justify-self: start;
 
-            :global([color-scheme="light"]) & {
+            :global([color-scheme="light"]) &,
+            :global([color-scheme="highcontrast"]) & {
                 background-color: var(--base);
                 padding-right: 1em;
             }

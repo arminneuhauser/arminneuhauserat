@@ -45,7 +45,7 @@
     <header>
         <h3>Lass uns dein Projekt verwirklichen</h3>
         <p>
-            Ich bin immer auf der Suche nach neuen Ideen und spannenden Projekten. Fülle das Kontaktformular aus, wenn du mit mir zusammenarbeiten möchtest.
+            Ob zu einem konkreten Projekt oder nur zum Kennenlernen – Fülle das Kontaktformular aus, wenn du mit mir zusammenarbeiten möchtest.
         </p>
     </header>
     <div>
@@ -84,14 +84,16 @@
         }
 
         > header {
-            margin: 0 auto #{fn.rem(60)};
+            margin: 0 auto #{fn.rem(40)};
             max-width: var(--content-max-width);
-            border-left: 1px solid var(--on-base);
-            padding-left: #{fn.rem(15)};
         }
 
         &:last-child {
             padding-bottom: calc(var(--core-padding) * 3);
+        }
+
+        + section {
+            padding-top: calc(var(--core-padding) * 3);
         }
     }
 
@@ -128,11 +130,14 @@
 
     h3 {
         font-size: #{fn.rfs(24, 34)};
+        line-height: 1.1;
+        margin: 0.75em 0;
     }
 
     p {
         font-size: #{fn.rfs(16, 18)};
         max-width: #{fn.rem(600)};
+        margin: 0.75em 0;
     }
 
     form {
@@ -169,6 +174,8 @@
 
                 .flickr {
                     animation: flickr 3s linear infinite alternate forwards;
+                    position: relative;
+                    z-index: 1;
                 }
             }
 
