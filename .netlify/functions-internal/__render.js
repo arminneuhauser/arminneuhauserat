@@ -4845,7 +4845,40 @@ var init_dist = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-9d4f51e9.js
+// .svelte-kit/output/server/chunks/Scene.svelte_svelte_type_style_lang-2822b95d.js
+var getStores, page;
+var init_Scene_svelte_svelte_type_style_lang_2822b95d = __esm({
+  ".svelte-kit/output/server/chunks/Scene.svelte_svelte_type_style_lang-2822b95d.js"() {
+    init_shims();
+    init_app_03b8560f();
+    getStores = () => {
+      const stores = getContext("__svelte__");
+      return {
+        page: {
+          subscribe: stores.page.subscribe
+        },
+        navigating: {
+          subscribe: stores.navigating.subscribe
+        },
+        get preloading() {
+          console.error("stores.preloading is deprecated; use stores.navigating instead");
+          return {
+            subscribe: stores.navigating.subscribe
+          };
+        },
+        session: stores.session
+      };
+    };
+    page = {
+      subscribe(fn) {
+        const store = getStores().page;
+        return store.subscribe(fn);
+      }
+    };
+  }
+});
+
+// .svelte-kit/output/server/chunks/index-fa8f98f1.js
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -5078,47 +5111,14 @@ function tweened(value, defaults = {}) {
   };
 }
 var subscriber_queue, scheme;
-var init_index_9d4f51e9 = __esm({
-  ".svelte-kit/output/server/chunks/index-9d4f51e9.js"() {
+var init_index_fa8f98f1 = __esm({
+  ".svelte-kit/output/server/chunks/index-fa8f98f1.js"() {
     init_shims();
-    init_app_bdecca85();
+    init_app_03b8560f();
     subscriber_queue = [];
     scheme = writable("dark");
     scheme.subscribe((val) => {
     });
-  }
-});
-
-// .svelte-kit/output/server/chunks/app-638cfd57.js
-var getStores, page;
-var init_app_638cfd57 = __esm({
-  ".svelte-kit/output/server/chunks/app-638cfd57.js"() {
-    init_shims();
-    init_app_bdecca85();
-    getStores = () => {
-      const stores = getContext("__svelte__");
-      return {
-        page: {
-          subscribe: stores.page.subscribe
-        },
-        navigating: {
-          subscribe: stores.navigating.subscribe
-        },
-        get preloading() {
-          console.error("stores.preloading is deprecated; use stores.navigating instead");
-          return {
-            subscribe: stores.navigating.subscribe
-          };
-        },
-        session: stores.session
-      };
-    };
-    page = {
-      subscribe(fn) {
-        const store = getStores().page;
-        return store.subscribe(fn);
-      }
-    };
   }
 });
 
@@ -20635,19 +20635,19 @@ var require_debounce = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-5cfcfb1b.js
-var layout_5cfcfb1b_exports = {};
-__export(layout_5cfcfb1b_exports, {
+// .svelte-kit/output/server/chunks/__layout-0ea74923.js
+var layout_0ea74923_exports = {};
+__export(layout_0ea74923_exports, {
   default: () => _layout,
   load: () => load
 });
 var import_app, import_graphics, import_display, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_utils, import_cookie, css, Progress, load, _layout;
-var init_layout_5cfcfb1b = __esm({
-  ".svelte-kit/output/server/chunks/__layout-5cfcfb1b.js"() {
+var init_layout_0ea74923 = __esm({
+  ".svelte-kit/output/server/chunks/__layout-0ea74923.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_index_9d4f51e9();
-    init_app_638cfd57();
+    init_app_03b8560f();
+    init_Scene_svelte_svelte_type_style_lang_2822b95d();
+    init_index_fa8f98f1();
     init_dist2();
     import_app = __toModule(require_app());
     import_graphics = __toModule(require_graphics());
@@ -20715,9 +20715,9 @@ ${`<div>${validate_component(Progress, "Progress").$$render($$result, {}, {}, {}
   }
 });
 
-// .svelte-kit/output/server/chunks/__error-0b26b517.js
-var error_0b26b517_exports = {};
-__export(error_0b26b517_exports, {
+// .svelte-kit/output/server/chunks/__error-bfa49163.js
+var error_bfa49163_exports = {};
+__export(error_bfa49163_exports, {
   default: () => _error,
   load: () => load2
 });
@@ -20731,10 +20731,10 @@ function load2({ error: error2, status }) {
   };
 }
 var import_cookie2, css2, _error;
-var init_error_0b26b517 = __esm({
-  ".svelte-kit/output/server/chunks/__error-0b26b517.js"() {
+var init_error_bfa49163 = __esm({
+  ".svelte-kit/output/server/chunks/__error-bfa49163.js"() {
     init_shims();
-    init_app_bdecca85();
+    init_app_03b8560f();
     import_cookie2 = __toModule(require_cookie());
     init_dist();
     css2 = {
@@ -20759,13 +20759,13 @@ var init_error_0b26b517 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/DeathStar-dc3eb115.js
+// .svelte-kit/output/server/chunks/DeathStar-d5b8ee16.js
 var deathStarIcon, css3, DeathStar;
-var init_DeathStar_dc3eb115 = __esm({
-  ".svelte-kit/output/server/chunks/DeathStar-dc3eb115.js"() {
+var init_DeathStar_d5b8ee16 = __esm({
+  ".svelte-kit/output/server/chunks/DeathStar-d5b8ee16.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_index_9d4f51e9();
+    init_app_03b8560f();
+    init_index_fa8f98f1();
     deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>';
     css3 = {
       code: "button.svelte-iyvpaf{display:flex}",
@@ -20779,12 +20779,12 @@ var init_DeathStar_dc3eb115 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/IntersectionObserver-1fdbc047.js
+// .svelte-kit/output/server/chunks/IntersectionObserver-c7b56316.js
 var IntersectionObserver_1;
-var init_IntersectionObserver_1fdbc047 = __esm({
-  ".svelte-kit/output/server/chunks/IntersectionObserver-1fdbc047.js"() {
+var init_IntersectionObserver_c7b56316 = __esm({
+  ".svelte-kit/output/server/chunks/IntersectionObserver-c7b56316.js"() {
     init_shims();
-    init_app_bdecca85();
+    init_app_03b8560f();
     IntersectionObserver_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { element = null } = $$props;
       let { once = false } = $$props;
@@ -20825,20 +20825,20 @@ var init_arrow_c94cf332 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-50991b5c.js
-var index_50991b5c_exports = {};
-__export(index_50991b5c_exports, {
+// .svelte-kit/output/server/chunks/index-8451d8a1.js
+var index_8451d8a1_exports = {};
+__export(index_8451d8a1_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
 var import_cookie3, css$3, Hero, css$2, Teaser, wheel, css$1, LatestWork, css4, Wisdom, prerender, Routes;
-var init_index_50991b5c = __esm({
-  ".svelte-kit/output/server/chunks/index-50991b5c.js"() {
+var init_index_8451d8a1 = __esm({
+  ".svelte-kit/output/server/chunks/index-8451d8a1.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_DeathStar_dc3eb115();
-    init_IntersectionObserver_1fdbc047();
-    init_index_9d4f51e9();
+    init_app_03b8560f();
+    init_DeathStar_d5b8ee16();
+    init_IntersectionObserver_c7b56316();
+    init_index_fa8f98f1();
     init_arrow_c94cf332();
     import_cookie3 = __toModule(require_cookie());
     init_dist();
@@ -21038,17 +21038,17 @@ ${validate_component(Wisdom, "Wisdom").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/ueber-mich-3b9f00d7.js
-var ueber_mich_3b9f00d7_exports = {};
-__export(ueber_mich_3b9f00d7_exports, {
+// .svelte-kit/output/server/chunks/ueber-mich-586498a5.js
+var ueber_mich_586498a5_exports = {};
+__export(ueber_mich_586498a5_exports, {
   default: () => Ueber_mich,
   prerender: () => prerender2
 });
 var import_cookie4, css5, prerender2, Ueber_mich;
-var init_ueber_mich_3b9f00d7 = __esm({
-  ".svelte-kit/output/server/chunks/ueber-mich-3b9f00d7.js"() {
+var init_ueber_mich_586498a5 = __esm({
+  ".svelte-kit/output/server/chunks/ueber-mich-586498a5.js"() {
     init_shims();
-    init_app_bdecca85();
+    init_app_03b8560f();
     import_cookie4 = __toModule(require_cookie());
     init_dist();
     css5 = {
@@ -21072,17 +21072,17 @@ var init_ueber_mich_3b9f00d7 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-d480bbe5.js
-var index_d480bbe5_exports = {};
-__export(index_d480bbe5_exports, {
+// .svelte-kit/output/server/chunks/index-0a3f2f66.js
+var index_0a3f2f66_exports = {};
+__export(index_0a3f2f66_exports, {
   default: () => Projekte
 });
 var import_cookie5, css$12, Teaser2, css6, Projekte;
-var init_index_d480bbe5 = __esm({
-  ".svelte-kit/output/server/chunks/index-d480bbe5.js"() {
+var init_index_0a3f2f66 = __esm({
+  ".svelte-kit/output/server/chunks/index-0a3f2f66.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_IntersectionObserver_1fdbc047();
+    init_app_03b8560f();
+    init_IntersectionObserver_c7b56316();
     import_cookie5 = __toModule(require_cookie());
     init_dist();
     css$12 = {
@@ -21197,12 +21197,12 @@ var init_index_d480bbe5 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/external-54f71604.js
+// .svelte-kit/output/server/chunks/external-2843e32b.js
 var css$13, Hero2, css7, Next, external;
-var init_external_54f71604 = __esm({
-  ".svelte-kit/output/server/chunks/external-54f71604.js"() {
+var init_external_2843e32b = __esm({
+  ".svelte-kit/output/server/chunks/external-2843e32b.js"() {
     init_shims();
-    init_app_bdecca85();
+    init_app_03b8560f();
     css$13 = {
       code: '@keyframes svelte-1gkm352-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1gkm352-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1gkm352-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1gkm352-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1gkm352-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1gkm352-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1gkm352-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1gkm352-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1gkm352-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1gkm352-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1gkm352-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.hero.svelte-1gkm352.svelte-1gkm352{align-items:center;background-position:center center;background-size:cover;box-sizing:border-box;display:grid;grid-gap:0.3125rem;grid-template-columns:auto clamp(19.375rem, 11rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;justify-content:center;left:0;min-height:100vh;padding:var(--core-padding) 0;position:fixed;top:0;width:100%}.hero.svelte-1gkm352.svelte-1gkm352::before{content:"";position:absolute;top:0;right:0;left:0;bottom:0;background-color:#000;opacity:0.3}.hero.svelte-1gkm352 + section{margin-top:100vh}.headline.svelte-1gkm352.svelte-1gkm352{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.text.svelte-1gkm352.svelte-1gkm352{animation:svelte-1gkm352-fadein 1s var(--easing) forwards;opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:2;text-align:center;padding:0.9375rem;color:#fff}.text.svelte-1gkm352 h1.svelte-1gkm352{font-family:var(--serif);font-weight:700;font-size:clamp(2.625rem, 1.4417475728rem + 3.786407767vw, 7.5rem);line-height:1;margin:0}.text.svelte-1gkm352 h1 span.svelte-1gkm352{animation:svelte-1gkm352-to-top 1s var(--easing) forwards}.text.svelte-1gkm352 hr.svelte-1gkm352{animation:svelte-1gkm352-scale 0.8s 0.3s var(--easing) forwards;width:33%;transform:scaleX(0);transform-origin:top left;margin:1.25rem 0;border-color:#fff}.text.svelte-1gkm352 p.svelte-1gkm352{font-size:clamp(0.875rem, 0.7839805825rem + 0.2912621359vw, 1.25rem);margin:0}.text.svelte-1gkm352 p span.svelte-1gkm352{animation:svelte-1gkm352-to-top 1s 0.8s var(--easing) forwards}.sphere.svelte-1gkm352.svelte-1gkm352{animation:svelte-1gkm352-fadein 1s var(--easing) forwards;opacity:0;display:block;background-size:cover;background-position:center center;padding-bottom:100%;border-radius:50%;will-change:opacity;opacity:0;position:relative;z-index:1;margin:0;overflow:hidden}.sphere.svelte-1gkm352 img.svelte-1gkm352{height:100%;left:0;object-fit:cover;position:absolute;top:0;width:100%}.background-image.svelte-1gkm352.svelte-1gkm352{animation:svelte-1gkm352-fadein 3s var(--easing) forwards;opacity:0;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;z-index:0}.background-image.svelte-1gkm352 img.svelte-1gkm352{height:100%;left:0;object-fit:cover;position:absolute;top:0;width:100%}',
       map: null
@@ -21266,17 +21266,17 @@ var init_external_54f71604 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/wohnformat-27613ba1.js
-var wohnformat_27613ba1_exports = {};
-__export(wohnformat_27613ba1_exports, {
+// .svelte-kit/output/server/chunks/wohnformat-7471a4d0.js
+var wohnformat_7471a4d0_exports = {};
+__export(wohnformat_7471a4d0_exports, {
   default: () => Wohnformat
 });
 var import_cookie6, css8, Wohnformat;
-var init_wohnformat_27613ba1 = __esm({
-  ".svelte-kit/output/server/chunks/wohnformat-27613ba1.js"() {
+var init_wohnformat_7471a4d0 = __esm({
+  ".svelte-kit/output/server/chunks/wohnformat-7471a4d0.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_external_54f71604();
+    init_app_03b8560f();
+    init_external_2843e32b();
     import_cookie6 = __toModule(require_cookie());
     init_dist();
     css8 = {
@@ -21331,13 +21331,13 @@ ${validate_component(Next, "Next").$$render($$result, {
   }
 });
 
-// .svelte-kit/output/server/chunks/Parallax-d0c96ad8.js
+// .svelte-kit/output/server/chunks/Parallax-b30b0ed9.js
 var css9, Parallax;
-var init_Parallax_d0c96ad8 = __esm({
-  ".svelte-kit/output/server/chunks/Parallax-d0c96ad8.js"() {
+var init_Parallax_b30b0ed9 = __esm({
+  ".svelte-kit/output/server/chunks/Parallax-b30b0ed9.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_external_54f71604();
+    init_app_03b8560f();
+    init_external_2843e32b();
     css9 = {
       code: "section.svelte-1nzr0eg{background-color:var(--base)}figure.svelte-1nzr0eg{aspect-ratio:16/9;margin:0;overflow:hidden;display:flex}picture.svelte-1nzr0eg{flex-grow:1;display:flex}img.svelte-1nzr0eg{flex-grow:1;object-fit:cover}",
       map: null
@@ -21366,18 +21366,18 @@ var init_Parallax_d0c96ad8 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/mst-muhr-9498bb7c.js
-var mst_muhr_9498bb7c_exports = {};
-__export(mst_muhr_9498bb7c_exports, {
+// .svelte-kit/output/server/chunks/mst-muhr-de98b9f5.js
+var mst_muhr_de98b9f5_exports = {};
+__export(mst_muhr_de98b9f5_exports, {
   default: () => Mst_muhr
 });
 var import_cookie7, css$14, Switch, css10, Mst_muhr;
-var init_mst_muhr_9498bb7c = __esm({
-  ".svelte-kit/output/server/chunks/mst-muhr-9498bb7c.js"() {
+var init_mst_muhr_de98b9f5 = __esm({
+  ".svelte-kit/output/server/chunks/mst-muhr-de98b9f5.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_external_54f71604();
-    init_Parallax_d0c96ad8();
+    init_app_03b8560f();
+    init_external_2843e32b();
+    init_Parallax_b30b0ed9();
     import_cookie7 = __toModule(require_cookie());
     init_dist();
     css$14 = {
@@ -21477,18 +21477,18 @@ ${validate_component(Next, "Next").$$render($$result, {
   }
 });
 
-// .svelte-kit/output/server/chunks/solmates-06aabda7.js
-var solmates_06aabda7_exports = {};
-__export(solmates_06aabda7_exports, {
+// .svelte-kit/output/server/chunks/solmates-3cbe8739.js
+var solmates_3cbe8739_exports = {};
+__export(solmates_3cbe8739_exports, {
   default: () => Solmates
 });
 var import_cookie8, css11, Solmates;
-var init_solmates_06aabda7 = __esm({
-  ".svelte-kit/output/server/chunks/solmates-06aabda7.js"() {
+var init_solmates_3cbe8739 = __esm({
+  ".svelte-kit/output/server/chunks/solmates-3cbe8739.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_external_54f71604();
-    init_Parallax_d0c96ad8();
+    init_app_03b8560f();
+    init_external_2843e32b();
+    init_Parallax_b30b0ed9();
     import_cookie8 = __toModule(require_cookie());
     init_dist();
     css11 = {
@@ -21563,20 +21563,20 @@ ${validate_component(Next, "Next").$$render($$result, {
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout.reset-06c7e987.js
-var layout_reset_06c7e987_exports = {};
-__export(layout_reset_06c7e987_exports, {
+// .svelte-kit/output/server/chunks/__layout.reset-90845c5f.js
+var layout_reset_90845c5f_exports = {};
+__export(layout_reset_90845c5f_exports, {
   default: () => _layout_reset,
   load: () => load3
 });
 var import_app2, import_graphics2, import_display2, import_constants2, import_core2, import_interaction2, import_ticker2, import_filter_kawase_blur2, import_filter_noise2, import_filter_color_matrix2, import_hsl_to_hex2, import_debounce2, import_utils2, import_cookie9, makiMix, css$32, Header, up, css$22, Footer, PageTransition, css$15, baseSize, CursorCreep, css12, Scene, load3, _layout_reset;
-var init_layout_reset_06c7e987 = __esm({
-  ".svelte-kit/output/server/chunks/__layout.reset-06c7e987.js"() {
+var init_layout_reset_90845c5f = __esm({
+  ".svelte-kit/output/server/chunks/__layout.reset-90845c5f.js"() {
     init_shims();
-    init_app_bdecca85();
-    init_index_9d4f51e9();
-    init_app_638cfd57();
-    init_DeathStar_dc3eb115();
+    init_app_03b8560f();
+    init_Scene_svelte_svelte_type_style_lang_2822b95d();
+    init_index_fa8f98f1();
+    init_DeathStar_d5b8ee16();
     init_dist2();
     import_app2 = __toModule(require_app());
     import_graphics2 = __toModule(require_graphics());
@@ -21707,17 +21707,17 @@ var init_layout_reset_06c7e987 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-a07d10ce.js
-var index_a07d10ce_exports = {};
-__export(index_a07d10ce_exports, {
+// .svelte-kit/output/server/chunks/index-a1c47813.js
+var index_a1c47813_exports = {};
+__export(index_a1c47813_exports, {
   default: () => Kontakt,
   prerender: () => prerender3
 });
 var import_cookie10, css13, prerender3, Kontakt;
-var init_index_a07d10ce = __esm({
-  ".svelte-kit/output/server/chunks/index-a07d10ce.js"() {
+var init_index_a1c47813 = __esm({
+  ".svelte-kit/output/server/chunks/index-a1c47813.js"() {
     init_shims();
-    init_app_bdecca85();
+    init_app_03b8560f();
     init_arrow_c94cf332();
     import_cookie10 = __toModule(require_cookie());
     init_dist();
@@ -21750,8 +21750,7 @@ var init_index_a07d10ce = __esm({
 <section class="${"svelte-1lbwzwq"}"><header class="${"svelte-1lbwzwq"}"><h3 class="${"svelte-1lbwzwq"}">Lass uns dein Projekt verwirklichen</h3>
         <p class="${"svelte-1lbwzwq"}">Ob zu einem konkreten Projekt oder nur zum Kennenlernen \u2013 F\xFClle das Kontaktformular aus, wenn du mit mir zusammenarbeiten m\xF6chtest.
         </p></header>
-    <div class="${"svelte-1lbwzwq"}"><form name="${"test"}" method="${"post"}" netlify netlify-honeypot="${"bot-field"}" class="${"svelte-1lbwzwq"}"><input type="${"hidden"}" name="${"form-name"}" value="${"test"}" class="${"svelte-1lbwzwq"}">
-            <input type="${"text"}" name="${"bot-field"}" class="${"svelte-1lbwzwq"}">
+    <div class="${"svelte-1lbwzwq"}"><form name="${"contact"}" method="${"post"}" netlify class="${"svelte-1lbwzwq"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}" class="${"svelte-1lbwzwq"}">
             <div class="${"svelte-1lbwzwq"}"><label for="${"name"}" class="${"svelte-1lbwzwq"}">Name</label>
                 <input id="${"name"}" name="${"name"}" type="${"text"}" placeholder="${"Dein Name"}" class="${"svelte-1lbwzwq"}"></div>
             <div class="${"svelte-1lbwzwq"}"><label for="${"email"}" class="${"svelte-1lbwzwq"}">E-Mail-Adresse</label>
@@ -21765,7 +21764,7 @@ var init_index_a07d10ce = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/app-bdecca85.js
+// .svelte-kit/output/server/chunks/app-03b8560f.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -23109,9 +23108,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-3c0e8bfb.js",
+      file: assets + "/_app/start-564224a5.js",
       css: [assets + "/_app/assets/start-0dba5459.css"],
-      js: [assets + "/_app/start-3c0e8bfb.js", assets + "/_app/chunks/vendor-01d7f779.js"]
+      js: [assets + "/_app/start-564224a5.js", assets + "/_app/chunks/vendor-01d7f779.js"]
     },
     fetched: void 0,
     floc: false,
@@ -23155,8 +23154,8 @@ function render(request, {
   return respond({ ...request, host }, options, { prerender: prerender4 });
 }
 var import_cookie11, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css14, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_bdecca85 = __esm({
-  ".svelte-kit/output/server/chunks/app-bdecca85.js"() {
+var init_app_03b8560f = __esm({
+  ".svelte-kit/output/server/chunks/app-03b8560f.js"() {
     init_shims();
     import_cookie11 = __toModule(require_cookie());
     init_dist();
@@ -23409,18 +23408,18 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_5cfcfb1b(), layout_5cfcfb1b_exports)),
-      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_0b26b517(), error_0b26b517_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_50991b5c(), index_50991b5c_exports)),
-      "src/routes/ueber-mich.svelte": () => Promise.resolve().then(() => (init_ueber_mich_3b9f00d7(), ueber_mich_3b9f00d7_exports)),
-      "src/routes/projekte/index.svelte": () => Promise.resolve().then(() => (init_index_d480bbe5(), index_d480bbe5_exports)),
-      "src/routes/projekte/wohnformat.svelte": () => Promise.resolve().then(() => (init_wohnformat_27613ba1(), wohnformat_27613ba1_exports)),
-      "src/routes/projekte/mst-muhr.svelte": () => Promise.resolve().then(() => (init_mst_muhr_9498bb7c(), mst_muhr_9498bb7c_exports)),
-      "src/routes/projekte/solmates.svelte": () => Promise.resolve().then(() => (init_solmates_06aabda7(), solmates_06aabda7_exports)),
-      "src/routes/kontakt/__layout.reset.svelte": () => Promise.resolve().then(() => (init_layout_reset_06c7e987(), layout_reset_06c7e987_exports)),
-      "src/routes/kontakt/index.svelte": () => Promise.resolve().then(() => (init_index_a07d10ce(), index_a07d10ce_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_0ea74923(), layout_0ea74923_exports)),
+      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_bfa49163(), error_bfa49163_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_8451d8a1(), index_8451d8a1_exports)),
+      "src/routes/ueber-mich.svelte": () => Promise.resolve().then(() => (init_ueber_mich_586498a5(), ueber_mich_586498a5_exports)),
+      "src/routes/projekte/index.svelte": () => Promise.resolve().then(() => (init_index_0a3f2f66(), index_0a3f2f66_exports)),
+      "src/routes/projekte/wohnformat.svelte": () => Promise.resolve().then(() => (init_wohnformat_7471a4d0(), wohnformat_7471a4d0_exports)),
+      "src/routes/projekte/mst-muhr.svelte": () => Promise.resolve().then(() => (init_mst_muhr_de98b9f5(), mst_muhr_de98b9f5_exports)),
+      "src/routes/projekte/solmates.svelte": () => Promise.resolve().then(() => (init_solmates_3cbe8739(), solmates_3cbe8739_exports)),
+      "src/routes/kontakt/__layout.reset.svelte": () => Promise.resolve().then(() => (init_layout_reset_90845c5f(), layout_reset_90845c5f_exports)),
+      "src/routes/kontakt/index.svelte": () => Promise.resolve().then(() => (init_index_a1c47813(), index_a1c47813_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-8a8390f1.js", "css": ["assets/pages/__layout.svelte-8abd4b06.css", "assets/DeathStar-5f3bc394.css", "assets/app-bfb1b664.css"], "js": ["pages/__layout.svelte-8a8390f1.js", "chunks/vendor-01d7f779.js", "chunks/DeathStar-a6fcbfb9.js", "chunks/app-ef7d69b8.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-6baf8ab2.js", "css": ["assets/pages/__error.svelte-5a8fc307.css"], "js": ["pages/__error.svelte-6baf8ab2.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-978b1a45.js", "css": ["assets/pages/index.svelte-b717f5e1.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-978b1a45.js", "chunks/vendor-01d7f779.js", "chunks/DeathStar-a6fcbfb9.js", "chunks/arrow-c94cf332.js"], "styles": [] }, "src/routes/ueber-mich.svelte": { "entry": "pages/ueber-mich.svelte-045d1850.js", "css": ["assets/pages/ueber-mich.svelte-81172310.css"], "js": ["pages/ueber-mich.svelte-045d1850.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/projekte/index.svelte": { "entry": "pages/projekte/index.svelte-d5e28d9d.js", "css": ["assets/pages/projekte/index.svelte-dbc05f05.css"], "js": ["pages/projekte/index.svelte-d5e28d9d.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/projekte/wohnformat.svelte": { "entry": "pages/projekte/wohnformat.svelte-835575e1.js", "css": ["assets/pages/projekte/wohnformat.svelte-59c98956.css", "assets/Switch.svelte_svelte_type_style_lang-ed5f0fd4.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/wohnformat.svelte-835575e1.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js"], "styles": [] }, "src/routes/projekte/mst-muhr.svelte": { "entry": "pages/projekte/mst-muhr.svelte-a4c157a7.js", "css": ["assets/pages/projekte/mst-muhr.svelte-2eef603c.css", "assets/Switch.svelte_svelte_type_style_lang-ed5f0fd4.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/mst-muhr.svelte-a4c157a7.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js", "chunks/Parallax-49dc5c87.js"], "styles": [] }, "src/routes/projekte/solmates.svelte": { "entry": "pages/projekte/solmates.svelte-8f52ca75.js", "css": ["assets/pages/projekte/solmates.svelte-73870ba0.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/solmates.svelte-8f52ca75.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js", "chunks/Parallax-49dc5c87.js"], "styles": [] }, "src/routes/kontakt/__layout.reset.svelte": { "entry": "pages/kontakt/__layout.reset.svelte-78213410.js", "css": ["assets/DeathStar-5f3bc394.css", "assets/app-bfb1b664.css"], "js": ["pages/kontakt/__layout.reset.svelte-78213410.js", "chunks/vendor-01d7f779.js", "chunks/DeathStar-a6fcbfb9.js", "chunks/app-ef7d69b8.js"], "styles": [] }, "src/routes/kontakt/index.svelte": { "entry": "pages/kontakt/index.svelte-74129d06.js", "css": ["assets/pages/kontakt/index.svelte-4ac878b4.css"], "js": ["pages/kontakt/index.svelte-74129d06.js", "chunks/vendor-01d7f779.js", "chunks/arrow-c94cf332.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-dbe2987b.js", "css": ["assets/pages/__layout.svelte-8abd4b06.css", "assets/Scene-13ff6062.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-dbe2987b.js", "chunks/vendor-01d7f779.js", "chunks/Scene-032ebd6e.js", "chunks/DeathStar-a6fcbfb9.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-6baf8ab2.js", "css": ["assets/pages/__error.svelte-5a8fc307.css"], "js": ["pages/__error.svelte-6baf8ab2.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-978b1a45.js", "css": ["assets/pages/index.svelte-b717f5e1.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-978b1a45.js", "chunks/vendor-01d7f779.js", "chunks/DeathStar-a6fcbfb9.js", "chunks/arrow-c94cf332.js"], "styles": [] }, "src/routes/ueber-mich.svelte": { "entry": "pages/ueber-mich.svelte-045d1850.js", "css": ["assets/pages/ueber-mich.svelte-81172310.css"], "js": ["pages/ueber-mich.svelte-045d1850.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/projekte/index.svelte": { "entry": "pages/projekte/index.svelte-d5e28d9d.js", "css": ["assets/pages/projekte/index.svelte-dbc05f05.css"], "js": ["pages/projekte/index.svelte-d5e28d9d.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/projekte/wohnformat.svelte": { "entry": "pages/projekte/wohnformat.svelte-835575e1.js", "css": ["assets/pages/projekte/wohnformat.svelte-59c98956.css", "assets/Switch.svelte_svelte_type_style_lang-ed5f0fd4.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/wohnformat.svelte-835575e1.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js"], "styles": [] }, "src/routes/projekte/mst-muhr.svelte": { "entry": "pages/projekte/mst-muhr.svelte-a4c157a7.js", "css": ["assets/pages/projekte/mst-muhr.svelte-2eef603c.css", "assets/Switch.svelte_svelte_type_style_lang-ed5f0fd4.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/mst-muhr.svelte-a4c157a7.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js", "chunks/Parallax-49dc5c87.js"], "styles": [] }, "src/routes/projekte/solmates.svelte": { "entry": "pages/projekte/solmates.svelte-8f52ca75.js", "css": ["assets/pages/projekte/solmates.svelte-73870ba0.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/solmates.svelte-8f52ca75.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js", "chunks/Parallax-49dc5c87.js"], "styles": [] }, "src/routes/kontakt/__layout.reset.svelte": { "entry": "pages/kontakt/__layout.reset.svelte-06dc6fd5.js", "css": ["assets/Scene-13ff6062.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/kontakt/__layout.reset.svelte-06dc6fd5.js", "chunks/vendor-01d7f779.js", "chunks/Scene-032ebd6e.js", "chunks/DeathStar-a6fcbfb9.js"], "styles": [] }, "src/routes/kontakt/index.svelte": { "entry": "pages/kontakt/index.svelte-3dde359c.js", "css": ["assets/pages/kontakt/index.svelte-4ac878b4.css"], "js": ["pages/kontakt/index.svelte-3dde359c.js", "chunks/vendor-01d7f779.js", "chunks/arrow-c94cf332.js"], "styles": [] } };
   }
 });
 
@@ -23432,7 +23431,7 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_bdecca85();
+init_app_03b8560f();
 var import_cookie12 = __toModule(require_cookie());
 init_dist();
 

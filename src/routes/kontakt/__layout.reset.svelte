@@ -1,4 +1,5 @@
 <script>
+    import '../../scss/app.scss';
     import { onMount, afterUpdate } from 'svelte';
     import { scheme } from '../../stores.js';
     import Header from '$lib/header/Header.svelte';
@@ -6,7 +7,6 @@
     import PageTransition from "$lib/page-transition/PageTransition.svelte"
     import CursorCreep from '$lib/cursor-creep/CursorCreep.svelte';
     import Scene from '$lib/scene/Scene.svelte';
-    import '../../scss/app.scss';
 
     export let key;
 

@@ -1,5 +1,6 @@
 <script>
     // import { page } from '$app/stores';
+    import '../scss/app.scss';
     import { fade } from 'svelte/transition';
     import { onMount, afterUpdate, beforeUpdate } from 'svelte';
     import { scheme } from '../stores.js';
@@ -9,7 +10,6 @@
     import PageTransition from "$lib/page-transition/PageTransition.svelte"
     import CursorCreep from '$lib/cursor-creep/CursorCreep.svelte';
     import Scene from '$lib/scene/Scene.svelte';
-    import '../scss/app.scss';
 
     export let key;
 
