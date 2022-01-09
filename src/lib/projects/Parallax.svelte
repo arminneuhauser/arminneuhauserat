@@ -43,12 +43,15 @@
         background-color: var(--base);
     }
     figure {
-        aspect-ratio: 16/9;
+        padding-top: 56.25%; // 16/9
         margin: 0;
         overflow: hidden;
         display: flex;
+        position: relative;
     }
     picture {
+        position: absolute;
+        top: 0;
         flex-grow: 1;
         display: flex;
     }
