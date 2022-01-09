@@ -49,8 +49,8 @@
         </p>
     </header>
     <div>
-        <form name="test" method="post" netlify>
-            <input type="hidden" name="form-name" value="test" />
+        <form name="contact" method="post" netlify>
+            <input type="hidden" name="form-name" value="contact" />
             <div>
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" placeholder="Dein Name">
