@@ -1,7 +1,6 @@
 <script lang="ts">
     import Hero from '$lib/projects/Hero.svelte';
-    import Parallax from '$lib/projects/Parallax.svelte';
-    import Switch from '$lib/projects/Switch.svelte';
+    import Figure from '$lib/projects/Figure.svelte';
     import Next from '$lib/projects/Next.svelte';
 
     import external from '$lib/projects/external.svg?raw';
@@ -50,15 +49,15 @@
 
 <section class="col2 align-end">
     <div>
-        <img src="/images/wohnformat/wohnformat1.jpg" alt="Wohnformat Startseite">
-        <img src="/images/wohnformat/wohnformat4.jpg" alt="Wohnformat Tablets">
+        <Figure src="/images/wohnformat/wohnformat1.jpg" alt="Wohnformat Startseite" />
+        <Figure src="/images/wohnformat/wohnformat4.jpg" alt="Wohnformat Tablets" />
     </div>
 </section>
 
 <section class="col2">
     <div>
-        <img src="/images/wohnformat/wohnformat2.jpg" alt="Wohnformat Kontakt">
-        <img src="/images/wohnformat/wohnformat5.jpg" alt="Wohnformat Phones">
+        <Figure src="/images/wohnformat/wohnformat2.jpg" alt="Wohnformat Kontakt" />
+        <Figure src="/images/wohnformat/wohnformat5.jpg" alt="Wohnformat Phones" />
     </div>
 </section>
 
