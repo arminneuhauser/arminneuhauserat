@@ -3,6 +3,8 @@
     import Parallax from '$lib/projects/Parallax.svelte';
     import Figure from '$lib/projects/Figure.svelte';
     import Video from '$lib/projects/Video.svelte';
+    import Facts from '$lib/projects/Facts.svelte';
+    import LinkExternal from '$lib/projects/LinkExternal.svelte';
     import Next from '$lib/projects/Next.svelte';
 
     import external from '$lib/projects/external.svg?raw';
@@ -23,7 +25,8 @@
 
 <section>
     <div>
-        <div class="facts">
+        <Facts
+            href="https://www.solmates.at/">
             <div>
                 <h3>Launch</h3>
                 <p>November 2019</p>
@@ -36,13 +39,7 @@
                 <h3>Technologien</h3>
                 <p>Vue.js, Nuxt.js, Storyblok, Netlify, Mailchimp</p>
             </div>
-            <div>
-                <a class="link" href="https://www.solmates.at/" target="_blank">
-                    <span>Website ansehen</span>
-                    <i>{@html external}</i>
-                </a>
-            </div>
-        </div>
+        </Facts>
     </div>
 </section>
 
@@ -133,10 +130,7 @@
 
 <section class="last">
     <div>
-        <a class="link" href="https://www.solmates.at/" target="_blank">
-            <span>Website ansehen</span>
-            <i>{@html external}</i>
-        </a>
+        <LinkExternal href="https://www.solmates.at/"></LinkExternal>
     </div>
 </section>
 

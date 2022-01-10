@@ -3,6 +3,8 @@
     import Parallax from '$lib/projects/Parallax.svelte';
     import Figure from '$lib/projects/Figure.svelte';
     import Video from '$lib/projects/Video.svelte';
+    import Facts from '$lib/projects/Facts.svelte';
+    import LinkExternal from '$lib/projects/LinkExternal.svelte';
     import Switch from '$lib/projects/Switch.svelte';
     import Next from '$lib/projects/Next.svelte';
 
@@ -26,7 +28,8 @@
 
 <section>
     <div>
-        <div class="facts">
+        <Facts
+            href="https://www.mst-muhr.at/">
             <div>
                 <h3>Launch</h3>
                 <p>Jänner 2022</p>
@@ -39,13 +42,7 @@
                 <h3>Technologien</h3>
                 <p>Vue.js, Nuxt.js, Storyblok, Netlify</p>
             </div>
-            <div>
-                <a class="link" href="https://www.mst-muhr.at/" target="_blank">
-                    <span>Website ansehen</span>
-                    <i>{@html external}</i>
-                </a>
-            </div>
-        </div>
+        </Facts>
     </div>
 </section>
 
@@ -154,10 +151,7 @@
 
 <section class="last">
     <div>
-        <a class="link" href="https://www.mst-muhr.at/" target="_blank">
-            <span>Website ansehen</span>
-            <i>{@html external}</i>
-        </a>
+        <LinkExternal href="https://www.mst-muhr.at/"></LinkExternal>
     </div>
 </section>
 

@@ -1,6 +1,8 @@
 <script lang="ts">
     import Hero from '$lib/projects/Hero.svelte';
     import Figure from '$lib/projects/Figure.svelte';
+    import Facts from '$lib/projects/Facts.svelte';
+    import LinkExternal from '$lib/projects/LinkExternal.svelte';
     import Next from '$lib/projects/Next.svelte';
 
     import external from '$lib/projects/external.svg?raw';
@@ -23,7 +25,8 @@
 
 <section>
     <div>
-        <div class="facts">
+        <Facts
+            href="https://www.wohnformat.at/">
             <div>
                 <h3>Launch</h3>
                 <p>Oktober 2016</p>
@@ -36,13 +39,7 @@
                 <h3>Technologien</h3>
                 <p>WordPress</p>
             </div>
-            <div>
-                <a class="link" href="https://www.wohnformat.at/" target="_blank">
-                    <span>Website ansehen</span>
-                    <i>{@html external}</i>
-                </a>
-            </div>
-        </div>
+        </Facts>
     </div>
 </section>
 
@@ -80,10 +77,7 @@
 
 <section class="last">
     <div>
-        <a class="link" href="https://www.wohnformat.at/" target="_blank">
-            <span>Website ansehen</span>
-            <i>{@html external}</i>
-        </a>
+        <LinkExternal href="https://www.wohnformat.at/"></LinkExternal>
     </div>
 </section>
 

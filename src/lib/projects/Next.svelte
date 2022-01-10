@@ -1,19 +1,28 @@
 <script lang="ts">
+    import IntersectionObserver from "svelte-intersection-observer";
+
     export let title;
     export let desc;
     export let slug;
     export let image;
+
+    let element;
+    let intersecting;
 </script>
 
 <section class="next">
-    <h3>Nächstes Projekt</h3>
-    <a href={slug} class="circle" style="background-image: url({image});">
-        <div class="text">
-            <h1>{title}</h1>
-            <hr>
-            <p>{desc}</p>
+    <IntersectionObserver once {element} bind:intersecting>
+        <div class:intersecting bind:this={element}>
+            <h3>Nächstes Projekt</h3>
+            <a href={slug} class="circle" style="background-image: url({image});">
+                <div class="text">
+                    <h1>{title}</h1>
+                    <hr>
+                    <p>{desc}</p>
+                </div>
+            </a>
         </div>
-    </a>
+    </IntersectionObserver>
 </section>
 
 <style lang="scss">
@@ -26,9 +35,19 @@
         align-items: center;
         justify-content: center;
 
+        > div {
+            opacity: 0;
+            transition: opacity 1.2s 0.2s var(--easing);
+
+            &.intersecting {
+                opacity: 1;
+            }
+        }
+
         h3 {
             font-size: #{fn.rem(24)};
             margin: 2em;
+            text-align: center;
         }
 
         .circle {
