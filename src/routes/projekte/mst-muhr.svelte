@@ -21,8 +21,8 @@
 <Hero 
     title="MST Muhr"
     desc="individuelle Unternehmenswebsite"
-    imageSm="/images/mst-muhr/mst-hero-sm.jpg"
-    imageLg="/images/mst-muhr/mst-hero-lg.jpg"
+    imageSm="/images/mst-muhr/mst-muhr-hero-sm.jpg"
+    imageLg="/images/mst-muhr/mst-muhr-hero-lg.jpg"
     >
 </Hero>
 

@@ -138,7 +138,7 @@
     title="MST Muhr"
     desc="individuelle Unternehmenswebsite"
     slug="/projekte/mst-muhr"
-    image="/images/mst-muhr/mst-hero-sm.jpg"
+    image="/images/mst-muhr/mst-muhr-hero-sm.jpg"
     >
 </Next>
 
