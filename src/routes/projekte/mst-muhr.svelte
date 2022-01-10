@@ -1,6 +1,8 @@
 <script lang="ts">
     import Hero from '$lib/projects/Hero.svelte';
     import Parallax from '$lib/projects/Parallax.svelte';
+    import Figure from '$lib/projects/Figure.svelte';
+    import Video from '$lib/projects/Video.svelte';
     import Switch from '$lib/projects/Switch.svelte';
     import Next from '$lib/projects/Next.svelte';
 
@@ -86,11 +88,11 @@
 <section class="col2">
     <div>
         {#if dark}
-            <img src="/images/mst-muhr/mst-muhr-01-dark.jpg" alt="MST Muhr Startseite" width="1920" height="1200">
-            <img src="/images/mst-muhr/mst-muhr-02-dark.jpg" alt="MST Muhr Kontakt" width="1920" height="1200">
+            <Figure src="/images/mst-muhr/mst-muhr-01-dark.jpg" alt="MST Muhr Startseite" width="1920" height="1200" />
+            <Figure src="/images/mst-muhr/mst-muhr-02-dark.jpg" alt="MST Muhr Kontakt" width="1920" height="1200" />
         {:else}
-            <img src="/images/mst-muhr/mst-muhr-01.jpg" alt="MST Muhr Startseite" width="1920" height="1200">
-            <img src="/images/mst-muhr/mst-muhr-02.jpg" alt="MST Muhr Kontakt" width="1920" height="1200">
+            <Figure src="/images/mst-muhr/mst-muhr-01.jpg" alt="MST Muhr Startseite" width="1920" height="1200" />
+            <Figure src="/images/mst-muhr/mst-muhr-02.jpg" alt="MST Muhr Kontakt" width="1920" height="1200" />
         {/if}
     </div>
 </section>
@@ -98,15 +100,21 @@
 <section class="full">
     <div>
         {#if dark}
-            <video width="1152" height="720" muted playsinline loop autoplay poster="/images/mst-muhr/mst-muhr-01-dark.jpg">
-                <source src="/images/mst-muhr/mst-muhr-dark.webm" type="video/webm">
-                <source src="/images/mst-muhr/mst-muhr-dark.mp4" type="video/mp4">
-            </video>
+            <Video 
+                src="/images/mst-muhr/mst-muhr-dark.mp4"
+                srcWebm="/images/mst-muhr/mst-muhr-dark.webm"
+                width="1152" 
+                height="720" 
+                poster="/images/mst-muhr/mst-muhr-01-dark.jpg">
+            </Video>
         {:else}
-            <video width="1152" height="720" muted playsinline loop autoplay poster="/images/mst-muhr/mst-muhr-01.jpg">
-                <source src="/images/mst-muhr/mst-muhr.webm" type="video/webm">
-                <source src="/images/mst-muhr/mst-muhr.mp4" type="video/mp4">
-            </video>
+            <Video 
+                src="/images/mst-muhr/mst-muhr.mp4"
+                srcWebm="/images/mst-muhr/mst-muhr.webm"
+                width="1152" 
+                height="720" 
+                poster="/images/mst-muhr/mst-muhr-01.jpg">
+            </Video>
         {/if}
     </div>
 </section>
@@ -114,9 +122,9 @@
 <section>
     <div>
         {#if dark}
-            <img src="/images/mst-muhr/mst-muhr-mobile-dark.jpg" alt="MST Muhr Mobile" width="1920" height="1248">
+            <Figure src="/images/mst-muhr/mst-muhr-mobile-dark.jpg" alt="MST Muhr Mobile" width="1920" height="1248" />
         {:else}
-            <img src="/images/mst-muhr/mst-muhr-mobile.jpg" alt="MST Muhr Mobile" width="1920" height="1248">
+            <Figure src="/images/mst-muhr/mst-muhr-mobile.jpg" alt="MST Muhr Mobile" width="1920" height="1248" />
         {/if}
     </div>
 </section>
@@ -137,10 +145,10 @@
 
 <section class="col2">
     <div>
-        <img src="/images/mst-muhr/mst-muhr-schweizergarten-02.jpg" alt="MST Muhr Schweizergarten Arsenalstraße" width="1920" height="1280">
-        <img src="/images/mst-muhr/mst-muhr-schweizergarten-03.jpg" alt="MST Muhr Schweizergarten" width="1920" height="1280">
-        <img src="/images/mst-muhr/mst-muhr-gugitzgasse.jpg" alt="MST Muhr Gugitzgasse" width="1920" height="1280">
-        <img src="/images/mst-muhr/mst-muhr-windmuehlgasse.jpg" alt="MST Muhr Windmühlgasse" width="1920" height="1280">
+        <Figure src="/images/mst-muhr/mst-muhr-schweizergarten-02.jpg" alt="MST Muhr Schweizergarten Arsenalstraße" width="1920" height="1280" />
+        <Figure src="/images/mst-muhr/mst-muhr-schweizergarten-03.jpg" alt="MST Muhr Schweizergarten" width="1920" height="1280" />
+        <Figure src="/images/mst-muhr/mst-muhr-gugitzgasse.jpg" alt="MST Muhr Gugitzgasse" width="1920" height="1280" />
+        <Figure src="/images/mst-muhr/mst-muhr-windmuehlgasse.jpg" alt="MST Muhr Windmühlgasse" width="1920" height="1280" />
     </div>
 </section>
 

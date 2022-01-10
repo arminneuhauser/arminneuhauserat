@@ -1,6 +1,8 @@
 <script lang="ts">
     import Hero from '$lib/projects/Hero.svelte';
     import Parallax from '$lib/projects/Parallax.svelte';
+    import Figure from '$lib/projects/Figure.svelte';
+    import Video from '$lib/projects/Video.svelte';
     import Next from '$lib/projects/Next.svelte';
 
     import external from '$lib/projects/external.svg?raw';
@@ -46,10 +48,13 @@
 
 <section class="full">
     <div>
-        <video width="1152" height="720" muted playsinline loop autoplay poster="/images/solmates/solmates01.jpg">
-            <source src="/images/solmates/solmates.webm" type="video/webm">
-            <source src="/images/solmates/solmates.mp4" type="video/mp4">
-        </video>
+        <Video 
+            src="/images/solmates/solmates.mp4"
+            srcWebm="/images/solmates/solmates.webm"
+            width="1152" 
+            height="720" 
+            poster="/images/solmates/solmates01.jpg">
+        </Video>
     </div>
 </section>
 
@@ -80,16 +85,16 @@
 
 <section class="narrow">
     <div>
-        <img src="/images/solmates/solmates-home.jpg" alt="Solmates Startseite">
+        <Figure src="/images/solmates/solmates-home.jpg" alt="Solmates Startseite"></Figure>
     </div>
 </section>
 
 <section class="col2 align-end">
     <div>
-        <img src="/images/solmates/solmates-san-blas-02.jpg" alt="Solmates San Blas Inseln">
-        <img src="/images/solmates/solmates-costa-rica.jpg" alt="Solmates Costa Rica">
-        <img src="/images/solmates/solmates-boquete.jpg" alt="Solmates Vulkan Baru">
-        <img src="/images/solmates/solmates-peru.jpg" alt="Solmates Peru">
+        <Figure src="/images/solmates/solmates-san-blas-02.jpg" alt="Solmates San Blas Inseln" />
+        <Figure src="/images/solmates/solmates-costa-rica.jpg" alt="Solmates Costa Rica" />
+        <Figure src="/images/solmates/solmates-boquete.jpg" alt="Solmates Vulkan Baru" />
+        <Figure src="/images/solmates/solmates-peru.jpg" alt="Solmates Peru" />
     </div>
 </section>
 
@@ -109,17 +114,20 @@
 
 <section class="full">
     <div>
-        <video width="1152" height="720" muted playsinline loop autoplay poster="/images/solmates/solmates01.jpg">
-            <source src="/images/solmates/solmates-buch.webm" type="video/webm">
-            <source src="/images/solmates/solmates-buch.mp4" type="video/mp4">
-        </video>
+        <Video 
+            src="/images/solmates/solmates-buch.mp4"
+            srcWebm="/images/solmates/solmates-buch.webm"
+            width="1152" 
+            height="720" 
+            poster="/images/solmates/solmates01.jpg">
+        </Video>
     </div>
 </section>
 
 <section class="col2">
     <div>
-        <img src="/images/solmates/solmates-buch.jpg" alt="Solmates Buch">
-        <img src="/images/solmates/solmates-buch-02.jpg" alt="Solmates Buch Rückseite">
+        <Figure src="/images/solmates/solmates-buch.jpg" alt="Solmates Buch" />
+        <Figure src="/images/solmates/solmates-buch-02.jpg" alt="Solmates Buch Rückseite" />
     </div>
 </section>
 

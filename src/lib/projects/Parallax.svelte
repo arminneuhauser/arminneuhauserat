@@ -68,11 +68,9 @@
         flex-grow: 1;
         object-fit: cover;
         opacity: 0;
-        transition: opacity 1.2s 0.2s var(--easing), filter 1.2s 0.2s var(--easing);
-        filter: blur(0.5em);
+        transition: opacity 1.2s 0.2s var(--easing);
 
         &.intersecting {
-            filter: none;
             opacity: 1;
         }
     }
