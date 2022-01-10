@@ -1,8 +1,13 @@
 <script lang="ts">
+    import IntersectionObserver from "svelte-intersection-observer";
+
     export let image;
     export let width = undefined;
     export let height = undefined;
     export let alt = undefined;
+
+    let element;
+    let intersecting;
 
     let figure;
     let topPosition;
@@ -28,15 +33,17 @@
 
 <svelte:window on:scroll={parseScroll} bind:innerHeight={windowHeight} />
 
-<section class="full">
-    <div>
-        <figure bind:this={figure}>
-            <picture>
-                <img src={image} alt={alt} style="transform: translateY({translateY}%);" width={width} height={height}>
-            </picture>
-        </figure>
-    </div>
-</section>
+<IntersectionObserver once {element} bind:intersecting>
+    <section class="full">
+        <div>
+            <figure bind:this={figure}>
+                <picture>
+                    <img src={image} alt={alt} style="transform: translateY({translateY}%);" width={width} height={height} class:intersecting bind:this={element}>
+                </picture>
+            </figure>
+        </div>
+    </section>
+</IntersectionObserver>
 
 <style lang="scss">
     section {
@@ -48,15 +55,25 @@
         overflow: hidden;
         display: flex;
         position: relative;
+
     }
     picture {
         position: absolute;
         top: 0;
+        width: 100%;
         flex-grow: 1;
         display: flex;
     }
     img {
         flex-grow: 1;
         object-fit: cover;
+        opacity: 0;
+        transition: opacity 1.2s 0.2s var(--easing), filter 1.2s 0.2s var(--easing);
+        filter: blur(0.5em);
+
+        &.intersecting {
+            filter: none;
+            opacity: 1;
+        }
     }
 </style>
