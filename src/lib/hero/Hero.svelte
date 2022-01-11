@@ -182,6 +182,14 @@
             margin-left: #{fn.rem(15)};
         }
 
+        @media (min-width: var.$breakpoint-lg) {
+            --size: #{fn.rem(10)};
+        }
+
+        @media (min-width: var.$breakpoint-1xl) {
+            --size: #{fn.rem(12)};
+        }
+
         &:hover {
             div span {
                 color: var(--primary);
