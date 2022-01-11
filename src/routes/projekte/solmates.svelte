@@ -50,7 +50,7 @@
             srcWebm="/images/solmates/solmates.webm"
             width="1152" 
             height="720" 
-            poster="/images/solmates/solmates01.jpg">
+            poster="/images/solmates/solmates-poster.jpg">
         </Video>
     </div>
 </section>
@@ -114,9 +114,9 @@
         <Video 
             src="/images/solmates/solmates-buch.mp4"
             srcWebm="/images/solmates/solmates-buch.webm"
-            width="1152" 
+            width="1280" 
             height="720" 
-            poster="/images/solmates/solmates01.jpg">
+            poster="/images/solmates/solmates-buch-poster.jpg">
         </Video>
     </div>
 </section>
