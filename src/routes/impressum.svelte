@@ -95,12 +95,6 @@
             </ul>
             <p>Wenn Sie die Speicherung von Daten in Cookies nicht wünschen, so können Sie Ihren Browser so einrichten, dass er Sie über das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Sie können jederzeit Cookies, die sich bereits auf Ihrem Computer befinden, löschen oder Cookies deaktivieren. Die Vorgangsweise dazu ist nach Browser unterschiedlich, am besten Sie suchen die Anleitung in Google mit dem Suchbegriff “Cookies löschen Chrome” oder „Cookies deaktivieren Chrome“ im Falle eines Chrome Browsers oder tauschen das Wort „Chrome“ gegen den Namen Ihres Browsers, z. B. Edge, Firefox, Safari aus.
             Wenn Sie uns generell nicht gestatten, Cookies zu nutzen, d.h. diese per Browsereinstellung deaktivieren, können manche Funktionen und Seiten nicht wie erwartet funktionieren.</p>
-            <h2 id="google-fonts-datenschutzerklärung">Google Fonts Datenschutzerklärung</h2>
-            <p>Wir verwenden Google Fonts der Firma Google Inc. (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) auf unserer Webseite. Die Verwendung von Google Fonts erfolgt ohne Authentisierung und es werden keine Cookies an die Google Fonts API gesendet. Sollten Sie ein Konto bei Google haben, werden keine Ihrer Google-Kontodaten an Google während der Nutzung von Google Fonts übermittelt. Google erfasst lediglich die Nutzung von CSS und der verwendeten Fonts und speichert diese Daten sicher. Mehr zu diesen und weiteren Fragen finden Sie auf <a href="https://developers.google.com/fonts/faq?tid=221090227">https://developers.google.com/fonts/faq?tid=221090227</a>.</p>
-            <p>Welche Daten von Google erfasst werden und wofür diese Daten verwendet werden, können Sie auf <a href="https://www.google.com/intl/de/policies/privacy/">https://www.google.com/intl/de/policies/privacy/</a> nachlesen.</p>
-            <h2 id="google-maps-datenschutzerklärung">Google Maps Datenschutzerklärung</h2>
-            <p>Wir verwenden Google Maps der Firma Google Inc. (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) auf unserer Webseite.</p>
-            <p>Durch die Nutzung der Funktionen dieser Karte werden Daten an Google übertragen. Welche Daten von Google erfasst werden und wofür diese Daten verwendet werden, können Sie auf <a href="https://www.google.com/intl/de/policies/privacy/">https://www.google.com/intl/de/policies/privacy/</a> nachlesen.</p>
             <h2 id="google-analytics-datenschutzerklärung">Google Analytics Datenschutzerklärung</h2>
             <p>Wir verwenden auf dieser Website Google Analytics der Firma Google LLC (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) um Besucherdaten statistisch auszuwerten. Dabei verwendet Google Analytics zielorientierte Cookies.</p>
             <h3 id="cookies-von-google-analytics">Cookies von Google Analytics</h3>
@@ -139,43 +133,6 @@
             <h2 id="google-analytics-ip-anonymisierung">Google Analytics IP-Anonymisierung</h2>
             <p>Wir haben auf dieser Webseite die IP-Adressen-Anonymisierung von Google Analytics implementiert. Diese Funktion wurde von Google entwickelt, damit diese Webseite die geltenden Datenschutzbestimmungen und Empfehlungen der lokalen Datenschutzbehörden einhalten kann, wenn diese eine Speicherung der vollständigen IP-Adresse untersagen. Die Anonymisierung bzw. Maskierung der IP findet statt, sobald die IP-Adressen im Google Analytics-Datenerfassungsnetzwerk eintreffen und bevor eine Speicherung oder Verarbeitung der Daten stattfindet.</p>
             <p>Mehr Informationen zur IP-Anonymisierung finden Sie auf <a href="https://support.google.com/analytics/answer/2763052?hl=de">https://support.google.com/analytics/answer/2763052?hl=de</a>.</p>
-            <h2 id="google-recaptcha-datenschutzerklärung">Google reCAPTCHA Datenschutzerklärung</h2>
-            <p>Wir verwenden Google reCAPTCHA der Firma Google Inc. (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) um Spam zu verhindern.</p>
-            <p>Rechtsgrundlage für die Verwendung ist Artikel 6 (1) f (Rechtmäßigkeit der Verarbeitung), denn es besteht ein berechtigtes Interesse diese Webseite vor Bots und Spam zu schützen.</p>
-            <p>reCAPTCHA ist ein kostenloser Dienst, der Webseiten vor Spam und Missbrauch schützt. Es nutzt fortschrittliche Risikoanalysetechniken, um Menschen und Bots auseinander zu halten. Mit der neuen API wird eine signifikante Anzahl Ihrer gültigen menschlichen Benutzer die reCAPTCHA-Herausforderung bestehen, ohne ein CAPTCHA lösen zu müssen.  Wir nutzen reCAPTCHA für die Absicherung von Formularen.</p>
-            <p>Durch die Nutzung von reCAPTCHA werden Daten an Google übertragen die Google nutzt um festzustellen ob der Besucher ein Mensch oder ein (Spam)bot ist. Welche Daten von Google erfasst werden und wofür diese Daten verwendet werden, können Sie auf <a href="https://policies.google.com/privacy?hl=de-AT">https://policies.google.com/privacy?hl=de-AT</a> nachlesen.
-            Die Nutzungsbedingungen für Dienste und Produkte von Google können Sie unter <a href="https://policies.google.com/terms?hl=de-AT">https://policies.google.com/terms?hl=de-AT</a> nachlesen.</p>
-            <h2 id="eingebettete-social-media-elemente-datenschutzerklärung">Eingebettete Social Media Elemente Datenschutzerklärung</h2>
-            <p>Wir binden auf unserer Webseite Elemente von Social Media Diensten ein um Bilder, Videos und Texte anzuzeigen.
-            Durch den Besuch von Seiten die diese Elemente darstellen, werden Daten von Ihrem Browser zum jeweiligen Social Media Dienst übertragen und dort gespeichert. Wir haben keinen Zugriff auf diese Daten.
-            Die folgenden Links führen Sie zu den Seiten der jeweiligen Social Media Dienste wo erklärt wird, wie diese mit Ihren Daten umgehen:</p>
-            <ul>
-            <li>Instagram-Datenschutzrichtlinie: <a href="https://help.instagram.com/519522125107875">https://help.instagram.com/519522125107875</a></li>
-            <li>Für YouTube gilt die Google Datenschutzerklärung: <a href="https://policies.google.com/privacy?hl=de">https://policies.google.com/privacy?hl=de</a></li>
-            <li>Facebook-Datenrichtline: <a href="https://www.facebook.com/about/privacy">https://www.facebook.com/about/privacy</a></li>
-            <li>Twitter Datenschutzrichtlinie: <a href="https://twitter.com/de/privacy">https://twitter.com/de/privacy</a></li>
-            </ul>
-            <h2 id="facebook-datenschutzerklärung">Facebook Datenschutzerklärung</h2>
-            <p>Wir verwenden auf dieser Webseite Funktionen von Facebook, einem Social Media Network der FIrma Facebook Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2 Ireland.
-            Welche Funktionen (Soziale Plug-ins) Facebook bereitstellt, können Sie auf <a href="https://developers.facebook.com/docs/plugins/">https://developers.facebook.com/docs/plugins/</a> nachlesen.
-            Durch den Besuch unserer Webseite können Informationen an Facebook übermittelt werden. Wenn Sie über ein Facebook-Konto verfügen, kann Facebook diese Daten Ihrem persönlichen Konto zuordnen. Sollten Sie das nicht wünschen, melden Sie sich bitte von Facebook ab.
-            Die Datenschutzrichtlinien, welche Informationen Facebook sammelt und wie sie diese verwenden finden Sie auf <a href="https://www.facebook.com/policy.php">https://www.facebook.com/policy.php</a>.</p>
-            <h2 id="youtube-datenschutzerklärung">YouTube Datenschutzerklärung</h2>
-            <p>Wir verwenden auf dieser Seite des Videodienstes YouTube, der Firma YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA.</p>
-            <p>Durch das Aufrufen von Seiten unserer Webseite, die YouTube Videos integriert haben, werden Daten an YouTube übertragen, gespeichert und ausgewertet.
-            Sollten Sie ein YouTube-Konto haben und angemeldet sein, werden diese Daten Ihrem persönlichen Konto und den darin gespeicherten Daten zugeordnet.</p>
-            <p>Welche Daten von Google erfasst werden und wofür diese Daten verwendet werden, können Sie auf <a href="https://www.google.com/intl/de/policies/privacy/">https://www.google.com/intl/de/policies/privacy/</a> nachlesen.</p>
-            <h2 id="twitter-datenschutzerklärung">Twitter Datenschutzerklärung</h2>
-            <p>Wir verwenden auf dieser Webseite Funktionen von Twitter, einem Social Network der Firma Twitter International Company, One Cumberland Place, Fenian Street, Dublin 2 D02 AX07, Irland.</p>
-            <p>Dadurch können auch personenbezogene Daten an Twitter übertragen werden. Wir überwachen diesen Datenaustausch nicht und speichern nichts darüber.</p>
-            <p>Wenn Sie mehr über die Nutzung Ihrer Daten durch Twitter wissen möchten, finden Sie alle Informationen in der Twitter Datenschutzrichtline auf <a href="https://twitter.com/de/privacy">https://twitter.com/de/privacy</a>.</p>
-            <p>Sollten Sie ein Konto bei Twitter haben, können Sie Ihre Datenschutzeinstellungen in den Konto- Einstellungen unter <a href="https://twitter.com/settings/account">https://twitter.com/settings/account</a> ändern.</p>
-            <h2 id="instagram-datenschutzerklärung">Instagram Datenschutzerklärung</h2>
-            <p>Wir verwenden auf unserer Webseite Funktionen des Social Media Netzwerks Instagram der Firma Instagram LLC, 1601 Willow Rd, Menlo Park CA 94025, USA.</p>
-            <p>Mit den Funktionen zum Einbetten von Instagram-Inhalten (Embed-Funktion) können wir Bilder und Videos anzeigen.</p>
-            <p>Durch den Aufruf von Seiten die solche Funktionen nutzen werden Daten (IP-Adresse, Browserdaten, Datum, Uhrzeit, Cookies) an Instagram übermittelt, gespeichert und ausgewertet.</p>
-            <p>Sollten Sie ein Instagram-Konto haben und angemeldet sein, werden diese Daten Ihrem persönlichen Konto und den darin gespeicherten Daten zugeordnet.</p>
-            <p>Die Datenschutzrichtlinien, welche Informationen Instagram sammelt und wie sie diese verwenden finden Sie auf <a href="https://help.instagram.com/519522125107875">https://help.instagram.com/519522125107875</a>.</p>
             <p>Quelle: Erstellt mit dem <a href="https://www.adsimple.at/datenschutz-generator/" target="_blank" rel="noopener noreferrer">Datenschutz Generator</a>  von AdSimple</p>
         </div>
     </div>
