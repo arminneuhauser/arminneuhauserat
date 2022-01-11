@@ -102,7 +102,7 @@
                 srcWebm="/images/mst-muhr/mst-muhr-dark.webm"
                 width="1152" 
                 height="720" 
-                poster="/images/mst-muhr/mst-muhr-01-dark.jpg">
+                poster="/images/mst-muhr/mst-muhr-poster-dark.jpg">
             </Video>
         {:else}
             <Video 
@@ -110,7 +110,7 @@
                 srcWebm="/images/mst-muhr/mst-muhr.webm"
                 width="1152" 
                 height="720" 
-                poster="/images/mst-muhr/mst-muhr-01.jpg">
+                poster="/images/mst-muhr/mst-muhr-poster.jpg">
             </Video>
         {/if}
     </div>
