@@ -1,4 +1,4 @@
-<script lang="ts">    
+<script lang="ts">
     import DeathStar from '$lib/death-star/DeathStar.svelte';
     import * as animateScroll from "svelte-scrollto";
 

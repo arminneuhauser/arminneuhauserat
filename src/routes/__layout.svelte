@@ -3,12 +3,13 @@
     import '../scss/app.scss';
     import { fade } from 'svelte/transition';
     import { onMount, afterUpdate, beforeUpdate } from 'svelte';
-    import { scheme } from '../stores.js';
+    import { scheme, cookieConsent } from '../stores.js';
     import Header from '$lib/header/Header.svelte';
     import Footer from '$lib/footer/Footer.svelte';
     import Progress from '$lib/progress/Progress.svelte';
     import PageTransition from "$lib/page-transition/PageTransition.svelte"
     import CursorCreep from '$lib/cursor-creep/CursorCreep.svelte';
+    import CookieBanner from '$lib/cookie-banner/CookieBanner.svelte';
     import Scene from '$lib/scene/Scene.svelte';
 
     export let key;
@@ -85,6 +86,9 @@
             
         <Footer />
         <CursorCreep />
+        {#if $cookieConsent !== "true"}
+            <CookieBanner />
+        {/if}
 
         <Scene />
     </div>
