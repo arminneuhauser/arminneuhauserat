@@ -113,6 +113,7 @@
 
         span {
             display: inline-block;
+            will-change: transform;
 
             span {
                 display: flex;
