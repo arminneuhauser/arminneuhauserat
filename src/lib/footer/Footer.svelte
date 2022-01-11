@@ -12,10 +12,13 @@
         <p>
             Jede Ausfahrt sollte mit einem guten Kaffee abgeschlossen werden.<br> Also komm vorbei und sag Hallo.
         </p>
-        <a href="mailto:mail@arminneuhauser.at">mail@arminneuhauser.at</a>
+        <a href="mailto:mail@arminneuhauser.at" class="mail">mail@arminneuhauser.at</a>
         <hr>
         <div>
-            <small>Armin Neuhauser © {year}</small>
+            <div class="legal">
+                <a sveltekit:prefetch href="/impressum">Impressum & Datenschutz</a>
+                <span>Armin Neuhauser © {year}</span>
+            </div>
             <button on:click={() => animateScroll.scrollToTop()} title="Zurück nach oben">
                 {@html up}
             </button>
@@ -60,7 +63,7 @@
             }
         }
 
-        a {
+        .mail {
             font-size: fn.rfs(18, 24);
             margin: 0 #{fn.rem(-10)};
             padding: #{fn.rem(10)};
@@ -73,11 +76,34 @@
             }
         }
 
-        small {
-            opacity: 0.5;
+        .legal {
+            font-size: #{fn.rem(13)};
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.15em;
 
-            :global([color-scheme="highcontrast"]) & {
-                opacity: 1;
+            @media (min-width: var.$breakpoint-md) {
+                font-size: #{fn.rem(14)};
+            }
+
+            > * {
+                opacity: 0.5;
+
+                :global([color-scheme="highcontrast"]) & {
+                    opacity: 1;
+                }
+            }
+
+
+
+            a {
+                text-decoration: underline;
+                transition: opacity 0.2s var(--easing);
+
+                &:hover {
+                    opacity: 0.6;
+                }
             }
         }
 
