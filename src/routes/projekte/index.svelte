@@ -11,11 +11,12 @@
         <div>
             <h1>
                 <span class="mask"><span>Projekte,</span></span>
-                <span class="mask"><span>auf die ich stolz bin</span></span>
+                <span class="mask"><span>auf die ich</span></span>
+                <span class="mask"><span>stolz bin</span></span>
             </h1>
             <div>
-                <p class="mask">
-                    <span>Jedes Projekt ist eine Chance, etwas Neues auszuprobieren. Ich gehe auf die Wünsche meiner Kunden ein und berate sie, um gemeinsam das bestmögliche Ergebnis zu erreichen.</span>
+                <p class="fade">
+                    Jedes Projekt ist eine Chance, etwas Neues auszuprobieren. Ich gehe auf die Wünsche meiner Kunden ein und berate sie, um gemeinsam das bestmögliche Ergebnis zu erreichen.
                 </p>
                 <hr>
             </div>
@@ -84,11 +85,21 @@
             }
 
             .mask {
+                &:first-child {
+                    width: 100%;
+                }
                 span {
                     animation: to-top 1.2s var(--easing) forwards;
                 }
                 &:nth-child(2) span {
                     animation-delay: 200ms;
+                }
+                &:nth-child(3) span {
+                    animation-delay: 400ms;
+
+                    @media (min-width: var.$breakpoint-1xl) {
+                        animation-delay: 200ms;
+                    }
                 }
             }
 
@@ -107,7 +118,7 @@
                 }
 
                 @media (min-width: var.$breakpoint-1xl) {
-                    grid-column: 1 / span 6;
+                    grid-column: 1 / span 8;
                 }
             }
 
@@ -124,8 +135,10 @@
                 }
 
                 p {
+                    animation: fadein 1.2s 0.2s var(--easing) forwards;
                     margin: 0;
                     max-width: #{fn.rem(300)};
+                    opacity: 0;
                 }
 
                 hr {
