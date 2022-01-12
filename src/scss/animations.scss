@@ -12,11 +12,7 @@
         color: var(--primary);
         opacity: 0;
         filter: blur(0.05em);
-    }
-    50% {
-        color: var(--primary);
-        opacity: 0.8;
-    }
+    } 
     100% {
         color: var(--on-base);
         opacity: 1;
