@@ -16,8 +16,8 @@
         <hr>
         <div>
             <div class="legal">
-                <a sveltekit:prefetch href="/impressum">Impressum & Datenschutz</a>
                 <span>Armin Neuhauser © {year}</span>
+                <a sveltekit:prefetch href="/impressum">Impressum & Datenschutz</a>
             </div>
             <button on:click={() => animateScroll.scrollToTop()} title="Zurück nach oben">
                 {@html up}
