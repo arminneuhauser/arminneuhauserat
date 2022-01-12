@@ -82,16 +82,16 @@
 
 <section class="narrow">
     <div>
-        <Figure src="/images/solmates/solmates-home.jpg" alt="Solmates Startseite"></Figure>
+        <Figure src="/images/solmates/solmates-home.jpg" alt="Solmates Startseite" width="1536" height="3726" />
     </div>
 </section>
 
 <section class="col2 align-end">
     <div>
-        <Figure src="/images/solmates/solmates-san-blas-02.jpg" alt="Solmates San Blas Inseln" />
-        <Figure src="/images/solmates/solmates-costa-rica.jpg" alt="Solmates Costa Rica" />
-        <Figure src="/images/solmates/solmates-boquete.jpg" alt="Solmates Vulkan Baru" />
-        <Figure src="/images/solmates/solmates-peru.jpg" alt="Solmates Peru" />
+        <Figure src="/images/solmates/solmates-san-blas-02.jpg" alt="Solmates San Blas Inseln" width="1920" height="1280" />
+        <Figure src="/images/solmates/solmates-costa-rica.jpg" alt="Solmates Costa Rica" width="1920" height="1280" />
+        <Figure src="/images/solmates/solmates-boquete.jpg" alt="Solmates Vulkan Baru" width="1920" height="1280" />
+        <Figure src="/images/solmates/solmates-peru.jpg" alt="Solmates Peru" width="1920" height="1280" />
     </div>
 </section>
 
@@ -123,8 +123,8 @@
 
 <section class="col2">
     <div>
-        <Figure src="/images/solmates/solmates-buch.jpg" alt="Solmates Buch" />
-        <Figure src="/images/solmates/solmates-buch-02.jpg" alt="Solmates Buch Rückseite" />
+        <Figure src="/images/solmates/solmates-buch.jpg" alt="Solmates Buch" width="1536" height="1920" />
+        <Figure src="/images/solmates/solmates-buch-rueckseite.jpg" alt="Solmates Buch Rückseite" width="1536" height="1920" />
     </div>
 </section>
 
