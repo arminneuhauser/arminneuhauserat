@@ -46,15 +46,15 @@
 
 <section class="col2 align-end">
     <div>
-        <Figure src="/images/wohnformat/wohnformat1.jpg" alt="Wohnformat Startseite" />
-        <Figure src="/images/wohnformat/wohnformat4.jpg" alt="Wohnformat Tablets" />
+        <Figure src="/images/wohnformat/wohnformat1.jpg" alt="Wohnformat Startseite" width="1400" height="787" />
+        <Figure src="/images/wohnformat/wohnformat4.jpg" alt="Wohnformat Tablets" width="1400" height="788" />
     </div>
 </section>
 
 <section class="col2">
     <div>
-        <Figure src="/images/wohnformat/wohnformat2.jpg" alt="Wohnformat Kontakt" />
-        <Figure src="/images/wohnformat/wohnformat5.jpg" alt="Wohnformat Phones" />
+        <Figure src="/images/wohnformat/wohnformat2.jpg" alt="Wohnformat Kontakt" width="1400" height="1050" />
+        <Figure src="/images/wohnformat/wohnformat5.jpg" alt="Wohnformat Phones" width="1400" height="1050" />
     </div>
 </section>
 
