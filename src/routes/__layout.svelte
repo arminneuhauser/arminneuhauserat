@@ -1,5 +1,5 @@
 <script>
-    // import { page } from '$app/stores';
+    import { page } from '$app/stores';
     import '../scss/app.scss';
     import { fade } from 'svelte/transition';
     import { onMount, afterUpdate, beforeUpdate } from 'svelte';
@@ -7,7 +7,6 @@
     import Header from '$lib/header/Header.svelte';
     import Footer from '$lib/footer/Footer.svelte';
     import Progress from '$lib/progress/Progress.svelte';
-    import PageTransition from "$lib/page-transition/PageTransition.svelte"
     import CursorCreep from '$lib/cursor-creep/CursorCreep.svelte';
     import CookieBanner from '$lib/cookie-banner/CookieBanner.svelte';
     import Scene from '$lib/scene/Scene.svelte';
@@ -66,10 +65,10 @@
 
 <svelte:window
     on:sveltekit:navigation-start={() => {
-        // console.log('Navigation started!');
+        console.log('Navigation started!');
     }}
     on:sveltekit:navigation-end={() => {
-        // console.log('Navigation ended!');
+        console.log('Navigation ended!');
     }}
 />
 
@@ -79,9 +78,7 @@
         <Header />
 
             <main>
-                <PageTransition refresh={key}>
-                    <slot />
-                </PageTransition>
+                <slot />
             </main>
             
         <Footer />
