@@ -1,13 +1,19 @@
 <script>
+    import { page } from '$app/stores';
     import '../scss/app.scss';
-    import { onMount, afterUpdate } from 'svelte';
+    import { fade } from 'svelte/transition';
+    import { onMount, afterUpdate, beforeUpdate } from 'svelte';
     import { scheme, cookieConsent } from '../stores.js';
     import Header from '$lib/header/Header.svelte';
     import Footer from '$lib/footer/Footer.svelte';
+    import Progress from '$lib/progress/Progress.svelte';
     import CursorCreep from '$lib/cursor-creep/CursorCreep.svelte';
     import CookieBanner from '$lib/cookie-banner/CookieBanner.svelte';
     import Scene from '$lib/scene/Scene.svelte';
 
+    export let key;
+
+    let fontsReady = false;
     let scheme_value;
 
 	scheme.subscribe(value => {
@@ -15,6 +21,16 @@
 	});
 
     onMount(async () => {
+        document.fonts.ready
+        .then(async () => {
+            setTimeout(() => {
+                fontsReady = true;
+            }, 500);
+        })
+        .catch(() => {
+            console.error("fonts can't be loaded");
+        });
+
         // set initial height of app to prevent webkit 100vh magic
         // recalculate when width changes however
         let width = window.innerWidth;
@@ -49,27 +65,32 @@
 
 <svelte:window
     on:sveltekit:navigation-start={() => {
-        // console.log('Navigation started!');
+        console.log('Navigation started!');
     }}
     on:sveltekit:navigation-end={() => {
-        // console.log('Navigation ended!');
+        console.log('Navigation ended!');
     }}
 />
 
-<div>
-    <Header />
+{#if fontsReady}
+    <!-- <div in:fade={{ duration: 300, delay: 50 }}> -->
+    <div>
+        <Header />
 
-        <main>
-            <slot />
-        </main>
-        
-    <Footer />
+            <main>
+                <slot />
+            </main>
+            
+        <Footer />
+        <CursorCreep />
+        {#if $cookieConsent !== "true"}
+            <CookieBanner />
+        {/if}
 
-    <CursorCreep />
-
-    {#if $cookieConsent !== "true"}
-        <CookieBanner />
-    {/if}
-
-    <Scene />
-</div>
+        <Scene />
+    </div>
+{:else}
+    <div out:fade={{ duration: 250 }}>
+        <Progress />
+    </div>
+{/if}

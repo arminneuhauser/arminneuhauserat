@@ -4845,12 +4845,12 @@ var init_dist = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/Scene.svelte_svelte_type_style_lang-2822b95d.js
+// .svelte-kit/output/server/chunks/Scene.svelte_svelte_type_style_lang-e9c57401.js
 var getStores, page;
-var init_Scene_svelte_svelte_type_style_lang_2822b95d = __esm({
-  ".svelte-kit/output/server/chunks/Scene.svelte_svelte_type_style_lang-2822b95d.js"() {
+var init_Scene_svelte_svelte_type_style_lang_e9c57401 = __esm({
+  ".svelte-kit/output/server/chunks/Scene.svelte_svelte_type_style_lang-e9c57401.js"() {
     init_shims();
-    init_app_03b8560f();
+    init_app_8de5188f();
     getStores = () => {
       const stores = getContext("__svelte__");
       return {
@@ -4878,7 +4878,7 @@ var init_Scene_svelte_svelte_type_style_lang_2822b95d = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-fa8f98f1.js
+// .svelte-kit/output/server/chunks/index-91210d95.js
 function writable(value, start = noop) {
   let stop;
   const subscribers = new Set();
@@ -5110,14 +5110,37 @@ function tweened(value, defaults = {}) {
     subscribe: store.subscribe
   };
 }
-var subscriber_queue, scheme;
-var init_index_fa8f98f1 = __esm({
-  ".svelte-kit/output/server/chunks/index-fa8f98f1.js"() {
+var subscriber_queue, scheme, cookieConsent;
+var init_index_91210d95 = __esm({
+  ".svelte-kit/output/server/chunks/index-91210d95.js"() {
     init_shims();
-    init_app_03b8560f();
+    init_app_8de5188f();
     subscriber_queue = [];
     scheme = writable("dark");
+    cookieConsent = writable("false");
     scheme.subscribe((val) => {
+    });
+    cookieConsent.subscribe((val) => {
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/DeathStar-7049927a.js
+var deathStarIcon, css, DeathStar;
+var init_DeathStar_7049927a = __esm({
+  ".svelte-kit/output/server/chunks/DeathStar-7049927a.js"() {
+    init_shims();
+    init_app_8de5188f();
+    init_index_91210d95();
+    deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>';
+    css = {
+      code: "button.svelte-iyvpaf{display:flex}",
+      map: null
+    };
+    DeathStar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css);
+      return `<button class="${"death-star svelte-iyvpaf"}" title="${"Farbschema wechseln"}"><!-- HTML_TAG_START -->${deathStarIcon}<!-- HTML_TAG_END -->
+</button>`;
     });
   }
 });
@@ -20635,19 +20658,20 @@ var require_debounce = __commonJS({
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout-0ea74923.js
-var layout_0ea74923_exports = {};
-__export(layout_0ea74923_exports, {
+// .svelte-kit/output/server/chunks/__layout-bed4846a.js
+var layout_bed4846a_exports = {};
+__export(layout_bed4846a_exports, {
   default: () => _layout,
   load: () => load
 });
-var import_app, import_graphics, import_display, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_utils, import_cookie, css, Progress, load, _layout;
-var init_layout_0ea74923 = __esm({
-  ".svelte-kit/output/server/chunks/__layout-0ea74923.js"() {
+var import_app, import_graphics, import_display, import_constants, import_core, import_interaction, import_ticker, import_filter_kawase_blur, import_filter_noise, import_filter_color_matrix, import_hsl_to_hex, import_debounce, import_utils, import_cookie, makiMix, css$4, Header, up, css$3, Footer, css$2, baseSize, CursorCreep, css$1, CookieBanner, css2, Scene, load, _layout;
+var init_layout_bed4846a = __esm({
+  ".svelte-kit/output/server/chunks/__layout-bed4846a.js"() {
     init_shims();
-    init_app_03b8560f();
-    init_Scene_svelte_svelte_type_style_lang_2822b95d();
-    init_index_fa8f98f1();
+    init_app_8de5188f();
+    init_Scene_svelte_svelte_type_style_lang_e9c57401();
+    init_index_91210d95();
+    init_DeathStar_7049927a();
     init_dist2();
     import_app = __toModule(require_app());
     import_graphics = __toModule(require_graphics());
@@ -20665,59 +20689,127 @@ var init_layout_0ea74923 = __esm({
     import_utils = __toModule(require_utils());
     import_cookie = __toModule(require_cookie());
     init_dist();
-    css = {
-      code: '.progress.svelte-1e2qztx.svelte-1e2qztx{position:fixed;bottom:2.5rem;left:2.5rem;right:2.5rem;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}.progress.svelte-1e2qztx>div.svelte-1e2qztx{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline}.number.svelte-1e2qztx.svelte-1e2qztx{font-size:clamp(4rem, 2.9038461538rem + 4.8717948718vw, 8.75rem)}@media(prefers-reduced-motion: reduce){.number.svelte-1e2qztx.svelte-1e2qztx{display:none}}.progress-bar.svelte-1e2qztx.svelte-1e2qztx{height:0.0625rem;background-color:hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.1)}@media(prefers-reduced-motion: reduce){.progress-bar.svelte-1e2qztx.svelte-1e2qztx{display:none !important}}.progress-sliver.svelte-1e2qztx.svelte-1e2qztx{width:var(--width);background-color:hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.5);height:100%}',
+    makiMix = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <rect x="5" y="5" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="11" y="5" width="2" height="2" fill="currentColor"/>\n    <rect x="17" y="5" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="5" y="11" width="2" height="2" fill="currentColor"/>\n    <rect x="11" y="11" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="17" y="11" width="2" height="2" fill="currentColor"/>\n    <rect x="5" y="17" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="11" y="17" width="2" height="2" fill="currentColor"/>\n    <rect x="17" y="17" width="2" height="2" fill="currentColor"/>\n</svg>\n';
+    css$4 = {
+      code: '@keyframes svelte-vdl2vb-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-vdl2vb-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-vdl2vb-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-vdl2vb-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-vdl2vb-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-vdl2vb-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-vdl2vb-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-vdl2vb-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-vdl2vb-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-vdl2vb-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-vdl2vb-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}header.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{position:fixed;top:0;left:0;right:0;z-index:10;pointer-events:none}@media(prefers-reduced-motion: no-preference){header.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{animation:svelte-vdl2vb-fadein-from-primary 1s var(--easing) forwards}}header.svelte-vdl2vb>section.svelte-vdl2vb.svelte-vdl2vb{align-items:center;color:var(--header-color, var(--on-base));display:flex;font-size:clamp(0.8125rem, 0.625rem + 0.234375vw, 1rem);justify-content:space-between;padding:0.625rem var(--core-padding);text-align:left;text-transform:uppercase}@media(max-width: 767px){header.svelte-vdl2vb>section.svelte-vdl2vb>div.svelte-vdl2vb:not(.logo){display:none}}@media(min-width: 768px){header.svelte-vdl2vb>section.svelte-vdl2vb.svelte-vdl2vb{display:grid;grid-column-gap:1.25rem;grid-template-columns:repeat(4, 1fr);padding-top:1.875rem;padding-bottom:1.875rem;align-items:flex-start;max-width:var(--core-max-width);margin:0 auto}}header.svelte-vdl2vb>section.svelte-vdl2vb>.svelte-vdl2vb{pointer-events:auto}header.svelte-vdl2vb>section div.svelte-vdl2vb.svelte-vdl2vb{display:flex;flex-direction:column;align-items:flex-start}[color-scheme="dark"] header.svelte-vdl2vb>section.svelte-vdl2vb.svelte-vdl2vb{color:var(--on-base)}[color-scheme="dark"] header.svelte-vdl2vb>section.svelte-vdl2vb.svelte-vdl2vb::before{content:"";background:linear-gradient(0deg, hsla(var(--base-h), var(--base-s), var(--base-l), 0), hsla(var(--base-h), var(--base-s), var(--base-l), 0.2) 70%, hsla(var(--base-h), var(--base-s), var(--base-l), 0.9));position:fixed;left:0;top:0;width:100%;height:12.5rem;z-index:-1;pointer-events:none !important}.logo.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{font-weight:500;margin-left:-0.625rem}.last.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{flex-direction:row;justify-content:space-between;align-items:flex-start;margin-right:-0.375rem}.last.svelte-vdl2vb button{padding:0.25em;transition:color 0.2s var(--easing)}.last.svelte-vdl2vb button:hover{color:var(--primary)}.last.svelte-vdl2vb svg{height:1.85em;width:1.85em}a.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb,span.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{padding:0.625rem;box-sizing:border-box}@media(min-width: 768px){a.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb,span.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{padding-top:0.25em;padding-bottom:0.25em}}[color-scheme="highcontrast"] a.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb,[color-scheme="highcontrast"] span.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{font-weight:500}a.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{transition:all 0.2s var(--easing)}a.svelte-vdl2vb i.svelte-vdl2vb.svelte-vdl2vb{display:inline-block;font-style:normal;pointer-events:none}@media(prefers-reduced-motion: no-preference){a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb{animation:svelte-vdl2vb-flip-and-back 0.5s 0.02s var(--easing)}}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(2){animation-delay:0.04s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(3){animation-delay:0.06s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(4){animation-delay:0.08s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(5){animation-delay:0.1s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(6){animation-delay:0.12s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(7){animation-delay:0.14s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(8){animation-delay:0.16s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(9){animation-delay:0.18s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(10){animation-delay:0.2s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(11){animation-delay:0.22s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(12){animation-delay:0.24s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(13){animation-delay:0.26s}a.svelte-vdl2vb:hover i.svelte-vdl2vb.svelte-vdl2vb:nth-child(14){animation-delay:0.28s}.maki-mix.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{display:flex;align-items:center;justify-content:center;padding:0.625rem;margin-right:-0.9375rem}.maki-mix.active.svelte-vdl2vb .yummy{display:none}@media(min-width: 768px){.maki-mix.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{display:none}}.mobile-nav.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{box-sizing:border-box;position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden;overflow-y:auto;background-color:var(--base);opacity:0;pointer-events:none;transition:opacity 0.4s cubic-bezier(0.7, 0, 0.3, 1);z-index:9;height:100vh}@media(max-width: 767px){.mobile-nav.active.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{opacity:1;pointer-events:all}.mobile-nav.active.svelte-vdl2vb a.svelte-vdl2vb.svelte-vdl2vb{transform:rotateY(0deg);opacity:1}.mobile-nav.active.svelte-vdl2vb a span.svelte-vdl2vb.svelte-vdl2vb{animation:svelte-vdl2vb-to-top 0.8s 0.2s var(--easing) forwards}.mobile-nav.active.svelte-vdl2vb a:nth-child(2) span.svelte-vdl2vb.svelte-vdl2vb{animation-delay:0.3s}.mobile-nav.active.svelte-vdl2vb a:nth-child(3) span.svelte-vdl2vb.svelte-vdl2vb{animation-delay:0.4s}.mobile-nav.active.svelte-vdl2vb a:nth-child(4) span.svelte-vdl2vb.svelte-vdl2vb{animation-delay:0.5s}.mobile-nav.active.svelte-vdl2vb footer h3 span.svelte-vdl2vb.svelte-vdl2vb{animation:svelte-vdl2vb-to-top 0.8s 0.7s var(--easing) forwards}.mobile-nav.active.svelte-vdl2vb footer a span.svelte-vdl2vb.svelte-vdl2vb{animation-delay:1s !important}}@media(min-width: 768px){.mobile-nav.svelte-vdl2vb.svelte-vdl2vb.svelte-vdl2vb{display:none}}.mobile-nav.svelte-vdl2vb>nav.svelte-vdl2vb.svelte-vdl2vb{height:var(--app-height);padding:6.25rem var(--core-padding) var(--core-padding);box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}.mobile-nav.svelte-vdl2vb>nav.svelte-vdl2vb>div.svelte-vdl2vb{flex-grow:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:6.25rem}.mobile-nav.svelte-vdl2vb a.svelte-vdl2vb.svelte-vdl2vb{display:flex;font-size:2rem;line-height:2;width:100%;text-transform:uppercase;overflow:hidden;padding:0}.mobile-nav.svelte-vdl2vb a span.svelte-vdl2vb.svelte-vdl2vb{transform:translate3d(0, 100%, 0);padding:0}.mobile-nav.svelte-vdl2vb footer.svelte-vdl2vb.svelte-vdl2vb{margin-top:auto}.mobile-nav.svelte-vdl2vb footer h3.svelte-vdl2vb.svelte-vdl2vb,.mobile-nav.svelte-vdl2vb footer a.svelte-vdl2vb.svelte-vdl2vb{overflow:hidden}.mobile-nav.svelte-vdl2vb footer h3 span.svelte-vdl2vb.svelte-vdl2vb,.mobile-nav.svelte-vdl2vb footer a span.svelte-vdl2vb.svelte-vdl2vb{display:inline-flex;transform:translate3d(0, 100%, 0)}.mobile-nav.svelte-vdl2vb footer h3.svelte-vdl2vb.svelte-vdl2vb{font:var(--w1-serif);font-size:1.5rem;margin:0 0 0.625rem}.mobile-nav.svelte-vdl2vb footer h3 span.svelte-vdl2vb.svelte-vdl2vb{padding:0}.mobile-nav.svelte-vdl2vb footer a.svelte-vdl2vb.svelte-vdl2vb{font:var(--w1-sans);text-transform:none;text-decoration:underline;text-underline-offset:0.2em}',
       map: null
     };
-    Progress = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let $$unsubscribe_progress = noop, $$subscribe_progress = () => ($$unsubscribe_progress(), $$unsubscribe_progress = subscribe(progress, ($$value) => $$value), progress);
+    Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $page, $$unsubscribe_page;
       $$unsubscribe_page = subscribe(page, (value) => $page = value);
-      let progress = tweened(0);
-      $$subscribe_progress();
-      $$result.css.add(css);
-      $$unsubscribe_progress();
+      let now2 = new Date(), year = now2.getFullYear();
+      $$result.css.add(css$4);
       $$unsubscribe_page();
-      return `${$$result.head += `<script data-svelte="svelte-kw2fqm">var preProgress = 0;
+      return `
 
-        setTimeout(() => {
-            if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
-                setInterval(() => {
-                    if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
-                        if (parseInt(document.getElementById("preProgressNumber").innerText) < 70) {
-                            document.getElementById("preProgressNumber").innerText = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
-                            preProgress = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
-                            document.getElementById("preProgressSliver").style.setProperty('--width', \`\${preProgress}%\`);
-                        }
-                    }
-                }, 100);
-            }
-        }, 500);
-    <\/script>`, ""}
+<header class="${"svelte-vdl2vb"}"><section class="${"svelte-vdl2vb"}"><div class="${"logo svelte-vdl2vb"}"><a sveltekit:prefetch href="${"/"}" title="${"Armin Neuhauser"}" class="${"svelte-vdl2vb"}"><i class="${"svelte-vdl2vb"}">A</i><i class="${"svelte-vdl2vb"}">r</i><i class="${"svelte-vdl2vb"}">m</i><i class="${"svelte-vdl2vb"}">i</i><i class="${"svelte-vdl2vb"}">n</i> <i class="${"svelte-vdl2vb"}">N</i><i class="${"svelte-vdl2vb"}">e</i><i class="${"svelte-vdl2vb"}">u</i><i class="${"svelte-vdl2vb"}">h</i><i class="${"svelte-vdl2vb"}">a</i><i class="${"svelte-vdl2vb"}">u</i><i class="${"svelte-vdl2vb"}">s</i><i class="${"svelte-vdl2vb"}">e</i><i class="${"svelte-vdl2vb"}">r</i></a></div>
+        <div class="${"svelte-vdl2vb"}"><div class="${"svelte-vdl2vb"}"><a sveltekit:prefetch href="${"/projekte"}" title="${"Projekte"}" class="${["svelte-vdl2vb", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-vdl2vb"}">P</i><i class="${"svelte-vdl2vb"}">r</i><i class="${"svelte-vdl2vb"}">o</i><i class="${"svelte-vdl2vb"}">j</i><i class="${"svelte-vdl2vb"}">e</i><i class="${"svelte-vdl2vb"}">k</i><i class="${"svelte-vdl2vb"}">t</i><i class="${"svelte-vdl2vb"}">e</i></a></div>
+            <div class="${"svelte-vdl2vb"}"><a sveltekit:prefetch href="${"/ueber-mich"}" title="${"\xDCber mich"}" class="${["svelte-vdl2vb", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-vdl2vb"}">\xDC</i><i class="${"svelte-vdl2vb"}">b</i><i class="${"svelte-vdl2vb"}">e</i><i class="${"svelte-vdl2vb"}">r</i> <i class="${"svelte-vdl2vb"}">m</i><i class="${"svelte-vdl2vb"}">i</i><i class="${"svelte-vdl2vb"}">c</i><i class="${"svelte-vdl2vb"}">h</i></a></div></div>
+        <div class="${"svelte-vdl2vb"}"><a sveltekit:prefetch href="${"/kontakt"}" title="${"Kontakt"}" class="${["svelte-vdl2vb", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-vdl2vb"}">K</i><i class="${"svelte-vdl2vb"}">o</i><i class="${"svelte-vdl2vb"}">n</i><i class="${"svelte-vdl2vb"}">t</i><i class="${"svelte-vdl2vb"}">a</i><i class="${"svelte-vdl2vb"}">k</i><i class="${"svelte-vdl2vb"}">t</i></a></div>
+        <div class="${"last svelte-vdl2vb"}"><span class="${"svelte-vdl2vb"}">\xA9${escape(year)}</span>
+            ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div>
+        <button class="${["maki-mix svelte-vdl2vb", ""].join(" ").trim()}"${add_attribute("title", "Men\xFC anzeigen", 0)}><!-- HTML_TAG_START -->${makiMix}<!-- HTML_TAG_END --></button></section></header>
 
-<div class="${"progress svelte-1e2qztx"}"><div class="${"svelte-1e2qztx"}"><div class="${"number svelte-1e2qztx"}">${`<span id="${"preProgressNumber"}">0</span>%`}</div>
-        <div class="${"path"}">loading ${escape($page.path == "/" ? "/start" : $page.path)}</div></div>
-    
-    <div class="${"progress-bar svelte-1e2qztx"}">${`<div id="${"preProgressSliver"}" class="${"progress-sliver svelte-1e2qztx"}"></div>`}</div>
+<aside class="${["mobile-nav svelte-vdl2vb", ""].join(" ").trim()}"><nav class="${"svelte-vdl2vb"}"><div class="${"svelte-vdl2vb"}"><a sveltekit:prefetch href="${"/"}" title="${"Start"}" class="${["svelte-vdl2vb", $page.path === "/" ? "active" : ""].join(" ").trim()}"><span class="${"svelte-vdl2vb"}">Start</span></a>
+            <a sveltekit:prefetch href="${"/projekte"}" title="${"Projekte"}" class="${"svelte-vdl2vb"}"><span class="${"svelte-vdl2vb"}">Projekte</span></a>
+            <a sveltekit:prefetch href="${"/ueber-mich"}" title="${"\xDCber mich"}" class="${"svelte-vdl2vb"}"><span class="${"svelte-vdl2vb"}">\xDCber mich</span></a>
+            <a sveltekit:prefetch href="${"/kontakt"}" title="${"Kontakt"}" class="${"svelte-vdl2vb"}"><span class="${"svelte-vdl2vb"}">Kontakt</span></a></div>
+        <footer class="${"svelte-vdl2vb"}"><h3 class="${"svelte-vdl2vb"}"><span class="${"svelte-vdl2vb"}">Sag Hallo</span></h3>
+            <a href="${"mailto:mail@arminneuhauser.at"}" class="${"svelte-vdl2vb"}"><span class="${"svelte-vdl2vb"}">mail@arminneuhauser.at</span></a></footer></nav>
+</aside>`;
+    });
+    up = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <path d="M11.6464 0.146447C11.8417 -0.0488155 12.1583 -0.0488155 12.3536 0.146447L17.3536 5.14645C17.5488 5.34171 17.5488 5.65829 17.3536 5.85355C17.1583 6.04882 16.8417 6.04882 16.6464 5.85355L12 1.20711L7.35355 5.85355C7.15829 6.04882 6.84171 6.04882 6.64645 5.85355C6.45118 5.65829 6.45118 5.34171 6.64645 5.14645L11.6464 0.146447Z" fill="currentColor"/>\n    <path d="M12 0C12.2761 0 12.5 0.223858 12.5 0.5V23.5C12.5 23.7761 12.2761 24 12 24C11.7239 24 11.5 23.7761 11.5 23.5V0.5C11.5 0.223858 11.7239 0 12 0Z" fill="currentColor"/>\n</svg>\n';
+    css$3 = {
+      code: 'footer.svelte-t860qa.svelte-t860qa.svelte-t860qa{background-color:var(--base);padding:4.375rem var(--core-padding) var(--core-padding);position:relative}@media(min-width: 768px){footer.svelte-t860qa.svelte-t860qa.svelte-t860qa{padding-top:1.875rem;padding-bottom:1.875rem}}footer.svelte-t860qa>div.svelte-t860qa.svelte-t860qa{max-width:var(--core-max-width);margin:0 auto}footer.svelte-t860qa>div.svelte-t860qa>div.svelte-t860qa{display:flex;align-items:center;justify-content:space-between}footer.svelte-t860qa h1.svelte-t860qa.svelte-t860qa{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 1.5384615385rem + 2.0512820513vw, 4rem);line-height:1.1}footer.svelte-t860qa p.svelte-t860qa.svelte-t860qa{opacity:0.7}[color-scheme="highcontrast"] footer.svelte-t860qa p.svelte-t860qa.svelte-t860qa{opacity:1}footer.svelte-t860qa .mail.svelte-t860qa.svelte-t860qa{font-size:clamp(1.125rem, 1.0384615385rem + 0.3846153846vw, 1.5rem);margin:0 -0.625rem;padding:0.625rem;text-decoration:underline;text-underline-offset:0.2em;transition:color 0.2s var(--easing)}footer.svelte-t860qa .mail.svelte-t860qa.svelte-t860qa:hover{color:var(--primary)}footer.svelte-t860qa .legal.svelte-t860qa.svelte-t860qa{font-size:0.8125rem;display:flex;flex-direction:column;align-items:flex-start;gap:0.15em}@media(min-width: 768px){footer.svelte-t860qa .legal.svelte-t860qa.svelte-t860qa{font-size:0.875rem}}footer.svelte-t860qa .legal.svelte-t860qa>.svelte-t860qa{opacity:0.5}[color-scheme="highcontrast"] footer.svelte-t860qa .legal.svelte-t860qa>.svelte-t860qa{opacity:1}footer.svelte-t860qa .legal a.svelte-t860qa.svelte-t860qa{text-decoration:underline;transition:opacity 0.2s var(--easing)}footer.svelte-t860qa .legal a.svelte-t860qa.svelte-t860qa:hover{opacity:0.6}footer.svelte-t860qa button.svelte-t860qa.svelte-t860qa{display:flex;align-items:center;justify-content:center;padding:0.625rem;margin-right:-0.625rem;transition:color 0.2s var(--easing)}footer.svelte-t860qa button.svelte-t860qa.svelte-t860qa:hover{color:var(--primary)}footer.svelte-t860qa hr.svelte-t860qa.svelte-t860qa{margin:2.5rem 0 1.25rem}',
+      map: null
+    };
+    Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let now2 = new Date(), year = now2.getFullYear();
+      $$result.css.add(css$3);
+      return `<footer class="${"svelte-t860qa"}"><div class="${"svelte-t860qa"}"><h1 class="${"svelte-t860qa"}">Lass uns gemeinsam Gro\xDFes erschaffen</h1>
+        <p class="${"svelte-t860qa"}">Jede Ausfahrt sollte mit einem guten Kaffee abgeschlossen werden.<br> Also komm vorbei und sag Hallo.
+        </p>
+        <a href="${"mailto:mail@arminneuhauser.at"}" class="${"mail svelte-t860qa"}">mail@arminneuhauser.at</a>
+        <hr class="${"svelte-t860qa"}">
+        <div class="${"svelte-t860qa"}"><div class="${"legal svelte-t860qa"}"><span class="${"svelte-t860qa"}">Armin Neuhauser \xA9 ${escape(year)}</span>
+                <a sveltekit:prefetch href="${"/impressum"}" class="${"svelte-t860qa"}">Impressum &amp; Datenschutz</a></div>
+            <button title="${"Zur\xFCck nach oben"}" class="${"svelte-t860qa"}"><!-- HTML_TAG_START -->${up}<!-- HTML_TAG_END --></button></div></div>
+</footer>`;
+    });
+    css$2 = {
+      code: "svg.svelte-15pfraj{position:fixed;width:100%;height:100%;pointer-events:none;z-index:20;mix-blend-mode:exclusion;display:none}@media(pointer: fine) and (prefers-reduced-motion: no-preference){svg.svelte-15pfraj{display:block}}circle.svelte-15pfraj{color:#fff}",
+      map: null
+    };
+    baseSize = 6;
+    CursorCreep = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $coords, $$unsubscribe_coords;
+      let $size, $$unsubscribe_size;
+      let coords = spring({ x: -baseSize, y: -baseSize }, { stiffness: 0.3, damping: 1 });
+      $$unsubscribe_coords = subscribe(coords, (value) => $coords = value);
+      let size = spring(baseSize);
+      $$unsubscribe_size = subscribe(size, (value) => $size = value);
+      $$result.css.add(css$2);
+      $$unsubscribe_coords();
+      $$unsubscribe_size();
+      return `
+
+<svg class="${"svelte-15pfraj"}"><circle${add_attribute("cx", $coords.x, 0)}${add_attribute("cy", $coords.y, 0)}${add_attribute("r", $size, 0)} fill="${"currentColor"}" class="${"svelte-15pfraj"}"></circle></svg>`;
+    });
+    css$1 = {
+      code: ".cookies.svelte-8l7shw.svelte-8l7shw{position:fixed;bottom:0;left:0;width:100%;text-align:center;padding:var(--core-padding);box-sizing:border-box;display:flex;justify-content:center;pointer-events:none;z-index:15}.cookies.svelte-8l7shw>div.svelte-8l7shw{background:var(--base);border:1px solid hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.1);border-radius:0.625rem;padding:0.9375rem 1.25rem 0.625rem;pointer-events:auto;display:flex;flex-direction:column}@media(min-width: 1024px){.cookies.svelte-8l7shw>div.svelte-8l7shw{flex-direction:row;align-items:center;padding:0.625rem 2.1875rem}}.cookies.svelte-8l7shw p.svelte-8l7shw{font-size:clamp(0.8125rem, 0.7692307692rem + 0.1923076923vw, 1rem);margin:0}.cookies.svelte-8l7shw button.svelte-8l7shw{font-size:0.9375rem;font-weight:500;color:var(--primary);padding:0.3125rem 0.625rem;transition:color 0.2s var(--easing)}@media(min-width: 1024px){.cookies.svelte-8l7shw button.svelte-8l7shw{font-size:clamp(0.8125rem, 0.7692307692rem + 0.1923076923vw, 1rem)}}.cookies.svelte-8l7shw button.svelte-8l7shw:hover{color:var(--on-base)}",
+      map: null
+    };
+    CookieBanner = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css$1);
+      return `<div class="${"cookies svelte-8l7shw"}"><div class="${"svelte-8l7shw"}"><p class="${"svelte-8l7shw"}">Diese Website nutzt Cookies.</p>
+        <button class="${"svelte-8l7shw"}">OK</button></div>
 </div>`;
+    });
+    css2 = {
+      code: "canvas.svelte-1konbxi{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1}",
+      map: null
+    };
+    Scene = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      if (!(import_core.Renderer.__plugins ?? {}).hasOwnProperty("interaction")) {
+        import_core.Renderer.registerPlugin("interaction", import_interaction.InteractionManager);
+      }
+      if (!(import_core.Renderer.__plugins ?? {}).hasOwnProperty("batch")) {
+        import_core.Renderer.registerPlugin("batch", import_core.BatchRenderer);
+      }
+      if (!(import_app.Application._plugins || []).some((plugin) => plugin === import_ticker.TickerPlugin)) {
+        import_app.Application.registerPlugin(import_ticker.TickerPlugin);
+      }
+      let view;
+      $$result.css.add(css2);
+      return `<canvas class="${"svelte-1konbxi"}"${add_attribute("this", view, 0)}></canvas>`;
     });
     load = async ({ page: page2 }) => ({ props: { key: page2.path } });
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { key } = $$props;
+      let $cookieConsent, $$unsubscribe_cookieConsent;
+      $$unsubscribe_cookieConsent = subscribe(cookieConsent, (value) => $cookieConsent = value);
       scheme.subscribe((value) => {
       });
-      if ($$props.key === void 0 && $$bindings.key && key !== void 0)
-        $$bindings.key(key);
+      $$unsubscribe_cookieConsent();
       return `
 
-${`<div>${validate_component(Progress, "Progress").$$render($$result, {}, {}, {})}</div>`}`;
+<div>${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
+
+        <main>${slots.default ? slots.default({}) : ``}</main>
+        
+    ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
+
+    ${validate_component(CursorCreep, "CursorCreep").$$render($$result, {}, {}, {})}
+
+    ${$cookieConsent !== "true" ? `${validate_component(CookieBanner, "CookieBanner").$$render($$result, {}, {}, {})}` : ``}
+
+    ${validate_component(Scene, "Scene").$$render($$result, {}, {}, {})}</div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/__error-bfa49163.js
-var error_bfa49163_exports = {};
-__export(error_bfa49163_exports, {
+// .svelte-kit/output/server/chunks/__error-d1c7e3c5.js
+var error_d1c7e3c5_exports = {};
+__export(error_d1c7e3c5_exports, {
   default: () => _error,
   load: () => load2
 });
@@ -20730,14 +20822,14 @@ function load2({ error: error2, status }) {
     }
   };
 }
-var import_cookie2, css2, _error;
-var init_error_bfa49163 = __esm({
-  ".svelte-kit/output/server/chunks/__error-bfa49163.js"() {
+var import_cookie2, css3, _error;
+var init_error_d1c7e3c5 = __esm({
+  ".svelte-kit/output/server/chunks/__error-d1c7e3c5.js"() {
     init_shims();
-    init_app_03b8560f();
+    init_app_8de5188f();
     import_cookie2 = __toModule(require_cookie());
     init_dist();
-    css2 = {
+    css3 = {
       code: "section.svelte-1roueoo{box-sizing:border-box;padding:9.375rem var(--core-padding)}div.svelte-1roueoo{max-width:var(--core-max-width);margin:0 auto}h1.svelte-1roueoo{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 0.875rem + 5vw, 6.875rem);line-height:1;margin:0.5em 0}p.svelte-1roueoo{font-size:1.25rem}a.svelte-1roueoo{text-decoration:underline}",
       map: null
     };
@@ -20748,7 +20840,7 @@ var init_error_bfa49163 = __esm({
         $$bindings.title(title);
       if ($$props.message === void 0 && $$bindings.message && message !== void 0)
         $$bindings.message(message);
-      $$result.css.add(css2);
+      $$result.css.add(css3);
       return `${$$result.head += `${$$result.title = `<title>Armin Neuhauser | ${escape(title)} Error</title>`, ""}`, ""}
 
 <section class="${"svelte-1roueoo"}"><div class="${"svelte-1roueoo"}"><h1 class="${"svelte-1roueoo"}">${escape(title)}</h1>
@@ -20759,32 +20851,12 @@ var init_error_bfa49163 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/DeathStar-d5b8ee16.js
-var deathStarIcon, css3, DeathStar;
-var init_DeathStar_d5b8ee16 = __esm({
-  ".svelte-kit/output/server/chunks/DeathStar-d5b8ee16.js"() {
-    init_shims();
-    init_app_03b8560f();
-    init_index_fa8f98f1();
-    deathStarIcon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor" d="M12.5745 3.01804C12.4465 3.00607 12.3175 3 12.1875 3C12.1623 3 12.1372 3.00023 12.112 3.00068C12.0747 3.00023 12.0374 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C12.0374 21 12.0747 20.9998 12.112 20.9993C12.1372 20.9998 12.1623 21 12.1875 21C12.3175 21 12.4465 20.9939 12.5745 20.982C17.2773 20.6857 21 16.7776 21 12C21 7.2224 17.2773 3.31427 12.5745 3.01804ZM12 20.25V3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25ZM15.6276 19.4117C18.3652 18.0693 20.25 15.2548 20.25 12C20.25 8.74524 18.3652 5.93069 15.6276 4.58826C17.2118 6.21185 18.2499 8.92594 18.2499 12C18.2499 15.0741 17.2118 17.7881 15.6276 19.4117ZM15.8523 17.945C16.8553 16.4559 17.4999 14.3563 17.4999 12C17.4999 9.64371 16.8553 7.54407 15.8523 6.05505C15.2588 5.17405 14.5597 4.53038 13.8092 4.15059C14.8183 5.69296 15.5 8.6302 15.5 12C15.5 15.3698 14.8183 18.307 13.8092 19.8494C14.5597 19.4696 15.2588 18.8259 15.8523 17.945ZM12.75 4.03182C12.8015 4.07978 12.8552 4.13535 12.9111 4.19959C13.2261 4.56167 13.544 5.12906 13.8259 5.89509C14.3876 7.42122 14.75 9.5795 14.75 12C14.75 14.4205 14.3876 16.5788 13.8259 18.1049C13.544 18.8709 13.2261 19.4383 12.9111 19.8004C12.8552 19.8646 12.8015 19.9202 12.75 19.9682V4.03182Z"/>\n</svg>';
-    css3 = {
-      code: "button.svelte-iyvpaf{display:flex}",
-      map: null
-    };
-    DeathStar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css3);
-      return `<button class="${"death-star svelte-iyvpaf"}" title="${"Farbschema wechseln"}"><!-- HTML_TAG_START -->${deathStarIcon}<!-- HTML_TAG_END -->
-</button>`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/IntersectionObserver-c7b56316.js
+// .svelte-kit/output/server/chunks/IntersectionObserver-ba966075.js
 var IntersectionObserver_1;
-var init_IntersectionObserver_c7b56316 = __esm({
-  ".svelte-kit/output/server/chunks/IntersectionObserver-c7b56316.js"() {
+var init_IntersectionObserver_ba966075 = __esm({
+  ".svelte-kit/output/server/chunks/IntersectionObserver-ba966075.js"() {
     init_shims();
-    init_app_03b8560f();
+    init_app_8de5188f();
     IntersectionObserver_1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { element = null } = $$props;
       let { once = false } = $$props;
@@ -20825,47 +20897,47 @@ var init_arrow_c94cf332 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-8451d8a1.js
-var index_8451d8a1_exports = {};
-__export(index_8451d8a1_exports, {
+// .svelte-kit/output/server/chunks/index-29ca0329.js
+var index_29ca0329_exports = {};
+__export(index_29ca0329_exports, {
   default: () => Routes,
   prerender: () => prerender
 });
-var import_cookie3, css$3, Hero, css$2, Teaser, wheel, css$1, LatestWork, css4, Wisdom, prerender, Routes;
-var init_index_8451d8a1 = __esm({
-  ".svelte-kit/output/server/chunks/index-8451d8a1.js"() {
+var import_cookie3, css$32, Hero, css$22, Teaser, wheel, css$12, LatestWork, css4, Wisdom, prerender, Routes;
+var init_index_29ca0329 = __esm({
+  ".svelte-kit/output/server/chunks/index-29ca0329.js"() {
     init_shims();
-    init_app_03b8560f();
-    init_DeathStar_d5b8ee16();
-    init_IntersectionObserver_c7b56316();
-    init_index_fa8f98f1();
+    init_app_8de5188f();
+    init_DeathStar_7049927a();
+    init_IntersectionObserver_ba966075();
+    init_index_91210d95();
     init_arrow_c94cf332();
     import_cookie3 = __toModule(require_cookie());
     init_dist();
-    css$3 = {
-      code: '@keyframes svelte-1qjbrof-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1qjbrof-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1qjbrof-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1qjbrof-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1qjbrof-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1qjbrof-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1qjbrof-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1qjbrof-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1qjbrof-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1qjbrof-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1qjbrof-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.hero.svelte-1qjbrof.svelte-1qjbrof.svelte-1qjbrof{align-items:start;box-sizing:border-box;display:grid;grid-column-gap:0;grid-gap:0.3125rem;grid-template-columns:auto clamp(19.375rem, 11rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;min-height:var(--app-height, 100vh);padding:var(--core-padding) 0;z-index:1}.headline.svelte-1qjbrof.svelte-1qjbrof.svelte-1qjbrof{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.headline.svelte-1qjbrof .sphere.svelte-1qjbrof.svelte-1qjbrof{animation:svelte-1qjbrof-fadein 2s var(--easing) forwards;display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.8);border-radius:50%;mix-blend-mode:soft-light;will-change:opacity;opacity:0}h1.svelte-1qjbrof.svelte-1qjbrof.svelte-1qjbrof{font-family:var(--serif);font-weight:700;font-size:clamp(2.875rem, 1.7524271845rem + 3.5922330097vw, 7.5rem);line-height:0.85;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:1}[color-scheme="highcontrast"] h1.svelte-1qjbrof.svelte-1qjbrof.svelte-1qjbrof{line-height:1}[color-scheme="highcontrast"] h1.svelte-1qjbrof span.svelte-1qjbrof.svelte-1qjbrof{margin:0 !important}@media(prefers-reduced-motion: no-preference){h1.svelte-1qjbrof.svelte-1qjbrof.svelte-1qjbrof{opacity:0;animation:svelte-1qjbrof-fadein-from-primary 2s var(--easing) forwards}}h1.svelte-1qjbrof span.svelte-1qjbrof.svelte-1qjbrof{display:block}h1.svelte-1qjbrof span.svelte-1qjbrof.svelte-1qjbrof:first-child{margin-right:0.6em}h1.svelte-1qjbrof span.svelte-1qjbrof.svelte-1qjbrof:last-child{margin-left:1em}@media(prefers-reduced-motion: no-preference){h1.svelte-1qjbrof span.svelte-1qjbrof.svelte-1qjbrof{animation:svelte-1qjbrof-to-top-10 0.5s var(--easing) forwards}}.bottom.svelte-1qjbrof.svelte-1qjbrof.svelte-1qjbrof{grid-column:1/span 3;padding:0 var(--core-padding)}.bottom.svelte-1qjbrof>div.svelte-1qjbrof.svelte-1qjbrof{display:grid;grid-template-columns:1.875rem 1fr 1.875rem;max-width:var(--core-max-width);margin:0 auto;align-items:center}@media(min-width: 768px){.bottom.svelte-1qjbrof>div.svelte-1qjbrof.svelte-1qjbrof{grid-template-columns:2.75rem 1fr 2.75rem}}@media(prefers-reduced-motion: no-preference){.bottom.svelte-1qjbrof>div.svelte-1qjbrof.svelte-1qjbrof{animation:svelte-1qjbrof-fadein-from-primary 0.5s var(--easing) forwards}}.bottom.svelte-1qjbrof .claim.svelte-1qjbrof.svelte-1qjbrof{grid-column:2}.bottom.svelte-1qjbrof h2.svelte-1qjbrof.svelte-1qjbrof,.bottom.svelte-1qjbrof h3.svelte-1qjbrof.svelte-1qjbrof{font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);font-weight:400;margin:0;text-align:center;opacity:0.75}[color-scheme="highcontrast"] .bottom.svelte-1qjbrof h2.svelte-1qjbrof.svelte-1qjbrof,[color-scheme="highcontrast"] .bottom.svelte-1qjbrof h3.svelte-1qjbrof.svelte-1qjbrof{opacity:1}.bottom.svelte-1qjbrof .death-star{margin-right:-0.8125rem;padding:0.625rem}@media(min-width: 768px){.bottom.svelte-1qjbrof .death-star{display:none}}.scroll-please.svelte-1qjbrof.svelte-1qjbrof.svelte-1qjbrof{--size:0.4375rem;grid-column:1;grid-row:1;position:relative;width:2.75rem;height:2.75rem;display:flex;align-items:center;justify-content:center;margin-left:-1.0625rem}@media(min-width: 768px){.scroll-please.svelte-1qjbrof.svelte-1qjbrof.svelte-1qjbrof{--size:0.5625rem;grid-column:3;margin-left:0.9375rem}}.scroll-please.svelte-1qjbrof:hover div.svelte-1qjbrof span.svelte-1qjbrof{color:var(--primary)}.scroll-please.svelte-1qjbrof div.svelte-1qjbrof.svelte-1qjbrof{position:relative;width:calc(var(--size) + 0.125rem);height:calc((var(--size) + 0.125rem) * 3);pointer-events:none}.scroll-please.svelte-1qjbrof div i.svelte-1qjbrof.svelte-1qjbrof{position:absolute;top:0;width:var(--size);height:var(--size);border:0.0625rem solid hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.5);border-radius:50%}@media(prefers-reduced-motion: no-preference){.scroll-please.svelte-1qjbrof div i.svelte-1qjbrof.svelte-1qjbrof{animation:svelte-1qjbrof-scroll 1.5s var(--easing) infinite}}.scroll-please.svelte-1qjbrof div i.svelte-1qjbrof.svelte-1qjbrof:nth-child(2){animation-delay:0.2s;border-color:hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.25);transform:translate3d(0, 50%, 0)}.scroll-please.svelte-1qjbrof div i.svelte-1qjbrof.svelte-1qjbrof:nth-child(3){animation-delay:0.4s;border-color:hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.15);transform:translate3d(0, 100%, 0)}.scroll-please.svelte-1qjbrof div.svelte-1qjbrof span.svelte-1qjbrof{position:absolute;transform:rotate(270deg);transform-origin:top left;top:-0.5rem;left:0;left:1;font-size:calc(var(--size) + 0.125rem);line-height:var(--size);transition:color 0.2s var(--easing)}',
+    css$32 = {
+      code: '@keyframes svelte-mhxw48-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-mhxw48-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-mhxw48-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-mhxw48-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-mhxw48-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-mhxw48-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-mhxw48-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-mhxw48-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-mhxw48-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-mhxw48-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-mhxw48-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.hero.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{align-items:start;box-sizing:border-box;display:grid;grid-column-gap:0;grid-gap:0.3125rem;grid-template-columns:auto clamp(19.375rem, 11rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;min-height:var(--app-height, 100vh);padding:var(--core-padding) 0;z-index:1}.headline.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.headline.svelte-mhxw48 .sphere.svelte-mhxw48.svelte-mhxw48{animation:svelte-mhxw48-fadein 2s var(--easing) forwards;display:block;padding-bottom:100%;background-color:rgba(255, 255, 255, 0.5);border:1px solid rgba(255, 255, 255, 0.8);border-radius:50%;mix-blend-mode:soft-light;will-change:opacity;opacity:0}h1.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{font-family:var(--serif);font-weight:700;font-size:clamp(2.875rem, 1.7524271845rem + 3.5922330097vw, 7.5rem);line-height:0.85;text-align:center;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:1}[color-scheme="highcontrast"] h1.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{line-height:1}[color-scheme="highcontrast"] h1.svelte-mhxw48 span.svelte-mhxw48.svelte-mhxw48{margin:0 !important}@media(prefers-reduced-motion: no-preference){h1.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{opacity:0;animation:svelte-mhxw48-fadein-from-primary 2s var(--easing) forwards}}h1.svelte-mhxw48 span.svelte-mhxw48.svelte-mhxw48{display:block}h1.svelte-mhxw48 span.svelte-mhxw48.svelte-mhxw48:first-child{margin-right:0.6em}h1.svelte-mhxw48 span.svelte-mhxw48.svelte-mhxw48:last-child{margin-left:1em}@media(prefers-reduced-motion: no-preference){h1.svelte-mhxw48 span.svelte-mhxw48.svelte-mhxw48{animation:svelte-mhxw48-to-top-10 0.5s var(--easing) forwards}}.bottom.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{grid-column:1/span 3;padding:0 var(--core-padding)}.bottom.svelte-mhxw48>div.svelte-mhxw48.svelte-mhxw48{display:grid;grid-template-columns:1.875rem 1fr 1.875rem;max-width:var(--core-max-width);margin:0 auto;align-items:center}@media(min-width: 768px){.bottom.svelte-mhxw48>div.svelte-mhxw48.svelte-mhxw48{grid-template-columns:2.75rem 1fr 2.75rem}}@media(prefers-reduced-motion: no-preference){.bottom.svelte-mhxw48>div.svelte-mhxw48.svelte-mhxw48{animation:svelte-mhxw48-fadein-from-primary 0.5s var(--easing) forwards}}.bottom.svelte-mhxw48 .claim.svelte-mhxw48.svelte-mhxw48{grid-column:2}.bottom.svelte-mhxw48 h2.svelte-mhxw48.svelte-mhxw48,.bottom.svelte-mhxw48 h3.svelte-mhxw48.svelte-mhxw48{font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);font-weight:400;margin:0;text-align:center;opacity:0.75}[color-scheme="highcontrast"] .bottom.svelte-mhxw48 h2.svelte-mhxw48.svelte-mhxw48,[color-scheme="highcontrast"] .bottom.svelte-mhxw48 h3.svelte-mhxw48.svelte-mhxw48{opacity:1}.bottom.svelte-mhxw48 .death-star{margin-right:-0.8125rem;padding:0.625rem}@media(min-width: 768px){.bottom.svelte-mhxw48 .death-star{display:none}}.scroll-please.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{--size:0.4375rem;grid-column:1;grid-row:1;position:relative;width:2.75rem;height:2.75rem;display:flex;align-items:center;justify-content:center;margin-left:-1.0625rem}@media(min-width: 768px){.scroll-please.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{--size:0.5625rem;grid-column:3;margin-left:0.9375rem}}@media(min-width: 1024px){.scroll-please.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{--size:0.625rem}}@media(min-width: 1440px){.scroll-please.svelte-mhxw48.svelte-mhxw48.svelte-mhxw48{--size:0.75rem}}.scroll-please.svelte-mhxw48:hover div.svelte-mhxw48 span.svelte-mhxw48{color:var(--primary)}.scroll-please.svelte-mhxw48 div.svelte-mhxw48.svelte-mhxw48{position:relative;width:calc(var(--size) + 0.125rem);height:calc((var(--size) + 0.125rem) * 3);pointer-events:none}.scroll-please.svelte-mhxw48 div i.svelte-mhxw48.svelte-mhxw48{position:absolute;top:0;width:var(--size);height:var(--size);border:0.0625rem solid hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.5);border-radius:50%}@media(prefers-reduced-motion: no-preference){.scroll-please.svelte-mhxw48 div i.svelte-mhxw48.svelte-mhxw48{animation:svelte-mhxw48-scroll 1.5s var(--easing) infinite}}.scroll-please.svelte-mhxw48 div i.svelte-mhxw48.svelte-mhxw48:nth-child(2){animation-delay:0.2s;border-color:hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.25);transform:translate3d(0, 50%, 0)}.scroll-please.svelte-mhxw48 div i.svelte-mhxw48.svelte-mhxw48:nth-child(3){animation-delay:0.4s;border-color:hsla(var(--on-base-h), var(--on-base-s), var(--on-base-l), 0.15);transform:translate3d(0, 100%, 0)}.scroll-please.svelte-mhxw48 div.svelte-mhxw48 span.svelte-mhxw48{position:absolute;transform:rotate(270deg);transform-origin:top left;top:-0.5rem;left:0;left:1;font-size:calc(var(--size) + 0.125rem);line-height:var(--size);transition:color 0.2s var(--easing)}',
       map: null
     };
     Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { scrollY } = $$props;
       if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
         $$bindings.scrollY(scrollY);
-      $$result.css.add(css$3);
-      return `<section class="${"hero svelte-1qjbrof"}"><div class="${"headline svelte-1qjbrof"}"><h1 style="${"transform: translate(0," + escape(scrollY / 4) + "px)"}" class="${"svelte-1qjbrof"}"><span class="${"svelte-1qjbrof"}">Digital</span>
-            <span class="${"svelte-1qjbrof"}">Experience</span>
-            <span class="${"svelte-1qjbrof"}">Creator</span></h1>
-        <div class="${"sphere svelte-1qjbrof"}" style="${"transform: translate(0," + escape(scrollY / 6) + "px)"}"></div></div>
-    <div class="${"bottom svelte-1qjbrof"}" style="${"transform: translate(0," + escape(scrollY / 8) + "px)"}"><div class="${"svelte-1qjbrof"}"><button title="${"runterscrollen"}" class="${"scroll-please svelte-1qjbrof"}"><div class="${"svelte-1qjbrof"}"><i class="${"svelte-1qjbrof"}"></i>
-                    <i class="${"svelte-1qjbrof"}"></i>
-                    <i class="${"svelte-1qjbrof"}"></i>
-                    <span class="${"sr-only svelte-1qjbrof"}">scroll</span></div></button>
-            <div class="${"claim svelte-1qjbrof"}"><h2 class="${"svelte-1qjbrof"}">Konzept, Design &amp; Entwicklung</h2>
-                <h3 class="${"svelte-1qjbrof"}">made in Vienna</h3></div>
+      $$result.css.add(css$32);
+      return `<section class="${"hero svelte-mhxw48"}"><div class="${"headline svelte-mhxw48"}"><h1 style="${"transform: translate(0," + escape(scrollY / 4) + "px)"}" class="${"svelte-mhxw48"}"><span class="${"svelte-mhxw48"}">Digital</span>
+            <span class="${"svelte-mhxw48"}">Experience</span>
+            <span class="${"svelte-mhxw48"}">Creator</span></h1>
+        <div class="${"sphere svelte-mhxw48"}" style="${"transform: translate(0," + escape(scrollY / 6) + "px)"}"></div></div>
+    <div class="${"bottom svelte-mhxw48"}" style="${"transform: translate(0," + escape(scrollY / 8) + "px)"}"><div class="${"svelte-mhxw48"}"><button title="${"runterscrollen"}" class="${"scroll-please svelte-mhxw48"}"><div class="${"svelte-mhxw48"}"><i class="${"svelte-mhxw48"}"></i>
+                    <i class="${"svelte-mhxw48"}"></i>
+                    <i class="${"svelte-mhxw48"}"></i>
+                    <span class="${"sr-only svelte-mhxw48"}">scroll</span></div></button>
+            <div class="${"claim svelte-mhxw48"}"><h2 class="${"svelte-mhxw48"}">Konzept, Design &amp; Entwicklung</h2>
+                <h3 class="${"svelte-mhxw48"}">made in Vienna</h3></div>
             ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div></div>
 </section>`;
     });
-    css$2 = {
-      code: '@keyframes svelte-1cxgjsb-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1cxgjsb-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1cxgjsb-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1cxgjsb-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1cxgjsb-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1cxgjsb-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1cxgjsb-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1cxgjsb-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1cxgjsb-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1cxgjsb-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1cxgjsb-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.teaser.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{position:relative;margin-top:calc(var(--app-height, -100vh) * -1);pointer-events:none}.teaser.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb::after{content:"";display:block;height:calc(var(--app-height, 100vh) * 1.5);width:100%;pointer-events:none;position:relative}.inner.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{position:relative;top:0;height:var(--app-height, 100vh);display:grid;grid-template-rows:1fr repeat(3, auto) 1fr;padding:5rem var(--core-padding) var(--core-padding);box-sizing:border-box;max-width:calc(var(--core-max-width) + var(--core-padding) * 2);margin:0 auto}.inner.svelte-1cxgjsb>.svelte-1cxgjsb.svelte-1cxgjsb{pointer-events:auto}@media(prefers-reduced-motion: no-preference){.inner.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{position:sticky}}@media(min-width: 768px){.inner.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{grid-template-columns:minmax(3.125rem, auto) minmax(auto, 79.375rem) minmax(3.125rem, auto);grid-template-rows:repeat(4, auto);padding-top:6.25rem;align-items:center}}header.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{grid-row:2;align-self:end;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5em;width:100%;overflow:hidden;flex:1 0 auto;margin-bottom:0.625rem;position:relative;z-index:3}@media(min-width: 768px){header.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{grid-column:1/span 2;grid-row:2;justify-content:flex-start;align-self:flex-end;margin-bottom:0;width:auto;justify-self:start}[color-scheme="light"] header.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb,[color-scheme="highcontrast"] header.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{background-color:var(--base);padding-right:1em}}header.svelte-1cxgjsb h1.svelte-1cxgjsb.svelte-1cxgjsb{font-size:1.625rem;margin:0;transform:translate3d(0, 100%, 0)}@media(min-width: 768px){header.svelte-1cxgjsb h1.svelte-1cxgjsb.svelte-1cxgjsb{font-size:clamp(4.5rem, 2.9166666667rem + 3.2986111111vw, 6.875rem)}}header.svelte-1cxgjsb div.svelte-1cxgjsb.svelte-1cxgjsb{font-family:var(--sans);font-weight:400;font-size:0.875rem;transform:translate3d(0, 100%, 0)}@media(min-width: 768px){header.svelte-1cxgjsb div.svelte-1cxgjsb.svelte-1cxgjsb{font-size:clamp(1.125rem, 0.875rem + 0.5208333333vw, 1.5rem)}}header.intersecting.svelte-1cxgjsb h1.svelte-1cxgjsb.svelte-1cxgjsb,header.intersecting.svelte-1cxgjsb div.svelte-1cxgjsb.svelte-1cxgjsb{animation:svelte-1cxgjsb-to-top 0.8s var(--easing) forwards}figure.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{grid-row:3;display:flex;margin:0;aspect-ratio:0.8;justify-self:start;overflow:hidden;width:100%;max-height:100%;position:relative;z-index:1}@media(min-width: 768px){figure.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{aspect-ratio:1.77778;grid-column:2;grid-row:2/span 2;justify-self:center}}figure.svelte-1cxgjsb a.svelte-1cxgjsb.svelte-1cxgjsb{display:flex}figure.svelte-1cxgjsb picture.svelte-1cxgjsb.svelte-1cxgjsb{flex-basis:100%;pointer-events:none}figure.svelte-1cxgjsb img.svelte-1cxgjsb.svelte-1cxgjsb{transform-origin:bottom center}footer.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{grid-row:4;width:100%;position:relative;z-index:2}@media(min-width: 768px){footer.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{grid-column:1/span 2;grid-row:3;align-self:flex-start;padding:0 0 0 0.3em;width:auto;justify-self:start}[color-scheme="light"] footer.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb,[color-scheme="highcontrast"] footer.svelte-1cxgjsb.svelte-1cxgjsb.svelte-1cxgjsb{background-color:var(--base);padding-right:1em}}footer.svelte-1cxgjsb div.svelte-1cxgjsb.svelte-1cxgjsb{display:flex;align-items:center;gap:0.625rem}footer.svelte-1cxgjsb div.svelte-1cxgjsb.svelte-1cxgjsb::before{content:"";height:1px;flex:1 0 auto;background-color:var(--on-base);transform-origin:top left;transform:scaleX(0) translateY(-0.5px)}@media(min-width: 768px){footer.svelte-1cxgjsb div.svelte-1cxgjsb.svelte-1cxgjsb::before{display:none}}footer.svelte-1cxgjsb div.svelte-1cxgjsb a.svelte-1cxgjsb{display:flex;align-items:center;gap:0.5rem;text-transform:uppercase;font-size:0.75rem;font-weight:500;letter-spacing:0.03em;padding:0.625rem 0}@media(min-width: 768px){footer.svelte-1cxgjsb div.svelte-1cxgjsb a.svelte-1cxgjsb{font-size:0.875rem}}footer.svelte-1cxgjsb div a span.svelte-1cxgjsb.svelte-1cxgjsb{pointer-events:none}footer.svelte-1cxgjsb div a i.svelte-1cxgjsb.svelte-1cxgjsb{display:inline-flex;overflow:hidden}footer.svelte-1cxgjsb div a i i.svelte-1cxgjsb.svelte-1cxgjsb{display:inline-flex;transform:translate3d(-100%, 0, 0)}footer.svelte-1cxgjsb div a em.svelte-1cxgjsb.svelte-1cxgjsb{display:inline-flex;pointer-events:none;overflow:hidden;font-style:normal}footer.svelte-1cxgjsb div a em.svelte-1cxgjsb svg{transform:translate3d(-100%, 0, 0)}footer.intersecting.svelte-1cxgjsb div.svelte-1cxgjsb.svelte-1cxgjsb::before{animation:svelte-1cxgjsb-scale 0.5s var(--easing) forwards}footer.intersecting.svelte-1cxgjsb a i i.svelte-1cxgjsb.svelte-1cxgjsb{animation:svelte-1cxgjsb-to-right 0.2s 0.5s var(--easing) forwards}footer.intersecting.svelte-1cxgjsb a i:nth-child(2) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.54s}footer.intersecting.svelte-1cxgjsb a i:nth-child(3) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.58s}footer.intersecting.svelte-1cxgjsb a i:nth-child(4) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.62s}footer.intersecting.svelte-1cxgjsb a i:nth-child(5) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.66s}footer.intersecting.svelte-1cxgjsb a i:nth-child(6) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.7s}footer.intersecting.svelte-1cxgjsb a i:nth-child(7) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.74s}footer.intersecting.svelte-1cxgjsb a i:nth-child(8) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.82s}footer.intersecting.svelte-1cxgjsb a i:nth-child(9) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.86s}footer.intersecting.svelte-1cxgjsb a i:nth-child(10) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.9s}footer.intersecting.svelte-1cxgjsb a i:nth-child(11) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.94s}footer.intersecting.svelte-1cxgjsb a i:nth-child(12) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:0.98s}footer.intersecting.svelte-1cxgjsb a i:nth-child(13) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:1.02s}footer.intersecting.svelte-1cxgjsb a i:nth-child(14) i.svelte-1cxgjsb.svelte-1cxgjsb{animation-delay:1.06s}footer.intersecting.svelte-1cxgjsb a em.svelte-1cxgjsb svg{animation:svelte-1cxgjsb-to-right 0.8s 1.1s var(--easing) forwards}',
+    css$22 = {
+      code: '@keyframes svelte-4k7xxb-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-4k7xxb-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-4k7xxb-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-4k7xxb-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-4k7xxb-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-4k7xxb-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-4k7xxb-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-4k7xxb-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-4k7xxb-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-4k7xxb-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-4k7xxb-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.teaser.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{position:relative;margin-top:calc(var(--app-height, -100vh) * -1);pointer-events:none}.teaser.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb::after{content:"";display:block;height:calc(var(--app-height, 100vh) * 1.5);width:100%;pointer-events:none;position:relative}.inner.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{position:relative;top:0;height:var(--app-height, 100vh);display:grid;grid-template-rows:1fr repeat(3, auto) 1fr;padding:5rem var(--core-padding) var(--core-padding);box-sizing:border-box;max-width:calc(var(--core-max-width) + var(--core-padding) * 2);margin:0 auto}.inner.svelte-4k7xxb>.svelte-4k7xxb.svelte-4k7xxb{pointer-events:auto}@media(prefers-reduced-motion: no-preference){.inner.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{position:sticky}}@media(min-width: 768px){.inner.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{grid-template-columns:minmax(3.125rem, auto) minmax(auto, 79.375rem) minmax(3.125rem, auto);grid-template-rows:repeat(4, auto);padding-top:6.25rem;align-items:center}}header.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{grid-row:2;align-self:end;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5em;width:100%;overflow:hidden;flex:1 0 auto;margin-bottom:0.625rem;position:relative;z-index:3}@media(min-width: 768px){header.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{grid-column:1/span 2;grid-row:2;justify-content:flex-start;align-self:flex-end;margin-bottom:0;width:auto;justify-self:start}[color-scheme="light"] header.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb,[color-scheme="highcontrast"] header.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{background-color:var(--base);padding-right:1em}}header.svelte-4k7xxb h1.svelte-4k7xxb.svelte-4k7xxb{font-size:1.625rem;margin:0;transform:translate3d(0, 100%, 0)}@media(min-width: 768px){header.svelte-4k7xxb h1.svelte-4k7xxb.svelte-4k7xxb{font-size:clamp(4.5rem, 2.9166666667rem + 3.2986111111vw, 6.875rem)}}header.svelte-4k7xxb div.svelte-4k7xxb.svelte-4k7xxb{font-family:var(--sans);font-weight:400;font-size:0.875rem;transform:translate3d(0, 100%, 0)}@media(min-width: 768px){header.svelte-4k7xxb div.svelte-4k7xxb.svelte-4k7xxb{font-size:clamp(1.125rem, 0.875rem + 0.5208333333vw, 1.5rem)}}header.intersecting.svelte-4k7xxb h1.svelte-4k7xxb.svelte-4k7xxb,header.intersecting.svelte-4k7xxb div.svelte-4k7xxb.svelte-4k7xxb{animation:svelte-4k7xxb-to-top 0.8s var(--easing) forwards}figure.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{grid-row:3;display:flex;margin:0;aspect-ratio:0.8;justify-self:start;overflow:hidden;width:100%;max-height:100%;position:relative;z-index:1}@media(min-width: 768px){figure.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{aspect-ratio:1.77778;grid-column:2;grid-row:2/span 2;justify-self:center}}figure.svelte-4k7xxb a.svelte-4k7xxb.svelte-4k7xxb{display:flex}figure.svelte-4k7xxb picture.svelte-4k7xxb.svelte-4k7xxb{flex-basis:100%;pointer-events:none}figure.svelte-4k7xxb img.svelte-4k7xxb.svelte-4k7xxb{transform-origin:bottom center}footer.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{grid-row:4;width:100%;position:relative;z-index:2}@media(min-width: 768px){footer.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{grid-column:1/span 2;grid-row:3;align-self:flex-start;padding:0 0 0 0.3em;width:auto;justify-self:start}[color-scheme="light"] footer.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb,[color-scheme="highcontrast"] footer.svelte-4k7xxb.svelte-4k7xxb.svelte-4k7xxb{background-color:var(--base);padding-right:1em}}footer.svelte-4k7xxb div.svelte-4k7xxb.svelte-4k7xxb{display:flex;align-items:center;gap:0.625rem}footer.svelte-4k7xxb div.svelte-4k7xxb.svelte-4k7xxb::before{content:"";height:1px;flex:1 0 auto;background-color:var(--on-base);transform-origin:top left;transform:scaleX(0) translateY(-0.5px)}@media(min-width: 768px){footer.svelte-4k7xxb div.svelte-4k7xxb.svelte-4k7xxb::before{display:none}}footer.svelte-4k7xxb div.svelte-4k7xxb a.svelte-4k7xxb{display:flex;align-items:center;gap:0.5rem;text-transform:uppercase;font-size:0.75rem;font-weight:500;letter-spacing:0.03em;padding:0.625rem 0}@media(min-width: 768px){footer.svelte-4k7xxb div.svelte-4k7xxb a.svelte-4k7xxb{font-size:0.875rem}}footer.svelte-4k7xxb div a span.svelte-4k7xxb.svelte-4k7xxb{pointer-events:none}footer.svelte-4k7xxb div a i.svelte-4k7xxb.svelte-4k7xxb{display:inline-flex;overflow:hidden}footer.svelte-4k7xxb div a i i.svelte-4k7xxb.svelte-4k7xxb{display:inline-flex;transform:translate3d(-100%, 0, 0)}footer.svelte-4k7xxb div a em.svelte-4k7xxb.svelte-4k7xxb{display:inline-flex;pointer-events:none;overflow:hidden;font-style:normal}footer.svelte-4k7xxb div a em.svelte-4k7xxb svg{transform:translate3d(-100%, 0, 0)}footer.intersecting.svelte-4k7xxb div.svelte-4k7xxb.svelte-4k7xxb::before{animation:svelte-4k7xxb-scale 0.5s var(--easing) forwards}footer.intersecting.svelte-4k7xxb a i i.svelte-4k7xxb.svelte-4k7xxb{animation:svelte-4k7xxb-to-right 0.2s 0.5s var(--easing) forwards}footer.intersecting.svelte-4k7xxb a i:nth-child(2) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.54s}footer.intersecting.svelte-4k7xxb a i:nth-child(3) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.58s}footer.intersecting.svelte-4k7xxb a i:nth-child(4) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.62s}footer.intersecting.svelte-4k7xxb a i:nth-child(5) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.66s}footer.intersecting.svelte-4k7xxb a i:nth-child(6) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.7s}footer.intersecting.svelte-4k7xxb a i:nth-child(7) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.74s}footer.intersecting.svelte-4k7xxb a i:nth-child(8) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.82s}footer.intersecting.svelte-4k7xxb a i:nth-child(9) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.86s}footer.intersecting.svelte-4k7xxb a i:nth-child(10) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.9s}footer.intersecting.svelte-4k7xxb a i:nth-child(11) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.94s}footer.intersecting.svelte-4k7xxb a i:nth-child(12) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:0.98s}footer.intersecting.svelte-4k7xxb a i:nth-child(13) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:1.02s}footer.intersecting.svelte-4k7xxb a i:nth-child(14) i.svelte-4k7xxb.svelte-4k7xxb{animation-delay:1.06s}footer.intersecting.svelte-4k7xxb a em.svelte-4k7xxb svg{animation:svelte-4k7xxb-to-right 0.8s 1.1s var(--easing) forwards}',
       map: null
     };
     Teaser = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -20891,25 +20963,25 @@ var init_index_8451d8a1 = __esm({
         $$bindings.imageSm(imageSm);
       if ($$props.imageLg === void 0 && $$bindings.imageLg && imageLg !== void 0)
         $$bindings.imageLg(imageLg);
-      $$result.css.add(css$2);
+      $$result.css.add(css$22);
       let $$settled;
       let $$rendered;
       do {
         $$settled = true;
         $$rendered = `
 
-<article class="${"teaser svelte-1cxgjsb"}" style="${"opacity: " + escape(opacity) + ";"}"${add_attribute("this", teaser, 0)}><div class="${"inner svelte-1cxgjsb"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { element, intersecting }, {
+<article class="${"teaser svelte-4k7xxb"}" style="${"opacity: " + escape(opacity) + ";"}"${add_attribute("this", teaser, 0)}><div class="${"inner svelte-4k7xxb"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { element, intersecting }, {
           intersecting: ($$value) => {
             intersecting = $$value;
             $$settled = false;
           }
         }, {
-          default: () => `<header class="${["svelte-1cxgjsb", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><h1 class="${"svelte-1cxgjsb"}">${escape(title)}</h1>
-                <div class="${"svelte-1cxgjsb"}">${escape(year)}</div></header>`
+          default: () => `<header class="${["svelte-4k7xxb", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><h1 class="${"svelte-4k7xxb"}">${escape(title)}</h1>
+                <div class="${"svelte-4k7xxb"}">${escape(year)}</div></header>`
         })}
 
-        <figure class="${"svelte-1cxgjsb"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-1cxgjsb"}"><picture class="${"svelte-1cxgjsb"}"><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
-                    <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} style="${"transform: scale(" + escape(scale) + ");"}" class="${"svelte-1cxgjsb"}"></picture></a></figure>
+        <figure class="${"svelte-4k7xxb"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-4k7xxb"}"><picture class="${"svelte-4k7xxb"}"><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
+                    <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} style="${"transform: scale(" + escape(scale) + ");"}" class="${"svelte-4k7xxb"}"></picture></a></figure>
 
         ${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, {
           element: element2,
@@ -20920,15 +20992,15 @@ var init_index_8451d8a1 = __esm({
             $$settled = false;
           }
         }, {
-          default: () => `<footer class="${["svelte-1cxgjsb", intersecting2 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element2, 0)}><div class="${"svelte-1cxgjsb"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-1cxgjsb"}"><span class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">P</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">r</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">o</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">j</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">e</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">k</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">t</i></i> <i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">a</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">n</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">s</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">e</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">h</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">e</i></i><i class="${"svelte-1cxgjsb"}"><i class="${"svelte-1cxgjsb"}">n</i></i></span>
-                        <em class="${"svelte-1cxgjsb"}"><!-- HTML_TAG_START -->${arrow}<!-- HTML_TAG_END --></em></a></div></footer>`
+          default: () => `<footer class="${["svelte-4k7xxb", intersecting2 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element2, 0)}><div class="${"svelte-4k7xxb"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-4k7xxb"}"><span class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">P</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">r</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">o</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">j</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">e</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">k</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">t</i></i> <i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">a</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">n</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">s</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">e</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">h</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">e</i></i><i class="${"svelte-4k7xxb"}"><i class="${"svelte-4k7xxb"}">n</i></i></span>
+                        <em class="${"svelte-4k7xxb"}"><!-- HTML_TAG_START -->${arrow}<!-- HTML_TAG_END --></em></a></div></footer>`
         })}</div>
 </article>`;
       } while (!$$settled);
       return $$rendered;
     });
     wheel = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <path fill="currentColor" d="M9.22 3.44a9 9 0 1 0 5.56 17.12A9 9 0 0 0 9.22 3.44Zm8.32 2.8s.2.93-.09 1.24c-.29.31-4.26 3-4.26 3a1.001 1.001 0 0 1-.86.19.791.791 0 0 1-.51-.38l-2.18-6a8 8 0 0 1 7.9 1.95Zm-4.95 5.57a.619.619 0 1 1-.78-.4.63.63 0 0 1 .78.4ZM8.24 5c.07 0 .94.11 1.15.47.21.36 1.61 4.94 1.61 4.94a1 1 0 0 1-.08.88.769.769 0 0 1-.52.36l-6.4.23A8 8 0 0 1 8.24 5Zm-3.85 9.47a9.813 9.813 0 0 1-.26-1.07c0-.08.4-.87.8-1s5.23.05 5.23.05a1.05 1.05 0 0 1 .84.4.78.78 0 0 1 .18.61l-1.74 6.1a8 8 0 0 1-5.05-5.09Zm10.08 5.14a7.94 7.94 0 0 1-3.57.3c-.08-.06-.7-.64-.66-1.05.04-.41 1.66-5 1.66-5a1.079 1.079 0 0 1 .59-.67.77.77 0 0 1 .64 0l5.26 3.54a7.91 7.91 0 0 1-3.92 2.88Zm4.71-4.12c-.08 0-.83.47-1.2.3-.37-.17-4.2-3.11-4.2-3.11a1.082 1.082 0 0 1-.46-.77.85.85 0 0 1 .21-.6l5-3.92a8.25 8.25 0 0 1 1.07 2.14 8 8 0 0 1-.42 5.96Z"/>\n</svg>';
-    css$1 = {
+    css$12 = {
       code: ".latest-work.svelte-pem4xt.svelte-pem4xt{box-sizing:border-box;min-height:var(--app-height, 100vh);padding:8.75rem 0 0}.latest-work.svelte-pem4xt>h1.svelte-pem4xt{font-size:clamp(2.5rem, 1.4772727273rem + 4.5454545455vw, 8.75rem);font-weight:400;white-space:nowrap;overflow:hidden;margin:0}.latest-work.svelte-pem4xt>h1 span.svelte-pem4xt{display:inline-block}.latest-work.svelte-pem4xt>h1 span span.svelte-pem4xt{display:flex;gap:0.25em;align-items:baseline;transform:translate(0, 100%);transition:transform 0.5s var(--easing)}.latest-work.svelte-pem4xt>h1.intersecting span span.svelte-pem4xt{transform:translate(0, 0)}.latest-work.svelte-pem4xt>h1 em.svelte-pem4xt{font-family:var(--serif);font-style:normal;font-weight:700}.latest-work.svelte-pem4xt>h1 i.svelte-pem4xt{align-self:center;line-height:0}.latest-work.svelte-pem4xt>h1 i.svelte-pem4xt svg{width:1em;height:1em}.projects.svelte-pem4xt.svelte-pem4xt{overflow:visible;position:relative}.projects.svelte-pem4xt>div.svelte-pem4xt{margin-top:calc(var(--app-height, 100vh) - 2.5rem)}",
       map: null
     };
@@ -20944,7 +21016,7 @@ var init_index_8451d8a1 = __esm({
       $$unsubscribe_spin = subscribe(spin, (value) => $spin = value);
       if ($$props.scrollY === void 0 && $$bindings.scrollY && scrollY !== void 0)
         $$bindings.scrollY(scrollY);
-      $$result.css.add(css$1);
+      $$result.css.add(css$12);
       let $$settled;
       let $$rendered;
       do {
@@ -20994,7 +21066,7 @@ var init_index_8451d8a1 = __esm({
       return $$rendered;
     });
     css4 = {
-      code: "@keyframes svelte-1euhmj0-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1euhmj0-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1euhmj0-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1euhmj0-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1euhmj0-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1euhmj0-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1euhmj0-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1euhmj0-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1euhmj0-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1euhmj0-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1euhmj0-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.wisdom.svelte-1euhmj0.svelte-1euhmj0{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto clamp(17.5rem, 10rem + 30vw, 160rem) auto;justify-content:center;padding:4.375rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto;overflow:hidden;margin-top:-50vh;position:relative}.wisdom.svelte-1euhmj0 div.svelte-1euhmj0{grid-column:2}p.svelte-1euhmj0.svelte-1euhmj0{font-size:clamp(1.625rem, 0.9615384615rem + 2.9487179487vw, 4.5rem);font-weight:500;line-height:1.2}p.intersecting.svelte-1euhmj0 .mask span.svelte-1euhmj0{animation:svelte-1euhmj0-to-top 1.2s var(--easing) forwards}p.intersecting.svelte-1euhmj0 .mask:nth-child(2) span.svelte-1euhmj0{animation-delay:200ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(3) span.svelte-1euhmj0{animation-delay:400ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(4) span.svelte-1euhmj0{animation-delay:600ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(5) span.svelte-1euhmj0{animation-delay:800ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(6) span.svelte-1euhmj0{animation-delay:1000ms}p.intersecting.svelte-1euhmj0 .mask:nth-child(7) span.svelte-1euhmj0{animation-delay:1200ms}",
+      code: "@keyframes svelte-1ii2e6-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1ii2e6-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1ii2e6-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ii2e6-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ii2e6-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ii2e6-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1ii2e6-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1ii2e6-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1ii2e6-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1ii2e6-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1ii2e6-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.wisdom.svelte-1ii2e6.svelte-1ii2e6{align-items:center;display:grid;grid-gap:0;grid-template-columns:auto clamp(17.5rem, 10rem + 30vw, 160rem) auto;justify-content:center;padding:4.375rem var(--core-padding);max-width:var(--core-max-width);margin:0 auto;overflow:hidden;margin-top:-50vh;position:relative}.wisdom.svelte-1ii2e6 div.svelte-1ii2e6{grid-column:2}p.svelte-1ii2e6.svelte-1ii2e6{font-size:clamp(1.625rem, 0.9615384615rem + 2.9487179487vw, 4.5rem);font-weight:500;line-height:1.2}p.intersecting.svelte-1ii2e6 .mask span.svelte-1ii2e6{animation:svelte-1ii2e6-to-top 1.2s var(--easing) forwards}p.intersecting.svelte-1ii2e6 .mask:nth-child(2) span.svelte-1ii2e6{animation-delay:200ms}p.intersecting.svelte-1ii2e6 .mask:nth-child(3) span.svelte-1ii2e6{animation-delay:400ms}p.intersecting.svelte-1ii2e6 .mask:nth-child(4) span.svelte-1ii2e6{animation-delay:600ms}p.intersecting.svelte-1ii2e6 .mask:nth-child(5) span.svelte-1ii2e6{animation-delay:800ms}p.intersecting.svelte-1ii2e6 .mask:nth-child(6) span.svelte-1ii2e6{animation-delay:1000ms}p.intersecting.svelte-1ii2e6 .mask:nth-child(7) span.svelte-1ii2e6{animation-delay:1200ms}",
       map: null
     };
     Wisdom = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -21011,13 +21083,13 @@ var init_index_8451d8a1 = __esm({
             $$settled = false;
           }
         }, {
-          default: () => `<section class="${"wisdom svelte-1euhmj0"}"><div class="${"svelte-1euhmj0"}"><p class="${["svelte-1euhmj0", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">Meine Webseiten</span></span>
-                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">sind wie gute</span></span>
-                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">Fahrr\xE4der:</span></span>
-                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">elegant, hochwertig,</span></span>
-                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">auf den Benutzer</span></span>
-                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">angepasst und vor</span></span>
-                <span class="${"mask svelte-1euhmj0"}"><span class="${"svelte-1euhmj0"}">allem pfeilschnell.</span></span></p></div></section>`
+          default: () => `<section class="${"wisdom svelte-1ii2e6"}"><div class="${"svelte-1ii2e6"}"><p class="${["svelte-1ii2e6", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><span class="${"mask svelte-1ii2e6"}"><span class="${"svelte-1ii2e6"}">Meine Webseiten</span></span>
+                <span class="${"mask svelte-1ii2e6"}"><span class="${"svelte-1ii2e6"}">sind wie gute</span></span>
+                <span class="${"mask svelte-1ii2e6"}"><span class="${"svelte-1ii2e6"}">Fahrr\xE4der:</span></span>
+                <span class="${"mask svelte-1ii2e6"}"><span class="${"svelte-1ii2e6"}">elegant, hochwertig,</span></span>
+                <span class="${"mask svelte-1ii2e6"}"><span class="${"svelte-1ii2e6"}">auf den Benutzer</span></span>
+                <span class="${"mask svelte-1ii2e6"}"><span class="${"svelte-1ii2e6"}">angepasst und vor</span></span>
+                <span class="${"mask svelte-1ii2e6"}"><span class="${"svelte-1ii2e6"}">allem pfeilschnell.</span></span></p></div></section>`
         })}`;
       } while (!$$settled);
       return $$rendered;
@@ -21038,20 +21110,103 @@ ${validate_component(Wisdom, "Wisdom").$$render($$result, {}, {}, {})}`;
   }
 });
 
-// .svelte-kit/output/server/chunks/ueber-mich-586498a5.js
-var ueber_mich_586498a5_exports = {};
-__export(ueber_mich_586498a5_exports, {
-  default: () => Ueber_mich,
-  prerender: () => prerender2
+// .svelte-kit/output/server/chunks/layout-backup-23d41d18.js
+var layout_backup_23d41d18_exports = {};
+__export(layout_backup_23d41d18_exports, {
+  default: () => Layout_backup,
+  load: () => load3
 });
-var import_cookie4, css5, prerender2, Ueber_mich;
-var init_ueber_mich_586498a5 = __esm({
-  ".svelte-kit/output/server/chunks/ueber-mich-586498a5.js"() {
+var import_app2, import_graphics2, import_display2, import_constants2, import_core2, import_interaction2, import_ticker2, import_filter_kawase_blur2, import_filter_noise2, import_filter_color_matrix2, import_hsl_to_hex2, import_debounce2, import_utils2, import_cookie4, css5, Progress, load3, Layout_backup;
+var init_layout_backup_23d41d18 = __esm({
+  ".svelte-kit/output/server/chunks/layout-backup-23d41d18.js"() {
     init_shims();
-    init_app_03b8560f();
+    init_app_8de5188f();
+    init_Scene_svelte_svelte_type_style_lang_e9c57401();
+    init_index_91210d95();
+    init_dist2();
+    import_app2 = __toModule(require_app());
+    import_graphics2 = __toModule(require_graphics());
+    import_display2 = __toModule(require_display());
+    import_constants2 = __toModule(require_constants());
+    import_core2 = __toModule(require_core());
+    import_interaction2 = __toModule(require_interaction());
+    import_ticker2 = __toModule(require_ticker());
+    import_filter_kawase_blur2 = __toModule(require_filter_kawase_blur_cjs());
+    import_filter_noise2 = __toModule(require_filter_noise());
+    import_filter_color_matrix2 = __toModule(require_filter_color_matrix());
+    init_simplex_noise();
+    import_hsl_to_hex2 = __toModule(require_hsl_to_hex());
+    import_debounce2 = __toModule(require_debounce());
+    import_utils2 = __toModule(require_utils());
     import_cookie4 = __toModule(require_cookie());
     init_dist();
     css5 = {
+      code: '.progress.svelte-1e2qztx.svelte-1e2qztx{position:fixed;bottom:2.5rem;left:2.5rem;right:2.5rem;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"}.progress.svelte-1e2qztx>div.svelte-1e2qztx{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline}.number.svelte-1e2qztx.svelte-1e2qztx{font-size:clamp(4rem, 2.9038461538rem + 4.8717948718vw, 8.75rem)}@media(prefers-reduced-motion: reduce){.number.svelte-1e2qztx.svelte-1e2qztx{display:none}}.progress-bar.svelte-1e2qztx.svelte-1e2qztx{height:0.0625rem;background-color:hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.1)}@media(prefers-reduced-motion: reduce){.progress-bar.svelte-1e2qztx.svelte-1e2qztx{display:none !important}}.progress-sliver.svelte-1e2qztx.svelte-1e2qztx{width:var(--width);background-color:hsla(var(--on-base-h, 0), var(--on-base-s, 0%), var(--on-base-l, 100%), 0.5);height:100%}',
+      map: null
+    };
+    Progress = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $$unsubscribe_progress = noop, $$subscribe_progress = () => ($$unsubscribe_progress(), $$unsubscribe_progress = subscribe(progress, ($$value) => $$value), progress);
+      let $page, $$unsubscribe_page;
+      $$unsubscribe_page = subscribe(page, (value) => $page = value);
+      let progress = tweened(0);
+      $$subscribe_progress();
+      $$result.css.add(css5);
+      $$unsubscribe_progress();
+      $$unsubscribe_page();
+      return `${$$result.head += `<script data-svelte="svelte-kw2fqm">var preProgress = 0;
+
+        setTimeout(() => {
+            if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
+                setInterval(() => {
+                    if (document.getElementById("preProgressNumber") && document.getElementById("preProgressNumber").innerText) {
+                        if (parseInt(document.getElementById("preProgressNumber").innerText) < 70) {
+                            document.getElementById("preProgressNumber").innerText = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
+                            preProgress = parseInt(document.getElementById("preProgressNumber").innerText) + 1;
+                            document.getElementById("preProgressSliver").style.setProperty('--width', \`\${preProgress}%\`);
+                        }
+                    }
+                }, 100);
+            }
+        }, 500);
+    <\/script>`, ""}
+
+<div class="${"progress svelte-1e2qztx"}"><div class="${"svelte-1e2qztx"}"><div class="${"number svelte-1e2qztx"}">${`<span id="${"preProgressNumber"}">0</span>%`}</div>
+        <div class="${"path"}">loading ${escape($page.path == "/" ? "/start" : $page.path)}</div></div>
+    
+    <div class="${"progress-bar svelte-1e2qztx"}">${`<div id="${"preProgressSliver"}" class="${"progress-sliver svelte-1e2qztx"}"></div>`}</div>
+</div>`;
+    });
+    load3 = async ({ page: page2 }) => ({ props: { key: page2.path } });
+    Layout_backup = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let $$unsubscribe_cookieConsent;
+      $$unsubscribe_cookieConsent = subscribe(cookieConsent, (value) => value);
+      let { key } = $$props;
+      scheme.subscribe((value) => {
+      });
+      if ($$props.key === void 0 && $$bindings.key && key !== void 0)
+        $$bindings.key(key);
+      $$unsubscribe_cookieConsent();
+      return `
+
+${`<div>${validate_component(Progress, "Progress").$$render($$result, {}, {}, {})}</div>`}`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/ueber-mich-29c9e412.js
+var ueber_mich_29c9e412_exports = {};
+__export(ueber_mich_29c9e412_exports, {
+  default: () => Ueber_mich,
+  prerender: () => prerender2
+});
+var import_cookie5, css6, prerender2, Ueber_mich;
+var init_ueber_mich_29c9e412 = __esm({
+  ".svelte-kit/output/server/chunks/ueber-mich-29c9e412.js"() {
+    init_shims();
+    init_app_8de5188f();
+    import_cookie5 = __toModule(require_cookie());
+    init_dist();
+    css6 = {
       code: "section.svelte-19fd63u.svelte-19fd63u.svelte-19fd63u{box-sizing:border-box;padding:9.375rem var(--core-padding)}section.svelte-19fd63u>div.svelte-19fd63u.svelte-19fd63u{margin:0 auto;max-width:var(--core-max-width);display:grid}@media(min-width: 768px){section.svelte-19fd63u>div.svelte-19fd63u.svelte-19fd63u{grid-template-columns:1fr 0.5fr}section.svelte-19fd63u>div.svelte-19fd63u>div.svelte-19fd63u{grid-column:1}section.svelte-19fd63u>div.svelte-19fd63u>img.svelte-19fd63u{grid-column:2;grid-row:1/span 2}}h1.svelte-19fd63u.svelte-19fd63u.svelte-19fd63u{font-family:var(--serif);font-weight:700;font-size:clamp(2.375rem, 1.8413461538rem + 2.3717948718vw, 4.6875rem);line-height:1;margin:0.5em 0}p.svelte-19fd63u.svelte-19fd63u.svelte-19fd63u{font-size:1.25rem;max-width:38.75rem}",
       map: null
     };
@@ -21060,7 +21215,7 @@ var init_ueber_mich_586498a5 = __esm({
       let now2 = new Date();
       let year = now2.getFullYear();
       let since = year - 2009;
-      $$result.css.add(css5);
+      $$result.css.add(css6);
       return `${$$result.head += `${$$result.title = `<title>\xDCber mich | Armin Neuhauser</title>`, ""}`, ""}
 
 <section class="${"svelte-19fd63u"}"><div class="${"svelte-19fd63u"}"><h1 class="${"svelte-19fd63u"}">Hallo, ich bin Armin.</h1>
@@ -21072,21 +21227,150 @@ var init_ueber_mich_586498a5 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-0a3f2f66.js
-var index_0a3f2f66_exports = {};
-__export(index_0a3f2f66_exports, {
+// .svelte-kit/output/server/chunks/impressum-a68f659e.js
+var impressum_a68f659e_exports = {};
+__export(impressum_a68f659e_exports, {
+  default: () => Impressum,
+  prerender: () => prerender3
+});
+var import_cookie6, css7, prerender3, Impressum;
+var init_impressum_a68f659e = __esm({
+  ".svelte-kit/output/server/chunks/impressum-a68f659e.js"() {
+    init_shims();
+    init_app_8de5188f();
+    import_cookie6 = __toModule(require_cookie());
+    init_dist();
+    css7 = {
+      code: "section.svelte-13g99pw.svelte-13g99pw{box-sizing:border-box;padding:calc(var(--core-padding) * 3) var(--core-padding);font-size:0.875rem;word-wrap:break-word}section.svelte-13g99pw>div.svelte-13g99pw{margin:0 auto;max-width:var(--content-max-width)}h1.svelte-13g99pw.svelte-13g99pw,h2.svelte-13g99pw.svelte-13g99pw,h3.svelte-13g99pw.svelte-13g99pw{line-height:1.1;margin:1em 0}h1.svelte-13g99pw.svelte-13g99pw{font-size:1.75rem}h2.svelte-13g99pw.svelte-13g99pw{font-size:1.25rem}h3.svelte-13g99pw.svelte-13g99pw{font-size:1rem}p.svelte-13g99pw a.svelte-13g99pw:not(:hover){text-decoration:underline}",
+      map: null
+    };
+    prerender3 = true;
+    Impressum = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css7);
+      return `${$$result.head += `${$$result.title = `<title>Impressum &amp; Datenschutz | Armin Neuhauser</title>`, ""}`, ""}
+
+<section class="${"svelte-13g99pw"}"><div class="${"svelte-13g99pw"}"><h1 class="${"svelte-13g99pw"}">Impressum</h1>
+        <div><p>Informationspflicht laut \xA75 E-Commerce Gesetz, \xA714 Unternehmensgesetzbuch, \xA763 Gewerbeordnung und Offenlegungspflicht laut \xA725 Mediengesetz.</p>
+            <p class="${"svelte-13g99pw"}">Armin Neuhauser<br>Nauschgasse 4/2/8<br>1220 Wien, \xD6sterreich<br>E-Mail: <a href="${"mailto:mail@arminneuhauser.at"}" class="${"svelte-13g99pw"}">mail@arminneuhauser.at</a></p>
+            <h2 id="${"eu-streitschlichtung"}" class="${"svelte-13g99pw"}">EU-Streitschlichtung</h2>
+            <p class="${"svelte-13g99pw"}">Gem\xE4\xDF Verordnung \xFCber Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) m\xF6chten wir Sie \xFCber die Online-Streitbeilegungsplattform (OS-Plattform) informieren.
+            Verbraucher haben die M\xF6glichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europ\xE4ischen Kommission unter <a href="${"http://ec.europa.eu/odr?tid=221090227"}" class="${"svelte-13g99pw"}">http://ec.europa.eu/odr?tid=221090227</a> zu richten. Die daf\xFCr notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum.</p>
+            <p>Wir m\xF6chten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+            <h2 id="${"haftung-f\xFCr-inhalte-dieser-webseite"}" class="${"svelte-13g99pw"}">Haftung f\xFCr Inhalte dieser Webseite</h2>
+            <p>Wir entwickeln die Inhalte dieser Webseite st\xE4ndig weiter und bem\xFChen uns korrekte und aktuelle Informationen bereitzustellen. Leider k\xF6nnen wir keine Haftung f\xFCr die Korrektheit aller Inhalte auf dieser Webseite \xFCbernehmen, speziell f\xFCr jene die seitens Dritter bereitgestellt wurden.</p>
+            <p>Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, bitten wir Sie uns umgehend zu kontaktieren, Sie finden die Kontaktdaten im Impressum.</p>
+            <h2 id="${"haftung-f\xFCr-links-auf-dieser-webseite"}" class="${"svelte-13g99pw"}">Haftung f\xFCr Links auf dieser Webseite</h2>
+            <p class="${"svelte-13g99pw"}">Unsere Webseite enth\xE4lt Links zu anderen Webseiten f\xFCr deren Inhalt wir nicht verantwortlich sind. Haftung f\xFCr verlinkte Websites besteht laut <a href="${"https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Bundesnormen&Dokumentnummer=NOR40025813&tid=221090227"}" class="${"svelte-13g99pw"}">\xA7 17 ECG</a> f\xFCr uns nicht, da wir keine Kenntnis rechtswidriger T\xE4tigkeiten hatten und haben, uns solche Rechtswidrigkeiten auch bisher nicht aufgefallen sind und wir Links sofort entfernen w\xFCrden, wenn uns Rechtswidrigkeiten bekannt werden.</p>
+            <p>Wenn Ihnen rechtswidrige Links auf unserer Website auffallen, bitten wir Sie uns zu kontaktieren, Sie finden die Kontaktdaten im Impressum.</p>
+            <h2 id="${"urheberrechtshinweis"}" class="${"svelte-13g99pw"}">Urheberrechtshinweis</h2>
+            <p>Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht. Falls notwendig, werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite rechtlich verfolgen.</p>
+            <h2 id="${"bildernachweis"}" class="${"svelte-13g99pw"}">Bildernachweis</h2>
+            <p>Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich gesch\xFCtzt.</p>
+            <p>Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:</p>
+            <ul><li>Armin Neuhauser</li></ul>
+            <h1 id="${"datenschutzerkl\xE4rung"}" class="${"svelte-13g99pw"}">Datenschutzerkl\xE4rung</h1>
+            <h2 id="${"datenschutz"}" class="${"svelte-13g99pw"}">Datenschutz</h2>
+            <p class="${"svelte-13g99pw"}">Wir haben diese Datenschutzerkl\xE4rung (Fassung 29.03.2019-221090227) verfasst, um Ihnen gem\xE4\xDF der Vorgaben der Datenschutz-Grundverordnung (EU) 2016/679 und dem <a href="${"https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&tid=221090227"}" class="${"svelte-13g99pw"}">Datenschutzgesetz (DSG)</a> zu erkl\xE4ren, welche Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsm\xF6glichkeiten Sie als Besucher dieser Webseite haben.</p>
+            <p>Leider liegt es in der Natur der Sache, dass diese Erkl\xE4rungen sehr technisch klingen, wir haben uns bei der Erstellung jedoch bem\xFCht die wichtigsten Dinge so einfach und klar wie m\xF6glich zu beschreiben.</p>
+            <h2 id="${"automatische-datenspeicherung"}" class="${"svelte-13g99pw"}">Automatische Datenspeicherung</h2>
+            <p>Wenn Sie heutzutage Webseiten besuchen, werden gewisse Informationen automatisch erstellt und gespeichert, so auch auf dieser Webseite.</p>
+            <p>Wenn Sie unsere Webseite so wie jetzt gerade besuchen, speichert unser Webserver (Computer auf dem diese Webseite gespeichert ist) automatisch Daten wie</p>
+            <ul><li>die Adresse (URL) der aufgerufenen Webseite</li>
+            <li>Browser und Browserversion</li>
+            <li>das verwendete Betriebssystem</li>
+            <li>die Adresse (URL) der zuvor besuchten Seite (Referrer URL)</li>
+            <li>den Hostname und die IP-Adresse des Ger\xE4ts von welchem aus zugegriffen wird</li>
+            <li>Datum und Uhrzeit</li></ul>
+            <p>in Dateien (Webserver-Logfiles).</p>
+            <p class="${"svelte-13g99pw"}">In der Regel werden Webserver-Logfiles zwei Wochen gespeichert und danach automatisch gel\xF6scht. Wir geben diese Daten nicht weiter, k\xF6nnen jedoch nicht ausschlie\xDFen, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
+            Die Rechtsgrundlage besteht nach <a href="${"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=221090227"}" class="${"svelte-13g99pw"}">Artikel 6  Absatz 1 f DSGVO</a> (Rechtm\xE4\xDFigkeit der Verarbeitung) darin, dass berechtigtes Interesse daran besteht, den fehlerfreien Betrieb dieser Webseite durch das Erfassen von Webserver-Logfiles zu erm\xF6glichen.</p>
+            <h2 id="${"speicherung-pers\xF6nlicher-daten"}" class="${"svelte-13g99pw"}">Speicherung pers\xF6nlicher Daten</h2>
+            <p>Pers\xF6nliche Daten, die Sie uns auf dieser Website elektronisch \xFCbermitteln, wie zum Beispiel Name, E-Mail-Adresse, Adresse oder andere pers\xF6nlichen Angaben im Rahmen der \xDCbermittlung eines Formulars oder Kommentaren im Blog, werden von uns gemeinsam mit dem Zeitpunkt und der IP-Adresse nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben.</p>
+            <p>Wir nutzen Ihre pers\xF6nlichen Daten somit nur f\xFCr die Kommunikation mit jenen Besuchern, die Kontakt ausdr\xFCcklich w\xFCnschen und f\xFCr die Abwicklung der auf dieser Webseite angebotenen Dienstleistungen und Produkte. Wir geben Ihre pers\xF6nlichen Daten ohne Zustimmung nicht weiter, k\xF6nnen jedoch nicht ausschlie\xDFen, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.</p>
+            <p>Wenn Sie uns pers\xF6nliche Daten per E-Mail schicken \u2013 somit abseits dieser Webseite \u2013 k\xF6nnen wir keine sichere \xDCbertragung und den Schutz Ihrer Daten garantieren. Wir empfehlen Ihnen, vertrauliche Daten niemals unverschl\xFCsselt per E-Mail zu \xFCbermitteln.</p>
+            <p class="${"svelte-13g99pw"}">Die Rechtsgrundlage besteht nach <a href="${"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=221090227"}" class="${"svelte-13g99pw"}">Artikel 6  Absatz 1 a DSGVO</a> (Rechtm\xE4\xDFigkeit der Verarbeitung) darin, dass Sie uns die Einwilligung zur Verarbeitung der von Ihnen eingegebenen Daten geben. Sie k\xF6nnen diesen Einwilligung jederzeit widerrufen \u2013 eine formlose E-Mail reicht aus, Sie finden unsere Kontaktdaten im Impressum.</p>
+            <h2 id="${"rechte-laut-datenschutzgrundverordnung"}" class="${"svelte-13g99pw"}">Rechte laut Datenschutzgrundverordnung</h2>
+            <p class="${"svelte-13g99pw"}">Ihnen stehen laut den Bestimmungen der DSGVO und des \xF6sterreichischen <a href="${"https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597&tid=221090227"}" class="${"svelte-13g99pw"}">Datenschutzgesetzes (DSG)</a> grunds\xE4tzlich die folgende Rechte zu:</p>
+            <ul><li>Recht auf Berichtung (Artikel 16 DSGVO)</li>
+            <li>Recht auf L\xF6schung (\u201ERecht auf Vergessenwerden\u201C) (Artikel 17 DSGVO)</li>
+            <li>Recht auf Einschr\xE4nkung der Verarbeitung (Artikel 18 DSGVO)</li>
+            <li>Recht auf Benachrichtigung \u2013 Mitteilungspflicht im Zusammenhang mit der Berichtigung oder L\xF6schung personenbezogener Daten oder der Einschr\xE4nkung der Verarbeitung (Artikel 19 DSGVO)</li>
+            <li>Recht auf Daten\xFCbertragbarkeit (Artikel 20 DSGVO)
+            Widerspruchsrecht (Artikel 21 DSGVO)</li>
+            <li>Recht, nicht einer ausschlie\xDFlich auf einer automatisierten Verarbeitung \u2014 einschlie\xDFlich Profiling \u2014 beruhenden Entscheidung unterworfen zu werden (Artikel 22 DSGVO)</li></ul>
+            <p class="${"svelte-13g99pw"}">Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verst\xF6\xDFt oder Ihre datenschutzrechtlichen Anspr\xFCche sonst in einer Weise verletzt worden sind, k\xF6nnen Sie sich bei der Aufsichtsbeh\xF6rde beschweren, welche in \xD6sterreich die Datenschutzbeh\xF6rde ist, deren Webseite Sie unter <a href="${"https://www.dsb.gv.at/"}" class="${"svelte-13g99pw"}">https://www.dsb.gv.at/</a> finden.</p>
+            <h2 id="${"auswertung-des-besucherverhaltens"}" class="${"svelte-13g99pw"}">Auswertung des Besucherverhaltens</h2>
+            <p>In der folgenden Datenschutzerkl\xE4rung informieren wir Sie dar\xFCber, ob und wie wir Daten Ihres Besuchs dieser Website auswerten. Die Auswertung der gesammelten Daten erfolgt in der Regel anonym und wir k\xF6nnen von Ihrem Verhalten auf dieser Website nicht auf Ihre Person schlie\xDFen.</p>
+            <p>Mehr \xFCber M\xF6glichkeiten dieser Auswertung der Besuchsdaten zu widersprechen erfahren Sie in der folgenden Datenschutzerkl\xE4rung.</p>
+            <h2 id="${"tls-verschl\xFCsselung-mit-https"}" class="${"svelte-13g99pw"}">TLS-Verschl\xFCsselung mit https</h2>
+            <p class="${"svelte-13g99pw"}">Wir verwenden https um Daten abh\xF6rsicher im Internet zu \xFCbertragen (Datenschutz durch Technikgestaltung <a href="${"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=221090227"}" class="${"svelte-13g99pw"}">Artikel 25 Absatz 1 DSGVO</a>). Durch den Einsatz von TLS (Transport Layer Security), einem Verschl\xFCsselungsprotokoll zur sicheren Daten\xFCbertragung im Internet k\xF6nnen wir den Schutz vertraulicher Daten sicherstellen. Sie erkennen die Benutzung dieser Absicherung der Daten\xFCbertragung am kleinen Schlosssymbol links oben im Browser und der Verwendung des Schemas https (anstatt http) als Teil unserer Internetadresse.</p>
+            <h2 id="${"cookies"}" class="${"svelte-13g99pw"}">Cookies</h2>
+            <p>Unsere Website verwendet HTTP-Cookies um nutzerspezifische Daten zu speichern.
+            Ein Cookie ist ein kurzes Datenpaket, welches zwischen Webbrowser und Webserver ausgetauscht wird, f\xFCr diese aber v\xF6llig bedeutungslos ist und erst f\xFCr die Webanwendung, z. B. einen Online-Shop, eine Bedeutung erh\xE4lt, etwa den Inhalt eines virtuellen Warenkorbes.</p>
+            <p>Es gibt zwei Arten von Cookies: Erstanbieter-Cookies werden von unserer Website erstellt, Drittanbieter-Cookies werden von anderen Websites (z. B. Google Analytics) erstellt.
+            Beispielhafte Cookiedaten:</p>
+            <ul><li>Name: _ga</li>
+            <li>Ablaufzeit: 2 Jahre</li>
+            <li>Verwendung: Unterscheidung der Webseitenbesucher</li>
+            <li>Beispielhafter Wert: GA1.2.1326744211.152221090227</li></ul>
+            <p>Man unterscheidet drei Kategorien von Cookies: unbedingt notwendige Cookies um grundlegende Funktionen der Website sicherzustellen, funktionelle Cookies um die Leistung der Webseite sicherzustellen und zielorientierte Cookies um das Benutzererlebnis zu verbessern.</p>
+            <p>Wir nutzen Cookies, um unsere Webseite nutzerfreundlicher zu gestalten. Einige Cookies bleiben auf Ihrem Endger\xE4t gespeichert, bis Sie diese l\xF6schen. Sie erm\xF6glichen es uns, Ihren Browser beim n\xE4chsten Besuch wiederzuerkennen.</p>
+            <h2 id="${"cookie-einstellungen-sehen-und-cookies-l\xF6schen"}" class="${"svelte-13g99pw"}">Cookie Einstellungen sehen und Cookies l\xF6schen</h2>
+            <p>Wenn Sie feststellen m\xF6chten, welche Cookies in Ihrem Browser gespeichert wurden, Cookie-Einstellungen \xE4ndern oder Cookies l\xF6schen m\xF6chten, k\xF6nnen Sie dies in Ihren Browser-Einstellungen finden:</p>
+            <ul><li><a href="${"https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=221090227"}">Safari: Verwalten von Cookies und Websitedaten mit Safari</a></li>
+            <li><a href="${"https://support.mozilla.org/de/kb/cookies-loeschen-daten-von-websites-entfernen"}">Firefox: Cookies l\xF6schen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben</a></li>
+            <li><a href="${"https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=de"}">Chrome: Cookies in Chrome l\xF6schen, aktivieren und verwalten</a></li>
+            <li><a href="${"https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies"}">Internet Explorer: L\xF6schen und Verwalten von Cookies</a></li></ul>
+            <p>Wenn Sie die Speicherung von Daten in Cookies nicht w\xFCnschen, so k\xF6nnen Sie Ihren Browser so einrichten, dass er Sie \xFCber das Setzen von Cookies informiert und Sie dies nur im Einzelfall erlauben. Sie k\xF6nnen jederzeit Cookies, die sich bereits auf Ihrem Computer befinden, l\xF6schen oder Cookies deaktivieren. Die Vorgangsweise dazu ist nach Browser unterschiedlich, am besten Sie suchen die Anleitung in Google mit dem Suchbegriff \u201CCookies l\xF6schen Chrome\u201D oder \u201ECookies deaktivieren Chrome\u201C im Falle eines Chrome Browsers oder tauschen das Wort \u201EChrome\u201C gegen den Namen Ihres Browsers, z. B. Edge, Firefox, Safari aus.
+            Wenn Sie uns generell nicht gestatten, Cookies zu nutzen, d.h. diese per Browsereinstellung deaktivieren, k\xF6nnen manche Funktionen und Seiten nicht wie erwartet funktionieren.</p>
+            <h2 id="${"google-analytics-datenschutzerkl\xE4rung"}" class="${"svelte-13g99pw"}">Google Analytics Datenschutzerkl\xE4rung</h2>
+            <p>Wir verwenden auf dieser Website Google Analytics der Firma Google LLC (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) um Besucherdaten statistisch auszuwerten. Dabei verwendet Google Analytics zielorientierte Cookies.</p>
+            <h3 id="${"cookies-von-google-analytics"}" class="${"svelte-13g99pw"}">Cookies von Google Analytics</h3>
+            <ul><li>_ga<ul><li>Ablaufzeit: 2 Jahre</li>
+            <li>Verwendung: Unterscheidung der Webseitenbesucher</li>
+            <li>Beispielhafter Wert: GA1.2.1326744211.152221090227</li></ul></li>
+            <li>_gid<ul><li>Ablaufzeit: 24 Stunden</li>
+            <li>Verwendung: Unterscheidung der Webseitenbesucher</li>
+            <li>Beispielhafter Wert: GA1.2.1687193234.152221090227</li></ul></li>
+            <li><em>gat_gtag_UA</em><property-id><ul><li>Ablaufzeit: 1 Minute</li>
+            <li>Verwendung: Wird zum Drosseln der Anforderungsrate verwendet. Wenn Google Analytics \xFCber den Google Tag Manager bereitgestellt wird, erh\xE4lt dieser Cookie den Namen <em>dc_gtm</em> <property-id>.</property-id></li>
+            <li>Beispielhafter Wert: 1</li></ul></property-id></li></ul>
+            <p class="${"svelte-13g99pw"}">N\xE4here Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter <a href="${"http://www.google.com/analytics/terms/de.html"}" class="${"svelte-13g99pw"}">http://www.google.com/analytics/terms/de.html</a> bzw. unter <a href="${"https://support.google.com/analytics/answer/6004245?hl=de"}" class="${"svelte-13g99pw"}">https://support.google.com/analytics/answer/6004245?hl=de</a>.</p>
+            <h3 id="${"pseudonymisierung"}" class="${"svelte-13g99pw"}">Pseudonymisierung</h3>
+            <p>Unser Anliegen im Sinne der DSGVO ist die Verbesserung unseres Angebotes und unseres Webauftritts. Da uns die Privatsph\xE4re unserer Nutzer wichtig ist, werden die Nutzerdaten pseudonymisiert. Die Datenverarbeitung erfolgt auf Basis der gesetzlichen Bestimmungen des \xA7 96 Abs 3 TKG sowie des Art 6 EU-DSGVO Abs 1 lit a (Einwilligung) und/oder f (berechtigtes Interesse) der DSGVO.</p>
+            <h3 id="${"deaktivierung-der-datenerfassung-durch-google-analytics"}" class="${"svelte-13g99pw"}">Deaktivierung der Datenerfassung durch Google Analytics</h3>
+            <p>Mithilfe des Browser-Add-ons zur Deaktivierung von Google Analytics-JavaScript (ga.js, analytics.js, dc.js) k\xF6nnen Website-Besucher verhindern, dass Google Analytics ihre Daten verwendet.</p>
+            <p class="${"svelte-13g99pw"}">Sie k\xF6nnen die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verf\xFCgbare Browser-Plugin herunterladen und installieren: <a href="${"https://tools.google.com/dlpage/gaoptout?hl=de"}" class="${"svelte-13g99pw"}">https://tools.google.com/dlpage/gaoptout?hl=de</a></p>
+            <h2 id="${"google-analytics-zusatz-zur-datenverarbeitung"}" class="${"svelte-13g99pw"}">Google Analytics Zusatz zur Datenverarbeitung</h2>
+            <p>Wir haben mit Google einen Direktkundenvertrag zur Verwendung von Google Analytics abgeschlossen, indem wir den \u201CZusatz zur Datenverarbeitung\u201D in Google Analytics akzeptiert haben.</p>
+            <p class="${"svelte-13g99pw"}">Mehr \xFCber den Zusatz zur Datenverarbeitung f\xFCr Google Analytics finden Sie hier: <a href="${"https://support.google.com/analytics/answer/3379636?hl=de&utm_id=ad"}" class="${"svelte-13g99pw"}">https://support.google.com/analytics/answer/3379636?hl=de&amp;utm_id=ad</a></p>
+            <h2 id="${"google-analytics-berichte-zu-demografischen-merkmalen-und-interessen"}" class="${"svelte-13g99pw"}">Google Analytics Berichte zu demografischen Merkmalen und Interessen</h2>
+            <p class="${"svelte-13g99pw"}">Wir haben in Google Analytics die Funktionen f\xFCr Werbeberichte eingeschaltet. Die Berichte zu demografischen Merkmalen und Interessen enthalten Angaben zu Alter, Geschlecht und Interessen. Damit k\xF6nnen wir uns \u2013 ohne diese Daten einzelnen Personen zuordnen zu k\xF6nnen \u2013 ein besseres Bild von unseren Nutzern machen. Mehr \xFCber die Werbefunktionen erfahren Sie auf <a href="${"https://support.google.com/analytics/answer/3450482?hl=de_AT&utm_id=ad"}" class="${"svelte-13g99pw"}">https://support.google.com/analytics/answer/3450482?hl=de_AT&amp;utm_id=ad</a>.</p>
+            <p class="${"svelte-13g99pw"}">Sie k\xF6nnen die Nutzung der Aktivit\xE4ten und Informationen Ihres Google Kontos unter \u201CEinstellungen f\xFCr Werbung\u201D auf <a href="${"https://adssettings.google.com/authenticated"}" class="${"svelte-13g99pw"}">https://adssettings.google.com/authenticated</a> per Checkbox beenden.</p>
+            <h2 id="${"google-analytics-ip-anonymisierung"}" class="${"svelte-13g99pw"}">Google Analytics IP-Anonymisierung</h2>
+            <p>Wir haben auf dieser Webseite die IP-Adressen-Anonymisierung von Google Analytics implementiert. Diese Funktion wurde von Google entwickelt, damit diese Webseite die geltenden Datenschutzbestimmungen und Empfehlungen der lokalen Datenschutzbeh\xF6rden einhalten kann, wenn diese eine Speicherung der vollst\xE4ndigen IP-Adresse untersagen. Die Anonymisierung bzw. Maskierung der IP findet statt, sobald die IP-Adressen im Google Analytics-Datenerfassungsnetzwerk eintreffen und bevor eine Speicherung oder Verarbeitung der Daten stattfindet.</p>
+            <p class="${"svelte-13g99pw"}">Mehr Informationen zur IP-Anonymisierung finden Sie auf <a href="${"https://support.google.com/analytics/answer/2763052?hl=de"}" class="${"svelte-13g99pw"}">https://support.google.com/analytics/answer/2763052?hl=de</a>.</p>
+            <p class="${"svelte-13g99pw"}">Quelle: Erstellt mit dem <a href="${"https://www.adsimple.at/datenschutz-generator/"}" target="${"_blank"}" rel="${"noopener noreferrer"}" class="${"svelte-13g99pw"}">Datenschutz Generator</a>  von AdSimple</p></div></div>
+</section>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/index-ed521e11.js
+var index_ed521e11_exports = {};
+__export(index_ed521e11_exports, {
   default: () => Projekte
 });
-var import_cookie5, css$12, Teaser2, css6, Projekte;
-var init_index_0a3f2f66 = __esm({
-  ".svelte-kit/output/server/chunks/index-0a3f2f66.js"() {
+var import_cookie7, css$13, Teaser2, css8, Projekte;
+var init_index_ed521e11 = __esm({
+  ".svelte-kit/output/server/chunks/index-ed521e11.js"() {
     init_shims();
-    init_app_03b8560f();
-    init_IntersectionObserver_c7b56316();
-    import_cookie5 = __toModule(require_cookie());
+    init_app_8de5188f();
+    init_IntersectionObserver_ba966075();
+    import_cookie7 = __toModule(require_cookie());
     init_dist();
-    css$12 = {
-      code: "@keyframes svelte-h7rxnd-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-h7rxnd-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-h7rxnd-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-h7rxnd-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-h7rxnd-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-h7rxnd-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-h7rxnd-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-h7rxnd-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-h7rxnd-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-h7rxnd-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-h7rxnd-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.teaser.svelte-h7rxnd.svelte-h7rxnd{position:relative}.inner.svelte-h7rxnd.svelte-h7rxnd{position:relative;top:0;display:grid;grid-template-rows:1fr repeat(3, auto) 1fr}header.svelte-h7rxnd.svelte-h7rxnd{grid-row:2;align-self:end;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5em;width:100%;flex:1 0 auto;margin-bottom:0.625rem;position:relative;z-index:3}header.intersecting.svelte-h7rxnd a span.svelte-h7rxnd{transform:translate3d(0, 0, 0)}header.svelte-h7rxnd a.svelte-h7rxnd{display:inline-flex;overflow:hidden}header.svelte-h7rxnd a span.svelte-h7rxnd{transform:translate3d(0, 100%, 0);transition:transform 0.8s var(--easing);position:relative;pointer-events:none}header.svelte-h7rxnd a span.svelte-h7rxnd::after{content:attr(data-title);position:absolute;left:0;top:0;transform:translate3d(0, 100%, 0)}header.svelte-h7rxnd a:hover span.svelte-h7rxnd{transform:translate3d(0, -100%, 0)}header.svelte-h7rxnd h1.svelte-h7rxnd{font-size:clamp(1.625rem, 0.6607142857rem + 1.0714285714vw, 2.375rem);margin:0}header.svelte-h7rxnd div.svelte-h7rxnd{font-family:var(--sans);font-weight:400;font-size:clamp(0.875rem, 0.7142857143rem + 0.1785714286vw, 1rem)}figure.svelte-h7rxnd.svelte-h7rxnd{grid-row:3;display:flex;margin:0;aspect-ratio:0.8;justify-self:start;overflow:hidden;width:100%;max-height:100%;position:relative;z-index:1;opacity:0}figure.svelte-h7rxnd picture.svelte-h7rxnd{flex-basis:100%;pointer-events:none}figure.intersecting.svelte-h7rxnd.svelte-h7rxnd{animation:svelte-h7rxnd-fadein 1s var(--easing) forwards}footer.svelte-h7rxnd.svelte-h7rxnd{grid-row:4;margin-top:0.625rem;width:100%;position:relative;z-index:2}footer.svelte-h7rxnd p.svelte-h7rxnd{font-size:clamp(0.875rem, 0.7142857143rem + 0.1785714286vw, 1rem);margin:0;overflow:hidden}footer.svelte-h7rxnd p a.svelte-h7rxnd{display:inline-flex;transform:translate3d(0, 100%, 0)}footer.svelte-h7rxnd hr.svelte-h7rxnd{margin:1.25rem 0 0;transform:scaleX(0);transform-origin:top left}footer.intersecting.svelte-h7rxnd p a.svelte-h7rxnd{animation:svelte-h7rxnd-to-top 0.8s 0.2s var(--easing) forwards}footer.intersecting.svelte-h7rxnd hr.svelte-h7rxnd{animation:svelte-h7rxnd-scale 0.8s 0.3s var(--easing) forwards}",
+    css$13 = {
+      code: "@keyframes svelte-1651wc9-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1651wc9-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1651wc9-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1651wc9-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1651wc9-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1651wc9-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1651wc9-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1651wc9-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1651wc9-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1651wc9-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1651wc9-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.teaser.svelte-1651wc9.svelte-1651wc9{position:relative}.inner.svelte-1651wc9.svelte-1651wc9{position:relative;top:0;display:grid;grid-template-rows:1fr repeat(3, auto) 1fr}header.svelte-1651wc9.svelte-1651wc9{grid-row:2;align-self:end;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.5em;width:100%;flex:1 0 auto;margin-bottom:0.625rem;position:relative;z-index:3}header.intersecting.svelte-1651wc9 a span.svelte-1651wc9{transform:translate3d(0, 0, 0)}header.svelte-1651wc9 a.svelte-1651wc9{display:inline-flex;overflow:hidden}header.svelte-1651wc9 a span.svelte-1651wc9{transform:translate3d(0, 100%, 0);transition:transform 0.8s var(--easing);position:relative;pointer-events:none}header.svelte-1651wc9 a span.svelte-1651wc9::after{content:attr(data-title);position:absolute;left:0;top:0;transform:translate3d(0, 100%, 0)}header.svelte-1651wc9 a:hover span.svelte-1651wc9{transform:translate3d(0, -100%, 0)}header.svelte-1651wc9 h1.svelte-1651wc9{font-size:clamp(1.625rem, 0.6607142857rem + 1.0714285714vw, 2.375rem);margin:0}header.svelte-1651wc9 div.svelte-1651wc9{font-family:var(--sans);font-weight:400;font-size:clamp(0.875rem, 0.7142857143rem + 0.1785714286vw, 1rem)}figure.svelte-1651wc9.svelte-1651wc9{grid-row:3;display:flex;margin:0;aspect-ratio:0.8;justify-self:start;overflow:hidden;width:100%;max-height:100%;position:relative;z-index:1;opacity:0}figure.svelte-1651wc9 picture.svelte-1651wc9{flex-basis:100%;pointer-events:none}figure.intersecting.svelte-1651wc9.svelte-1651wc9{animation:svelte-1651wc9-fadein 1s var(--easing) forwards}footer.svelte-1651wc9.svelte-1651wc9{grid-row:4;margin-top:0.625rem;width:100%;position:relative;z-index:2}footer.svelte-1651wc9 p.svelte-1651wc9{font-size:clamp(0.875rem, 0.7142857143rem + 0.1785714286vw, 1rem);margin:0;overflow:hidden}footer.svelte-1651wc9 p a.svelte-1651wc9{display:inline-flex;transform:translate3d(0, 100%, 0)}footer.svelte-1651wc9 hr.svelte-1651wc9{margin:1.25rem 0 0;transform:scaleX(0);transform-origin:top left}footer.intersecting.svelte-1651wc9 p a.svelte-1651wc9{animation:svelte-1651wc9-to-top 0.8s 0.2s var(--easing) forwards}footer.intersecting.svelte-1651wc9 hr.svelte-1651wc9{animation:svelte-1651wc9-scale 0.8s 0.3s var(--easing) forwards}",
       map: null
     };
     Teaser2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -21111,19 +21395,19 @@ var init_index_0a3f2f66 = __esm({
         $$bindings.desc(desc);
       if ($$props.image === void 0 && $$bindings.image && image !== void 0)
         $$bindings.image(image);
-      $$result.css.add(css$12);
+      $$result.css.add(css$13);
       let $$settled;
       let $$rendered;
       do {
         $$settled = true;
-        $$rendered = `<article class="${"teaser svelte-h7rxnd"}"><div class="${"inner svelte-h7rxnd"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { once: true, element, intersecting }, {
+        $$rendered = `<article class="${"teaser svelte-1651wc9"}"><div class="${"inner svelte-1651wc9"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { once: true, element, intersecting }, {
           intersecting: ($$value) => {
             intersecting = $$value;
             $$settled = false;
           }
         }, {
-          default: () => `<header class="${["svelte-h7rxnd", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><h1 class="${"svelte-h7rxnd"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-h7rxnd"}"><span${add_attribute("data-title", title, 0)} class="${"svelte-h7rxnd"}">${escape(title)}</span></a></h1>
-                <div class="${"svelte-h7rxnd"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-h7rxnd"}"><span${add_attribute("data-title", year, 0)} class="${"svelte-h7rxnd"}">${escape(year)}</span></a></div></header>`
+          default: () => `<header class="${["svelte-1651wc9", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><h1 class="${"svelte-1651wc9"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-1651wc9"}"><span${add_attribute("data-title", title, 0)} class="${"svelte-1651wc9"}">${escape(title)}</span></a></h1>
+                <div class="${"svelte-1651wc9"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-1651wc9"}"><span${add_attribute("data-title", year, 0)} class="${"svelte-1651wc9"}">${escape(year)}</span></a></div></header>`
         })}
 
         ${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, {
@@ -21136,7 +21420,7 @@ var init_index_0a3f2f66 = __esm({
             $$settled = false;
           }
         }, {
-          default: () => `<figure class="${["svelte-h7rxnd", intersecting2 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element2, 0)}><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}"><picture class="${"svelte-h7rxnd"}"><img${add_attribute("src", image, 0)}${add_attribute("alt", title, 0)} loading="${"lazy"}"></picture></a></figure>`
+          default: () => `<figure class="${["svelte-1651wc9", intersecting2 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element2, 0)}><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}"><picture class="${"svelte-1651wc9"}"><img${add_attribute("src", image, 0)}${add_attribute("alt", title, 0)} width="${"656"}" height="${"820"}" loading="${"lazy"}"></picture></a></figure>`
         })}
 
         ${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, {
@@ -21149,26 +21433,28 @@ var init_index_0a3f2f66 = __esm({
             $$settled = false;
           }
         }, {
-          default: () => `<footer class="${["svelte-h7rxnd", intersecting3 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element3, 0)}><p class="${"svelte-h7rxnd"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-h7rxnd"}">${escape(desc)}</a></p>
-                <hr class="${"svelte-h7rxnd"}"></footer>`
+          default: () => `<footer class="${["svelte-1651wc9", intersecting3 ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element3, 0)}><p class="${"svelte-1651wc9"}"><a sveltekit:prefetch href="${"/projekte/" + escape(slug)}" title="${"Projekt " + escape(title) + " ansehen"}" class="${"svelte-1651wc9"}">${escape(desc)}</a></p>
+                <hr class="${"svelte-1651wc9"}"></footer>`
         })}</div>
 </article>`;
       } while (!$$settled);
       return $$rendered;
     });
-    css6 = {
-      code: "@keyframes svelte-c8ejd-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-c8ejd-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-c8ejd-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-c8ejd-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-c8ejd-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-c8ejd-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-c8ejd-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-c8ejd-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-c8ejd-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-c8ejd-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-c8ejd-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}header.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{box-sizing:border-box;padding:9.375rem var(--core-padding) 6.25rem;min-height:60vh;display:flex}header.svelte-c8ejd>div.svelte-c8ejd.svelte-c8ejd{flex-basis:100%;display:grid;grid-gap:2.5rem;grid-template-rows:auto min-content min-content auto;margin:0 auto;max-width:var(--core-max-width)}@media(min-width: 768px){header.svelte-c8ejd>div.svelte-c8ejd.svelte-c8ejd{grid-template-columns:repeat(12, 1fr);grid-row-gap:5rem;align-items:end}}@media(min-width: 1440px){header.svelte-c8ejd>div.svelte-c8ejd.svelte-c8ejd{grid-gap:5rem}}header.svelte-c8ejd>div .mask span.svelte-c8ejd.svelte-c8ejd{animation:svelte-c8ejd-to-top 1.2s var(--easing) forwards}header.svelte-c8ejd>div .mask:nth-child(2) span.svelte-c8ejd.svelte-c8ejd{animation-delay:200ms}header.svelte-c8ejd>div h1.svelte-c8ejd.svelte-c8ejd{grid-row:2;font-family:var(--serif);font-weight:700;font-size:2.8125rem;line-height:1;margin:0}@media(min-width: 768px){header.svelte-c8ejd>div h1.svelte-c8ejd.svelte-c8ejd{grid-column:1/span 6;grid-row:3;font-size:clamp(3.5rem, 2.5892857143rem + 1.8973214286vw, 5.625rem)}}@media(min-width: 1440px){header.svelte-c8ejd>div h1.svelte-c8ejd.svelte-c8ejd{grid-column:1/span 6}}header.svelte-c8ejd>div.svelte-c8ejd div.svelte-c8ejd{grid-row:3;font-size:clamp(0.8125rem, 0.625rem + 0.234375vw, 1rem)}@media(min-width: 768px){header.svelte-c8ejd>div.svelte-c8ejd div.svelte-c8ejd{grid-column:7/span 6}}@media(min-width: 1440px){header.svelte-c8ejd>div.svelte-c8ejd div.svelte-c8ejd{grid-column:9/span 4}}header.svelte-c8ejd>div.svelte-c8ejd div p.svelte-c8ejd{margin:0;max-width:18.75rem}header.svelte-c8ejd>div div hr.svelte-c8ejd.svelte-c8ejd{margin:1.25rem 0 0;transform:scaleX(0);transform-origin:top left;animation:svelte-c8ejd-scale 0.8s 0.3s var(--easing) forwards}.projects.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{background-color:var(--base);box-sizing:border-box;padding:var(--core-padding)}.projects-list.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{display:grid;grid-gap:2.5rem;margin:0 auto;max-width:var(--core-max-width)}@media(min-width: 768px){.projects-list.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{grid-template-columns:repeat(2, 1fr)}}@media(min-width: 1024px){.projects-list.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{grid-template-columns:repeat(3, 1fr)}}@media(min-width: 1440px){.projects-list.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{grid-gap:5rem}}.coming-soon.svelte-c8ejd.svelte-c8ejd.svelte-c8ejd{margin:0 auto;max-width:var(--core-max-width);padding:6.25rem 0}.coming-soon.svelte-c8ejd p.svelte-c8ejd.svelte-c8ejd{width:17.5rem;height:17.5rem;border:1px solid var(--on-base);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;opacity:0.6;font-size:0.875rem}@media(min-width: 1024px){.coming-soon.svelte-c8ejd p.svelte-c8ejd.svelte-c8ejd{width:22.5rem;height:22.5rem}}",
+    css8 = {
+      code: "@keyframes svelte-1ubuds-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1ubuds-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1ubuds-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ubuds-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ubuds-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1ubuds-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1ubuds-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1ubuds-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1ubuds-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1ubuds-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1ubuds-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}header.svelte-1ubuds.svelte-1ubuds.svelte-1ubuds{box-sizing:border-box;padding:9.375rem var(--core-padding) 6.25rem;min-height:60vh;display:flex}header.svelte-1ubuds>div.svelte-1ubuds.svelte-1ubuds{flex-basis:100%;display:grid;grid-gap:2.5rem;grid-template-rows:auto min-content min-content auto;margin:0 auto;max-width:var(--core-max-width)}@media(min-width: 768px){header.svelte-1ubuds>div.svelte-1ubuds.svelte-1ubuds{grid-template-columns:repeat(12, 1fr);grid-row-gap:5rem;align-items:end}}@media(min-width: 1440px){header.svelte-1ubuds>div.svelte-1ubuds.svelte-1ubuds{grid-gap:5rem}}header.svelte-1ubuds>div .mask.svelte-1ubuds.svelte-1ubuds:first-child{width:100%}header.svelte-1ubuds>div .mask span.svelte-1ubuds.svelte-1ubuds{animation:svelte-1ubuds-to-top 1.2s var(--easing) forwards}header.svelte-1ubuds>div .mask:nth-child(2) span.svelte-1ubuds.svelte-1ubuds{animation-delay:200ms}header.svelte-1ubuds>div .mask:nth-child(3) span.svelte-1ubuds.svelte-1ubuds{animation-delay:400ms}@media(min-width: 1440px){header.svelte-1ubuds>div .mask:nth-child(3) span.svelte-1ubuds.svelte-1ubuds{animation-delay:200ms}}header.svelte-1ubuds>div h1.svelte-1ubuds.svelte-1ubuds{grid-row:2;font-family:var(--serif);font-weight:700;font-size:2.8125rem;line-height:1;margin:0}@media(min-width: 768px){header.svelte-1ubuds>div h1.svelte-1ubuds.svelte-1ubuds{grid-column:1/span 6;grid-row:3;font-size:clamp(3.5rem, 2.5892857143rem + 1.8973214286vw, 5.625rem)}}@media(min-width: 1440px){header.svelte-1ubuds>div h1.svelte-1ubuds.svelte-1ubuds{grid-column:1/span 8}}header.svelte-1ubuds>div.svelte-1ubuds div.svelte-1ubuds{grid-row:3;font-size:clamp(0.8125rem, 0.625rem + 0.234375vw, 1rem)}@media(min-width: 768px){header.svelte-1ubuds>div.svelte-1ubuds div.svelte-1ubuds{grid-column:7/span 6}}@media(min-width: 1440px){header.svelte-1ubuds>div.svelte-1ubuds div.svelte-1ubuds{grid-column:9/span 4}}header.svelte-1ubuds>div.svelte-1ubuds div p.svelte-1ubuds{animation:svelte-1ubuds-fadein 1.2s 0.2s var(--easing) forwards;margin:0;max-width:18.75rem;opacity:0}header.svelte-1ubuds>div div hr.svelte-1ubuds.svelte-1ubuds{margin:1.25rem 0 0;transform:scaleX(0);transform-origin:top left;animation:svelte-1ubuds-scale 0.8s 0.3s var(--easing) forwards}.projects.svelte-1ubuds.svelte-1ubuds.svelte-1ubuds{background-color:var(--base);box-sizing:border-box;padding:var(--core-padding)}.projects-list.svelte-1ubuds.svelte-1ubuds.svelte-1ubuds{display:grid;grid-gap:2.5rem;margin:0 auto;max-width:var(--core-max-width)}@media(min-width: 768px){.projects-list.svelte-1ubuds.svelte-1ubuds.svelte-1ubuds{grid-template-columns:repeat(2, 1fr)}}@media(min-width: 1024px){.projects-list.svelte-1ubuds.svelte-1ubuds.svelte-1ubuds{grid-template-columns:repeat(3, 1fr)}}@media(min-width: 1440px){.projects-list.svelte-1ubuds.svelte-1ubuds.svelte-1ubuds{grid-gap:5rem}}.coming-soon.svelte-1ubuds.svelte-1ubuds.svelte-1ubuds{margin:0 auto;max-width:var(--core-max-width);padding:6.25rem 0}.coming-soon.svelte-1ubuds p.svelte-1ubuds.svelte-1ubuds{width:17.5rem;height:17.5rem;border:1px solid var(--on-base);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;opacity:0.6;font-size:0.875rem}@media(min-width: 1024px){.coming-soon.svelte-1ubuds p.svelte-1ubuds.svelte-1ubuds{width:22.5rem;height:22.5rem}}",
       map: null
     };
     Projekte = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css6);
+      $$result.css.add(css8);
       return `${$$result.head += `${$$result.title = `<title>Projekte| Armin Neuhauser</title>`, ""}`, ""}
 
-<section><header class="${"svelte-c8ejd"}"><div class="${"svelte-c8ejd"}"><h1 class="${"svelte-c8ejd"}"><span class="${"mask svelte-c8ejd"}"><span class="${"svelte-c8ejd"}">Projekte,</span></span>
-                <span class="${"mask svelte-c8ejd"}"><span class="${"svelte-c8ejd"}">auf die ich stolz bin</span></span></h1>
-            <div class="${"svelte-c8ejd"}"><p class="${"mask svelte-c8ejd"}"><span class="${"svelte-c8ejd"}">Jedes Projekt ist eine Chance, etwas Neues auszuprobieren. Ich gehe auf die W\xFCnsche meiner Kunden ein und berate sie, um gemeinsam das bestm\xF6gliche Ergebnis zu erreichen.</span></p>
-                <hr class="${"svelte-c8ejd"}"></div></div></header>
-    <div class="${"projects svelte-c8ejd"}"><div class="${"projects-list svelte-c8ejd"}">${validate_component(Teaser2, "Teaser").$$render($$result, {
+<section><header class="${"svelte-1ubuds"}"><div class="${"svelte-1ubuds"}"><h1 class="${"svelte-1ubuds"}"><span class="${"mask svelte-1ubuds"}"><span class="${"svelte-1ubuds"}">Projekte,</span></span>
+                <span class="${"mask svelte-1ubuds"}"><span class="${"svelte-1ubuds"}">auf die ich</span></span>
+                <span class="${"mask svelte-1ubuds"}"><span class="${"svelte-1ubuds"}">stolz bin</span></span></h1>
+            <div class="${"svelte-1ubuds"}"><p class="${"fade svelte-1ubuds"}">Jedes Projekt ist eine Chance, etwas Neues auszuprobieren. Ich gehe auf die W\xFCnsche meiner Kunden ein und berate sie, um gemeinsam das bestm\xF6gliche Ergebnis zu erreichen.
+                </p>
+                <hr class="${"svelte-1ubuds"}"></div></div></header>
+    <div class="${"projects svelte-1ubuds"}"><div class="${"projects-list svelte-1ubuds"}">${validate_component(Teaser2, "Teaser").$$render($$result, {
         slug: "mst-muhr",
         title: "MST Muhr",
         year: "2022",
@@ -21191,20 +21477,21 @@ var init_index_0a3f2f66 = __esm({
         desc: "CI, Webdesign, Development, CMS",
         image: "/images/wohnformat/wohnformat.jpg"
       }, {}, {})}</div>
-        <div class="${"coming-soon svelte-c8ejd"}"><p class="${"svelte-c8ejd"}">Weitere Projekte kommen bald</p></div></div>
+        <div class="${"coming-soon svelte-1ubuds"}"><p class="${"svelte-1ubuds"}">Weitere Projekte kommen bald</p></div></div>
 </section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/external-2843e32b.js
-var css$13, Hero2, css7, Next, external;
-var init_external_2843e32b = __esm({
-  ".svelte-kit/output/server/chunks/external-2843e32b.js"() {
+// .svelte-kit/output/server/chunks/Next-d7fba595.js
+var css$42, Hero2, css$33, Figure, external, css$23, LinkExternal, css$14, Facts, css9, Next;
+var init_Next_d7fba595 = __esm({
+  ".svelte-kit/output/server/chunks/Next-d7fba595.js"() {
     init_shims();
-    init_app_03b8560f();
-    css$13 = {
-      code: '@keyframes svelte-1gkm352-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1gkm352-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1gkm352-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1gkm352-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1gkm352-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1gkm352-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1gkm352-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1gkm352-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1gkm352-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1gkm352-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1gkm352-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.hero.svelte-1gkm352.svelte-1gkm352{align-items:center;background-position:center center;background-size:cover;box-sizing:border-box;display:grid;grid-gap:0.3125rem;grid-template-columns:auto clamp(19.375rem, 11rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;justify-content:center;left:0;min-height:100vh;padding:var(--core-padding) 0;position:fixed;top:0;width:100%}.hero.svelte-1gkm352.svelte-1gkm352::before{content:"";position:absolute;top:0;right:0;left:0;bottom:0;background-color:#000;opacity:0.3}.hero.svelte-1gkm352 + section{margin-top:100vh}.headline.svelte-1gkm352.svelte-1gkm352{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.text.svelte-1gkm352.svelte-1gkm352{animation:svelte-1gkm352-fadein 1s var(--easing) forwards;opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:2;text-align:center;padding:0.9375rem;color:#fff}.text.svelte-1gkm352 h1.svelte-1gkm352{font-family:var(--serif);font-weight:700;font-size:clamp(2.625rem, 1.4417475728rem + 3.786407767vw, 7.5rem);line-height:1;margin:0}.text.svelte-1gkm352 h1 span.svelte-1gkm352{animation:svelte-1gkm352-to-top 1s var(--easing) forwards}.text.svelte-1gkm352 hr.svelte-1gkm352{animation:svelte-1gkm352-scale 0.8s 0.3s var(--easing) forwards;width:33%;transform:scaleX(0);transform-origin:top left;margin:1.25rem 0;border-color:#fff}.text.svelte-1gkm352 p.svelte-1gkm352{font-size:clamp(0.875rem, 0.7839805825rem + 0.2912621359vw, 1.25rem);margin:0}.text.svelte-1gkm352 p span.svelte-1gkm352{animation:svelte-1gkm352-to-top 1s 0.8s var(--easing) forwards}.sphere.svelte-1gkm352.svelte-1gkm352{animation:svelte-1gkm352-fadein 1s var(--easing) forwards;opacity:0;display:block;background-size:cover;background-position:center center;padding-bottom:100%;border-radius:50%;will-change:opacity;opacity:0;position:relative;z-index:1;margin:0;overflow:hidden}.sphere.svelte-1gkm352 img.svelte-1gkm352{height:100%;left:0;object-fit:cover;position:absolute;top:0;width:100%}.background-image.svelte-1gkm352.svelte-1gkm352{animation:svelte-1gkm352-fadein 3s var(--easing) forwards;opacity:0;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;z-index:0}.background-image.svelte-1gkm352 img.svelte-1gkm352{height:100%;left:0;object-fit:cover;position:absolute;top:0;width:100%}',
+    init_app_8de5188f();
+    init_IntersectionObserver_ba966075();
+    css$42 = {
+      code: '@keyframes svelte-ofykis-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-ofykis-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-ofykis-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ofykis-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ofykis-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ofykis-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-ofykis-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-ofykis-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-ofykis-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-ofykis-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-ofykis-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}.hero.svelte-ofykis.svelte-ofykis{align-items:center;background-position:center center;background-size:cover;box-sizing:border-box;display:grid;grid-gap:0.3125rem;grid-template-columns:auto clamp(19.375rem, 11rem + 28vw, 160rem) auto;grid-template-rows:1fr auto;justify-content:center;left:0;min-height:100vh;padding:var(--core-padding) 0;position:fixed;top:0;width:100%}.hero.svelte-ofykis.svelte-ofykis::before{content:"";position:absolute;top:0;right:0;left:0;bottom:0;background-color:#000;opacity:0.3}.hero.svelte-ofykis + section{margin-top:100vh}.headline.svelte-ofykis.svelte-ofykis{position:relative;aspect-ratio:1;align-self:center;grid-column:2}.text.svelte-ofykis.svelte-ofykis{animation:svelte-ofykis-fadein 1s var(--easing) forwards;opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:2;text-align:center;padding:0.9375rem;color:#fff}.text.svelte-ofykis h1.svelte-ofykis{font-family:var(--serif);font-weight:700;font-size:clamp(2.625rem, 1.4417475728rem + 3.786407767vw, 7.5rem);line-height:1;margin:0}.text.svelte-ofykis h1 span.svelte-ofykis{animation:svelte-ofykis-to-top 1s var(--easing) forwards}.text.svelte-ofykis hr.svelte-ofykis{animation:svelte-ofykis-scale 0.8s 0.3s var(--easing) forwards;width:33%;transform:scaleX(0);transform-origin:top left;margin:1.25rem 0;border-color:#fff}.text.svelte-ofykis p.svelte-ofykis{font-size:clamp(0.875rem, 0.7839805825rem + 0.2912621359vw, 1.25rem);margin:0}.text.svelte-ofykis p span.svelte-ofykis{animation:svelte-ofykis-to-top 1s 0.8s var(--easing) forwards}.sphere.svelte-ofykis.svelte-ofykis{animation:svelte-ofykis-fadein 1s var(--easing) forwards;opacity:0;display:block;background-size:cover;background-position:center center;padding-bottom:100%;border-radius:50%;will-change:opacity;opacity:0;position:relative;z-index:1;margin:0;overflow:hidden}.sphere.svelte-ofykis img.svelte-ofykis{height:100%;left:0;object-fit:cover;position:absolute;top:0;width:100%}.background-image.svelte-ofykis.svelte-ofykis{animation:svelte-ofykis-fadein 3s var(--easing) forwards;opacity:0;margin:0;position:absolute;top:0;left:0;bottom:0;right:0;z-index:0}.background-image.svelte-ofykis img.svelte-ofykis{height:100%;left:0;object-fit:cover;position:absolute;top:0;width:100%}',
       map: null
     };
     Hero2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -21226,20 +21513,96 @@ var init_external_2843e32b = __esm({
         $$bindings.imageSm(imageSm);
       if ($$props.imageLg === void 0 && $$bindings.imageLg && imageLg !== void 0)
         $$bindings.imageLg(imageLg);
-      $$result.css.add(css$13);
+      $$result.css.add(css$42);
       return `
 
-<section class="${"hero svelte-1gkm352"}" style="${"opacity: " + escape(Math.max(0, 1 - scrollY / windowHeight)) + ";"}"><div class="${"headline svelte-1gkm352"}"><div class="${"text svelte-1gkm352"}"><h1 class="${"mask svelte-1gkm352"}"><span class="${"svelte-1gkm352"}">${escape(title)}</span></h1>
-            <hr class="${"svelte-1gkm352"}">
-            <p class="${"mask svelte-1gkm352"}"><span class="${"svelte-1gkm352"}">${escape(desc)}</span></p></div>
-        <figure class="${"sphere svelte-1gkm352"}"><picture><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
-                <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} class="${"svelte-1gkm352"}"></picture></figure></div>
-    <figure class="${"background-image svelte-1gkm352"}"><picture><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
-            <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} class="${"svelte-1gkm352"}"></picture></figure>
+<section class="${"hero svelte-ofykis"}" style="${"opacity: " + escape(Math.max(0, 1 - scrollY / windowHeight)) + ";"}"><div class="${"headline svelte-ofykis"}"><div class="${"text svelte-ofykis"}"><h1 class="${"mask svelte-ofykis"}"><span class="${"svelte-ofykis"}">${escape(title)}</span></h1>
+            <hr class="${"svelte-ofykis"}">
+            <p class="${"mask svelte-ofykis"}"><span class="${"svelte-ofykis"}">${escape(desc)}</span></p></div>
+        <figure class="${"sphere svelte-ofykis"}"><picture><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
+                <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} class="${"svelte-ofykis"}"></picture></figure></div>
+    <figure class="${"background-image svelte-ofykis"}"><picture><source media="${"(min-width: 768px)"}"${add_attribute("srcset", imageLg, 0)}>
+            <img${add_attribute("src", imageSm, 0)}${add_attribute("alt", title, 0)} class="${"svelte-ofykis"}"></picture></figure>
 </section>`;
     });
-    css7 = {
-      code: ".next.svelte-1hm099y.svelte-1hm099y{background:none;min-height:var(--app-height, 100vh);padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.next.svelte-1hm099y h3.svelte-1hm099y{font-size:1.5rem;margin:2em}.next.svelte-1hm099y .circle.svelte-1hm099y{height:20rem;width:20rem;display:flex;align-items:center;justify-content:center;border-radius:50%;background-size:cover;background-position:center center;position:relative}@media(min-width: 768px){.next.svelte-1hm099y .circle.svelte-1hm099y{height:28.75rem;width:28.75rem}}.next.svelte-1hm099y .text.svelte-1hm099y{text-align:center;pointer-events:none;color:#fff}.next.svelte-1hm099y .text h1.svelte-1hm099y{font-family:var(--serif);font-weight:700;font-size:2.25rem;line-height:1;margin:0.5em 0}@media(min-width: 768px){.next.svelte-1hm099y .text h1.svelte-1hm099y{font-size:2.625rem}}@media(min-width: 1024px){.next.svelte-1hm099y .text h1.svelte-1hm099y{font-size:3rem}}.next.svelte-1hm099y .text hr.svelte-1hm099y{width:33%;border-color:currentColor}.next.svelte-1hm099y .text p.svelte-1hm099y{font-size:0.9375rem}@media(min-width: 768px){.next.svelte-1hm099y .text p.svelte-1hm099y{font-size:1rem}}@media(min-width: 1024px){.next.svelte-1hm099y .text p.svelte-1hm099y{font-size:1.125rem}}",
+    css$33 = {
+      code: "img.svelte-13918yq{opacity:0;transition:opacity 1.2s 0.2s var(--easing)}img.intersecting.svelte-13918yq{opacity:1}",
+      map: null
+    };
+    Figure = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { src: src2 } = $$props;
+      let { width = void 0 } = $$props;
+      let { height = void 0 } = $$props;
+      let { alt = void 0 } = $$props;
+      let element;
+      let intersecting;
+      if ($$props.src === void 0 && $$bindings.src && src2 !== void 0)
+        $$bindings.src(src2);
+      if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+        $$bindings.width(width);
+      if ($$props.height === void 0 && $$bindings.height && height !== void 0)
+        $$bindings.height(height);
+      if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
+        $$bindings.alt(alt);
+      $$result.css.add(css$33);
+      let $$settled;
+      let $$rendered;
+      do {
+        $$settled = true;
+        $$rendered = `${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { once: true, element, intersecting }, {
+          intersecting: ($$value) => {
+            intersecting = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<img${add_attribute("src", src2, 0)}${add_attribute("alt", alt, 0)}${add_attribute("width", width, 0)}${add_attribute("height", height, 0)} class="${["svelte-13918yq", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}>`
+        })}`;
+      } while (!$$settled);
+      return $$rendered;
+    });
+    external = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <path d="M20.131 3.368a.5.5 0 0 1 .5.5V16.94a.5.5 0 0 1-1 0V4.37H7.061a.5.5 0 0 1 0-1h13.07Z" fill="currentColor"/>\n    <path d="M20.485 3.515a.5.5 0 0 1 0 .707L4.22 20.485a.5.5 0 1 1-.707-.707L19.778 3.515a.5.5 0 0 1 .707 0Z" fill="currentColor"/>\n</svg>';
+    css$23 = {
+      code: '.link.svelte-100eelz.svelte-100eelz{justify-self:center;display:flex;align-items:center;justify-content:flex-end;gap:0.625rem;margin-top:1.25rem;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.link.svelte-100eelz i.svelte-100eelz{border:1px solid var(--primary);width:4.125rem;height:4.125rem;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(45deg)}.link.svelte-100eelz i.svelte-100eelz::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleY(0);transform-origin:bottom left;transition:transform 0.6s var(--easing)}.link.svelte-100eelz i.svelte-100eelz svg{position:relative;transform:rotate(-45deg)}.link.svelte-100eelz span.svelte-100eelz{pointer-events:none}.link.svelte-100eelz:hover i.svelte-100eelz::before{transform:scaleY(1)}',
+      map: null
+    };
+    LinkExternal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { href } = $$props;
+      if ($$props.href === void 0 && $$bindings.href && href !== void 0)
+        $$bindings.href(href);
+      $$result.css.add(css$23);
+      return `<a class="${"link svelte-100eelz"}"${add_attribute("href", href, 0)} target="${"_blank"}"><span class="${"svelte-100eelz"}">Website ansehen</span>
+    <i class="${"svelte-100eelz"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i>
+</a>`;
+    });
+    css$14 = {
+      code: '.facts.svelte-1gfellf{max-width:var(--content-max-width);margin:3.125rem auto 0;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem);opacity:0;transition:opacity 1.2s 0.2s var(--easing)}.facts.intersecting.svelte-1gfellf{opacity:1}.facts.intersecting.svelte-1gfellf div::before{transform:scaleX(1)}.facts.svelte-1gfellf div{display:flex;flex-direction:column;padding:1.25rem 0;gap:0.3125rem;position:relative}.facts.svelte-1gfellf div::before{content:"";position:absolute;top:0;width:100%;border-top:1px solid var(--on-base);transform:scaleX(0);transform-origin:top left;transition:transform 0.8s 0.3s var(--easing)}.facts.svelte-1gfellf h3{font-family:var(--serif);font-weight:700;font-size:1.2em;margin:0}.facts.svelte-1gfellf p{font-size:1em;margin:0}',
+      map: null
+    };
+    Facts = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { href } = $$props;
+      let element;
+      let intersecting;
+      if ($$props.href === void 0 && $$bindings.href && href !== void 0)
+        $$bindings.href(href);
+      $$result.css.add(css$14);
+      let $$settled;
+      let $$rendered;
+      do {
+        $$settled = true;
+        $$rendered = `${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { once: true, element, intersecting }, {
+          intersecting: ($$value) => {
+            intersecting = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<div class="${["facts svelte-1gfellf", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}>${slots.default ? slots.default({}) : ``}
+        ${validate_component(LinkExternal, "LinkExternal").$$render($$result, { href }, {}, {})}</div>`
+        })}`;
+      } while (!$$settled);
+      return $$rendered;
+    });
+    css9 = {
+      code: ".next.svelte-184qqpw.svelte-184qqpw{background:none;min-height:var(--app-height, 100vh);padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.next.svelte-184qqpw>div.svelte-184qqpw{opacity:0;transition:opacity 1.2s 0.2s var(--easing)}.next.svelte-184qqpw>div.intersecting.svelte-184qqpw{opacity:1}.next.svelte-184qqpw h3.svelte-184qqpw{font-size:1.5rem;margin:2em;text-align:center}.next.svelte-184qqpw .circle.svelte-184qqpw{height:20rem;width:20rem;display:flex;align-items:center;justify-content:center;border-radius:50%;background-size:cover;background-position:center center;position:relative}@media(min-width: 768px){.next.svelte-184qqpw .circle.svelte-184qqpw{height:28.75rem;width:28.75rem}}.next.svelte-184qqpw .text.svelte-184qqpw{text-align:center;pointer-events:none;color:#fff}.next.svelte-184qqpw .text h1.svelte-184qqpw{font-family:var(--serif);font-weight:700;font-size:2.25rem;line-height:1;margin:0.5em 0}@media(min-width: 768px){.next.svelte-184qqpw .text h1.svelte-184qqpw{font-size:2.625rem}}@media(min-width: 1024px){.next.svelte-184qqpw .text h1.svelte-184qqpw{font-size:3rem}}.next.svelte-184qqpw .text hr.svelte-184qqpw{width:33%;border-color:currentColor}.next.svelte-184qqpw .text p.svelte-184qqpw{font-size:0.9375rem}@media(min-width: 768px){.next.svelte-184qqpw .text p.svelte-184qqpw{font-size:1rem}}@media(min-width: 1024px){.next.svelte-184qqpw .text p.svelte-184qqpw{font-size:1.125rem}}",
       map: null
     };
     Next = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -21247,6 +21610,8 @@ var init_external_2843e32b = __esm({
       let { desc } = $$props;
       let { slug } = $$props;
       let { image } = $$props;
+      let element;
+      let intersecting;
       if ($$props.title === void 0 && $$bindings.title && title !== void 0)
         $$bindings.title(title);
       if ($$props.desc === void 0 && $$bindings.desc && desc !== void 0)
@@ -21255,36 +21620,49 @@ var init_external_2843e32b = __esm({
         $$bindings.slug(slug);
       if ($$props.image === void 0 && $$bindings.image && image !== void 0)
         $$bindings.image(image);
-      $$result.css.add(css7);
-      return `<section class="${"next svelte-1hm099y"}"><h3 class="${"svelte-1hm099y"}">N\xE4chstes Projekt</h3>
-    <a${add_attribute("href", slug, 0)} class="${"circle svelte-1hm099y"}" style="${"background-image: url(" + escape(image) + ");"}"><div class="${"text svelte-1hm099y"}"><h1 class="${"svelte-1hm099y"}">${escape(title)}</h1>
-            <hr class="${"svelte-1hm099y"}">
-            <p class="${"svelte-1hm099y"}">${escape(desc)}</p></div></a>
+      $$result.css.add(css9);
+      let $$settled;
+      let $$rendered;
+      do {
+        $$settled = true;
+        $$rendered = `<section class="${"next svelte-184qqpw"}">${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { once: true, element, intersecting }, {
+          intersecting: ($$value) => {
+            intersecting = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<div class="${["svelte-184qqpw", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}><h3 class="${"svelte-184qqpw"}">N\xE4chstes Projekt</h3>
+            <a${add_attribute("href", slug, 0)} class="${"circle svelte-184qqpw"}" style="${"background-image: url(" + escape(image) + ");"}"><div class="${"text svelte-184qqpw"}"><h1 class="${"svelte-184qqpw"}">${escape(title)}</h1>
+                    <hr class="${"svelte-184qqpw"}">
+                    <p class="${"svelte-184qqpw"}">${escape(desc)}</p></div></a></div>`
+        })}
 </section>`;
+      } while (!$$settled);
+      return $$rendered;
     });
-    external = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <path d="M20.131 3.368a.5.5 0 0 1 .5.5V16.94a.5.5 0 0 1-1 0V4.37H7.061a.5.5 0 0 1 0-1h13.07Z" fill="currentColor"/>\n    <path d="M20.485 3.515a.5.5 0 0 1 0 .707L4.22 20.485a.5.5 0 1 1-.707-.707L19.778 3.515a.5.5 0 0 1 .707 0Z" fill="currentColor"/>\n</svg>';
   }
 });
 
-// .svelte-kit/output/server/chunks/wohnformat-7471a4d0.js
-var wohnformat_7471a4d0_exports = {};
-__export(wohnformat_7471a4d0_exports, {
+// .svelte-kit/output/server/chunks/wohnformat-8675c222.js
+var wohnformat_8675c222_exports = {};
+__export(wohnformat_8675c222_exports, {
   default: () => Wohnformat
 });
-var import_cookie6, css8, Wohnformat;
-var init_wohnformat_7471a4d0 = __esm({
-  ".svelte-kit/output/server/chunks/wohnformat-7471a4d0.js"() {
+var import_cookie8, css10, Wohnformat;
+var init_wohnformat_8675c222 = __esm({
+  ".svelte-kit/output/server/chunks/wohnformat-8675c222.js"() {
     init_shims();
-    init_app_03b8560f();
-    init_external_2843e32b();
-    import_cookie6 = __toModule(require_cookie());
+    init_app_8de5188f();
+    init_Next_d7fba595();
+    import_cookie8 = __toModule(require_cookie());
     init_dist();
-    css8 = {
-      code: '@keyframes svelte-ds5dzu-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-ds5dzu-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-ds5dzu-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-ds5dzu-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-ds5dzu-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-ds5dzu-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-ds5dzu-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-ds5dzu-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-ds5dzu.svelte-ds5dzu{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-ds5dzu>div.svelte-ds5dzu{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.narrow.svelte-ds5dzu>div.svelte-ds5dzu{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-ds5dzu>div.svelte-ds5dzu{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){section.align-end.svelte-ds5dzu>div.svelte-ds5dzu{align-items:flex-end}}section.last.svelte-ds5dzu.svelte-ds5dzu{padding-bottom:calc(var(--core-padding) * 2)}h1.svelte-ds5dzu.svelte-ds5dzu{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-ds5dzu.svelte-ds5dzu{font-size:1.125rem}.facts.svelte-ds5dzu.svelte-ds5dzu{max-width:var(--content-max-width);margin:3.125rem auto 0;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.facts.svelte-ds5dzu>div.svelte-ds5dzu{display:flex;flex-direction:column;border-top:1px solid var(--on-base);padding:1.25rem 0;gap:0.3125rem}.facts.svelte-ds5dzu h3.svelte-ds5dzu{font-family:var(--serif);font-weight:700;font-size:1.2em;margin:0}.facts.svelte-ds5dzu p.svelte-ds5dzu{font-size:1em;margin:0}.facts.svelte-ds5dzu a.svelte-ds5dzu{align-self:flex-end}.link.svelte-ds5dzu.svelte-ds5dzu{justify-self:center;display:flex;align-items:center;justify-content:flex-end;gap:0.625rem;margin-top:1.25rem;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.link.svelte-ds5dzu i.svelte-ds5dzu{border:1px solid var(--primary);width:4.125rem;height:4.125rem;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(45deg)}.link.svelte-ds5dzu i.svelte-ds5dzu::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleY(0);transform-origin:bottom left;transition:transform 0.6s var(--easing)}.link.svelte-ds5dzu i.svelte-ds5dzu svg{position:relative;transform:rotate(-45deg)}.link.svelte-ds5dzu span.svelte-ds5dzu{pointer-events:none}.link.svelte-ds5dzu:hover i.svelte-ds5dzu::before{transform:scaleY(1)}img.svelte-ds5dzu.svelte-ds5dzu{display:block}',
+    init_IntersectionObserver_ba966075();
+    css10 = {
+      code: "@keyframes svelte-fhupq2-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-fhupq2-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-fhupq2-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-fhupq2-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-fhupq2-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-fhupq2-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-fhupq2-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-fhupq2-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-fhupq2.svelte-fhupq2{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-fhupq2>div.svelte-fhupq2{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.narrow.svelte-fhupq2>div.svelte-fhupq2{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-fhupq2>div.svelte-fhupq2{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){section.align-end.svelte-fhupq2>div.svelte-fhupq2{align-items:flex-end}}section.last.svelte-fhupq2.svelte-fhupq2{padding-bottom:calc(var(--core-padding) * 2)}h1.svelte-fhupq2.svelte-fhupq2{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-fhupq2.svelte-fhupq2{font-size:1.125rem}",
       map: null
     };
     Wohnformat = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css8);
+      $$result.css.add(css10);
       return `${$$result.head += `${$$result.title = `<title>Wohnformat | Armin Neuhauser</title>`, ""}<meta name="${"description"}" content="${"Wohnformat"}" data-svelte="svelte-ne6hci">`, ""}
 
 ${validate_component(Hero2, "Hero").$$render($$result, {
@@ -21294,32 +21672,51 @@ ${validate_component(Hero2, "Hero").$$render($$result, {
         imageLg: "/images/wohnformat/wohnformat-hero-lg.jpg"
       }, {}, {})}
 
-<section class="${"svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><div class="${"facts svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Launch</h3>
-                <p class="${"svelte-ds5dzu"}">Oktober 2016</p></div>
-            <div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Services</h3>
-                <p class="${"svelte-ds5dzu"}">Corporate Identity, Webdesign, UI/UX, Development, Content Management System</p></div>
-            <div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Technologien</h3>
-                <p class="${"svelte-ds5dzu"}">WordPress</p></div>
-            <div class="${"svelte-ds5dzu"}"><a class="${"link svelte-ds5dzu"}" href="${"https://www.wohnformat.at/"}" target="${"_blank"}"><span class="${"svelte-ds5dzu"}">Website ansehen</span>
-                    <i class="${"svelte-ds5dzu"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></div></div></section>
+<section class="${"svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Facts, "Facts").$$render($$result, { href: "https://www.wohnformat.at/" }, {}, {
+        default: () => `<div><h3>Launch</h3>
+                <p class="${"svelte-fhupq2"}">Oktober 2016</p></div>
+            <div><h3>Services</h3>
+                <p class="${"svelte-fhupq2"}">Corporate Identity, Webdesign, UI/UX, Development, Content Management System</p></div>
+            <div><h3>Technologien</h3>
+                <p class="${"svelte-fhupq2"}">WordPress</p></div>`
+      })}</div></section>
 
 
-<section class="${"col2 align-end svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><img src="${"/images/wohnformat/wohnformat1.jpg"}" alt="${"Wohnformat Startseite"}" class="${"svelte-ds5dzu"}">
-        <img src="${"/images/wohnformat/wohnformat4.jpg"}" alt="${"Wohnformat Tablets"}" class="${"svelte-ds5dzu"}"></div></section>
+<section class="${"col2 align-end svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/wohnformat/wohnformat1.jpg",
+        alt: "Wohnformat Startseite",
+        width: "1400",
+        height: "787"
+      }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/wohnformat/wohnformat4.jpg",
+        alt: "Wohnformat Tablets",
+        width: "1400",
+        height: "788"
+      }, {}, {})}</div></section>
 
-<section class="${"col2 svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><img src="${"/images/wohnformat/wohnformat2.jpg"}" alt="${"Wohnformat Kontakt"}" class="${"svelte-ds5dzu"}">
-        <img src="${"/images/wohnformat/wohnformat5.jpg"}" alt="${"Wohnformat Phones"}" class="${"svelte-ds5dzu"}"></div></section>
+<section class="${"col2 svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/wohnformat/wohnformat2.jpg",
+        alt: "Wohnformat Kontakt",
+        width: "1400",
+        height: "1050"
+      }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/wohnformat/wohnformat5.jpg",
+        alt: "Wohnformat Phones",
+        width: "1400",
+        height: "1050"
+      }, {}, {})}</div></section>
 
-<section class="${"narrow svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><div><hr>
-            <h1 class="${"svelte-ds5dzu"}">Wohntr\xE4ume nach Ma\xDF
+<section class="${"narrow svelte-fhupq2"}"><div class="${"svelte-fhupq2"}"><div><hr>
+            <h1 class="${"svelte-fhupq2"}">Wohntr\xE4ume nach Ma\xDF
             </h1>
-            <p class="${"svelte-ds5dzu"}">Wohnformat ist das Unternehmen von Patrick Schachinger und Johannes Haberfehlner. Gemeinsam mit ihren Kunden planen sie R\xE4ume und M\xF6bel nach Ma\xDF. Ich durfte das Corporate Design und die Website von Wohnformat konzipieren und umsetzen. Dabei war ich von der Firmengr\xFCndung an involviert und konnte so die Marke von Grund auf definieren.
+            <p class="${"svelte-fhupq2"}">Wohnformat ist das Unternehmen von Patrick Schachinger und Johannes Haberfehlner. Gemeinsam mit ihren Kunden planen sie R\xE4ume und M\xF6bel nach Ma\xDF. Ich durfte das Corporate Design und die Website von Wohnformat konzipieren und umsetzen. Dabei war ich von der Firmengr\xFCndung an involviert und konnte so die Marke von Grund auf definieren.
             </p>
-            <p class="${"svelte-ds5dzu"}">Bei der Website von Wohnformat habe ich auf ein klassisches, modernes und minimalistisches Design gesetzt. Programmiert wurde die Website mit modernen \u201Estate of the art\u201C Technologien im Responsive Design. Im Hintergrund l\xE4uft das bekannte CMS WordPress. Wohnformat kann damit selbst Blog-Beitr\xE4ge, Projekte und Seiten anlegen und bearbeiten.
+            <p class="${"svelte-fhupq2"}">Bei der Website von Wohnformat habe ich auf ein klassisches, modernes und minimalistisches Design gesetzt. Programmiert wurde die Website mit modernen \u201Estate of the art\u201C Technologien im Responsive Design. Im Hintergrund l\xE4uft das bekannte CMS WordPress. Wohnformat kann damit selbst Blog-Beitr\xE4ge, Projekte und Seiten anlegen und bearbeiten.
             </p></div></div></section>
 
-<section class="${"last svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><a class="${"link svelte-ds5dzu"}" href="${"https://www.wohnformat.at/"}" target="${"_blank"}"><span class="${"svelte-ds5dzu"}">Website ansehen</span>
-            <i class="${"svelte-ds5dzu"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></section>
+<section class="${"last svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(LinkExternal, "LinkExternal").$$render($$result, { href: "https://www.wohnformat.at/" }, {}, {})}</div></section>
 
 ${validate_component(Next, "Next").$$render($$result, {
         title: "Solmates",
@@ -21331,15 +21728,15 @@ ${validate_component(Next, "Next").$$render($$result, {
   }
 });
 
-// .svelte-kit/output/server/chunks/Parallax-b30b0ed9.js
-var css9, Parallax;
-var init_Parallax_b30b0ed9 = __esm({
-  ".svelte-kit/output/server/chunks/Parallax-b30b0ed9.js"() {
+// .svelte-kit/output/server/chunks/Video-4959b012.js
+var css11, Parallax, Video;
+var init_Video_4959b012 = __esm({
+  ".svelte-kit/output/server/chunks/Video-4959b012.js"() {
     init_shims();
-    init_app_03b8560f();
-    init_external_2843e32b();
-    css9 = {
-      code: "section.svelte-1nzr0eg{background-color:var(--base)}figure.svelte-1nzr0eg{aspect-ratio:16/9;margin:0;overflow:hidden;display:flex}picture.svelte-1nzr0eg{flex-grow:1;display:flex}img.svelte-1nzr0eg{flex-grow:1;object-fit:cover}",
+    init_app_8de5188f();
+    init_IntersectionObserver_ba966075();
+    css11 = {
+      code: "section.svelte-zynlkr{background-color:var(--base)}figure.svelte-zynlkr{padding-top:56.25%;margin:0;overflow:hidden;display:flex;position:relative}picture.svelte-zynlkr{position:absolute;top:0;width:100%;flex-grow:1;display:flex}img.svelte-zynlkr{flex-grow:1;object-fit:cover;opacity:0;transition:opacity 1.2s 0.2s var(--easing)}img.intersecting.svelte-zynlkr{opacity:1}",
       map: null
     };
     Parallax = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -21347,6 +21744,8 @@ var init_Parallax_b30b0ed9 = __esm({
       let { width = void 0 } = $$props;
       let { height = void 0 } = $$props;
       let { alt = void 0 } = $$props;
+      let element;
+      let intersecting;
       let figure;
       let translateY = 0;
       if ($$props.image === void 0 && $$bindings.image && image !== void 0)
@@ -21357,30 +21756,67 @@ var init_Parallax_b30b0ed9 = __esm({
         $$bindings.height(height);
       if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
         $$bindings.alt(alt);
-      $$result.css.add(css9);
-      return `
+      $$result.css.add(css11);
+      let $$settled;
+      let $$rendered;
+      do {
+        $$settled = true;
+        $$rendered = `
 
-<section class="${"full svelte-1nzr0eg"}"><div><figure class="${"svelte-1nzr0eg"}"${add_attribute("this", figure, 0)}><picture class="${"svelte-1nzr0eg"}"><img${add_attribute("src", image, 0)}${add_attribute("alt", alt, 0)} style="${"transform: translateY(" + escape(translateY) + "%);"}"${add_attribute("width", width, 0)}${add_attribute("height", height, 0)} class="${"svelte-1nzr0eg"}"></picture></figure></div>
-</section>`;
+${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { once: true, element, intersecting }, {
+          intersecting: ($$value) => {
+            intersecting = $$value;
+            $$settled = false;
+          }
+        }, {
+          default: () => `<section class="${"full svelte-zynlkr"}"><div><figure class="${"svelte-zynlkr"}"${add_attribute("this", figure, 0)}><picture class="${"svelte-zynlkr"}"><img${add_attribute("src", image, 0)}${add_attribute("alt", alt, 0)} style="${"transform: translateY(" + escape(translateY) + "%);"}"${add_attribute("width", width, 0)}${add_attribute("height", height, 0)} class="${["svelte-zynlkr", intersecting ? "intersecting" : ""].join(" ").trim()}"${add_attribute("this", element, 0)}></picture></figure></div></section>`
+        })}`;
+      } while (!$$settled);
+      return $$rendered;
+    });
+    Video = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { src: src2 } = $$props;
+      let { srcWebm = void 0 } = $$props;
+      let { width = void 0 } = $$props;
+      let { height = void 0 } = $$props;
+      let { alt = void 0 } = $$props;
+      let { poster = void 0 } = $$props;
+      let node;
+      if ($$props.src === void 0 && $$bindings.src && src2 !== void 0)
+        $$bindings.src(src2);
+      if ($$props.srcWebm === void 0 && $$bindings.srcWebm && srcWebm !== void 0)
+        $$bindings.srcWebm(srcWebm);
+      if ($$props.width === void 0 && $$bindings.width && width !== void 0)
+        $$bindings.width(width);
+      if ($$props.height === void 0 && $$bindings.height && height !== void 0)
+        $$bindings.height(height);
+      if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
+        $$bindings.alt(alt);
+      if ($$props.poster === void 0 && $$bindings.poster && poster !== void 0)
+        $$bindings.poster(poster);
+      return `${validate_component(IntersectionObserver_1, "IntersectionObserver").$$render($$result, { once: true, element: node }, {}, {
+        default: ({ intersecting }) => `<div${add_attribute("this", node, 0)}>${intersecting ? `<video${add_attribute("width", width, 0)}${add_attribute("height", height, 0)} muted playsinline loop autoplay${add_attribute("poster", poster, 0)}${add_classes([intersecting ? "intersecting" : ""].join(" ").trim())}><source${add_attribute("src", srcWebm, 0)} type="${"video/webm"}"><source${add_attribute("src", src2, 0)} type="${"video/mp4"}"></video>` : ``}</div>`
+      })}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/mst-muhr-de98b9f5.js
-var mst_muhr_de98b9f5_exports = {};
-__export(mst_muhr_de98b9f5_exports, {
+// .svelte-kit/output/server/chunks/mst-muhr-5a5b4de9.js
+var mst_muhr_5a5b4de9_exports = {};
+__export(mst_muhr_5a5b4de9_exports, {
   default: () => Mst_muhr
 });
-var import_cookie7, css$14, Switch, css10, Mst_muhr;
-var init_mst_muhr_de98b9f5 = __esm({
-  ".svelte-kit/output/server/chunks/mst-muhr-de98b9f5.js"() {
+var import_cookie9, css$15, Switch, css12, Mst_muhr;
+var init_mst_muhr_5a5b4de9 = __esm({
+  ".svelte-kit/output/server/chunks/mst-muhr-5a5b4de9.js"() {
     init_shims();
-    init_app_03b8560f();
-    init_external_2843e32b();
-    init_Parallax_b30b0ed9();
-    import_cookie7 = __toModule(require_cookie());
+    init_app_8de5188f();
+    init_Next_d7fba595();
+    init_Video_4959b012();
+    import_cookie9 = __toModule(require_cookie());
     init_dist();
-    css$14 = {
+    init_IntersectionObserver_ba966075();
+    css$15 = {
       code: '.switch.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri{position:relative;display:flex;gap:0.9375rem;flex-direction:row;align-items:center;user-select:none;cursor:pointer}.switch--label.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri{color:var(--on-base);user-select:none}.switch--input.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri{position:absolute;opacity:0;display:none;width:0;height:0;top:-100rem;left:-100rem}.switch--trigger.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri{position:relative;height:1.8rem;width:4rem;border-radius:5rem;transition:all 0.3s var(--easing);background-color:var(--base);border:1px solid var(--on-base)}.switch--trigger.svelte-1rl4mri.svelte-1rl4mri.svelte-1rl4mri::after{content:"";position:absolute;height:1.3rem;width:1.3rem;background:var(--on-base);left:0.9rem;top:50%;transform:translate(-50%, -50%);transition:all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);border-radius:100%}.switch.svelte-1rl4mri input.svelte-1rl4mri:checked~.switch--trigger.svelte-1rl4mri{background-color:var(--on-base)}.switch.svelte-1rl4mri input.svelte-1rl4mri:checked~.switch--trigger.svelte-1rl4mri::after{background:var(--base);left:calc(100% - 0.9rem)}',
       map: null
     };
@@ -21394,20 +21830,20 @@ var init_mst_muhr_de98b9f5 = __esm({
         $$bindings.label2(label2);
       if ($$props.checked === void 0 && $$bindings.checked && checked !== void 0)
         $$bindings.checked(checked);
-      $$result.css.add(css$14);
+      $$result.css.add(css$15);
       return `<label class="${"switch svelte-1rl4mri"}"><span class="${"switch--label svelte-1rl4mri"}">${escape(label1)}</span>
     <input class="${"switch--input svelte-1rl4mri"}" type="${"checkbox"}"${add_attribute("checked", checked, 1)}>
     <span class="${"switch--trigger wrapper svelte-1rl4mri"}"></span>
     <span class="${"switch--label svelte-1rl4mri"}">${escape(label2)}</span>
 </label>`;
     });
-    css10 = {
-      code: '@keyframes svelte-ds5dzu-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-ds5dzu-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-ds5dzu-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-ds5dzu-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-ds5dzu-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-ds5dzu-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-ds5dzu-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-ds5dzu-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-ds5dzu.svelte-ds5dzu{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-ds5dzu>div.svelte-ds5dzu{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.full.svelte-ds5dzu.svelte-ds5dzu{padding-left:0;padding-right:0}section.narrow.svelte-ds5dzu>div.svelte-ds5dzu{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-ds5dzu>div.svelte-ds5dzu{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){}section.last.svelte-ds5dzu.svelte-ds5dzu{padding-bottom:calc(var(--core-padding) * 2)}h1.svelte-ds5dzu.svelte-ds5dzu{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-ds5dzu.svelte-ds5dzu{font-size:1.125rem}.facts.svelte-ds5dzu.svelte-ds5dzu{max-width:var(--content-max-width);margin:3.125rem auto 0;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.facts.svelte-ds5dzu>div.svelte-ds5dzu{display:flex;flex-direction:column;border-top:1px solid var(--on-base);padding:1.25rem 0;gap:0.3125rem}.facts.svelte-ds5dzu h3.svelte-ds5dzu{font-family:var(--serif);font-weight:700;font-size:1.2em;margin:0}.facts.svelte-ds5dzu p.svelte-ds5dzu{font-size:1em;margin:0}.facts.svelte-ds5dzu a.svelte-ds5dzu{align-self:flex-end}.link.svelte-ds5dzu.svelte-ds5dzu{justify-self:center;display:flex;align-items:center;justify-content:flex-end;gap:0.625rem;margin-top:1.25rem;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.link.svelte-ds5dzu i.svelte-ds5dzu{border:1px solid var(--primary);width:4.125rem;height:4.125rem;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(45deg)}.link.svelte-ds5dzu i.svelte-ds5dzu::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleY(0);transform-origin:bottom left;transition:transform 0.6s var(--easing)}.link.svelte-ds5dzu i.svelte-ds5dzu svg{position:relative;transform:rotate(-45deg)}.link.svelte-ds5dzu span.svelte-ds5dzu{pointer-events:none}.link.svelte-ds5dzu:hover i.svelte-ds5dzu::before{transform:scaleY(1)}img.svelte-ds5dzu.svelte-ds5dzu{display:block}',
+    css12 = {
+      code: "@keyframes svelte-fhupq2-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-fhupq2-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-fhupq2-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-fhupq2-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-fhupq2-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-fhupq2-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-fhupq2-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-fhupq2-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-fhupq2.svelte-fhupq2{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-fhupq2>div.svelte-fhupq2{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.full.svelte-fhupq2.svelte-fhupq2{padding-left:0;padding-right:0}section.narrow.svelte-fhupq2>div.svelte-fhupq2{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-fhupq2>div.svelte-fhupq2{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){}section.last.svelte-fhupq2.svelte-fhupq2{padding-bottom:calc(var(--core-padding) * 2)}h1.svelte-fhupq2.svelte-fhupq2{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-fhupq2.svelte-fhupq2{font-size:1.125rem}",
       map: null
     };
     Mst_muhr = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let dark = false;
-      $$result.css.add(css10);
+      $$result.css.add(css12);
       let $$settled;
       let $$rendered;
       do {
@@ -21417,35 +21853,35 @@ var init_mst_muhr_de98b9f5 = __esm({
 ${validate_component(Hero2, "Hero").$$render($$result, {
           title: "MST Muhr",
           desc: "individuelle Unternehmenswebsite",
-          imageSm: "/images/mst-muhr/mst-hero-sm.jpg",
-          imageLg: "/images/mst-muhr/mst-hero-lg.jpg"
+          imageSm: "/images/mst-muhr/mst-muhr-hero-sm.jpg",
+          imageLg: "/images/mst-muhr/mst-muhr-hero-lg.jpg"
         }, {}, {})}
 
-<section class="${"svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><div class="${"facts svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Launch</h3>
-                <p class="${"svelte-ds5dzu"}">J\xE4nner 2022</p></div>
-            <div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Services</h3>
-                <p class="${"svelte-ds5dzu"}">Konzept &amp; Beratung, Webdesign, UI/UX, Development, Content Management System, Fotografie</p></div>
-            <div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Technologien</h3>
-                <p class="${"svelte-ds5dzu"}">Vue.js, Nuxt.js, Storyblok, Netlify</p></div>
-            <div class="${"svelte-ds5dzu"}"><a class="${"link svelte-ds5dzu"}" href="${"https://www.mst-muhr.at/"}" target="${"_blank"}"><span class="${"svelte-ds5dzu"}">Website ansehen</span>
-                    <i class="${"svelte-ds5dzu"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></div></div></section>
+<section class="${"svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Facts, "Facts").$$render($$result, { href: "https://www.mst-muhr.at/" }, {}, {
+          default: () => `<div><h3>Launch</h3>
+                <p class="${"svelte-fhupq2"}">J\xE4nner 2022</p></div>
+            <div><h3>Services</h3>
+                <p class="${"svelte-fhupq2"}">Konzept &amp; Beratung, Webdesign, UI/UX, Development, Content Management System, Fotografie</p></div>
+            <div><h3>Technologien</h3>
+                <p class="${"svelte-fhupq2"}">Vue.js, Nuxt.js, Storyblok, Netlify</p></div>`
+        })}</div></section>
 
 ${validate_component(Parallax, "Parallax").$$render($$result, {
-          image: "/images/mst-muhr/mst-schweizergarten.jpg",
+          image: "/images/mst-muhr/mst-muhr-schweizergarten.jpg",
           width: "1920",
           height: "1280",
           alt: "MST Muhr Schweizergarten"
         }, {}, {})}
 
-<section class="${"narrow svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><div><hr>
-            <h1 class="${"svelte-ds5dzu"}">Eine gro\xDFartige Website f\xFCr ein gro\xDFartiges Unternehmen
+<section class="${"narrow svelte-fhupq2"}"><div class="${"svelte-fhupq2"}"><div><hr>
+            <h1 class="${"svelte-fhupq2"}">Eine gro\xDFartige Website f\xFCr ein gro\xDFartiges Unternehmen
             </h1>
-            <p class="${"svelte-ds5dzu"}">Die MST Muhr Sanierungstechnik wurde 1995 aus dem Interesse Bauwerke zu erhalten und einer Begeisterung f\xFCr individuelle L\xF6sungen in der Sanierung von Hoch- und Tiefbauobjekten gegr\xFCndet.
+            <p class="${"svelte-fhupq2"}">Die MST Muhr Sanierungstechnik wurde 1995 aus dem Interesse Bauwerke zu erhalten und einer Begeisterung f\xFCr individuelle L\xF6sungen in der Sanierung von Hoch- und Tiefbauobjekten gegr\xFCndet.
             </p>
-            <p class="${"svelte-ds5dzu"}">2021 begann die Zusammenarbeit zwischen mir und der MST mit der Zielsetzung eine individuelle, editierbare und nicht zuletzt einzigartige Website zu kreieren, die die Spitzenposition des Unternehmens in der Branche widerspiegelt.
+            <p class="${"svelte-fhupq2"}">2021 begann die Zusammenarbeit zwischen mir und der MST mit der Zielsetzung eine individuelle, editierbare und nicht zuletzt einzigartige Website zu kreieren, die die Spitzenposition des Unternehmens in der Branche widerspiegelt.
             </p></div></div></section>
 
-<section class="${"narrow svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}">${validate_component(Switch, "Switch").$$render($$result, {
+<section class="${"narrow svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Switch, "Switch").$$render($$result, {
           label1: "Light mode",
           label2: "Dark mode",
           checked: dark
@@ -21456,14 +21892,88 @@ ${validate_component(Parallax, "Parallax").$$render($$result, {
           }
         }, {})}</div></section>
 
-<section class="${"col2 svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}">${dark ? `<img src="${"/images/mst-muhr/mst-muhr-01-dark.jpg"}" alt="${"MST Muhr Startseite"}" width="${"1920"}" height="${"1200"}" class="${"svelte-ds5dzu"}">
-            <img src="${"/images/mst-muhr/mst-muhr-02-dark.jpg"}" alt="${"MST Muhr Kontakt"}" width="${"1920"}" height="${"1200"}" class="${"svelte-ds5dzu"}">` : `<img src="${"/images/mst-muhr/mst-muhr-01.jpg"}" alt="${"MST Muhr Startseite"}" width="${"1920"}" height="${"1200"}" class="${"svelte-ds5dzu"}">
-            <img src="${"/images/mst-muhr/mst-muhr-02.jpg"}" alt="${"MST Muhr Kontakt"}" width="${"1920"}" height="${"1200"}" class="${"svelte-ds5dzu"}">`}</div></section>
+<section class="${"col2 svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${dark ? `${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-01-dark.jpg",
+          alt: "MST Muhr Startseite",
+          width: "1920",
+          height: "1200"
+        }, {}, {})}
+            ${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-02-dark.jpg",
+          alt: "MST Muhr Kontakt",
+          width: "1920",
+          height: "1200"
+        }, {}, {})}` : `${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-01.jpg",
+          alt: "MST Muhr Startseite",
+          width: "1920",
+          height: "1200"
+        }, {}, {})}
+            ${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-02.jpg",
+          alt: "MST Muhr Kontakt",
+          width: "1920",
+          height: "1200"
+        }, {}, {})}`}</div></section>
 
-<section class="${"full svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}">${dark ? `<video width="${"1152"}" height="${"720"}" muted playsinline loop autoplay poster="${"/images/mst-muhr/mst-muhr-01-dark.jpg"}"><source src="${"/images/mst-muhr/mst-muhr-dark.webm"}" type="${"video/webm"}"><source src="${"/images/mst-muhr/mst-muhr-dark.mp4"}" type="${"video/mp4"}"></video>` : `<video width="${"1152"}" height="${"720"}" muted playsinline loop autoplay poster="${"/images/mst-muhr/mst-muhr-01.jpg"}"><source src="${"/images/mst-muhr/mst-muhr.webm"}" type="${"video/webm"}"><source src="${"/images/mst-muhr/mst-muhr.mp4"}" type="${"video/mp4"}"></video>`}</div></section>
+<section class="${"full svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${dark ? `${validate_component(Video, "Video").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-dark.mp4",
+          srcWebm: "/images/mst-muhr/mst-muhr-dark.webm",
+          width: "1152",
+          height: "720",
+          poster: "/images/mst-muhr/mst-muhr-poster-dark.jpg"
+        }, {}, {})}` : `${validate_component(Video, "Video").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr.mp4",
+          srcWebm: "/images/mst-muhr/mst-muhr.webm",
+          width: "1152",
+          height: "720",
+          poster: "/images/mst-muhr/mst-muhr-poster.jpg"
+        }, {}, {})}`}</div></section>
 
-<section class="${"last svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><a class="${"link svelte-ds5dzu"}" href="${"https://www.mst-muhr.at/"}" target="${"_blank"}"><span class="${"svelte-ds5dzu"}">Website ansehen</span>
-            <i class="${"svelte-ds5dzu"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></section>
+<section class="${"svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${dark ? `${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-mobile-dark.jpg",
+          alt: "MST Muhr Mobile",
+          width: "1920",
+          height: "1248"
+        }, {}, {})}` : `${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-mobile.jpg",
+          alt: "MST Muhr Mobile",
+          width: "1920",
+          height: "1248"
+        }, {}, {})}`}</div></section>
+
+<section class="${"narrow svelte-fhupq2"}"><div class="${"svelte-fhupq2"}"><div><hr>
+            <h1 class="${"svelte-fhupq2"}">Fotografie
+            </h1>
+            <p class="${"svelte-fhupq2"}">Zus\xE4tzlich zur Website durfte ich f\xFCr die MST einige fertige Sanierungsprojekte, z.B. Garagen im Schweizergarten und in der Winm\xFChlgasse, fotografieren. Diese Fotos kommen nicht nur auf der Website von der MST zum Einsatz, sondern auch bei Projektpartnern und Auftraggebern.
+            </p></div></div></section>
+
+<section class="${"col2 svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-schweizergarten-02.jpg",
+          alt: "MST Muhr Schweizergarten Arsenalstra\xDFe",
+          width: "1920",
+          height: "1280"
+        }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-schweizergarten-03.jpg",
+          alt: "MST Muhr Schweizergarten",
+          width: "1920",
+          height: "1280"
+        }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-gugitzgasse.jpg",
+          alt: "MST Muhr Gugitzgasse",
+          width: "1920",
+          height: "1280"
+        }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+          src: "/images/mst-muhr/mst-muhr-windmuehlgasse.jpg",
+          alt: "MST Muhr Windm\xFChlgasse",
+          width: "1920",
+          height: "1280"
+        }, {}, {})}</div></section>
+
+<section class="${"last svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(LinkExternal, "LinkExternal").$$render($$result, { href: "https://www.mst-muhr.at/" }, {}, {})}</div></section>
 
 ${validate_component(Next, "Next").$$render($$result, {
           title: "Solmates",
@@ -21477,26 +21987,27 @@ ${validate_component(Next, "Next").$$render($$result, {
   }
 });
 
-// .svelte-kit/output/server/chunks/solmates-3cbe8739.js
-var solmates_3cbe8739_exports = {};
-__export(solmates_3cbe8739_exports, {
+// .svelte-kit/output/server/chunks/solmates-3ec4aff0.js
+var solmates_3ec4aff0_exports = {};
+__export(solmates_3ec4aff0_exports, {
   default: () => Solmates
 });
-var import_cookie8, css11, Solmates;
-var init_solmates_3cbe8739 = __esm({
-  ".svelte-kit/output/server/chunks/solmates-3cbe8739.js"() {
+var import_cookie10, css13, Solmates;
+var init_solmates_3ec4aff0 = __esm({
+  ".svelte-kit/output/server/chunks/solmates-3ec4aff0.js"() {
     init_shims();
-    init_app_03b8560f();
-    init_external_2843e32b();
-    init_Parallax_b30b0ed9();
-    import_cookie8 = __toModule(require_cookie());
+    init_app_8de5188f();
+    init_Next_d7fba595();
+    init_Video_4959b012();
+    import_cookie10 = __toModule(require_cookie());
     init_dist();
-    css11 = {
-      code: '@keyframes svelte-ds5dzu-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-ds5dzu-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-ds5dzu-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-ds5dzu-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-ds5dzu-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-ds5dzu-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-ds5dzu-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-ds5dzu-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-ds5dzu-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-ds5dzu.svelte-ds5dzu{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-ds5dzu>div.svelte-ds5dzu{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.full.svelte-ds5dzu.svelte-ds5dzu{padding-left:0;padding-right:0}section.narrow.svelte-ds5dzu>div.svelte-ds5dzu{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-ds5dzu>div.svelte-ds5dzu{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){section.align-end.svelte-ds5dzu>div.svelte-ds5dzu{align-items:flex-end}}section.last.svelte-ds5dzu.svelte-ds5dzu{padding-bottom:calc(var(--core-padding) * 2)}h1.svelte-ds5dzu.svelte-ds5dzu{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-ds5dzu.svelte-ds5dzu{font-size:1.125rem}.facts.svelte-ds5dzu.svelte-ds5dzu{max-width:var(--content-max-width);margin:3.125rem auto 0;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.facts.svelte-ds5dzu>div.svelte-ds5dzu{display:flex;flex-direction:column;border-top:1px solid var(--on-base);padding:1.25rem 0;gap:0.3125rem}.facts.svelte-ds5dzu h3.svelte-ds5dzu{font-family:var(--serif);font-weight:700;font-size:1.2em;margin:0}.facts.svelte-ds5dzu p.svelte-ds5dzu{font-size:1em;margin:0}.facts.svelte-ds5dzu a.svelte-ds5dzu{align-self:flex-end}.link.svelte-ds5dzu.svelte-ds5dzu{justify-self:center;display:flex;align-items:center;justify-content:flex-end;gap:0.625rem;margin-top:1.25rem;font-size:clamp(0.9375rem, 0.625rem + 0.390625vw, 1.25rem)}.link.svelte-ds5dzu i.svelte-ds5dzu{border:1px solid var(--primary);width:4.125rem;height:4.125rem;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:rotate(45deg)}.link.svelte-ds5dzu i.svelte-ds5dzu::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleY(0);transform-origin:bottom left;transition:transform 0.6s var(--easing)}.link.svelte-ds5dzu i.svelte-ds5dzu svg{position:relative;transform:rotate(-45deg)}.link.svelte-ds5dzu span.svelte-ds5dzu{pointer-events:none}.link.svelte-ds5dzu:hover i.svelte-ds5dzu::before{transform:scaleY(1)}img.svelte-ds5dzu.svelte-ds5dzu{display:block}',
+    init_IntersectionObserver_ba966075();
+    css13 = {
+      code: "@keyframes svelte-fhupq2-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-fhupq2-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-fhupq2-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-fhupq2-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-fhupq2-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-fhupq2-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-fhupq2-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-fhupq2-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-fhupq2-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-fhupq2.svelte-fhupq2{box-sizing:border-box;padding:var(--core-padding);background-color:var(--base);position:relative;overflow:hidden}section.svelte-fhupq2>div.svelte-fhupq2{display:grid;grid-gap:var(--core-padding);justify-content:center;margin:0 auto;max-width:var(--core-max-width)}section.full.svelte-fhupq2.svelte-fhupq2{padding-left:0;padding-right:0}section.narrow.svelte-fhupq2>div.svelte-fhupq2{max-width:var(--content-max-width)}@media(min-width: 1024px){section.col2.svelte-fhupq2>div.svelte-fhupq2{grid-template-columns:1fr 1fr}}@media(min-width: 1024px){section.align-end.svelte-fhupq2>div.svelte-fhupq2{align-items:flex-end}}section.last.svelte-fhupq2.svelte-fhupq2{padding-bottom:calc(var(--core-padding) * 2)}h1.svelte-fhupq2.svelte-fhupq2{font-weight:400;font-size:clamp(1.5rem, 1.2403846154rem + 1.1538461538vw, 2.625rem);line-height:1.2}p.svelte-fhupq2.svelte-fhupq2{font-size:1.125rem}",
       map: null
     };
     Solmates = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      $$result.css.add(css11);
+      $$result.css.add(css13);
       return `${$$result.head += `${$$result.title = `<title>Solmates | Armin Neuhauser</title>`, ""}<meta name="${"description"}" content="${"Solmates ist ein Reiseblog von Armin & Miriam"}" data-svelte="svelte-xo6kt7">`, ""}
 
 ${validate_component(Hero2, "Hero").$$render($$result, {
@@ -21506,23 +22017,29 @@ ${validate_component(Hero2, "Hero").$$render($$result, {
         imageLg: "/images/solmates/solmates-hero-lg.jpg"
       }, {}, {})}
 
-<section class="${"svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><div class="${"facts svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Launch</h3>
-                <p class="${"svelte-ds5dzu"}">November 2019</p></div>
-            <div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Services</h3>
-                <p class="${"svelte-ds5dzu"}">Konzept, Webdesign, UI/UX, Development, Content Management System, Fotografie, Texte, Buchgestaltung</p></div>
-            <div class="${"svelte-ds5dzu"}"><h3 class="${"svelte-ds5dzu"}">Technologien</h3>
-                <p class="${"svelte-ds5dzu"}">Vue.js, Nuxt.js, Storyblok, Netlify, Mailchimp</p></div>
-            <div class="${"svelte-ds5dzu"}"><a class="${"link svelte-ds5dzu"}" href="${"https://www.solmates.at/"}" target="${"_blank"}"><span class="${"svelte-ds5dzu"}">Website ansehen</span>
-                    <i class="${"svelte-ds5dzu"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></div></div></section>
+<section class="${"svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Facts, "Facts").$$render($$result, { href: "https://www.solmates.at/" }, {}, {
+        default: () => `<div><h3>Launch</h3>
+                <p class="${"svelte-fhupq2"}">November 2019</p></div>
+            <div><h3>Services</h3>
+                <p class="${"svelte-fhupq2"}">Konzept, Webdesign, UI/UX, Development, Content Management System, Fotografie, Texte, Buchgestaltung</p></div>
+            <div><h3>Technologien</h3>
+                <p class="${"svelte-fhupq2"}">Vue.js, Nuxt.js, Storyblok, Netlify, Mailchimp</p></div>`
+      })}</div></section>
 
-<section class="${"full svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><video width="${"1152"}" height="${"720"}" muted playsinline loop autoplay poster="${"/images/solmates/solmates01.jpg"}"><source src="${"/images/solmates/solmates.webm"}" type="${"video/webm"}"><source src="${"/images/solmates/solmates.mp4"}" type="${"video/mp4"}"></video></div></section>
+<section class="${"full svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Video, "Video").$$render($$result, {
+        src: "/images/solmates/solmates.mp4",
+        srcWebm: "/images/solmates/solmates.webm",
+        width: "1152",
+        height: "720",
+        poster: "/images/solmates/solmates-poster.jpg"
+      }, {}, {})}</div></section>
 
-<section class="${"narrow svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><div><hr>
-            <h1 class="${"svelte-ds5dzu"}">Solmates ist ein Reiseblog von Armin &amp; Miriam.
+<section class="${"narrow svelte-fhupq2"}"><div class="${"svelte-fhupq2"}"><div><hr>
+            <h1 class="${"svelte-fhupq2"}">Solmates ist ein Reiseblog von Armin &amp; Miriam.
             </h1>
-            <p class="${"svelte-ds5dzu"}">Zu reisen, um neue Orte zu entdecken, ist f\xFCr mich eines der sch\xF6nsten und aufregendsten Dinge im Leben. Deshalb bin ich gemeinsam mit meiner Partnerin im November 2019 aufgebrochen, um Lateinamerika zu bereisen. Mit dem Blog wollte ich einen Platz erschaffen, um Erinnerungen zu speichern und zu teilen \u2013 f\xFCr uns selbst, unsere Familien und Freunde.
+            <p class="${"svelte-fhupq2"}">Zu reisen, um neue Orte zu entdecken, ist f\xFCr mich eines der sch\xF6nsten und aufregendsten Dinge im Leben. Deshalb bin ich gemeinsam mit meiner Partnerin im November 2019 aufgebrochen, um Lateinamerika zu bereisen. Mit dem Blog wollte ich einen Platz erschaffen, um Erinnerungen zu speichern und zu teilen \u2013 f\xFCr uns selbst, unsere Familien und Freunde.
             </p>
-            <p class="${"svelte-ds5dzu"}">Den Blog habe ich von Grund auf mit Vue &amp; Nuxt gebaut. Die Texte und Bilder werden in dem Content Management System Storyblok gepflegt.
+            <p class="${"svelte-fhupq2"}">Den Blog habe ich von Grund auf mit Vue &amp; Nuxt gebaut. Die Texte und Bilder werden in dem Content Management System Storyblok gepflegt.
             </p></div></div></section>
 
 ${validate_component(Parallax, "Parallax").$$render($$result, {
@@ -21532,200 +22049,96 @@ ${validate_component(Parallax, "Parallax").$$render($$result, {
         alt: "Solamtes Cartagena Kolumbien"
       }, {}, {})}
 
-<section class="${"narrow svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><img src="${"/images/solmates/solmates-home.jpg"}" alt="${"Solmates Startseite"}" class="${"svelte-ds5dzu"}"></div></section>
+<section class="${"narrow svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/solmates/solmates-home.jpg",
+        alt: "Solmates Startseite",
+        width: "1536",
+        height: "3726"
+      }, {}, {})}</div></section>
 
-<section class="${"col2 align-end svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><img src="${"/images/solmates/solmates-san-blas-02.jpg"}" alt="${"Solmates San Blas Inseln"}" class="${"svelte-ds5dzu"}">
-        <img src="${"/images/solmates/solmates-costa-rica.jpg"}" alt="${"Solmates Costa Rica"}" class="${"svelte-ds5dzu"}">
-        <img src="${"/images/solmates/solmates-boquete.jpg"}" alt="${"Solmates Vulkan Baru"}" class="${"svelte-ds5dzu"}">
-        <img src="${"/images/solmates/solmates-peru.jpg"}" alt="${"Solmates Peru"}" class="${"svelte-ds5dzu"}"></div></section>
+<section class="${"col2 align-end svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/solmates/solmates-san-blas-02.jpg",
+        alt: "Solmates San Blas Inseln",
+        width: "1920",
+        height: "1280"
+      }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/solmates/solmates-costa-rica.jpg",
+        alt: "Solmates Costa Rica",
+        width: "1920",
+        height: "1280"
+      }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/solmates/solmates-boquete.jpg",
+        alt: "Solmates Vulkan Baru",
+        width: "1920",
+        height: "1280"
+      }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/solmates/solmates-peru.jpg",
+        alt: "Solmates Peru",
+        width: "1920",
+        height: "1280"
+      }, {}, {})}</div></section>
 
-<section class="${"narrow svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><div><hr>
-            <h1 class="${"svelte-ds5dzu"}">Mit dem Rucksack durch Lateinamerika
+<section class="${"narrow svelte-fhupq2"}"><div class="${"svelte-fhupq2"}"><div><hr>
+            <h1 class="${"svelte-fhupq2"}">Mit dem Rucksack durch Lateinamerika
             </h1>
-            <p class="${"svelte-ds5dzu"}">Nach unserer R\xFCckkehr nach \xD6sterreich ist im Sommer 2020 ein 328-seitiger Fotoband entstanden. Dieses Buch erz\xE4hlt von der gesamten Reise \u201Evon den Alpen in die Anden\u201C.
+            <p class="${"svelte-fhupq2"}">Nach unserer R\xFCckkehr nach \xD6sterreich ist im Sommer 2020 ein 328-seitiger Fotoband entstanden. Dieses Buch erz\xE4hlt von der gesamten Reise \u201Evon den Alpen in die Anden\u201C.
             </p></div></div></section>
 
-<section class="${"full svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><video width="${"1152"}" height="${"720"}" muted playsinline loop autoplay poster="${"/images/solmates/solmates01.jpg"}"><source src="${"/images/solmates/solmates-buch.webm"}" type="${"video/webm"}"><source src="${"/images/solmates/solmates-buch.mp4"}" type="${"video/mp4"}"></video></div></section>
+<section class="${"full svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Video, "Video").$$render($$result, {
+        src: "/images/solmates/solmates-buch.mp4",
+        srcWebm: "/images/solmates/solmates-buch.webm",
+        width: "1280",
+        height: "720",
+        poster: "/images/solmates/solmates-buch-poster.jpg"
+      }, {}, {})}</div></section>
 
-<section class="${"col2 svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><img src="${"/images/solmates/solmates-buch.jpg"}" alt="${"Solmates Buch"}" class="${"svelte-ds5dzu"}">
-        <img src="${"/images/solmates/solmates-buch-02.jpg"}" alt="${"Solmates Buch R\xFCckseite"}" class="${"svelte-ds5dzu"}"></div></section>
+<section class="${"col2 svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/solmates/solmates-buch.jpg",
+        alt: "Solmates Buch",
+        width: "1536",
+        height: "1920"
+      }, {}, {})}
+        ${validate_component(Figure, "Figure").$$render($$result, {
+        src: "/images/solmates/solmates-buch-rueckseite.jpg",
+        alt: "Solmates Buch R\xFCckseite",
+        width: "1536",
+        height: "1920"
+      }, {}, {})}</div></section>
 
-<section class="${"last svelte-ds5dzu"}"><div class="${"svelte-ds5dzu"}"><a class="${"link svelte-ds5dzu"}" href="${"https://www.solmates.at/"}" target="${"_blank"}"><span class="${"svelte-ds5dzu"}">Website ansehen</span>
-            <i class="${"svelte-ds5dzu"}"><!-- HTML_TAG_START -->${external}<!-- HTML_TAG_END --></i></a></div></section>
+<section class="${"last svelte-fhupq2"}"><div class="${"svelte-fhupq2"}">${validate_component(LinkExternal, "LinkExternal").$$render($$result, { href: "https://www.solmates.at/" }, {}, {})}</div></section>
 
 ${validate_component(Next, "Next").$$render($$result, {
         title: "MST Muhr",
         desc: "individuelle Unternehmenswebsite",
         slug: "/projekte/mst-muhr",
-        image: "/images/mst-muhr/mst-hero-sm.jpg"
+        image: "/images/mst-muhr/mst-muhr-hero-sm.jpg"
       }, {}, {})}`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/__layout.reset-90845c5f.js
-var layout_reset_90845c5f_exports = {};
-__export(layout_reset_90845c5f_exports, {
-  default: () => _layout_reset,
-  load: () => load3
-});
-var import_app2, import_graphics2, import_display2, import_constants2, import_core2, import_interaction2, import_ticker2, import_filter_kawase_blur2, import_filter_noise2, import_filter_color_matrix2, import_hsl_to_hex2, import_debounce2, import_utils2, import_cookie9, makiMix, css$32, Header, up, css$22, Footer, PageTransition, css$15, baseSize, CursorCreep, css12, Scene, load3, _layout_reset;
-var init_layout_reset_90845c5f = __esm({
-  ".svelte-kit/output/server/chunks/__layout.reset-90845c5f.js"() {
-    init_shims();
-    init_app_03b8560f();
-    init_Scene_svelte_svelte_type_style_lang_2822b95d();
-    init_index_fa8f98f1();
-    init_DeathStar_d5b8ee16();
-    init_dist2();
-    import_app2 = __toModule(require_app());
-    import_graphics2 = __toModule(require_graphics());
-    import_display2 = __toModule(require_display());
-    import_constants2 = __toModule(require_constants());
-    import_core2 = __toModule(require_core());
-    import_interaction2 = __toModule(require_interaction());
-    import_ticker2 = __toModule(require_ticker());
-    import_filter_kawase_blur2 = __toModule(require_filter_kawase_blur_cjs());
-    import_filter_noise2 = __toModule(require_filter_noise());
-    import_filter_color_matrix2 = __toModule(require_filter_color_matrix());
-    init_simplex_noise();
-    import_hsl_to_hex2 = __toModule(require_hsl_to_hex());
-    import_debounce2 = __toModule(require_debounce());
-    import_utils2 = __toModule(require_utils());
-    import_cookie9 = __toModule(require_cookie());
-    init_dist();
-    makiMix = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\n    <rect x="5" y="5" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="11" y="5" width="2" height="2" fill="currentColor"/>\n    <rect x="17" y="5" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="5" y="11" width="2" height="2" fill="currentColor"/>\n    <rect x="11" y="11" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="17" y="11" width="2" height="2" fill="currentColor"/>\n    <rect x="5" y="17" width="2" height="2" fill="currentColor"/>\n    <rect class="yummy" x="11" y="17" width="2" height="2" fill="currentColor"/>\n    <rect x="17" y="17" width="2" height="2" fill="currentColor"/>\n</svg>\n';
-    css$32 = {
-      code: '@keyframes svelte-18pc5lf-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-18pc5lf-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-18pc5lf-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18pc5lf-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18pc5lf-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-18pc5lf-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-18pc5lf-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-18pc5lf-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-18pc5lf-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-18pc5lf-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-18pc5lf-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}header.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{position:fixed;top:0;left:0;right:0;z-index:10;pointer-events:none}@media(prefers-reduced-motion: no-preference){header.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{animation:svelte-18pc5lf-fadein-from-primary 1s var(--easing) forwards}}header.svelte-18pc5lf>section.svelte-18pc5lf.svelte-18pc5lf{align-items:center;color:var(--header-color, var(--on-base));display:flex;font-size:clamp(0.8125rem, 0.625rem + 0.234375vw, 1rem);justify-content:space-between;padding:0.625rem var(--core-padding);text-align:left;text-transform:uppercase}@media(max-width: 767px){header.svelte-18pc5lf>section.svelte-18pc5lf>div.svelte-18pc5lf:not(.logo){display:none}}@media(min-width: 768px){header.svelte-18pc5lf>section.svelte-18pc5lf.svelte-18pc5lf{display:grid;grid-column-gap:1.25rem;grid-template-columns:repeat(4, 1fr);padding-top:1.875rem;padding-bottom:1.875rem;align-items:flex-start;max-width:var(--core-max-width);margin:0 auto}}header.svelte-18pc5lf>section.svelte-18pc5lf>.svelte-18pc5lf{pointer-events:auto}header.svelte-18pc5lf>section div.svelte-18pc5lf.svelte-18pc5lf{display:flex;flex-direction:column;align-items:flex-start}[color-scheme="dark"] header.svelte-18pc5lf>section.svelte-18pc5lf.svelte-18pc5lf{color:var(--on-base)}[color-scheme="dark"] header.svelte-18pc5lf>section.svelte-18pc5lf.svelte-18pc5lf::before{content:"";background:linear-gradient(0deg, hsla(var(--base-h), var(--base-s), var(--base-l), 0), hsla(var(--base-h), var(--base-s), var(--base-l), 0.2) 70%, hsla(var(--base-h), var(--base-s), var(--base-l), 0.9));position:fixed;left:0;top:0;width:100%;height:12.5rem;z-index:-1;pointer-events:none !important}.logo.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{font-weight:500;margin-left:-0.625rem}.last.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{flex-direction:row;justify-content:space-between;align-items:flex-start;margin-right:-0.375rem}.last.svelte-18pc5lf button{padding:0.25em;transition:color 0.2s var(--easing)}.last.svelte-18pc5lf button:hover{color:var(--primary)}.last.svelte-18pc5lf svg{height:1.85em;width:1.85em}a.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf,span.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{padding:0.625rem;box-sizing:border-box}@media(min-width: 768px){a.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf,span.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{padding-top:0.25em;padding-bottom:0.25em}}[color-scheme="highcontrast"] a.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf,[color-scheme="highcontrast"] span.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{font-weight:500}a.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{transition:all 0.2s var(--easing)}a.svelte-18pc5lf i.svelte-18pc5lf.svelte-18pc5lf{display:inline-block;font-style:normal;pointer-events:none}@media(prefers-reduced-motion: no-preference){a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf{animation:svelte-18pc5lf-flip-and-back 0.5s 0.02s var(--easing)}}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(2){animation-delay:0.04s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(3){animation-delay:0.06s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(4){animation-delay:0.08s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(5){animation-delay:0.1s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(6){animation-delay:0.12s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(7){animation-delay:0.14s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(8){animation-delay:0.16s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(9){animation-delay:0.18s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(10){animation-delay:0.2s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(11){animation-delay:0.22s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(12){animation-delay:0.24s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(13){animation-delay:0.26s}a.svelte-18pc5lf:hover i.svelte-18pc5lf.svelte-18pc5lf:nth-child(14){animation-delay:0.28s}.maki-mix.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{display:flex;align-items:center;justify-content:center;padding:0.625rem;margin-right:-0.9375rem}.maki-mix.active.svelte-18pc5lf .yummy{display:none}@media(min-width: 768px){.maki-mix.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{display:none}}.mobile-nav.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{box-sizing:border-box;position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden;overflow-y:auto;background-color:var(--base);opacity:0;pointer-events:none;transition:opacity 0.4s cubic-bezier(0.7, 0, 0.3, 1);z-index:9;height:100vh}@media(max-width: 767px){.mobile-nav.active.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{opacity:1;pointer-events:all}.mobile-nav.active.svelte-18pc5lf a.svelte-18pc5lf.svelte-18pc5lf{transform:rotateY(0deg);opacity:1}.mobile-nav.active.svelte-18pc5lf a span.svelte-18pc5lf.svelte-18pc5lf{animation:svelte-18pc5lf-to-top 0.8s 0.2s var(--easing) forwards}.mobile-nav.active.svelte-18pc5lf a:nth-child(2) span.svelte-18pc5lf.svelte-18pc5lf{animation-delay:0.3s}.mobile-nav.active.svelte-18pc5lf a:nth-child(3) span.svelte-18pc5lf.svelte-18pc5lf{animation-delay:0.4s}.mobile-nav.active.svelte-18pc5lf a:nth-child(4) span.svelte-18pc5lf.svelte-18pc5lf{animation-delay:0.5s}.mobile-nav.active.svelte-18pc5lf footer h3 span.svelte-18pc5lf.svelte-18pc5lf{animation:svelte-18pc5lf-to-top 0.8s 0.7s var(--easing) forwards}.mobile-nav.active.svelte-18pc5lf footer a span.svelte-18pc5lf.svelte-18pc5lf{animation-delay:1s !important}}@media(min-width: 768px){.mobile-nav.svelte-18pc5lf.svelte-18pc5lf.svelte-18pc5lf{display:none}}.mobile-nav.svelte-18pc5lf>nav.svelte-18pc5lf.svelte-18pc5lf{height:var(--app-height);padding:6.25rem var(--core-padding) var(--core-padding);box-sizing:border-box;display:flex;flex-direction:column;justify-content:center}.mobile-nav.svelte-18pc5lf>nav.svelte-18pc5lf>div.svelte-18pc5lf{flex-grow:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:6.25rem}.mobile-nav.svelte-18pc5lf a.svelte-18pc5lf.svelte-18pc5lf{display:flex;font-size:2rem;line-height:2;width:100%;text-transform:uppercase;overflow:hidden;padding:0}.mobile-nav.svelte-18pc5lf a span.svelte-18pc5lf.svelte-18pc5lf{transform:translate3d(0, 100%, 0);padding:0}.mobile-nav.svelte-18pc5lf footer.svelte-18pc5lf.svelte-18pc5lf{margin-top:auto}.mobile-nav.svelte-18pc5lf footer h3.svelte-18pc5lf.svelte-18pc5lf,.mobile-nav.svelte-18pc5lf footer a.svelte-18pc5lf.svelte-18pc5lf{overflow:hidden}.mobile-nav.svelte-18pc5lf footer h3 span.svelte-18pc5lf.svelte-18pc5lf,.mobile-nav.svelte-18pc5lf footer a span.svelte-18pc5lf.svelte-18pc5lf{display:inline-flex;transform:translate3d(0, 100%, 0)}.mobile-nav.svelte-18pc5lf footer h3.svelte-18pc5lf.svelte-18pc5lf{font:var(--w1-serif);font-size:1.5rem;margin:0 0 0.625rem}.mobile-nav.svelte-18pc5lf footer h3 span.svelte-18pc5lf.svelte-18pc5lf{padding:0}.mobile-nav.svelte-18pc5lf footer a.svelte-18pc5lf.svelte-18pc5lf{font:var(--w1-sans);text-transform:none;text-decoration:underline;text-underline-offset:0.2em}',
-      map: null
-    };
-    Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let $page, $$unsubscribe_page;
-      $$unsubscribe_page = subscribe(page, (value) => $page = value);
-      let now2 = new Date(), year = now2.getFullYear();
-      $$result.css.add(css$32);
-      $$unsubscribe_page();
-      return `
-
-<header class="${"svelte-18pc5lf"}"><section class="${"svelte-18pc5lf"}"><div class="${"logo svelte-18pc5lf"}"><a sveltekit:prefetch href="${"/"}" title="${"Armin Neuhauser"}" class="${"svelte-18pc5lf"}"><i class="${"svelte-18pc5lf"}">A</i><i class="${"svelte-18pc5lf"}">r</i><i class="${"svelte-18pc5lf"}">m</i><i class="${"svelte-18pc5lf"}">i</i><i class="${"svelte-18pc5lf"}">n</i> <i class="${"svelte-18pc5lf"}">N</i><i class="${"svelte-18pc5lf"}">e</i><i class="${"svelte-18pc5lf"}">u</i><i class="${"svelte-18pc5lf"}">h</i><i class="${"svelte-18pc5lf"}">a</i><i class="${"svelte-18pc5lf"}">u</i><i class="${"svelte-18pc5lf"}">s</i><i class="${"svelte-18pc5lf"}">e</i><i class="${"svelte-18pc5lf"}">r</i></a></div>
-        <div class="${"svelte-18pc5lf"}"><div class="${"svelte-18pc5lf"}"><a sveltekit:prefetch href="${"/projekte"}" title="${"Projekte"}" class="${["svelte-18pc5lf", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-18pc5lf"}">P</i><i class="${"svelte-18pc5lf"}">r</i><i class="${"svelte-18pc5lf"}">o</i><i class="${"svelte-18pc5lf"}">j</i><i class="${"svelte-18pc5lf"}">e</i><i class="${"svelte-18pc5lf"}">k</i><i class="${"svelte-18pc5lf"}">t</i><i class="${"svelte-18pc5lf"}">e</i></a></div>
-            <div class="${"svelte-18pc5lf"}"><a sveltekit:prefetch href="${"/ueber-mich"}" title="${"\xDCber mich"}" class="${["svelte-18pc5lf", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-18pc5lf"}">\xDC</i><i class="${"svelte-18pc5lf"}">b</i><i class="${"svelte-18pc5lf"}">e</i><i class="${"svelte-18pc5lf"}">r</i> <i class="${"svelte-18pc5lf"}">m</i><i class="${"svelte-18pc5lf"}">i</i><i class="${"svelte-18pc5lf"}">c</i><i class="${"svelte-18pc5lf"}">h</i></a></div></div>
-        <div class="${"svelte-18pc5lf"}"><a sveltekit:prefetch href="${"/kontakt"}" title="${"Kontakt"}" class="${["svelte-18pc5lf", $page.path === "/" ? "active" : ""].join(" ").trim()}"><i class="${"svelte-18pc5lf"}">K</i><i class="${"svelte-18pc5lf"}">o</i><i class="${"svelte-18pc5lf"}">n</i><i class="${"svelte-18pc5lf"}">t</i><i class="${"svelte-18pc5lf"}">a</i><i class="${"svelte-18pc5lf"}">k</i><i class="${"svelte-18pc5lf"}">t</i></a></div>
-        <div class="${"last svelte-18pc5lf"}"><span class="${"svelte-18pc5lf"}">\xA9${escape(year)}</span>
-            ${validate_component(DeathStar, "DeathStar").$$render($$result, {}, {}, {})}</div>
-        <button class="${["maki-mix svelte-18pc5lf", ""].join(" ").trim()}"${add_attribute("title", "Men\xFC anzeigen", 0)}><!-- HTML_TAG_START -->${makiMix}<!-- HTML_TAG_END --></button></section></header>
-
-<aside class="${["mobile-nav svelte-18pc5lf", ""].join(" ").trim()}"><nav class="${"svelte-18pc5lf"}"><div class="${"svelte-18pc5lf"}"><a sveltekit:prefetch href="${"/"}" title="${"Start"}" class="${["svelte-18pc5lf", $page.path === "/" ? "active" : ""].join(" ").trim()}"><span class="${"svelte-18pc5lf"}">Start</span></a>
-            <a sveltekit:prefetch href="${"/projekte"}" title="${"Projekte"}" class="${"svelte-18pc5lf"}"><span class="${"svelte-18pc5lf"}">Projekte</span></a>
-            <a sveltekit:prefetch href="${"/ueber-mich"}" title="${"\xDCber mich"}" class="${"svelte-18pc5lf"}"><span class="${"svelte-18pc5lf"}">\xDCber mich</span></a>
-            <a sveltekit:prefetch href="${"/kontakt"}" title="${"Kontakt"}" class="${"svelte-18pc5lf"}"><span class="${"svelte-18pc5lf"}">Kontakt</span></a></div>
-        <footer class="${"svelte-18pc5lf"}"><h3 class="${"svelte-18pc5lf"}"><span class="${"svelte-18pc5lf"}">Sag Hallo</span></h3>
-            <a href="${"mailto:mail@arminneuhauser.at"}" class="${"svelte-18pc5lf"}"><span class="${"svelte-18pc5lf"}">mail@arminneuhauser.at</span></a></footer></nav>
-</aside>`;
-    });
-    up = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <path d="M11.6464 0.146447C11.8417 -0.0488155 12.1583 -0.0488155 12.3536 0.146447L17.3536 5.14645C17.5488 5.34171 17.5488 5.65829 17.3536 5.85355C17.1583 6.04882 16.8417 6.04882 16.6464 5.85355L12 1.20711L7.35355 5.85355C7.15829 6.04882 6.84171 6.04882 6.64645 5.85355C6.45118 5.65829 6.45118 5.34171 6.64645 5.14645L11.6464 0.146447Z" fill="currentColor"/>\n    <path d="M12 0C12.2761 0 12.5 0.223858 12.5 0.5V23.5C12.5 23.7761 12.2761 24 12 24C11.7239 24 11.5 23.7761 11.5 23.5V0.5C11.5 0.223858 11.7239 0 12 0Z" fill="currentColor"/>\n</svg>\n';
-    css$22 = {
-      code: 'footer.svelte-11170st.svelte-11170st.svelte-11170st{background-color:var(--base);padding:4.375rem var(--core-padding) var(--core-padding);position:relative}@media(min-width: 768px){footer.svelte-11170st.svelte-11170st.svelte-11170st{padding-top:1.875rem;padding-bottom:1.875rem}}footer.svelte-11170st>div.svelte-11170st.svelte-11170st{max-width:var(--core-max-width);margin:0 auto}footer.svelte-11170st>div.svelte-11170st>div.svelte-11170st{display:flex;align-items:center;justify-content:space-between}footer.svelte-11170st h1.svelte-11170st.svelte-11170st{font-family:var(--serif);font-weight:700;font-size:clamp(2rem, 1.5384615385rem + 2.0512820513vw, 4rem);line-height:1.1}footer.svelte-11170st p.svelte-11170st.svelte-11170st{opacity:0.7}[color-scheme="highcontrast"] footer.svelte-11170st p.svelte-11170st.svelte-11170st{opacity:1}footer.svelte-11170st a.svelte-11170st.svelte-11170st{font-size:clamp(1.125rem, 1.0384615385rem + 0.3846153846vw, 1.5rem);margin:0 -0.625rem;padding:0.625rem;text-decoration:underline;text-underline-offset:0.2em;transition:color 0.2s var(--easing)}footer.svelte-11170st a.svelte-11170st.svelte-11170st:hover{color:var(--primary)}footer.svelte-11170st small.svelte-11170st.svelte-11170st{opacity:0.5}[color-scheme="highcontrast"] footer.svelte-11170st small.svelte-11170st.svelte-11170st{opacity:1}footer.svelte-11170st button.svelte-11170st.svelte-11170st{display:flex;align-items:center;justify-content:center;padding:0.625rem;margin-right:-0.625rem;transition:color 0.2s var(--easing)}footer.svelte-11170st button.svelte-11170st.svelte-11170st:hover{color:var(--primary)}footer.svelte-11170st hr.svelte-11170st.svelte-11170st{margin:2.5rem 0 1.25rem}',
-      map: null
-    };
-    Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let now2 = new Date(), year = now2.getFullYear();
-      $$result.css.add(css$22);
-      return `<footer class="${"svelte-11170st"}"><div class="${"svelte-11170st"}"><h1 class="${"svelte-11170st"}">Lass uns gemeinsam Gro\xDFes erschaffen</h1>
-        <p class="${"svelte-11170st"}">Jede Ausfahrt sollte mit einem guten Kaffee abgeschlossen werden.<br> Also komm vorbei und sag Hallo.
-        </p>
-        <a href="${"mailto:mail@arminneuhauser.at"}" class="${"svelte-11170st"}">mail@arminneuhauser.at</a>
-        <hr class="${"svelte-11170st"}">
-        <div class="${"svelte-11170st"}"><small class="${"svelte-11170st"}">Armin Neuhauser \xA9 ${escape(year)}</small>
-            <button title="${"Zur\xFCck nach oben"}" class="${"svelte-11170st"}"><!-- HTML_TAG_START -->${up}<!-- HTML_TAG_END --></button></div></div>
-</footer>`;
-    });
-    PageTransition = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { refresh = "" } = $$props;
-      if ($$props.refresh === void 0 && $$bindings.refresh && refresh !== void 0)
-        $$bindings.refresh(refresh);
-      return `
-    <div>${slots.default ? slots.default({}) : ``}</div>
-
-`;
-    });
-    css$15 = {
-      code: "svg.svelte-15pfraj{position:fixed;width:100%;height:100%;pointer-events:none;z-index:20;mix-blend-mode:exclusion;display:none}@media(pointer: fine) and (prefers-reduced-motion: no-preference){svg.svelte-15pfraj{display:block}}circle.svelte-15pfraj{color:#fff}",
-      map: null
-    };
-    baseSize = 6;
-    CursorCreep = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let $coords, $$unsubscribe_coords;
-      let $size, $$unsubscribe_size;
-      let coords = spring({ x: -baseSize, y: -baseSize }, { stiffness: 0.3, damping: 1 });
-      $$unsubscribe_coords = subscribe(coords, (value) => $coords = value);
-      let size = spring(baseSize);
-      $$unsubscribe_size = subscribe(size, (value) => $size = value);
-      $$result.css.add(css$15);
-      $$unsubscribe_coords();
-      $$unsubscribe_size();
-      return `
-
-<svg class="${"svelte-15pfraj"}"><circle${add_attribute("cx", $coords.x, 0)}${add_attribute("cy", $coords.y, 0)}${add_attribute("r", $size, 0)} fill="${"currentColor"}" class="${"svelte-15pfraj"}"></circle></svg>`;
-    });
-    css12 = {
-      code: "canvas.svelte-1konbxi{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:-1}",
-      map: null
-    };
-    Scene = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      if (!(import_core2.Renderer.__plugins ?? {}).hasOwnProperty("interaction")) {
-        import_core2.Renderer.registerPlugin("interaction", import_interaction2.InteractionManager);
-      }
-      if (!(import_core2.Renderer.__plugins ?? {}).hasOwnProperty("batch")) {
-        import_core2.Renderer.registerPlugin("batch", import_core2.BatchRenderer);
-      }
-      if (!(import_app2.Application._plugins || []).some((plugin) => plugin === import_ticker2.TickerPlugin)) {
-        import_app2.Application.registerPlugin(import_ticker2.TickerPlugin);
-      }
-      let view;
-      $$result.css.add(css12);
-      return `<canvas class="${"svelte-1konbxi"}"${add_attribute("this", view, 0)}></canvas>`;
-    });
-    load3 = async ({ page: page2 }) => ({ props: { key: page2.path } });
-    _layout_reset = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { key } = $$props;
-      scheme.subscribe((value) => {
-      });
-      if ($$props.key === void 0 && $$bindings.key && key !== void 0)
-        $$bindings.key(key);
-      return `<div>${validate_component(Header, "Header").$$render($$result, {}, {}, {})}
-
-        <main>${validate_component(PageTransition, "PageTransition").$$render($$result, { refresh: key }, {}, {
-        default: () => `${slots.default ? slots.default({}) : ``}`
-      })}</main>
-        
-    ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
-    ${validate_component(CursorCreep, "CursorCreep").$$render($$result, {}, {}, {})}
-
-    ${validate_component(Scene, "Scene").$$render($$result, {}, {}, {})}</div>`;
-    });
-  }
-});
-
-// .svelte-kit/output/server/chunks/index-a1c47813.js
-var index_a1c47813_exports = {};
-__export(index_a1c47813_exports, {
+// .svelte-kit/output/server/chunks/index-711f9553.js
+var index_711f9553_exports = {};
+__export(index_711f9553_exports, {
   default: () => Kontakt,
-  prerender: () => prerender3
+  prerender: () => prerender4
 });
-var import_cookie10, css13, prerender3, Kontakt;
-var init_index_a1c47813 = __esm({
-  ".svelte-kit/output/server/chunks/index-a1c47813.js"() {
+var import_cookie11, css14, prerender4, Kontakt;
+var init_index_711f9553 = __esm({
+  ".svelte-kit/output/server/chunks/index-711f9553.js"() {
     init_shims();
-    init_app_03b8560f();
+    init_app_8de5188f();
     init_arrow_c94cf332();
-    import_cookie10 = __toModule(require_cookie());
+    import_cookie11 = __toModule(require_cookie());
     init_dist();
-    css13 = {
-      code: 'form.svelte-1lbwzwq.svelte-1lbwzwq.svelte-1lbwzwq{font:var(--w1-sans)}form.svelte-1lbwzwq label.svelte-1lbwzwq.svelte-1lbwzwq{font:inherit;display:block;text-transform:uppercase;font-size:0.8125rem;font-weight:500}form.svelte-1lbwzwq input.svelte-1lbwzwq.svelte-1lbwzwq,form.svelte-1lbwzwq textarea.svelte-1lbwzwq.svelte-1lbwzwq{box-sizing:border-box;font:inherit;display:block;width:100%;background:none;border:0;border-bottom:1px solid var(--on-base);color:var(--on-base);min-height:3.125rem;padding:0.75rem 0}form.svelte-1lbwzwq input.svelte-1lbwzwq.svelte-1lbwzwq:focus-visible,form.svelte-1lbwzwq textarea.svelte-1lbwzwq.svelte-1lbwzwq:focus-visible{outline:none}form.svelte-1lbwzwq textarea.svelte-1lbwzwq.svelte-1lbwzwq{resize:none}form.svelte-1lbwzwq button.svelte-1lbwzwq.svelte-1lbwzwq{font:inherit;border:1px solid var(--primary);height:3.125rem;border-radius:1.5625rem;padding:0.625rem 1.875rem;text-transform:uppercase;font-size:0.8125rem;font-weight:500;display:flex;align-items:center;gap:0.9375rem;position:relative;z-index:1;overflow:hidden}form.svelte-1lbwzwq button.svelte-1lbwzwq svg{transition:transform 0.25s var(--easing)}form.svelte-1lbwzwq button.svelte-1lbwzwq.svelte-1lbwzwq::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleX(0);transform-origin:bottom left;transition:transform 0.6s var(--easing);z-index:-1}form.svelte-1lbwzwq button.svelte-1lbwzwq.svelte-1lbwzwq:hover::before,form.svelte-1lbwzwq button.svelte-1lbwzwq.svelte-1lbwzwq:focus::before{transform:scaleX(1)}form.svelte-1lbwzwq button.svelte-1lbwzwq:hover svg,form.svelte-1lbwzwq button.svelte-1lbwzwq:focus svg{transform:translateX(0.3125rem)}@keyframes svelte-1lbwzwq-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1lbwzwq-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}50%{color:var(--primary);opacity:0.8}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1lbwzwq-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1lbwzwq-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1lbwzwq-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1lbwzwq-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1lbwzwq-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1lbwzwq-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1lbwzwq-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1lbwzwq-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1lbwzwq-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-1lbwzwq.svelte-1lbwzwq.svelte-1lbwzwq{box-sizing:border-box;padding:var(--core-padding)}section.svelte-1lbwzwq>div.svelte-1lbwzwq.svelte-1lbwzwq{margin:0 auto;max-width:var(--content-max-width)}section.svelte-1lbwzwq>header.svelte-1lbwzwq.svelte-1lbwzwq{margin:0 auto 2.5rem;max-width:var(--content-max-width)}section.svelte-1lbwzwq.svelte-1lbwzwq.svelte-1lbwzwq:last-child{padding-bottom:calc(var(--core-padding) * 3)}section.svelte-1lbwzwq+section.svelte-1lbwzwq.svelte-1lbwzwq{padding-top:calc(var(--core-padding) * 3)}h1.svelte-1lbwzwq.svelte-1lbwzwq.svelte-1lbwzwq{font-size:clamp(3.5rem, 1.5159090909rem + 8.8181818182vw, 15.625rem);font-weight:400;white-space:nowrap;overflow:hidden;width:100vw;margin:7.5rem 0 4.375rem;text-transform:uppercase}@media(min-width: 1024px){h1.svelte-1lbwzwq.svelte-1lbwzwq.svelte-1lbwzwq{margin-top:11.25rem}}h1.svelte-1lbwzwq span.svelte-1lbwzwq.svelte-1lbwzwq{display:inline-block}h1.svelte-1lbwzwq span.svelte-1lbwzwq span.svelte-1lbwzwq{display:flex;gap:0.25em;align-items:baseline;transition:transform 0.5s var(--easing)}h1.svelte-1lbwzwq em.svelte-1lbwzwq.svelte-1lbwzwq{font-family:var(--serif);font-style:normal;font-weight:700}h3.svelte-1lbwzwq.svelte-1lbwzwq.svelte-1lbwzwq{font-size:clamp(1.5rem, 1.3557692308rem + 0.641025641vw, 2.125rem);line-height:1.1;margin:0.75em 0}p.svelte-1lbwzwq.svelte-1lbwzwq.svelte-1lbwzwq{font-size:clamp(1rem, 0.9711538462rem + 0.1282051282vw, 1.125rem);max-width:37.5rem;margin:0.75em 0}form.svelte-1lbwzwq>div.svelte-1lbwzwq.svelte-1lbwzwq{margin-bottom:1.875rem}.mail.svelte-1lbwzwq.svelte-1lbwzwq.svelte-1lbwzwq{font-size:clamp(1.375rem, 0.125rem + 6.25vw, 3.125rem);font-weight:500}.mail.svelte-1lbwzwq>span.svelte-1lbwzwq.svelte-1lbwzwq{position:relative;z-index:1}.mail.svelte-1lbwzwq>span.svelte-1lbwzwq.svelte-1lbwzwq::before{content:"";position:absolute;left:0;width:100%;bottom:-0.05em;border-bottom:0.1em solid var(--on-base);transition:transform 0.25s var(--easing);pointer-events:none}[color-scheme="dark"] .mail.svelte-1lbwzwq>span.svelte-1lbwzwq.svelte-1lbwzwq{text-shadow:0 0 0.033em #fff, 0 0 0.08em #fff, 0 0 0.1em var(--primary), 0 0 0.2em var(--primary), 0 0 0.3em var(--primary), 0 0 1em var(--primary), 0 0 1.5em var(--primary)}[color-scheme="dark"] .mail.svelte-1lbwzwq>span.svelte-1lbwzwq.svelte-1lbwzwq::before{box-shadow:0 0 0.033em #fff, 0 0 0.08em #fff, 0 0 0.1em var(--primary), 0 0 0.2em var(--primary), 0 0 0.3em var(--primary), 0 0 1em var(--primary), 0 0 1.5em var(--primary)}[color-scheme="dark"] .mail.svelte-1lbwzwq>span .flickr.svelte-1lbwzwq.svelte-1lbwzwq{animation:svelte-1lbwzwq-flickr 3s linear infinite alternate forwards;position:relative;z-index:1}.mail.svelte-1lbwzwq:hover>span.svelte-1lbwzwq.svelte-1lbwzwq::before{transform:translateY(0.1em)}',
+    css14 = {
+      code: 'form.svelte-17ogmrm.svelte-17ogmrm.svelte-17ogmrm{font:var(--w1-sans)}form.svelte-17ogmrm label.svelte-17ogmrm.svelte-17ogmrm{font:inherit;display:block;text-transform:uppercase;font-size:0.8125rem;font-weight:500}form.svelte-17ogmrm input.svelte-17ogmrm.svelte-17ogmrm,form.svelte-17ogmrm textarea.svelte-17ogmrm.svelte-17ogmrm{box-sizing:border-box;border-radius:0;font:inherit;display:block;width:100%;background:none;border:0;border-bottom:1px solid var(--on-base);color:var(--on-base);min-height:3.125rem;padding:0.75rem 0}form.svelte-17ogmrm input.svelte-17ogmrm.svelte-17ogmrm:focus-visible,form.svelte-17ogmrm textarea.svelte-17ogmrm.svelte-17ogmrm:focus-visible{outline:none}form.svelte-17ogmrm textarea.svelte-17ogmrm.svelte-17ogmrm{resize:none}form.svelte-17ogmrm button.svelte-17ogmrm.svelte-17ogmrm{font:inherit;border:1px solid var(--primary);height:3.125rem;border-radius:1.5625rem;padding:0.625rem 1.875rem;text-transform:uppercase;font-size:0.8125rem;font-weight:500;display:flex;align-items:center;gap:0.9375rem;position:relative;z-index:1;overflow:hidden}form.svelte-17ogmrm button.svelte-17ogmrm svg{transition:transform 0.25s var(--easing)}form.svelte-17ogmrm button.svelte-17ogmrm.svelte-17ogmrm::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--primary);transform:scaleX(0);transform-origin:bottom left;transition:transform 0.6s var(--easing);z-index:-1}form.svelte-17ogmrm button.svelte-17ogmrm.svelte-17ogmrm:hover::before,form.svelte-17ogmrm button.svelte-17ogmrm.svelte-17ogmrm:focus::before{transform:scaleX(1)}form.svelte-17ogmrm button.svelte-17ogmrm:hover svg,form.svelte-17ogmrm button.svelte-17ogmrm:focus svg{transform:translateX(0.3125rem)}@keyframes svelte-17ogmrm-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-17ogmrm-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-17ogmrm-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-17ogmrm-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-17ogmrm-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-17ogmrm-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-17ogmrm-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-17ogmrm-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-17ogmrm-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-17ogmrm-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-17ogmrm-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-17ogmrm.svelte-17ogmrm.svelte-17ogmrm{box-sizing:border-box;padding:var(--core-padding)}section.svelte-17ogmrm>div.svelte-17ogmrm.svelte-17ogmrm{margin:0 auto;max-width:var(--content-max-width)}section.svelte-17ogmrm>header.svelte-17ogmrm.svelte-17ogmrm{margin:0 auto 2.5rem;max-width:var(--content-max-width)}section.svelte-17ogmrm.svelte-17ogmrm.svelte-17ogmrm:last-child{padding-bottom:calc(var(--core-padding) * 3)}section.svelte-17ogmrm+section.svelte-17ogmrm.svelte-17ogmrm{padding-top:calc(var(--core-padding) * 3)}h1.svelte-17ogmrm.svelte-17ogmrm.svelte-17ogmrm{font-size:clamp(3.5rem, 1.5159090909rem + 8.8181818182vw, 15.625rem);font-weight:400;white-space:nowrap;overflow:hidden;width:100vw;margin:7.5rem 0 4.375rem;text-transform:uppercase}@media(min-width: 1024px){h1.svelte-17ogmrm.svelte-17ogmrm.svelte-17ogmrm{margin-top:11.25rem}}h1.svelte-17ogmrm span.svelte-17ogmrm.svelte-17ogmrm{display:inline-block;will-change:transform}h1.svelte-17ogmrm span.svelte-17ogmrm span.svelte-17ogmrm{display:flex;gap:0.25em;align-items:baseline;transition:transform 0.5s var(--easing)}h1.svelte-17ogmrm em.svelte-17ogmrm.svelte-17ogmrm{font-family:var(--serif);font-style:normal;font-weight:700}h3.svelte-17ogmrm.svelte-17ogmrm.svelte-17ogmrm{font-size:clamp(1.5rem, 1.3557692308rem + 0.641025641vw, 2.125rem);line-height:1.1;margin:0.75em 0}p.svelte-17ogmrm.svelte-17ogmrm.svelte-17ogmrm{font-size:clamp(1rem, 0.9711538462rem + 0.1282051282vw, 1.125rem);max-width:37.5rem;margin:0.75em 0}form.svelte-17ogmrm>div.svelte-17ogmrm.svelte-17ogmrm{margin-bottom:1.875rem}.mail.svelte-17ogmrm.svelte-17ogmrm.svelte-17ogmrm{font-size:clamp(1.375rem, 0.125rem + 6.25vw, 3.125rem);font-weight:500}.mail.svelte-17ogmrm>span.svelte-17ogmrm.svelte-17ogmrm{position:relative;z-index:1}.mail.svelte-17ogmrm>span.svelte-17ogmrm.svelte-17ogmrm::before{content:"";position:absolute;left:0;width:100%;bottom:-0.05em;border-bottom:0.1em solid var(--on-base);transition:transform 0.25s var(--easing);pointer-events:none}[color-scheme="dark"] .mail.svelte-17ogmrm>span.svelte-17ogmrm.svelte-17ogmrm{text-shadow:0 0 0.033em #fff, 0 0 0.08em #fff, 0 0 0.1em var(--primary), 0 0 0.2em var(--primary), 0 0 0.3em var(--primary), 0 0 1em var(--primary), 0 0 1.5em var(--primary)}[color-scheme="dark"] .mail.svelte-17ogmrm>span.svelte-17ogmrm.svelte-17ogmrm::before{box-shadow:0 0 0.033em #fff, 0 0 0.08em #fff, 0 0 0.1em var(--primary), 0 0 0.2em var(--primary), 0 0 0.3em var(--primary), 0 0 1em var(--primary), 0 0 1.5em var(--primary)}[color-scheme="dark"] .mail.svelte-17ogmrm>span .flickr.svelte-17ogmrm.svelte-17ogmrm{animation:svelte-17ogmrm-flickr 3s linear infinite alternate forwards;position:relative;z-index:1}.mail.svelte-17ogmrm:hover>span.svelte-17ogmrm.svelte-17ogmrm::before{transform:translateY(0.1em)}',
       map: null
     };
-    prerender3 = true;
+    prerender4 = true;
     Kontakt = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let shift = -10;
       setInterval(() => {
@@ -21734,37 +22147,70 @@ var init_index_a1c47813 = __esm({
         }
         shift -= 0.015;
       }, 10);
-      $$result.css.add(css13);
+      $$result.css.add(css14);
       return `${$$result.head += `${$$result.title = `<title>Kontakt | Armin Neuhauser</title>`, ""}`, ""}
 
-<h1 class="${"headline svelte-1lbwzwq"}"><span style="${"transform: translate(" + escape(shift) + "%,0)"}" class="${"svelte-1lbwzwq"}"><span class="${"svelte-1lbwzwq"}"><em class="${"svelte-1lbwzwq"}">Kontakt</em> Kontakt
-            <em class="${"svelte-1lbwzwq"}">Kontakt</em> Kontakt
-            <em class="${"svelte-1lbwzwq"}">Kontakt</em> Kontakt
-            <em class="${"svelte-1lbwzwq"}">Kontakt</em> Kontakt
+<h1 class="${"headline svelte-17ogmrm"}"><span style="${"transform: translate(" + escape(shift) + "%,0)"}" class="${"svelte-17ogmrm"}"><span class="${"svelte-17ogmrm"}"><em class="${"svelte-17ogmrm"}">Kontakt</em> Kontakt
+            <em class="${"svelte-17ogmrm"}">Kontakt</em> Kontakt
+            <em class="${"svelte-17ogmrm"}">Kontakt</em> Kontakt
+            <em class="${"svelte-17ogmrm"}">Kontakt</em> Kontakt
         </span></span></h1>
 
-<section class="${"svelte-1lbwzwq"}"><header class="${"svelte-1lbwzwq"}"><p class="${"svelte-1lbwzwq"}">Ich bin immer auf der Suche nach neuen Ideen und spannenden Projekten. Z\xF6gere nicht, mir zu schreiben.
+<section class="${"svelte-17ogmrm"}"><header class="${"svelte-17ogmrm"}"><p class="${"svelte-17ogmrm"}">Ich bin immer auf der Suche nach neuen Ideen und spannenden Projekten. Z\xF6gere nicht, mir zu schreiben.
         </p></header>
-    <div class="${"svelte-1lbwzwq"}"><a class="${"mail svelte-1lbwzwq"}" href="${"mailto:mail@arminneuhauser.at"}"><span class="${"svelte-1lbwzwq"}">mail<span class="${"flickr svelte-1lbwzwq"}">@</span>arminneuhauser.at</span></a></div></section>
+    <div class="${"svelte-17ogmrm"}"><a class="${"mail svelte-17ogmrm"}" href="${"mailto:mail@arminneuhauser.at"}"><span class="${"svelte-17ogmrm"}">mail<span class="${"flickr svelte-17ogmrm"}">@</span>arminneuhauser.at</span></a></div></section>
 
-<section class="${"svelte-1lbwzwq"}"><header class="${"svelte-1lbwzwq"}"><h3 class="${"svelte-1lbwzwq"}">Lass uns dein Projekt verwirklichen</h3>
-        <p class="${"svelte-1lbwzwq"}">Ob zu einem konkreten Projekt oder nur zum Kennenlernen \u2013 F\xFClle das Kontaktformular aus, wenn du mit mir zusammenarbeiten m\xF6chtest.
+<section class="${"svelte-17ogmrm"}"><header class="${"svelte-17ogmrm"}"><h3 class="${"svelte-17ogmrm"}">Lass uns dein Projekt verwirklichen</h3>
+        <p class="${"svelte-17ogmrm"}">Ob zu einem konkreten Projekt oder nur zum Kennenlernen \u2013 F\xFClle das Kontaktformular aus, wenn du mit mir zusammenarbeiten m\xF6chtest.
         </p></header>
-    <div class="${"svelte-1lbwzwq"}"><form name="${"contact"}" method="${"post"}" netlify class="${"svelte-1lbwzwq"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}" class="${"svelte-1lbwzwq"}">
-            <div class="${"svelte-1lbwzwq"}"><label for="${"name"}" class="${"svelte-1lbwzwq"}">Name</label>
-                <input id="${"name"}" name="${"name"}" type="${"text"}" placeholder="${"Dein Name"}" class="${"svelte-1lbwzwq"}"></div>
-            <div class="${"svelte-1lbwzwq"}"><label for="${"email"}" class="${"svelte-1lbwzwq"}">E-Mail-Adresse</label>
-                <input id="${"email"}" name="${"email"}" type="${"email"}" placeholder="${"Deine E-Mail-Adresse"}" class="${"svelte-1lbwzwq"}"></div>
-            <div class="${"svelte-1lbwzwq"}"><label for="${"message"}" class="${"svelte-1lbwzwq"}">Nachricht</label>
-                <textarea id="${"message"}" name="${"message"}" placeholder="${"Deine Nachricht an mich"}" rows="${"5"}" class="${"svelte-1lbwzwq"}"></textarea></div>
-            <button type="${"submit"}" class="${"svelte-1lbwzwq"}">Absenden
+    <div class="${"svelte-17ogmrm"}"><form name="${"contact"}" method="${"post"}" action="${"/kontakt/erfolg"}" data-netlify="${"true"}" class="${"svelte-17ogmrm"}"><input type="${"hidden"}" name="${"form-name"}" value="${"contact"}" class="${"svelte-17ogmrm"}">
+            <div class="${"svelte-17ogmrm"}"><label for="${"name"}" class="${"svelte-17ogmrm"}">Name</label>
+                <input id="${"name"}" name="${"name"}" type="${"text"}" placeholder="${"Dein Name"}" required class="${"svelte-17ogmrm"}"></div>
+            <div class="${"svelte-17ogmrm"}"><label for="${"email"}" class="${"svelte-17ogmrm"}">E-Mail-Adresse</label>
+                <input id="${"email"}" name="${"email"}" type="${"email"}" placeholder="${"Deine E-Mail-Adresse"}" required class="${"svelte-17ogmrm"}"></div>
+            <div class="${"svelte-17ogmrm"}"><label for="${"message"}" class="${"svelte-17ogmrm"}">Nachricht</label>
+                <textarea id="${"message"}" name="${"message"}" placeholder="${"Deine Nachricht an mich"}" rows="${"5"}" class="${"svelte-17ogmrm"}"></textarea></div>
+            <button type="${"submit"}" class="${"svelte-17ogmrm"}">Absenden
                 <!-- HTML_TAG_START -->${arrow}<!-- HTML_TAG_END --></button></form></div>
 </section>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/app-03b8560f.js
+// .svelte-kit/output/server/chunks/erfolg-28024d48.js
+var erfolg_28024d48_exports = {};
+__export(erfolg_28024d48_exports, {
+  default: () => Erfolg,
+  prerender: () => prerender5
+});
+var import_cookie12, css15, prerender5, Erfolg;
+var init_erfolg_28024d48 = __esm({
+  ".svelte-kit/output/server/chunks/erfolg-28024d48.js"() {
+    init_shims();
+    init_app_8de5188f();
+    import_cookie12 = __toModule(require_cookie());
+    init_dist();
+    css15 = {
+      code: "@keyframes svelte-1bpea0b-fadein{0%{opacity:0}100%{opacity:1}}@keyframes svelte-1bpea0b-fadein-from-primary{0%{color:var(--primary);opacity:0;filter:blur(0.05em)}100%{color:var(--on-base);opacity:1;filter:unset}}@keyframes svelte-1bpea0b-to-top-10{0%{transform:translate3d(0, 10%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1bpea0b-to-top{0%{transform:translate3d(0, 100%, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1bpea0b-to-right{0%{transform:translate3d(-100%, 0, 0)}100%{transform:translate3d(0, 0, 0)}}@keyframes svelte-1bpea0b-flip-and-back{0%{transform:rotate3d(1, 0, 0, 0deg)}50%{transform:rotate3d(1, 0, 0, 180deg)}100%{transform:rotate3d(1, 0, 0, 360deg)}}@keyframes svelte-1bpea0b-blink-animation{from{opacity:1}to{opacity:0}}@keyframes svelte-1bpea0b-scroll{0%{transform:translate3d(0, 200%, 0);opacity:0}10%{opacity:1}70%{opacity:1}100%{transform:translate3d(0, 0, 0);opacity:0}}@keyframes svelte-1bpea0b-shutter{0%{bottom:0%;top:100%}50%{bottom:0%;top:0%}100%{bottom:100%;top:0%}}@keyframes svelte-1bpea0b-scale{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}@keyframes svelte-1bpea0b-flickr{0%,19.999%,22%,62.999%,64%,64.999%,72%,100%{opacity:1}20%,21.999%,63%,63.999%,65%,71.999%{opacity:0.3}}section.svelte-1bpea0b.svelte-1bpea0b{box-sizing:border-box;padding:12.5rem var(--core-padding) 6.25rem}section.svelte-1bpea0b>div.svelte-1bpea0b{margin:0 auto;max-width:var(--content-max-width)}h1.svelte-1bpea0b.svelte-1bpea0b{font-size:clamp(1.5rem, 1.3557692308rem + 0.641025641vw, 2.125rem);line-height:1.1;margin:0.75em 0}p.svelte-1bpea0b.svelte-1bpea0b{font-size:clamp(1rem, 0.9711538462rem + 0.1282051282vw, 1.125rem);max-width:37.5rem;margin:0.75em 0}a.svelte-1bpea0b.svelte-1bpea0b{text-decoration:underline;text-underline-offset:0.2em;transition:color 0.2s var(--easing)}a.svelte-1bpea0b.svelte-1bpea0b:hover{color:var(--primary)}",
+      map: null
+    };
+    prerender5 = true;
+    Erfolg = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      setInterval(() => {
+      }, 10);
+      $$result.css.add(css15);
+      return `${$$result.head += `${$$result.title = `<title>Kontakt | Armin Neuhauser</title>`, ""}`, ""}
+
+<section class="${"svelte-1bpea0b"}"><div class="${"svelte-1bpea0b"}"><h1 class="${"svelte-1bpea0b"}">Danke f\xFCr deine Nachricht!</h1>
+        <p class="${"svelte-1bpea0b"}">Ich werde dir sobald wie m\xF6glich antworten.
+        </p>
+        <p class="${"svelte-1bpea0b"}"><a href="${"/"}" class="${"svelte-1bpea0b"}">Zur\xFCck zur Startseite</a></p></div>
+</section>`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/chunks/app-8de5188f.js
 function get_single_valued_header(headers, key) {
   const value = headers[key];
   if (Array.isArray(value)) {
@@ -23092,6 +23538,9 @@ function add_attribute(name, value, boolean) {
     return "";
   return ` ${name}${value === true ? "" : `=${typeof value === "string" ? JSON.stringify(escape(value)) : `"${value}"`}`}`;
 }
+function add_classes(classes) {
+  return classes ? ` class="${classes}"` : "";
+}
 function afterUpdate() {
 }
 function set_paths(paths) {
@@ -23108,9 +23557,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-564224a5.js",
+      file: assets + "/_app/start-79e78431.js",
       css: [assets + "/_app/assets/start-0dba5459.css"],
-      js: [assets + "/_app/start-564224a5.js", assets + "/_app/chunks/vendor-01d7f779.js"]
+      js: [assets + "/_app/start-79e78431.js", assets + "/_app/chunks/vendor-7567f0f3.js"]
     },
     fetched: void 0,
     floc: false,
@@ -23148,16 +23597,16 @@ async function load_component(file) {
   };
 }
 function render(request, {
-  prerender: prerender4
+  prerender: prerender6
 } = {}) {
   const host = request.headers["host"];
-  return respond({ ...request, host }, options, { prerender: prerender4 });
+  return respond({ ...request, host }, options, { prerender: prerender6 });
 }
-var import_cookie11, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css14, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
-var init_app_03b8560f = __esm({
-  ".svelte-kit/output/server/chunks/app-03b8560f.js"() {
+var import_cookie13, __accessCheck, __privateGet, __privateAdd, __privateSet, _map, absolute, scheme2, chars, unsafeChars, reserved, escaped$1, objectProtoOwnPropertyNames, subscriber_queue2, escape_json_string_in_html_dict, escape_html_attr_dict, s$1, s, ReadOnlyFormData, identity, is_client, now, raf, tasks, current_component, escaped, missing_component, on_destroy, css16, Root, base, assets, handle, user_hooks, template, options, default_settings, empty, manifest, get_hooks, module_lookup, metadata_lookup;
+var init_app_8de5188f = __esm({
+  ".svelte-kit/output/server/chunks/app-8de5188f.js"() {
     init_shims();
-    import_cookie11 = __toModule(require_cookie());
+    import_cookie13 = __toModule(require_cookie());
     init_dist();
     __accessCheck = (obj, member, msg) => {
       if (!member.has(obj))
@@ -23279,7 +23728,7 @@ var init_app_03b8560f = __esm({
     missing_component = {
       $$render: () => ""
     };
-    css14 = {
+    css16 = {
       code: "#svelte-announcer.svelte-b8s5el{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}",
       map: null
     };
@@ -23304,7 +23753,7 @@ var init_app_03b8560f = __esm({
         $$bindings.props_1(props_1);
       if ($$props.props_2 === void 0 && $$bindings.props_2 && props_2 !== void 0)
         $$bindings.props_2(props_2);
-      $$result.css.add(css14);
+      $$result.css.add(css16);
       {
         stores.page.set(page2);
       }
@@ -23322,14 +23771,14 @@ ${``}`;
     base = "";
     assets = "";
     handle = async ({ request, resolve: resolve2 }) => {
-      const cookies = import_cookie11.default.parse(request.headers.cookie || "");
+      const cookies = import_cookie13.default.parse(request.headers.cookie || "");
       request.locals.userid = cookies.userid || v4();
       if (request.query.has("_method")) {
         request.method = request.query.get("_method").toUpperCase();
       }
       const response = await resolve2(request);
       if (!cookies.userid) {
-        response.headers["set-cookie"] = import_cookie11.default.serialize("userid", request.locals.userid, {
+        response.headers["set-cookie"] = import_cookie13.default.serialize("userid", request.locals.userid, {
           path: "/",
           httpOnly: true
         });
@@ -23346,7 +23795,7 @@ ${``}`;
     default_settings = { paths: { "base": "", "assets": "" } };
     empty = () => ({});
     manifest = {
-      assets: [{ "file": ".DS_Store", "size": 6148, "type": null }, { "file": "favicon.png", "size": 5717, "type": "image/png" }, { "file": "fonts/ff-mark-medium.woff2", "size": 42076, "type": "font/woff2" }, { "file": "fonts/ff-mark-regular.woff2", "size": 43796, "type": "font/woff2" }, { "file": "fonts/iskry-bold.woff2", "size": 47796, "type": "font/woff2" }, { "file": "images/.DS_Store", "size": 8196, "type": null }, { "file": "images/armin-panama-city.jpg", "size": 149758, "type": "image/jpeg" }, { "file": "images/mst-muhr/.DS_Store", "size": 6148, "type": null }, { "file": "images/mst-muhr/mst-hero-lg.jpg", "size": 82996, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-hero-sm.jpg", "size": 42139, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-01-dark.jpg", "size": 89405, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-01.jpg", "size": 93478, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-02-dark.jpg", "size": 103324, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-02.jpg", "size": 112619, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-dark.mp4", "size": 2056877, "type": "video/mp4" }, { "file": "images/mst-muhr/mst-muhr-dark.webm", "size": 1788378, "type": "video/webm" }, { "file": "images/mst-muhr/mst-muhr-lg.jpg", "size": 137924, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr.jpg", "size": 34723, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr.mp4", "size": 2237896, "type": "video/mp4" }, { "file": "images/mst-muhr/mst-muhr.webm", "size": 1787784, "type": "video/webm" }, { "file": "images/mst-muhr/mst-schweizergarten.jpg", "size": 229134, "type": "image/jpeg" }, { "file": "images/solmates/.DS_Store", "size": 6148, "type": null }, { "file": "images/solmates/solmates-boquete.jpg", "size": 209770, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch-02.jpg", "size": 192280, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch.jpg", "size": 277868, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch.mp4", "size": 15967483, "type": "video/mp4" }, { "file": "images/solmates/solmates-buch.webm", "size": 15112406, "type": "video/webm" }, { "file": "images/solmates/solmates-cartagena.jpg", "size": 295383, "type": "image/jpeg" }, { "file": "images/solmates/solmates-costa-rica.jpg", "size": 314053, "type": "image/jpeg" }, { "file": "images/solmates/solmates-hero-lg.jpg", "size": 369052, "type": "image/jpeg" }, { "file": "images/solmates/solmates-hero-sm.jpg", "size": 162565, "type": "image/jpeg" }, { "file": "images/solmates/solmates-home.jpg", "size": 371539, "type": "image/jpeg" }, { "file": "images/solmates/solmates-lg.jpg", "size": 464356, "type": "image/jpeg" }, { "file": "images/solmates/solmates-panama-city.jpg", "size": 408266, "type": "image/jpeg" }, { "file": "images/solmates/solmates-peru.jpg", "size": 492739, "type": "image/jpeg" }, { "file": "images/solmates/solmates-san-blas-02.jpg", "size": 294816, "type": "image/jpeg" }, { "file": "images/solmates/solmates-san-blas.jpg", "size": 519302, "type": "image/jpeg" }, { "file": "images/solmates/solmates.jpg", "size": 106493, "type": "image/jpeg" }, { "file": "images/solmates/solmates.mp4", "size": 6718092, "type": "video/mp4" }, { "file": "images/solmates/solmates.webm", "size": 4565940, "type": "video/webm" }, { "file": "images/solmates/solmates01.jpg", "size": 243436, "type": "image/jpeg" }, { "file": "images/solmates/solmates02.jpg", "size": 288001, "type": "image/jpeg" }, { "file": "images/solmates/solmates03.jpg", "size": 220855, "type": "image/jpeg" }, { "file": "images/solmates/solmates04.jpg", "size": 127719, "type": "image/jpeg" }, { "file": "images/solmates/solmates05.jpg", "size": 214718, "type": "image/jpeg" }, { "file": "images/wohnformat/.DS_Store", "size": 6148, "type": null }, { "file": "images/wohnformat/wohnformat-hero-lg.jpg", "size": 81564, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat-hero-sm.jpg", "size": 43244, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat-lg.jpg", "size": 142604, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat.jpg", "size": 43204, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat1.jpg", "size": 57217, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat2.jpg", "size": 36220, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat3.jpg", "size": 40437, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat4.jpg", "size": 75241, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat5.jpg", "size": 61749, "type": "image/jpeg" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }],
+      assets: [{ "file": ".DS_Store", "size": 6148, "type": null }, { "file": "favicon.png", "size": 5717, "type": "image/png" }, { "file": "fonts/ff-mark-medium.woff2", "size": 42076, "type": "font/woff2" }, { "file": "fonts/ff-mark-regular.woff2", "size": 43796, "type": "font/woff2" }, { "file": "fonts/iskry-bold.woff2", "size": 47796, "type": "font/woff2" }, { "file": "images/.DS_Store", "size": 8196, "type": null }, { "file": "images/armin-panama-city.jpg", "size": 149758, "type": "image/jpeg" }, { "file": "images/mst-muhr/.DS_Store", "size": 6148, "type": null }, { "file": "images/mst-muhr/mst-muhr-01-dark.jpg", "size": 89405, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-01.jpg", "size": 93478, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-02-dark.jpg", "size": 103324, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-02.jpg", "size": 112619, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-dark.mp4", "size": 2056877, "type": "video/mp4" }, { "file": "images/mst-muhr/mst-muhr-dark.webm", "size": 1788378, "type": "video/webm" }, { "file": "images/mst-muhr/mst-muhr-gugitzgasse.jpg", "size": 204927, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-hero-lg.jpg", "size": 82996, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-hero-sm.jpg", "size": 42139, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-lg.jpg", "size": 137924, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-mobile-dark.jpg", "size": 77151, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-mobile.jpg", "size": 83889, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-poster-dark.jpg", "size": 47245, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-poster.jpg", "size": 49218, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-schweizergarten-02.jpg", "size": 331283, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-schweizergarten-03.jpg", "size": 207403, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-schweizergarten.jpg", "size": 232130, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr-windmuehlgasse.jpg", "size": 148981, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr.jpg", "size": 33707, "type": "image/jpeg" }, { "file": "images/mst-muhr/mst-muhr.mp4", "size": 2237896, "type": "video/mp4" }, { "file": "images/mst-muhr/mst-muhr.webm", "size": 1787784, "type": "video/webm" }, { "file": "images/solmates/.DS_Store", "size": 6148, "type": null }, { "file": "images/solmates/solmates-boquete.jpg", "size": 209770, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch-02.jpg", "size": 192280, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch-poster.jpg", "size": 124841, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch-rueckseite.jpg", "size": 199693, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch.jpg", "size": 238429, "type": "image/jpeg" }, { "file": "images/solmates/solmates-buch.mp4", "size": 15967483, "type": "video/mp4" }, { "file": "images/solmates/solmates-buch.webm", "size": 15112406, "type": "video/webm" }, { "file": "images/solmates/solmates-cartagena.jpg", "size": 315754, "type": "image/jpeg" }, { "file": "images/solmates/solmates-costa-rica.jpg", "size": 314053, "type": "image/jpeg" }, { "file": "images/solmates/solmates-hero-lg.jpg", "size": 369052, "type": "image/jpeg" }, { "file": "images/solmates/solmates-hero-sm.jpg", "size": 162565, "type": "image/jpeg" }, { "file": "images/solmates/solmates-home.jpg", "size": 371539, "type": "image/jpeg" }, { "file": "images/solmates/solmates-lg.jpg", "size": 464356, "type": "image/jpeg" }, { "file": "images/solmates/solmates-panama-city.jpg", "size": 408266, "type": "image/jpeg" }, { "file": "images/solmates/solmates-peru.jpg", "size": 492739, "type": "image/jpeg" }, { "file": "images/solmates/solmates-poster.jpg", "size": 116978, "type": "image/jpeg" }, { "file": "images/solmates/solmates-san-blas-02.jpg", "size": 294816, "type": "image/jpeg" }, { "file": "images/solmates/solmates-san-blas.jpg", "size": 519302, "type": "image/jpeg" }, { "file": "images/solmates/solmates.jpg", "size": 106493, "type": "image/jpeg" }, { "file": "images/solmates/solmates.mp4", "size": 6718092, "type": "video/mp4" }, { "file": "images/solmates/solmates.webm", "size": 4565940, "type": "video/webm" }, { "file": "images/solmates/solmates01.jpg", "size": 243436, "type": "image/jpeg" }, { "file": "images/solmates/solmates02.jpg", "size": 288001, "type": "image/jpeg" }, { "file": "images/solmates/solmates03.jpg", "size": 220855, "type": "image/jpeg" }, { "file": "images/solmates/solmates04.jpg", "size": 127719, "type": "image/jpeg" }, { "file": "images/solmates/solmates05.jpg", "size": 214718, "type": "image/jpeg" }, { "file": "images/wohnformat/.DS_Store", "size": 6148, "type": null }, { "file": "images/wohnformat/wohnformat-hero-lg.jpg", "size": 81564, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat-hero-sm.jpg", "size": 43244, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat-lg.jpg", "size": 111728, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat.jpg", "size": 39836, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat1.jpg", "size": 57217, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat2.jpg", "size": 36220, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat3.jpg", "size": 40437, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat4.jpg", "size": 75241, "type": "image/jpeg" }, { "file": "images/wohnformat/wohnformat5.jpg", "size": 61749, "type": "image/jpeg" }, { "file": "robots.txt", "size": 67, "type": "text/plain" }],
       layout: "src/routes/__layout.svelte",
       error: "src/routes/__error.svelte",
       routes: [
@@ -23359,9 +23808,23 @@ ${``}`;
         },
         {
           type: "page",
+          pattern: /^\/layout-backup\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/layout-backup.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
           pattern: /^\/ueber-mich\/?$/,
           params: empty,
           a: ["src/routes/__layout.svelte", "src/routes/ueber-mich.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
+          pattern: /^\/impressum\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/impressum.svelte"],
           b: ["src/routes/__error.svelte"]
         },
         {
@@ -23396,8 +23859,15 @@ ${``}`;
           type: "page",
           pattern: /^\/kontakt\/?$/,
           params: empty,
-          a: ["src/routes/kontakt/__layout.reset.svelte", "src/routes/kontakt/index.svelte"],
-          b: []
+          a: ["src/routes/__layout.svelte", "src/routes/kontakt/index.svelte"],
+          b: ["src/routes/__error.svelte"]
+        },
+        {
+          type: "page",
+          pattern: /^\/kontakt\/erfolg\/?$/,
+          params: empty,
+          a: ["src/routes/__layout.svelte", "src/routes/kontakt/erfolg.svelte"],
+          b: ["src/routes/__error.svelte"]
         }
       ]
     };
@@ -23408,18 +23878,20 @@ ${``}`;
       externalFetch: hooks.externalFetch || fetch
     });
     module_lookup = {
-      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_0ea74923(), layout_0ea74923_exports)),
-      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_bfa49163(), error_bfa49163_exports)),
-      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_8451d8a1(), index_8451d8a1_exports)),
-      "src/routes/ueber-mich.svelte": () => Promise.resolve().then(() => (init_ueber_mich_586498a5(), ueber_mich_586498a5_exports)),
-      "src/routes/projekte/index.svelte": () => Promise.resolve().then(() => (init_index_0a3f2f66(), index_0a3f2f66_exports)),
-      "src/routes/projekte/wohnformat.svelte": () => Promise.resolve().then(() => (init_wohnformat_7471a4d0(), wohnformat_7471a4d0_exports)),
-      "src/routes/projekte/mst-muhr.svelte": () => Promise.resolve().then(() => (init_mst_muhr_de98b9f5(), mst_muhr_de98b9f5_exports)),
-      "src/routes/projekte/solmates.svelte": () => Promise.resolve().then(() => (init_solmates_3cbe8739(), solmates_3cbe8739_exports)),
-      "src/routes/kontakt/__layout.reset.svelte": () => Promise.resolve().then(() => (init_layout_reset_90845c5f(), layout_reset_90845c5f_exports)),
-      "src/routes/kontakt/index.svelte": () => Promise.resolve().then(() => (init_index_a1c47813(), index_a1c47813_exports))
+      "src/routes/__layout.svelte": () => Promise.resolve().then(() => (init_layout_bed4846a(), layout_bed4846a_exports)),
+      "src/routes/__error.svelte": () => Promise.resolve().then(() => (init_error_d1c7e3c5(), error_d1c7e3c5_exports)),
+      "src/routes/index.svelte": () => Promise.resolve().then(() => (init_index_29ca0329(), index_29ca0329_exports)),
+      "src/routes/layout-backup.svelte": () => Promise.resolve().then(() => (init_layout_backup_23d41d18(), layout_backup_23d41d18_exports)),
+      "src/routes/ueber-mich.svelte": () => Promise.resolve().then(() => (init_ueber_mich_29c9e412(), ueber_mich_29c9e412_exports)),
+      "src/routes/impressum.svelte": () => Promise.resolve().then(() => (init_impressum_a68f659e(), impressum_a68f659e_exports)),
+      "src/routes/projekte/index.svelte": () => Promise.resolve().then(() => (init_index_ed521e11(), index_ed521e11_exports)),
+      "src/routes/projekte/wohnformat.svelte": () => Promise.resolve().then(() => (init_wohnformat_8675c222(), wohnformat_8675c222_exports)),
+      "src/routes/projekte/mst-muhr.svelte": () => Promise.resolve().then(() => (init_mst_muhr_5a5b4de9(), mst_muhr_5a5b4de9_exports)),
+      "src/routes/projekte/solmates.svelte": () => Promise.resolve().then(() => (init_solmates_3ec4aff0(), solmates_3ec4aff0_exports)),
+      "src/routes/kontakt/index.svelte": () => Promise.resolve().then(() => (init_index_711f9553(), index_711f9553_exports)),
+      "src/routes/kontakt/erfolg.svelte": () => Promise.resolve().then(() => (init_erfolg_28024d48(), erfolg_28024d48_exports))
     };
-    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-dbe2987b.js", "css": ["assets/pages/__layout.svelte-8abd4b06.css", "assets/Scene-13ff6062.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-dbe2987b.js", "chunks/vendor-01d7f779.js", "chunks/Scene-032ebd6e.js", "chunks/DeathStar-a6fcbfb9.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-6baf8ab2.js", "css": ["assets/pages/__error.svelte-5a8fc307.css"], "js": ["pages/__error.svelte-6baf8ab2.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-978b1a45.js", "css": ["assets/pages/index.svelte-b717f5e1.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-978b1a45.js", "chunks/vendor-01d7f779.js", "chunks/DeathStar-a6fcbfb9.js", "chunks/arrow-c94cf332.js"], "styles": [] }, "src/routes/ueber-mich.svelte": { "entry": "pages/ueber-mich.svelte-045d1850.js", "css": ["assets/pages/ueber-mich.svelte-81172310.css"], "js": ["pages/ueber-mich.svelte-045d1850.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/projekte/index.svelte": { "entry": "pages/projekte/index.svelte-d5e28d9d.js", "css": ["assets/pages/projekte/index.svelte-dbc05f05.css"], "js": ["pages/projekte/index.svelte-d5e28d9d.js", "chunks/vendor-01d7f779.js"], "styles": [] }, "src/routes/projekte/wohnformat.svelte": { "entry": "pages/projekte/wohnformat.svelte-835575e1.js", "css": ["assets/pages/projekte/wohnformat.svelte-59c98956.css", "assets/Switch.svelte_svelte_type_style_lang-ed5f0fd4.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/wohnformat.svelte-835575e1.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js"], "styles": [] }, "src/routes/projekte/mst-muhr.svelte": { "entry": "pages/projekte/mst-muhr.svelte-a4c157a7.js", "css": ["assets/pages/projekte/mst-muhr.svelte-2eef603c.css", "assets/Switch.svelte_svelte_type_style_lang-ed5f0fd4.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/mst-muhr.svelte-a4c157a7.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js", "chunks/Parallax-49dc5c87.js"], "styles": [] }, "src/routes/projekte/solmates.svelte": { "entry": "pages/projekte/solmates.svelte-8f52ca75.js", "css": ["assets/pages/projekte/solmates.svelte-73870ba0.css", "assets/external-40be6ba9.css"], "js": ["pages/projekte/solmates.svelte-8f52ca75.js", "chunks/vendor-01d7f779.js", "chunks/external-e2a53927.js", "chunks/Parallax-49dc5c87.js"], "styles": [] }, "src/routes/kontakt/__layout.reset.svelte": { "entry": "pages/kontakt/__layout.reset.svelte-06dc6fd5.js", "css": ["assets/Scene-13ff6062.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/kontakt/__layout.reset.svelte-06dc6fd5.js", "chunks/vendor-01d7f779.js", "chunks/Scene-032ebd6e.js", "chunks/DeathStar-a6fcbfb9.js"], "styles": [] }, "src/routes/kontakt/index.svelte": { "entry": "pages/kontakt/index.svelte-3dde359c.js", "css": ["assets/pages/kontakt/index.svelte-4ac878b4.css"], "js": ["pages/kontakt/index.svelte-3dde359c.js", "chunks/vendor-01d7f779.js", "chunks/arrow-c94cf332.js"], "styles": [] } };
+    metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-8fbe4847.js", "css": ["assets/Scene-cc1c1cbb.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/__layout.svelte-8fbe4847.js", "chunks/vendor-7567f0f3.js", "chunks/Scene-dd3d5744.js", "chunks/DeathStar-e26cef07.js"], "styles": [] }, "src/routes/__error.svelte": { "entry": "pages/__error.svelte-91dd197d.js", "css": ["assets/pages/__error.svelte-5a8fc307.css"], "js": ["pages/__error.svelte-91dd197d.js", "chunks/vendor-7567f0f3.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-8b882789.js", "css": ["assets/pages/index.svelte-d867c9b7.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/index.svelte-8b882789.js", "chunks/vendor-7567f0f3.js", "chunks/DeathStar-e26cef07.js", "chunks/arrow-c94cf332.js"], "styles": [] }, "src/routes/layout-backup.svelte": { "entry": "pages/layout-backup.svelte-be9699bb.js", "css": ["assets/pages/layout-backup.svelte-05ac42ab.css", "assets/Scene-cc1c1cbb.css", "assets/DeathStar-5f3bc394.css"], "js": ["pages/layout-backup.svelte-be9699bb.js", "chunks/vendor-7567f0f3.js", "chunks/Scene-dd3d5744.js", "chunks/DeathStar-e26cef07.js"], "styles": [] }, "src/routes/ueber-mich.svelte": { "entry": "pages/ueber-mich.svelte-27e5204d.js", "css": ["assets/pages/ueber-mich.svelte-81172310.css"], "js": ["pages/ueber-mich.svelte-27e5204d.js", "chunks/vendor-7567f0f3.js"], "styles": [] }, "src/routes/impressum.svelte": { "entry": "pages/impressum.svelte-82ea506e.js", "css": ["assets/pages/impressum.svelte-090b6d15.css"], "js": ["pages/impressum.svelte-82ea506e.js", "chunks/vendor-7567f0f3.js"], "styles": [] }, "src/routes/projekte/index.svelte": { "entry": "pages/projekte/index.svelte-072f89e1.js", "css": ["assets/pages/projekte/index.svelte-2cad1537.css"], "js": ["pages/projekte/index.svelte-072f89e1.js", "chunks/vendor-7567f0f3.js"], "styles": [] }, "src/routes/projekte/wohnformat.svelte": { "entry": "pages/projekte/wohnformat.svelte-9e0a48b1.js", "css": ["assets/pages/projekte/wohnformat.svelte-b176b76a.css", "assets/Next-32d55cfe.css"], "js": ["pages/projekte/wohnformat.svelte-9e0a48b1.js", "chunks/vendor-7567f0f3.js", "chunks/Next-62d47abf.js"], "styles": [] }, "src/routes/projekte/mst-muhr.svelte": { "entry": "pages/projekte/mst-muhr.svelte-eb876910.js", "css": ["assets/pages/projekte/mst-muhr.svelte-b66fa470.css", "assets/Next-32d55cfe.css", "assets/Video-06eedeb4.css"], "js": ["pages/projekte/mst-muhr.svelte-eb876910.js", "chunks/vendor-7567f0f3.js", "chunks/Next-62d47abf.js", "chunks/Video-add2dd40.js"], "styles": [] }, "src/routes/projekte/solmates.svelte": { "entry": "pages/projekte/solmates.svelte-55f2c2ea.js", "css": ["assets/pages/projekte/solmates.svelte-5fb3f07f.css", "assets/Next-32d55cfe.css", "assets/Video-06eedeb4.css"], "js": ["pages/projekte/solmates.svelte-55f2c2ea.js", "chunks/vendor-7567f0f3.js", "chunks/Next-62d47abf.js", "chunks/Video-add2dd40.js"], "styles": [] }, "src/routes/kontakt/index.svelte": { "entry": "pages/kontakt/index.svelte-bde93bfc.js", "css": ["assets/pages/kontakt/index.svelte-d2d9612d.css"], "js": ["pages/kontakt/index.svelte-bde93bfc.js", "chunks/vendor-7567f0f3.js", "chunks/arrow-c94cf332.js"], "styles": [] }, "src/routes/kontakt/erfolg.svelte": { "entry": "pages/kontakt/erfolg.svelte-ec5958e4.js", "css": ["assets/pages/kontakt/erfolg.svelte-6658f74a.css"], "js": ["pages/kontakt/erfolg.svelte-ec5958e4.js", "chunks/vendor-7567f0f3.js"], "styles": [] } };
   }
 });
 
@@ -23431,8 +23903,8 @@ init_shims();
 
 // .svelte-kit/output/server/app.js
 init_shims();
-init_app_03b8560f();
-var import_cookie12 = __toModule(require_cookie());
+init_app_8de5188f();
+var import_cookie14 = __toModule(require_cookie());
 init_dist();
 
 // .svelte-kit/netlify/entry.js
