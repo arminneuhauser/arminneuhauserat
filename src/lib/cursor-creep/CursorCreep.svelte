@@ -58,7 +58,7 @@
 />
 
 <svg>
-    <circle cx={$coords.x} cy={$coords.y} r={$size} fill="currentColor"/>
+    <circle cx={$coords.x} cy={$coords.y} r={Math.max(0, $size)} fill="currentColor"/>
 </svg>
 
 <style lang="scss">
