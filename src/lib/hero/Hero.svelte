@@ -56,7 +56,7 @@
         grid-column: 2;
 
         .sphere {
-            animation: fadein 2s var(--easing) forwards;
+            animation: fadein 2s 1s var(--easing) forwards;
             display: block;
             padding-bottom: 100%;
             background-color: hsla(0, 0%, 100%, 0.5);
@@ -69,6 +69,8 @@
     }
 
     h1 {
+        opacity: 0;
+        animation: fadein-from-primary 2s 0.6s var(--easing) forwards;
         font-family: var(--serif);
         font-weight: 700;
         font-size: fn.rfs(46, 120, 500, 2560);
@@ -92,11 +94,6 @@
             span {
                 margin: 0 !important;
             }
-        }
-        
-        @media (prefers-reduced-motion: no-preference) {
-            opacity: 0;
-            animation: fadein-from-primary 2s var(--easing) forwards;
         }
 
         span {
