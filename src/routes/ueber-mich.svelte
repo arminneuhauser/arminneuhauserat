@@ -17,7 +17,7 @@
 <section>
     <div>
         <h1>Hallo, ich bin Armin.</h1>
-        <img src="images/armin-panama-city.jpg" alt="Armin in Panama City" loading="lazy" width="860" height="1147" />
+        <img src="/images/armin-panama-city.jpg" alt="Armin in Panama City" loading="lazy" width="860" height="1147" />
         <div>
             <p>Seit mittlerweile fast {since} Jahren gestalte und entwickle ich Websites & Online-Shops.</p>
             <p>Mit einer Kombination aus Erfahrungen in Design und Development kann ich verschiedenste Problemstellungen lösen und Projekte ganzheitlich betreuen und steuern. Es begeistert mich, zusammen mit dir von Grund auf die Persönlichkeit deiner Marke zu definieren, zu gestalten und unverwechselbar zu machen. Ich erarbeite aus deinen Ideen digitale und analoge Kreationen für deinen Erfolg.</p>
