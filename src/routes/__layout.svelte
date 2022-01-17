@@ -7,8 +7,13 @@
     import CursorCreep from '$lib/cursor-creep/CursorCreep.svelte';
     import CookieBanner from '$lib/cookie-banner/CookieBanner.svelte';
     import Scene from '$lib/scene/Scene.svelte';
+    import PageTransition from "$lib/page-transition/PageTransition.svelte"
+    import { page } from '$app/stores';
+    
+    export let key;
 
     let scheme_value;
+
 
 	scheme.subscribe(value => {
 		scheme_value = value;
@@ -58,18 +63,21 @@
 
 <div>
     <Header />
-
+    
+    <PageTransition refresh={key}>
         <main>
             <slot />
         </main>
+    </PageTransition>
+
         
-    <Footer />
+        <Footer />
 
-    <CursorCreep />
+        <CursorCreep />
 
-    {#if $cookieConsent !== "true"}
-        <CookieBanner />
-    {/if}
+        {#if $cookieConsent !== "true"}
+            <CookieBanner />
+        {/if}
 
-    <Scene />
+        <Scene />
 </div>
