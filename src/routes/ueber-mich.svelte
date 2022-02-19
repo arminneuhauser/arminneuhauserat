@@ -21,7 +21,7 @@
         <h1>Hallo, ich bin Armin.</h1>
         <figure>
             <img src="/images/armin-panama-city.jpg" alt="Armin in Panama City" loading="lazy" width="860" height="1147" />
-            <figcaption>Panama City, 2019</figcaption>
+            <figcaption>Panama City, 2020</figcaption>
         </figure>
         <div>
             <p class="intro">
