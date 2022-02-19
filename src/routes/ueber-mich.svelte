@@ -25,13 +25,13 @@
         </figure>
         <div>
             <p class="intro">
-                Seit mittlerweile fast {since} Jahren gestalte und entwickle ich nützliche, schöne, digitale Dinge im Internet.
+                Seit mittlerweile fast {since} Jahren gestalte und entwickle ich Websites, Apps & Online-Shops.
             </p>
             <p>
-                Meine Karriere als Webdesigner und Entwickler begann im Studium an der FH St. Pölten. Dort kam ich das erste Mal mit HTML, CSS, JavaScript und allem was sonst noch dazugehört in Berührung. Nach dem Studium begann ich in einer E-Commerce-Agentur verschiedene Online-Shops umzusetzen. Ich lebe in Wien und arbeite hauptberuflich für den <a href="https://www.derstandard.at/" target="_blank">Standard <i>{@html external}</i></a> als UX Engineer. Bis heute arbeite ich auch an persönlichen Projekten und gelegentlich an Kundenarbeiten, die ich auf dieser Website präsentiere.
+                Meine Karriere als Webdesigner und Entwickler begann während meines Studiums an der FH St. Pölten. Dort kam ich zum ersten Mal mit HTML, CSS, JavaScript und allem was sonst noch dazugehört in Berührung. Nach dem Studium begann ich in einer E-Commerce-Agentur verschiedene Online-Shops umzusetzen. Ich lebe in Wien und arbeite hauptberuflich für den <a href="https://www.derstandard.at/" target="_blank">Standard <i>{@html external}</i></a> als UX Engineer. Bis heute arbeite ich auch an persönlichen Projekten und gelegentlich an Kundenarbeiten, die ich auf dieser Website präsentiere.
             </p>
             <p>
-                Wenn ich nicht arbeite, probiere ich gerne neue Restaurants aus und erkunde die Umgebung von Wien mit meinen Fahrrädern. Ich liebe es zu <a sveltekit:prefetch href="/projekte/solmates">reisen</a>. Neue Orte und Menschen kennenzulernen, gehört für mich einfach zum Leben dazu.
+                Wenn ich nicht arbeite, probiere ich gerne neue Restaurants aus und erkunde die Umgebung von Wien mit dem Fahrrad. Ich liebe es zu <a sveltekit:prefetch href="/projekte/solmates">reisen</a>. Neue Orte und Menschen kennenzulernen, gehört für mich einfach zum Leben dazu.
             </p>
             <p>
                 Wenn du Interesse an einer Zusammenarbeit hast, <a sveltekit:prefetch href="/kontakt">kontaktiere mich hier</a>.
