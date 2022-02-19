@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>Projekte| Armin Neuhauser</title>
+    <title>Projekte | Armin Neuhauser</title>
 </svelte:head>
 
 <section>
