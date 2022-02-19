@@ -20,8 +20,8 @@
     <div>
         <h1>Hallo, ich bin Armin.</h1>
         <figure>
-            <img src="/images/armin-panama-city.jpg" alt="Armin in Panama City" loading="lazy" width="860" height="1147" />
-            <figcaption>Panama City, 2020</figcaption>
+            <img src="/images/armin-tulum.jpg" alt="Armin in Tulum, Mexiko" loading="lazy" width="860" height="1147" />
+            <figcaption>Tulum, 2019</figcaption>
         </figure>
         <div>
             <p class="intro">
