@@ -122,6 +122,7 @@
 
             @media (min-width: var.$breakpoint-md) {
                 grid-template-columns: 1fr 1fr;
+                grid-column-gap: #{fn.rem(30)};
             }
         }
     }
