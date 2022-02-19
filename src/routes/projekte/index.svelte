@@ -124,7 +124,7 @@
 
             div {
                 grid-row: 3;
-                font-size: #{fn.rfs(13, 16, $minWidth: 1280, $maxWidth: 2560)};
+                font-size: #{fn.rfs(15, 16, $minWidth: 1280, $maxWidth: 2560)};
 
                 @media (min-width: var.$breakpoint-md) {
                     grid-column: 7 / span 6;

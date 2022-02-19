@@ -1,5 +1,6 @@
 <script lang="ts">
     import IntersectionObserver from "svelte-intersection-observer";
+    import arrow from '../latest-work/arrow.svg?raw';
 
     let element;
     let intersecting;
@@ -18,6 +19,14 @@
                 <span class="mask"><span>auf den Benutzer</span></span>
                 <span class="mask"><span>angepasst und vor</span></span>
                 <span class="mask"><span>allem pfeilschnell.</span></span>
+                <a sveltekit:prefetch href="/ueber-mich" title="Mehr über mich erfahren">
+                    <span>
+                        <i><i>M</i></i><i><i>e</i></i><i><i>h</i></i><i><i>r</i></i> <i><i>ü</i></i><i><i>b</i></i><i><i>e</i></i><i><i>r</i></i> <i><i>m</i></i><i><i>i</i></i><i><i>c</i></i><i><i>h</i></i>
+                    </span>
+                    <em>
+                        {@html arrow}
+                    </em>
+                </a>
             </p>
         </div>
     </section>
@@ -72,6 +81,94 @@
                 &:nth-child(7) span {
                     animation-delay: 1200ms;
                 }
+            }
+
+            a {
+                i {
+                    i {
+                        animation: to-right 0.2s 2000ms var(--easing) forwards;
+                    }
+                    &:nth-child(2) i {
+                        animation-delay: 2040ms;
+                    }
+                    &:nth-child(3) i {
+                        animation-delay: 2080ms;
+                    }
+                    &:nth-child(4) i {
+                        animation-delay: 2120ms;
+                    }
+                    &:nth-child(5) i {
+                        animation-delay: 2160ms;
+                    }
+                    &:nth-child(6) i {
+                        animation-delay: 2200ms;
+                    }
+                    &:nth-child(7) i {
+                        animation-delay: 2240ms;
+                    }
+                    &:nth-child(8) i {
+                        animation-delay: 2280ms;
+                    }
+                    &:nth-child(9) i {
+                        animation-delay: 2320ms;
+                    }
+                    &:nth-child(10) i {
+                        animation-delay: 2360ms;
+                    }
+                    &:nth-child(11) i {
+                        animation-delay: 2400ms;
+                    }
+                    &:nth-child(12) i {
+                        animation-delay: 2440ms;
+                    }
+                }
+
+                em {
+                    :global(svg) {
+                        animation: to-right 0.8s 2480ms var(--easing) forwards;
+                    }
+                }
+            }
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: #{fn.rem(8)};
+        text-transform: uppercase;
+        font-size: #{fn.rem(12)};
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        padding: #{fn.rem(10)} 0;
+        margin: 2em 0;
+
+        @media (min-width: var.$breakpoint-md) {
+            font-size: #{fn.rem(14)};
+        }
+
+        span {
+            pointer-events: none;
+        }
+
+        i {
+            display: inline-flex;
+            overflow: hidden;
+
+            i {
+                display: inline-flex;
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+
+        em {
+            display: inline-flex;
+            pointer-events: none;
+            overflow: hidden;
+            font-style: normal;
+
+            :global(svg) {
+                transform: translate3d(-100%, 0, 0);
             }
         }
     }

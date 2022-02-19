@@ -32,7 +32,7 @@
 
 <section>
     <header>
-        <p>
+        <p class="intro">
             Ich bin immer auf der Suche nach neuen Ideen und spannenden Projekten. Zögere nicht, mir zu schreiben.
         </p>
     </header>
@@ -137,9 +137,13 @@
     }
 
     p {
-        font-size: #{fn.rfs(16, 18)};
+        font-size: #{fn.rfs(17, 19)};
         max-width: #{fn.rem(600)};
         margin: 0.75em 0;
+    }
+
+    .intro {
+        font-size: #{fn.rfs(19, 22)};
     }
 
     form {
