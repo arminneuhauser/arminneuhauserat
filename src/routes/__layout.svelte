@@ -9,7 +9,8 @@
     import Scene from '$lib/scene/Scene.svelte';
     import PageTransition from "$lib/page-transition/PageTransition.svelte"
     import { page } from '$app/stores';
-    
+    import { GoogleAnalytics } from '@beyonk/svelte-google-analytics'
+   
     export let key;
 
     let scheme_value;
@@ -70,14 +71,15 @@
         </main>
     </PageTransition>
 
-        
-        <Footer />
+    <Footer />
 
-        <CursorCreep />
+    <CursorCreep />
 
-        {#if $cookieConsent !== "true"}
-            <CookieBanner />
-        {/if}
+    {#if $cookieConsent !== "true"}
+        <CookieBanner />
+    {/if}
 
-        <Scene />
+    <Scene />
+
+    <GoogleAnalytics properties={[ 'gG-71C50F0RNV' ]} />
 </div>
