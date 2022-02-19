@@ -81,5 +81,5 @@
 
     <Scene />
 
-    <GoogleAnalytics properties={[ 'gG-71C50F0RNV' ]} />
+    <GoogleAnalytics properties={[ 'G-71C50F0RNV' ]} />
 </div>
