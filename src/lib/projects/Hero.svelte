@@ -17,22 +17,22 @@
     }
 
     onMount(() => {
-        root.style.setProperty('--header-color', `hsl(0deg, 0%, 100%)`)
+        root?.style.setProperty('--header-color', `hsl(0deg, 0%, 100%)`)
     });
 
     afterUpdate(() => {
         if (scrollY == 0) {
-            root.style.setProperty('--header-color', `hsl(0deg, 0%, 100%)`)
+            root?.style.setProperty('--header-color', `hsl(0deg, 0%, 100%)`)
         }
     });
 
     onDestroy(() => {
-        root.style.removeProperty('--header-color')
+        root?.style.removeProperty('--header-color')
     });
 
     function parseScroll() {
         lightness = Math.min(Math.max(map(scrollY / windowHeight, 0.9, 1, 100, 0), 0), 100);
-        root.style.setProperty('--header-color', `hsl(0deg, 0%, ${lightness}%)`)
+        root?.style.setProperty('--header-color', `hsl(0deg, 0%, ${lightness}%)`)
     }
 
 </script>
