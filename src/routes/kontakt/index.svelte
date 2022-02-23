@@ -78,6 +78,7 @@
     section {
         box-sizing: border-box;
         padding: var(--core-padding);
+        animation: fadein 1.2s 0.2s var(--easing) forwards;
 
         > div {
             margin: 0 auto;
@@ -106,6 +107,7 @@
         width: 100vw;
         margin: #{fn.rem(120)} 0 #{fn.rem(70)};
         text-transform: uppercase;
+        animation: fadein 1.2s 0.2s var(--easing) forwards;
 
         @media (min-width: var.$breakpoint-lg) {
             margin-top: #{fn.rem(180)};

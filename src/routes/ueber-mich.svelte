@@ -64,9 +64,12 @@
 </section>
 
 <style lang="scss">
+    @use "src/scss/animations.scss";
+
     section {
         box-sizing: border-box;
         padding: #{fn.rem(50)} var(--core-padding);
+        animation: fadein 1.2s 0.2s var(--easing) forwards;
 
         > div {
             margin: 0 auto;
