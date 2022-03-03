@@ -76,10 +76,12 @@
 
         <IntersectionObserver element={element2} bind:intersecting={intersecting2}>
             <footer class:intersecting={intersecting2} bind:this={element2}>
-                <div>    
+                <div>
                     <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">
                         <span>
-                            <i><i>P</i></i><i><i>r</i></i><i><i>o</i></i><i><i>j</i></i><i><i>e</i></i><i><i>k</i></i><i><i>t</i></i> <i><i>a</i></i><i><i>n</i></i><i><i>s</i></i><i><i>e</i></i><i><i>h</i></i><i><i>e</i></i><i><i>n</i></i>
+                            <span data-title="Projekt ansehen">
+                                <i><i>P</i></i><i><i>r</i></i><i><i>o</i></i><i><i>j</i></i><i><i>e</i></i><i><i>k</i></i><i><i>t</i></i> <i><i>a</i></i><i><i>n</i></i><i><i>s</i></i><i><i>e</i></i><i><i>h</i></i><i><i>e</i></i><i><i>n</i></i>
+                            </span>
                         </span>
                         <em>
                             {@html arrow}
@@ -282,7 +284,30 @@
                 }
 
                 span {
+                    overflow: hidden;
+                    display: flex;
+                    position: relative;
                     pointer-events: none;
+
+                    span {
+                        display: inline-block;
+                        transform: translate3d(0, 0, 0);
+                        transition: transform 0.8s var(--easing);
+                        position: relative;
+                        overflow: visible;
+
+                        &::after {
+                            content: attr(data-title);
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            transform: translate3d(0, 100%, 0);
+                        }
+                    }
+                }
+
+                &:hover span span {
+                    transform: translate3d(0, -100%, 0);
                 }
 
                 i {
