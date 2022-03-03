@@ -108,7 +108,7 @@
                 font-family: var(--serif);
                 font-weight: 700;
                 font-size: #{fn.rem(45)};
-                line-height: 1;
+                line-height: 1.1;
                 margin: 0;
 
                 @media (min-width: var.$breakpoint-md) {
