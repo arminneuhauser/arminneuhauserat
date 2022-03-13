@@ -104,7 +104,7 @@
         font-weight: 400;
         white-space: nowrap;
         overflow: hidden;
-        width: 100vw;
+        width: 100%;
         margin: #{fn.rem(120)} 0 #{fn.rem(70)};
         text-transform: uppercase;
         animation: fadein 1.2s 0.2s var(--easing) forwards;
