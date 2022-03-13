@@ -50,6 +50,8 @@ form {
         position: relative;
         z-index: 1;
         overflow: hidden;
+        color: var(--on-base);
+        transition: color 0.25s var(--easing);
 
         :global(svg) {
             transition: transform 0.25s var(--easing);
@@ -70,6 +72,8 @@ form {
         }
 
         &:hover, &:focus {
+            color: var(--on-primary);
+
             &::before {
                 transform: scaleX(1);
             }

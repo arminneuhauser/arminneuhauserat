@@ -30,6 +30,7 @@
             justify-content: center;
             overflow: hidden;
             transform: rotate(45deg);
+            transition: color 0.25s var(--easing);
 
             &::before {
                 content: '';
@@ -55,8 +56,12 @@
         }
 
         &:hover {
-            i::before {
-                transform: scaleY(1);
+            i {
+                color: var(--on-primary);
+
+                &::before {
+                    transform: scaleY(1);
+                }
             }
         }
     }

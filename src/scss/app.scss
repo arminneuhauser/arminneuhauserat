@@ -9,6 +9,11 @@
     --primary-s: 88%;
     --primary-l: 55%;
 
+    --on-primary: #050505;
+    --on-primary-h: 0;
+    --on-primary-s: 0%;
+    --on-primary-l: 2%;
+
     --base: #050505;
     --base-h: 0;
     --base-s: 0%;
@@ -55,20 +60,25 @@
     }
 
     &[color-scheme="highcontrast"] {
-        --primary: #000;
-        --primary-h: 0;
-        --primary-s: 0%;
-        --primary-l: 0%;
+        --primary: #174CA6;
+        --primary-h: 218;
+        --primary-s: 75%;
+        --primary-l: 37%;
+
+        --on-primary: #ffcc00;
+        --on-primary-h: 48;
+        --on-primary-s: 100%;
+        --on-primary-l: 50%;
 
         --base: #ffcc00;
         --base-h: 48;
         --base-s: 100%;
         --base-l: 50%;
 
-        --on-base: #000;
-        --on-base-h: 0;
-        --on-base-s: 0%;
-        --on-base-l: 0%;
+        --on-base: #174CA6;
+        --on-base-h: 218;
+        --on-base-s: 75%;
+        --on-base-l: 37%;
 
         --serif: "FF Mark";
 
