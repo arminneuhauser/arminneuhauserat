@@ -31,7 +31,7 @@
         </IntersectionObserver>
 
         <IntersectionObserver once element={element2} bind:intersecting={intersecting2}>
-            <figure  class:intersecting={intersecting2} bind:this={element2}>
+            <figure class:intersecting={intersecting2} bind:this={element2}>
                 <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">
                     <picture>
                         <img src={image} alt={title} width="656" height="820" loading="lazy" />

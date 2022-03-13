@@ -11,6 +11,9 @@
     let element;
     let intersecting;
 
+    let element2;
+    let intersecting2;
+
     let now = new Date();
     let year = now.getFullYear();
     let since = year - 2009;
@@ -64,6 +67,26 @@
                     <li>Storyblok</li>
                     <li>Netlify</li>
                 </ul>
+            </div>
+        </div>
+    </IntersectionObserver>
+</section>
+
+<section class="projects">
+    <IntersectionObserver once element={element2} bind:intersecting={intersecting2}>
+        <div class:intersecting={intersecting2} bind:this={element2}>
+            <div>
+                <h1>Meine Projekte</h1>
+            </div>
+            <div>
+                <p>
+                    Sieh dir die maßgeschneiderten Projekte an, um mehr über meine Arbeit zu erfahren. Ich kooperiere mit Kunden aus verschiedenen Branchen mit dem Ziel, Marken attraktiv zu gestalten und sie mit ihrem Publikum zu verbinden.
+                </p>
+                <p>
+                    <a sveltekit:prefetch href="/projekte">
+                        Zu meinen Projekten
+                    </a>
+                </p>
             </div>
         </div>
     </IntersectionObserver>
@@ -124,8 +147,6 @@
     }
 
     .services {
-        padding-bottom: #{fn.rem(150)};
-
         > div {
             display: grid;
             opacity: 0;
@@ -141,11 +162,36 @@
         }
     }
 
+    .projects {
+        padding-bottom: #{fn.rem(150)};
+
+        > div {
+            display: grid;
+            opacity: 0;
+
+            @media (min-width: var.$breakpoint-md) {
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: #{fn.rem(30)};
+            }
+
+            &.intersecting {
+                animation: fadein 1s 0.25s var(--easing) forwards;
+            }
+        }
+
+        h1 {
+            // font-family: var(--sans);
+            // font-weight: 500;
+            // font-size: #{fn.rem(38)};
+            font-size: fn.rfs(32, 64);
+        }
+    }
+
     h1 {
         font-family: var(--serif);
         font-weight: 700;
         font-size: #{fn.rfs(38, 75)};
-        line-height: 1;
+        line-height: 1.1;
         margin: 0 0 0.5em 0;
     }
 
