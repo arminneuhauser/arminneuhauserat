@@ -5,7 +5,11 @@
 </script>
 
 <script lang="ts">
+    import IntersectionObserver from "svelte-intersection-observer";
     import external from '$lib/projects/external.svg?raw';
+
+    let element;
+    let intersecting;
 
     let now = new Date();
     let year = now.getFullYear();
@@ -41,26 +45,28 @@
 </section>
 
 <section class="services">
-    <div>
-        <div>
-            <h2>Was ich für dich tun kann</h2>
-            <ul>
-                <li>UI/UX Design</li>
-                <li>Webentwicklung</li>
-                <li>Fotografie</li>
-                <li>Branding</li>
-            </ul>
+    <IntersectionObserver once {element} bind:intersecting>
+        <div class:intersecting bind:this={element}>
+            <div>
+                <h2>Was ich für dich tun kann</h2>
+                <ul>
+                    <li>UI/UX Design</li>
+                    <li>Webentwicklung</li>
+                    <li>Fotografie</li>
+                    <li>Branding</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Meine Werkzeuge</h2>
+                <ul>
+                    <li>Svelte</li>
+                    <li>Vue.js</li>
+                    <li>Storyblok</li>
+                    <li>Netlify</li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <h2>Meine Werkzeuge</h2>
-            <ul>
-                <li>Svelte</li>
-                <li>Vue.js</li>
-                <li>Storyblok</li>
-                <li>Netlify</li>
-            </ul>
-        </div>
-    </div>
+    </IntersectionObserver>
 </section>
 
 <style lang="scss">
@@ -122,10 +128,15 @@
 
         > div {
             display: grid;
+            opacity: 0;
 
             @media (min-width: var.$breakpoint-md) {
                 grid-template-columns: 1fr 1fr;
                 grid-column-gap: #{fn.rem(30)};
+            }
+
+            &.intersecting {
+                animation: fadein 1s 0.25s var(--easing) forwards;
             }
         }
     }
