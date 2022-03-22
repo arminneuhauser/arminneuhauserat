@@ -1,21 +1,33 @@
 <script lang="ts">
     import { scheme } from '../../stores.js';
     import deathStarIcon from './death-star.svg?raw';
+    import { notifications } from '$lib/toast/notifications.js';
 
     let i = 0;
     let colorSchemes= [
-        "dark",
-        "light",
-        "highcontrast",
+        {
+            "name": "dark",
+            "description": "Dark"
+        },
+        {
+            "name": "light",
+            "description": "Light"
+        },
+        {
+            "name": "highcontrast",
+            "description": "High Contrast"
+        },
     ];
 
     function handleDeathStarClick() {
-        const activeScheme = colorSchemes.find(element => element == localStorage.scheme);
+        const activeScheme = colorSchemes.find(element => element.name == localStorage.scheme);
         const activeSchemeIndex = colorSchemes.indexOf(activeScheme) + 1;
 
         i = activeSchemeIndex < colorSchemes.length ? colorSchemes.indexOf(activeScheme) + 1 : 0;
 
-        scheme.update(() => colorSchemes[i]);
+        scheme.update(() => colorSchemes[i].name);
+
+        notifications.send(colorSchemes[i].description + ' Mode aktiviert', 3000);
     }
 </script>
 

@@ -6,6 +6,7 @@
     import Footer from '$lib/footer/Footer.svelte';
     import CursorCreep from '$lib/cursor-creep/CursorCreep.svelte';
     import CookieBanner from '$lib/cookie-banner/CookieBanner.svelte';
+    import Toast from '$lib/toast/Toast.svelte';
     import Scene from '$lib/scene/Scene.svelte';
     import PageTransition from "$lib/page-transition/PageTransition.svelte"
     import { page } from '$app/stores';
@@ -14,7 +15,6 @@
     export let key;
 
     let scheme_value;
-
 
 	scheme.subscribe(value => {
 		scheme_value = value;
@@ -78,6 +78,8 @@
     {#if $cookieConsent !== "true"}
         <CookieBanner />
     {/if}
+
+    <Toast />
 
     <Scene />
 
