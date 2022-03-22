@@ -24,7 +24,7 @@
 <style lang="scss">
     .toast-group {
         position: fixed;
-        z-index: 1;
+        z-index: 16;
         inset-block-end: 0;
         inset-inline: 0;
         padding-block-end: 5vh;
