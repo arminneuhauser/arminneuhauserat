@@ -1,17 +1,26 @@
 <script lang="ts">
     import { cookieConsent } from '../../stores.js';
+    import { onMount } from 'svelte';
+
+    let mounted = false;
 
     function handleCookieClick() {
         cookieConsent.update(() => "true");
     }
+
+    onMount(() => {
+        mounted = true;
+    });
 </script>
 
-<div class="cookies">
-    <div>
-        <p>Diese Website nutzt Cookies.</p>
-        <button on:click={handleCookieClick}>OK</button>
+{#if mounted}
+    <div class="cookies">
+        <div>
+            <p>Diese Website nutzt Cookies.</p>
+            <button on:click={handleCookieClick}>OK</button>
+        </div>
     </div>
-</div>
+{/if}
 
 <style lang="scss">
     .cookies {
