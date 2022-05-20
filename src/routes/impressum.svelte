@@ -13,7 +13,7 @@
         <h1>Impressum</h1>
         <div>
             <p>Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
-            <p>Armin Neuhauser<br>Nauschgasse 4/2/8<br>1220 Wien, Österreich<br>E-Mail: <a href="mailto:mail@arminneuhauser.at">mail@arminneuhauser.at</a></p>
+            <p>Armin Neuhauser<br>1220 Wien, Österreich<br>E-Mail: <a href="mailto:mail@arminneuhauser.at">mail@arminneuhauser.at</a></p>
             <h2 id="eu-streitschlichtung">EU-Streitschlichtung</h2>
             <p>Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren.
             Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission unter <a href="http://ec.europa.eu/odr?tid=221090227">http://ec.europa.eu/odr?tid=221090227</a> zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum.</p>
