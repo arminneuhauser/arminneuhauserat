@@ -33,59 +33,63 @@
     }}
 />
 
-<header>
+<header role="banner">
     <section>
-        <div class="logo" >
-            <a sveltekit:prefetch href="/" title="Armin Neuhauser" class:active={$page.path === '/'} on:click={handleMobileClick}>
-                <i>A</i><i>r</i><i>m</i><i>i</i><i>n</i> <i>N</i><i>e</i><i>u</i><i>h</i><i>a</i><i>u</i><i>s</i><i>e</i><i>r</i>
+        <h1 class="logo" role="heading" aria-label="Armin Neuhauser">
+            <a sveltekit:prefetch href="/" title="Armin Neuhauser" aria-label="Armin Neuhauser" class:active={$page.path === '/'} on:click={handleMobileClick}>
+                <i aria-hidden="true">A</i><i aria-hidden="true">r</i><i aria-hidden="true">m</i><i aria-hidden="true">i</i><i aria-hidden="true">n</i> <i aria-hidden="true">N</i><i aria-hidden="true">e</i><i aria-hidden="true">u</i><i aria-hidden="true">h</i><i aria-hidden="true">a</i><i aria-hidden="true">u</i><i aria-hidden="true">s</i><i aria-hidden="true">e</i><i aria-hidden="true">r</i>
             </a>
-        </div>
+        </h1>
         <div>
             <div>
                 <a sveltekit:prefetch href="/projekte" title="Projekte" class:active={$page.path === '/projekte'} on:click={scrollToTop}>
-                    <i>P</i><i>r</i><i>o</i><i>j</i><i>e</i><i>k</i><i>t</i><i>e</i>
+                    <i aria-hidden="true">P</i><i aria-hidden="true">r</i><i aria-hidden="true">o</i><i aria-hidden="true">j</i><i aria-hidden="true">e</i><i aria-hidden="true">k</i><i aria-hidden="true">t</i><i aria-hidden="true">e</i>
                 </a>
             </div>
             <div>
                 <a sveltekit:prefetch href="/ueber-mich" title="Über mich" class:active={$page.path === '/ueber-mich'} on:click={scrollToTop}>
-                    <i>Ü</i><i>b</i><i>e</i><i>r</i> <i>m</i><i>i</i><i>c</i><i>h</i>
+                    <i aria-hidden="true">Ü</i><i aria-hidden="true">b</i><i aria-hidden="true">e</i><i aria-hidden="true">r</i> <i aria-hidden="true">m</i><i aria-hidden="true">i</i><i aria-hidden="true">c</i><i aria-hidden="true">h</i>
                 </a>
             </div>
         </div>
         <div>
             <a sveltekit:prefetch href="/kontakt" title="Kontakt" class:active={$page.path === '/kontakt'} on:click={scrollToTop}>
-                <i>K</i><i>o</i><i>n</i><i>t</i><i>a</i><i>k</i><i>t</i>
+                <i aria-hidden="true">K</i><i aria-hidden="true">o</i><i aria-hidden="true">n</i><i aria-hidden="true">t</i><i aria-hidden="true">a</i><i aria-hidden="true">k</i><i aria-hidden="true">t</i>
             </a>
         </div>
         <div class="last">
             <span>©{year}</span>
-            <DeathStar/>
+            <div aria-hidden="true">
+                <DeathStar/>
+            </div>
         </div>
         <button class="maki-mix" class:active="{mobileMenuVisible}" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
-            {@html makiMix}
+            <div aria-hidden="true">
+                {@html makiMix}
+            </div>
         </button>
     </section>
 </header>
 
 <aside class="mobile-nav" class:active="{mobileMenuVisible}">
-    <nav>
+    <nav aria-label="Mobiles Navigationsmenü">
         <div>
-            <a sveltekit:prefetch href="/" title="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
-                <span>Start</span>
+            <a sveltekit:prefetch href="/" title="Start" aria-label="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
+                <span aria-hidden="true">Start</span>
             </a>
-            <a sveltekit:prefetch href="/projekte" title="Projekte" class:active={$page.path === '/projekte'} on:click={handleMobileClick}>
-                <span>Projekte</span>
+            <a sveltekit:prefetch href="/projekte" title="Projekte" aria-label="Projekte" class:active={$page.path === '/projekte'} on:click={handleMobileClick}>
+                <span aria-hidden="true">Projekte</span>
             </a>
-            <a sveltekit:prefetch href="/ueber-mich" title="Über mich" class:active={$page.path === '/ueber-mich'} on:click={handleMobileClick}>
-                <span>Über mich</span>
+            <a sveltekit:prefetch href="/ueber-mich" title="Über mich" aria-label="Über mich" class:active={$page.path === '/ueber-mich'} on:click={handleMobileClick}>
+                <span aria-hidden="true">Über mich</span>
             </a>
-            <a sveltekit:prefetch href="/kontakt" title="Kontakt" class:active={$page.path === '/kontakt'} on:click={handleMobileClick}>
-                <span>Kontakt</span>
+            <a sveltekit:prefetch href="/kontakt" title="Kontakt" aria-label="Kontakt" class:active={$page.path === '/kontakt'} on:click={handleMobileClick}>
+                <span aria-hidden="true">Kontakt</span>
             </a>
         </div>
         <footer>
             <h3><span>Sag Hallo</span></h3>
-            <a href="mailto:mail@arminneuhauser.at"><span>mail@arminneuhauser.at</span></a>
+            <a href="mailto:mail@arminneuhauser.at" aria-label="Schreib mir eine E-Mail an mail@arminneuhauser.at"><span>mail@arminneuhauser.at</span></a>
         </footer>
     </nav>
 </aside>
@@ -167,8 +171,9 @@
     }
 
     .logo {
+        font-size: inherit;
         font-weight: 500;
-        margin-left: #{fn.rem(-10)};
+        margin: 0 0 0 #{fn.rem(-10)};
     }
 
     .last {
