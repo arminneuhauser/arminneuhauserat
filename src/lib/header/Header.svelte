@@ -36,24 +36,24 @@
 <header>
     <section>
         <div class="logo" >
-            <a sveltekit:prefetch href="/" title="Armin Neuhauser" on:click={handleMobileClick}>
+            <a sveltekit:prefetch href="/" title="Armin Neuhauser" class:active={$page.path === '/'} on:click={handleMobileClick}>
                 <i>A</i><i>r</i><i>m</i><i>i</i><i>n</i> <i>N</i><i>e</i><i>u</i><i>h</i><i>a</i><i>u</i><i>s</i><i>e</i><i>r</i>
             </a>
         </div>
         <div>
             <div>
-                <a sveltekit:prefetch href="/projekte" title="Projekte" class:active={$page.path === '/'} on:click={scrollToTop}>
+                <a sveltekit:prefetch href="/projekte" title="Projekte" class:active={$page.path === '/projekte'} on:click={scrollToTop}>
                     <i>P</i><i>r</i><i>o</i><i>j</i><i>e</i><i>k</i><i>t</i><i>e</i>
                 </a>
             </div>
             <div>
-                <a sveltekit:prefetch href="/ueber-mich" title="Über mich" class:active={$page.path === '/'} on:click={scrollToTop}>
+                <a sveltekit:prefetch href="/ueber-mich" title="Über mich" class:active={$page.path === '/ueber-mich'} on:click={scrollToTop}>
                     <i>Ü</i><i>b</i><i>e</i><i>r</i> <i>m</i><i>i</i><i>c</i><i>h</i>
                 </a>
             </div>
         </div>
         <div>
-            <a sveltekit:prefetch href="/kontakt" title="Kontakt" class:active={$page.path === '/'} on:click={scrollToTop}>
+            <a sveltekit:prefetch href="/kontakt" title="Kontakt" class:active={$page.path === '/kontakt'} on:click={scrollToTop}>
                 <i>K</i><i>o</i><i>n</i><i>t</i><i>a</i><i>k</i><i>t</i>
             </a>
         </div>
@@ -73,13 +73,13 @@
             <a sveltekit:prefetch href="/" title="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
                 <span>Start</span>
             </a>
-            <a sveltekit:prefetch href="/projekte" title="Projekte" on:click={handleMobileClick}>
+            <a sveltekit:prefetch href="/projekte" title="Projekte" class:active={$page.path === '/projekte'} on:click={handleMobileClick}>
                 <span>Projekte</span>
             </a>
-            <a sveltekit:prefetch href="/ueber-mich" title="Über mich" on:click={handleMobileClick}>
+            <a sveltekit:prefetch href="/ueber-mich" title="Über mich" class:active={$page.path === '/ueber-mich'} on:click={handleMobileClick}>
                 <span>Über mich</span>
             </a>
-            <a sveltekit:prefetch href="/kontakt" title="Kontakt" on:click={handleMobileClick}>
+            <a sveltekit:prefetch href="/kontakt" title="Kontakt" class:active={$page.path === '/kontakt'} on:click={handleMobileClick}>
                 <span>Kontakt</span>
             </a>
         </div>
@@ -320,6 +320,10 @@
                     }
                     &:nth-child(4) span {
                         animation-delay: 0.5s;
+                    }
+
+                    &.active {
+                        text-decoration: line-through;
                     }
                 }
 
