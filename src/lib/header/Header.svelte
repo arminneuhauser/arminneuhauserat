@@ -36,24 +36,24 @@
 <header role="banner">
     <section>
         <h1 class="logo" role="heading" aria-label="Armin Neuhauser">
-            <a sveltekit:prefetch href="/" title="Armin Neuhauser" aria-label="Armin Neuhauser" class:active={$page.path === '/'} on:click={handleMobileClick}>
+            <a sveltekit:prefetch href="/" aria-label="Startseite" class:active={$page.path === '/'} on:click={handleMobileClick}>
                 <i aria-hidden="true">A</i><i aria-hidden="true">r</i><i aria-hidden="true">m</i><i aria-hidden="true">i</i><i aria-hidden="true">n</i> <i aria-hidden="true">N</i><i aria-hidden="true">e</i><i aria-hidden="true">u</i><i aria-hidden="true">h</i><i aria-hidden="true">a</i><i aria-hidden="true">u</i><i aria-hidden="true">s</i><i aria-hidden="true">e</i><i aria-hidden="true">r</i>
             </a>
         </h1>
         <div>
             <div>
-                <a sveltekit:prefetch href="/projekte" title="Projekte" class:active={$page.path === '/projekte'} on:click={scrollToTop}>
+                <a sveltekit:prefetch href="/projekte" aria-label="Projekte" class:active={$page.path === '/projekte'} on:click={scrollToTop}>
                     <i aria-hidden="true">P</i><i aria-hidden="true">r</i><i aria-hidden="true">o</i><i aria-hidden="true">j</i><i aria-hidden="true">e</i><i aria-hidden="true">k</i><i aria-hidden="true">t</i><i aria-hidden="true">e</i>
                 </a>
             </div>
             <div>
-                <a sveltekit:prefetch href="/ueber-mich" title="Über mich" class:active={$page.path === '/ueber-mich'} on:click={scrollToTop}>
+                <a sveltekit:prefetch href="/ueber-mich" aria-label="Über mich" class:active={$page.path === '/ueber-mich'} on:click={scrollToTop}>
                     <i aria-hidden="true">Ü</i><i aria-hidden="true">b</i><i aria-hidden="true">e</i><i aria-hidden="true">r</i> <i aria-hidden="true">m</i><i aria-hidden="true">i</i><i aria-hidden="true">c</i><i aria-hidden="true">h</i>
                 </a>
             </div>
         </div>
         <div>
-            <a sveltekit:prefetch href="/kontakt" title="Kontakt" class:active={$page.path === '/kontakt'} on:click={scrollToTop}>
+            <a sveltekit:prefetch href="/kontakt" aria-label="Kontakt" class:active={$page.path === '/kontakt'} on:click={scrollToTop}>
                 <i aria-hidden="true">K</i><i aria-hidden="true">o</i><i aria-hidden="true">n</i><i aria-hidden="true">t</i><i aria-hidden="true">a</i><i aria-hidden="true">k</i><i aria-hidden="true">t</i>
             </a>
         </div>
@@ -61,7 +61,13 @@
             <span>©{year}</span>
             <DeathStar/>
         </div>
-        <button class="maki-mix" class:active="{mobileMenuVisible}" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
+        <button 
+            class="maki-mix" 
+            class:active="{mobileMenuVisible}" 
+            aria-expanded="{mobileMenuVisible?true:false}" 
+            aria-haspopup="menu" 
+            title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" 
+            on:click={handleMakiMixClick}>
             <div aria-hidden="true">
                 {@html makiMix}
             </div>
@@ -69,28 +75,28 @@
     </section>
 </header>
 
-<aside class="mobile-nav" class:active="{mobileMenuVisible}">
-    <nav aria-label="Mobiles Navigationsmenü">
-        <div>
-            <a sveltekit:prefetch href="/" title="Start" aria-label="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
+<div class="mobile-nav" class:active="{mobileMenuVisible}">
+    <nav aria-label="Mobiles Navigationsmenü" role="menu">
+        <div class="main">
+            <a sveltekit:prefetch href="/" role="menuitem" aria-label="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
                 <span aria-hidden="true">Start</span>
             </a>
-            <a sveltekit:prefetch href="/projekte" title="Projekte" aria-label="Projekte" class:active={$page.path === '/projekte'} on:click={handleMobileClick}>
+            <a sveltekit:prefetch href="/projekte" role="menuitem" aria-label="Projekte" class:active={$page.path === '/projekte'} on:click={handleMobileClick}>
                 <span aria-hidden="true">Projekte</span>
             </a>
-            <a sveltekit:prefetch href="/ueber-mich" title="Über mich" aria-label="Über mich" class:active={$page.path === '/ueber-mich'} on:click={handleMobileClick}>
+            <a sveltekit:prefetch href="/ueber-mich" role="menuitem" aria-label="Über mich" class:active={$page.path === '/ueber-mich'} on:click={handleMobileClick}>
                 <span aria-hidden="true">Über mich</span>
             </a>
-            <a sveltekit:prefetch href="/kontakt" title="Kontakt" aria-label="Kontakt" class:active={$page.path === '/kontakt'} on:click={handleMobileClick}>
+            <a sveltekit:prefetch href="/kontakt" role="menuitem" aria-label="Kontakt" class:active={$page.path === '/kontakt'} on:click={handleMobileClick}>
                 <span aria-hidden="true">Kontakt</span>
             </a>
         </div>
-        <footer>
+        <div class="footer">
             <h1><span>Sag Hallo</span></h1>
-            <a href="mailto:mail@arminneuhauser.at" aria-label="Schreib mir eine E-Mail an mail@arminneuhauser.at"><span>mail@arminneuhauser.at</span></a>
-        </footer>
+            <a href="mailto:mail@arminneuhauser.at" role="menuitem" aria-label="Schreib mir eine E-Mail an mail@arminneuhauser.at"><span>mail@arminneuhauser.at</span></a>
+        </div>
     </nav>
-</aside>
+</div>
 
 <style lang="scss">
     @use "src/scss/animations.scss";
@@ -330,7 +336,7 @@
                     }
                 }
 
-                footer {
+                .footer {
                     h1 span {
                         animation: to-top 0.8s 0.7s var(--easing) forwards;
                     }
@@ -354,7 +360,7 @@
             flex-direction: column;
             justify-content: center;
 
-            > div {
+            .main {
                 flex-grow: 1;
                 display: flex;
                 flex-direction: column;
@@ -378,7 +384,7 @@
             }
         }
 
-        footer {
+        .footer {
             margin-top: auto;
 
             h1, a {
