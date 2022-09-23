@@ -88,7 +88,7 @@
             </a>
         </div>
         <footer>
-            <h3><span>Sag Hallo</span></h3>
+            <h1><span>Sag Hallo</span></h1>
             <a href="mailto:mail@arminneuhauser.at" aria-label="Schreib mir eine E-Mail an mail@arminneuhauser.at"><span>mail@arminneuhauser.at</span></a>
         </footer>
     </nav>
@@ -333,7 +333,7 @@
                 }
 
                 footer {
-                    h3 span {
+                    h1 span {
                         animation: to-top 0.8s 0.7s var(--easing) forwards;
                     }
 
@@ -383,7 +383,7 @@
         footer {
             margin-top: auto;
 
-            h3, a {
+            h1, a {
                 overflow: hidden;
 
                 span {
@@ -392,7 +392,7 @@
                 }
             }
 
-            h3 {
+            h1 {
                 font: var(--w1-serif);
                 font-size: #{fn.rem(24)};
                 margin: 0 0 #{fn.rem(10)};
