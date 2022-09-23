@@ -32,7 +32,9 @@
 </script>
 
 <button class="death-star" title="Farbschema wechseln" on:click={handleDeathStarClick}>
-    {@html deathStarIcon}
+    <div aria-hidden="true">
+        {@html deathStarIcon}
+    </div>
 </button>
 
 <style lang="scss">

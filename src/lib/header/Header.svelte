@@ -59,9 +59,7 @@
         </div>
         <div class="last">
             <span>©{year}</span>
-            <div aria-hidden="true">
-                <DeathStar/>
-            </div>
+            <DeathStar/>
         </div>
         <button class="maki-mix" class:active="{mobileMenuVisible}" title="{mobileMenuVisible?'Menü ausblenden':'Menü anzeigen'}" on:click={handleMakiMixClick}>
             <div aria-hidden="true">
