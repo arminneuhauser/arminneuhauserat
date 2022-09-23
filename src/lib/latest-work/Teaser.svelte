@@ -66,7 +66,7 @@
         </IntersectionObserver>
 
         <figure>
-            <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">
+            <a sveltekit:prefetch href="/projekte/{slug}" tabindex="-1" title="Projekt {title} ansehen">
                 <picture>
                     <source media="(min-width: 768px)" srcset={imageLg}>
                     <img src={imageSm} alt={title} style="transform: scale({scale});" />
@@ -79,7 +79,7 @@
                 <div>
                     <a sveltekit:prefetch href="/projekte/{slug}" title="Projekt {title} ansehen">
                         <span>
-                            <span data-title="Projekt ansehen">
+                            <span data-title="Projekt ansehen" aria-hidden="true">
                                 <i><i>P</i></i><i><i>r</i></i><i><i>o</i></i><i><i>j</i></i><i><i>e</i></i><i><i>k</i></i><i><i>t</i></i> <i><i>a</i></i><i><i>n</i></i><i><i>s</i></i><i><i>e</i></i><i><i>h</i></i><i><i>e</i></i><i><i>n</i></i>
                             </span>
                         </span>

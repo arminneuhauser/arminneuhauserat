@@ -75,7 +75,7 @@
     </section>
 </header>
 
-<div class="mobile-nav" class:active="{mobileMenuVisible}">
+<div class="mobile-nav" class:active="{mobileMenuVisible}" inert={!mobileMenuVisible || null}>
     <nav aria-label="Mobiles Navigationsmenü" role="menu">
         <div class="main">
             <a sveltekit:prefetch href="/" role="menuitem" aria-label="Start" class:active={$page.path === '/'} on:click={handleMobileClick}>
