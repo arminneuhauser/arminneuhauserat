@@ -256,12 +256,11 @@ em, i {
     &:after {
         --squircle-outline: 2px;
 
-        background: var(--primary);
+        background: paint(squircle);
         content: "";
         display: inline-block;
         height: 100%;
         left: 0;
-        mask-image: paint(squircle);
         position: absolute;
         top: 0;
         transition: all 0.4s ease;
