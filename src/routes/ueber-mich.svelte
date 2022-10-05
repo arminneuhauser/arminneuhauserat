@@ -27,7 +27,9 @@
     <div>
         <h1>Hallo, ich bin Armin.</h1>
         <figure>
-            <img src="/images/armin-tulum.jpg" alt="Armin in Tulum, Mexiko" loading="lazy" width="860" height="1147" />
+            <div class="squircle squircle-fill">
+                <img src="/images/armin-tulum.jpg" alt="Armin in Tulum, Mexiko" loading="lazy" width="860" height="1147" />
+            </div>
             <figcaption>Tulum, 2019</figcaption>
         </figure>
         <div>
@@ -118,11 +120,20 @@
                 display: flex;
                 flex-direction: column;
 
+                .squircle {
+                    --squircle-radius: 100px;
+                }
+
+                img {
+                    display: flex;
+                }
+
                 figcaption {
                     font-size: #{fn.rem(14)};
                     opacity: 0.85;
-                    border-bottom: 1px solid var(--on-base);
+                    // border-bottom: 1px solid var(--on-base);
                     padding: 0.5em 0;
+                    text-align: center;
                 }
             }
 

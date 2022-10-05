@@ -53,20 +53,28 @@
             <input type="hidden" name="form-name" value="contact" />
             <div>
                 <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Dein Name" required>
+                <div class="squircle squircle-outline">
+                    <input id="name" name="name" type="text" placeholder="Dein Name" required>
+                </div>
             </div>
             <div>
                 <label for="email">E-Mail-Adresse</label>
-                <input id="email" name="email" type="email" placeholder="Deine E-Mail-Adresse" required>
+                <div class="squircle squircle-outline">
+                    <input id="email" name="email" type="email" placeholder="Deine E-Mail-Adresse" required>
+                </div>
             </div>
             <div>
                 <label for="message">Nachricht</label>
-                <textarea id="message" name="message" placeholder="Deine Nachricht an mich" rows="5"></textarea>
+                <div class="squircle squircle-outline">
+                    <textarea id="message" name="message" placeholder="Deine Nachricht an mich" rows="5"></textarea>
+                </div>
             </div>
-            <button type="submit">
-                Absenden
-                {@html arrow}
-            </button>
+            <div class="squircle squircle-button">
+                <button type="submit">
+                    Absenden
+                    {@html arrow}
+                </button>
+            </div>
         </form>
     </div>
 </section>

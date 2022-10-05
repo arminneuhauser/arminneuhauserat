@@ -8,9 +8,10 @@ form {
         font: inherit;
         display: block;
         text-transform: uppercase;
-        font-size: #{fn.rem(13)};
+        font-size: #{fn.rem(14)};
         font-weight: 500;
         cursor: pointer;
+        margin-bottom: #{fn.rem(10)};
     }
 
     input, textarea {
@@ -21,10 +22,9 @@ form {
         width: 100%;
         background: none;
         border: 0;
-        border-bottom: 1px solid var(--on-base);
         color: var(--on-base);
         min-height: #{fn.rem(50)};
-        padding: #{fn.rem(12)} 0;
+        padding: #{fn.rem(12)} #{fn.rem(15)};
 
         &:focus-visible {
             outline: none;
@@ -35,52 +35,52 @@ form {
         resize: none;
     }
 
-    button {
-        font: inherit;
-        border: 1px solid var(--primary);
-        height: #{fn.rem(50)};
-        border-radius: #{fn.rem(25)};
-        padding: #{fn.rem(10)} #{fn.rem(30)};
-        text-transform: uppercase;
-        font-size: #{fn.rem(13)};
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        gap: #{fn.rem(15)};
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-        color: var(--on-base);
-        transition: color 0.25s var(--easing);
+    // button {
+    //     font: inherit;
+    //     border: 1px solid var(--primary);
+    //     height: #{fn.rem(50)};
+    //     border-radius: #{fn.rem(25)};
+    //     padding: #{fn.rem(10)} #{fn.rem(30)};
+    //     text-transform: uppercase;
+    //     font-size: #{fn.rem(13)};
+    //     font-weight: 500;
+    //     display: flex;
+    //     align-items: center;
+    //     gap: #{fn.rem(15)};
+    //     position: relative;
+    //     z-index: 1;
+    //     overflow: hidden;
+    //     color: var(--on-base);
+    //     transition: color 0.25s var(--easing);
 
-        :global(svg) {
-            transition: transform 0.25s var(--easing);
-        }
+    //     :global(svg) {
+    //         transition: transform 0.25s var(--easing);
+    //     }
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--primary);
-            transform: scaleX(0);
-            transform-origin: bottom left;
-            transition: transform 0.6s var(--easing);
-            z-index: -1;
-        }
+    //     &::before {
+    //         content: '';
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         background-color: var(--primary);
+    //         transform: scaleX(0);
+    //         transform-origin: bottom left;
+    //         transition: transform 0.6s var(--easing);
+    //         z-index: -1;
+    //     }
 
-        &:hover, &:focus {
-            color: var(--on-primary);
+    //     &:hover, &:focus {
+    //         color: var(--on-primary);
 
-            &::before {
-                transform: scaleX(1);
-            }
+    //         &::before {
+    //             transform: scaleX(1);
+    //         }
 
-            :global(svg) {
-                transform: translateX(#{fn.rem(5)});
-            }
-        }
-    }
+    //         :global(svg) {
+    //             transform: translateX(#{fn.rem(5)});
+    //         }
+    //     }
+    // }
 }
