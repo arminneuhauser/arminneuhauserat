@@ -111,8 +111,15 @@
     .hero {
         padding-top: #{fn.rem(180)};
 
+        h1 {
+            @media (max-width: var.$breakpoint-sm-max) {
+                text-align: center;
+            }
+        }
+
         > div {
             display: grid;
+            justify-items: center;
 
             > figure {
                 margin: 0;
@@ -132,7 +139,7 @@
                     font-size: #{fn.rem(14)};
                     opacity: 0.85;
                     // border-bottom: 1px solid var(--on-base);
-                    padding: 0.5em 0;
+                    padding: 1em 0;
                     text-align: center;
                 }
             }
