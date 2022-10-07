@@ -16,7 +16,7 @@
             </h1>
             <div>
                 <p class="fade">
-                    Jedes Projekt ist eine Chance, etwas Neues auszuprobieren. Ich gehe auf die Wünsche meiner Kunden ein und berate sie, um gemeinsam das bestmögliche Ergebnis zu erreichen.
+                    Ich sehe jedes Projekt als eine Chance, etwas Großartiges zu erschaffen. Dabei gehe ich auf die Wünsche meiner Kunden ein und erreiche mit ihnen gemeinsam das bestmögliche Ergebnis.
                 </p>
                 <hr>
             </div>
