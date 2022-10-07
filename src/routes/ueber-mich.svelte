@@ -123,7 +123,7 @@
 
             > figure {
                 margin: 0;
-                max-width: #{fn.rem(375)};
+                max-width: #{fn.rem(500)};
                 display: flex;
                 flex-direction: column;
 
@@ -147,6 +147,7 @@
             @media (min-width: var.$breakpoint-md) {
                 grid-template-columns: 1fr 0.5fr;
                 grid-column-gap: #{fn.rem(30)};
+                justify-items: start;
 
                 > div {
                     grid-column: 1;
