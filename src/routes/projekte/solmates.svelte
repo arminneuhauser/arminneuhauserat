@@ -66,7 +66,7 @@
                 Zu reisen, um neue Orte zu entdecken, ist für mich eines der schönsten und aufregendsten Dinge im Leben. Deshalb bin ich gemeinsam mit meiner Partnerin im November 2019 aufgebrochen, um Lateinamerika zu bereisen. Mit dem Blog wollte ich einen Platz erschaffen, um Erinnerungen zu speichern und zu teilen – für uns selbst, unsere Familien und Freunde.
             </p>
             <p>
-                Den Blog habe ich von Grund auf mit Vue & Nuxt gebaut. Die Texte und Bilder werden in dem Content Management System Storyblok gepflegt.
+                Den Blog habe ich von Grund auf mit Vue.js & Nuxt gebaut. Die Texte und Bilder werden in dem Content Management System Storyblok gepflegt.
             </p>
         </div>
     </div>

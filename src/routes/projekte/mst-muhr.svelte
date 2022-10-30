@@ -134,7 +134,7 @@
                 Fotografie
             </h1>
             <p>
-                Zusätzlich zur Website durfte ich für die MST einige fertige Sanierungsprojekte, z.B. Garagen im Schweizergarten und in der Winmühlgasse, fotografieren. Diese Fotos kommen nicht nur auf der Website von der MST zum Einsatz, sondern auch bei Projektpartnern und Auftraggebern.
+                Zusätzlich zur Website durfte ich für die MST einige fertige Sanierungsprojekte, z.B. Garagen im Schweizergarten und in der Windmühlgasse, fotografieren. Diese Fotos kommen nicht nur auf der Website von der MST zum Einsatz, sondern auch bei Projektpartnern und Auftraggebern.
             </p>
         </div>
     </div>
