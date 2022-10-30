@@ -21,7 +21,9 @@
                 <span class="mask"><span>allem pfeilschnell.</span></span>
                 <a sveltekit:prefetch href="/ueber-mich" title="Mehr über mich erfahren">
                     <span>
-                        <i><i>M</i></i><i><i>e</i></i><i><i>h</i></i><i><i>r</i></i> <i><i>ü</i></i><i><i>b</i></i><i><i>e</i></i><i><i>r</i></i> <i><i>m</i></i><i><i>i</i></i><i><i>c</i></i><i><i>h</i></i>
+                        <span data-title="Mehr über mich" aria-hidden="true">
+                            <i><i>M</i></i><i><i>e</i></i><i><i>h</i></i><i><i>r</i></i> <i><i>ü</i></i><i><i>b</i></i><i><i>e</i></i><i><i>r</i></i> <i><i>m</i></i><i><i>i</i></i><i><i>c</i></i><i><i>h</i></i>
+                        </span>
                     </span>
                     <em>
                         {@html arrow}
@@ -148,7 +150,30 @@
         }
 
         span {
+            overflow: hidden;
+            display: flex;
+            position: relative;
             pointer-events: none;
+
+            span {
+                display: inline-block;
+                transform: translate3d(0, 0, 0);
+                transition: transform 0.8s var(--easing);
+                position: relative;
+                overflow: visible;
+
+                &::after {
+                    content: attr(data-title);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translate3d(0, 100%, 0);
+                }
+            }
+        }
+
+        &:hover span span {
+            transform: translate3d(0, -100%, 0);
         }
 
         i {
