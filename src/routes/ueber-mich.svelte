@@ -109,6 +109,8 @@
     }
 
     .hero {
+        animation: fadein 1s 0.25s var(--easing) forwards;
+        opacity: 0;
         padding-top: #{fn.rem(180)};
 
         h1 {
