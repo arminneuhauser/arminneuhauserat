@@ -42,7 +42,7 @@
 
     // set blur radius based on window size
     function setBlur() {
-        let blurRadius = 13 + window.innerHeight * window.innerWidth / 80000;
+        let blurRadius = 13 + window.innerHeight * window.innerWidth / 75000;
         return blurRadius;
     }
 
@@ -169,7 +169,7 @@
 
             setRadius() {
                 const windowSize = (window.innerWidth * window.innerHeight);
-                const radius = random(50 + windowSize / 12000, 100 + windowSize / 12000);
+                const radius = random(50 + windowSize / 10000, 100 + windowSize / 10000);
 
                 return this.radius = radius;
             }
@@ -242,7 +242,7 @@
         // Create orbs
         const orbs = [];
 
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < 13; i++) {
             const orb = new Orb(colorPalette.randomColor());
 
             bgContainer.addChild(orb.graphics);
