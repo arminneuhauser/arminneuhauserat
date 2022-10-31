@@ -135,7 +135,7 @@
     }
 
     a {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: #{fn.rem(8)};
         text-transform: uppercase;
