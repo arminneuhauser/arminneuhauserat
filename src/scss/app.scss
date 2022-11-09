@@ -227,6 +227,11 @@ em, i {
 
 .squircle-fill {
     mask: paint(squircle);
+
+    .no-paintWorklet & {
+        border-radius: var(--squircle-radius);
+        overflow: hidden;
+    }
 }
 
 .squircle-outline {
@@ -234,6 +239,11 @@ em, i {
     --squircle-color: var(--on-base);
 
     background: paint(squircle);
+
+    .no-paintWorklet & {
+        border: var(--squircle-outline) solid var(--squircle-color);
+        border-radius: var(--squircle-radius);
+    }
 }
 
 .squircle-button {
@@ -253,6 +263,10 @@ em, i {
     mask: paint(squircle);
     pointer-events: none;
 
+    .no-paintWorklet & {
+        border-radius: var(--squircle-radius);
+    }
+
     &:after {
         --squircle-outline: 2px;
 
@@ -265,6 +279,12 @@ em, i {
         top: 0;
         transition: all 0.4s ease;
         width: 100%;
+
+        .no-paintWorklet & {
+            border: var(--squircle-outline) solid var(--squircle-color);
+            border-radius: var(--squircle-radius);
+            box-sizing: border-box;
+        }
     }
 
     button,
