@@ -277,6 +277,7 @@
                 font-size: #{fn.rem(12)};
                 font-weight: 500;
                 letter-spacing: 0.03em;
+                line-height: 1.4;
                 padding: #{fn.rem(10)} 0;
 
                 @media (min-width: var.$breakpoint-md) {
@@ -285,12 +286,11 @@
 
                 span {
                     overflow: hidden;
-                    display: flex;
                     position: relative;
                     pointer-events: none;
 
                     span {
-                        display: inline-block;
+                        display: block;
                         transform: translate3d(0, 0, 0);
                         transition: transform 0.8s var(--easing);
                         position: relative;
