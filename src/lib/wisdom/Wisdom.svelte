@@ -142,7 +142,7 @@
         font-size: #{fn.rem(12)};
         font-weight: 500;
         letter-spacing: 0.03em;
-        line-height: 1.3;
+        line-height: 1.4;
         padding: #{fn.rem(10)} 0;
         margin: 2em 0;
 
