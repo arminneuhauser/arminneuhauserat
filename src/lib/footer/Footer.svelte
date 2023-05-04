@@ -1,6 +1,7 @@
 <script lang="ts">
     import * as animateScroll from "svelte-scrollto";
     import up from './up.svg?raw';
+    import SquiggleLink from '$lib/squiggle-link/SquiggleLink.svelte';
 
     let now = new Date(),
         year = now.getFullYear();
@@ -12,7 +13,9 @@
         <p>
             Jede Ausfahrt sollte mit einem guten Kaffee abgeschlossen werden.<br> Also komm vorbei und sag Hallo.
         </p>
-        <a href="mailto:mail@arminneuhauser.at" class="mail">mail@arminneuhauser.at</a>
+        <p class="mail">
+            <SquiggleLink href="mailto:mail@arminneuhauser.at">mail@arminneuhauser.at</SquiggleLink>
+        </p>
         <hr>
         <div>
             <div class="legal">
@@ -55,7 +58,7 @@
             line-height: 1.1;
         }
 
-        p {
+        p:not(.mail) {
             opacity: 0.7;
 
             :global([color-scheme="highcontrast"]) & {
@@ -67,13 +70,6 @@
             font-size: fn.rfs(18, 24);
             margin: 0 #{fn.rem(-10)};
             padding: #{fn.rem(10)};
-            text-decoration: underline;
-            text-underline-offset: 0.2em;
-            transition: color 0.2s var(--easing);
-            
-            &:hover {
-                color: var(--primary);
-            }
         }
 
         .legal {

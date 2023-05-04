@@ -7,6 +7,7 @@
 <script lang="ts">
     import IntersectionObserver from "svelte-intersection-observer";
     import external from '$lib/projects/external.svg?raw';
+    import SquiggleLink from '$lib/squiggle-link/SquiggleLink.svelte';
 
     let element;
     let intersecting;
@@ -37,13 +38,13 @@
                 Seit mittlerweile fast {since} Jahren gestalte und entwickle ich Websites, Apps & Online-Shops.
             </p>
             <p>
-                Meine Karriere als Webdesigner und Entwickler begann während meines Studiums an der FH St. Pölten. Dort kam ich zum ersten Mal mit HTML, CSS, JavaScript und allem was sonst noch dazugehört in Berührung. Nach dem Studium begann ich in einer E-Commerce-Agentur verschiedene Online-Shops zu konzipieren und umzusetzen. Ich lebe in Wien und arbeite hauptberuflich für den <a href="https://www.derstandard.at/" target="_blank">Standard <i>{@html external}</i></a> als UX Engineer. Bis heute arbeite ich auch an persönlichen Projekten und gelegentlich an Kundenarbeiten, die ich auf dieser Website präsentiere.
+                Meine Karriere als Webdesigner und Entwickler begann während meines Studiums an der FH St. Pölten. Dort kam ich zum ersten Mal mit HTML, CSS, JavaScript und allem was sonst noch dazugehört in Berührung. Nach dem Studium begann ich in einer E-Commerce-Agentur verschiedene Online-Shops zu konzipieren und umzusetzen. Ich lebe in Wien und arbeite hauptberuflich für den <SquiggleLink href="https://www.derstandard.at/" target="_blank"><span>Standard</span> <i>{@html external}</i></SquiggleLink> als UX Engineer. Bis heute arbeite ich auch an persönlichen Projekten und gelegentlich an Kundenarbeiten, die ich auf dieser Website präsentiere.
             </p>
             <p>
-                Wenn ich nicht arbeite, probiere ich gerne neue Restaurants aus und erkunde die Umgebung von Wien mit dem Fahrrad. Ich liebe es zu <a sveltekit:prefetch href="/projekte/solmates">reisen</a>. Neue Orte und Menschen kennenzulernen, gehört für mich einfach zum Leben dazu.
+                Wenn ich nicht arbeite, probiere ich gerne neue Restaurants aus und erkunde die Umgebung von Wien mit dem Fahrrad. Ich liebe es zu <SquiggleLink href="/projekte/solmates">reisen</SquiggleLink>. Neue Orte und Menschen kennenzulernen, gehört für mich einfach zum Leben dazu.
             </p>
             <p>
-                Wenn du Interesse an einer Zusammenarbeit hast, <a sveltekit:prefetch href="/kontakt">kontaktiere mich hier</a>.
+                Wenn du Interesse an einer Zusammenarbeit hast, <SquiggleLink href="/kontakt">kontaktiere mich hier</SquiggleLink>.
             </p>
         </div>
     </div>
@@ -85,9 +86,7 @@
                     Sieh dir meine maßgeschneiderten Projekte an, um mehr über das, was ich tue zu erfahren. Ich arbeite mit Kunden aus verschiedenen Branchen zusammen mit dem Ziel, deren Marken attraktiv zu gestalten und sie mit ihrem Publikum zu verbinden.
                 </p>
                 <p>
-                    <a sveltekit:prefetch href="/projekte">
-                        Zu meinen Projekten
-                    </a>
+                    <SquiggleLink href="/projekte">Zu meinen Projekten</SquiggleLink>
                 </p>
             </div>
         </div>
