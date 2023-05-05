@@ -4,7 +4,11 @@
 </script>
 
 {#if target === "_blank"}
-    <a class="squiggle-link" href={href} target="_blank">
+    <a class="squiggle-link" href={href} target="_blank" rel="noopener noreferrer">
+        <slot />
+    </a>
+{:else if href.includes('mailto')}
+    <a class="squiggle-link" href={href}>
         <slot />
     </a>
 {:else}

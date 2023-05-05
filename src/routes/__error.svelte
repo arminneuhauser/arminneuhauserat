@@ -11,9 +11,11 @@
 	}
 </script>
 
-<script>
+<script lang="ts">
 	export let title;
     export let message;
+
+    import SquiggleLink from '$lib/squiggle-link/SquiggleLink.svelte';
 </script>
 
 <svelte:head>
@@ -25,7 +27,7 @@
         <h1>{title}</h1>
         <p>Entschuldige, diese Seite wurde nicht gefunden: {message}</p>
         <p>
-            <a href="/">Zur Startseite</a>
+            <SquiggleLink href="/">Zur Startseite</SquiggleLink>
         </p>
     </div>
 </section>

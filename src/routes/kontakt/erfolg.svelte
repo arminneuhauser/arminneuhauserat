@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-    import arrow from '$lib/latest-work/arrow.svg?raw';
+    import SquiggleLink from '$lib/squiggle-link/SquiggleLink.svelte';
 
     let shift = -10;
 
@@ -26,7 +26,7 @@
             Ich werde dir sobald wie möglich antworten.
         </p>
         <p>
-            <a href="/">Zurück zur Startseite</a>
+            <SquiggleLink href="/">Zur Startseite</SquiggleLink>
         </p>
     </div>
 </section>

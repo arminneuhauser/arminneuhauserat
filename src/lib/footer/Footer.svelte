@@ -20,7 +20,7 @@
         <div>
             <div class="legal">
                 <span>Armin Neuhauser © {year}</span>
-                <a sveltekit:prefetch href="/impressum">Impressum & Datenschutz</a>
+                <SquiggleLink href="/impressum">Impressum & Datenschutz</SquiggleLink>
             </div>
             <button on:click={() => animateScroll.scrollToTop()} title="Zurück nach oben">
                 {@html up}
@@ -91,14 +91,12 @@
                 }
             }
 
-
-
-            a {
-                text-decoration: underline;
+            :global(a) {
+                opacity: 0.5;
                 transition: opacity 0.2s var(--easing);
 
                 &:hover {
-                    opacity: 0.6;
+                    opacity: 1;
                 }
             }
         }
