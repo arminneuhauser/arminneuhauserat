@@ -95,6 +95,10 @@
                 opacity: 0.5;
                 transition: opacity 0.2s var(--easing);
 
+                :global([color-scheme="highcontrast"]) & {
+                    opacity: 1;
+                }
+
                 &:hover {
                     opacity: 1;
                 }
