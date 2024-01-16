@@ -26,7 +26,7 @@
 
     // fonts
     --serif: "Iskry";
-    --sans: "FF Mark";
+    --sans: "General Sans";
 
     --w1-serif: 700 #{fn.rem(16)} / 1.4 var(--serif);
 
@@ -80,7 +80,7 @@
         --on-base-s: 100%;
         --on-base-l: 30%;
 
-        --serif: "FF Mark";
+        --serif: "General Sans";
 
         ::-webkit-scrollbar {
             width: 10px;
